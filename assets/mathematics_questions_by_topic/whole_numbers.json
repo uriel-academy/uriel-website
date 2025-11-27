@@ -1,0 +1,2482 @@
+{
+  "topic": "Whole Numbers",
+  "questions": [
+    {
+      "id": "0DaZFNC8a7Sd6l9u8eyg",
+      "year": "2000",
+      "subject": "mathematics",
+      "questionNumber": 5,
+      "questionText": "Which of the following is true?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480053,
+        "_nanoseconds": 174000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2000"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. {0, 2, 6, 9, 12} is a subset of even numbers.",
+        "B. {-1, 0, 2, 3, 5} is a subset of odd numbers.",
+        "C. {-2, -1, 1, 3, 9} is a subset of integers.",
+        "D. {2, 3, 5, 7, 27} is a subset of prime numbers.",
+        "E. {9, 18, 21, 27, 36} is a subset of multiples of 9."
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2000_q5_img5.png",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542162,
+        "_nanoseconds": 623000000
+      }
+    },
+    {
+      "id": "0VoPNNxqahYoiHRNgj3Z",
+      "year": "2023",
+      "subject": "mathematics",
+      "questionNumber": 37,
+      "questionText": "Which of the following is not an integer?",
+      "options": [
+        "A. 0",
+        "B. 1",
+        "C. 0.5",
+        "D. -5"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482489,
+        "_nanoseconds": 44000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2023"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 62000000
+      }
+    },
+    {
+      "id": "1nj5HUjkcJmMOitiL7bx",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 35,
+      "questionText": "Mensah packed 1,800 apples into a number of boxes. If each box contained 120 apples, how many boxes were fully packed?",
+      "options": [
+        "A. 15",
+        "B. 16",
+        "C. 18",
+        "D. 17"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482514,
+        "_nanoseconds": 74000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 904000000
+      }
+    },
+    {
+      "id": "28oXl0fxPO6DEltOAVYa",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 4,
+      "questionText": "The sum of 5 and x divided by 4 is equal to 3.25. Find the value of x.",
+      "options": [
+        "A. 8",
+        "B. 7",
+        "C. 2 1 4",
+        "D. -3 4 13"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480279,
+        "_nanoseconds": 271000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2010_q4_img4.png",
+      "updatedAt": {
+        "_seconds": 1763542193,
+        "_nanoseconds": 173000000
+      }
+    },
+    {
+      "id": "2BaDCqx3AHou8nJDmsug",
+      "year": "2012",
+      "subject": "mathematics",
+      "questionNumber": 35,
+      "questionText": "Find the least number that must be added to 308 to make it divisible by 19.",
+      "options": [
+        "A. 4",
+        "B. 7",
+        "C. 15",
+        "D. 18"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480342,
+        "_nanoseconds": 654000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2012"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 925000000
+      }
+    },
+    {
+      "id": "2MF7QnSRrB6mDmDOkWe3",
+      "year": "2016",
+      "subject": "mathematics",
+      "questionNumber": 9,
+      "questionText": "Arrange the following integers from the least to the highest -4,9,-10,-7,and 2.",
+      "options": [
+        "A. -10,-7,-4,2,9",
+        "B. -10,9,-7,-4,2",
+        "C. -4,-7,-10,2,9",
+        "D. 2,-4,-7,9,-10"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480419,
+        "_nanoseconds": 173000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2016"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487098,
+        "_nanoseconds": 192000000
+      }
+    },
+    {
+      "id": "2cFwbY10cWAcqFJg3DQx",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 17,
+      "questionText": "A number of oranges are shared among 50 students and each got 15 oranges. If the same number of oranges are shared equally among 30 students, how many will each student get?",
+      "options": [
+        "A. 13",
+        "B. 15",
+        "C. 25",
+        "D. 20"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482503,
+        "_nanoseconds": 233000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 904000000
+      }
+    },
+    {
+      "id": "6UumDozq9WS2r5yzM11i",
+      "year": "2012",
+      "subject": "mathematics",
+      "questionNumber": 32,
+      "questionText": "In a class of 24 pupils, 10 study French only and 8 study English only. If each pupil studies at least one of the two subjects, how many study English?",
+      "options": [
+        "A. 12",
+        "B. 14",
+        "C. 16",
+        "D. 18"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480340,
+        "_nanoseconds": 952000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2012"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 925000000
+      }
+    },
+    {
+      "id": "8QprosiBAXilFZxxX2qu",
+      "year": "2011",
+      "subject": "mathematics",
+      "questionNumber": 4,
+      "questionText": "Express 2700 as a product of prime numbers.",
+      "options": [
+        "A. 22 × 32 × 52",
+        "B. 2 × 33 × 52",
+        "C. 22 × 33 × 52",
+        "D. 2 × 32 × 53"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480302,
+        "_nanoseconds": 32000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2011"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2011_q4_img4.png",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542196,
+        "_nanoseconds": 182000000
+      }
+    },
+    {
+      "id": "BGpmr0aY7Vxf7ivONnfw",
+      "year": "2025",
+      "subject": "mathematics",
+      "questionNumber": 10,
+      "questionText": "In an examination, Abu answered nine questions in 2 hours. He spent 20 minutes on the first question and the same time on each of the remaining questions. How many minutes did he spend on each of the other question?",
+      "options": [
+        "A. 8.0 minutes",
+        "B. 10.0 minutes",
+        "C. 12.0 minutes",
+        "D. 12.5 minutes"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482522,
+        "_nanoseconds": 255000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2025"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487105,
+        "_nanoseconds": 685000000
+      }
+    },
+    {
+      "id": "CPaXzendXdXGQVCVNSdx",
+      "year": "2004",
+      "subject": "mathematics",
+      "questionNumber": 5,
+      "questionText": "If the set P = {1, 2, 3, 4, 5} which of the following statements best describes P?",
+      "options": [
+        "A. Set of whole numbers up to 6",
+        "B. Set of counting numbers less than 6",
+        "C. Set of counting numbers greater than 6",
+        "D. Set of integers less than 6"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480143,
+        "_nanoseconds": 447000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2004"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487088,
+        "_nanoseconds": 551000000
+      }
+    },
+    {
+      "id": "Culw1zpDdSIPVyAuWd0F",
+      "year": "2008",
+      "subject": "mathematics",
+      "questionNumber": 21,
+      "questionText": "If E = {prime numbers between 10 and 20} and F = {odd numbers between 0 and 16},find E ∩ F.",
+      "options": [
+        "A. {11}",
+        "B. {11, 13}",
+        "C. {3, 11, 13}",
+        "D. {3, 11, 13, 15}"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480243,
+        "_nanoseconds": 368000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2008"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487091,
+        "_nanoseconds": 763000000
+      }
+    },
+    {
+      "id": "DdVZfLlrXZrMhV4u5Kv9",
+      "year": "2015",
+      "subject": "mathematics",
+      "questionNumber": 3,
+      "questionText": "If M = {Multiples of 4 between 10 and 25} and N = {even numbers between 11 and 23}, find M∪N.",
+      "options": [
+        "A. {12,16,20}",
+        "B. {14,18,22}",
+        "C. {12,14,16,18,22}",
+        "D. {12,14,16,18,20,22,24}"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480393,
+        "_nanoseconds": 9000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2015"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487097,
+        "_nanoseconds": 370000000
+      }
+    },
+    {
+      "id": "GpiRBbuzv2uwZtTtwE9N",
+      "year": "1998",
+      "subject": "mathematics",
+      "questionNumber": 11,
+      "questionText": "The total numbers of goals scored each month by a football team are:3, 4, 8, 2, 4, 6, 4, 8, 7 and 6.What is the mode?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480011,
+        "_nanoseconds": 639000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1998"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 2",
+        "B. 4",
+        "C. 5",
+        "D. 6",
+        "E. 8"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487083,
+        "_nanoseconds": 561000000
+      }
+    },
+    {
+      "id": "H0YujEnF34cF109T1EXz",
+      "year": "2014",
+      "subject": "mathematics",
+      "questionNumber": 6,
+      "questionText": "Find the smallest number which is divisible by 16 and 20?",
+      "options": [
+        "A. 40",
+        "B. 80",
+        "C. 120",
+        "D. 160"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480371,
+        "_nanoseconds": 909000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2014"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2014_q6_img6.png",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542204,
+        "_nanoseconds": 25000000
+      }
+    },
+    {
+      "id": "IkM00TMGoYXN8wHobzSF",
+      "year": "1999",
+      "subject": "mathematics",
+      "questionNumber": 2,
+      "questionText": "M = {multiples of 3 between 10 and 20}N = {even numbers between 10 and 20}. Find M ∩ N.",
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480029,
+        "_nanoseconds": 20000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1999"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. {12, 18}",
+        "B. {12, 15, 18}",
+        "C. {12, 14, 16, 18}",
+        "D. {12, 14, 15, 16, 18}",
+        "E. {10, 12, 14, 15, 18, 20}"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1999_q2_img2.png",
+      "updatedAt": {
+        "_seconds": 1763542157,
+        "_nanoseconds": 686000000
+      }
+    },
+    {
+      "id": "LeoT1ExMTk0onjO5prux",
+      "year": "2006",
+      "subject": "mathematics",
+      "questionNumber": 2,
+      "questionText": "If x is an integer, list the members of the set, {2 ≤ x < 10}.",
+      "options": [
+        "A. {3, 4, 5, 6, 7, 8, 9}",
+        "B. {2, 3, 4, 5, 6, 7, 8, 9}",
+        "C. {3, 4, 5, 6, 7, 8, 9, 10}",
+        "D. {2, 3, 4, 5, 6, 7, ,8, 9, 10}"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480187,
+        "_nanoseconds": 145000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2006"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2006_q2_img2.png",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542178,
+        "_nanoseconds": 941000000
+      }
+    },
+    {
+      "id": "MnqLcUSsPWCZewhygmUQ",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 7,
+      "questionText": "Find the sum of all even numbers between 70 and 80.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480077,
+        "_nanoseconds": 0
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 200",
+        "B. 223",
+        "C. 280",
+        "D. 300",
+        "E. 375"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 59000000
+      }
+    },
+    {
+      "id": "MqyOn2zxLQi6RY0SLd6O",
+      "year": "1996",
+      "subject": "mathematics",
+      "questionNumber": 37,
+      "questionText": "200 bottles of equal capacity hold 350 litres of water. How much water does each bottle hold?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479981,
+        "_nanoseconds": 74000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1996"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1750 litres",
+        "B. 175 litres",
+        "C. 17.5 litres",
+        "D. 1.75 litres",
+        "E. 0.17 litres"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 915000000
+      }
+    },
+    {
+      "id": "N3PllKrFBz2uFv4uh8JJ",
+      "year": "2017",
+      "subject": "mathematics",
+      "questionNumber": 13,
+      "questionText": "What is the total cost of x shirts at GH₵ 5.00 each and y shirts at GH₵ 1.50 each?",
+      "options": [
+        "A. A. 5x + 1.5y",
+        "B. 5y + 1.5x",
+        "C. 5(x + 1.5y)",
+        "D. 1.5(5x + y)"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480444,
+        "_nanoseconds": 217000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2017"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2017_q13_img13.jpg",
+      "updatedAt": {
+        "_seconds": 1763542213,
+        "_nanoseconds": 750000000
+      }
+    },
+    {
+      "id": "NNUjw3zFz1NwOdj70EOZ",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "A frog leaps in such a way that its distance, in metres, from its starting position after each leap is given by 4, 7, 10, ... Find its distance from the starting position after the 10th leap.",
+      "options": [
+        "A. 28",
+        "B. 31",
+        "C. 37",
+        "D. 34"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482509,
+        "_nanoseconds": 916000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 904000000
+      }
+    },
+    {
+      "id": "OBV2pl45hyOOi13FyOI3",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 34,
+      "questionText": "If one-third of a number is added to one-fifth of the same number, the result is 8. Find the number.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479593,
+        "_nanoseconds": 961000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 3",
+        "B. 5",
+        "C. 15",
+        "D. 40",
+        "E. 45"
+      ],
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487078,
+        "_nanoseconds": 582000000
+      }
+    },
+    {
+      "id": "OK3sctmXe8XjTc9OJux9",
+      "year": "2007",
+      "subject": "mathematics",
+      "questionNumber": 34,
+      "questionText": "Write down all the integers within the interval 21 < y ≤ 27.",
+      "options": [
+        "A. {21, 22, 23, 24, 25, 26, 27}",
+        "B. {22, 23, 24, 25, 26, 27}",
+        "C. {21, 22, 23, 24, 25, 26}",
+        "D. {22, 23, 24, 25, 26}"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480228,
+        "_nanoseconds": 42000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2007"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 958000000
+      }
+    },
+    {
+      "id": "OKvAjEbvkLyHqli66C0A",
+      "year": "2022",
+      "subject": "mathematics",
+      "questionNumber": 21,
+      "questionText": "Which of the following is the largest set?",
+      "options": [
+        "A. {Whole numbers}",
+        "B. {Composite}",
+        "C. {Natural numbers}",
+        "D. {Integers}"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480563,
+        "_nanoseconds": 165000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2022"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2022_q21_img21.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542278,
+        "_nanoseconds": 688000000
+      }
+    },
+    {
+      "id": "PTIPSXvzSOJKE6WEPkwC",
+      "year": "2025",
+      "subject": "mathematics",
+      "questionNumber": 39,
+      "questionText": "Describe the set of M = {2, 3, 5, 7, 11, 13, 17, 19} in words.",
+      "options": [
+        "A. M = {odd numbers less than 20}",
+        "B. M = {factors of 19}",
+        "C. M = {prime numbers less than 20}",
+        "D. M = {whole numbers less than 20}"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482538,
+        "_nanoseconds": 299000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2025"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487105,
+        "_nanoseconds": 685000000
+      }
+    },
+    {
+      "id": "QaXloGrn1793dfXM2js9",
+      "year": "2017",
+      "subject": "mathematics",
+      "questionNumber": 30,
+      "questionText": "Tins of milk each of volume 77 cm3 and weight 170 g were packed into an empty carton of volume 1540 cm3 and weight 500 g. How many tins of milk can be packed to fill the carton?",
+      "options": [
+        "A. 2",
+        "B. 3",
+        "C. 20",
+        "D. 22"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480453,
+        "_nanoseconds": 943000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2017"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2017_q30_img30.jpg",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542222,
+        "_nanoseconds": 57000000
+      }
+    },
+    {
+      "id": "RK9Ny1GqHEhnntV5hzLd",
+      "year": "2008",
+      "subject": "mathematics",
+      "questionNumber": 27,
+      "questionText": "Illustrate 3 < x < 5 on the number line, where x ∈ {rational numbers}.",
+      "options": [
+        "A. ",
+        "B. ",
+        "C. ",
+        "D. "
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480246,
+        "_nanoseconds": 747000000
+      },
+      "difficulty": "medium",
+      "createdBy": "system_import",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2008"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487091,
+        "_nanoseconds": 763000000
+      }
+    },
+    {
+      "id": "S2EUzwqZTYVQZqadK9HQ",
+      "year": "2022",
+      "subject": "mathematics",
+      "questionNumber": 34,
+      "questionText": "A mother has GH₵ 5.00 and gives each of her 3 children GH₵ 1.50 as pocket money. How much is left for her?",
+      "options": [
+        "A. GH₵ 3.50",
+        "B. GH₵ 4.5",
+        "C. GH₵ 0.15",
+        "D. GH₵ 0.50"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480570,
+        "_nanoseconds": 703000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2022"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487103,
+        "_nanoseconds": 234000000
+      }
+    },
+    {
+      "id": "UE87KIxqfHs6aw0vxkfx",
+      "year": "2021",
+      "subject": "mathematics",
+      "questionNumber": 32,
+      "questionText": "An amount of GH₵ 375,000.00 was needed to build a clinic for a community of twelve towns. Each community contributed GH₵ 25,000.00. If the District Assembly also contributed GH₵ 30,500.00, how much more is needed to build the clinic?",
+      "options": [
+        "A. GH₵ 44,500.00",
+        "B. GH₵ 45,500.00",
+        "C. GH₵ 35,500.00",
+        "D. GH₵ 75,000.00"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480546,
+        "_nanoseconds": 529000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2021"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487102,
+        "_nanoseconds": 440000000
+      }
+    },
+    {
+      "id": "ULSxOZQUFkwmsqpvynZX",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 6,
+      "questionText": "Write down all the integers in the set A = {-10, -4, 0, 1 4 , 2 1 4 , 45, 100}",
+      "options": [
+        "A. {-10, -4, 0, 45, 100}",
+        "B. {-10, -4}",
+        "C. {0, 45, 100}",
+        "D. { 1 4 , 2 1 4 }"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480280,
+        "_nanoseconds": 385000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2010_q6_img6.png",
+      "updatedAt": {
+        "_seconds": 1763542194,
+        "_nanoseconds": 217000000
+      }
+    },
+    {
+      "id": "VdNnS7dOgtRv6MsRFjBe",
+      "year": "1990",
+      "subject": "mathematics",
+      "questionNumber": 6,
+      "questionText": "If 26039 oranges are shared equally among 13 women, how many oranges does each woman receive?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479525,
+        "_nanoseconds": 441000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1990"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 23",
+        "B. 1203",
+        "C. 230",
+        "D. 2003",
+        "E. 2300"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1990_q6_img6.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542100,
+        "_nanoseconds": 471000000
+      }
+    },
+    {
+      "id": "WUVZRJrj3jCtANyQdc40",
+      "year": "2003",
+      "subject": "mathematics",
+      "questionNumber": 26,
+      "questionText": "Find the set of integers within the interval -2 < x < 2",
+      "options": [
+        "A. {-2,-1,2}",
+        "B. {-2,-1,0}",
+        "C. {-1,0,1}",
+        "D. {-1,1,2}"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480132,
+        "_nanoseconds": 608000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2003"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487087,
+        "_nanoseconds": 736000000
+      }
+    },
+    {
+      "id": "XvQdnY9dnzAXK3KcYLcm",
+      "year": "2015",
+      "subject": "mathematics",
+      "questionNumber": 4,
+      "questionText": "What is the place value of 7 in 24.376?",
+      "options": [
+        "A. Unit",
+        "B. Ten",
+        "C. Tenth",
+        "D. Hundredth"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480393,
+        "_nanoseconds": 564000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2015"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487097,
+        "_nanoseconds": 370000000
+      }
+    },
+    {
+      "id": "YTAzfdrrtW7hFGR0ccdf",
+      "year": "2025",
+      "subject": "mathematics",
+      "questionNumber": 7,
+      "questionText": "Ama has 4 one cedi notes and orders an ice cream for GH₵ 1.75 and two toffees at 50 GP each. How much does she have left?",
+      "options": [
+        "A. GH₵ 1.25",
+        "B. GH₵ 1.75",
+        "C. GH₵ 2.25",
+        "D. GH₵ 2.75"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482520,
+        "_nanoseconds": 705000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2025"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487105,
+        "_nanoseconds": 685000000
+      }
+    },
+    {
+      "id": "YmCXTFCWRrjE8ZeYRJMF",
+      "year": "1995",
+      "subject": "mathematics",
+      "questionNumber": 1,
+      "questionText": "P = {prime numbers less than 20} and Q = {odd numbers less than 10}. Find P ∩ Q",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479730,
+        "_nanoseconds": 4000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1995"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. {2, 3}",
+        "B. {1, 3, 5, 7, 11)",
+        "C. {3, 5, 7, 9}",
+        "D. {3, 5, 7}",
+        "E. {3, 5, 7, 11}"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1995_q1_img1.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542138,
+        "_nanoseconds": 304000000
+      }
+    },
+    {
+      "id": "ZQs6bmrNSoKoiFM1m5fE",
+      "year": "2019",
+      "subject": "mathematics",
+      "questionNumber": 25,
+      "questionText": "When twelve is subtracted from three times a certain number and the result is divided by four, the answer is eighteen. Find the number.",
+      "options": [
+        "A. 84",
+        "B. 40",
+        "C. 28",
+        "D. 20"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480496,
+        "_nanoseconds": 986000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2019"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487100,
+        "_nanoseconds": 643000000
+      }
+    },
+    {
+      "id": "ZwByM7yhKKRdoRbNnnBf",
+      "year": "2017",
+      "subject": "mathematics",
+      "questionNumber": 31,
+      "questionText": "Tins of milk each of volume 77 cm3 and weight 170 g were packed into an empty carton of volume 1540 cm3 and weight 500 g. What is the weight of the carton when packed with the tins of milk?",
+      "options": [
+        "A. 2.06 kg",
+        "B. 2.94 kg",
+        "C. 3.90 kg",
+        "D. 8.50 kg"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480454,
+        "_nanoseconds": 521000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2017"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2017_q31_img31.png",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542222,
+        "_nanoseconds": 538000000
+      }
+    },
+    {
+      "id": "aQ0nkrcD5EVMVXrFV5Zx",
+      "year": "1999",
+      "subject": "mathematics",
+      "questionNumber": 8,
+      "questionText": "A ribbon is 4 m long. How many pieces, each 30 cm long, can be cut from the ribbon?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480032,
+        "_nanoseconds": 337000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1999"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 7",
+        "B. 11",
+        "C. 12",
+        "D. 13",
+        "E. 14"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487084,
+        "_nanoseconds": 387000000
+      }
+    },
+    {
+      "id": "axj2xToCFku8NlXhwczv",
+      "year": "2021",
+      "subject": "mathematics",
+      "questionNumber": 35,
+      "questionText": "A box can take 12 pencils. If 156 pencils are packed into such boxes, how many boxes will be fully packed?",
+      "options": [
+        "A. 10",
+        "B. 11",
+        "C. 12",
+        "D. 13"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480548,
+        "_nanoseconds": 242000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2021"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487102,
+        "_nanoseconds": 440000000
+      }
+    },
+    {
+      "id": "dmUBpnWf2RsHjSfcDZrg",
+      "year": "2003",
+      "subject": "mathematics",
+      "questionNumber": 13,
+      "questionText": "The total number of match sticks in 6 match boxes was 270. Find the total number of sticks in 20 similar boxes.",
+      "options": [
+        "A. 710",
+        "B. 800",
+        "C. 810",
+        "D. 900"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480125,
+        "_nanoseconds": 366000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2003"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487087,
+        "_nanoseconds": 736000000
+      }
+    },
+    {
+      "id": "e5GIC7anGUPHkf6qJT3k",
+      "year": "1991",
+      "subject": "mathematics",
+      "questionNumber": 3,
+      "questionText": "The following addition is in base ten. Find the missing addend. 2 3 4 5 + 1 0 4 5 * * * * 5 1 1 0",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479554,
+        "_nanoseconds": 688000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1991"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1300",
+        "B. 1720",
+        "C. 2765",
+        "D. 4065",
+        "E. 9500"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1991_q3_img3.png",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542104,
+        "_nanoseconds": 979000000
+      }
+    },
+    {
+      "id": "eDS86Sy5dXPhhC7X9uUw",
+      "year": "2012",
+      "subject": "mathematics",
+      "questionNumber": 2,
+      "questionText": "Which of the following numbers is an integer?",
+      "options": [
+        "A. - 5 4",
+        "B. - 2 3",
+        "C. 0.5",
+        "D. 1"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480324,
+        "_nanoseconds": 116000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2012"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2012_q2_img2.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542197,
+        "_nanoseconds": 122000000
+      }
+    },
+    {
+      "id": "eWRYwcAgq8CBPAOfXFgO",
+      "year": "1999",
+      "subject": "mathematics",
+      "questionNumber": 9,
+      "questionText": "Find the integers within the interval 5 < x < 9",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480032,
+        "_nanoseconds": 867000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1999"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. {5,6,7}",
+        "B. {5,6,7,8}",
+        "C. {5,6,7,8,9}",
+        "D. {6,7,8}",
+        "E. {6,7,8,9}"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487084,
+        "_nanoseconds": 387000000
+      }
+    },
+    {
+      "id": "evm9hM98cRFwKUGn4eKg",
+      "year": "2017",
+      "subject": "mathematics",
+      "questionNumber": 17,
+      "questionText": "In 1995, 215 boys and 185 girls were admitted into a Senior Secondary School. Find, correct to the nearest whole number, the percentage of girls admitted.",
+      "options": [
+        "A. 46%",
+        "B. 47%",
+        "C. 53%",
+        "D. 54%"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480446,
+        "_nanoseconds": 514000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2017"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2017_q17_img17.jpg",
+      "updatedAt": {
+        "_seconds": 1763542215,
+        "_nanoseconds": 706000000
+      }
+    },
+    {
+      "id": "gfB74j0sEE4vpxU9x2OY",
+      "year": "2004",
+      "subject": "mathematics",
+      "questionNumber": 16,
+      "questionText": "P = {odd numbers between 20 and 30} and Q = {23, 29}. Which of the following is true?",
+      "options": [
+        "A. P ⊂ Q",
+        "B. Q ⊂ P",
+        "C. P = Q",
+        "D. P ∩ Q = Φ"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480149,
+        "_nanoseconds": 621000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2004"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487088,
+        "_nanoseconds": 551000000
+      }
+    },
+    {
+      "id": "hgsatqcypAExOSBlIpje",
+      "year": "1990",
+      "subject": "mathematics",
+      "questionNumber": 36,
+      "questionText": "The least number in a set of real numbers is 24 and the greatest is 30. Which of the following is the correct interpretation of the statement?",
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479549,
+        "_nanoseconds": 29000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1990"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 24 ≤ x ≤ 30",
+        "B. 24 < x < 29",
+        "C. 23 < x < 29",
+        "D. 24 < x < 30",
+        "E. 23 ≤ x ≤ 29"
+      ],
+      "updatedAt": {
+        "_seconds": 1763487076,
+        "_nanoseconds": 950000000
+      }
+    },
+    {
+      "id": "ioZJbp8uc5rcyvVyx3sw",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 6,
+      "questionText": "Find the least whole number which must be added to 207 to make it divisible by 17",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479579,
+        "_nanoseconds": 258000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 0",
+        "B. 3",
+        "C. 13",
+        "D. 14",
+        "E. 15"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1992_q6_img6.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542113,
+        "_nanoseconds": 486000000
+      }
+    },
+    {
+      "id": "kHlAmcHXN88yObJCD3jv",
+      "year": "2012",
+      "subject": "mathematics",
+      "questionNumber": 6,
+      "questionText": "An iron rod 15 m long is divided into 12 equal parts. How long is each part?",
+      "options": [
+        "A. 0.80 m",
+        "B. 1.25 m",
+        "C. 1.50 m",
+        "D. 3.00 m"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480326,
+        "_nanoseconds": 341000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2012"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 925000000
+      }
+    },
+    {
+      "id": "oF5fzdm4J37dojDiEEDA",
+      "year": "2018",
+      "subject": "mathematics",
+      "questionNumber": 6,
+      "questionText": "Find the least number that can be added to 207 to make the sum divisible by 17.",
+      "options": [
+        "A. 3",
+        "B. 13",
+        "C. 14",
+        "D. 30"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480463,
+        "_nanoseconds": 187000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2018"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2018_q6_img6.jpg",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542227,
+        "_nanoseconds": 404000000
+      }
+    },
+    {
+      "id": "ozb6uEWgNYLb0i5y97GV",
+      "year": "2006",
+      "subject": "mathematics",
+      "questionNumber": 17,
+      "questionText": "Which of the following inequalities is shown on the number line above, where p ∈ {real numbers}?",
+      "options": [
+        "A. -2 < p < 3",
+        "B. -2 ≥ p > 3",
+        "C. -2 < p ≤ 3",
+        "D. -2 > p ≥ 3"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480195,
+        "_nanoseconds": 517000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2006"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 135000000
+      }
+    },
+    {
+      "id": "pGalofcLY6tCj01F9zHK",
+      "year": "2015",
+      "subject": "mathematics",
+      "questionNumber": 8,
+      "questionText": "How many integers are within the interval -5 < x < 7?",
+      "options": [
+        "A. 10",
+        "B. 11",
+        "C. 12",
+        "D. 13"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480395,
+        "_nanoseconds": 814000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2015"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487097,
+        "_nanoseconds": 370000000
+      }
+    },
+    {
+      "id": "pfbkNi03Z4BthFOr0kAB",
+      "year": "1993",
+      "subject": "mathematics",
+      "questionNumber": 27,
+      "questionText": "A basket contains 450 oranges, if each orange costs ₵15.00, find the total cost of the oranges.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479611,
+        "_nanoseconds": 412000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1993"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵30.00",
+        "B. ₵465.00",
+        "C. ₵435.00",
+        "D. ₵675.00",
+        "E. ₵6,750.00"
+      ],
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487079,
+        "_nanoseconds": 424000000
+      }
+    },
+    {
+      "id": "q8gWZc7qoHxTbDRt87hv",
+      "year": "2018",
+      "subject": "mathematics",
+      "questionNumber": 13,
+      "questionText": "Mary had a chance to select a number from 1 to 20 randomly. What is the probability that the number is divisible by 3?",
+      "options": [
+        "A. ",
+        "B. ",
+        "C. ",
+        "D. "
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480467,
+        "_nanoseconds": 135000000
+      },
+      "difficulty": "medium",
+      "createdBy": "system_import",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2018"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2018_q13_img13.jpg",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542230,
+        "_nanoseconds": 884000000
+      }
+    },
+    {
+      "id": "r435eYnA3Hh5RU5zNy1n",
+      "year": "2014",
+      "subject": "mathematics",
+      "questionNumber": 15,
+      "questionText": "Kojo can buy 15 shirts at GH₵4.00 each. If the price is increased to GH₵5.00, how many shirts can he now buy?",
+      "options": [
+        "A. 12",
+        "B. 15",
+        "C. 19",
+        "D. 20"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480377,
+        "_nanoseconds": 122000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2014"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487096,
+        "_nanoseconds": 588000000
+      }
+    },
+    {
+      "id": "sU5qiA5J94SiQWn59agx",
+      "year": "1995",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "List all members of the set {x: 2 < x < 8, x is an integer}",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479744,
+        "_nanoseconds": 661000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1995"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. {3, 4, 5}",
+        "B. {2, 3, 4, 5, 6, 7, 8}",
+        "C. {2, 2 1 2 , 3, 4, 5, 6, 7, 8}",
+        "D. {3, 3 1 2 , 3, 4, 5, 6, 7, 8}",
+        "E. {3, 4, 5, 6, 7}"
+      ],
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 77000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1990_q2",
+      "questionText": "- 2\n\n(c)\n\n \n\nFind the solution set of x + 3 > 19 – 3x, where x is a real number.\n\nIllustrate your answer on the number line.",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1990",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1990 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1990",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2008_q1",
+      "questionText": "(a)\n\n \n\nE and F are subsets of the universal set U such that\n\nU = {natural numbers less than 15}\n\nE = {even numbers between 1 and 15} and\n\nF = {multiples of 4 between 9 and 15}\n\n(i)\n\n \n\nList the elements of U, E and F.\n\n(ii)\n\n \n\nDraw a Venn diagram to show the sets U, E and F.\n\n(b)\n\n \n\nIn a school,",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2008",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2008 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2008",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2008_q10",
+      "questionText": "of the pupils like Mathematics. Half of those pupils who like Mathematics are girls. If there are 240 pupils altogether in the school, how many girls like Mathematics?\n\n(c)\n\n \n\nA typist charges 28 Gp for the first five sheets and 8 Gp for each additional sheet she types. How much will she earn, if she types 36 sheets?\n\n Show Solution",
+      "questionNumber": 10,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2008",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2008 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2008",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2013_q4",
+      "questionText": ")\n\n.\n\n(b)\n\n \n\nCopy and complete the magic square so that the sum of numbers in each row or column or diagonal is 18.",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2013",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2013 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2013",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2018_q5",
+      "questionText": "a\n\n \n\nA property worth GH₵ 10,480.00 is shared between a widow and her 10 children in the ratio 1:4 respectively. The children shared their portion equally. Find each child's share.\n\nb\n\n \n\nThe data shows the distribution of marks in a class test.",
+      "questionNumber": 5,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2018",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2018 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2018",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2023_q3",
+      "questionText": "of her x acres of land to cultivate mangoes and oranges respectively.\n\n(a)\n\n \n\nExpress, in term of x, the number of acres of the land she used to cultivate:\n\n(i)\n\n \n\nmangoes;\n\n(ii)\n\n \n\noranges.\n\n(b)\n\n \n\nIf madam Esi used 20 more acres of land to cultivate oranges than mangoes, find the value of x.\n\n(c)\n\n \n\nHow many acres of land was used to cultivate mangoes?\n\n(d)\n\n \n\nCalculate, correct to the nearest whole number, the percentage of the land that was not used.",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2023",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2023 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2023",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "uH5vBiAqjaI7HSXIeQer",
+      "year": "2014",
+      "subject": "mathematics",
+      "questionNumber": 35,
+      "questionText": "A 3.6 m long string is to be cut into pieces, each of length 40 cm. How many pieces can be cut from the string?",
+      "options": [
+        "A. 4",
+        "B. 6",
+        "C. 8",
+        "D. 9"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480388,
+        "_nanoseconds": 364000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2014"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487096,
+        "_nanoseconds": 588000000
+      }
+    },
+    {
+      "id": "uUj067YzEXOOLM67ZraI",
+      "year": "2009",
+      "subject": "mathematics",
+      "questionNumber": 11,
+      "questionText": "A teacher is to be chosen at random from a group of 6 male and 2 female teachers for a patron of a Mathematics Club. What is the probability that a female teacher is chosen?",
+      "options": [
+        "A. 3 4",
+        "B. 2 3",
+        "C. 1 3",
+        "D. 1 4"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480260,
+        "_nanoseconds": 407000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2009"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487092,
+        "_nanoseconds": 558000000
+      }
+    },
+    {
+      "id": "yLsCzfrJhWXyrIAIALAL",
+      "year": "2023",
+      "subject": "mathematics",
+      "questionNumber": 36,
+      "questionText": "Cement and sand were mixed in the ratio 2:5. How many kilograms of cement was contained in the 35 kg of the mixture?",
+      "options": [
+        "A. 7 kg",
+        "B. 10 kg",
+        "C. 14 kg",
+        "D. 88 kg"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482488,
+        "_nanoseconds": 256000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2023"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 62000000
+      }
+    }
+  ],
+  "questionCount": 64
+}

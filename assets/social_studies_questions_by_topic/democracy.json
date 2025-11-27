@@ -1,0 +1,1235 @@
+{
+  "topic": "Democracy",
+  "totalQuestions": 40,
+  "questions": [
+    {
+      "id": "social_studies_1993_q29",
+      "questionText": "Who was the chairman of the Center for Civic Education in Ghana?",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 29,
+      "options": [
+        "A. Dr K.",
+        "A. Busia",
+        "B. Mr Kojo Botsio",
+        "C. Dr John Bilson",
+        "D. Mr A Casely-Hayford"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 29 from the 1993 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1996_q20",
+      "questionText": "One of the works of a Member of Parliament (MP) is to",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 20,
+      "options": [
+        "A. make laws",
+        "B. judge criminals",
+        "C. arrest criminals",
+        "D. conduct state elections",
+        "E. administer laws"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 20 from the 1996 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1996_q22",
+      "questionText": "Power in a democratic state is exercised by the",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 22,
+      "options": [
+        "A. majority",
+        "B. judiciary",
+        "C. military",
+        "D. monarch",
+        "E. parliament"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 22 from the 1996 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1997_q18",
+      "questionText": "Kofi is a Member of Parliament, he therefore contributes to",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 18,
+      "options": [
+        "A. administration of laws",
+        "B. arresting criminals",
+        "C. making of laws",
+        "D. judging criminals",
+        "E. conducting state elections"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 18 from the 1997 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1997_q19",
+      "questionText": "The main purpose of the Economic Community of West African States (ECOWAS) is to",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 19,
+      "options": [
+        "A. achieve political freedom",
+        "B. achieve political unity",
+        "C. expand the size of West Africa",
+        "D. achieve economic integration",
+        "E. reduce migration problems"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 19 from the 1997 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1998_q30",
+      "questionText": "How many seats were contested for in the 1992 Parliamentary elections in Ghana?",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 30,
+      "options": [
+        "A. 100",
+        "B. 110",
+        "C. 154",
+        "D. 200",
+        "E. 210"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 30 from the 1998 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2002_q22",
+      "questionText": "The Chairman of the Centre for Civic Education in Ghana before 1969 was",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 22,
+      "options": [
+        "A. Dr. Kwame Nkrumah",
+        "B. Dr. Arko Adjei",
+        "C. Dr. K.",
+        "A. Busia",
+        "D. Dr. J."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 22 from the 2002 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2003_q16",
+      "questionText": "Government of the people, by the people and for the people is referred to as",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 16,
+      "options": [
+        "A. socialism",
+        "B. monarchy",
+        "C. democracy",
+        "D. apartheid"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 16 from the 2003 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2003_q20",
+      "questionText": "Which of the following agencies cater for the welfare of women and children in the country?",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 20,
+      "options": [
+        "A. National Council for Civic Education (NCCE)",
+        "B. National Council on Women and Development (NCWD)",
+        "C. Non-Formal Education (NFED)",
+        "D. Electoral Commission (EC)"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 20 from the 2003 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2003_q29",
+      "questionText": "Which of the following political parties advocated for federalism in Ghana in 1957?",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 29,
+      "options": [
+        "A. The National Liberation Movement (NLM)",
+        "B. The Convention People‟s Party (CPP)",
+        "C. The Northern People‟s Party (NPP)",
+        "D. The Togoland Congress (TP)"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 29 from the 2003 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2007_q1",
+      "questionText": "Peace, as one of the reasons for the migration of our ancestors to modern Ghana, cannot be sustained, if we promote",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 1,
+      "options": [
+        "A. ethnic conflict",
+        "B. ethnic integration",
+        "C. western democracy",
+        "D. western education"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 1 from the 2007 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2007_q11",
+      "questionText": "Democracy refers to the government of",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 11,
+      "options": [
+        "A. the rich citizens",
+        "B. few wise people",
+        "C. traditional rulers",
+        "D. the people"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 11 from the 2007 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2007_q12",
+      "questionText": "Who presides over debates in the Parliament of Ghana? The",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 12,
+      "options": [
+        "A. clerk",
+        "B. few wise people",
+        "C. traditional rulers",
+        "D. speaker"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 12 from the 2007 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2008_q10",
+      "questionText": "The practice of multiparty democracy in Ghana tends to promote",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 10,
+      "options": [
+        "A. sufficiency",
+        "B. ethnicity",
+        "C. stability",
+        "D. dependency"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 10 from the 2008 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2008_q15",
+      "questionText": "The human resource of a country refers to the",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 15,
+      "options": [
+        "A. members of parliament only",
+        "B. skills of trade unions",
+        "C. skills of workers and management",
+        "D. members of local councils only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 15 from the 2008 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2009_q40",
+      "questionText": "Democracy in our nation could be sustained by",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 40,
+      "options": [
+        "A. teaching the people information technology",
+        "B. operating one party system of government",
+        "C. holding general elections every decade",
+        "D. giving the people political education"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 40 from the 2009 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2009_q5",
+      "questionText": "Economic self-reliance is a necessary factor for maintaining",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 5,
+      "options": [
+        "A. political independence",
+        "B. democratic rule",
+        "C. national unity",
+        "D. higher education"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 5 from the 2009 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2013_q21",
+      "questionText": "One way of sustaining unity among the ethnic groups in Ghana is by",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 21,
+      "options": [
+        "A. selecting leaders through elections.",
+        "B. allowing people to enjoy free movement.",
+        "C. appreciating the cultural practices of other people.",
+        "D. keeping troublemakers in prison."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 21 from the 2013 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2013_q27",
+      "questionText": "The people of British Togoland joined Ghana through",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 27,
+      "options": [
+        "A. conquest.",
+        "B. persuasion.",
+        "C. voting.",
+        "D. declaration."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 27 from the 2013 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2013_q37",
+      "questionText": "One basic right of every Ghanaian is the right to",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 37,
+      "options": [
+        "A. vote in general elections.",
+        "B. personal liberty.",
+        "C. fair wages.",
+        "D. stand for elections."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 37 from the 2013 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2014_q17",
+      "questionText": "Which of the following features is not an efficient way of sustaining political stability in a country?",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 17,
+      "options": [
+        "A. Avoidance of dictatorship",
+        "B. Free and fair elections",
+        "C. One party system",
+        "D. Press freedom"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 17 from the 2014 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2015_q25",
+      "questionText": "One basic right of every Ghanaian is the right to",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 25,
+      "options": [
+        "A. fair wages",
+        "B. personal liberty",
+        "C. stand for election",
+        "D. vote in general elections"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 25 from the 2015 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2016_q20",
+      "questionText": "The people of British Togoland joined Ghana through",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 20,
+      "options": [
+        "A. conquest",
+        "B. declaration",
+        "C. permission",
+        "D. voting"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 20 from the 2016 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2017_q36",
+      "questionText": "Political conflicts in Ghana can best be minimized through",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 36,
+      "options": [
+        "A. tolerating opposing views.",
+        "B. adopting a common language.",
+        "C. banning of private newspapers.",
+        "D. voting for a very strong president."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 36 from the 2017 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2017_q5",
+      "questionText": "Which of the following governors introduced direct elections in Ghana in 1952?",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 5,
+      "options": [
+        "A. Hugh Clifford",
+        "B. Allan Burns",
+        "C. Gordon Guggisberg",
+        "D. Arden Clarke"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 5 from the 2017 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2018_q12",
+      "questionText": "A representation of the earth's surface not drawn to scale is known as",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 12,
+      "options": [
+        "A. map",
+        "B. plan",
+        "C. sketch",
+        "D. globe"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 12 from the 2018 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2018_q14",
+      "questionText": "The best way to settle disputes is through the",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 14,
+      "options": [
+        "A. Electoral Commission",
+        "B. District Assembly",
+        "C. parliamentary committee",
+        "D. court system"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 14 from the 2018 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2018_q39",
+      "questionText": "The main purpose of the Economic Community of West Africa States (ECOWAS) is to",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 39,
+      "options": [
+        "A. achieve economic integration.",
+        "B. expand the size of West Africa.",
+        "C. achieve political unity.",
+        "D. achieve political freedom."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 39 from the 2018 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2019_q13",
+      "questionText": "People are elected into office of parliament through a process called",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 13,
+      "options": [
+        "A. presidential election.",
+        "B. appointment taking.",
+        "C. referendum.",
+        "D. voting."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 13 from the 2019 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2019_q29",
+      "questionText": "The application of checks and balances in democratic governments helps to prevent",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 29,
+      "options": [
+        "A. plebiscite",
+        "B. dictatorship",
+        "C. voting",
+        "D. unemployment"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 29 from the 2019 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2020_q22",
+      "questionText": "Governance becomes more efficient when the Executive and the Legislature",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 22,
+      "options": [
+        "A. perform each other's function.",
+        "B. work independently.",
+        "C. perform the same functions.",
+        "D. rely on guidance from Britain."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 22 from the 2020 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2020_q23",
+      "questionText": "Which of the following can promote nation building in Ghana?",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 23,
+      "options": [
+        "A. Democratic living at all places.",
+        "B. Defending one's religious beliefs.",
+        "C. Allowing minors to vote at general elections.",
+        "D. Reducing family size to prevent unemployment."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 23 from the 2020 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2020_q24",
+      "questionText": "One of the reasons for the signing of the Bond of 1844 was to",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 24,
+      "options": [
+        "A. introduce a better court system.",
+        "B. appoint Ghanaians into the legislature.",
+        "C. end British interference in the Gold Coast.",
+        "D. generate revenue to pay local workers."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 24 from the 2020 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2021_q16",
+      "questionText": "Political conflicts in Ghana can best be minimized through",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 16,
+      "options": [
+        "A. tolerating opposing views",
+        "B. adopting a common language.",
+        "C. banning of private newspapers.",
+        "D. voting for a strong president."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 16 from the 2021 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2021_q6",
+      "questionText": "Which of the following factors cannot promote political stability in Ghana?",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 6,
+      "options": [
+        "A. Dictatorship in administration",
+        "B. Freedom of speech",
+        "C. Multiparty democracy",
+        "D. Open government."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 6 from the 2021 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2024_q27",
+      "questionText": "Which one of the following took place after the 27th April, 1960 referendum?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 27,
+      "options": [
+        "A. The first political party was formed.",
+        "B. Kwame Nkrumah was inaugurated as Prime Minister.",
+        "C. Ghana became a democratic state.",
+        "D. Queen Elizabeth II was inaugurated as Prime Minister."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 27 from the 2024 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2024_q34",
+      "questionText": "Every Ghanaian citizen is expected to demonstrate commitment to democratic values. Which of the following actions best demonstrates the above expectation?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 34,
+      "options": [
+        "A. Criticizing the government on social media",
+        "B. Volunteering for community service",
+        "C. Voting in national elections",
+        "D. Participating in peaceful protests"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 34 from the 2024 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2024_q40",
+      "questionText": "The best approach to help resolve the difference between political parties during general elections is",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 40,
+      "options": [
+        "A. encouraging youth participation in national politics.",
+        "B. encouraging traditional leaders to play partisan politics.",
+        "C. allowing the formation of more political parties.",
+        "D. strengthening the judiciary."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 40 from the 2024 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2009_q1",
+      "questionText": "a)\n\n \n\nWhat is a political party?\n\nb)\n\n \n\nOutline four ways in which political parties are important in the practice of democracy\n\nc)\n\n \n\nMention two problems facing political parties in Ghana",
+      "type": "essay",
+      "year": "2009",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2009 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2024_q3",
+      "questionText": "(a)\n\n \n\nExplain four ways by which national elections promote democracy in Ghana.\n\n(b)\n\n \n\nIn what four ways can citizens contribute to the development of the state?\n\n \n\nSECTION III\n\nSOCIAL AND ECONOMIC DEVELOPMENT",
+      "type": "essay",
+      "year": "2024",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2024 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Democracy"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

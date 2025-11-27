@@ -1,0 +1,41 @@
+{
+  "topic": "Pronunciation",
+  "questions": [
+    {
+      "id": "theory_english_2023_q4",
+      "questionNumber": 4,
+      "marks": 10,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2023",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2023 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2023",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "Read the following passage carefully and answer all the questions which follow.\n\nThe new Headmistress of Beso Junior High School was impressed with the infrastructure and equipment in the school. She was also pleased with the staff and student population. However, one thing puzzled her. The students' performance was very poor, according to the records. She had a discussion with the staff who complained of student absenteeism due to ill health. A nurse in the community told her that the children were often under the weather.\n\nThey had malaria, although every family had been given insecticide-treated mosquito nets. It seemed however that the people did not use these nets as they should and therefore the numerous mosquitoes in the environment continued to bite them. While visiting some of the sick children in the community, the Headmistress noticed that there were several pits filled with water. At a general PTA meeting, she explained how mosquitoes could breed in the stagnant water in the pits. She also pointed out the effects of the poor health of the children on their academic performance. She then appealed for help to destroy the breeding places of the mosquitoes so that the children would become healthier and perform better in school.\n\nAlthough some of the parents did not understand the connection between the water in the pits and the performance of the students, they agreed to help her. During the next dry season, work started. All hands were on deck. The people worked very hard and the pits were filled. Trees and flowers were planted on the reclaimed land. The community now looked more beautiful than before. Soon, the children's health improved and, later, their performance in the final examinations became better.\n\na)\n\n \n\nMention two things that Headmistress liked about the school.\n\nb)\n\n \n\nIn which two ways did the children's poor health affect them?\n\nc)\n\n \n\nWhy did the Headmistress involve the parents in solving the problem?\n\nd)\n\n \n\ni)\n\n \n\nWhat made the community succeed in filling the pits?\n\nii)\n\n \n\nWhat two benefits did the filling of the pits bring to the community?\n\ne)\n\n \n\nExplain, in your own words, the following expressions as used in the passage:\n\ni)\n\n \n\n... one thing puzzled her;\n\nii)\n\n \n\n... often under the weather;\n\niii)\n\n \n\nAll hands were on deck.\n\nf)\n\n \n\nFor each of the following words, give another word or a phrase that means the same and can fit into the passage:\n\ni)\n\n \n\nnoticed;\n\nii)\n\n \n\npits;\n\niii)\n\n \n\nappealed;\n\niv)\n\n \n\nperform;\n\nv)\n\n \n\nconnection.\n\n  \n\nPART CLITERATURE[10 marks]\n\nAnswer all the questions in this part.\n\nSACKEY J.A and DARMANI L. (COMP): The Cockcrow",
+      "partHeader": "PART B - READING"
+    }
+  ],
+  "questionCount": 1
+}

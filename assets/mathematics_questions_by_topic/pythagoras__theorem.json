@@ -1,0 +1,330 @@
+{
+  "topic": "Pythagoras' Theorem",
+  "questions": [
+    {
+      "id": "3WuKWAYP0aCs4lVzV2Hy",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 27,
+      "questionText": "The diagram below is a right-angled triangle. Use it to answer the question below Find tan ∠YXZ",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479590,
+        "_nanoseconds": 277000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 5 13",
+        "B. 5 12",
+        "C. 12 13",
+        "D. 12 5",
+        "E. 13 5"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487078,
+        "_nanoseconds": 582000000
+      }
+    },
+    {
+      "id": "Bd3OMjrcyMCUkhAyAhBB",
+      "year": "2006",
+      "subject": "mathematics",
+      "questionNumber": 39,
+      "questionText": "In the diagram above, KGM is a right-angled triangle and angle GKM = 62°. Find the angle of elevation of K from M.",
+      "options": [
+        "A. 28°",
+        "B. 62°",
+        "C. 90°",
+        "D. 118°"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480208,
+        "_nanoseconds": 135000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2006"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 135000000
+      }
+    },
+    {
+      "id": "Gq7s8JWgRrVvxFWE6b21",
+      "year": "2009",
+      "subject": "mathematics",
+      "questionNumber": 14,
+      "questionText": "Which of the following sets of angles form the interior angles of a right angled triangle?",
+      "options": [
+        "A. {20°, 50°, 90°}",
+        "B. {80°, 60°, 90°}",
+        "C. {45°, 45°, 90°}",
+        "D. {65°, 90°, 35°}"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480262,
+        "_nanoseconds": 161000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2009"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487092,
+        "_nanoseconds": 558000000
+      }
+    },
+    {
+      "id": "KA5BgRrO9RjTnqD0sltN",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 26,
+      "questionText": "The diagram below is a right-angled triangle. Use it to answer the question below Find |XZ|",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479589,
+        "_nanoseconds": 715000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 2.4 cm",
+        "B. 7 cm",
+        "C. 13 cm",
+        "D. 17 cm",
+        "E. 60 cm"
+      ],
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487078,
+        "_nanoseconds": 582000000
+      }
+    },
+    {
+      "id": "UhBLHuiW7v6B0o6TmIlG",
+      "year": "1993",
+      "subject": "mathematics",
+      "questionNumber": 40,
+      "questionText": "Three girls Ama, Adjoa and Abena measured the length of the sides of 3 right-angled triangles as follows: Ama's measurements were 80 mm, 40 mm, 50 mm. Adjoa's measurements were 50 mm, 120 mm, 130 mm. Abena's measurements were 20 mm, 30 mm and 40 mm. Whose measurement(s) was / were correct?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479618,
+        "_nanoseconds": 478000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1993"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. Ama's only",
+        "B. Abena's and Ama's",
+        "C. Adjoa's and Abena's",
+        "D. Ama's and Adjoa's only",
+        "E. Adjoa's only"
+      ],
+      "explanation": "",
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487079,
+        "_nanoseconds": 424000000
+      }
+    },
+    {
+      "id": "fCOoNGdr7t5n9VoBJY9A",
+      "year": "2004",
+      "subject": "mathematics",
+      "questionNumber": 40,
+      "questionText": "Which of the following dimensions of a triangle form the sides of a right angled triangle?",
+      "options": [
+        "A. 3cm, 4cm, 6cm",
+        "B. 3cm, 5cm, 7cm",
+        "C. 5cm, 12cm, 13cm",
+        "D. 5cm, 13cm, 17cm"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480163,
+        "_nanoseconds": 49000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2004"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487088,
+        "_nanoseconds": 551000000
+      }
+    },
+    {
+      "id": "nsFJOMJUy3W8PyncOs02",
+      "year": "2015",
+      "subject": "mathematics",
+      "questionNumber": 27,
+      "questionText": "What name is given to a triangle which has all its sides equal?",
+      "options": [
+        "A. Isosceles triangle",
+        "B. Scalene triangle",
+        "C. Equilateral triangle",
+        "D. Right-angle triangle"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480406,
+        "_nanoseconds": 662000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2015"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487097,
+        "_nanoseconds": 370000000
+      }
+    },
+    {
+      "id": "uQsniDzw3wFRvut0PeIE",
+      "year": "1996",
+      "subject": "mathematics",
+      "questionNumber": 22,
+      "questionText": "What type of triangle is ∆PQR?",
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479972,
+        "_nanoseconds": 600000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1996"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. Equilateral",
+        "B. Isosceles",
+        "C. Scalene",
+        "D. Right-angled",
+        "E. Obtuse-angled"
+      ],
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 915000000
+      }
+    }
+  ],
+  "questionCount": 8
+}

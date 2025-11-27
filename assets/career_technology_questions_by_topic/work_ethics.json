@@ -1,0 +1,40 @@
+{
+  "topic": "Work Ethics",
+  "questions": [
+    {
+      "id": "career_technology_2024_q24",
+      "questionText": "In designing a frying pan, the handle should be made of a material that ensures safety and ease of use. Wood would be a good choice of material for the handle because it is a",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 24,
+      "options": [
+        "A. good conductor of electricity.",
+        "B. good conductor of heat.",
+        "C. poor conductor of electricity.",
+        "D. poor conductor of heat."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 24 from the 2024 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2024"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    }
+  ],
+  "questionCount": 1
+}

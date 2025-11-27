@@ -1,0 +1,100 @@
+{
+  "totalQuestions": 1703,
+  "categorizedQuestions": 1411,
+  "unclassifiedQuestions": 292,
+  "categorizationRate": "82.9%",
+  "topicsBreakdown": [
+    {
+      "topic": "Whole Numbers",
+      "count": 64
+    },
+    {
+      "topic": "Fractions",
+      "count": 29
+    },
+    {
+      "topic": "Decimals",
+      "count": 25
+    },
+    {
+      "topic": "Percentages",
+      "count": 81
+    },
+    {
+      "topic": "Ratios & Proportions",
+      "count": 75
+    },
+    {
+      "topic": "Indices & Standard Form",
+      "count": 54
+    },
+    {
+      "topic": "Sets",
+      "count": 21
+    },
+    {
+      "topic": "Algebraic Expressions",
+      "count": 173
+    },
+    {
+      "topic": "Algebraic Operations",
+      "count": 5
+    },
+    {
+      "topic": "Linear Equations",
+      "count": 202
+    },
+    {
+      "topic": "Inequalities",
+      "count": 43
+    },
+    {
+      "topic": "Functions & Relations",
+      "count": 53
+    },
+    {
+      "topic": "Graphs",
+      "count": 96
+    },
+    {
+      "topic": "Plane Geometry",
+      "count": 120
+    },
+    {
+      "topic": "Circle Geometry",
+      "count": 9
+    },
+    {
+      "topic": "Geometric Constructions",
+      "count": 2
+    },
+    {
+      "topic": "Measurement",
+      "count": 115
+    },
+    {
+      "topic": "Transformations & Symmetry",
+      "count": 28
+    },
+    {
+      "topic": "Pythagoras' Theorem",
+      "count": 8
+    },
+    {
+      "topic": "Data Collection",
+      "count": 5
+    },
+    {
+      "topic": "Data Representation",
+      "count": 106
+    },
+    {
+      "topic": "Measures of Central Tendency",
+      "count": 51
+    },
+    {
+      "topic": "Probability",
+      "count": 46
+    }
+  ]
+}

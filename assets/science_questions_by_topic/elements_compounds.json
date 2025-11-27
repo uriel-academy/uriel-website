@@ -1,0 +1,2014 @@
+{
+  "topic": "Elements & Compounds",
+  "totalQuestions": 70,
+  "questions": [
+    {
+      "id": "integrated_science_1991_q33",
+      "questionText": "Which of the following metals is used for making roofing sheets?",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 33,
+      "options": [
+        "A. Zinc",
+        "B. Silver",
+        "C. Mercury",
+        "D. Tin",
+        "E. Aluminium\n\n35. What is the name of the final product of protein digestion?"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 33 from the 1991 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1992_q11",
+      "questionText": "Which of the following products is not excreted by the skin?",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 11,
+      "options": [
+        "A. Water",
+        "B. Sweat",
+        "C. Urea",
+        "D. Common salt",
+        "E. saliva"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 11 from the 1992 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1992_q12",
+      "questionText": "An element is formed by the combination of",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 12,
+      "options": [
+        "A. an atom and a compound",
+        "B. a compound and a mixture",
+        "C. an atom and a mixture",
+        "D. a molecule and a compound",
+        "E. the same kind of atoms"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 12 from the 1992 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1992_q25",
+      "questionText": "Faeces is the",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 25,
+      "options": [
+        "A. excretory products resulting from body activities",
+        "B. food which is digested",
+        "C. food in the mouth which is removed from the body",
+        "D. unwanted product of digestion which is removed from the body",
+        "E. excess food which is stored in the body"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 25 from the 1992 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1992_q6",
+      "questionText": "How many different elements are present in the compound CuCl2?",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 6,
+      "options": [
+        "A. Five",
+        "B. Four",
+        "C. Three",
+        "D. Two",
+        "E. One"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 6 from the 1992 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1994_q12",
+      "questionText": "The chemical formula for sodium chloride",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 12,
+      "options": [
+        "A. Na2Cl",
+        "B. NaCl",
+        "C. Sn2Cl",
+        "D. NaCl2",
+        "E. SnCl2"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 12 from the 1994 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1996_q7",
+      "questionText": "The law of conservation of energy states that energy can",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 7,
+      "options": [
+        "A. be created but not transformed",
+        "B. be destroyed but not transformed",
+        "C. neither be created nor transformed",
+        "D. not be created but can be transformed",
+        "E. neither be created nor destroyed, but only be transformed"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 7 from the 1996 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1999_q32",
+      "questionText": "Which of the following metals is an alloy?",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 32,
+      "options": [
+        "A. Aluminium",
+        "B. Brass",
+        "C. Copper",
+        "D. Iron",
+        "E. Zinc"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 32 from the 1999 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2000_q38",
+      "questionText": "An atoms has 4 protons and 5 neutrons in its nucleus. How many positively charged particles are in the atom?",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 38,
+      "options": [
+        "A. 1",
+        "B. 2",
+        "C. 3",
+        "D. 4",
+        "E. 5"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 38 from the 2000 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2003_q29",
+      "questionText": "The end-products of the digestion of fats and oils are",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 29,
+      "options": [
+        "A. amino acids and glucose.",
+        "B. amino acids and glycerol.",
+        "C. fatty acids and glycerol.",
+        "D. fatty acids and amino acids."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 29 from the 2003 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2004_q22",
+      "questionText": "Which of the following elements is a liquid at room temperature.",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 22,
+      "options": [
+        "A. Carbon.",
+        "B. Mercury.",
+        "C. Silver.",
+        "D. Sulphur."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 22 from the 2004 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2004_q35",
+      "questionText": "A uniform mixture of two or more metals is called",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 35,
+      "options": [
+        "A. an alloy.",
+        "B. a coiled.",
+        "C. an aerosol.",
+        "D. a compound"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 35 from the 2004 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2005_q1",
+      "questionText": "1.\n\n \n\nHydrogen is represented by the chemical symbol H2. This symbol represents",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 1,
+      "options": [
+        "A. two molecules of hydrogen.",
+        "B. two atoms of hydrogen.",
+        "C. two elements of hydrogen.",
+        "D. two ions of hydrogen."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 1 from the 2005 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2005_q32",
+      "questionText": "Which of the following elements is a metal?",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 32,
+      "options": [
+        "A. Carbon",
+        "B. Nitrogen",
+        "C. Sulphur",
+        "D. Sodium"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 32 from the 2005 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2006_q22",
+      "questionText": "The chemical formula of a compound describes the",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 22,
+      "options": [
+        "A. ratio in which the elements are combined.",
+        "B. number of molecules in a compound.",
+        "C. nature of the bonding in the compound.",
+        "D. state of matter of the compound."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 22 from the 2006 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2006_q24",
+      "questionText": "How many different elements are present in the compound H2SO4?",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 24,
+      "options": [
+        "A. 2",
+        "B. 3",
+        "C. 6",
+        "D. 7"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 24 from the 2006 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2006_q33",
+      "questionText": "A non-reactive metal can be identified from other metals because its surface is",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 33,
+      "options": [
+        "A. hard.",
+        "B. shiny.",
+        "C. smooth.",
+        "D. rough."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 33 from the 2006 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2008_q9",
+      "questionText": "Metals are able to conduct electricity because they possess",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 9,
+      "options": [
+        "A. free electrons.",
+        "B. neutrons.",
+        "C. atoms.",
+        "D. free protons."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 9 from the 2008 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2009_q15",
+      "questionText": "The removal of waste products from the cells of organisms is called",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 15,
+      "options": [
+        "A. assimilation.",
+        "B. circulation.",
+        "C. exhalation.",
+        "D. excretion."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 15 from the 2009 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2009_q22",
+      "questionText": "A substance which is made up of the same kind of atoms is called",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 22,
+      "options": [
+        "A. a compound.",
+        "B. a mixture.",
+        "C. an element.",
+        "D. an ion."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 22 from the 2009 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2009_q24",
+      "questionText": "When elements combine to form a compound the",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 24,
+      "options": [
+        "A. constituents can be separated by a physical process.",
+        "B. volume of the compound is the sum of the volumes of the constituents.",
+        "C. reaction does not involve a heat change.",
+        "D. reaction can be represented by a chemical formula."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 24 from the 2009 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2011_q26",
+      "questionText": "Which of the following chemical symbols is that of a metal?",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 26,
+      "options": [
+        "A. Ca",
+        "B. Ne",
+        "C. P",
+        "D. S"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 26 from the 2011 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2012_q2",
+      "questionText": "The chemical formula of a compound describes the",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 2,
+      "options": [
+        "A. number of molecules in the compound.",
+        "B. type of bonding in the compound.",
+        "C. ratio in which the elements are combined.",
+        "D. state of the compound."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 2 from the 2012 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2012_q24",
+      "questionText": "The sub-atomic particle with zero charge in the nucleus of an atoms is called",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 24,
+      "options": [
+        "A. electron.",
+        "B. ion.",
+        "C. neutron.",
+        "D. proton."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 24 from the 2012 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2012_q27",
+      "questionText": "Non-reactive metals are preferred in making ornaments and jewellery because they",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 27,
+      "options": [
+        "A. are attractive.",
+        "B. do not react with atmospheric oxygen.",
+        "C. do not retain their luster.",
+        "D. are corrosive."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 27 from the 2012 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2012_q30",
+      "questionText": "The chemical formula for aluminium oxide is represented as AlxOy. The values of x and y are respectively",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 30,
+      "options": [
+        "A. 3 and 2.",
+        "B. 3 and 1.",
+        "C. 1 and 3.",
+        "D. 2 and 3."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 30 from the 2012 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2013_q15",
+      "questionText": "Which of the following metals will produce a gas when placed in lime juice?",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 15,
+      "options": [
+        "A. Copper",
+        "B. Lead",
+        "C. Magnesium",
+        "D. Silver"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 15 from the 2013 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2013_q28",
+      "questionText": "Which of the following statements about molecules is/are correct? MoleculesI. are chemically combined group of atomsII. are physically combined group of atomsIII. can exist on their own",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 28,
+      "options": [
+        "A. I only",
+        "B. II only",
+        "C. I and III only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 28 from the 2013 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2014_q11",
+      "questionText": "Which of the following elements is a semi-metal?",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 11,
+      "options": [
+        "A. Carbon",
+        "B. Nitrogen",
+        "C. Silicon",
+        "D. Sodium"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 11 from the 2014 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2014_q7",
+      "questionText": "Solid non-metals normally break into pieces when hammered because they are",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 7,
+      "options": [
+        "A. brittle",
+        "B. ductile",
+        "C. lustrous",
+        "D. malleable"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 7 from the 2014 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2015_q17",
+      "questionText": "How many atoms are present in CaCl2?",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 17,
+      "options": [
+        "A. 2",
+        "B. 3",
+        "C. 4",
+        "D. 5"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 17 from the 2015 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2016_q32",
+      "questionText": "Elements that could easily lose electrons to form cations are",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 32,
+      "options": [
+        "A. metals.",
+        "B. non-metals.",
+        "C. semi-metals.",
+        "D. noble gases."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 32 from the 2016 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2016_q8",
+      "questionText": "The number of elements in the compound Ca(OH)2 is",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 8,
+      "options": [
+        "A. 2",
+        "B. 3",
+        "C. 4",
+        "D. 5"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 8 from the 2016 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2017_q12",
+      "questionText": "The number of oxygen atoms present in three molecules of carbon dioxide is",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 12,
+      "options": [
+        "A. 3.",
+        "B. 4.",
+        "C. 5.",
+        "D. 6."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 12 from the 2017 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2017_q13",
+      "questionText": "The chemical formula Cl2 represents two",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 13,
+      "options": [
+        "A. atoms of chlorine.",
+        "B. neutrons of chlorine.",
+        "C. ions of chlorine.",
+        "D. molecules of chlorine."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 13 from the 2017 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2017_q21",
+      "questionText": "Which of the following particles constitute matter?I. AtomsII. MoleculesIII. Ions",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 21,
+      "options": [
+        "A. I only",
+        "B. II only",
+        "C. II and III only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 21 from the 2017 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2019_q21",
+      "questionText": "Which of the following compounds is neutral to litmus paper?",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 21,
+      "options": [
+        "A. HCL",
+        "B. H2O",
+        "C. NaOH",
+        "D. KOH"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 21 from the 2019 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2020_q19",
+      "questionText": "Which of the following elements is a macro-nutrient?",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 19,
+      "options": [
+        "A. Copper",
+        "B. Manganese",
+        "C. Zinc",
+        "D. Sulphur"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 19 from the 2020 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2020_q34",
+      "questionText": "The elements in the periodic table are arranged according to their",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 34,
+      "options": [
+        "A. atomic number",
+        "B. atomic mass",
+        "C. mass number",
+        "D. neutron number"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 34 from the 2020 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2020_q38",
+      "questionText": "Which of the following statements about acids correctI. They react with the calcium carbonate to give a gasII. They turn red litmus paper blueIII. They react with reactive metals to give a gasIV. They turn blue litmus paper red",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 38,
+      "options": [
+        "A. I, II and IV only",
+        "B. I, II and III only",
+        "C. II, III and IV only",
+        "D. D. I, III and IV"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 38 from the 2020 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2020_q6",
+      "questionText": "A substance which is made up of the same kind of atoms is called",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 6,
+      "options": [
+        "A. a compound",
+        "B. an element",
+        "C. a mixture",
+        "D. an ion"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 6 from the 2020 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2020_q9",
+      "questionText": "The chemical formula of an aluminium sulphide is AlyS3.Determine the value of y",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 9,
+      "options": [
+        "A. 1",
+        "B. 2",
+        "C. 3",
+        "D. 4"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 9 from the 2020 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2021_q12",
+      "questionText": "Which of the following chemical symbols is that of an element with seven electrons in the outermost shell?",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 12,
+      "options": [
+        "A. 20Ca",
+        "B. 17Cl",
+        "C. 10Ne",
+        "D. 16S"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 12 from the 2021 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2021_q28",
+      "questionText": "Which of the following elements is a macro-nutrient of plants?",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 28,
+      "options": [
+        "A. Copper",
+        "B. Manganese",
+        "C. Molybdenum",
+        "D. Sulphur"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 28 from the 2021 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2022_q27",
+      "questionText": "The periodic table is an arrangement of elements according to increasing",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 27,
+      "options": [
+        "A. atomic number.",
+        "B. mass number.",
+        "C. nucleon number.",
+        "D. neutron number."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 27 from the 2022 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2023_q20",
+      "questionText": "Which of the following pairs of elements is in the same period in the periodic table?",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 20,
+      "options": [
+        "A. 5B and 13Al",
+        "B. 1H and 3Li",
+        "C. 4Be and 5B",
+        "D. 11Na and 19K"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 20 from the 2023 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2023_q8",
+      "questionText": "How many atoms are present in H2O2?",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 8,
+      "options": [
+        "A. 5",
+        "B. 4",
+        "C. 3",
+        "D. 2"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 8 from the 2023 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2024_q33",
+      "questionText": "In making ornaments and jewellery, non-reactive metals are preferred because they",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 33,
+      "options": [
+        "A. are corrosive.",
+        "B. are attractive.",
+        "C. do not retain their lustre.",
+        "D. do not react with atmospheric oxygen."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 33 from the 2024 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2024_q7",
+      "questionText": "Which of the following elements has four electron shells?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 7,
+      "options": [
+        "A. 19K",
+        "B. 13Al",
+        "C. 15P",
+        "D. 5B"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 7 from the 2024 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2025_q11",
+      "questionText": "Which of the following statements accurately explains the positions of calcium and magnesium in the periodic table? They all have the same",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 11,
+      "options": [
+        "A. proton number.",
+        "B. valence electrons.",
+        "C. number of shells.",
+        "D. atomic structure."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 11 from the 2025 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2025_q35",
+      "questionText": "The chemical formula of iron (II) sulphide is",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 35,
+      "options": [
+        "A. FeS2.",
+        "B. Fe2S.",
+        "C. FeS.",
+        "D. Fe2S3."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 35 from the 2025 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_1993_q2",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nExplain the term balanced diet.\n\n(ii)\n\n \n\nName any two classes of food which should be present in a balanced diet.\n\n(iii)\n\n \n\nGive one function of each class of food named in (a) (ii) above.\n\n(b)\n\n \n\nAn object is placed in front of a pinhole camera as shown in the diagram below:\n\n\n\nDraw in your answer book a ray diagram (not to scale) to show how the image is formed on the screen of the camera.\n\n(c)\n\n \n\nState the two laws of reflection of light\n\n(d)\n\n \n\n(i)\n\n \n\nDescribe how ions are formed from atoms.\n\n(ii)\n\n \n\nState two differences between a proton and an electron.",
+      "type": "essay",
+      "year": "1993",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1993 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_1998_q1",
+      "questionText": "(a)\n\n \n\nState two differences between a planet and a star.\n\n(b)\n\n \n\n(i)\n\n \n\nWhat is surface tension.\n\n(ii)\n\n \n\nState one way in which surface tension can be useful to man.\n\n(c)\n\n \n\n(i)\n\n \n\nGive one example each of a rhizome, a corm, a stem tuber, a bulb and a sucker.\n\n(ii)\n\n \n\nState two reasons why a rhizome, a corm and a stem tuber are considered as stems.\n\n(d)\n\n \n\nName the compounds formed when the following elements combine:\n\n(i)\n\n \n\nzinc and oxygen\n\n(ii)\n\n \n\ncalcium and chlorine\n\n(iii)\n\n \n\nsodium and bromine\n\n(iv)\n\n \n\npotassium and iodine",
+      "type": "essay",
+      "year": "1998",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1998 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2001_q2",
+      "questionText": "a)\n\n \n\nState and explain three ways by which plants protect themselves from danger\n\nb)\n\n \n\ni)\n\n \n\nWhat is an anion?\n\nii)\n\n \n\nGive the names of the products formed when the following pairs of compounds react together:\n\nα)\n\n \n\nNH4OH and dilute HCl\n\nβ)\n\n \n\nCaCO3 and dilute HCl\n\nc)\n\n \n\ni)\n\n \n\nWhat is electromagnetism?\n\nii)\n\n \n\nWith the aid of a circuit diagram describe how a piece of metal can be magnetized",
+      "type": "essay",
+      "year": "2001",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2001 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2002_q1",
+      "questionText": "a)\n\n \n\nClassify each of the following substances as colloids, suspension or solution: Smoke, breast milk, powdered milk in water, sea water, mist, steel.\n\nb)\n\n \n\ni)\n\n \n\nDefine valency\n\nii)\n\n \n\nState the valencies of the following elements and radicals:\n\nα)\n\n \n\nIron\n\nβ)\n\n \n\nZinc\n\nγ)\n\n \n\nHydroxyl\n\nλ)\n\n \n\nCarbonate\n\nc)\n\n \n\nGive one difference between plants and animals in terms of\n\ni)\n\n \n\nfeeding\n\nii)\n\n \n\nexcretion\n\niii)\n\n \n\nsensitivity\n\nd)\n\n \n\ni)\n\n \n\nDraw and label a diagram to show how an image is formed in a pinhole camera.\n\nii)\n\n \n\nState the characteristics of the image formed.",
+      "type": "essay",
+      "year": "2002",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2002 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2002_q2",
+      "questionText": "a)\n\n \n\nState three differences between molecules in a solid state and liquid state.\n\nb)\n\n \n\ni)\n\n \n\nWhat is a solution?\n\nii)\n\n \n\nDifferentiate between solutions and mixtures in terms of particle sizes.\n\nc)\n\n \n\nName the elements which make up the following compounds:\n\ni)\n\n \n\nwater\n\nii)\n\n \n\ncommon salt\n\niii)\n\n \n\nammonia\n\nd)\n\n \n\nCopy and complete the table below\n\nDisease\n\nVector\n\nCausative agent\n\nSymptoms\n\nMalaria\n\n\n\n\n\n\n\nSleeping sickness\n\n\n\n\n\n\n\ne)\n\n \n\ni)\n\n \n\nWhat is a man-made satellite?\n\nii)\n\n \n\nGive two examples of natural satellites.\n\niii)\n\n \n\nMention two applications of man-made satellites",
+      "type": "essay",
+      "year": "2002",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2002 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2004_q3",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nWhat is soil erosion?\n\nii)\n\n \n\nGive two types of soil erosion.\n\nb)\n\n \n\nWrite the name and chemical formula of the compounds formed when the following elements combine:\n\ni)\n\n \n\nzinc and oxygen\n\nii)\n\n \n\ncalcium and chlorine\n\nc)\n\n \n\ni)\n\n \n\nDistinguish between heat and temperature.\n\nii)\n\n \n\nDraw and label the mercury-in-glass thermometer.\n\niii)\n\n \n\nWhat mode of heat transfer is involved in the use of a thermometer?",
+      "type": "essay",
+      "year": "2004",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2004 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2008_q1",
+      "questionText": "(a)\n\n \n\n\n\nIn an experiment, as in the set-up above, two glass containers A and B of different sizes are joined together with a tube and clipped.\n\nWater is poured into container A to a height of 30 cm and a red liquid is poured into B to a height of 10 cm. The clip is then removed so that the liquids join together.\n\n(i)\n\n \n\nState two observations that will be made immediately the clip is removed.\n\n(ii)\n\n \n\nExplain the observations in (i).\n\n(iii)\n\n \n\nWhat two observations will be made after a long time? Explain.\n\n(b)\n\n \n\nThe set-up below is used in the preparation of ammonia gas in the laboratory\n\nStudy it and answer the questions that follow.\n\n\n\n(i)\n\n \n\nName the parts labelled a, b and c\n\n(ii)\n\n \n\nWhat is the meaning of the arrow sign d?\n\n(iii)\n\n \n\nWhat is the function of the calcium oxide?\n\n(iv)\n\n \n\nWhy has c been tilted downwards?\n\n(v)\n\n \n\nState the method by which the gas is collected.\n\n(vi)\n\n \n\nHow will you test for the gas?\n\n(vii)\n\n \n\nGive the names and the chemical formulae of the compounds that form the content of c.\n\n(c)\n\n \n\nIn an experiment, a leaf that is partly green and partly yellow is plucked from a tree and the leaf is\n\nI boiled for a minute,\n\nII dipped in warm alcohol,\n\nIII washed in cold water,\n\nIV dipped in iodine solution.\n\nOne part of the leaf turns blue-black after the dipping in iodine solution while the other part remains unchanged.\n\n(i)\n\n \n\nExplain why each of the processes I, II and III\n\n(ii)\n\n \n\nWhich part of the leaf turns blue-black? Explain.\n\n(iii)\n\n \n\nWhy does the other part of the leaf not change colour?\n\n(iv)\n\n \n\nWhat conclusion can you draw from the experiment?",
+      "type": "essay",
+      "year": "2008",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2008 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2008_q4",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nWhat is an echo?\n\n(ii)\n\n \n\nState two uses of echoes.\n\n(b)\n\n \n\n(i)\n\n \n\nState three diseases that affect the respiratory system of human.\n\n(ii)\n\n \n\nName one method each by which the diseases you have named can be prevented.\n\n(c)\n\n \n\n(i)\n\n \n\nWhat is biotechnology?\n\n(ii)\n\n \n\nList three products that are obtained from biotechnology.",
+      "type": "essay",
+      "year": "2008",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2008 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2008_q5",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nDefine pressure\n\n(ii)\n\n \n\nState three applications of pressure in everyday life\n\n(b)\n\n \n\nState four functions of the liver in digestion.\n\n(c)\n\n \n\n(i)\n\n \n\nWhat is a compound?\n\n(ii)\n\n \n\nGive two properties of a compound\n\n(iii)\n\n \n\nWrite down the name and the chemical formula of the compound formed between the following elements:\n\n(α)\n\n \n\nhydrogen and chlorine\n\n(β)\n\n \n\nmagnesium and oxygen",
+      "type": "essay",
+      "year": "2008",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2008 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2010_q3",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nDefine Pressure\n\n(ii)\n\n \n\nExplain why it is important to sharpen a knife before use.\n\n(b)\n\n \n\n(i)\n\n \n\nState two differences between metals and non-metals.\n\n(ii)\n\n \n\nWhat is an alloy?\n\n(ii)\n\n \n\nMention the components of each of the following alloys:\n\n(α)\n\n \n\nsteel;\n\n(β)\n\n \n\nbrass.\n\n(c)\n\n \n\nMention three conditions suitable for rearing tilapia in a fishpond.\n\n(d)\n\n \n\nExplain how the streamlined body of a bony fish enables it to live successfully in water.",
+      "type": "essay",
+      "year": "2010",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2010 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2010_q5",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nWhat is respiration?\n\n(ii)\n\n \n\nName the types of respiration that occur in humans.\n\n(b)\n\n \n\nList three ways of maintaining soil fertility.\n\n(c)\n\n \n\n(i)\n\n \n\nWrite the systematic name of each of the following chemical compounds:\n\n(α)\n\n \n\nFeS;\n\n(β)\n\n \n\nSO2;\n\n(γ)\n\n \n\nCO2.\n\n(ii)\n\n \n\nGive one reason why copper, silver and gold are mostly used in making ornaments and jewellery.\n\n(d)\n\n \n\n(i)\n\n \n\nWhat is a fuse?\n\n(ii)\n\n \n\nExplain why a fuse is used in an electrical circuit.",
+      "type": "essay",
+      "year": "2010",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2010 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2011_q1",
+      "questionText": "a)\n\n \n\nIn an experiment to demonstrate a property of light, three cardboards, A, B, and C with holes in their centres are arranged in a straight line between a lighted bulb and an observer as shown in the illustration below.\n\nStudy the illustration carefully and use it to answer the question that follow:\n\n\n\ni)\n\n \n\nWhat would the observer see from the position shown?\n\nii)\n\n \n\nWhat would the observer see when cardboard B is slightly displaced from the line?\n\niii)\n\n \n\nExplain the observation made in (a) (ii) above.\n\niv)\n\n \n\nWhat would be observed when the cardboard B is brought back to its original position?\n\nv)\n\n \n\nWhat property of light is being demonstrated in this experiment?\n\nvi)\n\n \n\nMention\n\nα)\n\n \n\ntwo natural occurrences that could be explained by the property of light demonstrated.\n\nβ)\n\n \n\none device that works on the property of light demonstrated.\n\nb)\n\n \n\nThe diagrams below are illustrations of hazards symbols found in everyday life.\n\nStudy them carefully and use them to answer the questions that follow:\n\n\n\ni)\n\n \n\nWhat does each symbol A, B, C and D represent?\n\nii)\n\n \n\nName one substance each that is associated with each of the symbols A, B and C.\n\niii)\n\n \n\nName one place where the symbols D can be found.\n\niv)\n\n \n\nState two advantages of hazard symbols.\n\nc)\n\n \n\nThe diagrams below are illustrations of the different types of teeth in humans.\n\nStudy them carefully and use them to answer the questions that follow:\n\n\n\ni)\n\n \n\nIdentify each type of teeth labelled A, B and C.\n\nii)\n\n \n\nDescribe the shape of each of the teeth labeled A, B and C.\n\niii)\n\n \n\nState one function of each of the teeth labeled A, B and C.\n\niv)\n\n \n\nName the parts of the teeth labeled I and II.\n\nd)\n\n \n\nThe diagrams below are illustrations of some farm tools.\n\nStudy them carefully and use them to answer the questions that follow:\n\n\n\ni)\n\n \n\nIdentify each of the following labeled A, B, C, D and E.\n\nii)\n\n \n\nMention one use of each of the tools labeled A, B, C, D and E.",
+      "type": "essay",
+      "year": "2011",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2011 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2013_q4",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nWhat do the symbols L, N and E represent in an electric plug?\n\n(ii)\n\n \n\nWhat is the function of the fuse box in household electrical wiring?\n\n(b)\n\n \n\nMention four classes of insect pest based on their feeding habits.\n\n(c)\n\n \n\nClassify the first four elements of the periodic table as metals and non- metals.\n\n(d)\n\n \n\nName the three types of blood vessels in humans.",
+      "type": "essay",
+      "year": "2013",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2013 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2014_q2",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nName the two elements that combine to form water.\n\n(ii)\n\n \n\nWrite a balanced chemical equation to show how the water is formed from the named elements.\n\n(b)\n\n \n\nState two ways of maintaining a balance in an ecosystem.\n\n(c)\n\n \n\n(i)\n\n \n\nWhat is a fertile soil?\n\n(ii)\n\n \n\nState two factors that cause loss of soil fertility.\n\n(d)\n\n \n\nClassify the following items as magnetic or non-magnetic substance: wood, steel blade, rubber and glass jar.",
+      "type": "essay",
+      "year": "2014",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2014 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2019_q6",
+      "questionText": "a)\n\n \n\nState three ways in which crop rotation is important in crop production.\n\nb)\n\n \n\nState three properties of the image formed by a plane mirror.\n\nc)\n\n \n\ni)\n\n \n\nWhat is photosynthesis?\n\nii)\n\n \n\nExplain briefly why a digestive system is necessary in humans.\n\nd)\n\n \n\nGive the systematic name of the following compounds:\n\ni)\n\n \n\nα)\n\n \n\nMgCl2;\n\nβ)\n\n \n\nFeS.\n\nii)\n\n \n\nWhat is an element?\n\niii)\n\n \n\nWhat is the name given to a solid mixture?",
+      "type": "essay",
+      "year": "2019",
+      "questionNumber": 6,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2019 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2022_q2",
+      "questionText": "(a)\n\n \n\nState three differences between metals and non-metals in terms of their physical properties.\n\n(b)\n\n \n\n(i)\n\n \n\nExplain the term active region as applied to transistors;\n\n(ii)\n\n \n\nState what happens in the active region of a transistor.\n\n(c)\n\n \n\n(i)\n\n \n\nState two effects of lack of protein in the diet of humans.\n\n(ii)\n\n \n\nDescribe briefly the chemical test for glucose.\n\n(d)\n\n \n\n(i)\n\n \n\nWhat are soil resources?\n\n(ii)\n\n \n\nState two agricultural activities which make the soil lose its nutrients.",
+      "type": "essay",
+      "year": "2022",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2022 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2022_q3",
+      "questionText": "(a)\n\n \n\nList in the correct order, the organs through which food passes from the mouth to the anus.\n\n(b)\n\n \n\nState the components of a balanced ration for feeding poultry.\n\n(c)\n\n \n\nPredict the products formed when:\n\n(i)\n\n \n\nmagnesium solution reacts with dilute hydrochloric acid;\n\n(ii)\n\n \n\npotassium reacts with water.\n\n(d)\n\n \n\n(i)\n\n \n\nState two effects of heat on a substance.\n\n(ii)\n\n \n\nPotassium permangante crystals are dropped into a beaker of water and warmed:\n\n(α)\n\n \n\nState what would be observed;\n\n(β)\n\n \n\nState the phenomenon demonstrated in (α).",
+      "type": "essay",
+      "year": "2022",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2022 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2022_q5",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nName two elements which make the teeth of mammals strong.\n\n(ii)\n\n \n\nName two common diseases of the human teeth.\n\n(b)\n\n \n\nState three reasons why sandy soil cannot support effective plant growth.\n\n(c)\n\n \n\nAn atom has 13 protons and 14 neutrons:\n\n(i)\n\n \n\ndraw and label the structure of the atom.\n\n(ii)\n\n \n\nState its valency.\n\n(d)\n\n \n\n(i)\n\n \n\nState three ways in which fluid pressure is applied in everyday activities.\n\n(ii)\n\n \n\nState one substance that is an insulator.",
+      "type": "essay",
+      "year": "2022",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2022 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2023_q3",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nWhat is aerobic respiration?\n\nii)\n\n \n\nState the main difference between aerobic respiration and anaerobic respiration.\n\nb)\n\n \n\ni)\n\n \n\nExplain the term potential difference.\n\nii)\n\n \n\nThe potential difference across the terminals of a 100 Ω resistor is 250 V.\n\nCalculate the current flowing through the resistor.\n\nc)\n\n \n\ni)\n\n \n\nWhich crop is infected by the Swollen Shoot disease?\n\nii)\n\n \n\nState the causative organisms of the disease.\n\niii)\n\n \n\nState the method of spread of the disease.\n\niv)\n\n \n\nGive two ways of preventing the spread of the disease.\n\nd)\n\n \n\nConsider the given elements:",
+      "type": "essay",
+      "year": "2023",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2023 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Elements & Compounds"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

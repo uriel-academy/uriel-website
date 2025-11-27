@@ -1,0 +1,798 @@
+{
+  "topic": "Everyday Conversations",
+  "questions": [
+    {
+      "id": "theory_french_1991_q31",
+      "questionText": "Fatima ………………une robe. (achète / achètes)32. Kofi écrit avec ……………… (une règle / un stylo)33. Le pilote travaille dans un …………. (train / avion)34. Lomé est une ville ……………… (togolaise / togolais)35. La femme porte un ……………. parce qu’il pleut. (pantalon / parapluie)\n\n(Quand / Combien / Où / Pourquoi / Quel)",
+      "questionNumber": 31,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1991",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1991 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1991",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_1993_q1",
+      "questionText": "Le dictionnaire est un ……………. (livre / cahier)2. Il à trois ans ; il est ………………….. (vieux / jeune)3. Mes cheveux sont…………………….. (longs / gros)4. Il donne de l’argent au garçon. Il est……… (gentil / méchant)5. On prépare le repas dans…………………… (la chambre / la cuisine)6. Mon oncle à une …………………maison (grande / grand)7. Kojo est aveugle. Il ne …………….. pas (parle / voit)8. Le garçon porte ……………… chemise. (son / sa)9. J’apprends une chanson ………………… (français / française)10. Quelle heure est-…………………… ? (elle / il)11. L’enfant mange du ……………….. (thé / riz)12. Je ferme la …………………….. (fenêtre / chaise)13. Il me donne un cadeau, je lui dis …………. (bonjour / merci)14. J’aime ……………………. maison (cet / cette)15. Le ministre va ………….. Cameroun ( au / à )",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1993",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1993 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1993",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_1993_q31",
+      "questionText": "Les voitures sont …………………… (beaux / belles)32. …………………comprenez la question ? (Vous / Tu)33. Le professeur regarde …………… enfants. (l’ / les)34. Elle achète des chaussures……………… (blanches / blanche)35. Voice ………………. gommes. (des / la)\n\n(Quand, Qui, Où, Comment, Pourquoi)",
+      "questionNumber": 31,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1993",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1993 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1993",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_1994_q31",
+      "questionText": "Tu as un frère et deux ……………….. (sœur / soeurs)32. Haruna vend …………….livres. (des / du)33. Les élèves sont………………… (content / contents)34. Elle nous rend visite tous les ……….. (jours / jour)35. Voici………………….chaises. (notre / nos)\n\n(quelle, comment, quel, où, pourquoi)",
+      "questionNumber": 31,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1994",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1994 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1994",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_1995_q16",
+      "questionText": "Le train entre …………….la gare17. Le matin, on boit du ………………..18. Le médecin travaille à ………………19. Grand-père fume sa ………………….20. Azuma est un …………… boxeur.\n\n(Quelle, Qui, D’où, Comment, Combien)",
+      "questionNumber": 16,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1995",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1995 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1995",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_1995_q26",
+      "questionText": "……………sœur est intelligente. (Mon / Ma)27. Il écoute ……………….professeur. (ses / son)28. Elles vont voir ………… parents. (leur / leurs)29. …………grand-père est malade. (Notre / Nos)30. Où est ……………. cahier ? (ton / ta)\n\n(aux, en, au, de, dans)",
+      "questionNumber": 26,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1995",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1995 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1995",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_1996_q16",
+      "questionText": "Bonsoir ma sœur. Comment …………………..-tu (va / vas)17. Nous…………………. de la bonne musique. (écoutez / écoutons)18. Il faut bien manger avant de ……………………. (sorti / sortir)19. Les enfants ……………………. toujours contents. (somme/ sont)20. Kofi et sa sœur ……………….. ensemble. (parlez / parlent)",
+      "questionNumber": 16,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1996",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1996 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1996",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_1998_q21",
+      "questionText": "Tu ne sais pas ………… (danser / danses)22. Nous …………… du fufu chaque jour. (manges / mangeons)23. La fille …………… très vite. (va / vas)24. Les enfants ……………. très sages. (ont / sont)25. Pourquoi tu ne …………. pas de viande ? (manges / mange)26. Les écoliers …………….. leurs lecons. (apprends / apprennent)27. Vous …………. prendre le train du soir. (pouvez / pouvons)28. Nous …………… des mangues dans la forêt. (ramassons / ramassent)29. Les élèves ……………. la dictée dans leurs cahiers. (écrivez / écrivent)30. Je …………… un journal chaque matin. (lit / lis)\n\n(Où, Combien, Qui, Quel, Comment)",
+      "questionNumber": 21,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1998",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1998 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1998",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_1999_q31",
+      "questionText": "Voici le monsieur …………. m’a donné le cadeau. (que / qui / quel)32. Où habite la fille …………….tu parles. (dont / que / qui)33. …………. appareil de photo est à Kofi. (Ce / Cet / Cette)34. Ce cahier est grand mais …………..-là est petit. (ceci / celle / celui)35. C’est dangereux …………. traverser la rue en courant. (de / à / pour)36. Il est toujours …………. retard. (au / à / en)37. Le …………..homme est mon grand-père. (vieil / vieux / veille)38. Dis-moi à …………….. heure arrive le bus. (quel / quels / quelle)39. Cet enfant mange des bananes …………..(verts / vertes / vert)40. En cette saison les arbres ont ………… belles couleurs. (de / du / des)",
+      "questionNumber": 31,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1999",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1999 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1999",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2000_q25",
+      "questionText": "La vendeuse travaille au ………………….\n\n\n\n(Pourquoi, Que, Qui, Où, Quel)",
+      "questionNumber": 25,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2001_q1",
+      "questionText": "Use the answers to the following questions to write a composition in French\n\n(a) - Comment t’appelles-tu ?\n\n(b) - Quel âge as-tu ?\n\n(c) - Tu es né(e) où\n\n(d) - Tu viens de quels pays ?\n\n(e) - Tu habites où ?\n\n(f) - Tu vas à quelle école ?\n\n(g) - Tu es grand(e) ou petit(e) ?\n\n(h) - Vous êtes combien dans la famille ?\n\n(i) - Quel est ton plat favori ?\n\n(j) - Qu’est-ce que tu aimes faire quand tu es libre ?",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2001",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2001 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2001",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2001_q2",
+      "questionText": "Study carefully the pictures labelled A to F and narrate the story\n\n\n\nA. - Qu’est-ce que Koumbi fait sur\n\nl’arbre ?\n\n\n\nB. - Qu’est-ce qui se passe ?\n\n\n\n………………………………………………………………………………………………………………………\n\n…………………………………………………………………………………………………\n\nC. - Qu’est-ce qui arrive à Koumbi D. - Pourquoi Koumbi n’est-il pas\n\ncapable de se lever ?\n\n\n\nE. Qui arrive et qu’est-ce qu’il va\n\nfaire ?\n\n\n\nF. Où sont-ils finalement ?",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2001",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2001 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2001",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2002_q1",
+      "questionText": "Write about your school\n\n(a) - Quel est le nom de votre école ?\n\n(b) - Où se trouve ton école ?\n\n(c) - Comment est votre école ?\n\n(d) - Combien de bâtiments y a-t-il dans votre école ?\n\n(e) - Quel est le nom du directeur de l’école ?\n\n(f) - Combien de professeurs y a-t-il dans votre l’école ?\n\n(g) - Quel professeur est-ce que vous aimez le plus ?\n\n(h) - Combien d’élèves y a-t-il dans votre classe ?\n\n(i) - A quelle heure est-ce que les cours commencent ?\n\n(j) - Quelles sont les matières que vous apprenez ?\n\n(k) - Quelle est votre matière préférée ?\n\n(l) - Est-ce que vous aimez votre école ?",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2002",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2002 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2002",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2003_q1",
+      "questionText": "Write your composition in French about your best friend\n\n\n\n(a) - Comment s’appelle ton ami(e)\n\n(b) - Quel âge a ton ami(e)\n\n(c) - D’où vient-il/ elle ?\n\n(d) - Où habite-t-il/ elle ?\n\n(e) - Quelle est la taille de ton ami(e) ?\n\n(f) - Quel est le comportement / caractère de ton ami(e)\n\n(g) - Ton ami(e) va à quelle école ?\n\n(h) - Qu’est-ce que ton ami(e) aime faire ?\n\n(i) - Qu’est-ce qu’il/ elle aime manger ?\n\n(j) - Pourquoi est-ce que tu aimes cet ami/ cette amie ?",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2003",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2003 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2003",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2004_q1",
+      "questionText": "Write a letter in French to your pen pal telling him/her about your country\n\n\n\n(a) - Comment s’appelle votre pays ?\n\n(b) - Où est-ce qu’on peut trouver votre pays ?\n\n(c) - Nommez la capitale et deux autres grandes villes de votre pays ?\n\n(d) - Quelles sont les saisons de votre pays ?\n\n(e) - Quels sont les produits agricoles principaux ?\n\n(f) - Quel est le travail principal des gens de votre pays ?\n\n(g) - Nommez deux plats ghanéens.\n\n(h) - Donnez deux endroits importants que l’on peut visiter.\n\n(i) - Comment sont les Ghanéens ?\n\n(j) - Pourquoi est-ce que vous aimez votre pays ?",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2004",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2004 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2004",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2009_q1",
+      "questionText": "Write a composition in French describing your house\n\n(a) - La place où se trouve la maison.\n\n(b) - La couleur de votre maison\n\n(c) - Le nombre de chambre\n\n(d) - Les portes et les fenêtres ; petites ou grandes ?\n\n(e) - Le toit de votre maison\n\n(f) - Ce qui se trouve autour de la maison\n\n(g) - La salle où vous dormez\n\n(h) - Les personnes qui habitent dans la maison\n\n(i) - Ce que vous faites dans la maison\n\n(j) - Pourquoi vous aimez / n’aimez pas votre maison ?",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2009",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2009 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2009",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2010_q1",
+      "questionText": "Write a composition in French about your favourite day at school.\n\n(a) - Le nom de votre école\n\n(b) - Votre journéepréférée\n\n(c) - L’heure où vous arrivez à l’école\n\n(d) - Ce que vous faite quand vous arrivez à l’école\n\n(e) - L’heure où les cours commencent\n\n(f) - Le premier cours\n\n(g) - Le professeur qui enseigne la première matière\n\n(h) - Le nombre des leçons que vous suivez dans la journéepréférée\n\n(i) - Ce que vous faites quand les cours se terminent\n\n(j) - Pourquoi vous préférez ce jour",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2010",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2010 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2010",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2011_q1",
+      "questionText": "Write a composition in French about how you normally spend the long vacation.\n\n(a) - Quand les grandes vacances commencent\n\n(b) - La durée des grandes vacances\n\n(c) - Le lieu où vous passez les grandes vacances\n\n(d) - Les personnes avec qui vous passez les grandes vacances\n\n(e) - Ce que vous faites pendant ces vacances\n\n(f) - Les lieux que vous visitez\n\n(g) - Ce que vous voyez à ces lieux\n\n(h) - Ce que vous faites avec vos nouveaux amis / nouvelles amies\n\n(i) - Quand les grandes vacances se terminent.\n\n(j) - Dites si vous aimez les vacances et pourquoi.",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2011",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2011 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2011",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2012_q1",
+      "questionText": "Write a composition in French narrating how you celebrate your birthday.\n\n(a) - Quel est votre nom ?\n\n(b) - Quelle est la date de votre naissance ?\n\n(c) - Quel jour de la semaine êtes-vous né(e) ?\n\n(d) - Où est-ce que vous êtes né(e) ?\n\n(e) - Que faites-vous quand votre anniversaire s’approche ?\n\n(f) - A quelle heure commence la fête  de votre anniversaire ?\n\n(g) - Qui invitez-vous ?\n\n(h) - Quelles sont les activités que vous organisez ?\n\n(i) - Quel repas préparez-vous ?\n\n(j) - Etes-vous content(e) à la fin de la fête ? Pourquoi ?",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2012",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2012 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2012",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2013_q1",
+      "questionText": "Write an essay in French about the game you like playing at school during break time.\n\n(a) - Le nom de votre école\n\n(b) - Le lieu de votre école\n\n(c) - L’heure où les cours commencent\n\n(d) - L’heure de récréation\n\n(e) - Ce que font les élèves pendant la récréation\n\n(f) - Les jeux différents que les élèves aiment jouer\n\n(g) - Le jeu que vous préférez\n\n(h) - Avec qui vous jouez ce jeu\n\n(i) - Ce que vous faites pendant ce jeu\n\n(j) - Dites pourquoi vous aimez participer à ce jeu",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2013",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2013 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2013",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2014_q1",
+      "questionText": "Write an essay in French on how you spend the week-end when your friend visits you.\n\n(a) - Le jour où votre ami arrive\n\n(b) - Ce que vous faites quand il/elle arrive\n\n(c) - L’heure où vous vous levez le samedi\n\n(d) - Dites les choses que vous faites avant le petit déjeuner\n\n(e) - Les plats que vous mangez\n\n(f) - Vos activités après le petit déjeuner\n\n(g) - Les lieux que vous visitez\n\n(h) - Comment vous passez le dimanche\n\n(i) - L’heure du départ de votre ami\n\n(j) - Vous êtes content de la visite ? Pourquoi ?",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2014",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2014 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2014",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2015_q1",
+      "questionText": "Write an essay in French about your happiest day in the week.\n\n(a) - Votre nom et ȃge\n\n(b) - Le lieu où vous habitez\n\n(c) - L’école que vous fréquentez\n\n(d) - Le jour le plus heureux de la semaine\n\n(e) - Pourquoi ce jour est le plus heureux\n\n(f) - Ce que vous faites pendant la journée\n\n(g) - Les personnes avec qui vous passez la journée\n\n(h) - Les endroits que vous visitez\n\n(i) - Les choses que vous mangez et buvez\n\n(j) - Vos sentiments à la fin de la journée",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2015",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2015",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2016_q1",
+      "questionText": "Your school organised an excursion to a village or town. Write an essay in French talking about this visit.(a) – Quel est le nom de votre école?(b) – Où se trouve votre école ?(c) – Le jour et la date du voyage.(d) – Par quel moyen de transport vous faites le voyage ?(e) – Quelle ville / quel village visitez-vous ?(f) – Quand vous arrivez à ce village/ cette ville.(g) – Quels sont les lieux importants que vous visitez ?(h) – Les personnes que vous rencontrez.(i) – Quand vous quittez ce village/ cette ville.(j) – Dites pourquoi vous aimez ou non ce village/ cette ville.",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2016",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2016 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2016",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2024_q2",
+      "questionText": "Vous venez de terminer votre BECE. Votre oncle qui habite en France vous fait un cadeau de mille cedis pour organiser une fête. Dans un message WhatsApp, dites-lui comment vous allez utiliser l'argent.",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2024",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2024 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    }
+  ],
+  "questionCount": 24
+}

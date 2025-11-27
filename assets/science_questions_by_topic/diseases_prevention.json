@@ -1,0 +1,1929 @@
+{
+  "topic": "Diseases & Prevention",
+  "totalQuestions": 62,
+  "questions": [
+    {
+      "id": "integrated_science_1990_q33",
+      "questionText": "A patient who coughs and spits out blood may be suffering from",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 33,
+      "options": [
+        "A. asthma",
+        "B. pneumonia",
+        "C. measles",
+        "D. tuberculosis",
+        "E. influenza"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 33 from the 1990 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1991_q20",
+      "questionText": "What sickness are you likely to be suffering from when you have blood in your urine?",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 20,
+      "options": [
+        "A. Typhoid",
+        "B. Syphilis",
+        "C. Cholera",
+        "D. Bilharzia",
+        "E. Ulcer"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 20 from the 1991 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1992_q22",
+      "questionText": "Which of the following diseases is caused by a fungus?",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 22,
+      "options": [
+        "A. Typhoid",
+        "B. Leprosy",
+        "C. Ringworm",
+        "D. Measles",
+        "E. Dysentery"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 22 from the 1992 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1992_q27",
+      "questionText": "Urinating in rivers is a common manner of spreading diseases such as",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 27,
+      "options": [
+        "A. cholera",
+        "B. bilharzia",
+        "C. malaria",
+        "D. measles",
+        "E. Typhoid"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 27 from the 1992 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1992_q31",
+      "questionText": "Regular brushing of teeth is primarily done in order to",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 31,
+      "options": [
+        "A. keep the mouth fresh",
+        "B. clear away food particles from the teeth",
+        "C. remove bad smell in the mouth",
+        "D. kill bacteria in the mouth",
+        "E. control the flow of saliva"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 31 from the 1992 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1992_q34",
+      "questionText": "Which of the following diseases will result from eating improperly cooked meat?",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 34,
+      "options": [
+        "A. Tapeworm infestation",
+        "B. Guinea worm infestation",
+        "C. Small pox",
+        "D. Leprosy",
+        "E. Measles"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 34 from the 1992 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1993_q17",
+      "questionText": "Disposal of sewage into a river which supplies water for domestic use may lead to an outbreak of",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 17,
+      "options": [
+        "A. malaria",
+        "B. cholera",
+        "C. guinea worm",
+        "D. river blindness",
+        "E. tuberculosis"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 17 from the 1993 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1993_q21",
+      "questionText": "Which of the following encourages the spread of venereal diseases?",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 21,
+      "options": [
+        "A. Poor family planning",
+        "B. Drug Abuse",
+        "C. Mental ill health",
+        "D. Parental wealth",
+        "E. Indiscriminate sexual intercourse"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 21 from the 1993 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1994_q31",
+      "questionText": "Which of the following organisms causes malaria?",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 31,
+      "options": [
+        "A. Tsetsefly",
+        "B. Fungi",
+        "C. Virus",
+        "D. Plasmodium",
+        "E. Bacteria"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 31 from the 1994 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1994_q33",
+      "questionText": "Which of the following preventive measures is not used in the control of tuberculosis?",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 33,
+      "options": [
+        "A. Isolating the patient",
+        "B. Spitting carelessly in the environment",
+        "C. Keeping separate cutlery, plates, cups for the patient",
+        "D. Vaccinating young babies with BCG vaccine",
+        "E. Spitting into a container partly filled with disinfectant"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 33 from the 1994 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1994_q4",
+      "questionText": "Which of the following is not a communicable disease?",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 4,
+      "options": [
+        "A. smallpox",
+        "B. chicken pox",
+        "C. influenza",
+        "D. pneumonia",
+        "E. Tuberculosis"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 4 from the 1994 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1995_q29",
+      "questionText": "Which of the following are soil micro-organisms?",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 29,
+      "options": [
+        "A. Termites",
+        "B. Viruses",
+        "C. Ticks",
+        "D. Bacteria",
+        "E. Crabs"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 29 from the 1995 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1996_q1",
+      "questionText": "Which of the following is a sexually transmitted disease?",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 1,
+      "options": [
+        "A. Cholera",
+        "B. Rickets",
+        "C. Tuberculosis",
+        "D. Syphilis",
+        "E. Measles"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 1 from the 1996 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1996_q32",
+      "questionText": "The blackpod disease which attacks cocoa pods is caused by",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 32,
+      "options": [
+        "A. virus",
+        "B. bacterium",
+        "C. plasmodium",
+        "D. fungus",
+        "E. protozoa"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 32 from the 1996 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1998_q11",
+      "questionText": "Which of the following pairs of diseases are both contracted through water?",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 11,
+      "options": [
+        "A. Cholera and dysentery",
+        "B. Smallpox and dysentery",
+        "C. Ringworm and smallpox",
+        "D. Tuberculosis and cholera",
+        "E. Tuberculosis and dysentery"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 11 from the 1998 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1998_q13",
+      "questionText": "Which of the following pairs of organisms are decomposers?",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 13,
+      "options": [
+        "A. Animals and bacteria",
+        "B. Animals and fungi",
+        "C. Bacteria and plants",
+        "D. Bacteria and fungi",
+        "E. Plants and fungi"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 13 from the 1998 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1998_q16",
+      "questionText": "Which of the following diseases is transmitted by close contact with an infected person?",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 16,
+      "options": [
+        "A. AIDS",
+        "B. Bilharzia",
+        "C. Elephantiasis",
+        "D. Measles",
+        "E. Polio"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 16 from the 1998 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1998_q3",
+      "questionText": "Which of the following causes ringworm?",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 3,
+      "options": [
+        "A. Bacteria",
+        "B. Fungi",
+        "C. Protozoa",
+        "D. Ticks",
+        "E. Viruses"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 3 from the 1998 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1998_q32",
+      "questionText": "The ability of an organism to resist infection by producing antibodies is known as",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 32,
+      "options": [
+        "A. diagnosis",
+        "B. immunity",
+        "C. incubation",
+        "D. inoculation",
+        "E. vaccination"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 32 from the 1998 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1998_q34",
+      "questionText": "Which of the following diseases affects the lungs?",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 34,
+      "options": [
+        "A. Cholera",
+        "B. Measles",
+        "C. Tetanus",
+        "D. Tuberculosis",
+        "E. Typhoid\n\n39. Gaseous exchange between air and blood in the lungs takes place in the"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 34 from the 1998 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1998_q36",
+      "questionText": "The ability of an organism to resist infection by producing antibodies is known as",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 36,
+      "options": [
+        "A. diagnosis",
+        "B. immunity",
+        "C. incubation",
+        "D. inoculation",
+        "E. vaccination"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 36 from the 1998 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1998_q38",
+      "questionText": "Which of the following diseases affects the lungs?",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 38,
+      "options": [
+        "A. Cholera",
+        "B. Measles",
+        "C. Tetanus",
+        "D. Tuberculosis",
+        "E. Typhoid\n\n39. Gaseous exchange between air and blood in the lungs takes place in the"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 38 from the 1998 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1999_q20",
+      "questionText": "Which of the following statements about bacteria is true?\n\nI. All infections are caused by bacteriaII. Most bacteria are harmless to manIII. Sterilisation does not kill bacteria",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 20,
+      "options": [
+        "A. I only",
+        "B. II only",
+        "C. III only",
+        "D. II and III only",
+        "E. I and II only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 20 from the 1999 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1999_q23",
+      "questionText": "Which of the following pairs of diseases can be spread easily when food is exposed to houseflies?",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 23,
+      "options": [
+        "A. Cholera and Guinea Worm",
+        "B. Dysentery and Malaria",
+        "C. Dysentery and Guinea Worm",
+        "D. Malaria and tuberculosis",
+        "E. Dysentery and cholera"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 23 from the 1999 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2000_q13",
+      "questionText": "Disposal of urine and faeces into a river used for domestic purposes, may cause the outbreak of",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 13,
+      "options": [
+        "A. bilharzia.",
+        "B. malaria.",
+        "C. river blindness.",
+        "D. tetanus.",
+        "E. tuberculosis."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 13 from the 2000 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2000_q29",
+      "questionText": "Casual and loose sex life can result in the spread of",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 29,
+      "options": [
+        "A. AIDS.",
+        "B. cholera.",
+        "C. poliomyelitis.",
+        "D. malaria.",
+        "E. tuberculosis."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 29 from the 2000 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2001_q27",
+      "questionText": "It is necessary to keep household refuse in covered containers in order to prevent",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 27,
+      "options": [
+        "A. the spread of tuberculosis.",
+        "B. the decomposition of the refuse.",
+        "C. the spread of measles.",
+        "D. entry of flies.",
+        "E. entry of bacteria."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 27 from the 2001 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2001_q29",
+      "questionText": "Which of the following is a microorganism?",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 29,
+      "options": [
+        "A. Bread mould",
+        "B. Bacteria",
+        "C. Leech",
+        "D. Terminate",
+        "E. Tick"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 29 from the 2001 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2002_q14",
+      "questionText": "Which of the following diseases is spread by a mosquito?",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 14,
+      "options": [
+        "A. Blindness",
+        "B. Cholera",
+        "C. Dysentery",
+        "D. Elephantiasis"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 14 from the 2002 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2002_q34",
+      "questionText": "Ringworm is a skin disease, which is caused by",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 34,
+      "options": [
+        "A. bacteria.",
+        "B. fungi.",
+        "C. insects.",
+        "D. worm."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 34 from the 2002 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2003_q17",
+      "questionText": "Which of the following parasites lives on field animals?",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 17,
+      "options": [
+        "A. Aphid",
+        "B. Plasmodium",
+        "C. Tick",
+        "D. Tapeworm"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 17 from the 2003 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2003_q19",
+      "questionText": "The insect responsible for the spread of malaria is the",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 19,
+      "options": [
+        "A. female anopheles mosquito.",
+        "B. housefly.",
+        "C. male anopheles mosquito",
+        "D. tsetse fly."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 19 from the 2003 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2003_q33",
+      "questionText": "Blood in the urine is a symptom of",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 33,
+      "options": [
+        "A. bilharzia.",
+        "B. cholera.",
+        "C. gonorrhoe.",
+        "D. typhoid"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 33 from the 2003 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2003_q35",
+      "questionText": "Which of the following diseases is spread through air?",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 35,
+      "options": [
+        "A. AIDS",
+        "B. Measles",
+        "C. Typhoid",
+        "D. Yaws"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 35 from the 2003 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2003_q39",
+      "questionText": "Which of the following parasites is a plant?",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 39,
+      "options": [
+        "A. Aphid",
+        "B. Dobber",
+        "C. Flea",
+        "D. Jigger"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 39 from the 2003 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2004_q18",
+      "questionText": "Which of the following diseases is contracted through sex?",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 18,
+      "options": [
+        "A. HIV/AIDS",
+        "B. Anther",
+        "C. Tuberculosis",
+        "D. Goitre"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 18 from the 2004 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2004_q26",
+      "questionText": "The housefly is an agent for the spread of",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 26,
+      "options": [
+        "A. cholera.",
+        "B. malaria.",
+        "C. measles.",
+        "D. tuberculosis"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 26 from the 2004 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2005_q27",
+      "questionText": "The carrier of the malaria parasite is the",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 27,
+      "options": [
+        "A. black fly.",
+        "B. tsetse fly.",
+        "C. female anopheles mosquito.",
+        "D. male anopheles mosquito."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 27 from the 2005 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2006_q13",
+      "questionText": "One disease that affects the nervous system of humans is",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 13,
+      "options": [
+        "A. filariasis.",
+        "B. measles.",
+        "C. poliomyelitis.",
+        "D. typhoid"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 13 from the 2006 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2006_q26",
+      "questionText": "The disease caused by the Plasmodium parasite is",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 26,
+      "options": [
+        "A. Cholera.",
+        "B. malaria.",
+        "C. onchocerciasis.",
+        "D. schistosomiasis."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 26 from the 2006 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2007_q16",
+      "questionText": "Which of the following diseases is caused by a virus?",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 16,
+      "options": [
+        "A. Cholera",
+        "B. Cerebro Spinal Meningitis (CSM)",
+        "C. Measles",
+        "D. Tuberculosis (TB)"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 16 from the 2007 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2007_q27",
+      "questionText": "Footrot disease in animals is caused by",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 27,
+      "options": [
+        "A. bacteria.",
+        "B. fungi.",
+        "C. protozoa.",
+        "D. viruses."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 27 from the 2007 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2007_q28",
+      "questionText": "A patient with symptoms of diarrhoea and vomiting may be suffering from",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 28,
+      "options": [
+        "A. cholera.",
+        "B. dysentery.",
+        "C. influenza.",
+        "D. tuberculosis."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 28 from the 2007 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2008_q28",
+      "questionText": "Bathing in lakes and slow moving streams can lead to one getting",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 28,
+      "options": [
+        "A. bilharziasis.",
+        "B. cholera.",
+        "C. dysentery.",
+        "D. river blindness."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 28 from the 2008 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2009_q26",
+      "questionText": "Which of the following parasites is a plant?",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 26,
+      "options": [
+        "A. Bilharzia",
+        "B. Dodder",
+        "C. Lice",
+        "D. Tapeworm"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 26 from the 2009 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2009_q28",
+      "questionText": "Which of the following diseases may be associated with water?",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 28,
+      "options": [
+        "A. Chicken pox",
+        "B. Cholera",
+        "C. Small pox",
+        "D. Tetanus"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 28 from the 2009 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2009_q30",
+      "questionText": "Which of the following diseases affects the central nervous system?",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 30,
+      "options": [
+        "A. Cerebro Spinal Meningitis (CSM)",
+        "B. Poliomyelitis",
+        "C. Measles",
+        "D. Yellow Fever"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 30 from the 2009 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2011_q29",
+      "questionText": "Endoparasites in farm animals can be controlled by",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 29,
+      "options": [
+        "A. drenching.",
+        "B. dipping.",
+        "C. dusting.",
+        "D. spraying."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 29 from the 2011 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2012_q16",
+      "questionText": "Tuberculosis is spread",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 16,
+      "options": [
+        "A. through eating of contaminated food.",
+        "B. when an infected person coughs openly into the air.",
+        "C. through shaking of hands of infected persons.",
+        "D. through sharing of contaminated syringes."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 16 from the 2012 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2012_q29",
+      "questionText": "The use of resistant varieties of crop in controlling diseases is described as",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 29,
+      "options": [
+        "A. biological control method.",
+        "B. chemical control method.",
+        "C. cultural control method.",
+        "D. physical control method."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 29 from the 2012 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2014_q21",
+      "questionText": "Which of the following pairs of diseases can be spread easily when food is exposed to houseflies?",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 21,
+      "options": [
+        "A. Dysentery and malaria",
+        "B. Malaria and tuberculosis",
+        "C. Dysentery and cholera",
+        "D. Cholera and tuberculosis"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 21 from the 2014 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2015_q25",
+      "questionText": "Droplet infection is the method by which",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 25,
+      "options": [
+        "A. disease are transmitted from animals to plants.",
+        "B. infected animals are processed.",
+        "C. human beings protects themselves from diseases.",
+        "D. diseases are spread through the air."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 25 from the 2015 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2016_q15",
+      "questionText": "Micro-organisms that cause disease are collectively called",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 15,
+      "options": [
+        "A. bacteria.",
+        "B. infections.",
+        "C. pathogens.",
+        "D. viruses."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 15 from the 2016 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2018_q23",
+      "questionText": "The swollen shoot disease of cocoa is caused by",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 23,
+      "options": [
+        "A. fungus.",
+        "B. virus.",
+        "C. bacteria.",
+        "D. protozoa."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 23 from the 2018 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2019_q26",
+      "questionText": "The housefly is an agent for the spread of",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 26,
+      "options": [
+        "A. cholera.",
+        "B. malaria.",
+        "C. measles.",
+        "D. tuberculosis."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 26 from the 2019 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2021_q32",
+      "questionText": "Which of the following diseases is not a deficiency diseases?",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 32,
+      "options": [
+        "A. Scurvy",
+        "B. Cholera",
+        "C. Beriberi",
+        "D. Goiter"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 32 from the 2021 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2023_q19",
+      "questionText": "The following practices are principles in crop production except",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 19,
+      "options": [
+        "A. land selection.",
+        "B. pests and diseases control.",
+        "C. seed planting.",
+        "D. harvesting and processing."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 19 from the 2023 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2024_q8",
+      "questionText": "A livestock farmer wants to achieve good health for animals being reared.Which of the following activities should be undertaken by the farmer?I. Have vaccination schedules for the animalsII. Provide balanced ration to the animalsIII. Provide good sanitation for the animals",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 8,
+      "options": [
+        "A. I and II only",
+        "B. II and III only",
+        "C. I and III only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 8 from the 2024 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2025_q20",
+      "questionText": "Which of the following diseases can be classified as a viral disease?",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 20,
+      "options": [
+        "A. Candidiasis",
+        "B. H1N1",
+        "C. Meningitis",
+        "D. Ringworm"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 20 from the 2025 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_1990_q3",
+      "questionText": "(a)\n\n \n\nFor each of the following diseases, name the causative organism and one method of prevention.\n\n(i)\n\n \n\nCholera\n\n(ii)\n\n \n\nBilharzia\n\n(iii)\n\n \n\nMalaria\n\n(iv)\n\n \n\nTuberculosis\n\n(b)\n\n \n\nShow how you would separate each of the following mixtures:\n\n(i)\n\n \n\nCommon salt and sand\n\n(ii)\n\n \n\nMuddy water\n\n(c)\n\n \n\nExplain why the planet and their moons move around the sun but they do not clash.\n\n(d)\n\n \n\nGive two uses of the sun's energy in everyday life",
+      "type": "essay",
+      "year": "1990",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1990 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2003_q2",
+      "questionText": "a)\n\n \n\nState two precautions that should be taken to prevent the spread of each of the following diseases:\n\ni)\n\n \n\ncholera\n\nii)\n\n \n\nsmallpox\n\nb)\n\n \n\nDescribe how you would test for starch in a leaf.\n\nc)\n\n \n\ni)\n\n \n\nExplain why an inclined plane is classified as a machine.\n\nii)\n\n \n\nGive two reasons why the output energy of a machine is always less than the input energy.\n\nd)\n\n \n\nDraw and label the structure of an atom containing three electrons. Indicate the charges of the particles.",
+      "type": "essay",
+      "year": "2003",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2003 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2020_q4",
+      "questionText": "a)\n\n \n\nState one symptoms each of the following infections diseases:\n\ni)\n\n \n\ncerebrospinal meningitis;\n\nii)\n\n \n\nchicken pox;\n\niii)\n\n \n\ntyphoid.\n\nb)\n\n \n\ni)\n\n \n\nWhat is energy?\n\nii)\n\n \n\nGive two reasons why it is necessary to conserve energy.\n\nc)\n\n \n\ni)\n\n \n\nState two methods of restoring soil resources.\n\nii)\n\n \n\nExplain briefly one of the methods stated in (c)(i).\n\nd)\n\n \n\ni)\n\n \n\nWhat is binary compound?\n\nii)\n\n \n\nWrite the chemical formula of the compound formed between:\n\n(α) Oxygen and lithium\n\n(β) Magnesium and Chlorine\n\niii)\n\n \n\nName the compound formed in (ii)(α)",
+      "type": "essay",
+      "year": "2020",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2020 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Diseases & Prevention"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

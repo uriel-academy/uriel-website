@@ -1,0 +1,32 @@
+{
+  "topic": "Food & Drinks",
+  "questions": [
+    {
+      "id": "ga_2022_q4",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Shwane ŋamɔ minaako shishi ji ...",
+      "questionNumber": 4,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865165,
+        "_nanoseconds": 870000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. mina bo etsɛ",
+        "B. mina ko bo da",
+        "C. mina bo ekoŋŋ",
+        "D. mana bo wɔ"
+      ],
+      "correctAnswer": "C. mina bo ekoŋŋ"
+    }
+  ],
+  "questionCount": 1
+}

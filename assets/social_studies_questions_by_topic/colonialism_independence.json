@@ -1,0 +1,2137 @@
+{
+  "topic": "Colonialism & Independence",
+  "totalQuestions": 69,
+  "questions": [
+    {
+      "id": "social_studies_1990_q21",
+      "questionText": "In Ghana deep shaft mining is generally associated with",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 21,
+      "options": [
+        "A. gold",
+        "B. salt",
+        "C. bauxite",
+        "D. diamond",
+        "E. manganese"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 21 from the 1990 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1990_q25",
+      "questionText": "Which of the following countries introduced Indirect Rule in her colonies in West Africa?",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 25,
+      "options": [
+        "A. France",
+        "B. Britain",
+        "C. Portugal",
+        "D. Germany",
+        "E. Belgium"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 25 from the 1990 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1990_q30",
+      "questionText": "The world's largest producer of cocoa is",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 30,
+      "options": [
+        "A. Brazil",
+        "B. La Cote d'Ivoire",
+        "C. Ghana",
+        "D. Argentina",
+        "E. Nigeria"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 30 from the 1990 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1990_q40",
+      "questionText": "When the republic of Liberia attained independence the people of Liberia adopted the motto",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 40,
+      "options": [
+        "A. One Nation, One People, One Destiny",
+        "B. Freedom and Justice",
+        "C. Unity and Strength",
+        "D. Unity and Faith",
+        "E. The Love of Liberty brought us here"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 40 from the 1990 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1991_q11",
+      "questionText": "Nsuta in Ghana is noted for the mining of",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 11,
+      "options": [
+        "A. diamond",
+        "B. manganese",
+        "C. bauxite",
+        "D. salt",
+        "E. gold"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 11 from the 1991 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1991_q20",
+      "questionText": "The Fulanis are noted for",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 20,
+      "options": [
+        "A. lumbering",
+        "B. herding",
+        "C. trading",
+        "D. fishing",
+        "E. mining"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 20 from the 1991 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1991_q33",
+      "questionText": "Who was the first chairman of the Organization of African Unity (OAU)",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 33,
+      "options": [
+        "A. Ahmed Sekou Toure",
+        "B. Jomo Kenyatta",
+        "C. Dr Kwame Nkrumah",
+        "D. Nnamdi Azikiwe",
+        "E. Haile Selassie"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 33 from the 1991 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1992_q19",
+      "questionText": "The Peduase Lodge was built by",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 19,
+      "options": [
+        "A. Dr Kwame Nkrumah",
+        "B. Mr Akuffo Addo",
+        "C. Dr K. Abrefa Busia",
+        "D. Gen. J.",
+        "A. Ankrah"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 19 from the 1992 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1992_q37",
+      "questionText": "The Committee for the Defence of the Revolution (CDR) in Ghana was introduced by",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 37,
+      "options": [
+        "A. Dr Kwame Nkrumah",
+        "B. Dr KA Busia",
+        "C. Mr Victor Owusu",
+        "D. Dr Hilla Limann",
+        "E. Flt Lt J. J. Rawlings"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 37 from the 1992 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1992_q39",
+      "questionText": "Who led the 1948 boycott of European goods in the Gold Coast?",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 39,
+      "options": [
+        "A. Paa Grant",
+        "B. Nii Kwabena Bonney",
+        "C. Ako Adjei",
+        "D. Obetsebi Lamptey",
+        "E. Kojo Botsio"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 39 from the 1992 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1993_q27",
+      "questionText": "The second Republic of Ghana covered the period",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 27,
+      "options": [
+        "A. 1957 to 1960",
+        "B. 1960 to 1966",
+        "C. 1966 to 1969",
+        "D. 1969 to 1972",
+        "E. 1972 to 1979\n\n28. The struggle for the independence of Ghana from 1951 to 1957 was led by"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 27 from the 1993 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1994_q27",
+      "questionText": "Which of the following was not a British Colony?",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 27,
+      "options": [
+        "A. The Gambia",
+        "B. Liberia",
+        "C. Sierra Leone",
+        "D. Nigeria",
+        "E. Ghana"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 27 from the 1994 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1994_q6",
+      "questionText": "The Second Republic of Ghana covered the period",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 6,
+      "options": [
+        "A. 1957 to 1960",
+        "B. 1960 to 1966",
+        "C. 1966 to 1969",
+        "D. 1969 to 1972",
+        "E. 1972 to 1979"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 6 from the 1994 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1995_q16",
+      "questionText": "Who was the Head of State of Ghana between 1954 and 1960?",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 16,
+      "options": [
+        "A. Dr Kwame Nkrumah",
+        "B. Dr J.",
+        "B. Danquah",
+        "C. The Queen of Britain",
+        "D. Dr K."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 16 from the 1995 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1996_q1",
+      "questionText": "In which of the following belts in Ghana is cocoa commonly grown?",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 1,
+      "options": [
+        "A. Mangrove forest",
+        "B. Tropical rainforest",
+        "C. Sudan savanna",
+        "D. Guinea savanna",
+        "E. Semi-deciduous forest"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 1 from the 1996 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1996_q18",
+      "questionText": "Use the sketch map of Ghana above to answer belowThe town marked O is a/an",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 18,
+      "options": [
+        "A. mining town",
+        "B. harbour town",
+        "C. historic town",
+        "D. gap town",
+        "E. industrial town"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 18 from the 1996 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1996_q32",
+      "questionText": "The only West African country which produces more cocoa than Ghana is",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 32,
+      "options": [
+        "A. Togo",
+        "B. Cote d‟Ivoire",
+        "C. Benin",
+        "D. Sierra Leone",
+        "E. Liberia"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 32 from the 1996 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1996_q39",
+      "questionText": "The struggle for Ghana‟s independence from 1951 to 1957 was led by",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 39,
+      "options": [
+        "A. Dr J.",
+        "B. Danquah",
+        "B. Mr Ako Adjei",
+        "C. Dr K.",
+        "A. Busia"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 39 from the 1996 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1997_q17",
+      "questionText": "The people of Ghana were freed from Colonial rule on",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 17,
+      "options": [
+        "A. 28th February, 1948",
+        "B. 6th March, 1957",
+        "C. 1st July, 1961",
+        "D. 4th June, 1979",
+        "E. 31st December, 1980"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 17 from the 1997 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1997_q24",
+      "questionText": "The first republic of Ghana covered the period",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 24,
+      "options": [
+        "A. 1957 to 1960",
+        "B. 1960 to 1966",
+        "C. 1966 to 1969",
+        "D. 1969 to 1972",
+        "E. 1972 to 1979"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 24 from the 1997 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1998_q20",
+      "questionText": "Which of the following is not a product of the forest zone of West Africa?",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 20,
+      "options": [
+        "A. Coffee",
+        "B. Cocoa",
+        "C. Oil Palm",
+        "D. Kola",
+        "E. Shea"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 20 from the 1998 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1998_q27",
+      "questionText": "The first General Secretary of the United Gold Coast Convention (UGCC) was",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 27,
+      "options": [
+        "A. Kwame Nkrumah",
+        "B. J.",
+        "B. Danquah",
+        "C. Arko Adjei",
+        "D. George Grant"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 27 from the 1998 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1998_q32",
+      "questionText": "Who was the head of state of Ghana between 1957 and 1960?",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 32,
+      "options": [
+        "A. Kwame Nkrumah",
+        "B. Queen Elizabeth II",
+        "C. Akuffo Addo",
+        "D. Lt. Gen. Ankrah",
+        "E. K."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 32 from the 1998 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1998_q9",
+      "questionText": "The immediate cause of the 1948 riots was",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 9,
+      "options": [
+        "A. the killing of the veterans",
+        "B. the high cost of living",
+        "C. looting and boycott of European goods",
+        "D. burning of European stores"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 9 from the 1998 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1999_q19",
+      "questionText": "A major cash crop to West Africa is",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 19,
+      "options": [
+        "A. maize",
+        "B. cocoa",
+        "C. plantain",
+        "D. cassava",
+        "E. cocoyam"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 19 from the 1999 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1999_q9",
+      "questionText": "Ghana became a republic within the Commonwealth of Nations in",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 9,
+      "options": [
+        "A. 1948",
+        "B. 1954",
+        "C. 1957",
+        "D. 1960",
+        "E. 1966"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 9 from the 1999 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2000_q15",
+      "questionText": "The railway line from Dunkwa to Awaso was built by the British mainly to transport",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 15,
+      "options": [
+        "A. timber",
+        "B. bauxite",
+        "C. manganese",
+        "D. cocoa",
+        "E. foodstuffs"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 15 from the 2000 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2000_q21",
+      "questionText": "The British used the indirect rule system to govern the people of the Gold Coast through the",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 21,
+      "options": [
+        "A. police",
+        "B. army",
+        "C. registrars",
+        "D. chiefs",
+        "E. judiciary"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 21 from the 2000 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2000_q25",
+      "questionText": "One of the founding member of the United Gold Coast Convention (UGCC) was",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 25,
+      "options": [
+        "A. Dr Kwame Nkrumah",
+        "B. Dr J.",
+        "B. Danquah",
+        "C. Mr Kojo Botsio",
+        "D. Mr K."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 25 from the 2000 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2000_q28",
+      "questionText": "The soldiers who returned to the Gold Coast after the Second World faced all the following problems except",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 28,
+      "options": [
+        "A. non-payment of pension benefits",
+        "B. unavailability of houses",
+        "C. absence of jobs",
+        "D. high prices of goods",
+        "E. being denied the right to vote"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 28 from the 2000 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2000_q31",
+      "questionText": "Which of the following methods is used in mining crude oil ?",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 31,
+      "options": [
+        "A. Open cast",
+        "B. Deep shaft",
+        "C. Drilling",
+        "D. Dredging",
+        "E. Panning"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 31 from the 2000 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2001_q17",
+      "questionText": "The Accelerated Development Plan of Education was drawn up in 1951 by the",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 17,
+      "options": [
+        "A. United Gold Coast Convention (UGCC)",
+        "B. Northern Peoples‟ Party (NPP)",
+        "C. National Liberation Movement (NLM)",
+        "D. United Party (UP)",
+        "E. Convention People‟s Party (CPP)"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 17 from the 2001 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2002_q30",
+      "questionText": "Who was the first chairman of the United Gold Coast Convention?",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 30,
+      "options": [
+        "A. Kwame Nkrumah",
+        "B. J.",
+        "B. Danquah",
+        "C. Obetsebi Lamptey",
+        "D. George Paa Grant"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 30 from the 2002 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2002_q33",
+      "questionText": "The president of the first republic of Ghana was",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 33,
+      "options": [
+        "A. Dr. J.",
+        "B. Danquah",
+        "B. Dr. Hilla Limann",
+        "C. Dr. Kwame Nkrumah",
+        "D. Dr. K."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 33 from the 2002 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2003_q17",
+      "questionText": "Until independence the Coat-of-Arms of the Gold Coast (Ghana) was",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 17,
+      "options": [
+        "A. a stool and a crown",
+        "B. an elephant and a palm tree",
+        "C. an eagle",
+        "D. a black star"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 17 from the 2003 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2003_q25",
+      "questionText": "The first political party which was formed in Ghana in 1947 was the",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 25,
+      "options": [
+        "A. National Liberation Movement (NLM)",
+        "B. United Gold Coast Convention (UGCC)",
+        "C. Convention People‟s Party (CPP)",
+        "D. Northern People‟s Party (NPP)"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 25 from the 2003 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2003_q34",
+      "questionText": "The only country in West Africa which did not come under colonial rule is",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 34,
+      "options": [
+        "A. Liberia",
+        "B. Gambia",
+        "C. Senegal",
+        "D. Guinea"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 34 from the 2003 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2004_q20",
+      "questionText": "On which of the following occasions is the parallel culture of prayer not demonstrated in Ghana?",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 20,
+      "options": [
+        "A. Independence day",
+        "B. Eid-il-Fitr",
+        "C. Teachers‟ Day",
+        "D. Farmers‟ Day"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 20 from the 2004 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2005_q19",
+      "questionText": "Environmental degradation in Tarkwa and Prestea is mainly due to",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 19,
+      "options": [
+        "A. sand winning",
+        "B. illegal mining",
+        "C. timber lumbering",
+        "D. palm wine tapping"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 19 from the 2005 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2006_q33",
+      "questionText": "The Ashanti came under British colonial rule through",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 33,
+      "options": [
+        "A. agreement",
+        "B. treaty obligations",
+        "C. military conquest",
+        "D. persuasion"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 33 from the 2006 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2006_q34",
+      "questionText": "Which of the following was formed in the year 1947? The",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 34,
+      "options": [
+        "A. Convention People‟s Party (CPP)",
+        "B. Coussey Committee",
+        "C. Watson Committee",
+        "D. United Gold Coast Convention (UGCC)"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 34 from the 2006 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2007_q35",
+      "questionText": "Which of these economic products is found in the savanna zone?",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 35,
+      "options": [
+        "A. Timber",
+        "B. Cocoa",
+        "C. Plantain",
+        "D. Cotton"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 35 from the 2007 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2008_q38",
+      "questionText": "“Positive Action” proposed by Nkrumah in 1949 was a call for",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 38,
+      "options": [
+        "A. hard work and honesty",
+        "B. cooperation with the British",
+        "C. national strike and boycott",
+        "D. national unity"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 38 from the 2008 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2009_q16",
+      "questionText": "One of the following was not a founding member of the United Gold Coast Convention (UGCC)",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 16,
+      "options": [
+        "A. J.",
+        "B. Danquah",
+        "B. Ako Adjei",
+        "C. Kwame Nkrumah",
+        "D. George Grant"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 16 from the 2009 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2009_q28",
+      "questionText": "The 1951 general election granted Ghana",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 28,
+      "options": [
+        "A. political independence",
+        "B. republican status",
+        "C. membership of the Commonwealth",
+        "D. internal self-government"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 28 from the 2009 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2010_q27",
+      "questionText": "The Head of State is Ghana from 1957 to 1960 was",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 27,
+      "options": [
+        "A. Kwame Nkrumah",
+        "B. Queen of Britain",
+        "C. K.",
+        "A. Busia",
+        "D. Gordon Guggisberg"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 27 from the 2010 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2010_q29",
+      "questionText": "Daboya is noted for the mining of",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 29,
+      "options": [
+        "A. salt",
+        "B. gold",
+        "C. diamond",
+        "D. bauxite"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 29 from the 2010 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2010_q5",
+      "questionText": "The crop types which grow well in the Guinea Savanna are",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 5,
+      "options": [
+        "A. millet and groundnuts",
+        "B. cocoa and rice",
+        "C. shallots and cassava",
+        "D. plantain and cola"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 5 from the 2010 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2010_q7",
+      "questionText": "The British colonized parts of the Gold Coast largely through",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 7,
+      "options": [
+        "A. conquest",
+        "B. persuasion",
+        "C. bribery",
+        "D. invitation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 7 from the 2010 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2011_q28",
+      "questionText": "Which of the following is not a product of the forest zone in Ghana?",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 28,
+      "options": [
+        "A. Palm nut",
+        "B. Shea nut",
+        "C. Cocoa",
+        "D. Coffee"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 28 from the 2011 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2012_q24",
+      "questionText": "After independence, Ghana automatically became a member of the",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 24,
+      "options": [
+        "A. African Union",
+        "B. League of Nations",
+        "C. Commonwealth of Nations",
+        "D. Non-Aligned Movement"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 24 from the 2012 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2012_q38",
+      "questionText": "Which of the following personalities was a member of the United Gold Coast Convention?",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 38,
+      "options": [
+        "A. Kojo Botsio",
+        "B. J.",
+        "B. Danquah",
+        "C. Krobo Edusei",
+        "D. K."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 38 from the 2012 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2013_q28",
+      "questionText": "The Head of State of Ghana at independence in 1957 was",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 28,
+      "options": [
+        "A. Kwame Nkrumah.",
+        "B. The Queen of Britain.",
+        "C. Gordon Guggisberg.",
+        "D. Edward Akuffo-Addo."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 28 from the 2013 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2013_q31",
+      "questionText": "The first political event leading to the formal establishment of British colonial rule in the Gold Coast was the",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 31,
+      "options": [
+        "A. signing of the bond of 1844.",
+        "B. declaration of Sagrenti war.",
+        "C. introduction of the poll Tax ordinance.",
+        "D. disturbances of 1948."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 31 from the 2013 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2014_q19",
+      "questionText": "The Poll Tax Ordinance was passed in 1852 mainly to raise money to pay salaries of",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 19,
+      "options": [
+        "A. Christian missionaries",
+        "B. cocoa farmers",
+        "C. Colonial employers",
+        "D. Gold Coast chiefs"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 19 from the 2014 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2014_q22",
+      "questionText": "The first political party formed in the Gold Coast was the",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 22,
+      "options": [
+        "A. Convention People's Party (CPP)",
+        "B. National Liberation Movement (NLM)",
+        "C. United Gold Coast Convention (UGCC)",
+        "D. United Party (UP)"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 22 from the 2014 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2015_q10",
+      "questionText": "The crop types which grow well in the Guinea Savanna are",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 10,
+      "options": [
+        "A. cocoa and rice",
+        "B. millet and groundnut",
+        "C. plantain and cola",
+        "D. shallots and cassava"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 10 from the 2015 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2015_q36",
+      "questionText": "The Asante became a British colony through",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 36,
+      "options": [
+        "A. agreement",
+        "B. appeal",
+        "C. defeat",
+        "D. persuasion"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 36 from the 2015 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2016_q18",
+      "questionText": "The first castle school to be established in the Gold Coast (Ghana) was in",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 18,
+      "options": [
+        "A. Accra",
+        "B. Cape Coast",
+        "C. Elmina",
+        "D. Akropong"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 18 from the 2016 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2016_q21",
+      "questionText": "The first political event leading to the formal establishment of British colonial rule in the Gold Coast was the",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 21,
+      "options": [
+        "A. declaration of Sagrenti war",
+        "B. disturbances of 1948",
+        "C. introduction of the Poll Tax Ordinance",
+        "D. signing of the bond of 1844"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 21 from the 2016 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2023_q8",
+      "questionText": "One of the founding fathers of Ghana who left the United God Coast Convention (U.G.C.C) to form his own party was",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 8,
+      "options": [
+        "A. J.B Danquah.",
+        "B. Kwame Nkrumah.",
+        "C. Ako Adjei.",
+        "D. Nana William Ofori Atta."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 8 from the 2023 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2024_q4",
+      "questionText": "The first general election held in the Gold Coast in 1951 was won by the",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 4,
+      "options": [
+        "A. National Alliance for the Liberals.",
+        "B. National Liberation Movement.",
+        "C. Convention People's Party.",
+        "D. United Goad Coast Convention."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 4 from the 2024 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2025_q15",
+      "questionText": "The Prime Minister of the Second Republic of Ghana was",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 15,
+      "options": [
+        "A. Dr Hilla Limann.",
+        "B. Dr K.",
+        "A. Busia.",
+        "C. Dr Kwame Nkrumah.",
+        "D. Prof Evans Atta Mills."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 15 from the 2025 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2025_q18",
+      "questionText": "In 1948, there was a riot following the killing of three ex-servicemen at the Osu Christianborg Castle Cross roads.What significant impact did it have on nationalists activities in the Gold Coast? It",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 18,
+      "options": [
+        "A. resulted in the transfer of the governor.",
+        "B. strengthened agitation against colonial administration.",
+        "C. encouraged patriotism and respect for rule of law.",
+        "D. strengthened colonial rule against the nationalists."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 18 from the 2025 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_1990_q4",
+      "questionText": "Write an essay on one of the following:\n\na)\n\n \n\nThe achievements of Dr Kwame Nkrumah\n\nb)\n\n \n\nThe achievements of Sir Gordon Guggisberg\n\n  \n\nPART III\n\nWEST AFRICA, AFRICA AND THE WORLD",
+      "type": "essay",
+      "year": "1990",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1990 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_1997_q3",
+      "questionText": "Explain any five achievements of Sir Alan Burns in the Gold Coast.",
+      "type": "essay",
+      "year": "1997",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1997 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_1999_q3",
+      "questionText": "a)\n\n \n\nMention four achievements of Dr. Kwame Nkrumah.\n\nb)\n\n \n\nWhat are the four reasons that led to the overthrow of Dr. Kwame Nkrumah?",
+      "type": "essay",
+      "year": "1999",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1999 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2017_q1874",
+      "questionText": "b)\n\n \n\nOutline four causes of the 1948 riots in the Gold Coast.",
+      "type": "essay",
+      "year": "2017",
+      "questionNumber": 1874,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2017 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2025_q4",
+      "questionText": "(a)\n\n \n\nIdentify four factors that led to the 1948 riots in the Gold Coast.\n\n[8 marks]\n\n(b)\n\n \n\nHighlight four ways in which the 1948 riots contributed to Ghana's independence.\n\n[12 marks]",
+      "type": "essay",
+      "year": "2025",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2025 Social Studies",
+      "marks": 8,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Colonialism & Independence"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

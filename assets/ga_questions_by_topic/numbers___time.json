@@ -1,0 +1,124 @@
+{
+  "topic": "Numbers & Time",
+  "questions": [
+    {
+      "id": "ga_2024_q13",
+      "year": 2024,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Shia enyiɛ ayɔɔ yɛ Asɛrɛ?",
+      "questionNumber": 13,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. 14",
+        "B. 13",
+        "C. 12",
+        "D. 11"
+      ],
+      "correctAnswer": "C. 12"
+    },
+    {
+      "id": "ga_2024_q14",
+      "year": 2024,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Akutsei enyiɛ ayɔɔ yɛ Ga mashi?",
+      "questionNumber": 14,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. 5",
+        "B. 6",
+        "C. 7",
+        "D. 8"
+      ],
+      "correctAnswer": "C. 7"
+    },
+    {
+      "id": "theory_ga_2022_q1",
+      "questionText": "Ha saji ni akɛshwie ohiɛ nɛɛ ateŋ ekome pɛ hetoo. Ohetoo lɛ falɛ ashɛ wiemɔkulibii 150.\n\na)\n\n \n\nŊmaa miishɛɛ adesa ko ni okane loo onu ni ata.\n\nb)\n\n \n\nGbaa sukuu ni oyaa amrɔ nɛɛ he sane otsɔɔ onaanyo ko ni yɔɔ maŋ kroko nɔ.\n\nc)\n\n \n\nNamɔ he yɔɔ sɛɛnamɔ ha bo, tsɔɔlɔ loo datrɛfonyo?\n\nd)\n\n \n\nŊmaa wolo oyaha onaanyo ko ni yɔɔ maŋsɛɛ ni otsɔɔ lɛ nitsumɔ ni obaasumɔ ni otsu wɔsɛɛ kɛ nɔ hewɔ.",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "ga",
+      "subjectDisplay": "Ga",
+      "examType": "bece",
+      "year": "2022",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2022 Ga",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2022",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148619,
+        "_nanoseconds": 809000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148619,
+        "_nanoseconds": 809000000
+      }
+    },
+    {
+      "id": "theory_ga_2023_q1",
+      "questionText": "Ha saji ni akɛshwie ohiɛ nɛɛ ateŋ ekome pɛ hetoo. Ohetoo lɛ falɛ ashɛ wiemɔkulibii 150.\n\na)\n\n \n\nMɛni Siniɔ Hai Sukuu (S.H.S) obaasumɔ ni oya kɛji ogbe Juniɔ Hai Sukuu (J.H.S) naa? Kɛ nibii ejwɛi atsɔɔ naa.\n\nb)\n\n \n\nAkɛ onukpa yɛ oklasi li, kɛ nibii ejwɛi atsɔɔ naa nɔ hewɔ ni esa akɛ oklasibii lɛ aba sukuu yɛ be ni sa mli.\n\nc)\n\n \n\nŊmaa wolo oyaha onaanyo ko yɛ suku kroko ni ogba lɛ sukuunyo ko ni osumɔɔ esane waa lɛ he sane. Kɛ nibii enyɔ atsɔɔ naa.\n\nd)\n\n \n\nŊmaa nibii ejwɛi kɛtsɔɔ naa akɛ mɔyii ni afo mli yɛ sukuu lɛ, okɛ mla wolɔi lɛ kpaa gbee aloo okɛ amɛkpaaa gbee.",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "ga",
+      "subjectDisplay": "Ga",
+      "examType": "bece",
+      "year": "2023",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2023 Ga",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2023",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148619,
+        "_nanoseconds": 809000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148619,
+        "_nanoseconds": 809000000
+      }
+    }
+  ],
+  "questionCount": 4
+}

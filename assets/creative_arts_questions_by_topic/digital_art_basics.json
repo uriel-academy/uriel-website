@@ -1,0 +1,66 @@
+{
+  "topic": "Digital Art Basics",
+  "questions": [
+    {
+      "id": "creativeArts_2024_1",
+      "subject": "creativeArts",
+      "year": "2024",
+      "examType": "bece",
+      "section": "A",
+      "questionNumber": 1,
+      "questionText": "Select the benefit of using digital tools for freehand drawing.",
+      "passage": null,
+      "metadata": {
+        "sourceFile": "bece career creative art and design 2024 questions.docx",
+        "importedAt": "2025-11-20T15:11:37.802Z"
+      },
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Creative Arts and Design"
+      ],
+      "createdAt": "2025-11-21T00:19:53.160Z",
+      "createdBy": "admin_import",
+      "isActive": true,
+      "sectionInstructions": null,
+      "options": [
+        "A. Always make drawings smaller",
+        "B. Always make drawings bigger",
+        "C. They have endless colour options",
+        "D. They have limited undo options"
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "creativeArts_2025_6",
+      "subject": "creativeArts",
+      "year": "2025",
+      "examType": "bece",
+      "section": "A",
+      "questionNumber": 6,
+      "questionText": "Mr. Adamu is an artist who wants to design a poster for one of his customers. Select the digital tools that he could use for the work.",
+      "passage": null,
+      "metadata": {
+        "sourceFile": "bece career creative art and design 2025 questions.docx",
+        "importedAt": "2025-11-20T15:11:37.889Z"
+      },
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Creative Arts and Design"
+      ],
+      "createdAt": "2025-11-21T00:19:53.161Z",
+      "createdBy": "admin_import",
+      "isActive": true,
+      "sectionInstructions": null,
+      "options": [
+        "A. A-4 sheets, scanner and a computer.",
+        "B. Computer, A-4 sheets and Adobe photoshop.",
+        "C. Photoshop, scanner and A-4 sheets.",
+        "D. Scanner, Adobe photoshop and a computer."
+      ],
+      "correctAnswer": "D"
+    }
+  ],
+  "questionCount": 2
+}

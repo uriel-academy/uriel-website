@@ -1,0 +1,3547 @@
+{
+  "topic": "Motion & Forces",
+  "totalQuestions": 119,
+  "questions": [
+    {
+      "id": "integrated_science_1990_q11",
+      "questionText": "Which of the following is not true about frictional force? It",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 11,
+      "options": [
+        "A. increases motion",
+        "B. opposes motion",
+        "C. damages machines",
+        "D. produces heat",
+        "E. decreases efficiency of machines"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 11 from the 1990 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1990_q14",
+      "questionText": "In which of the following situations is work not done? When a",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 14,
+      "options": [
+        "A. truck moves",
+        "B. wheelbarrow is pushed",
+        "C. fruit falls from a tree",
+        "D. football is kicked",
+        "E. book lies on a table"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 14 from the 1990 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1991_q14",
+      "questionText": "When an object moves from rough surface onto a smooth one with the same energy, its speed",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 14,
+      "options": [
+        "A. increases",
+        "B. decreases",
+        "C. remains the same",
+        "D. becomes zero",
+        "E. cannot be determined"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 14 from the 1991 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1991_q4",
+      "questionText": "What is the work done when a force of 2.5 N moves through a distance of 4 m?",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 4,
+      "options": [
+        "A. 0.6 J",
+        "B. 1.5 J",
+        "C. 1.6 J",
+        "D. 6.5 J",
+        "E. 10.0 J"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 4 from the 1991 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1992_q10",
+      "questionText": "The work done when a weight of 40 N is lifted up vertically through a distance of 10 m is",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 10,
+      "options": [
+        "A. 400 J",
+        "B. 50 J",
+        "C. 30 J",
+        "D. 4 J",
+        "E. 0.25 J"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 10 from the 1992 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1992_q20",
+      "questionText": "Which of the following explains why no work is done when a push is made against a firm wall?",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 20,
+      "options": [
+        "A. The force acts in the opposite direction",
+        "B. The wall does not move",
+        "C. The force is in the same direction",
+        "D. The material of the wall is strong",
+        "E. The force is in horizontal direction"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 20 from the 1992 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1992_q29",
+      "questionText": "Atmospheric pressure is measured with",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 29,
+      "options": [
+        "A. an anemometer",
+        "B. a thermometer",
+        "C. a galvanometer",
+        "D. a barometer",
+        "E. a voltmeter"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 29 from the 1992 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1992_q4",
+      "questionText": "During athletics, a boy slipped on a banana peel on the ground and fell. This is because",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 4,
+      "options": [
+        "A. There was no friction",
+        "B. The ground was hard",
+        "C. The banana peel was soft",
+        "D. The ground was sandy",
+        "E. The frictional force was too great"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 4 from the 1992 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1993_q31",
+      "questionText": "Friction is defined as a force which",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 31,
+      "options": [
+        "A. accompanies motion",
+        "B. acts against motion",
+        "C. causes motion",
+        "D. makes motion easy",
+        "E. is created by motion"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 31 from the 1993 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1993_q9",
+      "questionText": "In a simple machine, the force that is applied to enable work to be done is known as",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 9,
+      "options": [
+        "A. Lever",
+        "B. Load",
+        "C. Pivot",
+        "D. Effort",
+        "E. Hinge"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 9 from the 1993 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1994_q16",
+      "questionText": "Which of the following conditions in a simple machine will make working difficult? When",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 16,
+      "options": [
+        "A. The load distance is equal to the effort distance",
+        "B. The effort distance is twice the load distance",
+        "C. The effort distance is three times the load distance",
+        "D. Small effort moves through a longer distance",
+        "E. The load distance is greater than effort distance."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 16 from the 1994 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1995_q2",
+      "questionText": "What is the difference between mass and weight? The",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 2,
+      "options": [
+        "A. mass of a body is twice the weight",
+        "B. weight of a body is constant but its mass varies",
+        "C. mass of a body varies but its weight does not",
+        "D. weight of a body varies but its mass does not",
+        "E. mass of a body is half the weight"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 2 from the 1995 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1995_q20",
+      "questionText": "Power is defined as the",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 20,
+      "options": [
+        "A. ability to do work",
+        "B. amount of energy",
+        "C. rate of distance covered",
+        "D. rate of doing work",
+        "E. ease of moving a heavy object"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 20 from the 1995 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1995_q21",
+      "questionText": "The force which is able to hold light objects on the surface of liquids is called",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 21,
+      "options": [
+        "A. surface tension",
+        "B. friction",
+        "C. capillarity",
+        "D. viscosity",
+        "E. cohesion"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 21 from the 1995 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1995_q25",
+      "questionText": "What is the work done when a girl lifts a pot of water weighing 40 N upward through a distance of 1 m?",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 25,
+      "options": [
+        "A. 400.0 J",
+        "B. 40.0 J",
+        "C. 4.0 J",
+        "D. 1.0 J",
+        "E. 0.4 J"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 25 from the 1995 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1995_q4",
+      "questionText": "In what units are work and energy measured?",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 4,
+      "options": [
+        "A. work in joules, energy in watts",
+        "B. work in joules, energy in joules",
+        "C. work in newtons, energy in joules",
+        "D. energy in watts, work in watts",
+        "E. energy in newtons, work in joules"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 4 from the 1995 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1995_q7",
+      "questionText": "The air pressure at great heights can be measured with",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 7,
+      "options": [
+        "A. A thermometer",
+        "B. An anemometer",
+        "C. A barometer",
+        "D. A hydrometer",
+        "E. A hygrometer"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 7 from the 1995 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1996_q16",
+      "questionText": "The force overcome by a machine is known as the",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 16,
+      "options": [
+        "A. effort",
+        "B. load",
+        "C. pivot",
+        "D. lever",
+        "E. work"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 16 from the 1996 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1996_q17",
+      "questionText": "Calculate the work done when a weight of 20.0 N is lifted vertically through a distance of 10.0 cm",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 17,
+      "options": [
+        "A. 2000.0 J",
+        "B. 200.0 J",
+        "C. 20.0 J",
+        "D. 2.0 J",
+        "E. 0.2 J\n\n18. Heat travels through a vacuum by a process known as"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 17 from the 1996 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1996_q20",
+      "questionText": "Which of the following does not play any part in digestion?",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 20,
+      "options": [
+        "A. Mouth",
+        "B. duodenum",
+        "C. rectum",
+        "D. pancreas",
+        "E. Stomach\n\n21. Most machines waste energy because of"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 20 from the 1996 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1996_q39",
+      "questionText": "In which units are the vast distances between stars in space measured?",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 39,
+      "options": [
+        "A. Knots",
+        "B. Kilometres",
+        "C. Furlongs",
+        "D. Miles",
+        "E. Light years"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 39 from the 1996 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1996_q5",
+      "questionText": "A boy exerts a force of 40.0 N to lift a load into a vehicle. If the work done is 80.0 J, calculate the distance through which the load is lifted.",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 5,
+      "options": [
+        "A. 0.5 m",
+        "B. 2.0 m",
+        "C. 40.0 m",
+        "D. 120.0 m",
+        "E. 3200.0 m"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 5 from the 1996 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1997_q10",
+      "questionText": "The weight of an object is the",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 10,
+      "options": [
+        "A. force with which the sun pulls it",
+        "B. force with which the moon pulls it",
+        "C. force of the object when gravity is not acting on it",
+        "D. force with which gravity acts on it",
+        "E. mass of the object"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 10 from the 1997 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1997_q12",
+      "questionText": "How much work is done when a kerosene tin is pushed with a force of 20 N through a distance of 2 m?",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 12,
+      "options": [
+        "A. 0.01 J",
+        "B. 0.10 J",
+        "C. 10.0 J",
+        "D. 20.0 J",
+        "E. 40.0 J"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 12 from the 1997 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1997_q24",
+      "questionText": "Which of the following forces will cause an object to move in a circular path?",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 24,
+      "options": [
+        "A. Centripetal force",
+        "B. Gravitational force",
+        "C. Inertial force",
+        "D. Reaction force",
+        "E. Tensional force"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 24 from the 1997 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1997_q31",
+      "questionText": "A stone released from a catapult was able to kill a bird because",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 31,
+      "options": [
+        "A. the stone had a lot of energy",
+        "B. the stone was sharp",
+        "C. there was tension in the stone",
+        "D. the rubber of the catapult was strong",
+        "E. the stone was big"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 31 from the 1997 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1998_q12",
+      "questionText": "The efficiency of a machine is usually less than one due to",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 12,
+      "options": [
+        "A. friction",
+        "B. greasing",
+        "C. heat",
+        "D. the load used",
+        "E. the effort applied"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 12 from the 1998 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1998_q21",
+      "questionText": "Which of the following statements about light is true?",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 21,
+      "options": [
+        "A. Light is reflected from polished surfaces",
+        "B. Light travels through opaque objects",
+        "C. Light passes through plane mirrors",
+        "D. The angle of incidence is between the normal and the reflected ray",
+        "E. The speed of light is less than that of sound"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 21 from the 1998 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1998_q22",
+      "questionText": "The efficiency of a machine is given by the ratio",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 22,
+      "options": [
+        "A. LoadEffort",
+        "B. MomentumVelocity",
+        "C. Distance moved by effortDistance moved by load",
+        "D. Work inputWork output",
+        "E. Mechanical advantageVelocity ratio"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 22 from the 1998 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1998_q5",
+      "questionText": "An object weighing 60 N is dragged through a distance of 2 m. Calculate the work done",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 5,
+      "options": [
+        "A. 6 J",
+        "B. 15 J",
+        "C. 30 J",
+        "D. 120 J",
+        "E. 1200 J"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 5 from the 1998 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1999_q8",
+      "questionText": "Which of the following statements about machines is/are true?\n\nI. The commonest and simplest of all machines is the leverII. The efficiency of a machine is the ratio of work output to work inputIII. The efficiency of a machine is usually less than oneIV. Machines make working much easier and convenient",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 8,
+      "options": [
+        "A. I only",
+        "B. I and II only",
+        "C. I and III only",
+        "D. I, II and III only",
+        "E. I, II, III and IV"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 8 from the 1999 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2001_q30",
+      "questionText": "Which of the following statements about machines is/are correct?I. Machines help us to do work more easilyII. A force applied at one point of the machine overcomes a load at another point of the machineIII. All machines have engines",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 30,
+      "options": [
+        "A. I only",
+        "B. II only",
+        "C. III only",
+        "D. I and II only",
+        "E. II and III only"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 30 from the 2001 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2002_q10",
+      "questionText": "A machine which has an energy loss of 10% will have an efficiency of",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 10,
+      "options": [
+        "A. 100%",
+        "B. 90%",
+        "C. 55%",
+        "D. 10%"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 10 from the 2002 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2002_q5",
+      "questionText": "The force which opposes the motion of one object on another object is known as",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 5,
+      "options": [
+        "A. friction.",
+        "B. gravity.",
+        "C. tension.",
+        "D. weight."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 5 from the 2002 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2002_q7",
+      "questionText": "A man applied a force of 50 N to push a wheelbarrow through a distance of 6 m. Calculate the work done.",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 7,
+      "options": [
+        "A. 300 J",
+        "B. 56 J",
+        "C. 44 J",
+        "D. 30 J"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 7 from the 2002 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2002_q8",
+      "questionText": "In which of the following situations is work said to be done?",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 8,
+      "options": [
+        "A. Walking with a load on the head in an upright position",
+        "B. Getting up from a chair",
+        "C. Pushing against a wall which does not move",
+        "D. Sitting still behind a desk"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 8 from the 2002 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2003_q10",
+      "questionText": "A boy stepped on a banana peel on the ground and fell because the",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 10,
+      "options": [
+        "A. boy was not wearing shoes.",
+        "B. ground was too hard.",
+        "C. banana peel reduced the friction on the ground.",
+        "D. banana peel increasethe friction on the ground."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 10 from the 2003 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2003_q12",
+      "questionText": "A man did 75 J of work by lifting a 50 N load from the floor on to a shelf. Calculate the height of the shelf.",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 12,
+      "options": [
+        "A. 0.67 m",
+        "B. 1.50 m",
+        "C. 25.00 m",
+        "D. 125.00 m"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 12 from the 2003 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2004_q31",
+      "questionText": "The force, which opposes the motion of one body on another body is called",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 31,
+      "options": [
+        "A. adhesion.",
+        "B. cohesion.",
+        "C. friction.",
+        "D. tension."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 31 from the 2004 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2004_q32",
+      "questionText": "The work done when a force moves a body through a distance of 12 m is 720 J. The force applied is",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 32,
+      "options": [
+        "A. 8640 N",
+        "B. 732 N",
+        "C. 708 N",
+        "D. 60 N"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 32 from the 2004 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2004_q8",
+      "questionText": "It is easier to move a heavy load with a crowbar when the",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 8,
+      "options": [
+        "A. effort distance is shorter than the load distance.",
+        "B. effort distance is longer than the load distance.",
+        "C. effort distance is equal to the load distance.",
+        "D. effort is equal to the load."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 8 from the 2004 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2004_q9",
+      "questionText": "The type of lever shown above is a",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 9,
+      "options": [
+        "A. first class lever.",
+        "B. second class lever.",
+        "C. third class lever.",
+        "D. combination of first and second class levers."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 9 from the 2004 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2005_q10",
+      "questionText": "The diagram below shows a lever system used to move a stone. Use it to answer the question below\n\n\n\nLess effort is required to move the stone when the",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 10,
+      "options": [
+        "A. distance Y is equal to X.",
+        "B. distance Y is greater than X.",
+        "C. distance Y is less than X.",
+        "D. stone is at the pivot."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 10 from the 2005 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2005_q37",
+      "questionText": "When a person jumps up, he/she is able to come down because of the",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 37,
+      "options": [
+        "A. pull of the earth's gravitational force.",
+        "B. pull of the earth's magnetic force.",
+        "C. resistance of the earth's atmosphere to the upward motion.",
+        "D. pressure of the earth's atmosphere on the person."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 37 from the 2005 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2005_q4",
+      "questionText": "An object is placed 20 cm in front of a plane mirror. The distance between the object and the image is",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 4,
+      "options": [
+        "A. 20 cm.",
+        "B. 40 cm.",
+        "C. 60 cm.",
+        "D. 80 cm."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 4 from the 2005 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2005_q7",
+      "questionText": "Electricity is used by appliances to do work. This means that electricity is a form of",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 7,
+      "options": [
+        "A. energy.",
+        "B. force.",
+        "C. generator.",
+        "D. machine."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 7 from the 2005 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2005_q8",
+      "questionText": "A force of 2N moves a body through a distance of 10 m. Calculate the work done.",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 8,
+      "options": [
+        "A. 5 J",
+        "B. 8 J",
+        "C. 12 J",
+        "D. 20 J"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 8 from the 2005 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2005_q9",
+      "questionText": "The diagram below shows a lever system used to move a stone. Use it to answer the question below\n\n\n\nThe distance X is the",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 9,
+      "options": [
+        "A. effort distance.",
+        "B. load distance.",
+        "C. fulcrum.",
+        "D. lever arm."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 9 from the 2005 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2006_q11",
+      "questionText": "A simple way of maintaining the efficiency of a machine is by",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 11,
+      "options": [
+        "A. oiling its parts.",
+        "B. fitting new parts on the machine.",
+        "C. making sure it is always working.",
+        "D. making sure it works at low speed."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 11 from the 2006 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2006_q37",
+      "questionText": "Which of the following statements about friction is not true?",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 37,
+      "options": [
+        "A. It wears off materials",
+        "B. It produces heat",
+        "C. It opposes motion",
+        "D. It increases speed"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 37 from the 2006 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2006_q8",
+      "questionText": "A screw is a machine which works in the same way as",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 8,
+      "options": [
+        "A. a lever.",
+        "B. an incline plane.",
+        "C. a wheel and axle.",
+        "D. a pulley."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 8 from the 2006 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2007_q38",
+      "questionText": "The force that opposes the motion of an object on another object is called",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 38,
+      "options": [
+        "A. electrical force.",
+        "B. frictional force.",
+        "C. gravitational force.",
+        "D. magnetic force."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 38 from the 2007 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2007_q9",
+      "questionText": "The human forearm is an example of",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 9,
+      "options": [
+        "A. a first class lever.",
+        "B. a second class lever.",
+        "C. a third class lever.",
+        "D. both first and third class levers."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 9 from the 2007 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2008_q16",
+      "questionText": "Changes in pressure in the middle ear is regulated by the",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 16,
+      "options": [
+        "A. ampullae.",
+        "B. cochlea.",
+        "C. eustachian tube.",
+        "D. ear drum."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 16 from the 2008 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2008_q36",
+      "questionText": "Weight is an example of",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 36,
+      "options": [
+        "A. energy.",
+        "B. force.",
+        "C. work.",
+        "D. power."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 36 from the 2008 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2009_q10",
+      "questionText": "Which of the following machines works on the same principle as an inclined plane?",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 10,
+      "options": [
+        "A. Bottle opener",
+        "B. Wheelbarrow",
+        "C. See-saw",
+        "D. Screw"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 10 from the 2009 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2009_q11",
+      "questionText": "Power is defined as the",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 11,
+      "options": [
+        "A. ability to do work.",
+        "B. force to move an object.",
+        "C. rate of doing work.",
+        "D. ability to replace energy used."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 11 from the 2009 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2010_q16",
+      "questionText": "Which of the following agencies is responsible for providing information on the weather and climate conditions of an area?",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 16,
+      "options": [
+        "A. Animal Husbandry Department",
+        "B. Extension Services Department",
+        "C. Information Services Department",
+        "D. Meteorological Services Department"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 16 from the 2010 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2010_q35",
+      "questionText": "A load of 10 N is moved through a distance of 2 m. Calculate the work done.",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 35,
+      "options": [
+        "A. 5 J",
+        "B. 10 J",
+        "C. 20 J",
+        "D. 50 J"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 35 from the 2010 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2011_q14",
+      "questionText": "Which of the following devices work(s) on the principle of transmission pressure in fluids?I. Water pumpsII. SyringesIII. Bicycle brakes",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 14,
+      "options": [
+        "A. I only",
+        "B. I and II only",
+        "C. II and III only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 14 from the 2011 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2012_q1",
+      "questionText": "The S.I unit for measuring the work done by a force is",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 1,
+      "options": [
+        "A. J.",
+        "B. K.",
+        "C. N.",
+        "D. W."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 1 from the 2012 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2012_q19",
+      "questionText": "The efficiency of a machine is always less than 100% because part of the energy input is used to",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 19,
+      "options": [
+        "A. stop the machine after working.",
+        "B. perform useful work of the load.",
+        "C. overcome friction.",
+        "D. lift the machine up."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 19 from the 2012 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2012_q33",
+      "questionText": "Which of the following factors contribute to early parenthood?I. PovertyII. IlliteracyIII. Lack of parental careIV. Peer pressure",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 33,
+      "options": [
+        "A. I and II only",
+        "B. II and III only",
+        "C. III and IV only",
+        "D. I, II, III and IV"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 33 from the 2012 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2013_q24",
+      "questionText": "One advantage of friction is that it",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 24,
+      "options": [
+        "A. enables cutting tools to be sharpened.",
+        "B. increases the efficiency of machines.",
+        "C. produces a lot of heat in machines.",
+        "D. wears off the sole of shoes."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 24 from the 2013 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2014_q14",
+      "questionText": "Which of the following statements about a force are correct? ItI. is measured in newtons.II. is measured in newton-metre.III. can start a motion.IV. can change the direction of a moving body.",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 14,
+      "options": [
+        "A. I and II only",
+        "B. I and III only",
+        "C. I, III and IV only",
+        "D. I, II, III and IV"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 14 from the 2014 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2014_q18",
+      "questionText": "Kerosene is poured on the surface of a pond in order to",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 18,
+      "options": [
+        "A. make it unsafe for human consumption",
+        "B. make it safe for animal consumption",
+        "C. increase the surface tension",
+        "D. break the surface tension"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 18 from the 2014 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2014_q22",
+      "questionText": "The pressure in fluids",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 22,
+      "options": [
+        "A. acts differently in all directions",
+        "B. acts upwards at any point",
+        "C. decreases with depth",
+        "D. increases with depth"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 22 from the 2014 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2015_q26",
+      "questionText": "An example of a derived quantity is",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 26,
+      "options": [
+        "A. length.",
+        "B. mass.",
+        "C. time.",
+        "D. velocity."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 26 from the 2015 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2015_q40",
+      "questionText": "Energy is the",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 40,
+      "options": [
+        "A. force to move an object.",
+        "B. weight of the body.",
+        "C. ability to do work.",
+        "D. power to carry an object."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 40 from the 2015 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2016_q36",
+      "questionText": "The joule is the S.I unit for",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 36,
+      "options": [
+        "A. energy.",
+        "B. force.",
+        "C. power.",
+        "D. pressure"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 36 from the 2016 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2017_q3",
+      "questionText": "When light travels from glass to air, its speed is",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 3,
+      "options": [
+        "A. increased.",
+        "B. reduced.",
+        "C. halved.",
+        "D. unchanged."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 3 from the 2017 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2017_q4",
+      "questionText": "When a piece of iron rod is brought near a permanent magnet for a while it becomes magnetised by",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 4,
+      "options": [
+        "A. stroking method.",
+        "B. electrical method.",
+        "C. friction.",
+        "D. induction."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 4 from the 2017 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2018_q22",
+      "questionText": "The force which tends to pull an object in a circular motion towards the centre of the circle is called",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 22,
+      "options": [
+        "A. centripetal force.",
+        "B. electrostatic force.",
+        "C. gravitational force.",
+        "D. magnetic force."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 22 from the 2018 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2018_q24",
+      "questionText": "The instrument used to measure atmospheric pressure is called",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 24,
+      "options": [
+        "A. a thermometer.",
+        "B. a force meter.",
+        "C. a barometer.",
+        "D. an anemometer."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 24 from the 2018 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2018_q29",
+      "questionText": "Which of the following factors contribute to early parenthood?I. IlliteracyII. PovertyIII. Peer pressureIV. Lack of parental care",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 29,
+      "options": [
+        "A. I and II only",
+        "B. II and III only",
+        "C. III and IV only",
+        "D. I, II, III and IV"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 29 from the 2018 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2018_q30",
+      "questionText": "Which of the following statements about the negative use of Science and Technology is correct? It",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 30,
+      "options": [
+        "A. promotes good health.",
+        "B. promotes easy communication.",
+        "C. enable humans to use less energy in working.",
+        "D. creates things that are dangerous to the environment."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 30 from the 2018 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2019_q12",
+      "questionText": "It is easier to move a heavy load with a crowbar when the",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 12,
+      "options": [
+        "A. effort distance is shorter than the load distance.",
+        "B. effort distance is longer than the load distance.",
+        "C. effort distance is equal to the load distance.",
+        "D. effort is equal to the load."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 12 from the 2019 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2019_q15",
+      "questionText": "Which of the following statements about a force are correct? ItI. is measured in newtons.II. is measured in newton-metre.III. can start a motion.IV. can change the direction of a moving body.",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 15,
+      "options": [
+        "A. I and II only",
+        "B. I and III only",
+        "C. I, III and IV only",
+        "D. I, II, III and IV"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 15 from the 2019 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2019_q20",
+      "questionText": "The work done when a force moves a body through a distance of 12 m is 720 J. The force applied is",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 20,
+      "options": [
+        "A. 8640 N.",
+        "B. 732 N.",
+        "C. 708 N.",
+        "D. 60 N."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 20 from the 2019 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2019_q3",
+      "questionText": "In all machines, the efficiency is",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 3,
+      "options": [
+        "A. always 100%",
+        "B. less than 100%",
+        "C. more than 100%",
+        "D. always 0%"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 3 from the 2019 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2019_q39",
+      "questionText": "Balanced ration enables animals to",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 39,
+      "options": [
+        "A. increase fertility rate.",
+        "B. maintain normal growth.",
+        "C. increase meat production.",
+        "D. maintain energy level of work animals."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 39 from the 2019 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2019_q8",
+      "questionText": "The pressure in fluids",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 8,
+      "options": [
+        "A. increase with depth.",
+        "B. decrease with depth.",
+        "C. acts upwards at any point.",
+        "D. acts differently in all directions."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 8 from the 2019 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2020_q22",
+      "questionText": "Which of the following statement(s) about pressure in fluids is/are correct? PressureI. decreases with depthII. increases with depthIII. does not depend on the area",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 22,
+      "options": [
+        "A. I only",
+        "B. II only",
+        "C. I and II only",
+        "D. II and III only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 22 from the 2020 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2020_q4",
+      "questionText": "The work done by force of 20 N on a body is 60 J. Calculate the distance through which the force moved",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 4,
+      "options": [
+        "A. 8.0 m",
+        "B. 4.0 m",
+        "C. 3.0 m",
+        "D. 2.0 m"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 4 from the 2020 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2021_q26",
+      "questionText": "A machine lifts a load of 100 N through a vertical distance of 2 m in 10s.What is the work done by the machine?",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 26,
+      "options": [
+        "A. 50 J",
+        "B. 100 J",
+        "C. 200 J",
+        "D. 400 J"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 26 from the 2021 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2021_q27",
+      "questionText": "A machine lifts a load of 100 N through a vertical distance of 2 m in 10s.What is the power of the machine?",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 27,
+      "options": [
+        "A. 50 W",
+        "B. 20 W",
+        "C. 10 W",
+        "D. 2 W"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 27 from the 2021 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2021_q36",
+      "questionText": "Which of the following machines are complex machines?I. TractorII. Mist blowerIII. Sewing machine",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 36,
+      "options": [
+        "A. I and II only",
+        "B. I and III only",
+        "C. II and III only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 36 from the 2021 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2022_q15",
+      "questionText": "Which of the following statements about pressure in liquids is/are correct?\n\nI. Pressure in liquids at the same level acts equally in all directions.\n\nII. Pressure in liquids depend on the area of the liquid.\n\nIII. Pressure in liquids decreases with depth.",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 15,
+      "options": [
+        "A. I only",
+        "B. II only",
+        "C. I and III only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 15 from the 2022 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2022_q17",
+      "questionText": "What force makes a ripe mango fall from a tree?",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 17,
+      "options": [
+        "A. Force of tension",
+        "B. Magnetic force",
+        "C. Electrostatic force",
+        "D. Gravitational force"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 17 from the 2022 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2022_q20",
+      "questionText": "A force meter measures",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 20,
+      "options": [
+        "A. mass.",
+        "B. temperature.",
+        "C. weight.",
+        "D. work."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 20 from the 2022 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2022_q23",
+      "questionText": "The floor of a room has length 20 m and breadth 15 m. Determine the area of the floor.",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 23,
+      "options": [
+        "A. 35 m2",
+        "B. 200 m2",
+        "C. 250 m2",
+        "D. 300 m2"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 23 from the 2022 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2024_q23",
+      "questionText": "An electric bulb is rated 0.5 A, 120 V. Determine the power produced when the bulb is turned on.",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 23,
+      "options": [
+        "A. 60 kW",
+        "B. 60 W",
+        "C. 30 kW",
+        "D. 30 W"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 23 from the 2024 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2024_q30",
+      "questionText": "An electrical engineer was in your school to replace a 20 W bulb with a 50 W bulb.Use this information to answer the question belowThe unit inscribed on the bulb measures its",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 30,
+      "options": [
+        "A. energy.",
+        "B. workdone.",
+        "C. power.",
+        "D. electricity."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 30 from the 2024 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2024_q32",
+      "questionText": "The following devices work based on the principle of pressure in fluids except",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 32,
+      "options": [
+        "A. siphons.",
+        "B. flutes.",
+        "C. drinking straws.",
+        "D. water pumps."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 32 from the 2024 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2024_q5",
+      "questionText": "A hunter experiences a backward force upon firing a gun. Which of the Newton's laws of motion is demonstrated in the situation?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 5,
+      "options": [
+        "A. First law",
+        "B. Second law",
+        "C. Third law",
+        "D. Law of inertia"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 5 from the 2024 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2025_q18",
+      "questionText": "Which of the following activities does not relate to the principles of pressure in the daily lives of humans?",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 18,
+      "options": [
+        "A. Drinking straw in use by the people at a party",
+        "B. Pumping air into car tyres",
+        "C. Filling of gallons with air",
+        "D. A person jerking forward when a speeding car suddenly stops."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 18 from the 2025 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2025_q19",
+      "questionText": "A patient has been diagnosed of hypertension. Which of the following readings is most likely the patient's blood pressure?",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 19,
+      "options": [
+        "A. 110/85",
+        "B. 120/80",
+        "C. 130/85",
+        "D. 140/90"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 19 from the 2025 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2025_q3",
+      "questionText": "A book is at rest on a table. The net force acting on the book could be described as one that",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 3,
+      "options": [
+        "A. is balanced.",
+        "B. is unbalanced.",
+        "C. is due to friction.",
+        "D. obeys Newton's second law."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 3 from the 2025 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2025_q4",
+      "questionText": "An example of a communicable disease is",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 4,
+      "options": [
+        "A. asthma.",
+        "B. diabetes.",
+        "C. hepatitis.",
+        "D. hypertension."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 4 from the 2025 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_1993_q1",
+      "questionText": "(a)\n\n \n\nDefine the following terms and give one example of each:\n\n(i)\n\n \n\nElement\n\n(ii)\n\n \n\nMixture\n\n(iii)\n\n \n\nCompound\n\n(b)\n\n \n\nExplain the following terms:\n\n(i)\n\n \n\nWork\n\n(ii)\n\n \n\nEnergy\n\n(c)\n\n \n\nState the units in which each of the following are measured:\n\n(i)\n\n \n\nPower\n\n(ii)\n\n \n\nEnergy\n\n(iii)\n\n \n\nElectric current\n\n(iv)\n\n \n\nTemperature\n\n(d)\n\n \n\nA body of mass 100 kg is placed at a point 2 m above the ground. What is the potential energy of the body with reference to the ground?\n\n[Take g = 10 ms-2]\n\n(e)\n\n \n\nState three characteristics of each of the following:\n\n(i)\n\n \n\nAn insect pollinated flower\n\n(ii)\n\n \n\nA wind pollinated flower",
+      "type": "essay",
+      "year": "1993",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1993 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_1995_q3",
+      "questionText": "(a)\n\n \n\nIn each of the activities listed below state whether the changes that occur are physical or chemical. Explain your answers.\n\n(i)\n\n \n\nAn egg is boiled for five minutes\n\n(ii)\n\n \n\nA piece of bread is chewed in the mouth for two minutes\n\n(iii)\n\n \n\nA piece of meat is chewed in the mouth for two minutes\n\n(iv)\n\n \n\nA piece of wood is burnt to ashes\n\n(b)\n\n \n\nDefine each of the following\n\n(i)\n\n \n\nA machine\n\n(ii)\n\n \n\nMechanical advantage of a machine\n\n(iii)\n\n \n\nVelocity ratio of a machine\n\n(c)\n\n \n\nA system of levers is used to overcome a resistance of 3,000 N when an effort of 150 N is applied to it. Calculate the mechanical advantage of the system.\n\n(d)\n\n \n\n(i)\n\n \n\nList three general causes of diseases\n\n(ii)\n\n \n\nState four ways by which diseases can be prevented.",
+      "type": "essay",
+      "year": "1995",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1995 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_1996_q1",
+      "questionText": "(a)\n\n \n\nDefine the following terms:\n\n(i)\n\n \n\nerosion\n\n(ii)\n\n \n\nreproduction\n\n(iii)\n\n \n\nparasite\n\n(iv)\n\n \n\nexcretion\n\n(b)\n\n \n\nGive one example each of erosion and parasite.\n\n(c)\n\n \n\nDraw and label a diagram of the female reproductive organ in a human being.\n\n(d)\n\n \n\n(i)\n\n \n\nDefine the term work.\n\n(ii)\n\n \n\nAn amount of 300.0 J of work is done when a force moves through a distance of 10.0 m in the direction of the force. Calculate the value of the force.\n\n(e)\n\n \n\nWrite down the names of the following compounds:\n\n(i)\n\n \n\nNH4Cl\n\n(ii)\n\n \n\nHCl\n\n(iii)\n\n \n\nCuSO4\n\n(iv)\n\n \n\nFeCl3\n\n(f)\n\n \n\nExplain how sulphur can be obtained from a mixture of powdered sulphur and iron filings.",
+      "type": "essay",
+      "year": "1996",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1996 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_1999_q3",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nDescribe briefly what happens to a morsel of kenkey in the mouth during eating.\n\n(ii)\n\n \n\nList in order, the parts of the digestive system of humans.\n\n(b)\n\n \n\nA mixture of iron filings and sulphur is heated in a test tube\n\n(i)\n\n \n\nGive the name of the compound formed\n\n(ii)\n\n \n\nWrite the chemical equation of the reaction which took place.\n\n(iii)\n\n \n\nState two methods of preventing iron from rusting.\n\n(c)\n\n \n\n(i)\n\n \n\nA boy pulled a load through a distance of 5 m. If he exerts a force of 15 N in the direction of the force, calculate the work done\n\n(ii)\n\n \n\nConvert the following weights expressed in kilogram force (kgf) to newton (N)\n\nα)",
+      "type": "essay",
+      "year": "1999",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1999 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2000_q2",
+      "questionText": "a)\n\n \n\nWhat is an electrostatic force?\n\nb)\n\n \n\ni)\n\n \n\nState the unit of\n\nα)\n\n \n\nforce\n\nβ)\n\n \n\nwork\n\nii)\n\n \n\nA body of mass 80 kg is lifted vertically through a distance of 5.0 m.\n\nCalculate the work done on the body.\n\n[g = 10 ms-2]\n\nc)\n\n \n\nDescribe briefly how a mixture of common salt and powdered sulphur could be separated.\n\nd)\n\n \n\nState three characteristics each of\n\ni)\n\n \n\nan insect pollinated flower\n\nii)\n\n \n\na wind pollinated flower",
+      "type": "essay",
+      "year": "2000",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2002_q3",
+      "questionText": "a)\n\n \n\nName the four main parts of a flower.\n\nb)\n\n \n\nGive two external features of plants pollinated by wind.\n\nc)\n\n \n\nConstruct a food chain using any four of the organisms listed below.\n\nGoat, lizard, bird, snake, earthworm, grasscutter, grass, ant, cassava\n\nd)\n\n \n\ni)\n\n \n\nThe energy input of a machine is 7.5 J and the output energy is 5.0 J.\n\nCalculate the efficiency of the machine.\n\nii)\n\n \n\nExplain why the efficiency of a machine is always less than 1.",
+      "type": "essay",
+      "year": "2002",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2002 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2007_q5",
+      "questionText": "(a)\n\n \n\nCopy and complete the table below:\n\nDisease\n\nCausative Agent\n\nPrevention/Control\n\nCholera\n\nVibrio spp.\n\nEating hot food\n\ni) .....................\n\nPlasmodium\n\nii) ......................\n\niii) ....................\n\nLouse\n\nPersonal hygiene\n\nRingworm\n\niv) ........................\n\nv) ..................................\n\n(b)\n\n \n\nName two different particles of matter which carry\n\n(i)\n\n \n\na negative charge;\n\n(ii)\n\n \n\na positive charge;\n\n(iii)\n\n \n\nno charge.\n\n(c)\n\n \n\nA simple machine moves a load of 20 N through a distance of 2 m. If it uses an effort of 25 N which moves through a distance of 4 m, calculate the\n\n(i)\n\n \n\nwork input;\n\n(ii)\n\n \n\nwork output;\n\n(iii)\n\n \n\nefficiency of the machine.",
+      "type": "essay",
+      "year": "2007",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2007 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2009_q4",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nExplain heredity\n\n(ii)\n\n \n\nGive two examples of heredity characters.\n\n(b)\n\n \n\nExplain whether each of the following processes is a chemical change or a physical change:\n\n(i)\n\n \n\nRusting;\n\n(ii)\n\n \n\nBurning;\n\n(iii)\n\n \n\nFiltration;\n\n(iv)\n\n \n\nExpansion of copper.\n\n(c)\n\n \n\n(i)\n\n \n\nWhat is a simple machine?\n\n(ii)\n\n \n\nName two types of simple machines.\n\n(iii)\n\n \n\nExplain why the efficiency of a machine cannot be equal to 100%.",
+      "type": "essay",
+      "year": "2009",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2009 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2009_q5",
+      "questionText": "(a)\n\n \n\nStudy the organisms listed below:Earthworm;Sheep;Cassava plant;Grasshopper;Man;Hen.\n\nDraw a food chain using four of the organisms\n\n(b)\n\n \n\n(i)\n\n \n\nName four types of forces apart from friction.\n\n(ii)\n\n \n\nGive three effects of a force.\n\n(c)\n\n \n\nA certain pupil in a classroom can see clearly on the blackboard only when he sits at the front.\n\n(i)\n\n \n\nState the eye defect the child is suffering from.\n\n(ii)\n\n \n\nExplain why the child is unable to see when he is far from the blackboard.\n\n(iii)\n\n \n\nHow can the defect be corrected?",
+      "type": "essay",
+      "year": "2009",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2009 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2010_q4",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nWhat is a disease vector?\n\n(ii)\n\n \n\nMention two methods of controlling each of the following types of pests of farm animals:\n\n(α)\n\n \n\nectoparasites;\n\n(β)\n\n \n\nendoparasites.\n\n(b)\n\n \n\n(i)\n\n \n\nState two symptoms of nitrogen deficiency in a tomato plant.\n\n(ii)\n\n \n\nDescribe side dressing as a method of fertilizer application.\n\n(c)\n\n \n\n(i)\n\n \n\nDefine power\n\n(ii)\n\n \n\nState the S.I unit of power\n\n(d)\n\n \n\nDraw the electronic structure of potassium\n\n[Atomic number of potassium = 19]",
+      "type": "essay",
+      "year": "2010",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2010 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2015_q1",
+      "questionText": "a)\n\n \n\nThe diagram below is an illustration of a cocoa pod infected by a disease.\n\nStudy the diagram carefully and answer the questions that follow.\n\n\n\ni)\n\n \n\nName the disease illustrated on the pod.\n\nii)\n\n \n\nMention the causative organism of the disease.\n\niii)\n\n \n\nDescribe one symptom of the disease.\n\niv)\n\n \n\nState one farm practice that promotes the spread of the disease.\n\nv)\n\n \n\nGive one practices farmers could adopt to control the disease.\n\nb)\n\n \n\nThe diagram below is an illustration of a cuboid with faces A, B and C shown and sides a, b and c indicated.\n\nStudy the diagram carefully and answer the questions that follow.\n\n\n\ni)\n\n \n\nMeasure and record the length of each of the sides labelled a, b and c in centimeters.\n\nii)\n\n \n\nDetermine the area of each of the faces A and B.\n\niii)\n\n \n\nIf the weight of the cuboid is 100N, determine the pressure exerted by the cuboid in N/cm2 when it lie on\n\nα)\n\n \n\nface A;\n\nβ)\n\n \n\nface B.\n\niv)\n\n \n\nFrom your results in (iii), explain how pressure exerted by a body changes with the area on which it lie.\n\nc)\n\n \n\nThe diagram below is an illustration of three different types of teeth, labelled A, B and C in humans.\n\nStudy the diagrams carefully and answer the questions that follow.\n\n\n\ni)\n\n \n\nName each type of teeth labelled A, B and C.\n\nii)\n\n \n\nState one function of the type of teeth labelled A, B and C.\n\niii)\n\n \n\nState two observable differences between the tooth labelled A and that labelled B.\n\niv)\n\n \n\nMention two ways of ensuring proper dental care.\n\nd)\n\n \n\nThe diagram below is an illustration of an experimental set-up used to separate water and salt from salt solution.\n\nStudy the diagram carefully and answer the questions that follow.\n\n\n\ni)\n\n \n\nName each of the parts labelled I, II, III and IV.\n\nii)\n\n \n\nName the method of separation used.\n\niii)\n\n \n\nState one function of each of the parts labelled II and III.\n\niv)\n\n \n\nName three physical processes that are involved in the separation of the mixture.",
+      "type": "essay",
+      "year": "2015",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2017_q3",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nWhat is an acid?\n\nii)\n\n \n\nGive two differences between an acid and a base, in terms of taste and feel.\n\nb)\n\n \n\ni)\n\n \n\nDefine pressure.\n\nii)\n\n \n\nA force of 200N is exerted on an area of 50m2. Calculate the pressure exerted by the force.\n\nc)\n\n \n\nExplain the following terms as associated with living organisms.\n\ni)\n\n \n\nUni cellullar;\n\nii)\n\n \n\nMulti cellullar.\n\nd)\n\n \n\nGive two reasons why soil air is important.",
+      "type": "essay",
+      "year": "2017",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2017 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2017_q4",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nExplain the following terms as applied to machines:\n\nα)\n\n \n\nwork input;\n\nβ)\n\n \n\nwork output.\n\nii)\n\n \n\nState one factor that limits work output for a given work input in a simple machine.\n\nb)\n\n \n\ni)\n\n \n\nWhat is chloroplast?\n\nii)\n\n \n\nDifferentiate between aerobic respiration and anaerobic respiration.\n\nc)\n\n \n\nState the colour change that would occur when blue litmus paper is dipped onto a solution of:\n\ni)\n\n \n\nα)\n\n \n\nvinegar;\n\nβ)\n\n \n\nwood ash.\n\nii)\n\n \n\nName the products formed when hydrochloric acid reacts with sodium hydroxide.\n\nd)\n\n \n\nList two benefits of vegetables to humans.",
+      "type": "essay",
+      "year": "2017",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2017 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2018_q2",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nWhat is an ion?\n\nii)\n\n \n\nState two methods of softening hard water.\n\nb)\n\n \n\ni)\n\n \n\nDifferentiate between pest and parasites as used in a agriculture.\n\nii)\n\n \n\nGive an example each of a:\n\nα)\n\n \n\npest;\n\nβ)\n\n \n\nparasites.\n\nc)\n\n \n\ni)\n\n \n\nWhat is work?\n\nii)\n\n \n\nA force of 10N causes a body to move a distance of 5.2m in the direction of the force. Calculate the work done.\n\nd)\n\n \n\nName two diseases associated with the circulatory system of humans.",
+      "type": "essay",
+      "year": "2018",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2018 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2021_q6",
+      "questionText": "(a)\n\n \n\nState three ways by which the atmosphere in an industrial area is polluted.\n\n(b)\n\n \n\n(i)\n\n \n\nWrite the word equation for each of the following reactions between:\n\n(α)\n\n \n\ncalcium and oxygen\n\n(β)\n\n \n\nnitrogen and hydrogen\n\n(ii)\n\n \n\nState the hazard that could be prevented when each of the following protective materials are used in the laboratory:\n\n(α)\n\n \n\ngas mask\n\n(β)\n\n \n\ngoggles\n\n(c)\n\n \n\nIf a cuboid of weight 100 N, has sides 5 cm by 10 cm, calculate the:\n\n(i)\n\n \n\nArea of the cuboid;\n\n(ii)\n\n \n\nPressure exerted by the cuboid when it lies on its side.\n\n(d)\n\n \n\n(i)\n\n \n\nExplain the term mixed farming.\n\n(ii)\n\n \n\nState two advantages of mixed farming.",
+      "type": "essay",
+      "year": "2021",
+      "questionNumber": 6,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2021 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2023_q4",
+      "questionText": "a)\n\n \n\nWhat is a neutralization reaction?\n\nb)\n\n \n\nState three physical properties of a soil.\n\nc)\n\n \n\ni)\n\n \n\nDefine the term power.\n\nii)\n\n \n\nIf a machine hauls a packing case of mass 50 kg up a building that is 10 m high in 30 s, calculate the power of the machine.\n\n[g = 10 m-2]\n\nd)\n\n \n\nState three areas where technology is used for the benefit of humans.",
+      "type": "essay",
+      "year": "2023",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2023 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2024_q3",
+      "questionText": "(a)\n\n \n\nYou have been given maize, cowpea, cassava and cabbage to cultivate on a piece of land using crop rotation system.\n\n(i)\n\n \n\nDesign a 4-year rotational program using the given crops.\n\n(ii)\n\n \n\nGive two reasons for the sequence given in (a)(i).\n\n(b)\n\n \n\nA student is suspected of having contracted COVID-19.\n\n(i)\n\n \n\nGive three symptoms that the student may exhibit to confirm this suspicion.\n\n(ii)\n\n \n\nSuggest two ways to prevent the spread of COVID-19 in the school.\n\n(iii)\n\n \n\nGive two reasons why COVID-19 was declared as a pandemic.\n\n(c)\n\n \n\nThe mass of a vehicle is 1000 kg and travels at 100 m s-1. If the vehicle accelerates to 150 ms-1 in 10 s, calculate the:\n\n(i)\n\n \n\nacceleration of the vehicle;\n\n(ii)\n\n \n\nforce that acts on the vehicle;\n\n(iii)\n\n \n\nfinal momentum when the vehicle comes to a stop.",
+      "type": "essay",
+      "year": "2024",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2024 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2025_q1",
+      "questionText": "(a)\n\n \n\nFigure 1(a) is an illustration of a natural cycle showing unnamed stages and processes labelled A, B, C and D with processes labelled P, Q, S and T. Study the figure carefully and answer the questions that follow.\n\n\n\n(i)\n\n \n\nName each of the stages labelled A, B, C and D.\n\n(ii)\n\n \n\nName each of the processes labelled P, S and T.\n\n(iii)\n\n \n\nState three activities of humans that could disrupt the cycle.\n\n[10 marks]\n\n(b)\n\n \n\nFigure 1(b) is an illustration of two types of farming systems practised in Ghana labelled K and L.\n\nSystem K represents four farmlands labelled A, B, C and D and the arrows indicate movement of the farmer over a period of time as shown.\n\nSystem L, represents a farmland divided into four plots 1, 2, 3 and 4 and the arrows indicate the movement of the crops cultivated over the period.\n\nStudy the figure carefully and answer the questions that follow.\n\n\n\n(i)\n\n \n\nName each of the farming systems labelled K and L\n\n(ii)\n\n \n\nGive the reason for each of the names given in (i).\n\n(iii)\n\n \n\nState two ways in which the farming system K is of importance to the farmer.\n\n(iv)\n\n \n\nGive three reasons why the farming system K is not being encouraged in recent times.\n\n(v)\n\n \n\nName one type of crop that could be included in the farmland L to improve the fertility of the soil.\n\n[10 marks]\n\n(c)\n\n \n\nFigure 1(c) is an illustration of a mason pulling a slab by means of a rope up an inclined plane. The labels I, II and III represent forces acting on the slab.\n\nStudy the figure carefully and answer the questions that follow.\n\n\n\n(i)\n\n \n\nGive three examples of the use of inclined planes in everyday life.\n\n(ii)\n\n \n\nGiven that I is 400 N and moves a distance of 10 m whiles II is 100 N and moves a distance of 5 m, calculate the\n\n(α)\n\n \n\nwork output;\n\n(β)\n\n \n\nwork input;\n\n(γ)\n\n \n\nefficiency.\n\n[10 marks]\n\n(d)\n\n \n\nFigure 1(d) is an illustration of experimental set-ups A and B used to demonstrate a scientific principle.\n\nStudy the figure carefully and answer the questions that follow.\n\n\n\n(i)\n\n \n\nName the scientific principle being demonstrated in both A and B.\n\n(ii)\n\n \n\nDescribe briefly the functions of each of the parts labelled II and VI.\n\n(iii)\n\n \n\nName any two types of materials that could be present in each of the set-ups labelled:\n\n(α)\n\n \n\nIII;\n\n(β)\n\n \n\nVII.\n\n(iv)\n\n \n\nGive the reason why the direction of water flow in A must not be reversed.\n\n[10 marks]\n\n \n\nSECTION B\n\n[60 marks]\n\nAnswer three questions only in this section",
+      "type": "essay",
+      "year": "2025",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2025 Integrated Science",
+      "marks": 10,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2025_q2",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nState three ways of conserving energy in the house.\n\n(ii)\n\n \n\nAn electrical appliance in the house uses 4000 W of electric power every 12 hours.\n\nCalculate the energy used within this time.\n\n[7 marks]\n\n(b)\n\n \n\n(i)\n\n \n\nGive two examples of an acid-base indicator.\n\n(ii)\n\n \n\nState the colour change of each indicator given in (i) in an orange juice.\n\n[4 marks]\n\n(c)\n\n \n\n(i)\n\n \n\nState four activities that could be undertaken to ensure a green economy in Ghana.\n\n(ii)\n\n \n\nName two primary green-house gases associated with industrialization.\n\n[6 marks]\n\n(d)\n\n \n\nDescribe briefly how compost could be prepared for a backyard garden.\n\n[3 marks]",
+      "type": "essay",
+      "year": "2025",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2025 Integrated Science",
+      "marks": 7,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2025_q4",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nExplain briefly why a kitchen knife is sharpened in order to cut a piece of yam easily.\n\n(ii)\n\n \n\nA force of 10 N is exerted on a piece of yam using a knife of cross-sectional area 1 x 10-3 m3.\n\nDetermine the pressure exerted.\n\n[6 marks]\n\nb)\n\n \n\nOutline the procedure used to estimate the pH value of a soil sample.\n\n[6 marks]\n\n(c)\n\n \n\nA patient's blood pressure when measured read 150/90 mmHg.\n\n(i)\n\n \n\nState the significance of the values.\n\n(ii)\n\n \n\nState three remedies that could be recommended to the patient referred to in (c) other than medication.\n\n[5 marks]\n\n(d)\n\n \n\nState three characteristics of silage that has made its use desirable in recent times.\n\n[3 marks]",
+      "type": "essay",
+      "year": "2025",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2025 Integrated Science",
+      "marks": 6,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Motion & Forces"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

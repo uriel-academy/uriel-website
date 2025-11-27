@@ -1,0 +1,40 @@
+{
+  "topic": "Safety at Home",
+  "questions": [
+    {
+      "id": "career_technology_2025_q8",
+      "questionText": "To ensure that her children are safe from illnesses, a mother should encourage them to",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2025",
+      "section": "A",
+      "questionNumber": 8,
+      "options": [
+        "A. maintain good personal hygiene practices.",
+        "B. avoid eating outside the home.",
+        "C. maintain good food hygiene practices.",
+        "D. avoid eating with friends"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 8 from the 2025 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2025"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2025",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    }
+  ],
+  "questionCount": 1
+}

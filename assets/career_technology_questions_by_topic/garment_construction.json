@@ -1,0 +1,176 @@
+{
+  "topic": "Garment Construction",
+  "questions": [
+    {
+      "id": "career_technology_2024_q10",
+      "questionText": "Kofi is using the freehand cutting technique to cut an outfit to be worn to a wedding. The most important factor to consider in his choice of fabric is",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 10,
+      "options": [
+        "A. colour of fabric.",
+        "B. motifs in fabric.",
+        "C. quantity of fabric.",
+        "D. texture of fabric."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 10 from the 2024 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2024"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    },
+    {
+      "id": "career_technology_2024_q13",
+      "questionText": "A dressmaker is required to take body measurement to ensure that",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 13,
+      "options": [
+        "A. garment drapes well.",
+        "B. garment fits well.",
+        "C. patterns match properly.",
+        "D. sewing is made easy."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 13 from the 2024 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2024"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    },
+    {
+      "id": "career_technology_2024_q35",
+      "questionText": "Issaka is considering the type of joints to use in designing a wooden bookshelf. The aspect of the design process under consideration is",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 35,
+      "options": [
+        "A. construction.",
+        "B. ergonomics.",
+        "C. function.",
+        "D. safety."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 35 from the 2024 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2024"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    },
+    {
+      "id": "career_technology_2025_q32",
+      "questionText": "Career Technology students working on their project work informed their class teacher that they were preparing the sequence of operation. The exact stage of the design process the students have reached is",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2025",
+      "section": "A",
+      "questionNumber": 32,
+      "options": [
+        "A. construction.",
+        "B. evaluation.",
+        "C. investigation.",
+        "D. specification."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 32 from the 2025 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2025"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2025",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    },
+    {
+      "id": "career_technology_2025_q33",
+      "questionText": "A furniture designer is cutting along the grain of a mahogany board to make a door. The method of sawing used is",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2025",
+      "section": "A",
+      "questionNumber": 33,
+      "options": [
+        "A. cross-cutting.",
+        "B. felling.",
+        "C. ripping.",
+        "D. straight-cutting."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 33 from the 2025 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2025"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2025",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    }
+  ],
+  "questionCount": 5
+}

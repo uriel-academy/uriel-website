@@ -1,0 +1,64 @@
+{
+  "topics": [
+    {
+      "name": "Greetings",
+      "filename": "greetings.json",
+      "questionCount": 0
+    },
+    {
+      "name": "Personal Information",
+      "filename": "personal_information.json",
+      "questionCount": 0
+    },
+    {
+      "name": "Everyday Conversations",
+      "filename": "everyday_conversations.json",
+      "questionCount": 24
+    },
+    {
+      "name": "Verbs & Conjugation",
+      "filename": "verbs___conjugation.json",
+      "questionCount": 3
+    },
+    {
+      "name": "Nouns, Gender & Articles",
+      "filename": "nouns__gender___articles.json",
+      "questionCount": 36
+    },
+    {
+      "name": "Structure of Sentences",
+      "filename": "structure_of_sentences.json",
+      "questionCount": 26
+    },
+    {
+      "name": "Comprehension",
+      "filename": "comprehension.json",
+      "questionCount": 0
+    },
+    {
+      "name": "Vocabulary Themes",
+      "filename": "vocabulary_themes.json",
+      "questionCount": 24
+    },
+    {
+      "name": "Short Text Interpretation",
+      "filename": "short_text_interpretation.json",
+      "questionCount": 0
+    },
+    {
+      "name": "Guided Writing",
+      "filename": "guided_writing.json",
+      "questionCount": 0
+    },
+    {
+      "name": "Messages & Emails",
+      "filename": "messages___emails.json",
+      "questionCount": 5
+    },
+    {
+      "name": "Short Paragraphs",
+      "filename": "short_paragraphs.json",
+      "questionCount": 0
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "topic": "Career Choices",
+  "questions": [
+    {
+      "id": "career_technology_2024_q14",
+      "questionText": "In any business enterprise, assigning specific roles to workers",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 14,
+      "options": [
+        "A. enables them to manage business well.",
+        "B. encourages them to be punctual at work.",
+        "C. encourages them to be regular at work.",
+        "D. makes them responsible always."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 14 from the 2024 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2024"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    },
+    {
+      "id": "career_technology_2024_q38",
+      "questionText": "Your Career Technology teacher has assigned you to design and make a bottle opener. The first thing to do is to",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 38,
+      "options": [
+        "A. cut the metal piece into the required sizes.",
+        "B. identify safety measures to observe.",
+        "C. obtain the material required.",
+        "D. prepare the working drawings."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 38 from the 2024 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2024"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    },
+    {
+      "id": "career_technology_2024_q7",
+      "questionText": "The proper arrangement of tools and equipment in the food laboratory enables Borketey to",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 7,
+      "options": [
+        "A. stay healthy.",
+        "B. work sequentially.",
+        "C. save energy and time.",
+        "D. keep the laboratory clean."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 7 from the 2024 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2024"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    },
+    {
+      "id": "career_technology_2025_q21",
+      "questionText": "Students have been tasked to prepare metal workpieces for the production of artefacts. To obtain safe edges after cutting and filing, it is appropriate to",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2025",
+      "section": "A",
+      "questionNumber": 21,
+      "options": [
+        "A. brush off metal chips from workpieces.",
+        "B. knurl the sides of workpieces.",
+        "C. oil all sides of workpieces.",
+        "D. remove burrs from workpieces."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 21 from the 2025 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2025"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2025",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    },
+    {
+      "id": "career_technology_2025_q39",
+      "questionText": "A student followed a detailed operational sequence to make a functional wooden try-square. Which operation was performed first?",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2025",
+      "section": "A",
+      "questionNumber": 39,
+      "options": [
+        "A. Cutting and folding the workpiece",
+        "B. Marking and dimensioning the workpiece",
+        "C. Sanding and finishing the workpiece",
+        "D. Shaping the right-angle of the tool"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 39 from the 2025 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2025"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2025",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    }
+  ],
+  "questionCount": 5
+}

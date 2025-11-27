@@ -1,0 +1,823 @@
+{
+  "topic": "Sets",
+  "questions": [
+    {
+      "id": "1roeJY67DlXRLIpkORZu",
+      "year": "2014",
+      "subject": "mathematics",
+      "questionNumber": 1,
+      "questionText": "If set N is a subset of set M, then",
+      "options": [
+        "A. sets M and N have the same number of elements.",
+        "B. some members of set N can be found in set M",
+        "C. no member of set N is in set M.",
+        "D. all members of set N are in set M."
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480369,
+        "_nanoseconds": 94000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2014"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2014_q1_img1.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542201,
+        "_nanoseconds": 564000000
+      }
+    },
+    {
+      "id": "3CWgf11KNrB3pup4nYho",
+      "year": "2018",
+      "subject": "mathematics",
+      "questionNumber": 3,
+      "questionText": "Which of the following is an infinite set?",
+      "options": [
+        "A. {1, 2, ..., 5, 6, 7}",
+        "B. {4, 6, 8, 10, 12}",
+        "C. {2, 3, 5, 7, 11, ...}",
+        "D. {3, 6, ..., 18, 21, ...33, 36}"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480461,
+        "_nanoseconds": 538000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2018"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2018_q3_img3.jpg",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542225,
+        "_nanoseconds": 946000000
+      }
+    },
+    {
+      "id": "8ObzPxSNiZrUwG0ir1Ue",
+      "year": "2008",
+      "subject": "mathematics",
+      "questionNumber": 2,
+      "questionText": "List the members of the set {2 ≤ x ≤ 5}.",
+      "options": [
+        "A. {2, 5}",
+        "B. {2, 3, 4}",
+        "C. {2, 3, 5}",
+        "D. {2, 3, 4, 5}"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480232,
+        "_nanoseconds": 725000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2008"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2008_q2_img2.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542188,
+        "_nanoseconds": 306000000
+      }
+    },
+    {
+      "id": "D5gPrtP9s567HUfKaJX0",
+      "year": "2008",
+      "subject": "mathematics",
+      "questionNumber": 1,
+      "questionText": "M = {1, 2, 3, 4, 5, ..., 20} Q = {3, 4, 5, 6, 7, 8} and R = {2, 3, 5, 7} If Q and R are subsets of M, find Q ∩ R.",
+      "options": [
+        "A. {3, 5}",
+        "B. {5, 7}",
+        "C. {{3, 5, 7}",
+        "D. {2, 3, 5, 7}"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480232,
+        "_nanoseconds": 182000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2008"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2008_q1_img1.png",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542187,
+        "_nanoseconds": 802000000
+      }
+    },
+    {
+      "id": "DWeAxsXE0bnsZhQQzKa5",
+      "year": "2013",
+      "subject": "mathematics",
+      "questionNumber": 40,
+      "questionText": "Two sets whose intersection is an empty set are",
+      "options": [
+        "A. disjoint sets.",
+        "B. equivalent sets.",
+        "C. finite sets.",
+        "D. empty sets."
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480368,
+        "_nanoseconds": 330000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2013"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487095,
+        "_nanoseconds": 754000000
+      }
+    },
+    {
+      "id": "Dv5wB9ByygEg8UMX9bxo",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 2,
+      "questionText": "Find the missing members in the set {5, 10, 15, _ , 25, _ , _ ,40}",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480074,
+        "_nanoseconds": 200000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 20 and 30",
+        "B. 30 and 35",
+        "C. 20 and 35",
+        "D. 20, 30 and 35",
+        "E. 30, 35 and 45"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2001_q2_img2.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542165,
+        "_nanoseconds": 153000000
+      }
+    },
+    {
+      "id": "G6SbeYkrUj9HTjb6gQgE",
+      "year": "1998",
+      "subject": "mathematics",
+      "questionNumber": 1,
+      "questionText": "Two sets which have no common members are known as ......",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480006,
+        "_nanoseconds": 56000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1998"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. equal sets",
+        "B. equivalent sets",
+        "C. empty sets",
+        "D. disjoint sets",
+        "E. union"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1998_q1_img1.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542153,
+        "_nanoseconds": 158000000
+      }
+    },
+    {
+      "id": "IZqJCSCwfh92zvQGEVfq",
+      "year": "2012",
+      "subject": "mathematics",
+      "questionNumber": 18,
+      "questionText": "Find the truth set of 1 4 (x + 3) ≤ 2x - 1.",
+      "options": [
+        "A. {x:x ≤ -3}",
+        "B. {x:x ≤ -1}",
+        "C. {x:x ≥ 1}",
+        "D. {x:x ≥ -3}"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480333,
+        "_nanoseconds": 6000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2012"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 925000000
+      }
+    },
+    {
+      "id": "KzqnxxOP2QP1sgEOaZV9",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 9,
+      "questionText": "Find the truth set of 2x - 4 < 6 + 3x.",
+      "options": [
+        "A. {x : x < 2}",
+        "B. {x : x > -2}",
+        "C. {x : x > -10}",
+        "D. {x : x < 10}"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482498,
+        "_nanoseconds": 559000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 904000000
+      }
+    },
+    {
+      "id": "YAO6YT60F7kHG0I4RLUo",
+      "year": "2016",
+      "subject": "mathematics",
+      "questionNumber": 1,
+      "questionText": "Which of the following is a finite set?",
+      "options": [
+        "A. {2,4,6,8,...}",
+        "B. {1,2,3,4,...}",
+        "C. {...,2,3,5,7}",
+        "D. {3,6,9,12}"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480414,
+        "_nanoseconds": 736000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2016"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2016_q1_img1.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542207,
+        "_nanoseconds": 434000000
+      }
+    },
+    {
+      "id": "YnpSdaY5tERsJXueKEAR",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 22,
+      "questionText": "If x ∈ {2, 3, 4, 5}, find the truth set of 2x + 1 < 8",
+      "options": [
+        "A. {2, 3, 4}",
+        "B. {2, 3}",
+        "C. {3, 4}",
+        "D. {4, 5}"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480289,
+        "_nanoseconds": 399000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487093,
+        "_nanoseconds": 318000000
+      }
+    },
+    {
+      "id": "Zh8nMlKDBIFyzpuEcrUk",
+      "year": "2003",
+      "subject": "mathematics",
+      "questionNumber": 1,
+      "questionText": "P = {3, 6, 9, 12, 15}. Which of the following best describes the set P?",
+      "options": [
+        "A. The set of multiples of 3 less than 18",
+        "B. The set of multiples of 3",
+        "C. The set of odd numbers",
+        "D. The set of odd numbers less than 16"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480118,
+        "_nanoseconds": 616000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2003"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2003_q1_img1.png",
+      "updatedAt": {
+        "_seconds": 1763542172,
+        "_nanoseconds": 49000000
+      }
+    },
+    {
+      "id": "fvAvO5CcgTyRozYkVtYb",
+      "year": "2017",
+      "subject": "mathematics",
+      "questionNumber": 40,
+      "questionText": "Which of the following statements about sets is true?",
+      "options": [
+        "A. Every set is a subset of the null set.",
+        "B. The universal set is the subset of the null set.",
+        "C. The intersection of two sets is always null set.",
+        "D. The universal set is the union of all its subsets."
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480459,
+        "_nanoseconds": 640000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2017"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487099,
+        "_nanoseconds": 25000000
+      }
+    },
+    {
+      "id": "gMLKyxBaSk3goFQBcadt",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 2,
+      "questionText": "If set B is a subset of set A, then",
+      "options": [
+        "A. sets A and B have the same number of elements.",
+        "B. some members of set B can be found in set A.",
+        "C. no member of set B is in set A.",
+        "D. all the members of set B are in set A."
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480278,
+        "_nanoseconds": 177000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2010_q2_img2.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542192,
+        "_nanoseconds": 171000000
+      }
+    },
+    {
+      "id": "lgujdGjVQ19rHaA54SfW",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 1,
+      "questionText": "Which of the following sets is well defined?",
+      "options": [
+        "A. {Man, Kofi, Red, 14}",
+        "B. {Ink, Mango, Green, Nail}",
+        "C. {Car, Road, Glass, Book}",
+        "D. {Seth, Mary, Jacob, Evelyn}"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480277,
+        "_nanoseconds": 484000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2010_q1_img1.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542191,
+        "_nanoseconds": 692000000
+      }
+    },
+    {
+      "id": "ps3agMeJb6ZqWKJSfg7H",
+      "year": "1999",
+      "subject": "mathematics",
+      "questionNumber": 1,
+      "questionText": "Set A is called ...... of set B, when all the numbers of set A are also members of set B.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480028,
+        "_nanoseconds": 490000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1999"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. the universal set",
+        "B. the union set",
+        "C. the null set",
+        "D. a subset",
+        "E. an empty set"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1999_q1_img1.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542157,
+        "_nanoseconds": 180000000
+      }
+    },
+    {
+      "id": "rrX4eHe2AK6M4cq2H7jF",
+      "year": "2019",
+      "subject": "mathematics",
+      "questionNumber": 17,
+      "questionText": "Find the truth set of the inequality 2y + 5 < 4y - 5.",
+      "options": [
+        "A. {y:y > 5}",
+        "B. {y:y < 5}",
+        "C. {y:y > 1}",
+        "D. {y:y > 0}"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480492,
+        "_nanoseconds": 402000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2019"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2019_q17_img17.jpg",
+      "updatedAt": {
+        "_seconds": 1763542247,
+        "_nanoseconds": 780000000
+      }
+    },
+    {
+      "id": "s3QCdezf3eI0quN1wvxT",
+      "year": "2003",
+      "subject": "mathematics",
+      "questionNumber": 3,
+      "questionText": "Find the set of missing numbers on the number line above.",
+      "options": [
+        "A. {-21, -6, 11}",
+        "B. {-21, -10, 11}",
+        "C. {-25, -6, 15}",
+        "D. {-25, -10, 15}"
+      ],
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480119,
+        "_nanoseconds": 725000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2003"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2003_q3_img3.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542173,
+        "_nanoseconds": 31000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2003_q7",
+      "questionText": ")\n\n.\n\nFind p + 2q + r.\n\n(b)\n\n \n\nFind the solution set of the inequality x -",
+      "questionNumber": 7,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2003",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2003 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2003",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "xSsGic5W9pgaDq2PrmRo",
+      "year": "2004",
+      "subject": "mathematics",
+      "questionNumber": 14,
+      "questionText": "Find the  set of 2x + 1 < 5 in the domain {-1, 0, 1, 2, 3}.",
+      "options": [
+        "A. {-1, 1, 3}",
+        "B. {-1, 0, 1}",
+        "C. {-1, 1, 2}",
+        "D. {0, 1, 2}"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480148,
+        "_nanoseconds": 486000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2004"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487088,
+        "_nanoseconds": 551000000
+      }
+    },
+    {
+      "id": "yib78r4i3KKJgYcDMKoe",
+      "year": "2009",
+      "subject": "mathematics",
+      "questionNumber": 6,
+      "questionText": "Which of the following sets is equal to {1, 2, 3, 4}?",
+      "options": [
+        "A. {2, 4, 1, 5}",
+        "B. {2, 1, 4, 3}",
+        "C. {1, 2, 3, 4, ...}",
+        "D. {2, 3, 4, 5, ...}"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480257,
+        "_nanoseconds": 603000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2009"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487092,
+        "_nanoseconds": 558000000
+      }
+    }
+  ],
+  "questionCount": 21
+}

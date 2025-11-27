@@ -1,0 +1,68 @@
+{
+  "generatedAt": "2025-11-27T19:49:12.313Z",
+  "totalQuestions": 1650,
+  "categorizedQuestions": 1186,
+  "unclassifiedQuestions": 464,
+  "topics": [
+    {
+      "name": "Our Physical Environment",
+      "questionCount": 198,
+      "filename": "our_physical_environment.json"
+    },
+    {
+      "name": "Human Environment",
+      "questionCount": 138,
+      "filename": "human_environment.json"
+    },
+    {
+      "name": "Resources & Sustainability",
+      "questionCount": 31,
+      "filename": "resources_sustainability.json"
+    },
+    {
+      "name": "Rule of Law",
+      "questionCount": 153,
+      "filename": "rule_of_law.json"
+    },
+    {
+      "name": "Democracy",
+      "questionCount": 40,
+      "filename": "democracy.json"
+    },
+    {
+      "name": "Local & Central Government",
+      "questionCount": 251,
+      "filename": "local_central_government.json"
+    },
+    {
+      "name": "Population",
+      "questionCount": 42,
+      "filename": "population.json"
+    },
+    {
+      "name": "Production & Entrepreneurship",
+      "questionCount": 184,
+      "filename": "production_entrepreneurship.json"
+    },
+    {
+      "name": "Tourism & Development",
+      "questionCount": 37,
+      "filename": "tourism_development.json"
+    },
+    {
+      "name": "Ancient Ghana",
+      "questionCount": 21,
+      "filename": "ancient_ghana.json"
+    },
+    {
+      "name": "Colonialism & Independence",
+      "questionCount": 69,
+      "filename": "colonialism_independence.json"
+    },
+    {
+      "name": "Post-Independence Ghana",
+      "questionCount": 22,
+      "filename": "postindependence_ghana.json"
+    }
+  ]
+}

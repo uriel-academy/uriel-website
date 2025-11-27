@@ -1,0 +1,64 @@
+{
+  "topics": [
+    {
+      "name": "Drawing",
+      "filename": "drawing.json",
+      "questionCount": 2
+    },
+    {
+      "name": "Painting",
+      "filename": "painting.json",
+      "questionCount": 0
+    },
+    {
+      "name": "Sculpture & Modelling",
+      "filename": "sculpture___modelling.json",
+      "questionCount": 1
+    },
+    {
+      "name": "Music",
+      "filename": "music.json",
+      "questionCount": 2
+    },
+    {
+      "name": "Dance",
+      "filename": "dance.json",
+      "questionCount": 2
+    },
+    {
+      "name": "Drama",
+      "filename": "drama.json",
+      "questionCount": 1
+    },
+    {
+      "name": "Design Process",
+      "filename": "design_process.json",
+      "questionCount": 70
+    },
+    {
+      "name": "Craftwork",
+      "filename": "craftwork.json",
+      "questionCount": 0
+    },
+    {
+      "name": "Digital Art Basics",
+      "filename": "digital_art_basics.json",
+      "questionCount": 2
+    },
+    {
+      "name": "Ghanaian Art Forms",
+      "filename": "ghanaian_art_forms.json",
+      "questionCount": 0
+    },
+    {
+      "name": "African Arts & Culture",
+      "filename": "african_arts___culture.json",
+      "questionCount": 0
+    },
+    {
+      "name": "Critiquing Art",
+      "filename": "critiquing_art.json",
+      "questionCount": 0
+    }
+  ]
+}

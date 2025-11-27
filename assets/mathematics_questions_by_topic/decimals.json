@@ -1,0 +1,977 @@
+{
+  "topic": "Decimals",
+  "questions": [
+    {
+      "id": "4rfca1JHMug5ZhzQcCMX",
+      "year": "2005",
+      "subject": "mathematics",
+      "questionNumber": 26,
+      "questionText": "Evaluate 0.54 x 0.7 9",
+      "options": [
+        "A. 0.0042",
+        "B. 0.042",
+        "C. 0.42",
+        "D. 4.2"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480177,
+        "_nanoseconds": 830000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2005"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487089,
+        "_nanoseconds": 336000000
+      }
+    },
+    {
+      "id": "5Py6D78fy8IS9CfEPBdd",
+      "year": "2013",
+      "subject": "mathematics",
+      "questionNumber": 29,
+      "questionText": "Calculate the simple interest on GH₵450.00 for 2 years at 12% per annum.",
+      "options": [
+        "A. GH₵ 191.00",
+        "B. GH₵ 108.00",
+        "C. GH₵ 54.00",
+        "D. GH₵ 27.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480362,
+        "_nanoseconds": 125000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2013"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487095,
+        "_nanoseconds": 754000000
+      }
+    },
+    {
+      "id": "AYPKgU7gGWJLlbFFZ51A",
+      "year": "1998",
+      "subject": "mathematics",
+      "questionNumber": 8,
+      "questionText": "Evaluate 0.63 x 0.70 9.00",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480009,
+        "_nanoseconds": 962000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1998"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 0.0049",
+        "B. 0.049",
+        "C. 0.49",
+        "D. 4.9",
+        "E. 49"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1998_q8_img8.png",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542156,
+        "_nanoseconds": 695000000
+      }
+    },
+    {
+      "id": "AslD3cFpBZ36uEis0RME",
+      "year": "2011",
+      "subject": "mathematics",
+      "questionNumber": 40,
+      "questionText": "Correct 0.02751 to three decimal places.",
+      "options": [
+        "A. 0.027",
+        "B. 0.028",
+        "C. 0.03",
+        "D. 0.28"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480322,
+        "_nanoseconds": 795000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2011"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 125000000
+      }
+    },
+    {
+      "id": "DZx2I1BW5z0F8Rzi44ah",
+      "year": "2016",
+      "subject": "mathematics",
+      "questionNumber": 11,
+      "questionText": "Correct 5178.3426 to two decimal places.",
+      "options": [
+        "A. 5178.00",
+        "B. 5178.30",
+        "C. 5178.34",
+        "D. 5178.35"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480420,
+        "_nanoseconds": 287000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2016"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487098,
+        "_nanoseconds": 192000000
+      }
+    },
+    {
+      "id": "Gi3ejOPGjqrWRRREu2sD",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 9,
+      "questionText": "Evaluate 0.25 x 0.006, correct to three decimal places",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480078,
+        "_nanoseconds": 116000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 0.001",
+        "B. 0.002",
+        "C. 0.015",
+        "D. 0.075",
+        "E. 0.105"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 59000000
+      }
+    },
+    {
+      "id": "HNrlejt51LsLf4qso3do",
+      "year": "1999",
+      "subject": "mathematics",
+      "questionNumber": 19,
+      "questionText": "A shop increased all its prices by 10%. Calculate the new price for an article which previously sold for ₵7,500.00",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480038,
+        "_nanoseconds": 542000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1999"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵6,750.00",
+        "B. ₵7,575.00",
+        "C. ₵7,800.00",
+        "D. ₵8,250.00",
+        "E. ₵8,350.00"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487084,
+        "_nanoseconds": 387000000
+      }
+    },
+    {
+      "id": "Id9IMBU1sunZUuvmsZhH",
+      "year": "1991",
+      "subject": "mathematics",
+      "questionNumber": 6,
+      "questionText": "Convert 11001two to a decimal numeral.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479557,
+        "_nanoseconds": 35000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1991"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 6",
+        "B. 7",
+        "C. 14",
+        "D. 25",
+        "E. 50"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1991_q6_img6.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542107,
+        "_nanoseconds": 291000000
+      }
+    },
+    {
+      "id": "IoMzr4aMEb5GDlph80QV",
+      "year": "2003",
+      "subject": "mathematics",
+      "questionNumber": 15,
+      "questionText": "Calculate the simple interest on ₵130,000.00 for 2 1 2 years at 12% per annum.",
+      "options": [
+        "A. ₵78,000.00",
+        "B. ₵39,000.00",
+        "C. ₵36,000.00",
+        "D. ₵31,200.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480126,
+        "_nanoseconds": 473000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2003"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487087,
+        "_nanoseconds": 736000000
+      }
+    },
+    {
+      "id": "L9ByZ3Yynr3OELtebnMZ",
+      "year": "2006",
+      "subject": "mathematics",
+      "questionNumber": 34,
+      "questionText": "Mr. Nkrumah saved ₵75,000.00 at a simple interest rate of 20% per annum for 3 years. Calculate the interest he earned on his savings",
+      "options": [
+        "A. ₵15,000.00",
+        "B. ₵30,000.00",
+        "C. ₵45,000.00",
+        "D. ₵60,000.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480205,
+        "_nanoseconds": 218000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2006"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 135000000
+      }
+    },
+    {
+      "id": "RAIa5C7PMKJmELWYhjly",
+      "year": "2006",
+      "subject": "mathematics",
+      "questionNumber": 32,
+      "questionText": "Find the sum of 124.3, 0.275 and 74.06. (Correct your answer to one decimal place)",
+      "options": [
+        "A. 198.6",
+        "B. 198.7",
+        "C. 892.0",
+        "D. 892.4"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480204,
+        "_nanoseconds": 93000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2006"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 135000000
+      }
+    },
+    {
+      "id": "UPItSQZfv6T7HvZd7vdj",
+      "year": "2020",
+      "subject": "mathematics",
+      "questionNumber": 23,
+      "questionText": "A man earned an interest of GH₵ 240.00 in 4 years at 20% per annum simple interest. Calculate the principal",
+      "options": [
+        "A. GH₵ 300.00",
+        "B. GH₵ 450.00",
+        "C. GH₵ 480.00",
+        "D. GH₵ 1,200.00"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480518,
+        "_nanoseconds": 645000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2020"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487101,
+        "_nanoseconds": 629000000
+      }
+    },
+    {
+      "id": "WXB223ceMOURgmI6y5l8",
+      "year": "2017",
+      "subject": "mathematics",
+      "questionNumber": 11,
+      "questionText": "Evaluate .",
+      "options": [
+        "A. 0.012",
+        "B. 0.12",
+        "C. 1.2",
+        "D. 12.0"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480443,
+        "_nanoseconds": 86000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2017"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2017_q11_img11.jpg",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542212,
+        "_nanoseconds": 777000000
+      }
+    },
+    {
+      "id": "XhoaZAcFtI1CZE9KntBJ",
+      "year": "1993",
+      "subject": "mathematics",
+      "questionNumber": 15,
+      "questionText": "Mr. Yevu saved ₵2,500.00 at a simple interest rate of 25% per annum for 4 years. Calculate the interest he earned on his savings.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479605,
+        "_nanoseconds": 193000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1993"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵625.00",
+        "B. ₵2,500.00",
+        "C. ₵3,125.00",
+        "D. ₵5,000.00",
+        "E. ₵10,000.00"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487079,
+        "_nanoseconds": 424000000
+      }
+    },
+    {
+      "id": "Z8DKy0Nn8zf01ggNvrYm",
+      "year": "1998",
+      "subject": "mathematics",
+      "questionNumber": 27,
+      "questionText": "Kofi received ₵800.00 commission on the sales he made on a particular day. This commission is 20% of sales he made. Calculate his total sales for the day.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480020,
+        "_nanoseconds": 541000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1998"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵1,200.00",
+        "B. ₵2,400.00",
+        "C. ₵3,200.00",
+        "D. ₵4,000.00",
+        "E. ₵4,800.00"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487083,
+        "_nanoseconds": 561000000
+      }
+    },
+    {
+      "id": "hcuZz7j2qisdpFaMk5Ap",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 11,
+      "questionText": "Find the value of 124.3 + 0.275 + 74.06, correcting your answer to one decimal place.",
+      "options": [
+        "A. 198.6",
+        "B. 198.7",
+        "C. 892.0",
+        "D. 892.4"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480283,
+        "_nanoseconds": 174000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487093,
+        "_nanoseconds": 318000000
+      }
+    },
+    {
+      "id": "hsoVfanH31m87p5mvkJl",
+      "year": "1990",
+      "subject": "mathematics",
+      "questionNumber": 27,
+      "questionText": "A watchman was paid a basic wage of ₵250.00 a day. If he worked every day in the month, calculate his basic wage for February 1988.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479541,
+        "_nanoseconds": 926000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1990"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵6250.00",
+        "B. ₵7200.00",
+        "C. ₵7250.00",
+        "D. ₵7750.00",
+        "E. ₵8750.00"
+      ],
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487076,
+        "_nanoseconds": 950000000
+      }
+    },
+    {
+      "id": "n6OoZWBNFV1kCK1BaU6q",
+      "year": "2007",
+      "subject": "mathematics",
+      "questionNumber": 21,
+      "questionText": "A man invested ₵ 500,000.00 at 15% simple interest per annum for 2 years. Calculate the amount at the end of the period.",
+      "options": [
+        "A. ₵ 350,000.00",
+        "B. ₵ 650,000.00",
+        "C. ₵ 750,000.00",
+        "D. ₵ 800,000.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480220,
+        "_nanoseconds": 573000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2007"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 958000000
+      }
+    },
+    {
+      "id": "nXZpVAH82TCyoRmWsuKk",
+      "year": "2004",
+      "subject": "mathematics",
+      "questionNumber": 3,
+      "questionText": "Evaluate 0.036 0.02",
+      "options": [
+        "A. 0.018",
+        "B. 0.18",
+        "C. 1.8",
+        "D. 18.0"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480142,
+        "_nanoseconds": 337000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2004"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487088,
+        "_nanoseconds": 551000000
+      }
+    },
+    {
+      "id": "oOZSM4PNhTfi8yqZcZnM",
+      "year": "2013",
+      "subject": "mathematics",
+      "questionNumber": 26,
+      "questionText": "If 4956 × 25 = 123,900, evaluate 495.6 × 2.5 leaving the answer in standard form.",
+      "options": [
+        "A. 1.239 × 102",
+        "B. 1.239 × 103",
+        "C. 1.239 × 104",
+        "D. 1.239 × 105"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480360,
+        "_nanoseconds": 376000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2013"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487095,
+        "_nanoseconds": 754000000
+      }
+    },
+    {
+      "id": "oTCFe2eO20RutzD09xb3",
+      "year": "2006",
+      "subject": "mathematics",
+      "questionNumber": 36,
+      "questionText": "What is the value of the digit 9 in the number 624.93 ?",
+      "options": [
+        "A. 9 hundreds",
+        "B. 9 tens",
+        "C. 9 units",
+        "D. 9 tenths"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480206,
+        "_nanoseconds": 340000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2006"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 135000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1996_q2",
+      "questionText": "(a)\n\n \n\nA man deposited ₵350,000.00 in his account in a bank. A simple interest of 4% per annum was paid on his deposit. Calculate the total amount at the end of 4 years.\n\n(b)\n\n \n\nThe cost of sending a telegram is ₵500 for the first 12 words and ₵25.00 for every extra word.\n\nFind the cost of sending a telegram containing 20 words.",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1996",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1996 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1996",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2025_q0",
+      "questionText": "05\n\n, leaving the answer in standard form.\n\n(b)\n\n \n\nMr Boakye gets 10% commission on type P house he sells and 15% on type Q house.\n\nHe sells 3 type P houses at GH₵ 700,000.00 each and 4 type Q at GH₵ 1,400,000.00 each.\n\nCalculate the total commissions he makes.",
+      "questionNumber": 0,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2025",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2025 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2025",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "w7ams9yAKTniTKYzYLlx",
+      "year": "2003",
+      "subject": "mathematics",
+      "questionNumber": 11,
+      "questionText": "Evaluate 37 100 x 7 10",
+      "options": [
+        "A. 0.259",
+        "B. 2.590",
+        "C. 25.900",
+        "D. 259.000"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480124,
+        "_nanoseconds": 278000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2003"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487087,
+        "_nanoseconds": 736000000
+      }
+    },
+    {
+      "id": "wjes0fOJMkKwf7MqjNJi",
+      "year": "1996",
+      "subject": "mathematics",
+      "questionNumber": 19,
+      "questionText": "If a2 – b2 = (a + b)(a – b), evaluate 9.322 – 0.682",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479970,
+        "_nanoseconds": 928000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1996"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 87.32",
+        "B. 86.4",
+        "C. 74.65",
+        "D. 10.0",
+        "E. 8.64"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 915000000
+      }
+    }
+  ],
+  "questionCount": 25
+}

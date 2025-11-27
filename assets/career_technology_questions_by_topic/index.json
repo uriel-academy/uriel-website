@@ -1,0 +1,79 @@
+{
+  "topics": [
+    {
+      "name": "Personal Competencies",
+      "filename": "personal_competencies.json",
+      "questionCount": 2
+    },
+    {
+      "name": "Career Choices",
+      "filename": "career_choices.json",
+      "questionCount": 5
+    },
+    {
+      "name": "Work Ethics",
+      "filename": "work_ethics.json",
+      "questionCount": 1
+    },
+    {
+      "name": "Tools & Equipment",
+      "filename": "tools___equipment.json",
+      "questionCount": 5
+    },
+    {
+      "name": "Basic Stitches",
+      "filename": "basic_stitches.json",
+      "questionCount": 3
+    },
+    {
+      "name": "Garment Construction",
+      "filename": "garment_construction.json",
+      "questionCount": 5
+    },
+    {
+      "name": "Ingredients & Tools",
+      "filename": "ingredients___tools.json",
+      "questionCount": 1
+    },
+    {
+      "name": "Meal Planning",
+      "filename": "meal_planning.json",
+      "questionCount": 3
+    },
+    {
+      "name": "Food Preparation",
+      "filename": "food_preparation.json",
+      "questionCount": 2
+    },
+    {
+      "name": "Cleaning & Maintenance",
+      "filename": "cleaning___maintenance.json",
+      "questionCount": 1
+    },
+    {
+      "name": "Safety at Home",
+      "filename": "safety_at_home.json",
+      "questionCount": 1
+    },
+    {
+      "name": "Household Resources",
+      "filename": "household_resources.json",
+      "questionCount": 0
+    },
+    {
+      "name": "Simple Projects",
+      "filename": "simple_projects.json",
+      "questionCount": 1
+    },
+    {
+      "name": "Basic Repairs",
+      "filename": "basic_repairs.json",
+      "questionCount": 0
+    },
+    {
+      "name": "Craft Production",
+      "filename": "craft_production.json",
+      "questionCount": 0
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "topic": "Food & Drinks",
+  "questions": [
+    {
+      "id": "theory_asante_twi_2024_q3",
+      "questionText": "Kyerɛ deɛ ɛdidi soɔ yi ase kɔ Asante Twi mu.\n\n(a)\n\n \n\nShe likes washing her clothes on Fridays.\n\n(b)\n\n \n\nMartha came here but did not meet you.\n\n(c)\n\n \n\nWhy is Abiba not coming to eat with us?\n\n(d)\n\n \n\nWe do not like her but we have to contain her.\n\n(e)\n\n \n\nAma cooked the food and Kojo washed the bowls.\n\n(f)\n\n \n\nOur teacher shouted, \"shut up, all of you!\"\n\n(g)\n\n \n\nWhy is Kofi unhappy these days?\n\n(h)\n\n \n\nThe game was lost through carelessness.\n\n(i)\n\n \n\nWe do not want to fail the examination.\n\n(j)\n\n \n\nTell him to see me at once.\n\n  \n\nPART IVLANGUAGE AND USAGE[10 marks]",
+      "questionNumber": 3,
+      "marks": 10,
+      "type": "essay",
+      "subject": "asanteTwi",
+      "subjectDisplay": "Asante Twi",
+      "examType": "bece",
+      "year": "2024",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2024 Asante Twi",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148614,
+        "_nanoseconds": 882000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148614,
+        "_nanoseconds": 882000000
+      }
+    }
+  ],
+  "questionCount": 1
+}

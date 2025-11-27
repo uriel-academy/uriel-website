@@ -1,0 +1,975 @@
+{
+  "topic": "Nouns & Pronouns",
+  "questions": [
+    {
+      "id": "asante_twi_2023_q15",
+      "year": 2023,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Ata anaa Ataa di kusie a, wɔyɛ no deɛn?",
+      "questionNumber": 15,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Wɔhwe no",
+        "B. Wɔdwira no",
+        "C. Wɔpam no firi fie",
+        "D. Wɔdi no atɛm"
+      ],
+      "correctAnswer": "B. Wɔdwira no",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2023_q16",
+      "year": 2023,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Sɛ yɛka sɛ obi aka ntam a, ɛkyerɛ sɛ waka ɔman, kuro anaa ekuo bi ...",
+      "questionNumber": 16,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Awerɛhosɛm",
+        "B. Anigyesɛm",
+        "C. Nokwasɛm",
+        "D. Akokrokosɛm"
+      ],
+      "correctAnswer": "A. Awerɛhosɛm",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2023_q17",
+      "year": 2023,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Sɛ obi ka ntam a, ...",
+      "questionNumber": 17,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Wɔto no kwagyan",
+        "B. Wɔbo n'abaso",
+        "C. Wɔma no kyerɛ aseɛ",
+        "D. Wɔkye no dedua"
+      ],
+      "correctAnswer": "D. Wɔkye no dedua",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2023_q18",
+      "year": 2023,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Toa ɛbɛ yi so, Abɔfra su mpanin su a, ...",
+      "questionNumber": 18,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. ɔtua ka kɛseɛ",
+        "B. ɔnsesa nkonnwa",
+        "C. ɔtua ayiase ka",
+        "D. Wɔbɔ no nsawa"
+      ],
+      "correctAnswer": "C. ɔtua ayiase ka",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2023_q20",
+      "year": 2023,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Tɔntɔnte, Tɔntɔnte, yɛrenom nsa no, na ...",
+      "questionNumber": 20,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Yɛredi nkummɔ",
+        "B. Yɛrebɔ ka",
+        "C. Yɛreka afisɛm",
+        "D. Yɛrɛfa adwene"
+      ],
+      "correctAnswer": "D. Yɛrɛfa adwene",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2023_q21",
+      "year": 2023,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Sɛ wɔwo obi Efiada na ɔyɛ ɔbarima a, wɔbɔ no mmrane sɔ ...",
+      "questionNumber": 21,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Asimpie Asare",
+        "B. Bodua",
+        "C. Ɔteanankaduro",
+        "D. Okyini"
+      ],
+      "correctAnswer": "D. Okyini",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2023_q24",
+      "year": 2023,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Sɛ obi de koogyan bɔ ne ti anaa ne nsa a, na ɛkyerɛ sɛ ...",
+      "questionNumber": 24,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. ɔwɔ anigyeɛ mu",
+        "B. N'agyapadeɛ aka ne nsa",
+        "C. ɔwɔ awerɛhoɔ mu",
+        "D. Ne yere awo asomdwoeɛ mu"
+      ],
+      "correctAnswer": "C. ɔwɔ awerɛhoɔ mu",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2023_q25",
+      "year": 2023,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Sɛ ɔkanni ani gye anaa ɔdi nkonim a, ɔfira ntoma ...",
+      "questionNumber": 25,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Akokɔsradeɛ",
+        "B. Kɔkɔɔ",
+        "C. Tuntum",
+        "D. Fitaa"
+      ],
+      "correctAnswer": "D. Fitaa",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2023_q27",
+      "year": 2023,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Amponyinamoa yɛ deɛn?",
+      "questionNumber": 27,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Asaase Yaa mmrane",
+        "B. Ampoma mmrane",
+        "C. Ɔbonsom bi din",
+        "D. Aboa kɛseɛ bi din"
+      ],
+      "correctAnswer": "A. Asaase Yaa mmrane",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2023_q28",
+      "year": 2023,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Ɔsadwom ho mfasoɔ ne sɔ, ...",
+      "questionNumber": 28,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. ɛyi hu fi akofoɔ no mu",
+        "B. ɛmma kuromma nna",
+        "C. ɛboa adwumayɛ",
+        "D. ɛma ɔsa no sɔ"
+      ],
+      "correctAnswer": "A. ɛyi hu fi akofoɔ no mu",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2023_q29",
+      "year": 2023,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Kuro bɛn so na Denkyira hene Ntim Gyakari dii nkuguo?",
+      "questionNumber": 29,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Kumawu",
+        "B. Kumasi",
+        "C. Asantemanso",
+        "D. Feyiase"
+      ],
+      "correctAnswer": "D. Feyiase",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2023_q30",
+      "year": 2023,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Agya rekɔ no, ogyaa me adeɛ bi, sɛ ɛsi hɔ a, na anane, sɛ ɛka egya pɛ na ada. Ɛyɛ deɛn?",
+      "questionNumber": 30,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Nkuto",
+        "B. Adwengo",
+        "C. Nkwan",
+        "D. Kosua"
+      ],
+      "correctAnswer": "D. Kosua",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2023_q31",
+      "year": 2023,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Agya adeɛ bi wɔ hɔ, sɛ ɛtɔ fam a, nnipa baanu ntumi mfa gye sɛ onipa baako pɛ. Ɛyɛ deɛn?",
+      "questionNumber": 31,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Sika",
+        "B. Sekan",
+        "C. Paneɛ",
+        "D. Dua pa"
+      ],
+      "correctAnswer": "C. Paneɛ",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2023_q33",
+      "year": 2023,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Sɛ yɛka sɛ obi afa owufoɔ bi toa a, na ɛkyerɛ sɛ ...",
+      "questionNumber": 33,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. wasie owufoɔ no",
+        "B. wafa owufoɔ no afuo",
+        "C. wadi owufoɔ no adeɛ",
+        "D. waware owufoɔ no yere"
+      ],
+      "correctAnswer": "C. wadi owufoɔ no adeɛ",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2023_q35",
+      "year": 2023,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Kwaeɛ mu adwumayɔ, merentumi borɔdeba ... yɛ",
+      "questionNumber": 35,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Akɔmfodwom",
+        "B. Adwumayɛdwom",
+        "C. Abagyegyedwom",
+        "D. Kwadwom"
+      ],
+      "correctAnswer": "B. Adwumayɛdwom",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2023_q36",
+      "year": 2023,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Sisire mbom, tabon mbom ... yɛ dwom a ɛfa adwuma bɛn ho?",
+      "questionNumber": 36,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Kuadwuma",
+        "B. Ahayɔ",
+        "C. Namyie",
+        "D. Abɛtwa"
+      ],
+      "correctAnswer": "C. Namyie",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2023_q37",
+      "year": 2023,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Saa dwom yi fa ɔtomfo ho.",
+      "questionNumber": 37,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Adonko fa no kɔ ooo!",
+        "B. Ɔrebɔ ne dade so kyan, ...",
+        "C. Sisire mbom, tabon mbom",
+        "D. Kro hin kro ..."
+      ],
+      "correctAnswer": "B. Ɔrebɔ ne dade so kyan, ...",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2023_q38",
+      "year": 2023,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Abagyegye nnwom boa ma ...",
+      "questionNumber": 38,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. mmɔfra nte kɔm",
+        "B. awofoɔ didi yie",
+        "C. mmɔfra ani agye",
+        "D. awofoɔ da ntɛm"
+      ],
+      "correctAnswer": "C. mmɔfra ani agye",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2023_q39",
+      "year": 2023,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Nnafua sɛn na ɛwɔ bosome Ɔbɛnem mu?",
+      "questionNumber": 39,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Aduonu-nwɔtwe",
+        "B. Aduonu-nkron",
+        "C. Aduasa",
+        "D. Aduasa-baako"
+      ],
+      "correctAnswer": "D. Aduasa-baako",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2023_q40",
+      "year": 2023,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Bosome a ɛtwa toɔ wɔ afe mu afe mu ne ...",
+      "questionNumber": 40,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Ɔpɛnimaa",
+        "B. Ɔpɛpɔn",
+        "C. Oforisua",
+        "D. Ɔsannaa"
+      ],
+      "correctAnswer": "A. Ɔpɛnimaa",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2023_q8",
+      "year": 2023,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Akuapemfoɔ afahyɛ titire ne ...",
+      "questionNumber": 8,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Odwira",
+        "B. Adɛɛ",
+        "C. Akwammɔ",
+        "D. Kundum"
+      ],
+      "correctAnswer": "A. Odwira",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2024_q1",
+      "year": 2024,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Sɛ wɔwo obi Fiada a ɛyɛ dabɔne a, wɔbefrɛ no sɛn?",
+      "questionNumber": 1,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Kofi Firi",
+        "B. Kofi Fofie",
+        "C. Kofi Fori",
+        "D. Kofi Fɔdwoɔ"
+      ],
+      "correctAnswer": "B. Kofi Fofie",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2024_q11",
+      "year": 2024,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Akanman mu no, adɛn nti na obi rewu a, wɔgu n'anom nsuo? Wɔgye di sɛ ...",
+      "questionNumber": 11,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. osukɔn de no",
+        "B. ɔrekɔforɔ bepɔ enti ɔbia nsuo",
+        "C. ɔrennom nsuo bio",
+        "D. ne ho nsuo nyinaa asa."
+      ],
+      "correctAnswer": "B. ɔrekɔforɔ bepɔ enti ɔbia nsuo",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2024_q12",
+      "year": 2024,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Kukuo a okunafoɔ bɔ no kurotia no kyerɛ sɛn?",
+      "questionNumber": 12,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Ɔmpɛ kukuo no bio.",
+        "B. Ɔne ne kunu adi nte emu.",
+        "C. Ɔrennidi bio.",
+        "D. Ne bo afu ne kunu nɔ."
+      ],
+      "correctAnswer": "B. Ɔne ne kunu adi nte emu.",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2024_q13",
+      "year": 2024,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Hwan ne wo wɔfa? Obi a ɔyɛ wo ...",
+      "questionNumber": 13,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. maame nuabarima",
+        "B. nana nuabarima",
+        "C. papa nuabarima",
+        "D. sewaa nuabarima"
+      ],
+      "correctAnswer": "A. maame nuabarima",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2024_q15",
+      "year": 2024,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Sɛ ɔbaa ware a, ne kunu nuabarima mma yɛ ne deɛn?",
+      "questionNumber": 15,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Koramma",
+        "B. Mma",
+        "C. Mmanoma",
+        "D. Nananom"
+      ],
+      "correctAnswer": "B. Mma",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2024_q17",
+      "year": 2024,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Sɛ abɔfra bi de Asaaseasa a, na aseɛ ne sɛn?",
+      "questionNumber": 17,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Ne maame di awommawuo.",
+        "B. Ɔnyɛ Ɔkanni ba.",
+        "C. Ɔrennya baabi nteni wɔ wiase.",
+        "D. Ɔyɛ ɔdehyeɛ."
+      ],
+      "correctAnswer": "A. Ne maame di awommawuo.",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2024_q18",
+      "year": 2024,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Sɛ ɔbaa bi wo ntaa na sɛ ɛyɛ ɔbaa ne ɔbarima a, yɛfrɛ wɔn sɛn?",
+      "questionNumber": 18,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Ahum ne Aham",
+        "B. Ntaten",
+        "C. Sika ne Ahweneɛ",
+        "D. Takyi ne Kuro"
+      ],
+      "correctAnswer": "D. Takyi ne Kuro",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2024_q2",
+      "year": 2024,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Adɛn nti na abɔfra di nnawɔtwe ansa na wɔato ne din? Wɔgye di sɛ saa berɛ no na ...",
+      "questionNumber": 2,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. ɔtumi didi",
+        "B. wahunu ne maame yie",
+        "C. wanyini",
+        "D. waba asetena"
+      ],
+      "correctAnswer": "D. waba asetena",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2024_q27",
+      "year": 2024,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Toa ɛbɛ yi so; abɔfra bɔ nwa na ...",
+      "questionNumber": 27,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. ɔmmɔ akyekyedeɛ",
+        "B. ɔnkum ɔsono",
+        "C. ɔnkyere kusie",
+        "D. ɔnsoa kɔkɔte"
+      ],
+      "correctAnswer": "A. ɔmmɔ akyekyedeɛ",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2024_q29",
+      "year": 2024,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Dwuma bɛn na mmɛ tumi di wɔ ɔkasa mu?",
+      "questionNumber": 29,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Ɛda kasa adi.",
+        "B. Ɛkyerɛ kasa pa.",
+        "C. Ɛma kasa yɛ dɛ.",
+        "D. Ɛma kasa yɛ tenten."
+      ],
+      "correctAnswer": "C. Ɛma kasa yɛ dɛ.",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2024_q3",
+      "year": 2024,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Edin yi mu deɛ ɛwɔ he na ɛyɛ kradin?",
+      "questionNumber": 3,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Agyei",
+        "B. Badu",
+        "C. Dɔnkɔ",
+        "D. Kwabena"
+      ],
+      "correctAnswer": "D. Kwabena",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2024_q30",
+      "year": 2024,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Adɛn nti na sɛ obi reyɛ adwuma a, ɔto dwom? Sɛdeɛ ...",
+      "questionNumber": 30,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. nkurɔfoɔ bɛte ne nka",
+        "B. nnipa bɛhunu sɛ ɔwɔ hɔ",
+        "C. Ɔbɛnya aboafoɔ",
+        "D. ɔrente brɛ"
+      ],
+      "correctAnswer": "D. ɔrente brɛ",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2024_q4",
+      "year": 2024,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Nnoɔma a ɛdidi soɔ yi mu deɛ ɛwɔ he na sɛ abarimaa duru ne mpanin mfeɛ so a, wɔde ma no?",
+      "questionNumber": 4,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Asɔ ne etuo",
+        "B. Sekan ne asɔ",
+        "C. Sekan ne kɛntɛn",
+        "D. Sekan ne etuo"
+      ],
+      "correctAnswer": "D. Sekan ne etuo",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2024_q5",
+      "year": 2024,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Nnoɔma a wɔde ma abarimaa a waduru ne mpanin mfeɛ so no, ɛdeɛn na ɛsɛ sɛ ɔde yɛ?",
+      "questionNumber": 5,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Ɔbɛtɔn.",
+        "B. Ɔde bɛbɔ bra.",
+        "C. Ɔde bɛkyɛ ne nnamfonom.",
+        "D. Ɔde bɛma ne yere."
+      ],
+      "correctAnswer": "B. Ɔde bɛbɔ bra.",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2024_q7",
+      "year": 2024,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Adɛn nti na ɛnsɛ sɛ asakyima no de ne se ka kosua a wɔde bɛka n'ano no mu? Sɛ ɔka mu a, ...",
+      "questionNumber": 7,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. ɛbɛma wayare",
+        "B. ɛde mmusuo bɛba no so",
+        "C. ɔrennya kunu pa",
+        "D. ɔrentena ase nkyɛ"
+      ],
+      "correctAnswer": "B. ɛde mmusuo bɛba no so",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "theory_asante_twi_2024_q4",
+      "questionText": "Yiyi nsɛmmisa a ɛwɔ ɔfa ha nyinaa ano.\n\nNsɛmmisa (a) - (g) mu no, kyerɛ asɛmfuakuo a nsɛmfua a wɔasan aseɛ no firi mu.\n\n(a)\n\n \n\nMansa maa no sika.\n\n(b)\n\n \n\nYɛbɛyɛ adwuma no abom.\n\n(c)\n\n \n\nNanabarima annye me frɛ no so.\n\n(d)\n\n \n\nWɔkyeree ɔbaa daadaafoɔ no nnɛ.\n\n(e)\n\n \n\nYɛn awofoɔ bɛduruu dwoodwoo nnora.\n\n(f)\n\n \n\nM'awofoɔ maa me tɛlɛvihyen.\n\n(g)\n\n \n\nƆbɛware wɔ yɛn akuraa hɔ saa bosome yi.\n\nNsɛmmisa (h) - (j) mu no, fa atwerɛ mu agyinahyɛdeɛ a ɛfata wie ɔkasamu biara.\n\n(h)\n\n \n\nBerɛ bɛn na Abankwa firii fie\n\n(i)\n\n \n\nYɛtɔɔ amango aprɛ ne ankaa.\n\n(j)\n\n \n\nMo nyinaa nyɛ komm",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "asanteTwi",
+      "subjectDisplay": "Asante Twi",
+      "examType": "bece",
+      "year": "2024",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2024 Asante Twi",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148614,
+        "_nanoseconds": 882000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148614,
+        "_nanoseconds": 882000000
+      }
+    }
+  ],
+  "questionCount": 37
+}

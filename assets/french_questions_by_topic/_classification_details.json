@@ -1,0 +1,633 @@
+{
+  "totalQuestions": 125,
+  "categorizedQuestions": 118,
+  "unclassifiedQuestions": 7,
+  "classificationRate": "94.4",
+  "classifications": [
+    {
+      "questionId": "theory_french_1990_q1",
+      "topic": "Vocabulary Themes",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1990_q16",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1990_q21",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1990_q28",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1990_q33",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1990_q37",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1991_q1",
+      "topic": "Vocabulary Themes",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1991_q16",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1991_q26",
+      "topic": "Vocabulary Themes",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1991_q31",
+      "topic": "Everyday Conversations",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1991_q36",
+      "topic": "Structure of Sentences",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1992_q1",
+      "topic": "Vocabulary Themes",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1992_q16",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1992_q31",
+      "topic": "Vocabulary Themes",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1992_q36",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1993_q1",
+      "topic": "Everyday Conversations",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1993_q16",
+      "topic": "Structure of Sentences",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1993_q26",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1993_q31",
+      "topic": "Everyday Conversations",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1993_q36",
+      "topic": "Vocabulary Themes",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1994_q1",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1994_q16",
+      "topic": "Messages & Emails",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1994_q26",
+      "topic": "Vocabulary Themes",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1994_q31",
+      "topic": "Everyday Conversations",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1994_q36",
+      "topic": "Structure of Sentences",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1995_q1",
+      "topic": "Vocabulary Themes",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1995_q16",
+      "topic": "Everyday Conversations",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1995_q21",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1995_q26",
+      "topic": "Everyday Conversations",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1995_q31",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1995_q36",
+      "topic": "Structure of Sentences",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1996_q1",
+      "topic": "Vocabulary Themes",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1996_q16",
+      "topic": "Everyday Conversations",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1996_q21",
+      "topic": "Vocabulary Themes",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1996_q31",
+      "topic": "Structure of Sentences",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1996_q36",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1997_q1",
+      "topic": "Vocabulary Themes",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1997_q16",
+      "topic": "Vocabulary Themes",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1997_q21",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1997_q26",
+      "topic": "Vocabulary Themes",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1997_q31",
+      "topic": "Vocabulary Themes",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1998_q1",
+      "topic": "Vocabulary Themes",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1998_q21",
+      "topic": "Everyday Conversations",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1998_q31",
+      "topic": "Structure of Sentences",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1998_q36",
+      "topic": "Vocabulary Themes",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1999_q1",
+      "topic": "Vocabulary Themes",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1999_q16",
+      "topic": "Messages & Emails",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1999_q26",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_1999_q31",
+      "topic": "Everyday Conversations",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q1",
+      "topic": "Vocabulary Themes",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q10",
+      "topic": "Vocabulary Themes",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q11",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q12",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q13",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q14",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q15",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q16",
+      "topic": "Structure of Sentences",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q17",
+      "topic": "Structure of Sentences",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q18",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q19",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q2",
+      "topic": "Vocabulary Themes",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q20",
+      "topic": "Structure of Sentences",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q21",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q22",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q23",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q24",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q25",
+      "topic": "Everyday Conversations",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q26",
+      "topic": "Verbs & Conjugation",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q27",
+      "topic": "unclassified",
+      "reason": "Insufficient keyword matches"
+    },
+    {
+      "questionId": "theory_french_2000_q28",
+      "topic": "unclassified",
+      "reason": "Insufficient keyword matches"
+    },
+    {
+      "questionId": "theory_french_2000_q29",
+      "topic": "Vocabulary Themes",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q3",
+      "topic": "unclassified",
+      "reason": "Insufficient keyword matches"
+    },
+    {
+      "questionId": "theory_french_2000_q30",
+      "topic": "unclassified",
+      "reason": "Insufficient keyword matches"
+    },
+    {
+      "questionId": "theory_french_2000_q31",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q32",
+      "topic": "Vocabulary Themes",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q33",
+      "topic": "unclassified",
+      "reason": "Insufficient keyword matches"
+    },
+    {
+      "questionId": "theory_french_2000_q34",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q35",
+      "topic": "unclassified",
+      "reason": "Insufficient keyword matches"
+    },
+    {
+      "questionId": "theory_french_2000_q36",
+      "topic": "Verbs & Conjugation",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q37",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q38",
+      "topic": "Verbs & Conjugation",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q39",
+      "topic": "unclassified",
+      "reason": "Insufficient keyword matches"
+    },
+    {
+      "questionId": "theory_french_2000_q4",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q40",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q5",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q6",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q7",
+      "topic": "Vocabulary Themes",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q8",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2000_q9",
+      "topic": "Structure of Sentences",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2001_q1",
+      "topic": "Everyday Conversations",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2001_q2",
+      "topic": "Everyday Conversations",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2001_q45",
+      "topic": "Structure of Sentences",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2002_q1",
+      "topic": "Everyday Conversations",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2002_q2",
+      "topic": "Structure of Sentences",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2002_q45",
+      "topic": "Structure of Sentences",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2003_q1",
+      "topic": "Everyday Conversations",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2003_q45",
+      "topic": "Structure of Sentences",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2004_q1",
+      "topic": "Everyday Conversations",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2004_q45",
+      "topic": "Structure of Sentences",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2005_q1",
+      "topic": "Vocabulary Themes",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2005_q45",
+      "topic": "Structure of Sentences",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2006_q1",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2006_q45",
+      "topic": "Structure of Sentences",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2007_q1",
+      "topic": "Nouns, Gender & Articles",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2007_q45",
+      "topic": "Structure of Sentences",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2009_q1",
+      "topic": "Everyday Conversations",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2009_q45",
+      "topic": "Structure of Sentences",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2010_q1",
+      "topic": "Everyday Conversations",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2010_q45",
+      "topic": "Structure of Sentences",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2011_q1",
+      "topic": "Everyday Conversations",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2011_q45",
+      "topic": "Structure of Sentences",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2012_q1",
+      "topic": "Everyday Conversations",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2012_q45",
+      "topic": "Structure of Sentences",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2013_q1",
+      "topic": "Everyday Conversations",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2013_q45",
+      "topic": "Structure of Sentences",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2014_q1",
+      "topic": "Everyday Conversations",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2014_q45",
+      "topic": "Structure of Sentences",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2015_q1",
+      "topic": "Everyday Conversations",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2015_q45",
+      "topic": "Structure of Sentences",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2016_q1",
+      "topic": "Everyday Conversations",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2024_q1",
+      "topic": "Messages & Emails",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2024_q2",
+      "topic": "Everyday Conversations",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2025_q1",
+      "topic": "Messages & Emails",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2025_q2",
+      "topic": "Messages & Emails",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_french_2025_q45",
+      "topic": "Structure of Sentences",
+      "reason": "Intelligent keyword matching with scoring"
+    }
+  ]
+}

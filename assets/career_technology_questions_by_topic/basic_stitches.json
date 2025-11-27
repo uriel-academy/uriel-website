@@ -1,0 +1,108 @@
+{
+  "topic": "Basic Stitches",
+  "questions": [
+    {
+      "id": "career_technology_2025_q11",
+      "questionText": "The best tool Kofi can use to unpick unwanted stitches on a pair of shorts he bought from the supermarket is",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2025",
+      "section": "A",
+      "questionNumber": 11,
+      "options": [
+        "A. safety pin.",
+        "B. dressmakers pin.",
+        "C. seam ripper.",
+        "D. stiletto."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 11 from the 2025 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2025"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2025",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    },
+    {
+      "id": "career_technology_2025_q12",
+      "questionText": "Mary is sewing a petticoat for her sister and cannot afford lace trimming. The most appropriate decorative stitch she can use for the hem is",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2025",
+      "section": "A",
+      "questionNumber": 12,
+      "options": [
+        "A. French knots.",
+        "B. satin stitches.",
+        "C. lazy daisy stitches.",
+        "D. chain stitches."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 12 from the 2025 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2025"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2025",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    },
+    {
+      "id": "career_technology_2025_q9",
+      "questionText": "When sewing a shirt for Sara, in order to obtain his shoulder length, measure",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2025",
+      "section": "A",
+      "questionNumber": 9,
+      "options": [
+        "A. from base of neck to top of arm.",
+        "B. across the shoulder between sleeve seams.",
+        "C. across back and divide by two.",
+        "D. around the neck and divide by three."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 9 from the 2025 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2025"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2025",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    }
+  ],
+  "questionCount": 3
+}

@@ -1,0 +1,4407 @@
+{
+  "topic": "Measurement",
+  "questions": [
+    {
+      "id": "2BZ5yAv67udjNszpLCdc",
+      "year": "1993",
+      "subject": "mathematics",
+      "questionNumber": 35,
+      "questionText": "The area of circle, centre O, is 120 cm2. Angle AOB is 60°. Find the area of sector AOB.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479615,
+        "_nanoseconds": 758000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1993"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 2 cm2",
+        "B. 3 cm2",
+        "C. 6 cm2",
+        "D. 20 cm2",
+        "E. 60 cm2"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487079,
+        "_nanoseconds": 424000000
+      }
+    },
+    {
+      "id": "3W9Z7XjurpuriotMg1W8",
+      "year": "1997",
+      "subject": "mathematics",
+      "questionNumber": 34,
+      "questionText": "The diameter of a circular tray is 28 cm. Find the area of the tray. [Take π = 22 7 ]",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480002,
+        "_nanoseconds": 8000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1997"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 44 cm2",
+        "B. 88 cm2",
+        "C. 154 cm2",
+        "D. 616 cm2",
+        "E. 2464 cm2"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487082,
+        "_nanoseconds": 727000000
+      }
+    },
+    {
+      "id": "3WmQ8KZF9zcKY1ANoUu6",
+      "year": "2018",
+      "subject": "mathematics",
+      "questionNumber": 23,
+      "questionText": "Not drawn to scale In the diagram, PQR is a right-angled triangle with |PR| = 15 cm and |QR| = 12 cm. Find the length PQ.",
+      "options": [
+        "A. 3.0 cm",
+        "B. 8.0 cm",
+        "C. 9.0 cm",
+        "D. 19.2 cm"
+      ],
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480472,
+        "_nanoseconds": 921000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2018"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2018_q23_img23.jpg",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542235,
+        "_nanoseconds": 780000000
+      }
+    },
+    {
+      "id": "3bXreTCjkNv96t2YvDYs",
+      "year": "1997",
+      "subject": "mathematics",
+      "questionNumber": 31,
+      "questionText": "If 22% of a rope is 55 m long, find the full length of the rope.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480000,
+        "_nanoseconds": 332000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1997"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 12.1 m",
+        "B. 25 m",
+        "C. 121 m",
+        "D. 250 m",
+        "E. 2500 m"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487082,
+        "_nanoseconds": 727000000
+      }
+    },
+    {
+      "id": "4Da8JlnqZUW5ijTJHgCa",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 33,
+      "questionText": "Find the area of the parallelogram PQRS",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479593,
+        "_nanoseconds": 414000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 20 cm2",
+        "B. 21 cm2",
+        "C. 48 cm2",
+        "D. 60 cm2",
+        "E. 240 cm2"
+      ],
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487078,
+        "_nanoseconds": 582000000
+      }
+    },
+    {
+      "id": "50JcSmdUyAOpSU8zr91U",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "A rectangular box has length 20 cm, width 6 cm and height 4 cm. Find how many cubes of size 2 cm that will fit into the box.",
+      "options": [
+        "A. 120",
+        "B. 60",
+        "C. 30",
+        "D. 15"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480292,
+        "_nanoseconds": 813000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487093,
+        "_nanoseconds": 318000000
+      }
+    },
+    {
+      "id": "8dXK0qU2RRqjcQgLU9vb",
+      "year": "2002",
+      "subject": "mathematics",
+      "questionNumber": 27,
+      "questionText": "PQR is a right-angled triangle. The area of the triangle is 6 cm2 and |QR| = 3 cm. Find |PR|.",
+      "options": [
+        "A. 2 cm",
+        "B. 3 cm",
+        "C. 5 cm",
+        "D. 6 cm"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480110,
+        "_nanoseconds": 668000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2002"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 895000000
+      }
+    },
+    {
+      "id": "9XCQgJAy1lzEfKV5jZ9t",
+      "year": "2021",
+      "subject": "mathematics",
+      "questionNumber": 12,
+      "questionText": "The area of a rectangle is 18 cm2. If one of its sides is 2cm long, find its perimeter.",
+      "options": [
+        "A. 18 cm",
+        "B. 20 cm",
+        "C. 22 cm",
+        "D. 36 cm"
+      ],
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480535,
+        "_nanoseconds": 210000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2021"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2021_q12_img12.jpg",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542261,
+        "_nanoseconds": 76000000
+      }
+    },
+    {
+      "id": "ASE9lnFDA4wg1mq7IqtI",
+      "year": "2015",
+      "subject": "mathematics",
+      "questionNumber": 38,
+      "questionText": "The hypotenuse and a side of a right-angled triangle are 13 cm and 5 cm respectively. Find the length of the third side.",
+      "options": [
+        "A. 8 cm",
+        "B. 9 cm",
+        "C. 12 cm",
+        "D. 17 cm"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480412,
+        "_nanoseconds": 842000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2015"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487097,
+        "_nanoseconds": 370000000
+      }
+    },
+    {
+      "id": "AxG7vmFDvmaCpN76q2lM",
+      "year": "1994",
+      "subject": "mathematics",
+      "questionNumber": 23,
+      "questionText": "In the diagram above, A is the centre of the circle with radius 20 cm. If angle BAC is 90°, find the perimeter of the shaded sector. [Take π = 22 7 ]",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479630,
+        "_nanoseconds": 961000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1994"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 31.4 cm",
+        "B. 31.8 cm",
+        "C. 40.0 cm",
+        "D. 51.4 cm",
+        "E. 71.4 cm"
+      ],
+      "explanation": "",
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487080,
+        "_nanoseconds": 244000000
+      }
+    },
+    {
+      "id": "BJ2Vtdy9RDdy72JomTi5",
+      "year": "2002",
+      "subject": "mathematics",
+      "questionNumber": 40,
+      "questionText": "The circumference of a circular track is 15.4 m. Find the diameter of the track. [Take π = 22 7 ]",
+      "options": [
+        "A. 4.9 m",
+        "B. 22 m",
+        "C. 24 m",
+        "D. 24.5 m"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480117,
+        "_nanoseconds": 902000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2002"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 895000000
+      }
+    },
+    {
+      "id": "BNTuKBl1fb3BEW3Y2TgN",
+      "year": "2011",
+      "subject": "mathematics",
+      "questionNumber": 26,
+      "questionText": "Find the volume of a cube of side 5 cm.",
+      "options": [
+        "A. 10 cm3",
+        "B. 15 cm3",
+        "C. 25 cm3",
+        "D. 125 cm3"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480314,
+        "_nanoseconds": 590000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2011"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 125000000
+      }
+    },
+    {
+      "id": "CMXB3mCxTT15grEUEcla",
+      "year": "2012",
+      "subject": "mathematics",
+      "questionNumber": 19,
+      "questionText": "The perimeter of the figure below is 71 cm. Find the diameter of the semi-circumference portion. [Take π = 22 7 ]",
+      "options": [
+        "A. 1.0 cm",
+        "B. 3.5 cm",
+        "C. 7.0 cm",
+        "D. 14.0 cm"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480333,
+        "_nanoseconds": 549000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2012"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 925000000
+      }
+    },
+    {
+      "id": "DpZeSRqLa39EZhkDXzgb",
+      "year": "2013",
+      "subject": "mathematics",
+      "questionNumber": 30,
+      "questionText": "If 15% of the length of a rope is 75 cm, find half of the length of the rope.",
+      "options": [
+        "A. 500 cm",
+        "B. 250 cm",
+        "C. 150 cm",
+        "D. 100 cm"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480362,
+        "_nanoseconds": 732000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2013"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487095,
+        "_nanoseconds": 754000000
+      }
+    },
+    {
+      "id": "ElpUbNBNXbMaNWHYZHU7",
+      "year": "2012",
+      "subject": "mathematics",
+      "questionNumber": 10,
+      "questionText": "Triangle ABC is a right-angled triangle. Find the length of AC.",
+      "options": [
+        "A. 1 cm",
+        "B. 5 cm",
+        "C. 7 cm",
+        "D. 12 cm"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480328,
+        "_nanoseconds": 545000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2012"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 925000000
+      }
+    },
+    {
+      "id": "FyJ6U4r6dZop8s2D1umN",
+      "year": "1991",
+      "subject": "mathematics",
+      "questionNumber": 39,
+      "questionText": "If 22% of the length of a rope is 55 cm, find the full length of the rope.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479575,
+        "_nanoseconds": 337000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1991"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 12.1 cm",
+        "B. 25 cm",
+        "C. 121 cm",
+        "D. 250 cm",
+        "E. 2500 cm"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487077,
+        "_nanoseconds": 776000000
+      }
+    },
+    {
+      "id": "GaDfPd8TfxMity58b0bI",
+      "year": "2022",
+      "subject": "mathematics",
+      "examType": "bece",
+      "questionNumber": 40,
+      "questionText": "The volume of a cylinder is 40Π cm3. If the height of the cylinder is 10 cm, find the base radius",
+      "options": [
+        "A. 1 cm",
+        "B. 4 cm",
+        "C. 2 cm",
+        "D. 3 cm"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "type": "multipleChoice",
+      "section": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2022"
+      ],
+      "createdBy": "system_import_v2",
+      "isActive": true,
+      "createdAt": {
+        "_seconds": 1763485291,
+        "_nanoseconds": 782000000
+      },
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487103,
+        "_nanoseconds": 234000000
+      }
+    },
+    {
+      "id": "GcnLROtMPwBhTF46X2WO",
+      "year": "2019",
+      "subject": "mathematics",
+      "questionNumber": 14,
+      "questionText": "The two sides of a parallelogram are 4.8 m and 7.2 m long. Find its perimeter.",
+      "options": [
+        "A. 48.0 m",
+        "B. 34.6 m",
+        "C. 24.0 m",
+        "D. 17.3 m"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480490,
+        "_nanoseconds": 730000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2019"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2019_q14_img14.jpg",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542246,
+        "_nanoseconds": 268000000
+      }
+    },
+    {
+      "id": "GpdEfR29tZGBnajMEfoo",
+      "year": "2007",
+      "subject": "mathematics",
+      "questionNumber": 25,
+      "questionText": "Calculate the area of the figure ABCD above.",
+      "options": [
+        "A. 72 cm2",
+        "B. 90 cm2",
+        "C. 108 cm2",
+        "D. 126 cm2"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480222,
+        "_nanoseconds": 835000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2007"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 958000000
+      }
+    },
+    {
+      "id": "H6hfKXoM8bKHYtv1SS4B",
+      "year": "2016",
+      "subject": "mathematics",
+      "questionNumber": 27,
+      "questionText": "The perimeter of an isosceles triangle is 45 cm. Find the length of the third side, if each of the equal sizes is 14 cm long.",
+      "options": [
+        "A. 11 cm",
+        "B. 14 cm",
+        "C. 17 cm",
+        "D. 31 cm"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480429,
+        "_nanoseconds": 355000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2016"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487098,
+        "_nanoseconds": 192000000
+      }
+    },
+    {
+      "id": "HqaCXowPuqFkcICN1dIr",
+      "year": "2004",
+      "subject": "mathematics",
+      "questionNumber": 26,
+      "questionText": "A circle has radius 7cm; find its area. [Take π = 22 7 ]",
+      "options": [
+        "A. 22 cm2",
+        "B. 44 cm2",
+        "C. 145 cm2",
+        "D. 154 cm2"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480155,
+        "_nanoseconds": 203000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2004"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487088,
+        "_nanoseconds": 551000000
+      }
+    },
+    {
+      "id": "HzqvHYyj7UZv6RW8OdhE",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 39,
+      "questionText": "The pie chart shows the distribution of crops on a farm of area 250 hectares. Use it to answer the question below. Find the area of the plot with corn.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479596,
+        "_nanoseconds": 630000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 48.6",
+        "B. 55.3",
+        "C. 62.5 ha",
+        "D. 83.3 ha",
+        "E. 125.0 ha"
+      ],
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487078,
+        "_nanoseconds": 582000000
+      }
+    },
+    {
+      "id": "I5rF41EX08KghIXJKuuu",
+      "year": "2000",
+      "subject": "mathematics",
+      "questionNumber": 37,
+      "questionText": "The circumference of a circular track is 154 m. Find the diameter of the track. [Take π = 22 7 ]",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480071,
+        "_nanoseconds": 167000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2000"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 22.0 m",
+        "B. 24.5 m",
+        "C. 49.0 m",
+        "D. 242.0 m",
+        "E. 484.0 m"
+      ],
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487085,
+        "_nanoseconds": 254000000
+      }
+    },
+    {
+      "id": "JnlEUw2oohD3F9bvN24Z",
+      "year": "1995",
+      "subject": "mathematics",
+      "questionNumber": 19,
+      "questionText": "Calculate the length of QR in triangle PQR",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479739,
+        "_nanoseconds": 722000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1995"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 11",
+        "B. 14",
+        "C. 16",
+        "D. 17",
+        "E. 25"
+      ],
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 77000000
+      }
+    },
+    {
+      "id": "KA2gfrVOzkcC0LYKWa6r",
+      "year": "2019",
+      "subject": "mathematics",
+      "questionNumber": 24,
+      "questionText": "Find the diameter of a circle whose circumference is 88 cm. [Take π = 22⁄7]",
+      "options": [
+        "A. 14 cm",
+        "B. 22 cm",
+        "C. 28 cm",
+        "D. 82 cm"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480496,
+        "_nanoseconds": 437000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2019"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487100,
+        "_nanoseconds": 643000000
+      }
+    },
+    {
+      "id": "KD2tdKkhTX1wcw2NYnJd",
+      "year": "2007",
+      "subject": "mathematics",
+      "questionNumber": 39,
+      "questionText": "The length of a rectangular playing field is 5 metres longer than its width. If the perimeter of the field is 150 metres, find its width.",
+      "options": [
+        "A. 30 metres",
+        "B. 35 metres",
+        "C. 40 metres",
+        "D. 45 metres"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480230,
+        "_nanoseconds": 853000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2007"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 958000000
+      }
+    },
+    {
+      "id": "L7QbdhewlNmYJZjb5Tbc",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 30,
+      "questionText": "In the diagram, square P1Q1R1S1 is an enlargement of square PQRS from centre O. The area of PQRS is 4 cm2 and the area of P1Q1R1S1 is 9 cm2. Find the scale factor of the enlargement.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479591,
+        "_nanoseconds": 843000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 2 3",
+        "B. 4 9",
+        "C. 1 1 2",
+        "D. - 2 3",
+        "E. 2 1 4"
+      ],
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487078,
+        "_nanoseconds": 582000000
+      }
+    },
+    {
+      "id": "Ln8eHFu2k3JYLvo6n5XZ",
+      "year": "1999",
+      "subject": "mathematics",
+      "questionNumber": 32,
+      "questionText": "A square of side 6cm has the same area as a rectangle of length 9 cm. Find the breadth of the rectangle.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480045,
+        "_nanoseconds": 742000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1999"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 3 cm",
+        "B. 4 cm",
+        "C. 6 cm",
+        "D. 24 cm",
+        "E. 36 cm"
+      ],
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487084,
+        "_nanoseconds": 387000000
+      }
+    },
+    {
+      "id": "Mm38zR70QDOjPp7e3HA5",
+      "year": "1990",
+      "subject": "mathematics",
+      "questionNumber": 37,
+      "questionText": "Find the area of the trapezium MNOP.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479549,
+        "_nanoseconds": 812000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1990"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 120 cm2",
+        "B. 72 cm2",
+        "C. 60 cm2",
+        "D. 48 cm2",
+        "E. 38 cm2"
+      ],
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487076,
+        "_nanoseconds": 950000000
+      }
+    },
+    {
+      "id": "NdI7g3UgVdtRdAELsalN",
+      "year": "2015",
+      "subject": "mathematics",
+      "questionNumber": 26,
+      "questionText": "The circumference of a circle is 440 m. Find the area of the circle. [Take π = 22 7 ]",
+      "options": [
+        "A. 14,400 m2",
+        "B. 15,400 m2",
+        "C. 16,400 m2",
+        "D. 18,000 m2"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480406,
+        "_nanoseconds": 103000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2015"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487097,
+        "_nanoseconds": 370000000
+      }
+    },
+    {
+      "id": "OEPikgoKYhA9svAISnFc",
+      "year": "2013",
+      "subject": "mathematics",
+      "questionNumber": 22,
+      "questionText": "The length of a rectangular fence is 25 m. The ratio of the length to the width is 5:3. Find the width of the rectangular fence.",
+      "options": [
+        "A. 9 m",
+        "B. 13 m",
+        "C. 15 m",
+        "D. 16 m"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480358,
+        "_nanoseconds": 45000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2013"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487095,
+        "_nanoseconds": 754000000
+      }
+    },
+    {
+      "id": "QCcJ8nuuPR4ESZELf1uU",
+      "year": "1994",
+      "subject": "mathematics",
+      "questionNumber": 38,
+      "questionText": "If the area of the figure above is 60 cm2, find x.",
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479638,
+        "_nanoseconds": 994000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1994"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 8 cm",
+        "B. 9 cm",
+        "C. 12 cm",
+        "D. 16 cm",
+        "E. 20 cm"
+      ],
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487080,
+        "_nanoseconds": 244000000
+      }
+    },
+    {
+      "id": "TQoamekaw4nK47po0eeW",
+      "year": "2005",
+      "subject": "mathematics",
+      "questionNumber": 15,
+      "questionText": "Find the area of a circle whose diameter is 28 cm. [Take π = 22 7 ]",
+      "options": [
+        "A. 44 cm2",
+        "B. 88 cm2",
+        "C. 352 cm2",
+        "D. 616 cm2"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480171,
+        "_nanoseconds": 571000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2005"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487089,
+        "_nanoseconds": 336000000
+      }
+    },
+    {
+      "id": "U5tL6SIvvR6353ys8QIO",
+      "year": "1995",
+      "subject": "mathematics",
+      "questionNumber": 37,
+      "questionText": "A cylinder has a radius 6 cm and height 7 cm. Find its volume. [Take π = 22 7 ]",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479958,
+        "_nanoseconds": 93000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1995"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 132 cm3",
+        "B. 264 cm3",
+        "C. 294 cm3",
+        "D. 792 cm3",
+        "E. 924 cm3"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 77000000
+      }
+    },
+    {
+      "id": "U7WLjvZFD14ZuPf8PkUx",
+      "year": "2014",
+      "subject": "mathematics",
+      "questionNumber": 31,
+      "questionText": "The diameter of a circular tray is 28 cm. Find the area of the tray. [Take π = 22 7 ]",
+      "options": [
+        "A. 44 cm2",
+        "B. 88 cm2",
+        "C. 154 cm2",
+        "D. 616 cm2"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480386,
+        "_nanoseconds": 107000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2014"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487096,
+        "_nanoseconds": 588000000
+      }
+    },
+    {
+      "id": "ULqj4albR2h6eHgBHHbt",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 25,
+      "questionText": "Find the circumference of a circle whose area is equal to 64 π cm2.",
+      "options": [
+        "A. 32 π cm",
+        "B. 16 π cm",
+        "C. 8 π cm",
+        "D. 4 π cm"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480291,
+        "_nanoseconds": 98000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487093,
+        "_nanoseconds": 318000000
+      }
+    },
+    {
+      "id": "Ux39FppGoTVPhImI7xBY",
+      "year": "2023",
+      "subject": "mathematics",
+      "questionNumber": 29,
+      "questionText": "The diagram is a square of side 2 cm in which is inscribed a circle with center O. Use the information to answer the question below. Find the area of the shaded portion. [Take π = 22 7 ]",
+      "options": [
+        "A. 0.86 cm2",
+        "B. 3.00 cm2",
+        "C. 6.28 cm2",
+        "D. 12.56 cm2"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482482,
+        "_nanoseconds": 717000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2023"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 62000000
+      }
+    },
+    {
+      "id": "VMqzMFdnHVTZ9VJlSrIG",
+      "year": "2023",
+      "subject": "mathematics",
+      "questionNumber": 30,
+      "questionText": "The diagram is a square of side 2 cm in which is inscribed a circle with center O. Use the information to answer the question below. Find the area of the circle. [Take π = 22 7 ]",
+      "options": [
+        "A. 3.14 cm2",
+        "B. 6.28 cm2",
+        "C. 4.00 cm2",
+        "D. 12.56 cm2"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482483,
+        "_nanoseconds": 512000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2023"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 62000000
+      }
+    },
+    {
+      "id": "VNM8wpCohQWIbEQdIRmP",
+      "year": "2018",
+      "subject": "mathematics",
+      "questionNumber": 34,
+      "questionText": "In an enlargement length AB = 3 cm and the length of its image A1B1 = 15 cm. Calculate the scale factor.",
+      "options": [
+        "A. 1 5",
+        "B. 2 3",
+        "C. 5",
+        "D. 12"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480479,
+        "_nanoseconds": 152000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2018"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487099,
+        "_nanoseconds": 837000000
+      }
+    },
+    {
+      "id": "W2xQOeSiALnZwMqGfqgy",
+      "year": "2013",
+      "subject": "mathematics",
+      "questionNumber": 20,
+      "questionText": "The area of a circle is 154 cm2. Find the diameter. (Take π = 22 7 )",
+      "options": [
+        "A. 7 cm",
+        "B. 14 cm",
+        "C. 21 cm",
+        "D. 49 cm"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480356,
+        "_nanoseconds": 932000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2013"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487095,
+        "_nanoseconds": 754000000
+      }
+    },
+    {
+      "id": "W9B7nl4xRcQkmQSLOL3W",
+      "year": "2005",
+      "subject": "mathematics",
+      "questionNumber": 29,
+      "questionText": "The perimeter of a rectangle is 24 cm. If the breadth of the rectangle is 4 cm, find the area of the rectangle.",
+      "options": [
+        "A. 32 cm2",
+        "B. 48 cm2",
+        "C. 64 cm2",
+        "D. 144 cm2"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480179,
+        "_nanoseconds": 599000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2005"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487089,
+        "_nanoseconds": 336000000
+      }
+    },
+    {
+      "id": "XSJPCylag0JE1SLAXLSO",
+      "year": "1993",
+      "subject": "mathematics",
+      "questionNumber": 34,
+      "questionText": "The dimensions of the rectangle are given in base two. Find its perimeter.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479615,
+        "_nanoseconds": 199000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1993"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 100two cm",
+        "B. 101two cm",
+        "C. 110two cm",
+        "D. 1001two cm",
+        "E. 1010two cm"
+      ],
+      "explanation": "",
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487079,
+        "_nanoseconds": 424000000
+      }
+    },
+    {
+      "id": "YAyM4bxgBk8JXPHbWFGM",
+      "year": "2025",
+      "subject": "mathematics",
+      "questionNumber": 33,
+      "questionText": "A rectangular container with dimensions 5 m by 3 m by 4 m is two-third full of water. Find the volume occupied by the water in the container.",
+      "options": [
+        "A. 50 m3",
+        "B. 40 m3",
+        "C. 30 m3",
+        "D. 20 m3"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482535,
+        "_nanoseconds": 23000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2025"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487105,
+        "_nanoseconds": 685000000
+      }
+    },
+    {
+      "id": "YPLBfbsMI4QX54cWiCm0",
+      "year": "2011",
+      "subject": "mathematics",
+      "questionNumber": 29,
+      "questionText": "The area of the trapezium above is",
+      "options": [
+        "A. 120 cm2",
+        "B. 180 cm2",
+        "C. 256 cm2",
+        "D. 360 cm2"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480316,
+        "_nanoseconds": 441000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2011"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 125000000
+      }
+    },
+    {
+      "id": "Ys9KPhWnS3vG0RtmuY4f",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 30,
+      "questionText": "In the diagram above, length of PS = Length of SQ and angle SQR = 112o. Find the value of x.",
+      "options": [
+        "A. 68o",
+        "B. 56o",
+        "C. 46o",
+        "D. 44o"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480293,
+        "_nanoseconds": 927000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487093,
+        "_nanoseconds": 318000000
+      }
+    },
+    {
+      "id": "ZIKAL4cGWbXka3op9fHK",
+      "year": "1996",
+      "subject": "mathematics",
+      "questionNumber": 25,
+      "questionText": "Use the information below to answer the question below In the diagram above, the cylinder has diameter 4 cm and length 14 cm. [Take π = 22 7 ] Find the circumference of the base.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479974,
+        "_nanoseconds": 272000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1996"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 44 7 cm",
+        "B. 88 7 cm",
+        "C. 176 7 cm",
+        "D. 44 cm",
+        "E. 176 cm"
+      ],
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 915000000
+      }
+    },
+    {
+      "id": "ZzayU1w7yz9P3gWcDQMc",
+      "year": "2013",
+      "subject": "mathematics",
+      "questionNumber": 12,
+      "questionText": "The perimeter of a rectangle is 48 cm. if the length is 14 cm, find its width.",
+      "options": [
+        "A. 24 cm",
+        "B. 20 cm",
+        "C. 10 cm",
+        "D. 3.4 cm"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480352,
+        "_nanoseconds": 392000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2013"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487095,
+        "_nanoseconds": 754000000
+      }
+    },
+    {
+      "id": "dbkEUjAeGxgGhkjb6y8L",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 22,
+      "questionText": "The area of a rectangle is 18 cm2. If the width is 2 cm, find its perimeter.",
+      "options": [
+        "A. 18 cm",
+        "B. 20 cm",
+        "C. 36 cm",
+        "D. 22 cm"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482506,
+        "_nanoseconds": 100000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 904000000
+      }
+    },
+    {
+      "id": "ea4y7XYixhTXM2fMjLAw",
+      "year": "2005",
+      "subject": "mathematics",
+      "questionNumber": 20,
+      "questionText": "Find the volume of a cuboid of sides 15 m by 12 m by 3 m.",
+      "options": [
+        "A. 36 m3",
+        "B. 45 m3",
+        "C. 180 m3",
+        "D. 540 m3"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480174,
+        "_nanoseconds": 367000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2005"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487089,
+        "_nanoseconds": 336000000
+      }
+    },
+    {
+      "id": "ed4MSr1BamSSrPdfZQzs",
+      "year": "1998",
+      "subject": "mathematics",
+      "questionNumber": 36,
+      "questionText": "The volume of water in a cuboid is 9 m3. The length of the cuboid is 3 m and the breadth is 2 m. Calculate the depth of water in the cuboid.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480025,
+        "_nanoseconds": 452000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1998"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 0.15 m",
+        "B. 0.18 m",
+        "C. 1.5 m",
+        "D. 1.8 m",
+        "E. 6.0 m"
+      ],
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487083,
+        "_nanoseconds": 561000000
+      }
+    },
+    {
+      "id": "fBVrwCgH6XLOuhlgiJzN",
+      "year": "2014",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "The perimeter of rectangle is 24 cm. If the length is 7 cm, find its width.",
+      "options": [
+        "A. 3 cm",
+        "B. 5 cm",
+        "C. 10 cm",
+        "D. 12 cm"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480384,
+        "_nanoseconds": 423000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2014"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487096,
+        "_nanoseconds": 588000000
+      }
+    },
+    {
+      "id": "foa5cwjZCV4Jnc8zPckW",
+      "year": "2004",
+      "subject": "mathematics",
+      "questionNumber": 30,
+      "questionText": "The volume of water in a rectangular tank is 30 cm3 .The length of the tank is 5 cm and its breadth is 2 cm. Calculate the depth of water in the tank.",
+      "options": [
+        "A. 4.0 cm",
+        "B. 3.0 cm",
+        "C. 5.0 cm",
+        "D. 6.0 cm"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480157,
+        "_nanoseconds": 432000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2004"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487088,
+        "_nanoseconds": 551000000
+      }
+    },
+    {
+      "id": "g8vg4VoXguCEPVJwBf1f",
+      "year": "2023",
+      "subject": "mathematics",
+      "questionNumber": 39,
+      "questionText": "The height of a cylinder is 5 cm and the radius 7 cm. Find the volume of the cylinder. [Take π = 22 7 ]",
+      "options": [
+        "A. 770 cm3",
+        "B. 700 cm3",
+        "C. 154 cm3",
+        "D. 110 cm3"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482490,
+        "_nanoseconds": 628000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2023"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 62000000
+      }
+    },
+    {
+      "id": "g9i0cFirvc5B1vtzQ7pY",
+      "year": "2019",
+      "subject": "mathematics",
+      "questionNumber": 15,
+      "questionText": "A tank in the form of a cuboid has length 6 m and breadth 4 m. If the volume of the tank is 36 m3, find the height.",
+      "options": [
+        "A. 0.67 m",
+        "B. 1.5 m",
+        "C. 1.8 m",
+        "D. 5.0 m"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480491,
+        "_nanoseconds": 286000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2019"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2019_q15_img15.jpg",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542246,
+        "_nanoseconds": 784000000
+      }
+    },
+    {
+      "id": "gelZpDvI7Al5ZdxJhNpz",
+      "year": "1995",
+      "subject": "mathematics",
+      "questionNumber": 34,
+      "questionText": "The length of a spring when a mass of n kg is hung on it is L = (74 + 15n) mm. What is the length of the spring when a mass of 1.20kg is hanged on it?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479956,
+        "_nanoseconds": 398000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1995"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 75.20 mm",
+        "B. 89.00 mm",
+        "C. 92.00 mm",
+        "D. 97.00 mm",
+        "E. 104.00 mm"
+      ],
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 77000000
+      }
+    },
+    {
+      "id": "h7rfOUxSl6IKR5Mzwpwe",
+      "year": "2008",
+      "subject": "mathematics",
+      "questionNumber": 26,
+      "questionText": "Find the perimeter of the kite below.",
+      "options": [
+        "A. 38 cm",
+        "B. 64 cm",
+        "C. 76 cm",
+        "D. 88 cm"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480246,
+        "_nanoseconds": 187000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2008"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487091,
+        "_nanoseconds": 763000000
+      }
+    },
+    {
+      "id": "iWNShrgy7ATz4FlkvXz9",
+      "year": "2020",
+      "subject": "mathematics",
+      "questionNumber": 22,
+      "questionText": "Two sides of a parallelogram are 5.8 m and 8.2 m long. Find its perimeter",
+      "options": [
+        "A. 11.0 m",
+        "B. 36.6 m",
+        "C. 28.0 m",
+        "D. 47.6 m"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480518,
+        "_nanoseconds": 67000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2020"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487101,
+        "_nanoseconds": 629000000
+      }
+    },
+    {
+      "id": "iXlSH7yJqZ35UgyskO6y",
+      "year": "1998",
+      "subject": "mathematics",
+      "questionNumber": 40,
+      "questionText": "OPQR is a trapezium whose height is 20 cm. What is the area?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480027,
+        "_nanoseconds": 728000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1998"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 460 cm2",
+        "B. 600 cm2",
+        "C. 920 cm2",
+        "D. 960 cm2",
+        "E. 1000 cm2"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487083,
+        "_nanoseconds": 561000000
+      }
+    },
+    {
+      "id": "j6hugXpKTYjau1Bvx0oU",
+      "year": "2016",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "Find the area of a circle whose diameter is 7 cm. [Take π = 22 7 ]",
+      "options": [
+        "A. 11 cm2",
+        "B. 38 1 2 cm2",
+        "C. 44 1 2 cm2",
+        "D. 54 cm2"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480429,
+        "_nanoseconds": 908000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2016"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487098,
+        "_nanoseconds": 192000000
+      }
+    },
+    {
+      "id": "jRzPzercFoFFOu3l342M",
+      "year": "2021",
+      "subject": "mathematics",
+      "questionNumber": 30,
+      "questionText": "The area of a trapezium is 36 cm2. If the parallel sides are 10.5 cm and 9.5 cm, calculate the distance between the two parallel sides.",
+      "options": [
+        "A. 1.0 cm",
+        "B. 1.8 cm",
+        "C. 3.2 cm",
+        "D. 3.6 cm"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480545,
+        "_nanoseconds": 388000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2021"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487102,
+        "_nanoseconds": 440000000
+      }
+    },
+    {
+      "id": "kqyWhHmFK7EGjjlcAHuV",
+      "year": "2014",
+      "subject": "mathematics",
+      "questionNumber": 32,
+      "questionText": "Calculate the volume of a cylinder with radius 7 cm and height 10 cm. [Take π = 22 7 ]",
+      "options": [
+        "A. 220 cm3",
+        "B. 440 cm3",
+        "C. 1,540 cm3",
+        "D. 3,080 cm3"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480386,
+        "_nanoseconds": 663000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2014"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487096,
+        "_nanoseconds": 588000000
+      }
+    },
+    {
+      "id": "lflH32y2F6CCUA8QVwkm",
+      "year": "2006",
+      "subject": "mathematics",
+      "questionNumber": 5,
+      "questionText": "Find the circumference of a circle with radius 3.5 cm. [Take π = 22 7 ]",
+      "options": [
+        "A. 11 cm",
+        "B. 22 cm",
+        "C. 35 cm",
+        "D. 38.5 cm"
+      ],
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480188,
+        "_nanoseconds": 808000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2006"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2006_q5_img5.png",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542180,
+        "_nanoseconds": 431000000
+      }
+    },
+    {
+      "id": "lfxFO9B8NbvxW8FSt7Cy",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 31,
+      "questionText": "In the diagram, ∠ QPR = 30° and |QR| = 5 cm. [Take sin 30° = 1 2 ]. Find the length of PQ.",
+      "options": [
+        "A. 2.5 cm",
+        "B. 5.0 cm",
+        "C. 12.0 cm",
+        "D. 10.0 cm"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482511,
+        "_nanoseconds": 848000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 904000000
+      }
+    },
+    {
+      "id": "llLuNB4T0dRWSSkyOvit",
+      "year": "2025",
+      "subject": "mathematics",
+      "questionNumber": 17,
+      "questionText": "The area of a rectangular card is 15 cm2. If each side of the card is enlarged by a scale factor 3, find the area of the enlarged card.",
+      "options": [
+        "A. 45 cm2",
+        "B. 75 cm2",
+        "C. 90 cm2",
+        "D. 135 cm2"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482526,
+        "_nanoseconds": 19000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2025"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487105,
+        "_nanoseconds": 685000000
+      }
+    },
+    {
+      "id": "mWOt3BbAvHZf2ZDxeUJw",
+      "year": "2018",
+      "subject": "mathematics",
+      "questionNumber": 19,
+      "questionText": "The perimeter of a rectangle is 26 cm. If its length is 10 cm, find its area.",
+      "options": [
+        "A. 30 cm2",
+        "B. 60 cm2",
+        "C. 130 cm2",
+        "D. 160 cm2"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480470,
+        "_nanoseconds": 669000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2018"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2018_q19_img19.jpg",
+      "updatedAt": {
+        "_seconds": 1763542233,
+        "_nanoseconds": 786000000
+      }
+    },
+    {
+      "id": "mf89dfWV81Auzzs4KIJD",
+      "year": "2009",
+      "subject": "mathematics",
+      "questionNumber": 16,
+      "questionText": "A rectangle has an area of 36 cm2 and a width of 3 cm. Find its perimeter.",
+      "options": [
+        "A. 12 cm",
+        "B. 18 cm",
+        "C. 24 cm",
+        "D. 30 cm"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480263,
+        "_nanoseconds": 288000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2009"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487092,
+        "_nanoseconds": 558000000
+      }
+    },
+    {
+      "id": "n2BZzODImHqm0YXN70gO",
+      "year": "1997",
+      "subject": "mathematics",
+      "questionNumber": 25,
+      "questionText": "The figure above is made up of a rectangle and a triangle. The dimensions of the rectangle are 8 cm and 6 cm. The triangle has 6 cm as its base and 3 cm as its height. Find the area of the figure.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479996,
+        "_nanoseconds": 950000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1997"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 33 cm2",
+        "B. 48 cm2",
+        "C. 51 cm2",
+        "D. 57 cm2",
+        "E. 66 cm2"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487082,
+        "_nanoseconds": 727000000
+      }
+    },
+    {
+      "id": "nRpYp7CaKnmxLWwWsyAT",
+      "year": "2016",
+      "subject": "mathematics",
+      "questionNumber": 32,
+      "questionText": "The diagonal of a rectangle is 10 cm long. If the length of the rectangle is 8cm, find its breadth.",
+      "options": [
+        "A. 2 cm",
+        "B. 3 cm",
+        "C. 5 cm",
+        "D. 6 cm"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480432,
+        "_nanoseconds": 179000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2016"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487098,
+        "_nanoseconds": 192000000
+      }
+    },
+    {
+      "id": "ni4DLlQx6LYiQfSmjaXN",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 29,
+      "questionText": "Find the length of the vector p = ( -5 12 )",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479591,
+        "_nanoseconds": 334000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 7",
+        "B. 10",
+        "C. 13",
+        "D. 17",
+        "E. 25"
+      ],
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487078,
+        "_nanoseconds": 582000000
+      }
+    },
+    {
+      "id": "p0dRPPUDLxu39fk3JsGk",
+      "year": "1998",
+      "subject": "mathematics",
+      "questionNumber": 38,
+      "questionText": "In the diagram, O is the centre of the circle and r is its radius. Calculate the area of the shaded region.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480026,
+        "_nanoseconds": 582000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1998"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1 6 πr2",
+        "B. 1 5 πr2",
+        "C. 1 3 πr2",
+        "D. 5 6 πr2",
+        "E. 7 12 πr2"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487083,
+        "_nanoseconds": 561000000
+      }
+    },
+    {
+      "id": "pCUTZRf2YLv3Jjvu4eQk",
+      "year": "2000",
+      "subject": "mathematics",
+      "questionNumber": 32,
+      "questionText": "A rectangular tank is 4 m long, 3 m wide and 2.5 m high. What is the volume of the tank?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480068,
+        "_nanoseconds": 385000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2000"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 24 m3",
+        "B. 30 m3",
+        "C. 36 m3",
+        "D. 48 m3",
+        "E. 60 m3"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487085,
+        "_nanoseconds": 254000000
+      }
+    },
+    {
+      "id": "qN8wkWsF6uclMEK95zEe",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 3,
+      "questionText": "Which of the following is an example of quantitative data?",
+      "options": [
+        "A. Colour",
+        "B. Gender",
+        "C. Marital status",
+        "D. Length"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482493,
+        "_nanoseconds": 926000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2024_q3_img3.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542284,
+        "_nanoseconds": 73000000
+      }
+    },
+    {
+      "id": "qNHD7NVEPgpJ0ybVndi8",
+      "year": "1993",
+      "subject": "mathematics",
+      "questionNumber": 14,
+      "questionText": "In an enlargement, the area of the object was multiplied by 144 to get the area of the image. Find the scale factor of the enlargement.",
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479604,
+        "_nanoseconds": 671000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1993"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 12",
+        "B. 36",
+        "C. 48",
+        "D. 72",
+        "E. 144"
+      ],
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487079,
+        "_nanoseconds": 424000000
+      }
+    },
+    {
+      "id": "qc4yz23KJiJhgjI1Wg7t",
+      "year": "2008",
+      "subject": "mathematics",
+      "questionNumber": 14,
+      "questionText": "A football field is 120 m long and 75 m wide. What is the perimeter of the field?",
+      "options": [
+        "A. 195 m",
+        "B. 390 m",
+        "C. 780 m",
+        "D. 900 m"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480239,
+        "_nanoseconds": 484000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2008"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487091,
+        "_nanoseconds": 763000000
+      }
+    },
+    {
+      "id": "qn7mKiVssBe48lGcDh8D",
+      "year": "2002",
+      "subject": "mathematics",
+      "questionNumber": 36,
+      "questionText": "The figure below is a cuboid wih dimensions x cm by y cm by z cm. Find the area of the face PQRV.",
+      "options": [
+        "A. xy cm2",
+        "B. yz cm2",
+        "C. x2 cm2",
+        "D. xz cm2"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480115,
+        "_nanoseconds": 669000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2002"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 895000000
+      }
+    },
+    {
+      "id": "rAUC9mCT55UyQCHxH1Bt",
+      "year": "2020",
+      "subject": "mathematics",
+      "questionNumber": 36,
+      "questionText": "Two sides of a rectangle are 10 cm and 6 cm. Calculate the area of a square with the same perimeter as that of the rectangle.",
+      "options": [
+        "A. 16 cm2",
+        "B. 30 cm2",
+        "C. 60 cm2",
+        "D. 64 cm2"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480526,
+        "_nanoseconds": 23000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2020"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487101,
+        "_nanoseconds": 629000000
+      }
+    },
+    {
+      "id": "rruqgme6Kwf4sPXHWxZN",
+      "year": "2022",
+      "subject": "mathematics",
+      "questionNumber": 31,
+      "questionText": "What is the length of the side of a square of area 225 cm2?",
+      "options": [
+        "A. 15.00cm",
+        "B. 12.00cm",
+        "C. 112.50cm",
+        "D. 56.25cm"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480568,
+        "_nanoseconds": 959000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2022"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487103,
+        "_nanoseconds": 234000000
+      }
+    },
+    {
+      "id": "sQ72nuKIEHvVEQs9P43v",
+      "year": "2012",
+      "subject": "mathematics",
+      "questionNumber": 22,
+      "questionText": "Find the volume of a cylinder of height 3 cm and radius 2 cm.",
+      "options": [
+        "A. 6π cm3",
+        "B. 12π cm3",
+        "C. 18π cm3",
+        "D. 24π cm3"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480335,
+        "_nanoseconds": 259000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2012"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 925000000
+      }
+    },
+    {
+      "id": "sR5z0IlbmHyrw45ZsyJP",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 35,
+      "questionText": "Calculate the area of figure PQRST",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480092,
+        "_nanoseconds": 661000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 112.5 cm2",
+        "B. 135.0 cm2",
+        "C. 180.0 cm2",
+        "D. 215.0 cm2",
+        "E. 315.0 cm2"
+      ],
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 59000000
+      }
+    },
+    {
+      "id": "sW5QtNPjAiSKdUtKYUKA",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 8,
+      "questionText": "Andrews drew three lines such that the length of the first one is 10 cm, the second is 15 cm longer than the first one and the third is 9 cm less than the second. Find the length of the third line.",
+      "options": [
+        "A. 4 cm",
+        "B. 14 cm",
+        "C. 34 cm",
+        "D. 16 cm"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482497,
+        "_nanoseconds": 791000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 904000000
+      }
+    },
+    {
+      "id": "stEZqsumH7U71tFG8hRB",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 32,
+      "questionText": "A cylinder is of height 3 cm and radius 2 cm. Find its curved surface area. [Take π = 3.142]",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479592,
+        "_nanoseconds": 899000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 7 cm2",
+        "B. 12 cm2",
+        "C. 18 cm2",
+        "D. 38 cm2",
+        "E. 54 cm2"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487078,
+        "_nanoseconds": 582000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1993_q2",
+      "questionText": "Using a ruler and a pair of compasses only,\n\n(a)\n\n \n\nconstruct a triangle ABC such that |BA| = 10 cm, angle ABC = 90° and angle BAC = 30°. Measure the length BC.\n\n(b)\n\n \n\n(i)\n\n \n\nBisect the angle ACB to meet BA at D.\n\n(ii)\n\n \n\nWhat type of triangle is CDA?\n\n(c)\n\n \n\nCalculate the area of triangle ABC",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1993",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1993 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1993",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1994_q2",
+      "questionText": "(a)\n\n \n\nA ladder leans against a wall. The end of the ladder touches the wall 12m from the ground. The foot of the ladder is 9m away from the foot of the wall.\n\n(i)\n\n \n\nWhat is the length of the ladder?\n\n(ii)\n\n \n\nCalculate the angle that the ladder makes with the ground.\n\n(b)\n\n \n\nGiven that π = 3.14 and g = 20. Find the value of F in the relation F =",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1994",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1994 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1994",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1997_q5",
+      "questionText": "(a)\n\n \n\nThe volume of a cylinder is 220 cm3. The radius of the cross-section is 2.5 cm. Find the height of the cylinder.\n\n[Take π =",
+      "questionNumber": 5,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1997",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1997 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1997",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1998_q5",
+      "questionText": "(a)\n\n \n\nUsing a scale of 2 cm to 2 units on both axes, draw two perpendicular axes OX and OY on a graph sheet. On the same graph sheet, mark the x-axis from –8 to 8 and the y-axis from –8 to 8\n\n(i)\n\n \n\nPlot P(-2, 3) and Q(6, 4). Join PQ\n\n(ii)\n\n \n\nDraw the image P1Q1 of PQ under an anticlockwise rotation through 90° about the origin, where P→P1 and Q→Q1. Indicate clearly all the co-ordinates.\n\n(iii)\n\n \n\nDraw the image P2Q2 of PQ under a clockwise rotation through 90° about the origin where P→P2 and Q→Q2. Indicate clearly all the co-ordinates\n\n(b)\n\n \n\nThe base radius of a closed cylinder is 4 m. The height of the cylinder is 7 m. Calculate its total surface area.\n\n[Take π =",
+      "questionNumber": 5,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1998",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1998 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1998",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1999_q3",
+      "questionText": "(a)\n\n \n\nUsing a pair of compasses and a ruler only,\n\n(i)\n\n \n\nconstruct triangle ABC such that |AB| = 10 cm, angle ABC = 30° and |BC| = 8 cm. Measure angle ACB.\n\n(ii)\n\n \n\nconstruct a perpendicular from C to meet line AB at D. Measure |CD|.\n\n(b)\n\n \n\nCalculate the area of triangle ABC.",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1999",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1999 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1999",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2000_q5",
+      "questionText": "The diagram shows a running track ABCDEFA. AB and ED are the straight sides. The ends AFE and BCD are semi circular shapes.\n\n|AB| = |ED| = 90 m and |AE| = |BD| = 70 m.\n\nFind\n\n(a)\n\n \n\nthe total length of the two semi circular ends, AFE and BCD;\n\n(b)\n\n \n\nthe perimeter of the running track ABCDEFA;\n\n(c)\n\n \n\nthe total area of the running track ABCDEF.\n\n[Take π =",
+      "questionNumber": 5,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2001_q5",
+      "questionText": "(a)\n\n \n\nA cylinder closed at one end has radius 7 cm and height 20 cm.\n\n(i)\n\n \n\nFind its total surface area.\n\n(ii)\n\n \n\nIf the cylinder is filled with water to a depth of 5 cm, calculate the volume of the water in it.\n\n[Take π =",
+      "questionNumber": 5,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2001",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2001 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2001",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2002_q3",
+      "questionText": "(a)\n\n \n\nUsing a ruler and a pair of compasses only, construct\n\n(i)\n\n \n\ntriangle ABC such that AB = 12cm, AC = 8cm and BAC = 30°;\n\n(ii)\n\n \n\na perpendicular from C to meet AB at M.\n\n(b)\n\n \n\nMeasure\n\n(i)\n\n \n\nangle ABC;\n\n(ii)\n\n \n\n|CM|.\n\n(c)\n\n \n\nCalculate the area of triangle ABC.",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2002",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2002 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2002",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2005_q1",
+      "questionText": "(a)\n\n \n\nA boy has enough money to buy 14 pencils at ₵450.00 each. How many erasers costing ₵300.00 each can he buy with the same amount of money?\n\n(b)\n\n \n\nA circle has a circumference of 44cm. Calculate its radius if π =",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2005",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2005 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2005",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2006_q3",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nUsing a pair of compasses and ruler only, construct triangle XYZ with XZ = 12cm, XY = 10cm and angle XYZ = 90°.\n\n(ii)\n\n \n\nMeasure YZ.\n\n(iii)\n\n \n\nCalculate the area of triangle XYZ\n\n(iv)\n\n \n\nMeasure angle ZXY.\n\n(b)\n\n \n\nAn isosceles triangle has a perimeter of (9y – 15) cm.\n\nWhat is the length of each of the two equal sides, if its third side is (3y – 7) cm?",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2006",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2006 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2006",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2009_q800",
+      "questionText": "and write your answer in standard form.\n\n(b)\n\n \n\nA plot of land measures 25 m by 12 m. A portion of this plot measuring 8 m by 8 m is used for the cultivation of vegetables.\n\nFind the area of the plot not cultivated.\n\n(c)\n\n \n\nThe table below shows the performance of Aisha in her final examination.\n\nSubject\n\nScore\n\nEnglish Language\n\n54%\n\nMathematics\n\n36%\n\nGa\n\n68%\n\nScience\n\n50%\n\nSocial Studies\n\n32%\n\nDraw a pie chart to represent this information.",
+      "questionNumber": 800,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2009",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2009 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2009",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2010_q8",
+      "questionText": "(b)\n\n \n\nThe area of a trapezium is 31.5 cm2. If the parallel sides are of lengths 7.3 cm and 5.3 cm, calculate the perpendicular distance between them.\n\n(c)\n\n \n\nThe marks scored by four students in a Mathematics test are as follows:\n\nEsi\n\n-",
+      "questionNumber": 8,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2010",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2010 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2010",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2012_q2",
+      "questionText": "(a)\n\n \n\nA car consumes a gallon of petrol for every 30 km drive. The driver of the car set out on a journey of 420 km with 10 gallons of petrol in the fuel tank.\n\n(i)\n\n \n\nHow many more gallons of petrol will he need to complete the journey?\n\n(ii)\n\n \n\nFind the cost of the petrol used for the journey of 420 km if a gallon of petrol cost GH₵5.50.\n\n(b)\n\n \n\nThe average number of spectators at a football competition for the first five days was 3,144. The attendance on the sixth day was 3,990. Find the\n\n(i)\n\n \n\ntotal attendance on the first five days\n\n(ii)\n\n \n\naverage attendance for the 6 days.\n\n(c)\n\n \n\nThe area enclosed by a square garden is 121 m2. What is the distance around the garden?",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2012",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2012 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2012",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2014_q5",
+      "questionText": "(a)\n\n \n\nUsing a ruler and a pair of compass only:\n\n(i)\n\n \n\nconstruct triangle PQR such that |PR| = 8 cm, |PQ| = 6 cm and |QR| = 5 cm;\n\n(ii)\n\n \n\nconstruct the perpendicular bisector of |PR| and label it l1;\n\n(iii)\n\n \n\nconstruct the perpendicular bisector of |QR| and label it l2;\n\n(iv)\n\n \n\nLabel the point of intersection of l1 and l2 as N.\n\n(v)\n\n \n\nWith N as centre and radius equal to draw a circle.\n\n(b)\n\n \n\n(i)\n\n \n\nMeasure the radius of the circle.\n\n(ii)\n\n \n\nCalculate the circumference of the circle, correct to 3 significant figures.\n\n[Take π = 3.14]",
+      "questionNumber": 5,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2014",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2014 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2014",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2014_q6",
+      "questionText": "(a)\n\n \n\nFactorize completely 6xy - 3y + 4x - 2.\n\n(b)\n\n \n\n\n\nThe diagram shows a ladder AB which leans against a vertical wall PQ at B. If |PB| is 8 m and the other end of the ladder is 6 m away from the foot of the wall (at P), find the length of the ladder (AB).\n\n(c)\n\n \n\nKojo had 1,800 bags of rice in stock for sale. In January, he sold",
+      "questionNumber": 6,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2014",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2014 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2014",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2015_q2",
+      "questionText": "hours at the rate of 3 km per hour to get to his farm. Find y.\n\n(b)\n\n \n\nThe perimeter of a square field is the same as that of a rectangular field. If the length of the rectangular field is 8km and the width is 5km, calculate the area of the square field.\n\n(c)\n\n \n\nFind the gradient of the line which passes through the points M(2,-1) and K(-3,6).",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2015",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2015",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2015_q5",
+      "questionText": "(a)\n\n \n\nAnita bought 51 tubers of yam at 3 for GH₵10.00. If she sold them and made a loss of 40%, how much did she sell each tuber of yam?\n\n(b)\n\n \n\nThe volume of a cylinder closed at one end is 1056 cm3. If its height is 21 cm, find its:\n\n(i)\n\n \n\ndiameter;\n\n(ii)\n\n \n\ntotal surface area.\n\n[Take π =",
+      "questionNumber": 5,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2015",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2015",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2018_q1",
+      "questionText": "a\n\n \n\nSolve the inequality\n\n \n\n\n\n \n\nand\n\nrepresent the answer on a number line.\n\nb\n\n \n\nGiven that\n\n \n\n\n\n \n\nand\n\n \n\n\n\n \n\n,\n\nfind 2t + k\n\nc\n\n \n\nThe sides of a triangle are in the ratio 6: 8 : 10. If the perimeter of the triangle is 288 cm, find the:\n\ni)\n\n \n\nlongest side\n\nii)\n\n \n\nshortest side\n\niii)\n\n \n\ndifference between the longest and shortest sides.",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2018",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2018 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2018",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2018_q2",
+      "questionText": "a\n\n \n\nAn English textbook costs GH₵ 25.00. The author of the book agreed to take 20% of the cost of each book sold. If 1,702 copies were sold, calculate the author's share.\n\nb\n\n \n\nSimplify:\n\n \n\n\n\nc\n\n \n\n\n\nIn the diagram, MN = 13 cm, MP = 15 cm, MS = 12 cm and MS is perpendicular to NP.\n\nCalculate length NP.",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2018",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2018 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2018",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2018_q4",
+      "questionText": "a\n\n \n\nThe sum of the interior angles of a regular polygon is 900o. Find the number of sides of the polygon.\n\nb\n\n \n\nUsing a ruler and a pair of compasses only, construct:\n\ni\n\n \n\ntriangle XYZ such that length XY = 10 cm, angle XYZ = 30o and length YZ = 9 cm;\n\nii\n\n \n\nperpendicular from Z to meet line XY at P;\n\niii\n\n \n\nmeasure the:\n\nα\n\n \n\nlength PZ;\n\nβ\n\n \n\nangle XYZ.\n\niv\n\n \n\ncalculate, correct to the nearest whole number, the area of triangle XYZ.",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2018",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2018 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2018",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2020_q4",
+      "questionText": "a)\n\n \n\nSolve:\n\n \n\n\n\nb)\n\n \n\nMultiply 0.03858 by 0.02, leaving the answer in standard form.\n\nc)\n\n \n\nA cylindrical container of height 28 cm and diameter 18 cm is filled with water. The water is then poured into another container with a rectangular base of length 27 cm and width 11 cm. Calculate the depth of the water in the container. (Take π = 22⁄7)",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2020",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2020 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2020",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2020_q5",
+      "questionText": "a)\n\n \n\nIf 11y = (18)2-(15)2, find the value of y.\n\nb)\n\n \n\nFind the perimeter of a circle with radius 35 cm. (Take π = 22⁄7)\n\nc)\n\n \n\nGiven that\n\n \n\n\n\ni)\n\n \n\nmake r the subject of the relation\n\nii)\n\n \n\nfind the value of r when s = 117, m = 2 and n = -3.",
+      "questionNumber": 5,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2020",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2020 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2020",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2021_q3",
+      "questionText": "(a)\n\n \n\nIf r =\n\n \n\n\n\n \n\nand m =\n\n \n\n\n\n \n\n, find p given p = r - m.\n\n(b)\n\n \n\nThe sum of two numbers is 81. If the second number is twice the first, find the second number\n\n(c)\n\n \n\nThe floor of a rectangular hall is of length 9 m and width 4 m. How many tiles of 20 cm by 30 cm can be used to cover the floor completely.",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2021",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2021 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2021",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2022_q4",
+      "questionText": "(a)\n\n \n\nFred is (x - 1) years old now. How old:\n\n(i)\n\n \n\nwas he 4 years ago?\n\n(ii)\n\n \n\nwill he be 8 years from now?\n\n(iii)\n\n \n\nis he now, if his age in 8 years time will be three times his age 4 years ago?\n\n(b)\n\n \n\nThe perimeter of a rectangular cocoa from is 497 km. The length of the farm is 21⁄2 times the width. Find the:\n\n(i)\n\n \n\nwidth;\n\n(ii)\n\n \n\nlength of the farm.",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2022",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2022 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2022",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2024_q1",
+      "questionText": "(a)\n\n \n\nA fair die and a fair coin are thrown together once.\n\n(i)\n\n \n\nWrite down the set of all possible outcomes.\n\n(ii)\n\n \n\nFind the probability of obtaining a prime number and a tail.\n\n(b)\n\n \n\nThe map of a field is drawn to a scale of 1 : 100. If the width and area of the field on the map are 8 cm and 88 cm2 respectively, find in m2, the area of the actual field.\n\n(c)\n\n \n\nCopy and complete the 3 x 3 magic square such that the sum of the numbers in each row, column and diagonal is equal to 21.",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2024",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2024 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2024_q4",
+      "questionText": "(a)\n\n \n\nUsing a ruler and a pair of compasses only, construct ∆PQR such that angle PQR = 90°, |PQ| = 5.5 cm and |QR| = 8 cm.\n\n(b)\n\n \n\nConstruct a perpendicular of PR from Q.\n\n(c)\n\n \n\nLocate M, the intersection of the perpendicular and PR.\n\n(d)\n\n \n\nMeasure:\n\n(i)\n\n \n\n|MR|;\n\n(ii)\n\n \n\n|QM|.\n\n(e)\n\n \n\nCalculate, correct to the nearest whole number, the area of triangle QMR.",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2024",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2024 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2024_q8",
+      "questionText": "m2 respectively.\n\nFind the area covered by Roads and Walkways altogether.",
+      "questionNumber": 8,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2024",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2024 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "u6HPOmps6xL6rrVSv1CZ",
+      "year": "1991",
+      "subject": "mathematics",
+      "questionNumber": 26,
+      "questionText": "The circumference of a circular track is 440 m. Find the diameter of this track. [Take π = 22 7 ]",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479568,
+        "_nanoseconds": 372000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1991"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 70 m",
+        "B. 140 m",
+        "C. 280 m",
+        "D. 690 m",
+        "E. 1400 m"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487077,
+        "_nanoseconds": 776000000
+      }
+    },
+    {
+      "id": "uDudv225tBDSggfaSx6n",
+      "year": "1990",
+      "subject": "mathematics",
+      "questionNumber": 24,
+      "questionText": "In triangle XYZ, |XZ| = 13 cm, |XY| = 12 cm and angle XYZ = 90°. Find |YZ| if the area of the triangle is 30 cm2.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479539,
+        "_nanoseconds": 611000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1990"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 25 cm",
+        "B. 14 cm",
+        "C. 12.5 cm",
+        "D. 5 cm",
+        "E. 1 cm"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487076,
+        "_nanoseconds": 950000000
+      }
+    },
+    {
+      "id": "xjStvrOjH32uzAZbuWnN",
+      "year": "2011",
+      "subject": "mathematics",
+      "questionNumber": 16,
+      "questionText": "Find the area of a square, if its perimeter is 28 cm.",
+      "options": [
+        "A. 784 cm2",
+        "B. 196 cm2",
+        "C. 49 cm2",
+        "D. 14 cm2"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480308,
+        "_nanoseconds": 780000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2011"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 125000000
+      }
+    },
+    {
+      "id": "yZPxUI0rYuNTydwCXLSe",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 34,
+      "questionText": "The area of a rectangle is 18 cm2 . One of its sides is 9 cm long. Find its perimeter.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480092,
+        "_nanoseconds": 96000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 11 cm",
+        "B. 18 cm",
+        "C. 22 cm",
+        "D. 36 cm",
+        "E. 54 cm"
+      ],
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 59000000
+      }
+    },
+    {
+      "id": "z4g4bZspxezDvU0qXpvH",
+      "year": "1990",
+      "subject": "mathematics",
+      "questionNumber": 35,
+      "questionText": "The area of a square is 49 cm2 . Find the perimeter of the square. A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479548,
+        "_nanoseconds": 259000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1990"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 7 cm",
+        "B. 14 cm",
+        "C. 28 cm",
+        "D. 49 cm",
+        "E. 196 cm"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487076,
+        "_nanoseconds": 950000000
+      }
+    },
+    {
+      "id": "zfpo5hT082p0vbbfW5tw",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 31,
+      "questionText": "The volume of a cube is 27 cm3. Find the area of one of its faces.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479592,
+        "_nanoseconds": 370000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 3 cm2",
+        "B. 6 cm2",
+        "C. 9 cm2",
+        "D. 18 cm2",
+        "E. 54 cm2"
+      ],
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487078,
+        "_nanoseconds": 582000000
+      }
+    },
+    {
+      "id": "zoXZTJPG4rAoUVsSUSEz",
+      "year": "2018",
+      "subject": "mathematics",
+      "questionNumber": 22,
+      "questionText": "The volume of a cylinder is 20 π cm3. If the height of the cylinder is 5 cm, find the base radius.",
+      "options": [
+        "A. 1 cm",
+        "B. 2 cm",
+        "C. 3 cm",
+        "D. 4 cm"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480472,
+        "_nanoseconds": 374000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2018"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2018_q22_img22.jpg",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542235,
+        "_nanoseconds": 288000000
+      }
+    }
+  ],
+  "questionCount": 115
+}

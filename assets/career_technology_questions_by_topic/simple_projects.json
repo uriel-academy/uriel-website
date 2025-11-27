@@ -1,0 +1,40 @@
+{
+  "topic": "Simple Projects",
+  "questions": [
+    {
+      "id": "career_technology_2024_q29",
+      "questionText": "A Career Technology student needs to construct a chair for use. It is important to take accurate measurement of the various parts before cutting to sizes in order to",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 29,
+      "options": [
+        "A. avoid wastage of material.",
+        "B. improve beauty of the chair.",
+        "C. make it strong.",
+        "D. obtain a unique design."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 29 from the 2024 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2024"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    }
+  ],
+  "questionCount": 1
+}

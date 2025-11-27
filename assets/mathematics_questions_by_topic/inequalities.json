@@ -1,0 +1,1606 @@
+{
+  "topic": "Inequalities",
+  "questions": [
+    {
+      "id": "2474w0o0Sj0JOfmHyb8g",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 19,
+      "questionText": "Solve the inequality 3(x – 1) ≤ 12",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480083,
+        "_nanoseconds": 660000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. x ≤ -5",
+        "B. x ≤ -3",
+        "C. x ≤ 3",
+        "D. x ≤ 5",
+        "E. x ≤ 13 3"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 59000000
+      }
+    },
+    {
+      "id": "2WQK5VR8Tn93l5V18edI",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 8,
+      "questionText": "By how much is 5 6 greater than 3 4 ?",
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480077,
+        "_nanoseconds": 560000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1 12",
+        "B. 1 6",
+        "C. 5 12",
+        "D. 2 3",
+        "E. 4 5"
+      ],
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 59000000
+      }
+    },
+    {
+      "id": "4ta9y86WtNT3CcDWwd4i",
+      "year": "2025",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "Solve: 3(x - 5) > 15 - 4(8 - x).",
+      "options": [
+        "A. x > -32",
+        "B. x > -2",
+        "C. x > 2",
+        "D. x > 32"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482532,
+        "_nanoseconds": 401000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2025"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487105,
+        "_nanoseconds": 685000000
+      }
+    },
+    {
+      "id": "5rCLqJidGyy4VfG51dcQ",
+      "year": "2020",
+      "subject": "mathematics",
+      "questionNumber": 35,
+      "questionText": "Solve: 3 - (3x+4) ≤ -4",
+      "options": [
+        "A. x ≤ 1",
+        "B. x ≥ 1",
+        "C. x ≥ 1⅔",
+        "D. x < 1½"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480525,
+        "_nanoseconds": 477000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2020"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487101,
+        "_nanoseconds": 629000000
+      }
+    },
+    {
+      "id": "61NK2O2upjwCoS0qCV5P",
+      "year": "1997",
+      "subject": "mathematics",
+      "questionNumber": 33,
+      "questionText": "Find the truth set of 5x – 8 ≤ 2x + 4.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480001,
+        "_nanoseconds": 438000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1997"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. {x ≥ 4}",
+        "B. {x ≥ -4}",
+        "C. {x ≤ 4}",
+        "D. {x ≤ -4}",
+        "E. {x = 4}"
+      ],
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487082,
+        "_nanoseconds": 727000000
+      }
+    },
+    {
+      "id": "9Er1xFzXV2nhO3sWDagB",
+      "year": "2022",
+      "subject": "mathematics",
+      "questionNumber": 4,
+      "questionText": "Solve: 5x - (7x - 3) ≤ 9.",
+      "options": [
+        "A. x ≥ -3",
+        "B. x ≤ -3",
+        "C. x ≥ -6",
+        "D. x ≤ 3"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480553,
+        "_nanoseconds": 539000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2022"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2022_q4_img4.jpg",
+      "updatedAt": {
+        "_seconds": 1763542270,
+        "_nanoseconds": 376000000
+      }
+    },
+    {
+      "id": "AS1YwNPO1P0QLica5Cu1",
+      "year": "1995",
+      "subject": "mathematics",
+      "questionNumber": 11,
+      "questionText": "Solve 4x – 6 < -2",
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479735,
+        "_nanoseconds": 378000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1995"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. x < 1",
+        "B. x > 1",
+        "C. x < -1",
+        "D. x > -1",
+        "E. x < 4"
+      ],
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 77000000
+      }
+    },
+    {
+      "id": "AtuCQyScKvNclP4cwvSu",
+      "year": "2014",
+      "subject": "mathematics",
+      "questionNumber": 36,
+      "questionText": "Solve the inequality 2x + 10 ≥ 7x 2 - 5",
+      "options": [
+        "A. x ≤ 10",
+        "B. x ≥ 10",
+        "C. x ≤ 40",
+        "D. x ≥ 40"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480388,
+        "_nanoseconds": 930000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2014"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487096,
+        "_nanoseconds": 588000000
+      }
+    },
+    {
+      "id": "AzGUcFxKeJElOddTLNlS",
+      "year": "2016",
+      "subject": "mathematics",
+      "questionNumber": 23,
+      "questionText": "Solve the inequality 2x + 10 ≥ 7 2 x - 5.",
+      "options": [
+        "A. x ≥ 10",
+        "B. x ≤ 10",
+        "C. x ≤ 40",
+        "D. x ≥ 40"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480427,
+        "_nanoseconds": 41000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2016"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487098,
+        "_nanoseconds": 192000000
+      }
+    },
+    {
+      "id": "B2WEVfniAOYfxDAzZgPi",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 19,
+      "questionText": "Which of the following inequalities is shown on the number line above, where p is a real number?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479586,
+        "_nanoseconds": 24000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. p ≥ 2",
+        "B. p > 2",
+        "C. p = 2",
+        "D. p ≤ 2",
+        "E. p < 2"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487078,
+        "_nanoseconds": 582000000
+      }
+    },
+    {
+      "id": "FdicKTOiCkrV7X87KdsL",
+      "year": "2021",
+      "subject": "mathematics",
+      "questionNumber": 11,
+      "questionText": "Solve: (1-x)÷3 < 4.",
+      "options": [
+        "A. x < -11",
+        "B. x > -11",
+        "C. x < 11",
+        "D. x >11"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480534,
+        "_nanoseconds": 644000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2021"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2021_q11_img11.jpg",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542260,
+        "_nanoseconds": 600000000
+      }
+    },
+    {
+      "id": "HsquOic3E9rnLQP6QDhh",
+      "year": "2000",
+      "subject": "mathematics",
+      "questionNumber": 8,
+      "questionText": "Which of the following inequalities is represented by the number line?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480054,
+        "_nanoseconds": 982000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2000"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. x ≤ -3",
+        "B. x ≥ -3",
+        "C. x < -3",
+        "D. x > -3",
+        "E. x = -3"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2000_q8_img8.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542164,
+        "_nanoseconds": 138000000
+      }
+    },
+    {
+      "id": "Ne1oJCLUZYOtHuKFF4Uo",
+      "year": "1996",
+      "subject": "mathematics",
+      "questionNumber": 38,
+      "questionText": "Find the solution set of 2x + 4 > -6",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479981,
+        "_nanoseconds": 653000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1996"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. {x = -5}",
+        "B. {x < 5}",
+        "C. {x > 5}",
+        "D. {x < -5}",
+        "E. {x > -5}"
+      ],
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 915000000
+      }
+    },
+    {
+      "id": "PT07Py2BINLormV7upp5",
+      "year": "1993",
+      "subject": "mathematics",
+      "questionNumber": 3,
+      "questionText": "If x = {1, 3, 5, 7, 9, 11, 13, 15}, find the truth set of x – 3 ≥ 10.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479598,
+        "_nanoseconds": 952000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1993"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. {15}",
+        "B. {13,15}",
+        "C. {11,13,15}",
+        "D. {9,11,13,15}",
+        "E. {7,9,11,13,15}"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1993_q3_img3.png",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542122,
+        "_nanoseconds": 182000000
+      }
+    },
+    {
+      "id": "TWG6DweKzwZV6jsXMFOl",
+      "year": "1994",
+      "subject": "mathematics",
+      "questionNumber": 6,
+      "questionText": "If x = {1, 2, 3, 4, 5}, find the truth set of 2x + 1 < 7",
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479621,
+        "_nanoseconds": 845000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1994"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. {1, 2}",
+        "B. {2, 3}",
+        "C. {1, 2, 3}",
+        "D. {3}",
+        "E. {2}"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1994_q6_img6.png",
+      "updatedAt": {
+        "_seconds": 1763542130,
+        "_nanoseconds": 517000000
+      }
+    },
+    {
+      "id": "VenjM3LY7vkxfotWJdek",
+      "year": "2004",
+      "subject": "mathematics",
+      "questionNumber": 6,
+      "questionText": "Which of the following numbers is the next prime number greater than 23 ?",
+      "options": [
+        "A. 17",
+        "B. 24",
+        "C. 25",
+        "D. 29"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480143,
+        "_nanoseconds": 980000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2004"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487088,
+        "_nanoseconds": 551000000
+      }
+    },
+    {
+      "id": "cj6SbMDBaKW2s2Ttthys",
+      "year": "2004",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "Solve for x, if 1 2 x - 4x > 20",
+      "options": [
+        "A. x < -13 1 3",
+        "B. x< -5 5 7",
+        "C. x > 5 5 7",
+        "D. x > 13 1 3"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480156,
+        "_nanoseconds": 322000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2004"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487088,
+        "_nanoseconds": 551000000
+      }
+    },
+    {
+      "id": "exfcwEziOGJZdM5RoJxO",
+      "year": "1997",
+      "subject": "mathematics",
+      "questionNumber": 2,
+      "questionText": "P = {2, 4, 6, 8} and Q = {even counting numbers less than 12}. What is the relationship between P and Q?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479984,
+        "_nanoseconds": 96000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1997"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. P = Q",
+        "B. P ⊂ Q",
+        "C. P < Q",
+        "D. Q ⊂ P",
+        "E. P ∈ Q"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1997_q2_img2.png",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542148,
+        "_nanoseconds": 693000000
+      }
+    },
+    {
+      "id": "fZDw77KSMbq4IOYP51zj",
+      "year": "2017",
+      "subject": "mathematics",
+      "questionNumber": 19,
+      "questionText": "Solve 25x + 450 ≤ 3000.",
+      "options": [
+        "A. x ≥ 102",
+        "B. x ≤ 102",
+        "C. x ≥ 138",
+        "D. x ≤ 138"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480447,
+        "_nanoseconds": 636000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2017"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2017_q19_img19.jpg",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542216,
+        "_nanoseconds": 674000000
+      }
+    },
+    {
+      "id": "j4ysV7I2DrUMLLeUu9PE",
+      "year": "2007",
+      "subject": "mathematics",
+      "questionNumber": 14,
+      "questionText": "Solve the inequality 3x + 6 ≤ 5x - 2.",
+      "options": [
+        "A. x ≤ 2",
+        "B. x ≥ 2",
+        "C. x ≤ 4",
+        "D. x ≥ 4"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480216,
+        "_nanoseconds": 574000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2007"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 958000000
+      }
+    },
+    {
+      "id": "jvht2WVVxso10ya8o0Ap",
+      "year": "1993",
+      "subject": "mathematics",
+      "questionNumber": 11,
+      "questionText": "Which of the following inequalities is / are true? I: 5 6 > 3 4 II: 3 4 > 3 5 III: 3 8 > 1 2 .",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479603,
+        "_nanoseconds": 112000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1993"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. I only",
+        "B. II only",
+        "C. III only",
+        "D. I and II only",
+        "E. I and III only"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487079,
+        "_nanoseconds": 424000000
+      }
+    },
+    {
+      "id": "npMOwP4XGjkzkbT8PHfk",
+      "year": "2018",
+      "subject": "mathematics",
+      "questionNumber": 36,
+      "questionText": "Solve the inequality: 1 2 (3x - 1) + 1 ≤ 7 + 2x.",
+      "options": [
+        "A. x ≥ -14",
+        "B. x ≤ -14",
+        "C. x ≥ -13",
+        "D. x ≤ -13"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480480,
+        "_nanoseconds": 392000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2018"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487099,
+        "_nanoseconds": 837000000
+      }
+    },
+    {
+      "id": "nw7UvCQLPz8D1wkQcZff",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 23,
+      "questionText": "Solve the inequality: 7x - (10x + 3) ≥ -9",
+      "options": [
+        "A. x ≥ 2",
+        "B. x ≤ 4",
+        "C. x ≥ 4",
+        "D. x ≤ 2"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480289,
+        "_nanoseconds": 974000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487093,
+        "_nanoseconds": 318000000
+      }
+    },
+    {
+      "id": "oyV6ZiCp8uP7b6Vfq5OQ",
+      "year": "1990",
+      "subject": "mathematics",
+      "questionNumber": 31,
+      "questionText": "Which of the following inequalities is represented on the number line, where n is a real number?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479545,
+        "_nanoseconds": 77000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1990"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. n ≥ -3",
+        "B. n < -3",
+        "C. n ≤ -3",
+        "D. n > -3",
+        "E. n = 3"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487076,
+        "_nanoseconds": 950000000
+      }
+    },
+    {
+      "id": "pGYv4DHX9vvVZhgUUUra",
+      "year": "2011",
+      "subject": "mathematics",
+      "questionNumber": 15,
+      "questionText": "Solve the inequality x - 1 3 ≥ 2 3 - x.",
+      "options": [
+        "A. x ≤ 1 2",
+        "B. x ≤ 2 3",
+        "C. x ≥ 1 2",
+        "D. x ≥ 2 3"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480308,
+        "_nanoseconds": 246000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2011"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 125000000
+      }
+    },
+    {
+      "id": "qqQk9OSRPBvoBeLyYlUg",
+      "year": "1999",
+      "subject": "mathematics",
+      "questionNumber": 38,
+      "questionText": "Given the relation 1 y = 1 c + 1 x . Which of the following expressions is equal to y? A.  p>c + x",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480049,
+        "_nanoseconds": 139000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1999"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "B. 2 cx",
+        "C. c + x 2",
+        "D. cx c + x",
+        "E. c + x cx"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487084,
+        "_nanoseconds": 387000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1992_q1",
+      "questionText": "(a)\n\n \n\nSolve 5 – 2x > x + 2, where x is a real number.\n\nIllustrate your result on the number line.\n\n(b)\n\n \n\nFind the truth set of the equation:",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1992",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1992 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1992",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1994_q1",
+      "questionText": "(a)\n\n \n\nMultiply (a – b) by (2b – a)\n\n(b)\n\n \n\nFind the truth set of 2x – 6 ≤ 5 (3 – x).\n\nIllustrate your answer on a number line.\n\n(c)\n\n \n\nGiven that u = \n\n(\n\n-2",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1994",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1994 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1994",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1997_q1",
+      "questionText": "(a)\n\n \n\nIf p = 4, a = 16, b = -5 and c = 3, evaluate p2 - \n\n(a - b)\n\nc\n\n(b)\n\n \n\nSolve the inequality 5x – 3(x – 1) ≥ 39. Illustrate your answer on the number line.\n\n(c)\n\n \n\nIf x = \n\n(\n\n-3",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1997",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1997 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1997",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1998_q1",
+      "questionText": "(a)\n\n \n\nSimplify the expression 3x2 + 6xy – 3y2 + 4x2 + 8xy + 2y2\n\n(b)\n\n \n\n(i)\n\n \n\nSolve 3x – 9 ≥ 12 (x – 3)\n\n(ii)\n\n \n\nIllustrate your answer on the number line.\n\n(c)\n\n \n\nIf p = 7, a = 16, b = 4 and c = 3, evaluate p2 - \n\n(a - b)\n\nc",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1998",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1998 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1998",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1999_q2",
+      "questionText": "(a)\n\n \n\nSolve the inequality \n\n2x - 1",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1999",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1999 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1999",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2001_q1",
+      "questionText": "(a)\n\n \n\nM is a set consisting of all positive integers between 1 and 10. P and Q are subsets of M such that P = {factors of 6}, Q = {multiples of 2}\n\n(i)\n\n \n\nList the elements of M, P and Q\n\n(ii)\n\n \n\nRepresent M, P and Q on a Venn diagram\n\n(iii)\n\n \n\nFind P ∩ Q\n\n(b)\n\n \n\n(i)\n\n \n\nSolve the inequality \n\n2x - 2",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2001",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2001 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2001",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2002_q4",
+      "questionText": "< 2\n\n(b)\n\n \n\n(i)\n\n \n\nCopy and complete the table of values for he relation, y = 2x + 1\n\nx\n\n-3\n\n-2\n\n-1",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2002",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2002 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2002",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2017_q5",
+      "questionText": "a\n\n \n\nUsing a scale of 2 cm to 1 unit on both axes, draw on a graph sheet two perpendicular axes 0x and 0y for -5 ≤ x ≤ 5 and -5 ≤ y ≤ 5.\n\ni\n\n \n\nPlot, indicating the coordinates of all perpendicular points A(2,3) and B(-3,4). Draw a straight line passing through the points A and B.\n\nii\n\n \n\nPlot on the same graph sheet, indicating the coordinates of the points C(4,2) and D(-2,-3). Draw a straight line passing through the points to meet line AB.\n\nb\n\n \n\nUsing the graphs in (a):\n\ni\n\n \n\nfind the values of y when x = -2;\n\nii\n\n \n\nmeasure the angle between the lines AB and CD.",
+      "questionNumber": 5,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2017",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2017 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2017",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2017_q9",
+      "questionText": "-12\n\n)\n\n, find the:\n\ni\n\n \n\nvalues of x and y;\n\nii\n\n \n\ncomponents of m.\n\nb\n\n \n\ni\n\n \n\nSolve the inequality:",
+      "questionNumber": 9,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2017",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2017 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2017",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2018_q6",
+      "questionText": "a\n\n \n\nAn aeroplane left the Kotoka International Airport on Wednesday at 7:26 pm and reached its destination after nine hours thirty minutes. Find the day and the time the aeroplane reached its destination.\n\nb\n\n \n\ni\n\n \n\nUsing a scale of 2 cm to 2 units on both axes, draw two perpendicular axes 0x and 0y on a graph sheet for -10 ≤ x ≤ 10 and -12 ≤ y ≤ 12.\n\nii\n\n \n\nDraw on this graph indicating the coordinates of all vertices, the quadrilateral ABCD with vertices A(0,10),B(-6,-2),C(-3,-11) and D(4,3).\n\niii\n\n \n\nDraw the line x = -2 to meet AB at P and CD at Q.\n\niv\n\n \n\nMeasure angles BPQ and PQD.\n\nv\n\n \n\nState the relationship between:\n\nα\n\n \n\nangles BPQ and PQD;\n\nβ\n\n \n\nlines AB and CD.",
+      "questionNumber": 6,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2018",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2018 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2018",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2019_q12",
+      "questionText": "The mapping shows the relationship between x and y.\n\ni)\n\n \n\nusing a scale of 2 cm to 1 unit on the x-axis and 2 cm to 2 units on the y-axis, draw two perpendicular axes 0x and 0y on a graph sheet for 1 ≤ x ≤ 5 and 0 ≤ x ≤ 14;\n\nii)\n\n \n\nplot the point for each ordered pair, (x, y).\n\niii)\n\n \n\njoin the points with a straight line;\n\niv)\n\n \n\nusing the graph, find the gradient of the line in (a)(iii);\n\nv)\n\n \n\nuse the graph to find the equation of the line in (a)(iii).\n\nb\n\n \n\nSimplify: 32 x 8 x 4 x 2, leaving the answer in the form 2n",
+      "questionNumber": 12,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2019",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2019 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2019",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2020_q39",
+      "questionText": "i)\n\n \n\nUsing a scale of 2 cm to 1 unit on the x - axis to 10 units in the y - axis, draw on a graph sheet two perpendicular axes ox and oy.\n\nii)\n\n \n\nUsing the table, plot all the points of the relation y = 12x - 9 on the graph.\n\niii)\n\n \n\nDraw a straight line through the points.\n\niv)\n\n \n\nUse the graph to find:\n\n(α) y when x = 2.5;\n\n(β) x when y = 10.\n\nb)\n\n \n\nList the integers within the interval 7 < x ≤ 14",
+      "questionNumber": 39,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2020",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2020 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2020",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2022_q1",
+      "questionText": "-3\n\n(b)\n\n \n\nUsing a scale of 2 cm to 1 unit on th x-axis and 2 cm to 2 units on the y-axis, draw on a graph sheet two perpendicular axes ox and oy for -5 ≤ x ≤ 5 and -12 ≤ y ≤ 12.\n\n(c)\n\n \n\n(i)\n\n \n\nUsing the table, plot all the points of the relation y = 5 - 2x.\n\n(ii)\n\n \n\nDraw a straight line through all the points.\n\n(d)\n\n \n\nUsing the graph, find the:\n\n(i)\n\n \n\nvalue of y when x = -2.6;\n\n(ii)\n\n \n\nvalue of x when y = -2.8;\n\n(iii)\n\n \n\ngradient of the line.",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2022",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2022 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2022",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2022_q6",
+      "questionText": "(a)\n\n \n\nCopy and complete the table for the relation y = 5 - 2x for -3 ≤ x ≤ 4.\n\nx\n\n-3\n\n-2\n\n-1",
+      "questionNumber": 6,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2022",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2022 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2022",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2025_q1",
+      "questionText": "(a)\n\n \n\nGiven that P = {multiples of 3} and Q = {positive even numbers} are subsets of µ = {x: 1 ≤ x ≤ 20, where x is a counting number}:\n\n(i)\n\n \n\nList the elements in P ∩ Q;\n\n(ii)\n\n \n\nList all the subsets in P ∩ Q.\n\n(b)\n\n \n\nIf",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2025",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2025 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2025",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "wWg4IhuHqTPgg5bGqQLx",
+      "year": "2023",
+      "subject": "mathematics",
+      "questionNumber": 10,
+      "questionText": "Solve: 3(x - 2) - x 3 + 6 > 0.",
+      "options": [
+        "A. x < 0",
+        "B. x > 0",
+        "C. x > 3",
+        "D. x > 1 8"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482467,
+        "_nanoseconds": 919000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2023"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 62000000
+      }
+    },
+    {
+      "id": "wrCEEj89NRcKSSAhfpb8",
+      "year": "2022",
+      "subject": "mathematics",
+      "questionNumber": 32,
+      "questionText": "What is the probability that a number greater than 5 shows up when a die is thrown?",
+      "options": [
+        "A. 5/6",
+        "B. 1/6",
+        "C. 2/3",
+        "D. 1/3"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480569,
+        "_nanoseconds": 535000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2022"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487103,
+        "_nanoseconds": 234000000
+      }
+    }
+  ],
+  "questionCount": 43
+}

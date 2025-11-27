@@ -1,0 +1,4629 @@
+{
+  "topic": "Rule of Law",
+  "totalQuestions": 153,
+  "questions": [
+    {
+      "id": "social_studies_1990_q26",
+      "questionText": "The president of the Aborigine Rights Protection Society was",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 26,
+      "options": [
+        "A. John Sey",
+        "B. James Kwegyir Aggrey",
+        "C. John Mensah Sarbah",
+        "D. Sir Arku Korsah",
+        "E. Nana Sir William Ofori Atta I"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 26 from the 1990 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1992_q35",
+      "questionText": "Who are often called Peace Officers?",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 35,
+      "options": [
+        "A. Soldiers",
+        "B. Policemen",
+        "C. Lawyers",
+        "D. Doctors",
+        "E. Teachers"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 35 from the 1992 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1993_q30",
+      "questionText": "The 1979 Constitution of Ghana was the",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 30,
+      "options": [
+        "A. first after independence",
+        "B. second after independence",
+        "C. third after independence",
+        "D. fourth after independence",
+        "E. fifth after independence"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 30 from the 1993 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1993_q35",
+      "questionText": "Which of the following African countries is a leading producer of cotton?",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 35,
+      "options": [
+        "A. Kenya",
+        "B. Malawi",
+        "C. Egypt",
+        "D. Zambia",
+        "E. Uganda"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 35 from the 1993 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1993_q40",
+      "questionText": "The UNO has all the following aims except",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 40,
+      "options": [
+        "A. maintenance of international peace and security",
+        "B. development of friendly relations among nations",
+        "C. removal of unpopular heads of states of member countries",
+        "D. solving international problems",
+        "E. promotion of respect for human rights"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 40 from the 1993 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1994_q26",
+      "questionText": "The International Court of Justice is based in",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 26,
+      "options": [
+        "A. Paris",
+        "B. New York",
+        "C. The Hague",
+        "D. London",
+        "E. Rome"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 26 from the 1994 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1994_q40",
+      "questionText": "The main duty of the police service is to",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 40,
+      "options": [
+        "A. Collect debts for creditors",
+        "B. Maintain law and order",
+        "C. Arrest and judge thieves",
+        "D. Protect national property",
+        "E. Check drug abuse"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 40 from the 1994 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1995_q24",
+      "questionText": "The Poll Tax Ordinance failed because the",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 24,
+      "options": [
+        "A. chiefs did not agree with the British to levy tax",
+        "B. people had no money to pay the tax",
+        "C. British used the money to support the Asantes against the Fantes",
+        "D. tax was too high for the people",
+        "E. chiefs did not inform their people about the levy before the law was passed"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 24 from the 1995 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1995_q34",
+      "questionText": "Who was the first Ghanaian chief justice?",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 34,
+      "options": [
+        "A. Sir Arku Korsah",
+        "B. Dr. JB Danquah",
+        "C. Justice Apaloo",
+        "D. R.A.C Crabbe",
+        "E. Mr William Ofori-Atta"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 34 from the 1995 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1995_q39",
+      "questionText": "At the United Nations Organization, veto power is used by the",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 39,
+      "options": [
+        "A. International Court of Justice",
+        "B. Food and Agricultural Organization",
+        "C. Permanent Members of the Security Council",
+        "D. General Assembly",
+        "E. Secretary General"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 39 from the 1995 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1996_q36",
+      "questionText": "The United Nations Organization has all the following is its aims except to",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 36,
+      "options": [
+        "A. maintain international peace and security",
+        "B. promote friendliness among nations",
+        "C. remove all unpopular Heads of States of member countries",
+        "D. promote international economic development",
+        "E. promote respect for human rights"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 36 from the 1996 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1997_q28",
+      "questionText": "The Poll tax ordinance failed because the",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 28,
+      "options": [
+        "A. chiefs did not agree with the British to levy tax",
+        "B. people had no money to pay the tax",
+        "C. British used the money to support the Asantes against the Fantes",
+        "D. tax was too high for the people",
+        "E. chiefs did not inform their people about the levy before the law was passed"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 28 from the 1997 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1997_q34",
+      "questionText": "Laws for the country are made by",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 34,
+      "options": [
+        "A. the President",
+        "B. Parliament",
+        "C. Supreme Court",
+        "D. District Assembly",
+        "E. the Attorney-General"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 34 from the 1997 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1997_q4",
+      "questionText": "The main duty of the police in a community is to",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 4,
+      "options": [
+        "A. arrest criminals",
+        "B. terrorize little children",
+        "C. direct traffic",
+        "D. settle disputes",
+        "E. keep law and order"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 4 from the 1997 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1998_q10",
+      "questionText": "A set of rules that protects the lives of the people and shows how a nation should be governed is known as",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 10,
+      "options": [
+        "A. conventions",
+        "B. constitution",
+        "C. rules",
+        "D. regulations",
+        "E. customs"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 10 from the 1998 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1998_q34",
+      "questionText": "The head of the judiciary in Ghana is the",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 34,
+      "options": [
+        "A. President",
+        "B. Attorney-General",
+        "C. Speaker of Parliament",
+        "D. Chief Justice",
+        "E. Auditor General"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 34 from the 1998 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1999_q21",
+      "questionText": "Who is the head of the judiciary in Ghana?",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 21,
+      "options": [
+        "A. the Speaker of Parliament",
+        "B. the President",
+        "C. the Chief Justice",
+        "D. the Vice President",
+        "E. the Attorney-General"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 21 from the 1999 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1999_q22",
+      "questionText": "Maintenance of law and order in the village community is enforced by",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 22,
+      "options": [
+        "A. an assemblyman",
+        "B. District Chief Executive",
+        "C. Unit Committee elders",
+        "D. chiefs and elders",
+        "E. pastors"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 22 from the 1999 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1999_q23",
+      "questionText": "Foreigners in Ghana enjoy all the following rights except that of",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 23,
+      "options": [
+        "A. expression",
+        "B. worship",
+        "C. voting",
+        "D. association",
+        "E. marriage"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 23 from the 1999 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1999_q33",
+      "questionText": ". The main organ of the United Nations Organizations (UNO) is the",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 33,
+      "options": [
+        "A. General Assembly",
+        "B. Economic and Social Council",
+        "C. International Court of Justice",
+        "D. Security Council",
+        "E. Secretariat"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 33 from the 1999 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2000_q24",
+      "questionText": "The Aborigines Rights Protection Society was formed in 1897 to",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 24,
+      "options": [
+        "A. protect the property of the local people",
+        "B. educate the people on how to vote",
+        "C. protect the people from invasion",
+        "D. give the people the license to trade",
+        "E. register the people for the purpose of taxation"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 24 from the 2000 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2000_q40",
+      "questionText": "The administrative body of the United Nations Organization (UNO) is the",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 40,
+      "options": [
+        "A. Security Council",
+        "B. International Court of Justice",
+        "C. General Assembly",
+        "D. Economic and Social Council",
+        "E. Secretariat"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 40 from the 2000 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2001_q16",
+      "questionText": "Which of the following is not a function of the Police Service ?",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 16,
+      "options": [
+        "A. Arresting criminals",
+        "B. Controlling traffic",
+        "C. Maintaining peace",
+        "D. Judging cases in court",
+        "E. Patrolling the streets at night"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 16 from the 2001 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2001_q28",
+      "questionText": "Which of the following is not an organ of the United Nations Organization (UNO)",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 28,
+      "options": [
+        "A. The General Assembly",
+        "B. The Secretariat",
+        "C. The Security Council",
+        "D. The International Labour Organization",
+        "E. The International Court of Justice"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 28 from the 2001 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2002_q19",
+      "questionText": "The secretary of the Aborigines Rights Protection Society was",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 19,
+      "options": [
+        "A. John Sey",
+        "B. Mensah Sarbah",
+        "C. James Kwegyir Aggrey",
+        "D. Sir Arko Korsah"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 19 from the 2002 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2004_q14",
+      "questionText": "If Musah wants a new law to be made against armed robbery whom will he contact?",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 14,
+      "options": [
+        "A. A Judge",
+        "B. A Parliamentarian",
+        "C. The Police",
+        "D. The President"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 14 from the 2004 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2004_q15",
+      "questionText": "The constitution of a country is endorsed by the people through",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 15,
+      "options": [
+        "A. census",
+        "B. acclamation",
+        "C. a referendum",
+        "D. bye-election"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 15 from the 2004 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2004_q18",
+      "questionText": "The principle of separation of powers prevents",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 18,
+      "options": [
+        "A. ethnic conflicts",
+        "B. coalition governments",
+        "C. dictatorial governments",
+        "D. political associations"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 18 from the 2004 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2004_q39",
+      "questionText": "The Chief Justice of Britain who made the slave trade illegal was",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 39,
+      "options": [
+        "A. Fowell Buxton",
+        "B. Granville Sharp",
+        "C. Lord Mansfield",
+        "D. William Wilberforce"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 39 from the 2004 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2005_q14",
+      "questionText": "Which of the following are rights of a citizen in Ghana?I. Protection of one's lifeII. Payment of taxesIII. Protection of public propertyIV. Personal liberty",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 14,
+      "options": [
+        "A. I and II only",
+        "B. I and III only",
+        "C. I and IV only",
+        "D. II and III only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 14 from the 2005 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2005_q15",
+      "questionText": "At the district level, an assemblyman is equivalent to a",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 15,
+      "options": [
+        "A. minister",
+        "B. judge",
+        "C. parliamentarian",
+        "D. lawyer"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 15 from the 2005 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2005_q20",
+      "questionText": "A bill passed by parliament becomes law when the President gives his",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 20,
+      "options": [
+        "A. accord",
+        "B. veto",
+        "C. advice",
+        "D. assent"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 20 from the 2005 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2005_q21",
+      "questionText": "A constitution is important for a country because it",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 21,
+      "options": [
+        "A. allows criminals to be detained without trial",
+        "B. serves as the basis for good governance",
+        "C. is interpreted by the judiciary",
+        "D. can be defended by the military"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 21 from the 2005 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2005_q33",
+      "questionText": "The 1992 Constitution of Ghana was given public approval through",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 33,
+      "options": [
+        "A. bye election",
+        "B. public debate",
+        "C. general election",
+        "D. referendum"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 33 from the 2005 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2005_q37",
+      "questionText": "If a person suspected of being a thief is beaten up by a mob, he is denied the right to",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 37,
+      "options": [
+        "A. speech",
+        "B. fair trial",
+        "C. work",
+        "D. life"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 37 from the 2005 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2005_q4",
+      "questionText": "A constitutional obligation which ensures peace and harmony in Ghana is for the citizens to",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 4,
+      "options": [
+        "A. arrest criminals",
+        "B. pay their taxes",
+        "C. attend communal labour",
+        "D. be law-abiding"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 4 from the 2005 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2005_q6",
+      "questionText": "Which of the following is an abuse of human rights in Ghana?",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 6,
+      "options": [
+        "A. Assisting the police during investigation",
+        "B. Freedom from arrest and detention",
+        "C. Pledging young people for money",
+        "D. Being a member of a religious group"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 6 from the 2005 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2006_q12",
+      "questionText": "If Afua Asantewaa is a judge, then she contributes to",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 12,
+      "options": [
+        "A. law making",
+        "B. interpretation of the constitution",
+        "C. land administration",
+        "D. policy formulation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 12 from the 2006 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2006_q15",
+      "questionText": "Widowhood rites practised in Ghana should be abolished because",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 15,
+      "options": [
+        "A. the widow‟s needs are not properly catered for",
+        "B. the children of the dead are not well looked after",
+        "C. they violate the rights of the widow",
+        "D. they are very costly to the bereaved family"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 15 from the 2006 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2006_q19",
+      "questionText": "A draft law is also known as",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 19,
+      "options": [
+        "A. Bill",
+        "B. Decree",
+        "C. Ordinance",
+        "D. Legislation"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 19 from the 2006 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2006_q25",
+      "questionText": "Which of the following institutions can make laws to check smuggling and armed robbery in Ghana?",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 25,
+      "options": [
+        "A. The Police Service",
+        "B. High Court",
+        "C. Parliament",
+        "D. District Assembly"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 25 from the 2006 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2006_q37",
+      "questionText": "Foreigners in Ghana enjoy all the following rights except that of",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 37,
+      "options": [
+        "A. worship",
+        "B. expression",
+        "C. voting",
+        "D. association"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 37 from the 2006 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2006_q9",
+      "questionText": "Which of the following professionals are associated with the legal system in Ghana?",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 9,
+      "options": [
+        "A. Journalists",
+        "B. Lawyers",
+        "C. Doctors",
+        "D. Accountants"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 9 from the 2006 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2007_q18",
+      "questionText": "The highest judicial officer in Ghana is the",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 18,
+      "options": [
+        "A. Chief Justice",
+        "B. Ghana Bar Association President",
+        "C. Supreme Court Judge",
+        "D. Inspector General of Police"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 18 from the 2007 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2007_q29",
+      "questionText": "Which of the following institutions of government protects the liberty and rights of the people? The",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 29,
+      "options": [
+        "A. legislature",
+        "B. police",
+        "C. executive",
+        "D. judiciary"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 29 from the 2007 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2008_q14",
+      "questionText": "A set of rules by which a country is governed is referred to as",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 14,
+      "options": [
+        "A. international law",
+        "B. bye-laws",
+        "C. constitution",
+        "D. manifesto"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 14 from the 2008 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2008_q30",
+      "questionText": "Kobine is a festival celebrated at",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 30,
+      "options": [
+        "A. Yendi",
+        "B. Lawra",
+        "C. Wa",
+        "D. Bolgatanga"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 30 from the 2008 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2008_q32",
+      "questionText": "An individual whose rights have been infringed upon seeks justice from the",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 32,
+      "options": [
+        "A. court",
+        "B. police",
+        "C. president",
+        "D. military"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 32 from the 2008 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2008_q35",
+      "questionText": "The main work of members of parliament under Ghana‟s 1992 Constitution is to",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 35,
+      "options": [
+        "A. draw a manifesto",
+        "B. execute laws",
+        "C. interpret laws",
+        "D. make laws"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 35 from the 2008 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2008_q37",
+      "questionText": "Which of the following constitutes human rights abuse?",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 37,
+      "options": [
+        "A. Child labour",
+        "B. Sex trade",
+        "C. Truancy",
+        "D. Favouritism"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 37 from the 2008 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2008_q4",
+      "questionText": "Which of the following is a duty of a citizen?",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 4,
+      "options": [
+        "A. Joining a religious group",
+        "B. Helping the Police financially",
+        "C. Paying taxes for development",
+        "D. Giving free medical care"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 4 from the 2008 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2008_q40",
+      "questionText": "Laws made by the District Assemblies are called",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 40,
+      "options": [
+        "A. bye-laws",
+        "B. decrees",
+        "C. ordinance",
+        "D. bills"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 40 from the 2008 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2008_q7",
+      "questionText": "Which of the following was established to find the causes of the 1948 riots?",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 7,
+      "options": [
+        "A. Coussey Committee",
+        "B. Justice Annan Committee",
+        "C. Watson Committee",
+        "D. Bourne Committee"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 7 from the 2008 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2009_q10",
+      "questionText": "The system by which a foreigner acquires citizenship of another country is",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 10,
+      "options": [
+        "A. registration",
+        "B. nationalization",
+        "C. adoption",
+        "D. naturalization"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 10 from the 2009 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2009_q23",
+      "questionText": "One duty of a citizen is to",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 23,
+      "options": [
+        "A. enjoy free education",
+        "B. join a religious group",
+        "C. assist the police in investigations",
+        "D. support a political party"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 23 from the 2009 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2009_q24",
+      "questionText": "The institution established under the 1992 Constitution to educate the public on their rights is the",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 24,
+      "options": [
+        "A. National Commission for Civic Education",
+        "B. National Media Commission",
+        "C. Electoral Commission",
+        "D. Commission on Human Rights and Administrative Justice (CHRAJ)"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 24 from the 2009 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2009_q25",
+      "questionText": "Which of the following constitutes human rights abuse?",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 25,
+      "options": [
+        "A. Being searched by a security agent",
+        "B. Interrogation by a security agent",
+        "C. Police detention beyond forty-eight hours",
+        "D. Lawful imprisonment beyond forty-eight hours"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 25 from the 2009 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2009_q33",
+      "questionText": "The major reason for establishing castle schools by the Europeans was to",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 33,
+      "options": [
+        "A. educate the people on human rights",
+        "B. teach religious knowledge",
+        "C. educate their own children",
+        "D. introduce formal education"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 33 from the 2009 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2009_q36",
+      "questionText": "The organ of government that initiates policies to be passed into law is the",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 36,
+      "options": [
+        "A. Media",
+        "B. Judiciary",
+        "C. Parliament",
+        "D. Executive"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 36 from the 2009 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2009_q38",
+      "questionText": "The high dependency problem of some families can be solved by",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 38,
+      "options": [
+        "A. practising family planning",
+        "B. sending children to school",
+        "C. sharing the responsibilities with relatives",
+        "D. encouraging parents to feed their children properly"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 38 from the 2009 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2009_q4",
+      "questionText": "A president who performs judicial functions abuses the principle of",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 4,
+      "options": [
+        "A. checks and balances",
+        "B. separation of powers",
+        "C. fundamental human rights",
+        "D. collective responsibility"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 4 from the 2009 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2010_q10",
+      "questionText": "The adoption of modern cultural practices enables a society to",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 10,
+      "options": [
+        "A. develop economically",
+        "B. lead good moral lives",
+        "C. abandon its traditional values",
+        "D. respect individual human rights"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 10 from the 2010 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2010_q24",
+      "questionText": "The functions of a presiding member of a District Assembly are likened to those of the",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 24,
+      "options": [
+        "A. Clerk of Parliament",
+        "B. Chief Justice",
+        "C. Speaker of Parliament",
+        "D. Appeal Court Judge"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 24 from the 2010 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2010_q28",
+      "questionText": "The Supreme Court of Ghana mainly",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 28,
+      "options": [
+        "A. runs courses for Judges and Magistrates",
+        "B. remands criminals in prison custody",
+        "C. interprets the constitution and laws for the country",
+        "D. makes and implements laws in the country"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 28 from the 2010 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2010_q33",
+      "questionText": "The practice of checks and balances prevents",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 33,
+      "options": [
+        "A. dictatorship",
+        "B. favouritism",
+        "C. ethnicity",
+        "D. sectionalism"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 33 from the 2010 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2011_q17",
+      "questionText": "Laws are mainly made to ensure",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 17,
+      "options": [
+        "A. better education",
+        "B. instant justice",
+        "C. social conformity",
+        "D. family unity"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 17 from the 2011 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2011_q21",
+      "questionText": "The interpretation of the constitution of Ghana is a function of the",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 21,
+      "options": [
+        "A. legislature",
+        "B. executive",
+        "C. judiciary",
+        "D. cabinet"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 21 from the 2011 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2011_q36",
+      "questionText": "One problem hindering the effective functioning of District Assemblies in Ghana is",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 36,
+      "options": [
+        "A. rapid population growth",
+        "B. mobilizing funds for development",
+        "C. interference by traditional rulers",
+        "D. maintaining law and order"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 36 from the 2011 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2012_q21",
+      "questionText": "Independence of the judiciary implies that judges",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 21,
+      "options": [
+        "A. should get everything free",
+        "B. should not pay taxes",
+        "C. can do whatever they like",
+        "D. should be free from political interference"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 21 from the 2012 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2012_q22",
+      "questionText": "One major cause of conflicts in the Ghanaian society is",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 22,
+      "options": [
+        "A. the development of slums in the cities",
+        "B. inadequate number of law enforcement agents",
+        "C. the encouragement of inter-ethnic marriages",
+        "D. unacceptable way of choosing leaders"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 22 from the 2012 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2012_q34",
+      "questionText": "A constitution may be defined as the",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 34,
+      "options": [
+        "A. bye-laws of a country",
+        "B. decrees of a country",
+        "C. customary laws of a country",
+        "D. highest law of a country"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 34 from the 2012 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2012_q36",
+      "questionText": "One responsibility of the Ghanaian citizen is to",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 36,
+      "options": [
+        "A. protect the police",
+        "B. pay taxes",
+        "C. work and earn a living",
+        "D. worship freely"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 36 from the 2012 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2012_q37",
+      "questionText": "In order to protect one's rights, a citizen should be",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 37,
+      "options": [
+        "A. a law student",
+        "B. a youth leader",
+        "C. educated on them",
+        "D. an observer at court sittings"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 37 from the 2012 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2012_q39",
+      "questionText": "The primary function of the legislature is to",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 39,
+      "options": [
+        "A. administer justice",
+        "B. make laws",
+        "C. register citizens",
+        "D. protect wrong doers"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 39 from the 2012 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2013_q20",
+      "questionText": "The principle of checks and balances prevents",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 20,
+      "options": [
+        "A. constitutionalism",
+        "B. democracy",
+        "C. dictatorship",
+        "D. patriotism"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 20 from the 2013 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2013_q23",
+      "questionText": "Which of the following is a symbol of national unity in Ghana? The",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 23,
+      "options": [
+        "A. National anthem",
+        "B. Akosombo Dam",
+        "C. Gye Nyame",
+        "D. Judiciary"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 23 from the 2013 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2013_q34",
+      "questionText": "According to the 1992 Constitution of Ghana, an individual can claim Ghanaian citizenship if",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 34,
+      "options": [
+        "A. his/her grandparents are Ghanaians.",
+        "B. he/she attends school in Ghana.",
+        "C. he/she works in Ghana.",
+        "D. his/her parents reside in Ghana."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 34 from the 2013 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2013_q38",
+      "questionText": "Which of the following can constitute human rights abuse in Ghana?",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 38,
+      "options": [
+        "A. Child labour",
+        "B. Employing an 18 year old girl",
+        "C. Dropping out of school",
+        "D. Drug abuse"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 38 from the 2013 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2014_q14",
+      "questionText": "Maintenance of law and order in the country is the main function of the",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 14,
+      "options": [
+        "A. Airforce",
+        "B. army",
+        "C. navy",
+        "D. police"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 14 from the 2014 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2014_q16",
+      "questionText": "Which of the following factors promotes political stability in a country?",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 16,
+      "options": [
+        "A. Food security",
+        "B. Free education",
+        "C. Rigid constitution",
+        "D. Rule of law"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 16 from the 2014 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2014_q34",
+      "questionText": "Which of the following situations may not create instability in the Ghanaian society?",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 34,
+      "options": [
+        "A. Denial of justice",
+        "B. Gender equality",
+        "C. Party rivalry",
+        "D. Workers' demonstration."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 34 from the 2014 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2014_q35",
+      "questionText": "The major reason for establishing castle schools by the Europeans was to",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 35,
+      "options": [
+        "A. educate the people on human rights.",
+        "B. educate their own children.",
+        "C. introduce formal education to the people.",
+        "D. teach religious knowledge."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 35 from the 2014 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2014_q4",
+      "questionText": "The set of guidelines for governing a nation is provided by the",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 4,
+      "options": [
+        "A. constitution",
+        "B. council of state",
+        "C. judiciary",
+        "D. legislature"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 4 from the 2014 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2014_q40",
+      "questionText": "The motto in Ghana's Coat of Arms is",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 40,
+      "options": [
+        "A. Freedom and Love.",
+        "B. Independence and Freedom.",
+        "C. Freedom and Justice.",
+        "D. Unity and Integrity."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 40 from the 2014 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2014_q5",
+      "questionText": "What a person is obliged to perform as a in the society constitutes his/her",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 5,
+      "options": [
+        "A. achievements",
+        "B. dignity",
+        "C. responsibilities",
+        "D. rights"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 5 from the 2014 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2015_q23",
+      "questionText": "Protecting national property is the obligation of",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 23,
+      "options": [
+        "A. all citizens",
+        "B. government officials",
+        "C. the fire service",
+        "D. the police"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 23 from the 2015 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2015_q24",
+      "questionText": "According to the 1992 constitution of Ghana, an individual can claim Ghanaian citizenship if",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 24,
+      "options": [
+        "A. he or she attends school in Ghana",
+        "B. his or her grandparents are Ghanaians",
+        "C. his or her parents reside in Ghana",
+        "D. he or she works in Ghana"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 24 from the 2015 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2015_q26",
+      "questionText": "The head of the judiciary in Ghana is the",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 26,
+      "options": [
+        "A. Attorney General",
+        "B. Chief Justice",
+        "C. Director of Public Prosecution",
+        "D. Inspector General of Police"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 26 from the 2015 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2015_q27",
+      "questionText": "A constitution popularly approved by the people ensures",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 27,
+      "options": [
+        "A. ethnic balance",
+        "B. good governance",
+        "C. rapid development",
+        "D. reduction in crime"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 27 from the 2015 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2015_q6",
+      "questionText": "Trokosi and female genital mutilation are cultural practices that must be abolished because",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 6,
+      "options": [
+        "A. some people become rich through their performance",
+        "B. the police dislike them",
+        "C. they are against the rights of the victim",
+        "D. they are practised all over the country"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 6 from the 2015 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2016_q1",
+      "questionText": "Which of the following activities is a duty of a citizen?",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 1,
+      "options": [
+        "A. Giving free medical care",
+        "B. Helping the police financially",
+        "C. Joining a religious group",
+        "D. Paying taxes for development"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 1 from the 2016 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2016_q17",
+      "questionText": "Which of the following is not a function of the Police Service?",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 17,
+      "options": [
+        "A. Arresting criminals",
+        "B. Controlling traffic",
+        "C. Judging cases in court",
+        "D. Maintaining peace and order"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 17 from the 2016 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2016_q23",
+      "questionText": "Which of the following activities can constitute human rights abuse in Ghana?",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 23,
+      "options": [
+        "A. Child labour",
+        "B. Dropping out of school",
+        "C. Drug abuse",
+        "D. Employing an 18 year old girl"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 23 from the 2016 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2016_q25",
+      "questionText": "The Supreme Court of Ghana",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 25,
+      "options": [
+        "A. interprets the constitution and the laws of Ghana",
+        "B. makes and implements laws",
+        "C. remands criminals in custody",
+        "D. runs courses for judges and magistrates"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 25 from the 2016 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2016_q26",
+      "questionText": "The maintenance of law and order in traditional societies in Ghana is the responsibility of",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 26,
+      "options": [
+        "A. chiefs and their elders",
+        "B. priests and their elders",
+        "C. teachers and family heads",
+        "D. police and soldiers"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 26 from the 2016 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2016_q30",
+      "questionText": "Which of the following institutions can make laws to check smuggling and armed robbery in Ghana?",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 30,
+      "options": [
+        "A. District Assembly",
+        "B. The Police Service",
+        "C. Parliament",
+        "D. High Court"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 30 from the 2016 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2017_q15",
+      "questionText": "The majority of Ghanaians acquire citizenship by",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 15,
+      "options": [
+        "A. naturalization.",
+        "B. adoption.",
+        "C. founding.",
+        "D. birth."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 15 from the 2017 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2017_q22",
+      "questionText": "Any lawful endeavour undertaken by an individual to earn a living is referred to as",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 22,
+      "options": [
+        "A. productivity.",
+        "B. attitude.",
+        "C. work.",
+        "D. skills."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 22 from the 2017 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2017_q27",
+      "questionText": "A person legally recognized to enjoy political rights in a country is known as",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 27,
+      "options": [
+        "A. patriot.",
+        "B. compatriot.",
+        "C. politician.",
+        "D. citizen."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 27 from the 2017 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2017_q37",
+      "questionText": "Which of the following factors promote political stability in a country?",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 37,
+      "options": [
+        "A. Food security",
+        "B. Rule of law",
+        "C. Free education",
+        "D. Rigid constitution"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 37 from the 2017 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2018_q21",
+      "questionText": "The fundamental laws by which a country is governed is known as",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 21,
+      "options": [
+        "A. bye-laws.",
+        "B. legislative instruments.",
+        "C. constitution.",
+        "D. court ruling."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 21 from the 2018 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2018_q28",
+      "questionText": "The main work of the members of parliament under the 1992 constitution is to",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 28,
+      "options": [
+        "A. execute laws.",
+        "B. draw manifestos.",
+        "C. interpret laws.",
+        "D. make laws."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 28 from the 2018 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2018_q29",
+      "questionText": "An individual whose rights have been infringed upon seeks justice from the",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 29,
+      "options": [
+        "A. court",
+        "B. president",
+        "C. police",
+        "D. teachers"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 29 from the 2018 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2018_q33",
+      "questionText": "Which of the following was established to find causes of the 1948 riots?",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 33,
+      "options": [
+        "A. Justice Annan Committee",
+        "B. Watson Committee",
+        "C. Burns Commission",
+        "D. Coussey Commission."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 33 from the 2018 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2019_q15",
+      "questionText": "The best way to resolve conflicts in Ghana is through",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 15,
+      "options": [
+        "A. peaceful demonstration.",
+        "B. law courts.",
+        "C. mediation.",
+        "D. harsh sanctions."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 15 from the 2019 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2019_q17",
+      "questionText": "One measure that can best help to minimize indiscipline among the youth is",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 17,
+      "options": [
+        "A. police arrest.",
+        "B. long-term imprisonment.",
+        "C. corporal punishment.",
+        "D. access to quality education."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 17 from the 2019 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2019_q21",
+      "questionText": "To effectively build the nation, every Ghanaian must",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 21,
+      "options": [
+        "A. be involved in production process.",
+        "B. learn to speak at least one foreign language",
+        "C. join the leading political party",
+        "D. study the 1992 Constitution"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 21 from the 2019 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2019_q3",
+      "questionText": "The right of a citizen of Ghana does not include",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 3,
+      "options": [
+        "A. equality before the law.",
+        "B. freedom from taxes.",
+        "C. right to life.",
+        "D. right to work."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 3 from the 2019 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2019_q30",
+      "questionText": "Which institution is responsible for making the main laws of Ghana?",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 30,
+      "options": [
+        "A. District Assembly",
+        "B. Parliament",
+        "C. Supreme Court",
+        "D. Jury"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 30 from the 2019 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2019_q40",
+      "questionText": "A bill passed by parliament becomes law when the president gives his",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 40,
+      "options": [
+        "A. veto.",
+        "B. assent.",
+        "C. accord.",
+        "D. authority."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 40 from the 2019 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2020_q11",
+      "questionText": "Conflicts in the community can best be prevented when there is",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 11,
+      "options": [
+        "A. love for one another",
+        "B. tolerance of opposing views",
+        "C. fairness in wealth distribution",
+        "D. respect for one another"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 11 from the 2020 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2020_q14",
+      "questionText": "Life and property are protected in the community by the",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 14,
+      "options": [
+        "A. chief and his elders",
+        "B. law and order",
+        "C. school authorities",
+        "D. family heads"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 14 from the 2020 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2020_q27",
+      "questionText": "When one behaves in an honest and just manner one performs his/her",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 27,
+      "options": [
+        "A. civic right.",
+        "B. civic responsibilities.",
+        "C. natural responsibilities.",
+        "D. social responsibilities."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 27 from the 2020 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2021_q22",
+      "questionText": "Which of the following was a positive effect of the 1948 riot in the Gold Coast?",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 22,
+      "options": [
+        "A. Led to the release of the Big Six.",
+        "B. Increased political awareness among the people.",
+        "C. The 1951 constitution was replaced",
+        "D. The 1951 constitution was replaced"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 22 from the 2021 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2022_q1",
+      "questionText": "Which of the following can aid economic independence of a nation?",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 1,
+      "options": [
+        "A. Giving more aid to needy countries",
+        "B. Generating enough revenue locally",
+        "C. Increasing imported goods",
+        "D. Defending the 1992 constitution"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 1 from the 2022 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2022_q12",
+      "questionText": "Why are laws made? For",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 12,
+      "options": [
+        "A. family unity",
+        "B. conformity",
+        "C. instant justice",
+        "D. instant justice"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 12 from the 2022 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2022_q19",
+      "questionText": "One of the ways of promoting unity among the ethnic groups in Ghana is through",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 19,
+      "options": [
+        "A. Christian and Islamic rights.",
+        "B. consulting the gods.",
+        "C. adult education.",
+        "D. inter-ethnic marriages."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 19 from the 2022 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2022_q2",
+      "questionText": "Which of the following does not constitute a right of a Ghanaian according to the 1992 constitution?",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 2,
+      "options": [
+        "A. Right to unlawful assembly",
+        "B. Right to personal liberty",
+        "C. Right to life",
+        "D. Freedom of Association"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 2 from the 2022 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2022_q20",
+      "questionText": "Which principle is used to check abuse of power in governance?",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 20,
+      "options": [
+        "A. Rule of law",
+        "B. Separation of powers",
+        "C. Executive Veto",
+        "D. Parliamentary immunity"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 20 from the 2022 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2022_q27",
+      "questionText": "Laws in the country are made by the",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 27,
+      "options": [
+        "A. parliament",
+        "B. Government",
+        "C. Judiciary",
+        "D. District assembly"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 27 from the 2022 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2022_q5",
+      "questionText": "Which of the following activities is a duty of a citizen of Ghana?",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 5,
+      "options": [
+        "A. Attending religious meetings",
+        "B. . Instigating mass boycott of development",
+        "C. Owning huge property",
+        "D. Defending the 1992 constitution"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 5 from the 2022 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2023_q1",
+      "questionText": "Which of the following best promotes the smooth operation of Separation of Powers in Ghana? The",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 1,
+      "options": [
+        "A. Presidency",
+        "B. Chief Justice",
+        "C. Constitution",
+        "D. Speaker of parliament"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 1 from the 2023 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2023_q2",
+      "questionText": "To prevent human rights abuse in Ghana, the courts must",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 2,
+      "options": [
+        "A. allow their sittings to be telecast by TV stations.",
+        "B. be fair to all manner of persons.",
+        "C. extend their sitting hours to late evening.",
+        "D. set up a supreme court in every district."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 2 from the 2023 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2023_q24",
+      "questionText": "A bill becomes a law when it is signed by",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 24,
+      "options": [
+        "A. Chief Justice.",
+        "B. Attorney General.",
+        "C. President.",
+        "D. Speaker of Parliament."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 24 from the 2023 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2023_q25",
+      "questionText": "The local government system is meant to",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 25,
+      "options": [
+        "A. provide resources for all.",
+        "B. elect leaders.",
+        "C. support the traditional justice system.",
+        "D. bring government closer to the people."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 25 from the 2023 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2023_q3",
+      "questionText": "Which of the following cultural practices should be maintained in Ghana?",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 3,
+      "options": [
+        "A. Incision of tribal marks",
+        "B. Widowhood rights",
+        "C. Trokosi",
+        "D. Child naming"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 3 from the 2023 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2023_q40",
+      "questionText": "Universal Adult Suffrage guarantees the right to",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 40,
+      "options": [
+        "A. respect the laws of the land.",
+        "B. pay taxes on time.",
+        "C. vote to elect leaders.",
+        "D. register as a citizen."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 40 from the 2023 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2023_q5",
+      "questionText": "Which of the following is a good measure for preventing human rights violation in Ghana?",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 5,
+      "options": [
+        "A. Extending formal education to all",
+        "B. Organizing free and fair elections",
+        "C. Making external travel more accessible",
+        "D. Establishing more human rights institutions"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 5 from the 2023 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2023_q9",
+      "questionText": "The main duty of the police in a community is to",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 9,
+      "options": [
+        "A. arrest criminals.",
+        "B. intimidate people.",
+        "C. direct traffic.",
+        "D. keep law and order."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 9 from the 2023 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2024_q16",
+      "questionText": "What is the main function of socialization? To",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 16,
+      "options": [
+        "A. teach individuals how to survive.",
+        "B. provide education.",
+        "C. enforce laws and regulations.",
+        "D. transmit culture and values."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 16 from the 2024 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2024_q24",
+      "questionText": "What is the most common form of marriage in Ghana?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 24,
+      "options": [
+        "A. Monogamous marriage",
+        "B. Common-Law marriage",
+        "C. Arranged marriage",
+        "D. Polygamous marriage"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 24 from the 2024 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2024_q26",
+      "questionText": "Which of the following fundamental human rights is protected by the 1992 constitution of Ghana? The right to",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 26,
+      "options": [
+        "A. free education at tertiary level.",
+        "B. full employment.",
+        "C. use arms.",
+        "D. freedom of speech."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 26 from the 2024 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2024_q35",
+      "questionText": "Respecting the rights of others and performing our responsibilities to the state help to promote",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 35,
+      "options": [
+        "A. responsible citizenship.",
+        "B. community development.",
+        "C. building political parties.",
+        "D. national integration."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 35 from the 2024 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2025_q12",
+      "questionText": "One major way you can defend the integrity of Ghana as a citizen is by",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 12,
+      "options": [
+        "A. promoting inter-ethnic marriages.",
+        "B. respecting other people's culture.",
+        "C. obeying the laws of the country.",
+        "D. promoting national festivals."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 12 from the 2025 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2025_q17",
+      "questionText": "The constitution of a country is important because it",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 17,
+      "options": [
+        "A. punishes criminals and politicians.",
+        "B. allows the Speaker to become the Head of State.",
+        "C. Serves as basis for the practice of good governance.",
+        "D. can be amended anytime and has fixed term."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 17 from the 2025 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2025_q22",
+      "questionText": "Criminal activities in the society can best be minimized if there is effective",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 22,
+      "options": [
+        "A. arbitration.",
+        "B. law enforcement.",
+        "C. parental care.",
+        "D. prion service."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 22 from the 2025 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2025_q39",
+      "questionText": "The primary aim of elections in Ghana is to",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 39,
+      "options": [
+        "A. allow the powerful to govern without restrain.",
+        "B. protect the rights of children and mothers only.",
+        "C. provide tax reliefs to groups of people with common interests.",
+        "D. change governments peacefully and orderly."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 39 from the 2025 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_1993_q6",
+      "questionText": "a)\n\n \n\nMention five achievements of the Aborigines Rights Protection Society (A.R.P.S)\n\nb)\n\n \n\nGive five reasons why the Aborigines Rights Protection Society collapsed.",
+      "type": "essay",
+      "year": "1993",
+      "questionNumber": 6,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1993 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_1996_q4",
+      "questionText": "a)\n\n \n\nDescribe three duties of a citizen of Ghana.\n\nb)\n\n \n\nExplain any two rights of a citizen of Ghana.\n\n \n\nPART III\n\nWEST AFRICA, AFRICA AND THE WORLD",
+      "type": "essay",
+      "year": "1996",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1996 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2000_q3",
+      "questionText": "a)\n\n \n\nList four duties of the police in Ghana\n\nb)\n\n \n\nExplain four responsibilities of the individual in Ghana",
+      "type": "essay",
+      "year": "2000",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2002_q3",
+      "questionText": "a)\n\n \n\nMention four offences against the individual and four against the state.\n\nb)\n\n \n\nState four reasons why a country makes laws for its citizens",
+      "type": "essay",
+      "year": "2002",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2002 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2004_q2",
+      "questionText": "a)\n\n \n\nWhat are human rights abuses?\n\nb)\n\n \n\nGive four examples of such abuses\n\nc)\n\n \n\nExplain two ways by which human rights abuses can be prevented.\n\n \n\nPART II\n\nMAP SKILLS AND ENVIRONMENT",
+      "type": "essay",
+      "year": "2004",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2004 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2006_q1",
+      "questionText": "a)\n\n \n\nDescribe the stages of law-making by parliament in Ghana.\n\nb)\n\n \n\nState three features of a good law.",
+      "type": "essay",
+      "year": "2006",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2006 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2009_q2",
+      "questionText": "a)\n\n \n\nWhat is human rights abuse?\n\nb)\n\n \n\nState three reasons why people suffer human rights abuses\n\nc)\n\n \n\nExplain four ways by which human rights abuses may be prevented.\n\n \n\nPART II\n\nENVIRONMENT",
+      "type": "essay",
+      "year": "2009",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2009 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2010_q3",
+      "questionText": "(a)\n\n \n\nIdentify four characteristics of a good law\n\n(b)\n\n \n\nHighlight four benefits of law in a society",
+      "type": "essay",
+      "year": "2010",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2010 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2010_q4",
+      "questionText": "a)\n\n \n\nWhat is citizenship?\n\nb)\n\n \n\nDescribe four ways by which one could become a citizen of Ghana.\n\nc)\n\n \n\nOutline three duties of a citizen of Ghana.\n\n  \n\nSECTION III\n\nSOCIAL AND ECONOMIC DEVELOPMENT",
+      "type": "essay",
+      "year": "2010",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2010 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2011_q4",
+      "questionText": "(a)\n\n \n\nWhat is separation of powers?\n\n(b)\n\n \n\nOutline four advantages of separation of powers.\n\n  \n\nSECTION III\n\nSOCIAL AND ECONOMIC DEVELOPMENT",
+      "type": "essay",
+      "year": "2011",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2011 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2016_q3",
+      "questionText": "a)\n\n \n\nState four characteristics of a good law.\n\nb)\n\n \n\nExplain four benefits derived from law and order in a country.",
+      "type": "essay",
+      "year": "2016",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2016 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2019_q5",
+      "questionText": "a)\n\n \n\nList five examples of cases which can be reported at the office of Domestic Violence and Victim Support Unit of the Ghana Police Service (DOVVSU).\n\nb)\n\n \n\nDescribe five functions of the Domestic Violence and Victim Support Unit of the Ghana Police Service (DOVVSU).",
+      "type": "essay",
+      "year": "2019",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2019 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2023_q4",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nDifferentiate between freedom and obligation.\n\nii)\n\n \n\nState four obligations of a citizen to the state.\n\nb)\n\n \n\nHighlight four ways in which law and order is maintained in schools.\n\n \n\nSECTION III\n\nSOCIAL AND ECONOMIC DEVELOPMENT",
+      "type": "essay",
+      "year": "2023",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2023 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2024_q1",
+      "questionText": "(a)\n\n \n\nHow would you explain the term Environment to your study group?\n\n(b)\n\n \n\nIn what four ways are water bodies in your community polluted?\n\n(c)\n\n \n\nSuggest four workable ways by which water bodies in your community can be made safe for use.\n\n \n\nSECTION II\n\nLAW, ORDER AND NATION BUILDING",
+      "type": "essay",
+      "year": "2024",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2024 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2025_q1",
+      "questionText": "(a)\n\n \n\nBased on discussions and studies in class, define marriage in the context of Ghanaian Society.\n\n[4 marks]\n\n(b)\n\n \n\nState four reasons, that will cause you to marry when the time is due.\n\n[4 marks]\n\n(c)\n\n \n\nMr and Mrs Mensah have been happily married for forty-seven years. Suggest four possible reasons that might have accounted for the longevity of their marriage.\n\n[12 marks]\n\n \n\nSECTION II\n\nLAW, ORDER AND NATION BUILDING\n\nAnswer one question only from this section.",
+      "type": "essay",
+      "year": "2025",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2025 Social Studies",
+      "marks": 4,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2025_q2",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nHow would you explain the term Human Rights in a class discussion?\n\n[4 marks]\n\n(ii)\n\n \n\nIdentify two human right abuses in your community.\n\n[4 marks]\n\n(b)\n\n \n\nSuggest four reasons why the society must be educated on Human Rights.\n\n[12 marks]",
+      "type": "essay",
+      "year": "2025",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2025 Social Studies",
+      "marks": 4,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Rule of Law"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

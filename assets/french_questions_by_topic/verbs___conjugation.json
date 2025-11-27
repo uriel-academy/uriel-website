@@ -1,0 +1,105 @@
+{
+  "topic": "Verbs & Conjugation",
+  "questions": [
+    {
+      "id": "theory_french_2000_q26",
+      "questionText": "………………….fais tu ? Je fais mes devoirs.",
+      "questionNumber": 26,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2000_q36",
+      "questionText": "Je ………………….en ville. (aller)",
+      "questionNumber": 36,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2000_q38",
+      "questionText": "Elles ………………….chez nous. (venir)",
+      "questionNumber": 38,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    }
+  ],
+  "questionCount": 3
+}

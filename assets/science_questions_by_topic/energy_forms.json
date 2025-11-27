@@ -1,0 +1,5705 @@
+{
+  "topic": "Energy Forms",
+  "totalQuestions": 188,
+  "questions": [
+    {
+      "id": "integrated_science_1990_q36",
+      "questionText": "A mirror is used to direct the sun’s rays onto the classroom wall by",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 36,
+      "options": [
+        "A. radiation",
+        "B. reflection",
+        "C. conduction",
+        "D. revolution",
+        "E. convection"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 36 from the 1990 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1990_q39",
+      "questionText": "A mirror is used to direct the sun’s rays onto the classroom wall by",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 39,
+      "options": [
+        "A. radiation",
+        "B. reflection",
+        "C. conduction",
+        "D. revolution",
+        "E. convection"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 39 from the 1990 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1990_q7",
+      "questionText": "A torchlight derives its energy from",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 7,
+      "options": [
+        "A. petrol",
+        "B. kerosene",
+        "C. a magnet",
+        "D. gas oil",
+        "E. a dry cell"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 7 from the 1990 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1990_q9",
+      "questionText": "What type of energy is lost when sweat evaporates from the body?",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 9,
+      "options": [
+        "A. light energy",
+        "B. mechanical energy",
+        "C. chemical energy",
+        "D. Heat energy",
+        "E. Electrical energy"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 9 from the 1990 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1991_q11",
+      "questionText": "The process by which kerosene rises up the wick in a lantern is",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 11,
+      "options": [
+        "A. evaporation",
+        "B. conduction",
+        "C. diffusion",
+        "D. capillarity",
+        "E. convection"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 11 from the 1991 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1991_q25",
+      "questionText": "The part of the plant which is found in the soil is the",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 25,
+      "options": [
+        "A. flower",
+        "B. stem",
+        "C. leaf",
+        "D. root",
+        "E. fruit"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 25 from the 1991 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1991_q26",
+      "questionText": "The part of the plant which is found in the soil is the",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 26,
+      "options": [
+        "A. flower",
+        "B. stem",
+        "C. leaf",
+        "D. root",
+        "E. fruit"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 26 from the 1991 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1991_q3",
+      "questionText": "Which of the following objects is a good conductor of heat?",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 3,
+      "options": [
+        "A. Wood",
+        "B. Rubber",
+        "C. Copper",
+        "D. Plastic",
+        "E. Wool"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 3 from the 1991 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1991_q32",
+      "questionText": "When a piece of candle is heated, it changes from",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 32,
+      "options": [
+        "A. liquid to gas",
+        "B. liquid to flame",
+        "C. solid to flame",
+        "D. solid to liquid",
+        "E. solid to gas"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 32 from the 1991 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1991_q8",
+      "questionText": "All of the following methods are used to preserve food in our homes except",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 8,
+      "options": [
+        "A. smoking",
+        "B. salting",
+        "C. boiling",
+        "D. canning",
+        "E. drying"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 8 from the 1991 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1992_q13",
+      "questionText": "Energy is measured in",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 13,
+      "options": [
+        "A. Kelvin",
+        "B. Joules",
+        "C. Watts",
+        "D. Metres",
+        "E. Amperes"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 13 from the 1992 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1992_q16",
+      "questionText": "The best reason why a cooking pan should have a wooden handle is that, wood is a",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 16,
+      "options": [
+        "A. good conductor of heat",
+        "B. bad conductor of heat",
+        "C. good radiator of heat",
+        "D. bad radiator of heat",
+        "E. good reflector of heat"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 16 from the 1992 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1992_q7",
+      "questionText": "Which of the following energy changes takes place when a church bell is tolled?",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 7,
+      "options": [
+        "A. Potential energy to kinetic energy",
+        "B. Kinetic energy to sound energy",
+        "C. Potential energy to sound energy",
+        "D. Chemical energy to heat energy",
+        "E. Sound energy to Kinetic energy"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 7 from the 1992 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1993_q15",
+      "questionText": "Which of the following types of soil allows the fastest rate of drainage?",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 15,
+      "options": [
+        "A. Clayey soil",
+        "B. Loamy soil",
+        "C. Black soil",
+        "D. Sandy soil",
+        "E. Humus"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 15 from the 1993 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1993_q22",
+      "questionText": "A torch light bulb lights up when connected to a dry cell. What type of energy is obtained from the cell?",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 22,
+      "options": [
+        "A. Chemical energy",
+        "B. Light energy",
+        "C. Potential energy",
+        "D. Electrical energy",
+        "E. Heat energy"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 22 from the 1993 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1993_q23",
+      "questionText": "Which of the following is not a soil nutrient?",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 23,
+      "options": [
+        "A. Hydrogen",
+        "B. Nitrogen",
+        "C. Potassium",
+        "D. Calcium",
+        "E. Phosphorus"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 23 from the 1993 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1993_q3",
+      "questionText": "What is the average body temperature of a healthy person?",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 3,
+      "options": [
+        "A. 25°C",
+        "B. 36°C",
+        "C. 37°C",
+        "D. 38°C",
+        "E. 39°C\n\n4. Steel is an alloy of"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 3 from the 1993 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1993_q36",
+      "questionText": "Heat from the sun reaches the earth by",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 36,
+      "options": [
+        "A. conduction",
+        "B. convection",
+        "C. radiation",
+        "D. reflection",
+        "E. refraction"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 36 from the 1993 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1993_q39",
+      "questionText": "Heat from the sun reaches the earth by",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 39,
+      "options": [
+        "A. conduction",
+        "B. convection",
+        "C. radiation",
+        "D. reflection",
+        "E. refraction"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 39 from the 1993 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1993_q4",
+      "questionText": "Leguminous crops such as beans may often be cultivated to",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 4,
+      "options": [
+        "A. Add humus to the soil",
+        "B. Add nitrogen to the soil",
+        "C. Add protein to the soil",
+        "D. Make the soil loamy",
+        "E. Increase the calcium content of the soil"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 4 from the 1993 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1994_q17",
+      "questionText": "A dam for generating power is constructed across a river. What type of energy is possessed by the water behind the dam?",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 17,
+      "options": [
+        "A. Kinetic energy",
+        "B. Potential energy",
+        "C. Electrical energy",
+        "D. Heat energy",
+        "E. Light energy"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 17 from the 1994 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1994_q21",
+      "questionText": "Which of the following is the energy possessed by an object placed on a table?",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 21,
+      "options": [
+        "A. Kinetic energy",
+        "B. Electrical energy",
+        "C. Potential energy",
+        "D. Sound energy",
+        "E. Heat energy\n\n23. The change in the shape of the moon is caused by the"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 21 from the 1994 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1994_q24",
+      "questionText": "Which of the following processes is not a physical change",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 24,
+      "options": [
+        "A. Dissolution",
+        "B. Melting",
+        "C. Boiling",
+        "D. Evaporation",
+        "E. Burning"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 24 from the 1994 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1994_q28",
+      "questionText": "A car battery produces electrical energy from",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 28,
+      "options": [
+        "A. Chemical energy",
+        "B. Sound energy",
+        "C. Kinetic energy",
+        "D. Heat energy",
+        "E. Potential energy"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 28 from the 1994 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1995_q17",
+      "questionText": "When living organisms die, the mineral salts in their bodies become available to the soil through the process of",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 17,
+      "options": [
+        "A. evaporation",
+        "B. sedimentation",
+        "C. defecation",
+        "D. decay",
+        "E. osmosis"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 17 from the 1995 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1995_q27",
+      "questionText": "The process used in getting salt from sea water is",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 27,
+      "options": [
+        "A. boiling",
+        "B. condensation",
+        "C. decantation",
+        "D. sedimentation",
+        "E. evaporation"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 27 from the 1995 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1995_q3",
+      "questionText": "By what process is heat transferred from the bottom of a beaker containing water to the top?",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 3,
+      "options": [
+        "A. convection",
+        "B. conduction",
+        "C. radiation",
+        "D. absorption",
+        "E. transmission"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 3 from the 1995 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1996_q22",
+      "questionText": "All the following add nitrates to the soil except",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 22,
+      "options": [
+        "A. Okro",
+        "B. Broad beans",
+        "C. French beans",
+        "D. Groundnuts",
+        "E. Pigeon pea"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 22 from the 1996 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1996_q25",
+      "questionText": "The type of energy stored in fuels is called",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 25,
+      "options": [
+        "A. light energy",
+        "B. solar energy",
+        "C. electrical energy",
+        "D. kinetic energy",
+        "E. chemical energy"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 25 from the 1996 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1996_q26",
+      "questionText": "An object at rest may have",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 26,
+      "options": [
+        "A. velocity",
+        "B. momentum",
+        "C. kinetic energy",
+        "D. potential energy",
+        "E. acceleration"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 26 from the 1996 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1996_q28",
+      "questionText": "The chief source of energy in the world today is",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 28,
+      "options": [
+        "A. coal",
+        "B. crude oil",
+        "C. natural gas",
+        "D. uranium",
+        "E. water"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 28 from the 1996 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1996_q31",
+      "questionText": "An example of a crop that reduces the fertility of the soil rapidly is",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 31,
+      "options": [
+        "A. Beans",
+        "B. Legumes",
+        "C. Groundnuts",
+        "D. Cassava",
+        "E. Plantain"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 31 from the 1996 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1996_q35",
+      "questionText": "When the palms of the hand are rubbed together, kinetic energy is changed to",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 35,
+      "options": [
+        "A. thermal energy",
+        "B. potential energy",
+        "C. solar energy",
+        "D. elastic energy",
+        "E. chemical energy"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 35 from the 1996 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1997_q28",
+      "questionText": "The food we eat undergoes slow oxidation in our bodies to produce heat. In this process",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 28,
+      "options": [
+        "A. chemical energy is converted to heat energy",
+        "B. electrical energy is converted to heat energy",
+        "C. kinetic energy is converted to heat energy",
+        "D. mechanical energy is converted to heat energy",
+        "E. potential energy is converted to heat energy"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 28 from the 1997 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1997_q34",
+      "questionText": "In which of the following electrical appliances is electrical energy mainly converted to heat energy?",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 34,
+      "options": [
+        "A. Cooker",
+        "B. Fan",
+        "C. Refrigerator",
+        "D. Tape recorder",
+        "E. Television set"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 34 from the 1997 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1997_q35",
+      "questionText": "The energy for lighting a torchlight bulb comes from the",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 35,
+      "options": [
+        "A. bulb",
+        "B. cell",
+        "C. filament",
+        "D. glass",
+        "E. switch"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 35 from the 1997 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1997_q38",
+      "questionText": "In which of the following electrical appliances is electrical energy mainly converted to heat energy?",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 38,
+      "options": [
+        "A. Cooker",
+        "B. Fan",
+        "C. Refrigerator",
+        "D. Tape recorder",
+        "E. Television set"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 38 from the 1997 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1997_q39",
+      "questionText": "The energy for lighting a torchlight bulb comes from the",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 39,
+      "options": [
+        "A. bulb",
+        "B. cell",
+        "C. filament",
+        "D. glass",
+        "E. switch"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 39 from the 1997 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1997_q4",
+      "questionText": "The most productive soil in agriculture is",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 4,
+      "options": [
+        "A. clayey soil",
+        "B. loamy soil",
+        "C. sandy soil",
+        "D. humus",
+        "E. silt"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 4 from the 1997 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1998_q1",
+      "questionText": "Which of the following processes could be used to preserve fish for a long time?",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 1,
+      "options": [
+        "A. Boiling only",
+        "B. Salting only",
+        "C. Sun drying only",
+        "D. Boiling and sun drying",
+        "E. Salting and sun drying"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 1 from the 1998 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1998_q14",
+      "questionText": "A mixture of engine oil and water could be best separated by",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 14,
+      "options": [
+        "A. Evaporation",
+        "B. Freezing",
+        "C. Decantation",
+        "D. Heating",
+        "E. Addition of soap"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 14 from the 1998 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1998_q18",
+      "questionText": "Which of the following energy changes takes place when a church bell is tolled?",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 18,
+      "options": [
+        "A. Chemical energy is changed to sound energy",
+        "B. Kinetic energy is changed to sound energy",
+        "C. Potential energy is changed to sound energy",
+        "D. Potential energy is changed to kinetic energy",
+        "E. Thermal energy is changed to sound energy\n\n20. The dodder on milk bush is an example of"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 18 from the 1998 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1998_q28",
+      "questionText": "A temperature controlling device which works using the principles of expansion and contraction is called a",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 28,
+      "options": [
+        "A. conductor",
+        "B. fuse",
+        "C. manometer",
+        "D. thermometer",
+        "E. thermostat\n\n32. Kerosene and petrol are obtained from crude oil by"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 28 from the 1998 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1999_q10",
+      "questionText": "Plastic materials may be used to make the handles of cooking utensils because they are",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 10,
+      "options": [
+        "A. Hard",
+        "B. Poor conductors of heat",
+        "C. Attractive",
+        "D. Easy to wash",
+        "E. Not poisonous"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 10 from the 1999 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1999_q12",
+      "questionText": "The heat of the sun reaches the earth through",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 12,
+      "options": [
+        "A. radiation",
+        "B. convection",
+        "C. conduction",
+        "D. both radiation and conduction",
+        "E. both radiation and convection"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 12 from the 1999 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1999_q15",
+      "questionText": "Salt could be obtained from sea water by",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 15,
+      "options": [
+        "A. boiling",
+        "B. condensation",
+        "C. decantation",
+        "D. distillation",
+        "E. evaporation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 15 from the 1999 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1999_q19",
+      "questionText": "A car head lamp lights up when connected to a battery. What type of energy is obtained from the battery?",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 19,
+      "options": [
+        "A. Chemical energy",
+        "B. Electrical energy",
+        "C. Heat energy",
+        "D. Light energy",
+        "E. Potential energy"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 19 from the 1999 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1999_q39",
+      "questionText": "Leguminous crops such as beans are cultivated to",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 39,
+      "options": [
+        "A. add humus to the soil",
+        "B. increase the nitrate contents of soils",
+        "C. add nitrogen to the soil",
+        "D. make the soil loamy",
+        "E. add protein to the soil"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 39 from the 1999 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1999_q4",
+      "questionText": "Which of the following processes is a chemical change?",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 4,
+      "options": [
+        "A. Digestion of starch by saliva",
+        "B. Melting of wax",
+        "C. Dissolution of sugar in water",
+        "D. Boiling of water",
+        "E. Evaporation of sea water"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 4 from the 1999 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1999_q40",
+      "questionText": "Leguminous crops such as beans are cultivated to",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 40,
+      "options": [
+        "A. add humus to the soil",
+        "B. increase the nitrate contents of soils",
+        "C. add nitrogen to the soil",
+        "D. make the soil loamy",
+        "E. add protein to the soil"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 40 from the 1999 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2000_q10",
+      "questionText": "The substance that sublimes when heated is",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 10,
+      "options": [
+        "A. baking powder.",
+        "B. camphor.",
+        "C. common salt.",
+        "D. sugar.",
+        "E. Sulphur."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 10 from the 2000 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2000_q14",
+      "questionText": "The temperature of 20oC on the kelvin scale is",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 14,
+      "options": [
+        "A. 253 K.",
+        "B. 263 K.",
+        "C. 273 K.",
+        "D. 283 K.",
+        "E. 293 K."
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 14 from the 2000 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2000_q17",
+      "questionText": "Which of the following materials transforms electrical energy into light energy?",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 17,
+      "options": [
+        "A. Electric bell",
+        "B. Filament bulb",
+        "C. Electric guitar",
+        "D. Lantern",
+        "E. Radio"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 17 from the 2000 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2000_q22",
+      "questionText": "Which of the following environmental factors increases sweating in humans?",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 22,
+      "options": [
+        "A. Low temperature",
+        "B. Low pressure",
+        "C. High pressure",
+        "D. High temperature",
+        "E. High humidity"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 22 from the 2000 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2000_q24",
+      "questionText": "The type of energy stored in food is referred to as",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 24,
+      "options": [
+        "A. chemical energy.",
+        "B. electrical energy.",
+        "C. heat energy.",
+        "D. kinetic energy.",
+        "E. light energy."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 24 from the 2000 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2000_q28",
+      "questionText": "The transfer of heat through a solid medium is byI. conductionII. convectionIII. radiation",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 28,
+      "options": [
+        "A. I only",
+        "B. II only",
+        "C. III only",
+        "D. I and II only",
+        "E. II and III only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 28 from the 2000 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2000_q4",
+      "questionText": "Which of the following processes is a physical change?",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 4,
+      "options": [
+        "A. Rusting of iron",
+        "B. Burning of paper",
+        "C. Melting of ice",
+        "D. Fermentation of palm wine",
+        "E. Boiling of an egg"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 4 from the 2000 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2001_q15",
+      "questionText": "Which of the following appliances transform(s) electrical energy to heat energy?I. Swish ovenII. Hair drierIII. Refrigerator motor",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 15,
+      "options": [
+        "A. I only",
+        "B. I and II only",
+        "C. II and III only",
+        "D. I and III only",
+        "E. I, II and III"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 15 from the 2001 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2001_q23",
+      "questionText": "The energy that causes the turbine of hydro-electric plant to rotate is",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 23,
+      "options": [
+        "A. chemical energy.",
+        "B. potential energy.",
+        "C. electrical energy.",
+        "D. kinetic energy.",
+        "E. heat energy."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 23 from the 2001 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2001_q26",
+      "questionText": "Which of the following crops improves soil fertility when cultivated continuously on the same piece of land?",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 26,
+      "options": [
+        "A. Carrot",
+        "B. Cocoa",
+        "C. Cassava",
+        "D. Maize",
+        "E. Peas"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 26 from the 2001 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2002_q13",
+      "questionText": "The figure below shows a simple electric circuit.\n\nUse it to answer the question below.\n\n\n\nThe purpose of the component labelled IV is to",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 13,
+      "options": [
+        "A. supply energy to the circuit.",
+        "B. measure the voltage of the battery.",
+        "C. prevent too much current from flowing.",
+        "D. close the circuit."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 13 from the 2002 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2002_q31",
+      "questionText": "The component of the soil which is made up of the finest particle is",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 31,
+      "options": [
+        "A. clay.",
+        "B. humus.",
+        "C. loam.",
+        "D. sand."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 31 from the 2002 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2002_q36",
+      "questionText": "Soup which is not well-heated gets spoilt when kept for sometime because the",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 36,
+      "options": [
+        "A. salt in the soup is too small.",
+        "B. water in the soup do not all evaporate.",
+        "C. heat in the soup is not enough to kill all bacteria.",
+        "D. water condenses back into the soup."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 36 from the 2002 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2002_q6",
+      "questionText": "When the brakes of a bicycle in motion are applied for a long time the wheels become hot. This is because of a change of energy from",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 6,
+      "options": [
+        "A. kinetic energy to potential energy.",
+        "B. potential energy to kinetic energy.",
+        "C. potential energy to heat energy.",
+        "D. kinetic energy to heat energy."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 6 from the 2002 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2002_q9",
+      "questionText": "The energy stored in food is",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 9,
+      "options": [
+        "A. an electrostatic energy.",
+        "B. a chemical energy.",
+        "C. a solar energy.",
+        "D. a thermal energy."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 9 from the 2002 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2003_q20",
+      "questionText": "Which of the following substances is added to the soil to reduce its acidity?",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 20,
+      "options": [
+        "A. Charcoal",
+        "B. Humus",
+        "C. Lime",
+        "D. Manure"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 20 from the 2003 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2003_q28",
+      "questionText": "The food substance found in yam is",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 28,
+      "options": [
+        "A. carbohydrate.",
+        "B. oil.",
+        "C. protein.",
+        "D. vitamin."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 28 from the 2003 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2003_q30",
+      "questionText": "Which of the following factors promote plant germination?\n\nI. Adequate temperatureII. MoistureIII. Good soil",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 30,
+      "options": [
+        "A. I and II only",
+        "B. I and III only",
+        "C. II and III only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 30 from the 2003 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2003_q5",
+      "questionText": "The unit of measurement of energy is",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 5,
+      "options": [
+        "A. joule.",
+        "B. kelvin.",
+        "C. newton.",
+        "D. watt."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 5 from the 2003 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2003_q6",
+      "questionText": "Which of the following energy transformations takes place at a hydroelectric power station?",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 6,
+      "options": [
+        "A. Potential energy → kinetic energy → electrical energy",
+        "B. Potential energy → sound energy → electrical energy",
+        "C. Kinetic energy → sound energy → electrical energy",
+        "D. Electrical energy → light energy → heat energy"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 6 from the 2003 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2004_q11",
+      "questionText": "Benedict's solution was added to a mixture in a test tube and it turned brick red when heated. The mixture is likely to contain",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 11,
+      "options": [
+        "A. glucose.",
+        "B. oil.",
+        "C. protein.",
+        "D. vitamin"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 11 from the 2004 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2004_q2",
+      "questionText": "The types of energy produced when the hands are vigorously rubbed against each other are",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 2,
+      "options": [
+        "A. chemical and electrical energy.",
+        "B. heat and sound energy.",
+        "C. heat and light energy.",
+        "D. electrical and light energy."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 2 from the 2004 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2004_q36",
+      "questionText": "Gold is usually used to make jewellery because it is",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 36,
+      "options": [
+        "A. precious.",
+        "B. expensive.",
+        "C. less reactive with air.",
+        "D. a good conductor of heat."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 36 from the 2004 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2004_q4",
+      "questionText": "The modes of heat transfer involved in the process of heating water in a bucket, from the bottom until it boils are",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 4,
+      "options": [
+        "A. conduction and convection.",
+        "B. conduction and radiation.",
+        "C. convection and radiation.",
+        "D. conduction, convection and radiation."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 4 from the 2004 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2004_q5",
+      "questionText": "Which of the following items converts chemical energy to electrical energy?",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 5,
+      "options": [
+        "A. Dry cell",
+        "B. Electric bulb",
+        "C. Loudspeaker",
+        "D. Microphone"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 5 from the 2004 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2005_q2",
+      "questionText": "A metal expands when there is",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 2,
+      "options": [
+        "A. an increase in heat energy.",
+        "B. an increase in number of electrons.",
+        "C. a decrease in potential energy.",
+        "D. a decrease in distance between atoms."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 2 from the 2005 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2005_q34",
+      "questionText": "The food processing method in which germs are prevented from multiplying by applying a low temperature is",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 34,
+      "options": [
+        "A. canning.",
+        "B. drying.",
+        "C. pickling.",
+        "D. refrigeration."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 34 from the 2005 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2005_q6",
+      "questionText": "When mango is falling from a tree, its potential energy is changed to",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 6,
+      "options": [
+        "A. sound energy.",
+        "B. heat energy.",
+        "C. kinetic energy.",
+        "D. chemical energy."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 6 from the 2005 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2006_q28",
+      "questionText": "Which of the following farming practices is likely to make the soil poor in nutrients?",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 28,
+      "options": [
+        "A. Adding chemical fertilizer during each planting season",
+        "B. Planting cover crops on the land",
+        "C. Tilling the land before planting.",
+        "D. Burning the vegetation after clearing"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 28 from the 2006 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2006_q3",
+      "questionText": "Wood is used to make the handles of cooking utensils because it is",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 3,
+      "options": [
+        "A. bad conductor of heat.",
+        "B. good absorber of heat.",
+        "C. good reflector of heat.",
+        "D. bad radiator of heat."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 3 from the 2006 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2006_q4",
+      "questionText": "Ventilation holes are made at the upper part of a door to allow air to rise by",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 4,
+      "options": [
+        "A. convection.",
+        "B. conduction.",
+        "C. radiation.",
+        "D. reflection."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 4 from the 2006 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2006_q6",
+      "questionText": "A fuse is used in an electrical circuit to",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 6,
+      "options": [
+        "A. measure the energy used up.",
+        "B. protect appliances.",
+        "C. provide more current.",
+        "D. make sure current flows continuously."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 6 from the 2006 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2006_q9",
+      "questionText": "Power is defined as the rate at which",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 9,
+      "options": [
+        "A. energy is used.",
+        "B. temperature rises.",
+        "C. a body travels.",
+        "D. a body cools down."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 9 from the 2006 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2007_q2",
+      "questionText": "The type of energy obtained when an electric bulb is connected to a batter is",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 2,
+      "options": [
+        "A. chemical energy.",
+        "B. electrical energy.",
+        "C. light energy.",
+        "D. magnetic energy."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 2 from the 2007 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2007_q20",
+      "questionText": "One best way of making water safe for drinking is by",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 20,
+      "options": [
+        "A. adding washing soda.",
+        "B. filtering.",
+        "C. adding common salt.",
+        "D. boiling."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 20 from the 2007 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2007_q4",
+      "questionText": "The process by which heat travels along a metal is called",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 4,
+      "options": [
+        "A. convection.",
+        "B. conduction.",
+        "C. expansion.",
+        "D. radiation."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 4 from the 2007 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2007_q40",
+      "questionText": "Which of the following methods of preserving food makes use of heat energy from the sun?",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 40,
+      "options": [
+        "A. Drying",
+        "B. Frying",
+        "C. Salting",
+        "D. Refrigeration"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 40 from the 2007 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2007_q5",
+      "questionText": "The instrument used to measure temperature is the",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 5,
+      "options": [
+        "A. ammeter.",
+        "B. barometer.",
+        "C. manometer.",
+        "D. thermometer."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 5 from the 2007 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2007_q8",
+      "questionText": "A suitable machine for loading drums of palm oil onto a truck is",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 8,
+      "options": [
+        "A. a screw.",
+        "B. a crowbar.",
+        "C. a wheelbarrow.",
+        "D. an inclined plane."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 8 from the 2007 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2008_q19",
+      "questionText": "The taste of water changes when it is boiled because",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 19,
+      "options": [
+        "A. heat is absorbed during boiling.",
+        "B. evaporation takes place during boiling.",
+        "C. air is lost during boiling.",
+        "D. steam is produced during boiling."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 19 from the 2008 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2008_q2",
+      "questionText": "Heat travels through vacuum by",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 2,
+      "options": [
+        "A. conduction.",
+        "B. convection.",
+        "C. radiation.",
+        "D. convection and radiation."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 2 from the 2008 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2008_q35",
+      "questionText": "Which of the following methods of preserving food make use of heat energy?I. DryingII. FryingIII. SaltingIV. Canning",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 35,
+      "options": [
+        "A. I and II only",
+        "B. I and IV only",
+        "C. III and IV only",
+        "D. I, II and III only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 35 from the 2008 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2008_q4",
+      "questionText": "Which of the following energy changes takes place in ringing bell?",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 4,
+      "options": [
+        "A. Potential to kinetic",
+        "B. Potential to sound",
+        "C. Mechanical to sound",
+        "D. Sound to light"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 4 from the 2008 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2008_q5",
+      "questionText": "A fuse is connected in an electric circuit to",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 5,
+      "options": [
+        "A. prevent electric shock.",
+        "B. increase the current.",
+        "C. prevent current from increasing.",
+        "D. increase the heat generated."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 5 from the 2008 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2009_q3",
+      "questionText": "Which of the following examples is a source of energy?",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 3,
+      "options": [
+        "A. Electricity",
+        "B. Heat",
+        "C. Light",
+        "D. Wood"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 3 from the 2009 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2009_q4",
+      "questionText": "Heat is transferred from the bottom of water in a container to the top by",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 4,
+      "options": [
+        "A. conduction",
+        "B. convection",
+        "C. radiation",
+        "D. conduction and radiation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 4 from the 2009 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2009_q6",
+      "questionText": "In which of the positions Q,R,S,T in the diagram below will a body have the greatest potential energy?",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 6,
+      "options": [
+        "A. Q",
+        "B. R",
+        "C. S",
+        "D. T"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 6 from the 2009 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2009_q7",
+      "questionText": "A solar cell produces electrical energy from",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 7,
+      "options": [
+        "A. electromagnets",
+        "B. heat",
+        "C. light",
+        "D. sound"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 7 from the 2009 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2010_q28",
+      "questionText": "The energy transformation that takes place in a car battery is",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 28,
+      "options": [
+        "A. electrical energy → chemical energy → light energy",
+        "B. chemical energy → light energy → electrical energy",
+        "C. chemical energy → electrical energy → light energy",
+        "D. electrical energy → light energy → chemical energy"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 28 from the 2010 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2010_q5",
+      "questionText": "The simplest way of making well water suitable for laundry purpose is by",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 5,
+      "options": [
+        "A. adding alum.",
+        "B. boiling.",
+        "C. chlorination.",
+        "D. filtering."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 5 from the 2010 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2011_q15",
+      "questionText": "Which of the following crops is not correctly matched with its group?",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 15,
+      "options": [
+        "A. Cowpea - cereal crop",
+        "B. Cocoa - beverage crop",
+        "C. Coconut - oil crop",
+        "D. Cocoyam - tuber crop"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 15 from the 2011 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2011_q22",
+      "questionText": "During drought, some plants dry out because of highI. atmospheric temperatureII. humidityIII. rate of evaporation",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 22,
+      "options": [
+        "A. III only",
+        "B. I and II only",
+        "C. I and III only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 22 from the 2011 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2011_q24",
+      "questionText": "A viable seed is one that",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 24,
+      "options": [
+        "A. germinates under suitable conditions.",
+        "B. contains oil.",
+        "C. develops from fertilized ovary.",
+        "D. has a pericarp."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 24 from the 2011 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2011_q30",
+      "questionText": "Which of the following devices requires the use of transistors in its operation?",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 30,
+      "options": [
+        "A. Computer",
+        "B. Electric heater",
+        "C. Microphone",
+        "D. Wall clock"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 30 from the 2011 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2011_q32",
+      "questionText": "Which of the following modes of heat transfer is the thermos flask designed to minimize?I. ConductionII. ConvectionIII. Radiation",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 32,
+      "options": [
+        "A. I and II only",
+        "B. I and III only",
+        "C. II and III only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 32 from the 2011 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2011_q8",
+      "questionText": "What kind of energy transformation takes place in an electric motor?",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 8,
+      "options": [
+        "A. Chemical energy to electrical energy",
+        "B. Chemical energy to mechanical energy",
+        "C. Electrical energy to light energy",
+        "D. Electrical energy to mechanical energy"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 8 from the 2011 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2012_q17",
+      "questionText": "One function of engine oil in the engine of a tractor is to",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 17,
+      "options": [
+        "A. warm the engine.",
+        "B. enhance air intake.",
+        "C. ensure proper mixing of fuel.",
+        "D. lubricate the engine parts."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 17 from the 2012 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2012_q37",
+      "questionText": "An example of soil minor nutrient is",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 37,
+      "options": [
+        "A. calcium.",
+        "B. iron.",
+        "C. nitrogen.",
+        "D. phosphorus."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 37 from the 2012 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2012_q39",
+      "questionText": "A material that allows a small amount of light energy to pass through it but cannot be seen through is referred to as",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 39,
+      "options": [
+        "A. opaque.",
+        "B. reflective.",
+        "C. translucent.",
+        "D. transparent."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 39 from the 2012 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2012_q4",
+      "questionText": "Each layer of soil profile is known as",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 4,
+      "options": [
+        "A. horizon.",
+        "B. litter.",
+        "C. regolith.",
+        "D. solum."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 4 from the 2012 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2012_q5",
+      "questionText": "When the p-n junction of a transistor is reversed biased",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 5,
+      "options": [
+        "A. current flows from the p-type to the n-type.",
+        "B. no current flows from the p-type to the n-type.",
+        "C. conduction of current occurs.",
+        "D. current flows from the n-type to the p-type."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 5 from the 2012 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2013_q1",
+      "questionText": "The S.I unit of temperature is",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 1,
+      "options": [
+        "A. Candela",
+        "B. Degree Celsius",
+        "C. Joule",
+        "D. Kelvin"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 1 from the 2013 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2013_q14",
+      "questionText": "A good thermometer liquid must",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 14,
+      "options": [
+        "A. be colourless.",
+        "B. boil at 100oC and freeze at 0oC.",
+        "C. cling to the walls of the glass.",
+        "D. expand evenly and regularly."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 14 from the 2013 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2013_q16",
+      "questionText": "The physical property of a soil which is determined by the feel method is soil",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 16,
+      "options": [
+        "A. structure.",
+        "B. temperature.",
+        "C. texture.",
+        "D. water."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 16 from the 2013 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2013_q19",
+      "questionText": "Leguminous crops may often be cultivated to add",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 19,
+      "options": [
+        "A. carbon to the soil.",
+        "B. nitrogen to the soil.",
+        "C. protein to the soil.",
+        "D. potassium to the soil."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 19 from the 2013 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2013_q36",
+      "questionText": "Viable seeds are ones that",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 36,
+      "options": [
+        "A. are able to germinate under suitable conditions.",
+        "B. are eaten by animals after planting.",
+        "C. contain a lot of oil.",
+        "D. have hard seed coat."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 36 from the 2013 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2013_q37",
+      "questionText": "Which of the following processes can occur at all temperatures?",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 37,
+      "options": [
+        "A. Boiling",
+        "B. Evaporation",
+        "C. Melting",
+        "D. Sublimation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 37 from the 2013 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2014_q10",
+      "questionText": "The form of energy produced from the nucleus of an atom is termed",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 10,
+      "options": [
+        "A. chemical energy",
+        "B. mechanical energy",
+        "C. nuclear energy",
+        "D. thermal energy"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 10 from the 2014 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2014_q28",
+      "questionText": "The study of the soil profile of an area helps the farmer to",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 28,
+      "options": [
+        "A. control weed growth",
+        "B. determine the soil temperature",
+        "C. determine the types of crop to grow",
+        "D. know the pesticides to use"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 28 from the 2014 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2014_q30",
+      "questionText": "Which of the following source(s) of energy is/are renewable?I. SolarII. Crude oilIII. Wind",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 30,
+      "options": [
+        "A. I only",
+        "B. I and II only",
+        "C. I and III only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 30 from the 2014 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2014_q36",
+      "questionText": "Soil aeration could be improved through",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 36,
+      "options": [
+        "A. mulching",
+        "B. irrigation",
+        "C. soil drainage",
+        "D. fertilizer application"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 36 from the 2014 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2015_q12",
+      "questionText": "Which of the following conditions promote(s) rusting of iron?I. AirII. MoistureIII. Oil",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 12,
+      "options": [
+        "A. I only",
+        "B. II only",
+        "C. I and II only",
+        "D. II and III only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 12 from the 2015 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2015_q18",
+      "questionText": "The transfer of heat from the bottom to the top of a beaker containing water is by",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 18,
+      "options": [
+        "A. absorption.",
+        "B. conduction.",
+        "C. convection",
+        "D. radiation"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 18 from the 2015 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2016_q14",
+      "questionText": "A substance is termed combustible if it",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 14,
+      "options": [
+        "A. easily catches fire.",
+        "B. dissolve common salt.",
+        "C. sublimes at room temperature.",
+        "D. boils at 100oC."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 14 from the 2016 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2016_q16",
+      "questionText": "Which type of energy is lost when sweat evaporates from the human body?",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 16,
+      "options": [
+        "A. Sound energy",
+        "B. Mechanical energy",
+        "C. Chemical energy",
+        "D. Heat energy"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 16 from the 2016 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2016_q24",
+      "questionText": "Which of the following devices converts electrical energy into sound energy?",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 24,
+      "options": [
+        "A. Electric heater",
+        "B. Electric fan",
+        "C. Washing machine",
+        "D. Loudspeaker"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 24 from the 2016 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2016_q38",
+      "questionText": "The form of energy which flows from one point to another due to temperature differences is known as",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 38,
+      "options": [
+        "A. mechanical energy.",
+        "B. heat energy.",
+        "C. solar energy.",
+        "D. nuclear energy."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 38 from the 2016 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2016_q39",
+      "questionText": "Which of the following resources does not produce energy?",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 39,
+      "options": [
+        "A. Coal",
+        "B. Sand",
+        "C. Water",
+        "D. Wind"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 39 from the 2016 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2016_q40",
+      "questionText": "Which of the following resources does not produce energy?",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 40,
+      "options": [
+        "A. Coal",
+        "B. Sand",
+        "C. Water",
+        "D. Wind"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 40 from the 2016 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2017_q15",
+      "questionText": "Energy stored in food is referred to as",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 15,
+      "options": [
+        "A. chemical energy.",
+        "B. heat energy.",
+        "C. solar energy.",
+        "D. kinetic energy."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 15 from the 2017 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2017_q27",
+      "questionText": "The testes are normally located outside the body of the male because",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 27,
+      "options": [
+        "A. the temperature of the body is too high for effective sperm production.",
+        "B. they cannot increase in size when it is in the body.",
+        "C. they can absorb moisture from the atmosphere.",
+        "D. they occupies too much space."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 27 from the 2017 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2018_q36",
+      "questionText": "The relative proportions of the different particle sizes in a soil sample refer to soil",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 36,
+      "options": [
+        "A. temperature.",
+        "B. texture.",
+        "C. structure.",
+        "D. porosity."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 36 from the 2018 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2018_q38",
+      "questionText": "Heat is transferred along an iron bar by",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 38,
+      "options": [
+        "A. absorption.",
+        "B. conduction.",
+        "C. convection.",
+        "D. radiation."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 38 from the 2018 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2018_q6",
+      "questionText": "Digestion of fats and oils in humans starts in the",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 6,
+      "options": [
+        "A. colon.",
+        "B. gullet.",
+        "C. mouth.",
+        "D. duodenum."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 6 from the 2018 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2018_q8",
+      "questionText": "The process by which gas changes to liquid is known as",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 8,
+      "options": [
+        "A. melting.",
+        "B. evaporation.",
+        "C. condensation.",
+        "D. boiling."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 8 from the 2018 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2019_q13",
+      "questionText": "Benedict's solution was added to a mixturein a test tube and it turned brick red when heated. The mixture is likely to contain",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 13,
+      "options": [
+        "A. glucose.",
+        "B. vitamin.",
+        "C. protein.",
+        "D. oil."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 13 from the 2019 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2019_q29",
+      "questionText": "The study of the soil profile of an area helps the farmer to",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 29,
+      "options": [
+        "A. control weed growth.",
+        "B. determine the soil temperature.",
+        "C. determine the types of crops to grow.",
+        "D. know the pesticides to use."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 29 from the 2019 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2019_q34",
+      "questionText": "Am example of soil micro-nutrients is",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 34,
+      "options": [
+        "A. copper.",
+        "B. calcium.",
+        "C. phosphorus.",
+        "D. potassium."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 34 from the 2019 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2019_q7",
+      "questionText": "Which of the following source(s) of energy is/are renewable?I. SolarII. Crude oilIII. Wind",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 7,
+      "options": [
+        "A. I only",
+        "B. I and II only",
+        "C. I and III ONLY",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 7 from the 2019 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2020_q10",
+      "questionText": "Which of the following sources of energy is/are renewable?I. WindII. CoalIII. Crude oil",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 10,
+      "options": [
+        "A. I only",
+        "B. I and II only",
+        "C. II and III only",
+        "D. I,II and III"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 10 from the 2020 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2020_q14",
+      "questionText": "The colour of a soil profile determines the",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 14,
+      "options": [
+        "A. depth at which implements are set",
+        "B. drainage ability of the soil",
+        "C. fertility of the soil",
+        "D. type of tool to use"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 14 from the 2020 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2020_q24",
+      "questionText": "The mode of heat transfer in which no material is involved is known as",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 24,
+      "options": [
+        "A. conduction",
+        "B. convection",
+        "C. expansion",
+        "D. radiation"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 24 from the 2020 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2020_q29",
+      "questionText": "Which of the following soil type has the highest capillarity?",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 29,
+      "options": [
+        "A. Clay",
+        "B. Loam",
+        "C. Sand",
+        "D. Silt"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 29 from the 2020 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2020_q32",
+      "questionText": "In which of the following devices is electrical energy transformed into light energy",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 32,
+      "options": [
+        "A. Electric bell",
+        "B. Fluorescent tube",
+        "C. Lantern",
+        "D. Radio"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 32 from the 2020 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2021_q22",
+      "questionText": "Determine the potential energy of a block of mass 2 kg placed on a building 10 m tall. [g = 10 ms-2]",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 22,
+      "options": [
+        "A. 20 J",
+        "B. 50 J",
+        "C. 100 J",
+        "D. 200 J"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 22 from the 2021 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2021_q33",
+      "questionText": "In an experiment to determine the various particle sizes of soil sedimentation, the particle above clay suspension are",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 33,
+      "options": [
+        "A. Loam",
+        "B. Organic",
+        "C. Gravels",
+        "D. Silt"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 33 from the 2021 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2021_q35",
+      "questionText": "Heat from the sun byI. ConductionII. ConventionIII. Radiation",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 35,
+      "options": [
+        "A. I only",
+        "B. II only",
+        "C. III only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 35 from the 2021 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2021_q39",
+      "questionText": "If a soil is smooth and sticky, it means that the soil has a large amount of",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 39,
+      "options": [
+        "A. Clay",
+        "B. Loam",
+        "C. Sand",
+        "D. Silt"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 39 from the 2021 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2021_q40",
+      "questionText": "If a soil is smooth and sticky, it means that the soil has a large amount of",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 40,
+      "options": [
+        "A. Clay",
+        "B. Loam",
+        "C. Sand",
+        "D. Silt"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 40 from the 2021 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2022_q1",
+      "questionText": "1.\n\n \n\nThe energy transformation that takes place in a solar cell is",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 1,
+      "options": [
+        "A. light to chemical.",
+        "B. light to electrical.",
+        "C. electrical to heat.",
+        "D. electrical to light."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 1 from the 2022 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2022_q13",
+      "questionText": "It is not advisable to use old electrical gadgets because they",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 13,
+      "options": [
+        "A. are not efficient.",
+        "B. are dangerous.",
+        "C. produce sparks.",
+        "D. waste energy."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 13 from the 2022 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2022_q18",
+      "questionText": "Urea is a good source of",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 18,
+      "options": [
+        "A. phosphorus in the soil.",
+        "B. calcium in the soil.",
+        "C. sodium in the soil.",
+        "D. nitrogen in the soil."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 18 from the 2022 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2022_q19",
+      "questionText": "Which of the following statements are reasons for conserving energy?\n\nI. Insufficient production of energy\n\nII. Increasing demand of energy\n\nIII. Limiting production of carbon (IV) oxide",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 19,
+      "options": [
+        "A. I and II only",
+        "B. I and III only",
+        "C. II and III only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 19 from the 2022 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2023_q15",
+      "questionText": "A pupil of mass 70 kg climbed a building of height 15 m. Determine the pupils potential energy at the top of the building.[g = 10 m-2]",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 15,
+      "options": [
+        "A. 10,500 J",
+        "B. 5,250 J",
+        "C. 1,050 J",
+        "D. 700 J"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 15 from the 2023 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2023_q17",
+      "questionText": "Artificial satellites can be used forI. communication.II. oil and gas exploration.III. meteorological studies.",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 17,
+      "options": [
+        "A. I only",
+        "B. II only",
+        "C. I and II only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 17 from the 2023 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2023_q9",
+      "questionText": "Steam changes to liquid by a process called",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 9,
+      "options": [
+        "A. evaporation.",
+        "B. condensation.",
+        "C. melting.",
+        "D. boiling."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 9 from the 2023 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2024_q1",
+      "questionText": "Which of the following sources of energy is non-renewable?I. CoalII. SolarIII. WindIV. Uranium-236",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 1,
+      "options": [
+        "A. I, II and III only",
+        "B. II, III and IV only",
+        "C. I and IV only",
+        "D. II and III only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 1 from the 2024 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2024_q12",
+      "questionText": "A bowl of water on a gas stove was initially cold. It became warm after sometime.What was the mode of heat transfer in the water?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 12,
+      "options": [
+        "A. Convection",
+        "B. Radiation",
+        "C. Emission",
+        "D. Conduction"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 12 from the 2024 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2024_q16",
+      "questionText": "Which of the following electrical appliances can convert electrical energy to heat energy?I. Electric ironII. KettleIII. Water heater",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 16,
+      "options": [
+        "A. I, II and III",
+        "B. I and III only",
+        "C. II and III only",
+        "D. I and II only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 16 from the 2024 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2024_q26",
+      "questionText": "The energy transformation that occurs when sodium hydroxide is dissolved in water is",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 26,
+      "options": [
+        "A. heat to potential energy.",
+        "B. chemical to light energy.",
+        "C. chemical to heat energy.",
+        "D. heat to kinetic energy."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 26 from the 2024 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2024_q34",
+      "questionText": "A metallic saddle was left in a boiling soup. After sometime, the handle became hot.This is because the particles in the saddle",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 34,
+      "options": [
+        "A. undergo rapid, random motion,",
+        "B. contain free electrons which are able to transfer heat energy.",
+        "C. are separated by large distances.",
+        "D. circulate as a result of the temperature differences."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 34 from the 2024 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2024_q35",
+      "questionText": "The simplest way of making well water suitable for laundry is by",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 35,
+      "options": [
+        "A. adding copper sulphate.",
+        "B. filtering.",
+        "C. boiling .",
+        "D. adding chlorine."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 35 from the 2024 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2024_q38",
+      "questionText": "Which of the following pairs of energy sources is environmentally friendly?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 38,
+      "options": [
+        "A. Coal and thermal energy",
+        "B. Wind and biogas",
+        "C. Wind and coal",
+        "D. Biogas and thermal energy"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 38 from the 2024 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2025_q2",
+      "questionText": "The S.I unit of energy is represented as",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 2,
+      "options": [
+        "A. Joule.",
+        "B. joule.",
+        "C. j.",
+        "D. Js."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 2 from the 2025 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2025_q33",
+      "questionText": "Which of the following energy sources is/are environmentally friendly?I. WindII. HydroIII. Biomass",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 33,
+      "options": [
+        "A. I only",
+        "B. II only",
+        "C. I and II only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 33 from the 2025 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2025_q6",
+      "questionText": "An animal feed made up of high fibre is most likely to contain",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 6,
+      "options": [
+        "A. maize grain.",
+        "B. silage.",
+        "C. soybean.",
+        "D. wheat grain."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 6 from the 2025 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2025_q8",
+      "questionText": "A mango of mass 2 kg hangs 15 m on top of a mango tree. Determine the value of the kinetic energy attained just before it hits the ground. [g = 10 m s-2]",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 8,
+      "options": [
+        "A. 30.0 J",
+        "B. 225.0 J",
+        "C. 300.0 J",
+        "D. 3.0 J"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 8 from the 2025 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_1990_q4",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nWhat is pollution?\n\n(ii)\n\n \n\nName two types of pollution. For each type, give one pollutant and its source.\n\n(b)\n\n \n\n(i)\n\n \n\nExplain the term vegetative reproduction.\n\n(ii)\n\n \n\nGive any two examples of plants that reproduce vegetatively.\n\n(c)\n\n \n\n(i)\n\n \n\nList the parts of an atom and show the electrical charges of each of the parts.\n\n(ii)\n\n \n\nExplain the term work.\n\n(iii)\n\n \n\nDistinguish between heat and temperature and give their units.",
+      "type": "essay",
+      "year": "1990",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1990 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_1992_q3",
+      "questionText": "(a)\n\n \n\nA sample of garden soil is put in a cylinder containing water. It is shaken and allowed to settle.\n\nDraw and label the layers formed.\n\n(b)\n\n \n\n(i)\n\n \n\nName four types of forces.\n\n(ii)\n\n \n\nA boy used a catapult to pluck a mango from a tree. State two forces involved in this activity.\n\n(iii)\n\n \n\nWhere are the forces in (b) (ii) applied?\n\n(c)\n\n \n\nDescribe an experiment to show that there is change in heat energy when a new substance is formed.",
+      "type": "essay",
+      "year": "1992",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1992 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_1996_q4",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nGive the names of organisms which cause the following diseases:\n\nSleeping sickness, Cholera, Malaria, Bilharzia\n\n(ii)\n\n \n\nWhich part of the following crops does a farmer usually grow?\n\nBanana, cocoyam, tomato, ginger, yam, cassava\n\n(b)\n\n \n\nName the organs used by the following organisms for respiration:\n\n(i)\n\n \n\nTilapia\n\n(ii)\n\n \n\nToad\n\n(c)\n\n \n\n(i)\n\n \n\nWhat happens to the temperature of water that is boiling in an open container?\n\n(ii)\n\n \n\nGive two characteristics of a liquid.\n\n(iii)\n\n \n\nName the three processes by which heat is transmitted.\n\n(iv)\n\n \n\nState two applications of the expansion of solids in everyday life.\n\n(d)\n\n \n\nExplain the following terms:\n\n(i)\n\n \n\nPhysical change\n\n(ii)\n\n \n\nChemical change\n\n(e)\n\n \n\nState whether each of the following is a physical or a chemical change\n\n(i)\n\n \n\nrusting of iron\n\n(ii)\n\n \n\nfreezing of water\n\n(iii)\n\n \n\nburning of wood\n\n(iv)\n\n \n\nfermentation\n\n(v)\n\n \n\ngrinding of chalk\n\n(vi)\n\n \n\ndissolving sugar in water\n\n(f)\n\n \n\nName the compound formed when theh following elements combine:\n\n(i)\n\n \n\nIron and sulphur\n\n(ii)\n\n \n\nZinc and oxygen\n\n(iii)\n\n \n\nSodium and chlorine\n\n(iv)\n\n \n\nCalcium and chlorine",
+      "type": "essay",
+      "year": "1996",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1996 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_1998_q4",
+      "questionText": "(a)\n\n \n\nState four ways by which plants are able to protect themselves against animals.\n\n(b)\n\n \n\n(i)\n\n \n\nDefine pollination.\n\n(ii)\n\n \n\nList four features of insect pollinated flowers.\n\n(c)\n\n \n\nAn atom has three protons and three neutrons.\n\n(i)\n\n \n\nHow many electrons are there in this atom?\n\n(ii)\n\n \n\nDraw a labeled diagram to show the arrangement of all the particles in the atom.\n\n(d)\n\n \n\nA body of mass 12.0 kg is placed on an orange tree 20.0 m above the ground\n\n(i)\n\n \n\nCalculate its potential energy with respect to the ground\n\n(ii)\n\n \n\nIf the body is released from this height, what will be its kinetic energy just before it hits the ground.\n\n[g = 10 ms-2]",
+      "type": "essay",
+      "year": "1998",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1998 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2003_q1",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nDefine photosynthesis.\n\nii)\n\n \n\nGive two ways in which photosynthesis is important to animals.\n\nb)\n\n \n\nName three sources of chemical energy.\n\nc)\n\n \n\nDescribe how you would separate a mixture of sodium chloride and sand.\n\nd)\n\n \n\nComplete and balance the following chemical reaction:\n\nCaCO3 + HCl →\n\ne)\n\n \n\nTwo dry cells, a switch and a bulb are connected in series. Draw and label a circuit diagram of the arrangement.",
+      "type": "essay",
+      "year": "2003",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2003 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2004_q1",
+      "questionText": "(a)\n\n \n\nStudy the simple circuit diagram shown below and answer the questions that follow.\n\n\n\n(i)\n\n \n\nIdentify the components labelled I, II, III, IV, V and VI\n\n(ii)\n\n \n\nWhich component is used to close the circuit?\n\n(iii)\n\n \n\nState the observation that will be made when the circuit is closed.\n\n(iv)\n\n \n\nState the energy transformations that take place when the circuit is closed\n\n(v)\n\n \n\nGive the name of the circuit connection between components IV and VI\n\n(b)\n\n \n\nThe diagram below is an illustration of an experimental set-up used for separating a mixture of water and alcohol. Study the diagram carefully and answer the questions that follow.\n\n\n\n(i)\n\n \n\nState the method of separation shown in the set-up.\n\n(ii)\n\n \n\nIdentify liquid Y, with reasons.\n\n(iii)\n\n \n\nGive the functions of the thermometer and the water jacket X\n\n(iv)\n\n \n\nWhat physical processes are involved in the method of separating the mixture?\n\n(v)\n\n \n\nState the physical property which makes it possible to separate the water and alcohol.\n\n(c)\n\n \n\nA student performed tests on food substances A, B and C and made the following observations\n\nFood substance\n\nTest\n\nObservation\n\nA\n\nFew drops of iodine solution was added to A\n\nThe iodine solution turns blue-black\n\nB\n\nA drop of B was applied to a white sheet of paper\n\nA translucent patch was seen on the paper\n\nC\n\nBenedict's solution was added to C and the mixture boiled\n\nBenedicts's solution turns from blue to brick-red\n\n(i)\n\n \n\nIdentify food substances A, B and C.\n\n(ii)\n\n \n\nGive the products of digestion of A, B and C\n\n(iii)\n\n \n\nIn which parts of the alimentary canal does the digestion of each of food substances A, B and C start?\n\n(iv)\n\n \n\nIn which part of the alimentary canal is food substance C absorbed after digestion?",
+      "type": "essay",
+      "year": "2004",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2004 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2004_q4",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nWhat is a hormone?\n\nii)\n\n \n\nCopy and complete the following table.\n\nName of hormone\n\nOrgan secreting hormone\n\nFunction of hormone\n\nAdrenalin\n\n\n\n\n\nThyroxin\n\n\n\n\n\nInsulin\n\n\n\n\n\nb)\n\n \n\nAmmonia gas is prepared in the laboratory by heating ammonium chloride and calcium hydroxide.\n\ni)\n\n \n\nWrite a balanced equation for the reaction.\n\nii)\n\n \n\nHow is ammonia gas tested in the laboratory?\n\niii)\n\n \n\nState one use of ammonia.\n\nc)\n\n \n\ni)\n\n \n\nName four types of forces.\n\nii)\n\n \n\nA boy used a catapult to kill a bird which was on a tree and it fell to the ground.\n\nGive two forces involved in this process.",
+      "type": "essay",
+      "year": "2004",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2004 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2005_q1",
+      "questionText": "(a)\n\n \n\n\n\nIn an experiment, a pupil took two empty Milo tins and made holes in their sides as shown in the diagram above. The pupil then filled the Milo tins with water.\n\n(i)\n\n \n\nDraw and label the diagrams to show what the pupil will observe in set-up A and set-up B.\n\n(ii)\n\n \n\nExplain the observations in set-up A and set-up B.\n\n(iii)\n\n \n\nWhat is the aim of set-up A?\n\n(iv)\n\n \n\nWhat is the aim of set-up B?\n\n(b)\n\n \n\nIn an experiment, equal volumes of dilute hydrochloric acid (Solution A) and dilute sodium hydroxide (Solution B) are mixed together to form solution C.\n\n\n\n(i)\n\n \n\nWhat is the volume of solution C?\n\n(ii)\n\n \n\nRed litmus paper and blue litmus paper are dipped in turns into solutions A, B and C.\n\nState the observations you will make in all six cases.\n\n(iii)\n\n \n\nGive the name of the reaction that took place between solution A and solution B.\n\n(iv)\n\n \n\nIdentify solution C\n\n(v)\n\n \n\nState what will happen when solution C is heated.\n\n(c)\n\n \n\nThe table below gives the steps that were followed in an experiment to test for starch in a green leaf freshly taken from a tree.\n\nStages in the test for starch\n\nI.\n\n \n\nLeaf is put into boiling water for 1 minute\n\nII.\n\n \n\nLeaf is dipped in alcohol warmed in a hot water bath\n\nIII.\n\n \n\nLeaf is washed in cold water\n\nIV.\n\n \n\nLeaf is dipped into iodine solution\n\n(i)\n\n \n\nState the reason for carrying out each of the activities in stages I, II and III.\n\n(ii)\n\n \n\nWhat happens when the leaf is dipped in iodine solution?\n\n(iii)\n\n \n\nGive the colour changes of the leaf from the beginning of the experiment to the end of the experiment.\n\n(iv)\n\n \n\nWhy is the alcohol warmed indirectly in a water bath?\n\n(vi)\n\n \n\nExplain what will be observed if the test is carried out on a leaf taken from a plant kept in a dark room for 1 day",
+      "type": "essay",
+      "year": "2005",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2005 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2009_q1",
+      "questionText": "(a)\n\n \n\nIn an experiment, four nails 1, 2, 3 and 4 are fixed with candle wax onto a metal bar and one end of bar is heated by means of boiling water as shown in the diagram below.\n\n\n\nA, B, C and D are thermometers inserted in holes along the bar to measure the temperatures at the various points.\n\n(i)\n\n \n\nWhat is the temperature of the boiling water?\n\n(ii)\n\n \n\nState the observations that will be made about nails 1, 2, 3 and 4.\n\n(iii)\n\n \n\nState the observations that will be made about the temperature recorded by thermometers A, B, C and D.\n\n(iv)\n\n \n\nWhat mode of heat transfer is demonstrated in the experiment?\n\n(v)\n\n \n\nState one effect of heat that is associated with the experiment.\n\n(vi)\n\n \n\nState the aim of the experiment.\n\n(b)\n\n \n\nIn an experiment, a student took three iron nails and cleaned their surfaces dry and placed them in three separate test tubes in set-ups A, B and C as shown in the diagram. After three days the nail in set-up A was found to have rusted while the nails in set-ups B and C did not.\n\n\n\nAnswer the following questions:\n\n(i)\n\n \n\nWhy was the water in set-up B boiled?\n\n(ii)\n\n \n\nExplain the function of the oil on top of the water in set-up B.\n\n(iii)\n\n \n\nState the purpose of the rubber stopper in set-up C.\n\n(iv)\n\n \n\nWhy did the nail in set-up A rust?\n\n(v)\n\n \n\nSuggest an aim for the experiment.\n\n(vi)\n\n \n\nFrom the experiment, explain why oil or grease is applied on the surface of a metal to prevent rusting.\n\n(c)\n\n \n\nIn an experiment, the following activities were carried out on two green leaves A and B.\n\nLeaf A was from a plant placed in the sunlight for sometime while leaf B was from a plant placed in a dark cupboard for 24 hours.\n\nActivity\n\nI.\n\n \n\nLeaves dipped in boiling water for 1 minute\n\nII.\n\n \n\nLeaves dipped in warm alcohol\n\nIII.\n\n \n\nLeaves washed in cold water\n\nIV.\n\n \n\nLeaves dipped into iodine solution\n\nAfter dipping the iodine solution, it was observed that leaf A changed colour while leaf B did not change colour.\n\nAnswer the following questions:\n\n(i)\n\n \n\nExplain why each of the activities I, II, III and IV was carried out.\n\n(ii)\n\n \n\nState the colour change of leaf A.\n\n(iii)\n\n \n\nExplain why leaf A changed colour but leaf B did not.\n\n(iv)\n\n \n\nSuggest an aim for the experiment.",
+      "type": "essay",
+      "year": "2009",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2009 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2012_q3",
+      "questionText": "(a)\n\n \n\nExplain why a tomato plant is likely to wilt if too much fertilizer is applied to it.\n\n(b)\n\n \n\n(i)\n\n \n\nGive two differences between electrical insulators and electrical conductors.\n\n(ii)\n\n \n\nState two effects of illegal electrical connections in the home.\n\n(c)\n\n \n\nExplain each of the following terms as used to describe change of state of matter:\n\n(i)\n\n \n\ncondensation;\n\n(ii)\n\n \n\nfreezing.\n\n(d)\n\n \n\n(i)\n\n \n\nState two diseases of the circulatory system in humans.\n\n(ii)\n\n \n\nMention two ways in which each of the diseases you have stated in (d)(i) can be prevented.",
+      "type": "essay",
+      "year": "2012",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2012 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2012_q6",
+      "questionText": "a)\n\n \n\nWhat are\n\ni)\n\n \n\nannual plants?\n\nii)\n\n \n\nperennial plants?\n\nb)\n\n \n\nMention one danger involved in each of the following activities in the laboratory:\n\ni)\n\n \n\neating or drinking water in the laboratory;\n\nii)\n\n \n\nwashing hands with unknown liquid in a beaker;\n\niii)\n\n \n\nwalking barefooted.\n\nc)\n\n \n\ni)\n\n \n\nWhat is a digestive enzyme?\n\nii)\n\n \n\nGive two examples of digestive enzymes in humans.\n\nd)\n\n \n\nGive two differences between conduction and radiation of heat.",
+      "type": "essay",
+      "year": "2012",
+      "questionNumber": 6,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2012 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2013_q1",
+      "questionText": "(a)\n\n \n\nThe diagrams below are illustrations of an experiment to demonstrate a biological principle.\n\nStudy the diagrams carefully and answer the questions that follow.\n\n\n\n(i)\n\n \n\nName the parts labelled I and II.\n\n(ii)\n\n \n\nState two differences between the set-ups A and B.\n\n(iii)\n\n \n\nWhat is the role played by the part labelled I in the experiment?\n\n(iv)\n\n \n\nName the biological principle being demonstrated in this experiment.\n\n(v)\n\n \n\nState one way in which plants benefits from the principle named in (iv).\n\n(vi)\n\n \n\nState one way in which animals benefit from the principle named in (iv).\n\n(b)\n\n \n\nIn an experiment to investigate the reactivity of zinc, a piece of the metal was dropped into a test tube containing dilute hydrochloric acid. The experiment set-up is illustrated below.\n\n\n\nStudy the set-up carefully and answer the questions that follow.\n\n(i)\n\n \n\nWrite a balanced chemical equation for the reaction that occurred in the experiment.\n\n(ii)\n\n \n\nName the gas evolved.\n\n(iii)\n\n \n\nList two metals which can react in a similar way as the zinc.\n\n(iv)\n\n \n\nList two metals which cannot react in a similar way as the zinc.\n\n(v)\n\n \n\nName two glass apparatus which could have been used instead of the test tube.\n\n(c)\n\n \n\nThe diagram below is an illustration of a thermos flask.\n\n\n\nStudy the diagram carefully and answer the questions that follow.\n\n(i)\n\n \n\nName the parts labelled I, II, III, IV and V.\n\n(ii)\n\n \n\nHow does the device minimize heat loss or gain through\n\n(α)\n\n \n\nconduction?\n\n(β)\n\n \n\nconvection?\n\n(γ)\n\n \n\nradiation?\n\n(iii)\n\n \n\nState one use of the thermos flask.\n\n(d)\n\n \n\nThe diagrams below illustrate an experimental set-up on a physical property of soil using three soil types X, Y and Z.\n\n\n\nStudy the set-up carefully and answer the questions that follow:\n\n(i)\n\n \n\nName the parts of the set-up labelled I, II, III and IV.\n\n(ii)\n\n \n\nWhich of the three soil types has the\n\n(α)\n\n \n\nhighest water holding capacity?\n\n(β)\n\n \n\nleast water holding capacity?\n\n(iii)\n\n \n\nName each of the three soil types X, Y and Z.\n\n(iv)\n\n \n\nSuggest a suitable title for the experiment.",
+      "type": "essay",
+      "year": "2013",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2013 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2015_q2",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nWhat is technology?\n\nii)\n\n \n\nState two differences between science and technology.\n\nb)\n\n \n\nDraw potassium atom and show the distribution of electrons in its shells.\n\n[K= 19]\n\nc)\n\n \n\nWhat energy transformations take place in each of the following activities?\n\ni)\n\n \n\nUsing a flashlight battery to produce light in a bulb.\n\nii)\n\n \n\nUsing a microphone to address a gathering.\n\nd)\n\n \n\nList three components of soil.",
+      "type": "essay",
+      "year": "2015",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2015_q6",
+      "questionText": "a)\n\n \n\nState one function each of the following parts of the human reproductive system:\n\ni)\n\n \n\nPenis;\n\nii)\n\n \n\nOvary;\n\niii)\n\n \n\nOviduct;\n\niv)\n\n \n\nTestis;\n\nv)\n\n \n\nUterus;\n\nb)\n\n \n\ni)\n\n \n\nWhat is electrical conductor?\n\nii)\n\n \n\nList two substances which are insulators.\n\nc)\n\n \n\nState three ways of maintaining soil fertility.\n\nd)\n\n \n\nWrite word equation for each of the following chemical reactions:\n\ni)\n\n \n\nOxygen and hydrogens;\n\nii)\n\n \n\nNitrogen and hydrogen;\n\niii)\n\n \n\nSodium and chlorine.",
+      "type": "essay",
+      "year": "2015",
+      "questionNumber": 6,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2016_q3",
+      "questionText": "a)\n\n \n\nList three modes of heat transfer.\n\nb)\n\n \n\ni)\n\n \n\nWhat is a deficiency disease?\n\nii)\n\n \n\nName three deficiency in humans.\n\nc)\n\n \n\nState two ways in which each of the following factors causes depletion of soil resources:\n\ni)\n\n \n\nBurning;\n\nii)\n\n \n\nLeaching.\n\nd)\n\n \n\nList three processes that can change matter from one state to another.",
+      "type": "essay",
+      "year": "2016",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2016 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2017_q5",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nDifferentiate between egestion and digestion in nutrition.\n\nii)\n\n \n\nWhat is the end-product of digestion?\n\nb)\n\n \n\nGive one example of a chemical compound used in:\n\ni)\n\n \n\nmedicine;\n\nii)\n\n \n\nagriculture;\n\niii)\n\n \n\nindustry.\n\nc)\n\n \n\ni)\n\n \n\nDefine the term soil profile.\n\nii)\n\n \n\nState two ways in which soil profile is important in crop production.\n\nd)\n\n \n\ni)\n\n \n\nState two steps used by scientists in doing their work.\n\nii)\n\n \n\nGive two subjects that may be considered as applied sciences.",
+      "type": "essay",
+      "year": "2017",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2017 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2019_q1",
+      "questionText": "a)\n\n \n\nIn an experiment the surfaces of three iron nails were cleaned dry and placed in three separate test tubes A, B and C as shown in the diagram.\n\nStudy the diagram carefully and answer the questions that follow.\n\n\n\nAfter three days the nail in the test tube A was found to have rusted while the nail in test tubes B and C did not rust.\n\ni)\n\n \n\nSuggest an aim for the experiment.\n\nii)\n\n \n\nWhy was the water in test tube B boiled?\n\niii)\n\n \n\nState the function of the oil on top of the water in test tube B.\n\niv)\n\n \n\nWhat is the purpose of the calcium chloride in test tube C?\n\nv)\n\n \n\nWhy did the nail in test tube A rust?\n\nvi)\n\n \n\nWhy did the nail in test tube\n\nα)\n\n \n\nB not rusted?\n\nβ)\n\n \n\nC not rusted?\n\nvii)\n\n \n\nFrom the experiment, explain why oil is applied on the surface of a metal to prevent rusting.\n\nb)\n\n \n\nIn an experiment, the following activities were carried out on two green leaves A and B.Leaf A was taken from a plant placed in the sunlight for some time while leaf B was taken from a plant placed in a dark cupboard for 24 hours.\n\nActivity\n\nI. Leaves dipped in boiling water for 1 minute;\n\nII. Leaves dipped in warm alcohol;\n\nIII. Leaves washed in cold water;\n\nIV. Leaves dipped in iodine solution.\n\nAfter dipping in the iodine solution, it was observed that leaf A changed colour.\n\nStudy the activities carefully and answer the questions that follow.\n\ni)\n\n \n\nSuggest an aim for the experiment.\n\nii)\n\n \n\nExplain briefly why each of the following activities were carried out:\n\n(α) I;\n\n(β) II;\n\n(γ) III.\n\niii)\n\n \n\nState the colour change of leaf A.\n\niv)\n\n \n\nExplain why leaf A changed colour?\n\nv)\n\n \n\nWhy is it necessary to de-starch the plant before starting the experiment?\n\nvi)\n\n \n\nFrom the above experiment, what conclusion(s) can be drawn.\n\nc)\n\n \n\nYou are provided with two dry soil samples A and B, a measuring cylinder, beakers, funnels, filter paper, beam balance, stop watch and water. With the aid of a labelled diagram, describe an experiment to find out which of the two soil samples can hold more water.\n\nd)\n\n \n\nThe diagram below is an illustration of an experiment that was carried out. In the experiment three pins 1, 2 and 3 were fixed with candle wax onto a metal bar and one end of the bar was heated by means of boiling water. A, B and C are thermometers inserted in holes along the bar to measure the temperature at the various points.\n\nStudy the diagram carefully and answer the questions that follow.\n\n\n\ni)\n\n \n\nSuggest an aim for the experiment.\n\nii)\n\n \n\nWhat is the temperature of the boiling water?\n\niii)\n\n \n\nState the observation that would be made about the pins 1, 2 and 3.\n\niv)\n\n \n\nState the observation that would be made about the temperatures recorded by the thermometers A, B and C.\n\nv)\n\n \n\nState how heat from the sun is transmitted to the earth.",
+      "type": "essay",
+      "year": "2019",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2019 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2021_q2",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nState what happens when photosynthesis occurs in a leaf.\n\n(ii)\n\n \n\nWhat is pollination?\n\n(b)\n\n \n\nExplain briefly why the mass of lumpy charcoal remains unchanged when ground into powder but the mass of the same lump changes when heated to burn.\n\n(c)\n\n \n\n(i)\n\n \n\nWhat is a physical quantity?\n\n(ii)\n\n \n\nState two physical quantities\n\n(d)\n\n \n\nState two importance each of:\n\n(i)\n\n \n\nlight;\n\n(ii)\n\n \n\ntemperature;\n\nin crop production",
+      "type": "essay",
+      "year": "2021",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2021 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2021_q5",
+      "questionText": "(a)\n\n \n\nState two important components each of the soils that helps:\n\n(i)\n\n \n\nCrops to grow well;\n\n(ii)\n\n \n\nTo maintain good soil structure.\n\n(b)\n\n \n\n(i)\n\n \n\nExplain how energy in a windmill is obtained\n\n(ii)\n\n \n\nState one source of renewable energy.\n\n(c)\n\n \n\n(i)\n\n \n\nExplain why steel is preferred to iron in building construction.\n\n(ii)\n\n \n\nState two ways of preventing rusting.\n\n(d)\n\n \n\nState three ways of preventing indigestion.",
+      "type": "essay",
+      "year": "2021",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2021 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2023_q10",
+      "questionText": "g of iodated salt was added to 150 ml of water in a baker. The mixture was stirred thoroughly.\n\nII.\n\n \n\nVegetable oil was added to a quantity of water in a corked flask and shaken vigorously then allowed to stand for some time.\n\nIII.\n\n \n\nFew grams of grinded charcoal was added to water in a beaker and stirred vigorously and then allowed to stand.\n\ni)\n\n \n\nState what will be observed in each of the activities I, II and III.\n\nii)\n\n \n\nSuggest an aim for the experiment.\n\niii)\n\n \n\nState one difference between what is observed in I and III.\n\niv)\n\n \n\nState a method of separation for the activity carried out in II.",
+      "type": "essay",
+      "year": "2023",
+      "questionNumber": 10,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2023 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2025_q5",
+      "questionText": "(a)\n\n \n\nExplain briefly how each of the following farming systems are practised:\n\n(i)\n\n \n\norganic farming;\n\n(ii)\n\n \n\nmixed farming;\n\n(iii)\n\n \n\nmixed cropping.\n\n[6 marks]\n\n(b)\n\n \n\nClassify a mixture of each of the following pairs of substances as either a homogeneous or heterogeneous mixture:\n\n(i)\n\n \n\noil and water;\n\n(ii)\n\n \n\nsalt and water;\n\n(iii)\n\n \n\nethanol and water.\n\n[3 marks]\n\n(c)\n\n \n\n(i)\n\n \n\nGive two reasons why energy from the sun is said to be renewable.\n\n(ii)\n\n \n\nState three differences between heat and temperature.\n\n[5 marks]\n\n(d)\n\n \n\nExplain briefly two effects each of the following factors on the Nitrogen cycle:\n\n(i)\n\n \n\nleaching;\n\n(ii)\n\n \n\nremoval of leguminous plants.\n\n[6 marks]\n\n Show Solution",
+      "type": "essay",
+      "year": "2025",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2025 Integrated Science",
+      "marks": 6,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Energy Forms"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

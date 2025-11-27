@@ -1,0 +1,197 @@
+{
+  "topic": "Data Collection",
+  "questions": [
+    {
+      "id": "Pc95TFphSdHTw4RlH67S",
+      "year": "2004",
+      "subject": "mathematics",
+      "questionNumber": 22,
+      "questionText": "The population of Ghana was 5,000,000 in 1957. The population in 1998 was estimated to be 17,000,000. Find the percentage increase in population from 1957 to 1998.",
+      "options": [
+        "A. 2.4%",
+        "B. 24%",
+        "C. 240%",
+        "D. 2400%"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480152,
+        "_nanoseconds": 972000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2004"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487088,
+        "_nanoseconds": 551000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1990_q4",
+      "questionText": "The following is the result of a survey conducted in a class of a junior secondary school to find the favourite soft drink of each pupil in the class.\n\nSoft Drink\n\nNumber of pupils preferring soft drink\n\nCoca-cola",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1990",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1990 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1990",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "uaYM3lIOzF3LZ4cyWC58",
+      "year": "2025",
+      "subject": "mathematics",
+      "questionNumber": 13,
+      "questionText": "A survey shows that 28% of all the men in a village are vegetarian. What is the probability that a man selected at random from the village is a vegetarian?",
+      "options": [
+        "A. 7 25",
+        "B. 41 50",
+        "C. 1 2",
+        "D. 1"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482523,
+        "_nanoseconds": 834000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2025"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487105,
+        "_nanoseconds": 685000000
+      }
+    },
+    {
+      "id": "vNeaEC8SujT5m3nul9Yl",
+      "year": "2000",
+      "subject": "mathematics",
+      "questionNumber": 29,
+      "questionText": "A school has a population of 600. Out of this, 120 are girls. What is the probability of meeting a pupil in the school who is a boy?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480066,
+        "_nanoseconds": 722000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2000"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1 4",
+        "B. 1 5",
+        "C. 3 5",
+        "D. 4 5",
+        "E. 12 25"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487085,
+        "_nanoseconds": 254000000
+      }
+    },
+    {
+      "id": "wPnf1Jl2yaD03MfEdr3M",
+      "year": "2025",
+      "subject": "mathematics",
+      "questionNumber": 2,
+      "questionText": "The population of a town is 56782. What is this number to three significant figures?",
+      "options": [
+        "A. 567",
+        "B. 568",
+        "C. 56700",
+        "D. 56800"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482518,
+        "_nanoseconds": 125000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2025"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487105,
+        "_nanoseconds": 685000000
+      }
+    }
+  ],
+  "questionCount": 5
+}

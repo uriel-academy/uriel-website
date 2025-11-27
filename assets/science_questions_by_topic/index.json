@@ -1,0 +1,83 @@
+{
+  "generatedAt": "2025-11-27T19:44:58.725Z",
+  "totalQuestions": 1612,
+  "categorizedQuestions": 1316,
+  "unclassifiedQuestions": 296,
+  "topics": [
+    {
+      "name": "Materials",
+      "questionCount": 204,
+      "filename": "materials.json"
+    },
+    {
+      "name": "Mixtures",
+      "questionCount": 45,
+      "filename": "mixtures.json"
+    },
+    {
+      "name": "Elements & Compounds",
+      "questionCount": 70,
+      "filename": "elements_compounds.json"
+    },
+    {
+      "name": "The Human Body Systems",
+      "questionCount": 113,
+      "filename": "the_human_body_systems.json"
+    },
+    {
+      "name": "Plants & Photosynthesis",
+      "questionCount": 247,
+      "filename": "plants_photosynthesis.json"
+    },
+    {
+      "name": "Life Cycles",
+      "questionCount": 48,
+      "filename": "life_cycles.json"
+    },
+    {
+      "name": "The Solar System",
+      "questionCount": 85,
+      "filename": "the_solar_system.json"
+    },
+    {
+      "name": "Earth Processes",
+      "questionCount": 35,
+      "filename": "earth_processes.json"
+    },
+    {
+      "name": "Ecosystems",
+      "questionCount": 18,
+      "filename": "ecosystems.json"
+    },
+    {
+      "name": "Energy Forms",
+      "questionCount": 188,
+      "filename": "energy_forms.json"
+    },
+    {
+      "name": "Electricity & Magnetism",
+      "questionCount": 22,
+      "filename": "electricity_magnetism.json"
+    },
+    {
+      "name": "Motion & Forces",
+      "questionCount": 119,
+      "filename": "motion_forces.json"
+    },
+    {
+      "name": "Personal Health",
+      "questionCount": 42,
+      "filename": "personal_health.json"
+    },
+    {
+      "name": "Diseases & Prevention",
+      "questionCount": 62,
+      "filename": "diseases_prevention.json"
+    },
+    {
+      "name": "Environmental Conservation",
+      "questionCount": 18,
+      "filename": "environmental_conservation.json"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "topic": "Cleaning & Maintenance",
+  "questions": [
+    {
+      "id": "career_technology_2025_q5",
+      "questionText": "A major cause of cholera in most of the communities is due to",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2025",
+      "section": "A",
+      "questionNumber": 5,
+      "options": [
+        "A. indiscriminate disposal of household refuse.",
+        "B. improper disposal of pollutants.",
+        "C. drinking water contaminated with pollutants.",
+        "D. indiscriminate open defecation."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 5 from the 2025 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2025"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2025",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    }
+  ],
+  "questionCount": 1
+}

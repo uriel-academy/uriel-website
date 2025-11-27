@@ -1,0 +1,1939 @@
+{
+  "topic": "Measures of Central Tendency",
+  "questions": [
+    {
+      "id": "0nxwJX0NuWRBbLBZyR3H",
+      "year": "2006",
+      "subject": "mathematics",
+      "questionNumber": 37,
+      "questionText": "The marks obtained by 5 girls in a test are: 10, 15, 8, 18, 12. Find the median mark.",
+      "options": [
+        "A. 10",
+        "B. 11",
+        "C. 12",
+        "D. 15"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480207,
+        "_nanoseconds": 4000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2006"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 135000000
+      }
+    },
+    {
+      "id": "14q6CmHER54eDPOrkauL",
+      "year": "2016",
+      "subject": "mathematics",
+      "questionNumber": 29,
+      "questionText": "The mean of three number is 12. If two of the numbers are 14 and 16, find the third number.",
+      "options": [
+        "A. 6",
+        "B. 12",
+        "C. 30",
+        "D. 36"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480430,
+        "_nanoseconds": 470000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2016"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487098,
+        "_nanoseconds": 192000000
+      }
+    },
+    {
+      "id": "6miGeAs0RNewrH84nuqq",
+      "year": "2021",
+      "subject": "mathematics",
+      "questionNumber": 27,
+      "questionText": "If the median of the numbers 9,10,12,x, 20 and 25 is 14, find the value of x.",
+      "options": [
+        "A. 14",
+        "B. 16",
+        "C. 18",
+        "D. 22"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480543,
+        "_nanoseconds": 710000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2021"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2021_q27_img27.jpg",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542268,
+        "_nanoseconds": 418000000
+      }
+    },
+    {
+      "id": "7chPEJfiM9aXPp2NcOv3",
+      "year": "2002",
+      "subject": "mathematics",
+      "questionNumber": 32,
+      "questionText": "The marks obtained by 9 students in a test are 3, 3, 4, 5, 6, 7, 7, 7, 8. Use this information to answer the question below. What is the mode?",
+      "options": [
+        "A. 3",
+        "B. 4",
+        "C. 6",
+        "D. 7"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480113,
+        "_nanoseconds": 447000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2002"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 895000000
+      }
+    },
+    {
+      "id": "BxxC7Dm2xMvNnTD3Oi4o",
+      "year": "2012",
+      "subject": "mathematics",
+      "questionNumber": 15,
+      "questionText": "The table below shows the day and night temperatures of a town during a week. Use it to answer the question below. Week Temperature (oC) Day Night Monday 33 24 Tuesday 29 25 Wednesday 32 23 Thursday 34 26 Friday 32 24 Saturday 30 24 Sunday 30 25 Find, correct to one decimal place, the average day temperature for the week.",
+      "options": [
+        "A. 24.4 oC",
+        "B. 30.2 oC",
+        "C. 31.4 oC",
+        "D. 32.2 oC"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480331,
+        "_nanoseconds": 359000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2012"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 925000000
+      }
+    },
+    {
+      "id": "E2dsC3V6oRC3vratR4LB",
+      "year": "2007",
+      "subject": "mathematics",
+      "questionNumber": 6,
+      "questionText": "The marks obtained by 13 candidates in a test are 5, 7, 2, 9, 11, 10, 2, 12, 2, 9, 3, 18 and 2. Use this information to answer the question below. What is the mode?",
+      "options": [
+        "A. 2",
+        "B. 5",
+        "C. 9",
+        "D. 18"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480212,
+        "_nanoseconds": 150000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2007"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2007_q6_img6.png",
+      "updatedAt": {
+        "_seconds": 1763542184,
+        "_nanoseconds": 376000000
+      }
+    },
+    {
+      "id": "EVLLhHWzhFy4xAOt1CoT",
+      "year": "2017",
+      "subject": "mathematics",
+      "questionNumber": 9,
+      "questionText": "The ages of the members of a social club are 20 years, 55 years, 60 years and 25 years. Find the mean age of the members of the club.",
+      "options": [
+        "A. 20 years",
+        "B. 30 years",
+        "C. 40 years",
+        "D. 50 years"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480441,
+        "_nanoseconds": 966000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2017"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2017_q9_img9.jpg",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542211,
+        "_nanoseconds": 776000000
+      }
+    },
+    {
+      "id": "GeAoSJxN0VhiKf78I88g",
+      "year": "1991",
+      "subject": "mathematics",
+      "questionNumber": 16,
+      "questionText": "The marks obtained by 10 children in a mental drill are: 0, 1, 3, 3, 5, 7, 8, 9, 9, 9. Use this information to answer the question below. Find the median mark.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479563,
+        "_nanoseconds": 161000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1991"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 3",
+        "B. 5",
+        "C. 6",
+        "D. 7",
+        "E. 8"
+      ],
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487077,
+        "_nanoseconds": 776000000
+      }
+    },
+    {
+      "id": "NijD3zug6YEFH7huMuq8",
+      "year": "1998",
+      "subject": "mathematics",
+      "questionNumber": 17,
+      "questionText": "The marks obtained by six boys in a test are: 14, 20, 25, 15, 28 and 16. Find the mean mark.",
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480014,
+        "_nanoseconds": 922000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1998"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 19.67",
+        "B. 22.00",
+        "C. 23.20",
+        "D. 26.40",
+        "E. 28.00"
+      ],
+      "updatedAt": {
+        "_seconds": 1763487083,
+        "_nanoseconds": 561000000
+      }
+    },
+    {
+      "id": "PCt71ARidaMMAgXpGfJq",
+      "year": "2003",
+      "subject": "mathematics",
+      "questionNumber": 19,
+      "questionText": "The following marks are the marks obtained by pupils in a test: 2, 3, 5, 2, 3, 4, 2, 3, 5, 3. Use the information above to answer the question below. What is the mode?",
+      "options": [
+        "A. 2",
+        "B. 3",
+        "C. 4",
+        "D. 5"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480128,
+        "_nanoseconds": 717000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2003"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487087,
+        "_nanoseconds": 736000000
+      }
+    },
+    {
+      "id": "PzXqXU5lEVhf8dORLAP3",
+      "year": "2002",
+      "subject": "mathematics",
+      "questionNumber": 31,
+      "questionText": "The s obtained by 9 students in a test are 3, 3, 4, 5, 6, 7, 7, 7, 8. Use this information to answer the question below. Find the median",
+      "options": [
+        "A. 4",
+        "B. 5",
+        "C. 6",
+        "D. 7"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480112,
+        "_nanoseconds": 906000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2002"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 895000000
+      }
+    },
+    {
+      "id": "TKAnf3qVc6VLLKOo3J4I",
+      "year": "2017",
+      "subject": "mathematics",
+      "questionNumber": 35,
+      "questionText": "The number of pupils who attended hospital from eight classes on a particular day are: 1,5,3,1,7,5,1,1. Find the median number.",
+      "options": [
+        "A. 1",
+        "B. 2",
+        "C. 3",
+        "D. 4"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480456,
+        "_nanoseconds": 813000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2017"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2017_q35_img35.png",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542224,
+        "_nanoseconds": 482000000
+      }
+    },
+    {
+      "id": "Twe0NeT1DSON6yCsIbBd",
+      "year": "2005",
+      "subject": "mathematics",
+      "questionNumber": 12,
+      "questionText": "Find the mean of the following set of numbers 10, 12, 14 and 16.",
+      "options": [
+        "A. 12",
+        "B. 13",
+        "C. 14",
+        "D. 15"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480169,
+        "_nanoseconds": 914000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2005"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487089,
+        "_nanoseconds": 336000000
+      }
+    },
+    {
+      "id": "U8AY0zE0C26lMjN67anj",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 17,
+      "questionText": "The scores of 10 students in an examination are given as follows: 45, 12, 75, 81, 54, 51, 24, 67, 19 and 39. What is the median of the scores?",
+      "options": [
+        "A. 39",
+        "B. 48",
+        "C. 51",
+        "D. 54"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480286,
+        "_nanoseconds": 594000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487093,
+        "_nanoseconds": 318000000
+      }
+    },
+    {
+      "id": "VYC5eBdhoM8vDJ9AxIXW",
+      "year": "2018",
+      "subject": "mathematics",
+      "questionNumber": 32,
+      "questionText": "The following data show the marks of students in a test: 10,4,1,4,3,3,2,1,1,7,8. Use the information to answer the question below. Find the mean mark",
+      "options": [
+        "A. 3",
+        "B. 4",
+        "C. 7",
+        "D. 8"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480478,
+        "_nanoseconds": 13000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2018"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487099,
+        "_nanoseconds": 837000000
+      }
+    },
+    {
+      "id": "WZXoCweS0N30RIsX1Y1K",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "Use the information below to answer the question below The scores obtained by 8 pupils in a test are 2, 3, 4, 5, 7, 8, 8 and 9 What is the median score?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480088,
+        "_nanoseconds": 756000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 3",
+        "B. 5",
+        "C. 6",
+        "D. 7",
+        "E. 8"
+      ],
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 59000000
+      }
+    },
+    {
+      "id": "YXCAYMTygsD6SP1C1jAT",
+      "year": "1997",
+      "subject": "mathematics",
+      "questionNumber": 26,
+      "questionText": "The marks obtained by 10 boys in a test are 0, 1, 3, 3, 5, 7, 8, 9, 9, 9. Use this information to answer the question below Find the median score.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479997,
+        "_nanoseconds": 501000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1997"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 3",
+        "B. 5",
+        "C. 6",
+        "D. 7",
+        "E. 8"
+      ],
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487082,
+        "_nanoseconds": 727000000
+      }
+    },
+    {
+      "id": "bePpqPH6VbvBFEnlIVlT",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 6,
+      "questionText": "Kofi bought 4 books at an average price of ₵2,500.00. If the total cost of 3 of the books was ₵6,500.00, find the cost of the fourth book.",
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480076,
+        "_nanoseconds": 434000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵3,500.00",
+        "B. ₵4,000.00",
+        "C. ₵4,500.00",
+        "D. ₵6,500.00",
+        "E. ₵10,000.00"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2001_q6_img6.png",
+      "updatedAt": {
+        "_seconds": 1763542167,
+        "_nanoseconds": 145000000
+      }
+    },
+    {
+      "id": "buhdUwd7OwxMcrqba26C",
+      "year": "1994",
+      "subject": "mathematics",
+      "questionNumber": 39,
+      "questionText": "The mean of the numbers 4, 3, 3, x is 5, find x",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479639,
+        "_nanoseconds": 518000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1994"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 20",
+        "B. 10",
+        "C. 5",
+        "D. 4",
+        "E. 3"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487080,
+        "_nanoseconds": 244000000
+      }
+    },
+    {
+      "id": "d920058vdXtM8H9oevPE",
+      "year": "2017",
+      "subject": "mathematics",
+      "questionNumber": 37,
+      "questionText": "The number of pupils who attended hospital from eight classes on a particular day are: 1,5,3,1,7,5,1,1. Calculate the mean",
+      "options": [
+        "A. 2",
+        "B. 3",
+        "C. 4",
+        "D. 5"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480457,
+        "_nanoseconds": 927000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2017"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487099,
+        "_nanoseconds": 25000000
+      }
+    },
+    {
+      "id": "dPEkXZCFVu9j6VlPhI3a",
+      "year": "1999",
+      "subject": "mathematics",
+      "questionNumber": 23,
+      "questionText": "Find the median of the following numbers: 1, -1, -5, 3 and -4",
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480040,
+        "_nanoseconds": 770000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1999"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. –1",
+        "B. –4",
+        "C. –5",
+        "D. 1",
+        "E. 3"
+      ],
+      "updatedAt": {
+        "_seconds": 1763487084,
+        "_nanoseconds": 387000000
+      }
+    },
+    {
+      "id": "dkiFT8dPBrjSwX70p6Dk",
+      "year": "2020",
+      "subject": "mathematics",
+      "questionNumber": 15,
+      "questionText": "What is the median of the following numbers:4,16,13,18,3,20,6,7,15,2,10,12?",
+      "options": [
+        "A. 7",
+        "B. 10",
+        "C. 11",
+        "D. 12"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480514,
+        "_nanoseconds": 61000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2020"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487101,
+        "_nanoseconds": 629000000
+      }
+    },
+    {
+      "id": "jHAn7xf4AipoXpiqotcU",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 37,
+      "questionText": "Number on die 1 2 3 4 5 6 Frequency 4 3 3 2 3 5 The table shows the results when a student tossed a die many times. Use the information to answer the question below Find the mode.",
+      "options": [
+        "A. 6",
+        "B. 5",
+        "C. 3",
+        "D. 4"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482515,
+        "_nanoseconds": 207000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 904000000
+      }
+    },
+    {
+      "id": "jn4o7Hm4n17GXCZNyl5H",
+      "year": "1997",
+      "subject": "mathematics",
+      "questionNumber": 27,
+      "questionText": "The marks obtained by 10 boys in a test are 0, 1, 3, 3, 5, 7, 8, 9, 9, 9. Use this information to answer the question below Calculate the mean score.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479998,
+        "_nanoseconds": 82000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1997"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 4.4",
+        "B. 5.4",
+        "C. 6.0",
+        "D. 6.4",
+        "E. 9.0"
+      ],
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487082,
+        "_nanoseconds": 727000000
+      }
+    },
+    {
+      "id": "mtYDCsrNyFjv9hj2XDCx",
+      "year": "2007",
+      "subject": "mathematics",
+      "questionNumber": 7,
+      "questionText": "The marks obtained by 13 candidates in a test are 5, 7, 2, 9, 11, 10, 2, 12, 2, 9, 3, 18 and 2. Use this information to answer the question below. Find the median.",
+      "options": [
+        "A. 9",
+        "B. 7",
+        "C. 5",
+        "D. 2"
+      ],
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480212,
+        "_nanoseconds": 709000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2007"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2007_q7_img7.png",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542184,
+        "_nanoseconds": 876000000
+      }
+    },
+    {
+      "id": "ogapH04VkEZUOR1dPCqj",
+      "year": "2005",
+      "subject": "mathematics",
+      "questionNumber": 33,
+      "questionText": "Find the median of the following marks: 2, 4, 10, 3, 6, 12.",
+      "options": [
+        "A. 4",
+        "B. 5",
+        "C. 6",
+        "D. 10"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480181,
+        "_nanoseconds": 868000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2005"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487089,
+        "_nanoseconds": 336000000
+      }
+    },
+    {
+      "id": "ood4ZxaHcUBruSDZjMrz",
+      "year": "2019",
+      "subject": "mathematics",
+      "questionNumber": 12,
+      "questionText": "The mean of the numbers 5, 2x,4 and 3 is 5. Find the value of x.",
+      "options": [
+        "A. 3",
+        "B. 4",
+        "C. 5",
+        "D. 8"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480489,
+        "_nanoseconds": 598000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2019"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2019_q12_img12.jpg",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542245,
+        "_nanoseconds": 296000000
+      }
+    },
+    {
+      "id": "ptUjepP1L42S08jBfPxu",
+      "year": "2025",
+      "subject": "mathematics",
+      "questionNumber": 31,
+      "questionText": "Anowa scored an average of 53 in Science and Mathematics. If she scored 50 and 60 in English Language and Social Studies respectively, find her mean score in all the four subjects.",
+      "options": [
+        "A. 57",
+        "B. 56",
+        "C. 55",
+        "D. 54"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482533,
+        "_nanoseconds": 977000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2025"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487105,
+        "_nanoseconds": 685000000
+      }
+    },
+    {
+      "id": "rqj2hT61OI8SaOmdPQhg",
+      "year": "2019",
+      "subject": "mathematics",
+      "questionNumber": 38,
+      "questionText": "Find the median of the following numbers: 46, 68, 34, 37, 76 and 81.",
+      "options": [
+        "A. 35.5",
+        "B. 57",
+        "C. 67",
+        "D. 68"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480504,
+        "_nanoseconds": 347000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2019"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487100,
+        "_nanoseconds": 643000000
+      }
+    },
+    {
+      "id": "sRSV1131mWwG6t0dE05p",
+      "year": "2003",
+      "subject": "mathematics",
+      "questionNumber": 20,
+      "questionText": "The following marks are the marks obtained by pupils in a test: 2, 3, 5, 2, 3, 4, 2, 3, 5, 3. Use the information above to answer the question below. Calculate the mean",
+      "options": [
+        "A. 3.0",
+        "B. 3.2",
+        "C. 4.0",
+        "D. 4.2"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480129,
+        "_nanoseconds": 268000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2003"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487087,
+        "_nanoseconds": 736000000
+      }
+    },
+    {
+      "id": "tQIUv6F4fYrhPQ0We8J3",
+      "year": "1995",
+      "subject": "mathematics",
+      "questionNumber": 9,
+      "questionText": "What is the mode of the following numbers: 4, 5, 3, 3, 4, 2, 7, 6, 5, 4, 4, 1?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479734,
+        "_nanoseconds": 315000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1995"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 3",
+        "B. 4",
+        "C. 5",
+        "D. 6",
+        "E. 7"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1995_q9_img9.png",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542142,
+        "_nanoseconds": 241000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1991_q18",
+      "questionText": "(i)\n\n \n\nDraw a pie chart to illustrate the distribution.\n\n(ii)\n\n \n\nWhat fraction of the votes was cast for Borquaye?\n\n(b)\n\n \n\nThe heights in cm of 10 school children are as follows:\n\n165,   165,   155   159,    174,154,   169,   155,   155,   150\n\n(i)\n\n \n\nMake a frequency table for this data.\n\n(ii)\n\n \n\nUse your table to find the mode and median of the distribution.",
+      "questionNumber": 18,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1991",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1991 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1991",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1993_q11",
+      "questionText": "(a)\n\n \n\nMake a frequency table for the data using the ages of 9, 11, 13, ..........\n\n(b)\n\n \n\nUse your table to calculate the mean age (correct to the nearest whole number).",
+      "questionNumber": 11,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1993",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1993 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1993",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1995_q3",
+      "questionText": "(i)\n\n \n\nHow many workers are there in the factory?\n\n(ii)\n\n \n\nWhat is the modal age of the distribution?\n\n(iii)\n\n \n\nCalculate the mean age of the workers, correct to one decimal place.\n\n(b)\n\n \n\n(i)\n\n \n\nMake T the subject of the relation\n\nI = \n\nP x R x T",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1995",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1995 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1995",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1999_q5",
+      "questionText": "(a)\n\n \n\nFrom the table, find\n\n(i)\n\n \n\nthe modal mark;\n\n(ii)\n\n \n\nhow many candidates took the test;\n\n(iii)\n\n \n\nthe mean mark for the test.\n\n(b)\n\n \n\nIf 20% of the candidates failed,\n\n(i)\n\n \n\nhow many failed?\n\n(ii)\n\n \n\nWhat is the least mark a candidate should score in order to pass?",
+      "questionNumber": 5,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1999",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1999 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1999",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2004_q4",
+      "questionText": "(a)\n\n \n\nA car runs on the average at 45 km to 5 litres of fuel. Calculate how many litres of fuel are required for a journey of 117 km.\n\n(b)\n\n \n\n(i)\n\n \n\nSolve for x in the inequality",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2004",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2004 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2004",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2004_q6",
+      "questionText": "(a)\n\n \n\nThe following are the ages in years of members of a group: 8, 11, 8, 10, 6, 7, 3x, 11, 11.\n\nIf the mean age is 9 years, find\n\n(i)\n\n \n\nx\n\n(ii)\n\n \n\nthe modal age\n\n(iii)\n\n \n\nthe median age.\n\n(b)\n\n \n\nDraw a bar chart for the distribution",
+      "questionNumber": 6,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2004",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2004 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2004",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2007_q4",
+      "questionText": "The bar chart above is the distribution of marks in a class test.\n\n(a)\n\n \n\n(i)\n\n \n\nWrite down the frequency table for the distribution.\n\n(ii)\n\n \n\nUse the table to find the mean mark.\n\n(b)\n\n \n\nIf the pass mark is 4, how many pupils failed the test?",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2007",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2007 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2007",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2010_q65",
+      "questionText": "Efe\n\n-\n\nx\n\n(i)\n\n \n\nWrite down an expression for the mean (average) of the marks.\n\n(ii)\n\n \n\nIf the mean is less than 80, write a linear inequality for the information.\n\n(iii)\n\n \n\nFind the possible marks Efe scored in the test. Represent your answer on the number line.",
+      "questionNumber": 65,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2010",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2010 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2010",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2011_q45",
+      "questionText": "(i)\n\n \n\nFind the number of pupils in the school.\n\n(ii)\n\n \n\nWhat is the mean number of pupils in a class?\n\n(iii)\n\n \n\nWhat percentage of pupils are in class six?\n\n(c)\n\n \n\nConvert 312five to base ten numeral.",
+      "questionNumber": 45,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2011",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2011 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2011",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2019_q2",
+      "questionText": "a\n\n \n\nConstruct a frequency distribution table for the data.\n\nb\n\n \n\nFind the:\n\ni)\n\n \n\nmode of the distribution\n\nii)\n\n \n\nmedian mark of the test;\n\niii)\n\n \n\nmean mark.",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2019",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2019 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2019",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2020_q2",
+      "questionText": "a)\n\n \n\nSimplify: 5(6 - ab) + 2(-7 + 3ab)\n\nb)\n\n \n\nThe equation of a straight line is given by 3x - 2y - 6 = 0. Find the:(i) gradient of the line;(ii) y-intercept\n\nc)\n\n \n\nAdwoa received a commission of 20% on bread she sold. In one week, Adwoa's commission was GH₵ 540.00.(i) How much bread did she sell during that week?(ii) Find her average daily commission.",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2020",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2020 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2020",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2021_q12",
+      "questionText": "(a)\n\n \n\nCopy and complete the table.\n\n(b)\n\n \n\nHow many:\n\n(i)\n\n \n\nstudents were in the class?\n\n(ii)\n\n \n\nmarbles were brought altogether\n\n(iii)\n\n \n\nmarbles did most of the students bring\n\n(c)\n\n \n\nCalculate, correct to the nearest whole number, the mean number of the marbles brought for the lesson.",
+      "questionNumber": 12,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2021",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2021 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2021",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2021_q4",
+      "questionText": "(a)\n\n \n\nAntwiwaa bought 25 mangoes, 7 of which were unripe. What percentage of the mangoes were ripe?\n\n(b)\n\n \n\n\n\nThe mapping shows the relationship between x and y. Find the:\n\n(i)\n\n \n\nrule for the mapping;\n\n(ii)\n\n \n\nvalues of m and n\n\n(c)\n\n \n\nA bus left town X at 6:30 am and arrived at town Y at 1:00 pm. If the bus travelled at an average speed of 100 km per hour, calculate the distance from town X to town Y.",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2021",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2021 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2021",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2025_q6",
+      "questionText": "Adamu was travelling a distance of 40 km from Kadumgu to Datanu. Sixty minutes after starting the journey, he made a stop at Cooltown, 10 km from Kadumgu to rest for 30 minutes. He then continued the journey from Cooltown and reached Datanu 60 minutes later.\n\n(a)\n\n \n\nUsing a scale of 2 cm to 20 minutes on the horizontal axis and 2 cm to 5 km on the vertical axis, draw a distance-time graph for Adamu's journey.\n\n(b)\n\n \n\nUse the graph to determine the:\n\n(i)\n\n \n\ndistance from Cooltown to Datanu;\n\n(ii)\n\n \n\ntotal time (in minutes), taken by Adamu to make the whole journey including the rest time;\n\n(iii)\n\n \n\naverage speed of Adamu from Cooltown to Datanu.\n\n(c)\n\n \n\nIf Adamu did not rest but travelled to Datanu within the time, what was his average speed?",
+      "questionNumber": 6,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2025",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2025 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2025",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "tvtOVdnsONb1VIM71lkm",
+      "year": "2021",
+      "subject": "mathematics",
+      "questionNumber": 31,
+      "questionText": "If the average of 5,6,7 and x is 8, find the value of x",
+      "options": [
+        "A. 12",
+        "B. 14",
+        "C. 16",
+        "D. 24"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480545,
+        "_nanoseconds": 965000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2021"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487102,
+        "_nanoseconds": 440000000
+      }
+    },
+    {
+      "id": "ufWjIjzOZElEwOurjAaN",
+      "year": "2023",
+      "subject": "mathematics",
+      "questionNumber": 13,
+      "questionText": "The stem and leaf plot shows the marks scored by students in a French test. Use the information to answer the question below. Stem Leaf 2 0    2    5    7    8 3 2    7    9 4 3    5    5    5 5 4    6    6    8 6 3    5    7 7 0    6 Find the median mark.",
+      "options": [
+        "A. 45",
+        "B. 47",
+        "C. 54",
+        "D. 76"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482470,
+        "_nanoseconds": 244000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2023"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 62000000
+      }
+    },
+    {
+      "id": "vA9MXKGMYVjFOvZjaRyj",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 29,
+      "questionText": "Use the information below to answer the question below The scores obtained by 8 pupils in a test are 2, 3, 4, 5, 7, 8, 8 and 9 Find the mean score.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480089,
+        "_nanoseconds": 310000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 4.50",
+        "B. 5.75",
+        "C. 6.00",
+        "D. 8.75",
+        "E. 10.00"
+      ],
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 59000000
+      }
+    },
+    {
+      "id": "wy3Ix1rOvkjr12EDjF4Q",
+      "year": "2015",
+      "subject": "mathematics",
+      "questionNumber": 17,
+      "questionText": "Find the median of the numbers 17,12,15,16,8,18,13 and 14.",
+      "options": [
+        "A. 8",
+        "B. 12",
+        "C. 14.5",
+        "D. 15.5"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480400,
+        "_nanoseconds": 947000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2015"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487097,
+        "_nanoseconds": 370000000
+      }
+    },
+    {
+      "id": "x1Riilgda4YTvPzD5bWP",
+      "year": "1991",
+      "subject": "mathematics",
+      "questionNumber": 17,
+      "questionText": "The marks obtained by 10 children in a mental drill are: 0, 1, 3, 3, 5, 7, 8, 9, 9, 9. Use this information to answer the question below. Calculate the mean mark.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479563,
+        "_nanoseconds": 682000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1991"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. –54",
+        "B. 5.4",
+        "C. 10",
+        "D. 54",
+        "E. 540"
+      ],
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487077,
+        "_nanoseconds": 776000000
+      }
+    },
+    {
+      "id": "z0FZWIlRBNylVqnri8AB",
+      "year": "2004",
+      "subject": "mathematics",
+      "questionNumber": 37,
+      "questionText": "The marks scored by 8 pupils in a science test are: 3, 7, 8, 8, 5, 4, 8, 4. Use it to answer the question below. What is the median mark?",
+      "options": [
+        "A. 5",
+        "B. 6",
+        "C. 7",
+        "D. 8"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480161,
+        "_nanoseconds": 350000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2004"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487088,
+        "_nanoseconds": 551000000
+      }
+    }
+  ],
+  "questionCount": 51
+}

@@ -1,0 +1,2088 @@
+{
+  "topic": "Functions & Relations",
+  "questions": [
+    {
+      "id": "10T4IIHJWHvc2wH1lUF8",
+      "year": "2005",
+      "subject": "mathematics",
+      "questionNumber": 25,
+      "questionText": "Make T the subject of the relation l2 = 4 π 2 T g",
+      "options": [
+        "A. T = gl 2π",
+        "B. T = g l 2 2π",
+        "C. T = l 2 4g π 2",
+        "D. T = g l 2 4 π 2"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480177,
+        "_nanoseconds": 266000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2005"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487089,
+        "_nanoseconds": 336000000
+      }
+    },
+    {
+      "id": "1AitrF0lNtublfOBqjqJ",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 9,
+      "questionText": "Arrange the following numbers from the lowest to the highest: 0.5, 3, -5, 0.",
+      "options": [
+        "A. 0, 0.5, -5, 3",
+        "B. 0, -5, 0.5, 3",
+        "C. -5, 0, 0.5, 3",
+        "D. -5, 0.5, 0, 3"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480282,
+        "_nanoseconds": 73000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487093,
+        "_nanoseconds": 318000000
+      }
+    },
+    {
+      "id": "1IrZ5Oozg9keK4pYSGcW",
+      "year": "1998",
+      "subject": "mathematics",
+      "questionNumber": 10,
+      "questionText": "Arrange the following from the highest to the lowest: 2 3 , -9, 3 5 and 0.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480011,
+        "_nanoseconds": 86000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1998"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. -9, 3 5 , 2 3",
+        "B. -9, 0, 3 5 , 2 3",
+        "C. 3 5 , 2 3 , 0, -9",
+        "D. 3 5 , 2 3 , -9, 0",
+        "E. 2 3 , 3 5 , 0, -9"
+      ],
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487083,
+        "_nanoseconds": 561000000
+      }
+    },
+    {
+      "id": "3lfLBEVHjHkyjrBCI87j",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 33,
+      "questionText": "State the rule of the following mapping: x 1 2 3 4 5 ↓ ↓ ↓ ↓ ↓ ↓ y 1 4 9 16 25",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480091,
+        "_nanoseconds": 539000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. x→x",
+        "B. x→2x",
+        "C. x→3x",
+        "D. x→x2",
+        "E. x→x3"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 59000000
+      }
+    },
+    {
+      "id": "3rvPfxyz0JfkWR7sWQiB",
+      "year": "1991",
+      "subject": "mathematics",
+      "questionNumber": 25,
+      "questionText": "What is the rule for this mapping? x 1 2 3 4 5 ↓ ↓ ↓ ↓ ↓ ↓ y 1 3 5 7 9",
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479567,
+        "_nanoseconds": 852000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1991"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. x→2x - 1",
+        "B. x→2(x - 1)",
+        "C. x→2x + 1",
+        "D. x→2(x + 1)",
+        "E. x→2x - 1"
+      ],
+      "updatedAt": {
+        "_seconds": 1763487077,
+        "_nanoseconds": 776000000
+      }
+    },
+    {
+      "id": "3uWG0jPMuyl7iUT5aWQe",
+      "year": "2018",
+      "subject": "mathematics",
+      "questionNumber": 10,
+      "questionText": "Arrange , and in ascending order.",
+      "options": [
+        "A. , ,",
+        "B. , ,",
+        "C. , ,",
+        "D. , ,"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480465,
+        "_nanoseconds": 461000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2018"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2018_q10_img10.jpg",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542229,
+        "_nanoseconds": 380000000
+      }
+    },
+    {
+      "id": "6j6Z2LkRzX9eAhHVO6Nj",
+      "year": "1999",
+      "subject": "mathematics",
+      "questionNumber": 31,
+      "questionText": "Use the mapping below to answer the question below x 1 2 3 4 ↓ ↓ ↓ ↓ ↓ y 3 5 7 9 Find the value of y when x is 7.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480045,
+        "_nanoseconds": 217000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1999"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. –3",
+        "B. 9",
+        "C. 14",
+        "D. 15",
+        "E. 21"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487084,
+        "_nanoseconds": 387000000
+      }
+    },
+    {
+      "id": "6oSJWU6FFXxneYzpHpCc",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 20,
+      "questionText": "Use the mapping below to answer the question below -2 -1 0 2 3 4 ...... x ↓ ↓ ↓ ↓ ↓ ↓ ↓ y -1 1 5 7 9 ...... 21 Find the value of x",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479586,
+        "_nanoseconds": 548000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. –7",
+        "B. 5",
+        "C. 6",
+        "D. 7",
+        "E. 10"
+      ],
+      "explanation": "",
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487078,
+        "_nanoseconds": 582000000
+      }
+    },
+    {
+      "id": "7b9nivEtrmYHK8UInBCj",
+      "year": "2017",
+      "subject": "mathematics",
+      "questionNumber": 24,
+      "questionText": "Arrange the following in descending order: .",
+      "options": [
+        "A. ",
+        "B. ",
+        "C. ",
+        "D. "
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480450,
+        "_nanoseconds": 434000000
+      },
+      "difficulty": "medium",
+      "createdBy": "system_import",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2017"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2017_q24_img24.png",
+      "updatedAt": {
+        "_seconds": 1763542219,
+        "_nanoseconds": 138000000
+      }
+    },
+    {
+      "id": "7x25jsfpth1G5tO3KOeN",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 24,
+      "questionText": "Find the rule of the mapping: 1 2 3 4 5 .... x ↓ ↓ ↓ ↓ ↓ ↓ 7 11 15 19 23 .... y",
+      "options": [
+        "A. x → 4x - 3",
+        "B. x → 3 - 4x",
+        "C. x → 4x + 3",
+        "D. x → 4x + 5"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480290,
+        "_nanoseconds": 532000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487093,
+        "_nanoseconds": 318000000
+      }
+    },
+    {
+      "id": "8JkLsJdsyyBf8f5jx4Lz",
+      "year": "1995",
+      "subject": "mathematics",
+      "questionNumber": 17,
+      "questionText": "Make a subject of the relation P = 2(a + b)",
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479738,
+        "_nanoseconds": 616000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1995"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. a = P - 2b 2",
+        "B. a = P + 2b 2",
+        "C. a = 2b - P 2",
+        "D. a = P - b 2",
+        "E. a = P - 2 b"
+      ],
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 77000000
+      }
+    },
+    {
+      "id": "8POxWgHahzGqi2E1Dp95",
+      "year": "2003",
+      "subject": "mathematics",
+      "questionNumber": 27,
+      "questionText": "Use the mapping below to answer the question below. x 1 2 3 4 5 ↓ ↓ ↓ ↓ ↓ ↓ y -4 -2 0 2 m What is the rule for this mapping?",
+      "options": [
+        "A. x→ 2(x - 3)",
+        "B. x→ x - 5",
+        "C. x→ 2(x - 2)",
+        "D. x→ 2x-3"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480133,
+        "_nanoseconds": 155000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2003"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487087,
+        "_nanoseconds": 736000000
+      }
+    },
+    {
+      "id": "95dBmMrUGxqqvjTWglP9",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 26,
+      "questionText": "Make m the subject of the relation 1 m = 1 p + 1 r .",
+      "options": [
+        "A. m = pr r + p",
+        "B. m = pr r - p",
+        "C. m = r - p pr",
+        "D. m = r + p pr"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482508,
+        "_nanoseconds": 630000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 904000000
+      }
+    },
+    {
+      "id": "DPMrqK9L5R7gAIHjVilU",
+      "year": "2009",
+      "subject": "mathematics",
+      "questionNumber": 15,
+      "questionText": "State the rule for the mapping x 0 1 2 3 4 ↓ ↓ ↓ ↓ ↓ ↓ y 0 1 4 1 2 3 4 1",
+      "options": [
+        "A. x → x 4",
+        "B. x → x 2",
+        "C. x → 3x 4",
+        "D. x → 1 2x"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480262,
+        "_nanoseconds": 728000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2009"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487092,
+        "_nanoseconds": 558000000
+      }
+    },
+    {
+      "id": "DQ0XVJGIuwyo3Tt5D2Q8",
+      "year": "1994",
+      "subject": "mathematics",
+      "questionNumber": 36,
+      "questionText": "Use the mapping below to answer the question below 5 → 10five 10 → 20five 20 → 40five 40 → xfive y → 310five Find the value of x",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479637,
+        "_nanoseconds": 982000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1994"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 30five",
+        "B. 100five",
+        "C. 110five",
+        "D. 120five",
+        "E. 130five"
+      ],
+      "explanation": "",
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487080,
+        "_nanoseconds": 244000000
+      }
+    },
+    {
+      "id": "E9MrpQIq61zzlh65nYgi",
+      "year": "2011",
+      "subject": "mathematics",
+      "questionNumber": 18,
+      "questionText": "Make n the subject of the relation θ = 180 - 360 n",
+      "options": [
+        "A. θ + 180 2",
+        "B. θ - 180 2",
+        "C. 360 180 − θ",
+        "D. 360 180 + θ"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480309,
+        "_nanoseconds": 903000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2011"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 125000000
+      }
+    },
+    {
+      "id": "EevuiQTPV4SQdPGz7bfA",
+      "year": "1997",
+      "subject": "mathematics",
+      "questionNumber": 36,
+      "questionText": "x 0 1 2 3 4 ↓ ↓ ↓ ↓ ↓ ↓ y 0 1 4 9 16 What is the rule for the mapping above?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480003,
+        "_nanoseconds": 132000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1997"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. x→x + 3",
+        "B. x→x + 1",
+        "C. x→x - 1",
+        "D. x→x + 2",
+        "E. x→x2"
+      ],
+      "explanation": "",
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487082,
+        "_nanoseconds": 727000000
+      }
+    },
+    {
+      "id": "GNjxLOlmJZtMUivwYvKH",
+      "year": "1997",
+      "subject": "mathematics",
+      "questionNumber": 23,
+      "questionText": "Make n the subject of the relation 2n + 5 = 7a",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479995,
+        "_nanoseconds": 812000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1997"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. n = 1 2 (7a + 5)",
+        "B. n = 1 2 (7a - 5)",
+        "C. n = 2(7a + 5)",
+        "D. n = 2(7a - 5)",
+        "E. n = 7a - 5"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487082,
+        "_nanoseconds": 727000000
+      }
+    },
+    {
+      "id": "HCCGVqB8wrvRtH5nJS7z",
+      "year": "2013",
+      "subject": "mathematics",
+      "questionNumber": 13,
+      "questionText": "Make d the subject of the relation n = 2d + 3",
+      "options": [
+        "A. d = 3n 2",
+        "B. d = n + 3 2",
+        "C. d = n - 3 2",
+        "D. d = 3 - n 2"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480352,
+        "_nanoseconds": 958000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2013"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487095,
+        "_nanoseconds": 754000000
+      }
+    },
+    {
+      "id": "JBZF3uZwVNGThq4iYOPW",
+      "year": "1993",
+      "subject": "mathematics",
+      "questionNumber": 8,
+      "questionText": "Make b the subject of the relation 1 a = 1 b + c",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479601,
+        "_nanoseconds": 541000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1993"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. b = ac - 1 c",
+        "B. b = a a + ac",
+        "C. b = c 1 - ac",
+        "D. b = a 1 - ac",
+        "E. b = 1 - ac a"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1993_q8_img8.png",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542126,
+        "_nanoseconds": 42000000
+      }
+    },
+    {
+      "id": "LvUXuyVRBFV6VrI3nbOe",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 26,
+      "questionText": "Make q the subject of the relation w = n - q q .",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480087,
+        "_nanoseconds": 680000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. q = n - 1 w",
+        "B. q = n + 1 w",
+        "C. q = n + 2 1 + w",
+        "D. q = n w + 1",
+        "E. q = n w - 1"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 59000000
+      }
+    },
+    {
+      "id": "MONOh2ek2F1LottwF6YS",
+      "year": "1998",
+      "subject": "mathematics",
+      "questionNumber": 9,
+      "questionText": "In the relation 1 R = 1 R 1 + 1 R 2 , if R1 = 1 and R2 = 3,find R",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480010,
+        "_nanoseconds": 524000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1998"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1 2",
+        "B. 2 3",
+        "C. 3 4",
+        "D. 3 2",
+        "E. 4 3"
+      ],
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487083,
+        "_nanoseconds": 561000000
+      }
+    },
+    {
+      "id": "NMoRrKeviN9uU6N0pO41",
+      "year": "2020",
+      "subject": "mathematics",
+      "questionNumber": 26,
+      "questionText": "What is the rule for the mapping?",
+      "options": [
+        "A. x→ 3x2-1",
+        "B. x→ 5x2-3",
+        "C. x→ x2+1",
+        "D. x→ 4x-2"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480520,
+        "_nanoseconds": 338000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2020"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487101,
+        "_nanoseconds": 629000000
+      }
+    },
+    {
+      "id": "OOtxmqIk5Nu9FtGLlwj4",
+      "year": "2003",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "Use the mapping below to answer the question below. x 1 2 3 4 5 ↓ ↓ ↓ ↓ ↓ ↓ y -4 -2 0 2 m Find m.",
+      "options": [
+        "A. –4",
+        "B. 4",
+        "C. 6",
+        "D. 8"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480133,
+        "_nanoseconds": 721000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2003"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487087,
+        "_nanoseconds": 736000000
+      }
+    },
+    {
+      "id": "R8Nystqe9YZHOFXmcAWK",
+      "year": "2011",
+      "subject": "mathematics",
+      "questionNumber": 14,
+      "questionText": "State the rule for the mapping x 1 2 3 4 ↓ ↓ ↓ ↓ ↓ y 15 30 46 60",
+      "options": [
+        "A. x → 15x",
+        "B. x → 15 + x",
+        "C. x → 15 x",
+        "D. x → 10 + 5x"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480307,
+        "_nanoseconds": 663000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2011"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 125000000
+      }
+    },
+    {
+      "id": "RbP7mlYkKaaNvrRYMMVx",
+      "year": "2018",
+      "subject": "mathematics",
+      "questionNumber": 1,
+      "questionText": "Which of the following is arranged in ascending order?",
+      "options": [
+        "A. -25, -64, 4, 17",
+        "B. -64, -25, 4, 17",
+        "C. -64, -25, 17, 4",
+        "D. 17, 4, -25, -64"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480460,
+        "_nanoseconds": 416000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2018"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2018_q1_img1.jpg",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542224,
+        "_nanoseconds": 981000000
+      }
+    },
+    {
+      "id": "RzNn8C3Ni8Hn77etTHv7",
+      "year": "1991",
+      "subject": "mathematics",
+      "questionNumber": 14,
+      "questionText": "In the relation v = u+ at, find v when u = 6, a = 10 and t = 2",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479562,
+        "_nanoseconds": 118000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1991"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 18",
+        "B. 26",
+        "C. 32",
+        "D. 48",
+        "E. 120"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487077,
+        "_nanoseconds": 776000000
+      }
+    },
+    {
+      "id": "XYISilRCfmc8t8sQHHdE",
+      "year": "2015",
+      "subject": "mathematics",
+      "questionNumber": 24,
+      "questionText": "Find the rule for the following mapping: x 1 2 3 4 5 ↓ ↓ ↓ ↓ ↓ ↓ y 1 4 9 16 25",
+      "options": [
+        "A. y → x + 2",
+        "B. y → 2x",
+        "C. y → x2",
+        "D. y → 2x + 2"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480404,
+        "_nanoseconds": 950000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2015"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487097,
+        "_nanoseconds": 370000000
+      }
+    },
+    {
+      "id": "Xg8cJZ3dFMS62jFzkIUR",
+      "year": "1999",
+      "subject": "mathematics",
+      "questionNumber": 30,
+      "questionText": "Use the mapping below to answer the question below x 1 2 3 4 ↓ ↓ ↓ ↓ ↓ y 3 5 7 9 What is the rule for the mapping?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480044,
+        "_nanoseconds": 659000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1999"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. x→ 4 - x",
+        "B. x→ x - 2",
+        "C. x→2x",
+        "D. x→2x + 1",
+        "E. x→3x"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487084,
+        "_nanoseconds": 387000000
+      }
+    },
+    {
+      "id": "YlHNv5q5d2BZRkxlBhse",
+      "year": "2023",
+      "subject": "mathematics",
+      "questionNumber": 9,
+      "questionText": "Araba and Ama share 20 oranges in such a way that Ama receives 12 oranges. Find the ratio of Araba's share to that of Ama.",
+      "options": [
+        "A. 2:5",
+        "B. 3:5",
+        "C. 3:2",
+        "D. 2:3"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482467,
+        "_nanoseconds": 143000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2023"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 62000000
+      }
+    },
+    {
+      "id": "ZInXv4AZqT42tZCsZwZa",
+      "year": "2023",
+      "subject": "mathematics",
+      "questionNumber": 22,
+      "questionText": "Arrange the following numbers in ascending order: 9 5 ,1.88, 15 8",
+      "options": [
+        "A. 9 5 , 15 8 ,1.88",
+        "B. 15 8 ,1.88, 9 5",
+        "C. 1.88, 9 5 , 15 8",
+        "D. 9 5 ,1.88, 15 8"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482477,
+        "_nanoseconds": 225000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2023"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 62000000
+      }
+    },
+    {
+      "id": "ahgaNnaPao2uqhyYGCO6",
+      "year": "2000",
+      "subject": "mathematics",
+      "questionNumber": 33,
+      "questionText": "Write the rule for the mapping: x 1 2 3 4 ↓ ↓ ↓ ↓ ↓ y 1 3 5 7",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480068,
+        "_nanoseconds": 947000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2000"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. x→2x + 1",
+        "B. x→2x - 1",
+        "C. x→2(x + 1)",
+        "D. x→2(x - 1)",
+        "E. x→x2- 1"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487085,
+        "_nanoseconds": 254000000
+      }
+    },
+    {
+      "id": "bWEIlgZoBJ5q8IvNmAwI",
+      "year": "1994",
+      "subject": "mathematics",
+      "questionNumber": 8,
+      "questionText": "Make m the subject of the relation f = t s - m",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479622,
+        "_nanoseconds": 899000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1994"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. m = t s + f",
+        "B. m = t s - f",
+        "C. m = fs - t s",
+        "D. m = f - t s",
+        "E. m = -f - t s"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1994_q8_img8.png",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542132,
+        "_nanoseconds": 65000000
+      }
+    },
+    {
+      "id": "dB3xZogJFrbiKg7t3E3z",
+      "year": "2025",
+      "subject": "mathematics",
+      "questionNumber": 9,
+      "questionText": "Find the rule for the mapping: 1 2 3 4 ... t ↓ ↓ ↓ ↓ ↓ ↓ 9 20 31 42 ... ...",
+      "options": [
+        "A. t → 10t - 1",
+        "B. t → 8t + 1",
+        "C. t → 11t - 2",
+        "D. t → 7t + 2"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482521,
+        "_nanoseconds": 754000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2025"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487105,
+        "_nanoseconds": 685000000
+      }
+    },
+    {
+      "id": "dTxRCDCyoT5CPq8ADkPp",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 21,
+      "questionText": "Use the mapping below to answer the question below -2 -1 0 2 3 4 ...... x ↓ ↓ ↓ ↓ ↓ ↓ ↓ y -1 1 5 7 9 ...... 21 Find the value of y",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479587,
+        "_nanoseconds": 54000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 3",
+        "B. 1",
+        "C. –1",
+        "D. –3",
+        "E. -5"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487078,
+        "_nanoseconds": 582000000
+      }
+    },
+    {
+      "id": "djAXRvZZOlzzJhfzYYvr",
+      "year": "2005",
+      "subject": "mathematics",
+      "questionNumber": 16,
+      "questionText": "In sharing 95 oranges with Dede, Fofo kept 45 of them and shared the rest equally with Dede. How many oranges did Dede get?",
+      "options": [
+        "A. 20",
+        "B. 25",
+        "C. 40",
+        "D. 55"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480172,
+        "_nanoseconds": 140000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2005"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487089,
+        "_nanoseconds": 336000000
+      }
+    },
+    {
+      "id": "fyyzLfhUKBZGqBG7NTgJ",
+      "year": "1996",
+      "subject": "mathematics",
+      "questionNumber": 3,
+      "questionText": "Use the mapping below to answer the question below. 23 → 8 22 → 4 21 → 2 20 → a 2-1 → b The value of a is",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479961,
+        "_nanoseconds": 664000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1996"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 0",
+        "B. 1 2",
+        "C. 1",
+        "D. 16",
+        "E. 32"
+      ],
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1996_q3_img3.png",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542144,
+        "_nanoseconds": 240000000
+      }
+    },
+    {
+      "id": "i4JnahoigYZqoIRPNm65",
+      "year": "2005",
+      "subject": "mathematics",
+      "questionNumber": 6,
+      "questionText": "Arrange the following numbers from the highest to the lowest: 2 3 , -7, 0.",
+      "options": [
+        "A. -7, 0, 2 3",
+        "B. -7, 2 3 , 0",
+        "C. 0, 2 3 , -7",
+        "D. 2 3 , 0, -7"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480166,
+        "_nanoseconds": 577000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2005"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487089,
+        "_nanoseconds": 336000000
+      }
+    },
+    {
+      "id": "ipLZ6ZJ9O5mjt60Sf7l9",
+      "year": "2002",
+      "subject": "mathematics",
+      "questionNumber": 22,
+      "questionText": "Three baskets contain 95 oranges, x oranges and 2x oranges. How many oranges are in the three baskets?",
+      "options": [
+        "A. 96x",
+        "B. 95 + 3x",
+        "C. 95 + 2x2",
+        "D. 98x"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480107,
+        "_nanoseconds": 879000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2002"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 895000000
+      }
+    },
+    {
+      "id": "mANA22etljzirsRl82nw",
+      "year": "2021",
+      "subject": "mathematics",
+      "questionNumber": 19,
+      "questionText": "Make h the subject of the relation V = πr2h.",
+      "options": [
+        "A. ",
+        "B. ",
+        "C. ",
+        "D. "
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480539,
+        "_nanoseconds": 157000000
+      },
+      "difficulty": "medium",
+      "createdBy": "system_import",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2021"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2021_q19_img19.jpg",
+      "updatedAt": {
+        "_seconds": 1763542264,
+        "_nanoseconds": 489000000
+      }
+    },
+    {
+      "id": "p2UCW4u7zrPIzVAwh999",
+      "year": "2013",
+      "subject": "mathematics",
+      "questionNumber": 10,
+      "questionText": "Find the rule of the mapping: 1 2 3 4 5 x ↓ ↓ ↓ ↓ ↓ ↓ 5 8 11 14 17 y",
+      "options": [
+        "A. x + 2",
+        "B. x + 4",
+        "C. 2x + 3",
+        "D. 3x + 2"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480351,
+        "_nanoseconds": 284000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2013"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487095,
+        "_nanoseconds": 754000000
+      }
+    },
+    {
+      "id": "pXiL5O9tbDe5P8bflPjs",
+      "year": "2006",
+      "subject": "mathematics",
+      "questionNumber": 35,
+      "questionText": "Find the rule for the mapping: 1 2 3 4 5 ... n ↓ ↓ ↓ ↓ ↓ ↓ ↓ 10 21 32 43 54 ... -",
+      "options": [
+        "A. n → 10n",
+        "B. n → (10n + 1)",
+        "C. n → (11n - 1)",
+        "D. n → (7n + 3)"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480205,
+        "_nanoseconds": 784000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2006"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 135000000
+      }
+    },
+    {
+      "id": "rPEeh5kRQ8cQbGXY3bnl",
+      "year": "1996",
+      "subject": "mathematics",
+      "questionNumber": 4,
+      "questionText": "Use the mapping below to answer the question below. 23 → 8 22 → 4 21 → 2 20 → a 2-1 → b What is the value of b?",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479962,
+        "_nanoseconds": 218000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1996"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. –2",
+        "B. 1 4",
+        "C. 1 2",
+        "D. 1",
+        "E. 2"
+      ],
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1996_q4_img4.png",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542144,
+        "_nanoseconds": 736000000
+      }
+    },
+    {
+      "id": "rbF0M4NjRXvsaf7LeJxq",
+      "year": "1990",
+      "subject": "mathematics",
+      "questionNumber": 34,
+      "questionText": "Use the mapping below to answer the question below. ( 1 2 ) → (1) → (3.14) (1) → (2) → (6.28) (2) → (4) → (12.56) (3) → (6) → (x) (y) → (10) → (31.4) Find the value of y A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479547,
+        "_nanoseconds": 426000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1990"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 2",
+        "B. 5",
+        "C. 7",
+        "D. 9",
+        "E. 10"
+      ],
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487076,
+        "_nanoseconds": 950000000
+      }
+    },
+    {
+      "id": "tLApYkAqVGy9Hfzvw9Lu",
+      "year": "2011",
+      "subject": "mathematics",
+      "questionNumber": 5,
+      "questionText": "The ratio of mangoes to oranges in a basket is 3:2. If there are 36 mangoes, how many oranges are in the basket?",
+      "options": [
+        "A. 90",
+        "B. 60",
+        "C. 24",
+        "D. 12"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480302,
+        "_nanoseconds": 575000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2011"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 125000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2001_q2",
+      "questionText": "(a)\n\n \n\nExpress 131five as a binary numeral\n\n(b)\n\n \n\nThree children, Kwabena, Esi and Yaw were given 160 oranges to share. Kwabena gets",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2001",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2001 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2001",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2012_q5",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nFind the least Common Multiple (L.C.M.) of 9, 18 and 16.\n\n(ii)\n\n \n\nArrange",
+      "questionNumber": 5,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2012",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2012 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2012",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2015_q6",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nCopy and complete the following mapping:\n\nx",
+      "questionNumber": 6,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2015",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2015",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "uALcfmN9zEoUfMOnqvxY",
+      "year": "2013",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "If 180 oranges were shared among Kwame and Ama in the ratio 7:5, respectively, how many oranges did Ama receive?",
+      "options": [
+        "A. 45",
+        "B. 60",
+        "C. 75",
+        "D. 90"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480361,
+        "_nanoseconds": 497000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2013"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487095,
+        "_nanoseconds": 754000000
+      }
+    },
+    {
+      "id": "vWmDYy8OGFPE6qVxKpm3",
+      "year": "2018",
+      "subject": "mathematics",
+      "questionNumber": 35,
+      "questionText": "Find the rule of the mapping: x 0 3 6 9 12 ↓ ↓ ↓ ↓ ↓ ↓ y -2 4 10 16 22",
+      "options": [
+        "A. y → x 2 - 2",
+        "B. y → x - 2",
+        "C. y → x2 - 2",
+        "D. y → 2x - 2"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480479,
+        "_nanoseconds": 806000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2018"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487099,
+        "_nanoseconds": 837000000
+      }
+    },
+    {
+      "id": "wU3gYLKo3v72dRtSv6iX",
+      "year": "1990",
+      "subject": "mathematics",
+      "questionNumber": 33,
+      "questionText": "Use the mapping below to answer the question below. ( 1 2 ) → (1) → (3.14) (1) → (2) → (6.28) (2) → (4) → (12.56) (3) → (6) → (x) (y) → (10) → (31.4) Find the value of x",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479546,
+        "_nanoseconds": 657000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1990"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 9.42",
+        "B. 12",
+        "C. 18",
+        "D. 18.84",
+        "E. 25.12"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487076,
+        "_nanoseconds": 950000000
+      }
+    },
+    {
+      "id": "wXJAPgp8rZEXdeigL2PW",
+      "year": "2018",
+      "subject": "mathematics",
+      "questionNumber": 25,
+      "questionText": "Make m the subject of the relation: q = 1 3 (m + n)h",
+      "options": [
+        "A. m = 3q h - n",
+        "B. m = 3q - hn",
+        "C. m = 3q + hn",
+        "D. m = 3q h + n"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480474,
+        "_nanoseconds": 59000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2018"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2018_q25_img25.jpg",
+      "updatedAt": {
+        "_seconds": 1763542236,
+        "_nanoseconds": 772000000
+      }
+    },
+    {
+      "id": "ygZkvCdBNUd3HQIyEYAm",
+      "year": "2016",
+      "subject": "mathematics",
+      "questionNumber": 19,
+      "questionText": "Make P the subject of the relation, R = (P+Q) 2",
+      "options": [
+        "A. P = Q - 2R",
+        "B. P = 2R - Q",
+        "C. P = 2R + Q",
+        "D. P = 2Q + R"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480424,
+        "_nanoseconds": 777000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2016"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487098,
+        "_nanoseconds": 192000000
+      }
+    }
+  ],
+  "questionCount": 53
+}

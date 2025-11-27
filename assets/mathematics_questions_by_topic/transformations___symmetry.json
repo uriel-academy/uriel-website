@@ -1,0 +1,1125 @@
+{
+  "topic": "Transformations & Symmetry",
+  "questions": [
+    {
+      "id": "0FfTwYjmov25Gle72pp9",
+      "year": "2014",
+      "subject": "mathematics",
+      "questionNumber": 37,
+      "questionText": "The point P(5,4) is reflected in the y-axis. Find its image.",
+      "options": [
+        "A. (-5,4)",
+        "B. (5,-4)",
+        "C. (-4,5)",
+        "D. (4,-5)"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480389,
+        "_nanoseconds": 472000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2014"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487096,
+        "_nanoseconds": 588000000
+      }
+    },
+    {
+      "id": "1MuBJsMdlbRvAWQAT0VP",
+      "year": "1997",
+      "subject": "mathematics",
+      "questionNumber": 15,
+      "questionText": "Find the image of the point (6, 3) when translated by the vector ( -4 -1 ) .",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479991,
+        "_nanoseconds": 395000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1997"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. (-2, -2)",
+        "B. (2, -2)",
+        "C. (-2, 2)",
+        "D. (2, 2)",
+        "E. (10, 4)"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487082,
+        "_nanoseconds": 727000000
+      }
+    },
+    {
+      "id": "2bgRl334jSREd3k9g0O7",
+      "year": "2018",
+      "subject": "mathematics",
+      "questionNumber": 29,
+      "questionText": "Find the image of the point (2,5) under the transformation ( x y ) → ( x 2 - y ) .",
+      "options": [
+        "A. (2,-3)",
+        "B. (2,2)",
+        "C. (2,3)",
+        "D. (2,7)"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480476,
+        "_nanoseconds": 316000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2018"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2018_q29_img29.png",
+      "updatedAt": {
+        "_seconds": 1763542238,
+        "_nanoseconds": 793000000
+      }
+    },
+    {
+      "id": "7pzfcXdm7oC5yQ7U1vGj",
+      "year": "2002",
+      "subject": "mathematics",
+      "questionNumber": 16,
+      "questionText": "The point K(3, 4) is rotated through 180° about the origin. Find its image.",
+      "options": [
+        "A. (-3, 4)",
+        "B. (-4, 3)",
+        "C. (-3, -4)",
+        "D. (3, -4)"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480104,
+        "_nanoseconds": 509000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2002"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 895000000
+      }
+    },
+    {
+      "id": "8DycMPt0GnhayXqT5IQH",
+      "year": "1999",
+      "subject": "mathematics",
+      "questionNumber": 25,
+      "questionText": "In the diagram below, K is an enlargement of J. Use it to answer the question below. Calculate the scale factor",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480041,
+        "_nanoseconds": 895000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1999"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1 3",
+        "B. 1 2",
+        "C. 2",
+        "D. 3",
+        "E. 9"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487084,
+        "_nanoseconds": 387000000
+      }
+    },
+    {
+      "id": "JQo841jiTgoupHiXfCG2",
+      "year": "2020",
+      "subject": "mathematics",
+      "questionNumber": 13,
+      "questionText": "Find the image of the point (-2,3) under a reflection in the y-axis.",
+      "options": [
+        "A. (2,-3)",
+        "B. (-3,2)",
+        "C. (2,3)",
+        "D. (3,2)"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480512,
+        "_nanoseconds": 950000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2020"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487101,
+        "_nanoseconds": 629000000
+      }
+    },
+    {
+      "id": "KnhvBPKMKO9TSWKHkjdh",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 33,
+      "questionText": "The point (4, 5) is translated to the point (3, 1). What is the translation vector?",
+      "options": [
+        "A. ( -1 4 )",
+        "B. ( 1 4 )",
+        "C. ( 1 -4 )",
+        "D. ( -1 -4 )"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480295,
+        "_nanoseconds": 638000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763485032,
+        "_nanoseconds": 815000000
+      }
+    },
+    {
+      "id": "OtGWlmTBWeg6eTbMwHwj",
+      "year": "2021",
+      "subject": "mathematics",
+      "questionNumber": 6,
+      "questionText": "The image of P(10, -3) when translated by the vector r is P’ (4, 5). Find r.",
+      "options": [
+        "A. ",
+        "B. ",
+        "C. ",
+        "D. "
+      ],
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480531,
+        "_nanoseconds": 853000000
+      },
+      "difficulty": "medium",
+      "createdBy": "system_import",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2021"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "explanation": "\n\n⚠️ Note: This question requires a diagram/figure that is not yet available. The complete question with images will be added soon.",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2021_q6_img6.jpg",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542258,
+        "_nanoseconds": 177000000
+      }
+    },
+    {
+      "id": "Q9gerwafDrlC8MA4u08S",
+      "year": "1995",
+      "subject": "mathematics",
+      "questionNumber": 23,
+      "questionText": "How many lines of symmetry has a square?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479741,
+        "_nanoseconds": 942000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1995"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 0",
+        "B. 1",
+        "C. 2",
+        "D. 3",
+        "E. 4"
+      ],
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 77000000
+      }
+    },
+    {
+      "id": "RVan4NrddrCUB5JWDnXp",
+      "year": "2018",
+      "subject": "mathematics",
+      "questionNumber": 30,
+      "questionText": "Find the image of Q(-4,5) when rotated anticlockwise through 90o about the origin.",
+      "options": [
+        "A. Q1(-5,4)",
+        "B. Q1(-5,-4)",
+        "C. Q1(4,-5)",
+        "D. Q1(4,5)"
+      ],
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480476,
+        "_nanoseconds": 873000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2018"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2018_q30_img30.png",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542239,
+        "_nanoseconds": 277000000
+      }
+    },
+    {
+      "id": "TkwrqMYMS87nDeVBEhxx",
+      "year": "1991",
+      "subject": "mathematics",
+      "questionNumber": 30,
+      "questionText": "In the diagram, P→P1, Q→Q1, R→R1, where P1Q1R1 is an enlargement. What is the scale factor of this enlargement?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479570,
+        "_nanoseconds": 471000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1991"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. –2",
+        "B. 1 3",
+        "C. 1 2",
+        "D. 2",
+        "E. 3"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487077,
+        "_nanoseconds": 776000000
+      }
+    },
+    {
+      "id": "X2su3oZBti30VzRrqnPb",
+      "year": "2018",
+      "subject": "mathematics",
+      "questionNumber": 33,
+      "questionText": "How many lines of symmetry has a rhombus?",
+      "options": [
+        "A. 2",
+        "B. 3",
+        "C. 4",
+        "D. 5"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480478,
+        "_nanoseconds": 578000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2018"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487099,
+        "_nanoseconds": 837000000
+      }
+    },
+    {
+      "id": "Z3isn8WfEv1UJBrzqtok",
+      "year": "2023",
+      "subject": "mathematics",
+      "questionNumber": 35,
+      "questionText": "Find the vector which translate the point (2,6) to (5,4).",
+      "options": [
+        "A. ( -3 2 )",
+        "B. ( -1 4 )",
+        "C. ( 3 -2 )",
+        "D. ( 7 10 )"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482487,
+        "_nanoseconds": 447000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2023"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 62000000
+      }
+    },
+    {
+      "id": "c62K61NQHGJhsIXCnhA0",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 35,
+      "questionText": "In the diagrams above Fig. I is an enlargement of Fig. II. Find the side EF of Fig. II.",
+      "options": [
+        "A. 20 cm",
+        "B. 5 cm",
+        "C. 4 cm",
+        "D. 3 cm"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480296,
+        "_nanoseconds": 786000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763485034,
+        "_nanoseconds": 61000000
+      }
+    },
+    {
+      "id": "eS491ZSGTVeKboMtLaTs",
+      "year": "1999",
+      "subject": "mathematics",
+      "questionNumber": 26,
+      "questionText": "In the diagram below, K is an enlargement of J. Use it to answer the question below. Find the value of x.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480042,
+        "_nanoseconds": 430000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1999"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 3.0 m",
+        "B. 3.5 m",
+        "C. 4.5 m",
+        "D. 6.0 m",
+        "E. 9.0 m"
+      ],
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487084,
+        "_nanoseconds": 387000000
+      }
+    },
+    {
+      "id": "emmOeXMU1N6MbhH4lpt6",
+      "year": "2016",
+      "subject": "mathematics",
+      "questionNumber": 39,
+      "questionText": "The point P(-3,7) is reflected in the x-axis. Find its image.",
+      "options": [
+        "A. (-3,-7)",
+        "B. (-3,7)",
+        "C. (-7,3)",
+        "D. (3,-7)"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480436,
+        "_nanoseconds": 160000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2016"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487098,
+        "_nanoseconds": 192000000
+      }
+    },
+    {
+      "id": "j49eaXYob5VBNTfNvnGJ",
+      "year": "2023",
+      "subject": "mathematics",
+      "questionNumber": 3,
+      "questionText": "Find the image of the point S(-2,2) when it is reflected in the y-axis.",
+      "options": [
+        "A. (2,-2)",
+        "B. (2,2)",
+        "C. (-2,-2)",
+        "D. (-2,2)"
+      ],
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482462,
+        "_nanoseconds": 493000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2023"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2023_q3_img3.png",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542282,
+        "_nanoseconds": 97000000
+      }
+    },
+    {
+      "id": "k04Rm3Xj9f7ZBwxB10FL",
+      "year": "2017",
+      "subject": "mathematics",
+      "questionNumber": 16,
+      "questionText": "How many lines of symmetry does a rhombus have?",
+      "options": [
+        "A. 2",
+        "B. 3",
+        "C. 4",
+        "D. 5"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480445,
+        "_nanoseconds": 938000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2017"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2017_q16_img16.jpg",
+      "updatedAt": {
+        "_seconds": 1763542215,
+        "_nanoseconds": 224000000
+      }
+    },
+    {
+      "id": "nKwULd8cFoPmurm9eXyj",
+      "year": "2025",
+      "subject": "mathematics",
+      "questionNumber": 27,
+      "questionText": "A point (-2, 3) is reflected in the x-axis. Find the image of the point.",
+      "options": [
+        "A. (-3, -2)",
+        "B. (-3, 2)",
+        "C. (-2, -3)",
+        "D. (-2, 3)"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482531,
+        "_nanoseconds": 852000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2025"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487105,
+        "_nanoseconds": 685000000
+      }
+    },
+    {
+      "id": "omnMA4fQsomcuQxPmymP",
+      "year": "2021",
+      "subject": "mathematics",
+      "questionNumber": 5,
+      "questionText": "Find the image of p(-3, 5) when rotated through 360o about the origin.",
+      "options": [
+        "A. (5, -3)",
+        "B. (-3, -5)",
+        "C. (-3, 5)",
+        "D. (-5, -3)"
+      ],
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480531,
+        "_nanoseconds": 278000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2021"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2021_q5_img5.jpg",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542257,
+        "_nanoseconds": 709000000
+      }
+    },
+    {
+      "id": "pWnqkpiJijDXQsjHhbvo",
+      "year": "2000",
+      "subject": "mathematics",
+      "questionNumber": 13,
+      "questionText": "How many lines of symmetry has a square?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480057,
+        "_nanoseconds": 774000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2000"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 2",
+        "B. 3",
+        "C. 4",
+        "D. 6",
+        "E. 8"
+      ],
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487085,
+        "_nanoseconds": 254000000
+      }
+    },
+    {
+      "id": "tmbVFycPyI9t6dSsT5tF",
+      "year": "2002",
+      "subject": "mathematics",
+      "questionNumber": 19,
+      "questionText": "Find the image of the point K (3, 5) when it is reflected in the x-axis.",
+      "options": [
+        "A. (3, 5)",
+        "B. (5, 3)",
+        "C. (3, -5)",
+        "D. (-3, -5)"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480106,
+        "_nanoseconds": 196000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2002"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 895000000
+      }
+    },
+    {
+      "id": "vHNoxLZrUpxXihxAQ5lY",
+      "year": "2000",
+      "subject": "mathematics",
+      "questionNumber": 20,
+      "questionText": "In an enlargement, PQ→P′Q′. |PQ| = 3 cm and |P′Q′| = 15 cm. Calculate the scale factor of the enlargement.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480061,
+        "_nanoseconds": 694000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2000"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1 5",
+        "B. 2 3",
+        "C. 5",
+        "D. 10",
+        "E. 45"
+      ],
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487085,
+        "_nanoseconds": 254000000
+      }
+    },
+    {
+      "id": "w8XK9yNrtXcjo7BIQUXh",
+      "year": "1998",
+      "subject": "mathematics",
+      "questionNumber": 33,
+      "questionText": "How many lines of symmetry has a rhombus?",
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480023,
+        "_nanoseconds": 821000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1998"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 2",
+        "B. 3",
+        "C. 4",
+        "D. 5",
+        "E. 6"
+      ],
+      "updatedAt": {
+        "_seconds": 1763487083,
+        "_nanoseconds": 561000000
+      }
+    },
+    {
+      "id": "wV142ODxMykpKYjLZjQT",
+      "year": "1991",
+      "subject": "mathematics",
+      "questionNumber": 31,
+      "questionText": "In the diagram, P→P1, Q→Q1, R→R1, where P1Q1R1 is an enlargement. If |PR| = 3.6 m, what is |P1R1|?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479570,
+        "_nanoseconds": 999000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1991"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. –7.2 m",
+        "B. –1.8 m",
+        "C. 1.2 m",
+        "D. 1.8 m",
+        "E. 7.2 m"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487077,
+        "_nanoseconds": 776000000
+      }
+    },
+    {
+      "id": "wwD1MpJZvnyQZxVjb8xM",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 39,
+      "questionText": "Find the image of the point (-3, 5) when it is rotated through 360° about the origin.",
+      "options": [
+        "A. (5, -3)",
+        "B. (-3, 5)",
+        "C. (-5, 3)",
+        "D. (-3, -5)"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482516,
+        "_nanoseconds": 294000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 904000000
+      }
+    },
+    {
+      "id": "yEaRuGdWVteW6dxmIBbg",
+      "year": "2013",
+      "subject": "mathematics",
+      "questionNumber": 18,
+      "questionText": "Find the vector which translates the point (4, –5) to (3, –2)",
+      "options": [
+        "A. ( -1 -3 )",
+        "B. ( -1 3 )",
+        "C. ( -1 7 )",
+        "D. ( 7 3 )"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480355,
+        "_nanoseconds": 816000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2013"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487095,
+        "_nanoseconds": 754000000
+      }
+    },
+    {
+      "id": "zyLbMNrWLSlli8YSVVkB",
+      "year": "2019",
+      "subject": "mathematics",
+      "questionNumber": 6,
+      "questionText": "How many lines of symmetry has a square?",
+      "options": [
+        "A. 0",
+        "B. 1",
+        "C. 2",
+        "D. 4"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480486,
+        "_nanoseconds": 287000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2019"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2019_q6_img6.jpg",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542242,
+        "_nanoseconds": 285000000
+      }
+    }
+  ],
+  "questionCount": 28
+}

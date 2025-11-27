@@ -1,0 +1,52 @@
+{
+  "totalQuestions": 77,
+  "categorizedQuestions": 75,
+  "unclassifiedQuestions": 2,
+  "categorizationRate": "97.4%",
+  "topicsBreakdown": [
+    {
+      "topic": "Greetings & Introductions",
+      "count": 0
+    },
+    {
+      "topic": "Family & Relationships",
+      "count": 26
+    },
+    {
+      "topic": "Daily Activities",
+      "count": 6
+    },
+    {
+      "topic": "Nouns & Pronouns",
+      "count": 37
+    },
+    {
+      "topic": "Verbs & Tenses",
+      "count": 0
+    },
+    {
+      "topic": "Sentence Structure",
+      "count": 0
+    },
+    {
+      "topic": "Food & Drinks",
+      "count": 1
+    },
+    {
+      "topic": "Animals & Nature",
+      "count": 0
+    },
+    {
+      "topic": "Numbers & Time",
+      "count": 5
+    },
+    {
+      "topic": "Reading Comprehension",
+      "count": 0
+    },
+    {
+      "topic": "Writing Skills",
+      "count": 0
+    }
+  ]
+}

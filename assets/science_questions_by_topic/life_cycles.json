@@ -1,0 +1,1478 @@
+{
+  "topic": "Life Cycles",
+  "totalQuestions": 48,
+  "questions": [
+    {
+      "id": "integrated_science_1990_q20",
+      "questionText": "Which of the following habitats are you likely to find a tadpole?",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 20,
+      "options": [
+        "A. Bush",
+        "B. Sea shore",
+        "C. Pond",
+        "D. Deep well",
+        "E. Vegetable garden"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 20 from the 1990 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1991_q10",
+      "questionText": "The part of the banana plant used in reproduction is called",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 10,
+      "options": [
+        "A. sucker",
+        "B. rhizome",
+        "C. stem",
+        "D. tuber",
+        "E. bulb"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 10 from the 1991 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1991_q30",
+      "questionText": "The process by which living things increase in number is referred to as",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 30,
+      "options": [
+        "A. growth",
+        "B. development",
+        "C. reproduction",
+        "D. multiplication",
+        "E. addition"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 30 from the 1991 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1991_q38",
+      "questionText": "A fertilized ovule results in the formation of",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 38,
+      "options": [
+        "A. an ovary",
+        "B. a style",
+        "C. a pistil",
+        "D. a stigma",
+        "E. an embryo"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 38 from the 1991 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1991_q40",
+      "questionText": "A fertilized ovule results in the formation of",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 40,
+      "options": [
+        "A. an ovary",
+        "B. a style",
+        "C. a pistil",
+        "D. a stigma",
+        "E. an embryo"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 40 from the 1991 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1992_q14",
+      "questionText": "Which of the following is not a characteristic of all living things?",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 14,
+      "options": [
+        "A. Transpiration",
+        "B. Growth",
+        "C. Reproduction",
+        "D. Feeding",
+        "E. Respiration"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 14 from the 1992 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1992_q18",
+      "questionText": "When the testa of a soaked bean is removed, the seed is seen to be made up of mainly",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 18,
+      "options": [
+        "A. micropyles",
+        "B. hilum",
+        "C. radicle",
+        "D. embryo",
+        "E. cotyledons"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 18 from the 1992 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1993_q10",
+      "questionText": "Which of the following changes does not occur in a girl at the age of puberty?",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 10,
+      "options": [
+        "A. The breasts develop",
+        "B. The hips widen",
+        "C. Menstruation",
+        "D. The teeth becomes whiter",
+        "E. Hair grows in the pubic area"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 10 from the 1993 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1994_q19",
+      "questionText": "Which of the following living organisms is not a reptile?",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 19,
+      "options": [
+        "A. Lizard",
+        "B. Tortoise",
+        "C. Frog",
+        "D. Snake",
+        "E. Crocodile"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 19 from the 1994 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1994_q3",
+      "questionText": "In reproduction, the embryo can be referred to as",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 3,
+      "options": [
+        "A. an ovary",
+        "B. a fertile egg",
+        "C. a fertilized egg",
+        "D. a placenta",
+        "E. a mature ovum\n\n4. Which of the following statements about second class levers is true?"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 3 from the 1994 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1995_q23",
+      "questionText": "The male sperms fertilize the female eggs to form the",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 23,
+      "options": [
+        "A. embryo",
+        "B. ovary",
+        "C. ovum",
+        "D. placenta",
+        "E. uterus"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 23 from the 1995 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1997_q11",
+      "questionText": "The process of fusion of sperm and ovum is known as",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 11,
+      "options": [
+        "A. fertilization",
+        "B. menstruation",
+        "C. pollination",
+        "D. reproduction",
+        "E. lactation"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 11 from the 1997 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1997_q32",
+      "questionText": "Which of the following is a plant parasite?",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 32,
+      "options": [
+        "A. Capsid",
+        "B. Caterpillar",
+        "C. Dodder",
+        "D. Louse",
+        "E. Nematode"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 32 from the 1997 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1998_q29",
+      "questionText": "The fusion of the male and female gametes is known as:",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 29,
+      "options": [
+        "A. copulation",
+        "B. evolution",
+        "C. fertilization",
+        "D. ovulation",
+        "E. reproduction"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 29 from the 1998 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1998_q9",
+      "questionText": "Which of the following types of soil is good for plant growth?",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 9,
+      "options": [
+        "A. Clay",
+        "B. Course sand",
+        "C. Fine sand",
+        "D. Loam",
+        "E. Silt"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 9 from the 1998 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1999_q16",
+      "questionText": "A fertilised ovum is known as",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 16,
+      "options": [
+        "A. a gamete",
+        "B. a zygote",
+        "C. oocyte",
+        "D. an ovary",
+        "E. a foetus"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 16 from the 1999 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2000_q11",
+      "questionText": "In plants when the male gamete fuses with the egg, the first structure that is formed is the",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 11,
+      "options": [
+        "A. embryo.",
+        "B. testa.",
+        "C. fruit.",
+        "D. seed.",
+        "E. zygote."
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 11 from the 2000 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2000_q34",
+      "questionText": "The insect which transmits the plasmodium parasite is called",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 34,
+      "options": [
+        "A. butterfly.",
+        "B. cockroach.",
+        "C. housefly.",
+        "D. mosquito.",
+        "E. tsetse fly."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 34 from the 2000 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2001_q19",
+      "questionText": "Which of the following processes about all living things is/are true?I. ReproductionII. RespirationIII. LocomotionIV. Excretion",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 19,
+      "options": [
+        "A. I only",
+        "B. I and II only",
+        "C. III and IV only",
+        "D. I, II and III only",
+        "E. I, II and IV only"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 19 from the 2001 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2001_q37",
+      "questionText": "The fusion of an egg cell with sperm forms",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 37,
+      "options": [
+        "A. an ovum.",
+        "B. an embryo.",
+        "C. a zygote.",
+        "D. an ovary.",
+        "E. a placenta."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 37 from the 2001 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2002_q18",
+      "questionText": "Which of the following arrangements is a probable food chain.",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 18,
+      "options": [
+        "A. Grass → Grasshopper → Toad → Snake → Crow",
+        "B. Grasshopper → Grass → Goad → Lion → Man",
+        "C. Crow → Snake → Toad → Grasshopper → Grass",
+        "D. Grass → Goat → Lion → Man → Snake"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 18 from the 2002 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2007_q14",
+      "questionText": "When the testa of a soaked bean is removed, the seed is seen to be made up of",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 14,
+      "options": [
+        "A. cotyledons.",
+        "B. embryos.",
+        "C. micropyles.",
+        "D. radicles."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 14 from the 2007 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2007_q17",
+      "questionText": "The different types of teeth that an animal has gives an indication of the nature of its",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 17,
+      "options": [
+        "A. digestion.",
+        "B. environment.",
+        "C. feeding.",
+        "D. reproduction."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 17 from the 2007 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2008_q12",
+      "questionText": "The food substance needed for growth and repair of tissue is",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 12,
+      "options": [
+        "A. carbohydrates.",
+        "B. oil.",
+        "C. protein.",
+        "D. vitamin."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 12 from the 2008 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2008_q18",
+      "questionText": "In humans, features of parents are passed on to offspring through",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 18,
+      "options": [
+        "A. breastfeeding.",
+        "B. reproduction.",
+        "C. good training.",
+        "D. sharing the same things."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 18 from the 2008 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2008_q30",
+      "questionText": "Caterpillar is an example of",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 30,
+      "options": [
+        "A. an animal parasite that feeds on plant host.",
+        "B. a plant parasite that lives on an animal host.",
+        "C. an animal parasite that feeds on animal host.",
+        "D. a plant parasite that grows on plant host."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 30 from the 2008 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2009_q13",
+      "questionText": "Which of the following organisms is at the beginning of a food chain?",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 13,
+      "options": [
+        "A. Fish",
+        "B. Grass",
+        "C. Locust",
+        "D. Mosquito"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 13 from the 2009 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2009_q14",
+      "questionText": "The human male sex cell that takes part in reproduction is the",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 14,
+      "options": [
+        "A. penis",
+        "B. scrotum",
+        "C. sperm",
+        "D. testis"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 14 from the 2009 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2010_q19",
+      "questionText": "The process that takes place when the sperm and the egg of humans fuse together is referred to as",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 19,
+      "options": [
+        "A. fertilization.",
+        "B. menstruation.",
+        "C. ovulation.",
+        "D. reproduction."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 19 from the 2010 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2012_q38",
+      "questionText": "The complete development of a human foetus in the womb normally takes",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 38,
+      "options": [
+        "A. 7 months.",
+        "B. 8 months.",
+        "C. 9 months.",
+        "D. 10 months."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 38 from the 2012 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2015_q14",
+      "questionText": "The second stage in the life cycle of a mosquito is the",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 14,
+      "options": [
+        "A. egg",
+        "B. imago",
+        "C. larva",
+        "D. pupa"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 14 from the 2015 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2016_q2",
+      "questionText": "The release of a mature egg from an ovary into the fallopian tube in humans is called",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 2,
+      "options": [
+        "A. copulation.",
+        "B. ejaculation.",
+        "C. menstruation.",
+        "D. ovulation."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 2 from the 2016 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2018_q12",
+      "questionText": "In human reproduction, the sperm fertilizes the female egg to form the",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 12,
+      "options": [
+        "A. zygote.",
+        "B. follicle.",
+        "C. ovary.",
+        "D. ovum."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 12 from the 2018 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2018_q19",
+      "questionText": "Which of the following organisms improves soil fertility?",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 19,
+      "options": [
+        "A. Caterpillar",
+        "B. Millipede",
+        "C. Nematode",
+        "D. Rat"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 19 from the 2018 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2018_q39",
+      "questionText": "The second stage in the life cycle of a mosquito is the",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 39,
+      "options": [
+        "A. egg.",
+        "B. imago.",
+        "C. larva.",
+        "D. pupa."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 39 from the 2018 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2018_q5",
+      "questionText": "Which of the following members in a food chain will receive the least energy?",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 5,
+      "options": [
+        "A. Lizard",
+        "B. Grass",
+        "C. Grasshopper",
+        "D. Hawk"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 5 from the 2018 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2019_q31",
+      "questionText": "How many stages does the mosquito go through in its life cycle of development?",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 31,
+      "options": [
+        "A. 1",
+        "B. 2",
+        "C. 3",
+        "D. 4"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 31 from the 2019 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2019_q35",
+      "questionText": "The vegetable crop that requires staking during its growth is",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 35,
+      "options": [
+        "A. sweet pepper.",
+        "B. garden eggs.",
+        "C. tomatoes.",
+        "D. hot pepper."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 35 from the 2019 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2022_q11",
+      "questionText": "The main reason for staking tomato is to ensure",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 11,
+      "options": [
+        "A. bigger fruit development.",
+        "B. air circulation on the farm.",
+        "C. upright growth of the plant.",
+        "D. that fruits do not get rotten."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 11 from the 2022 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2022_q2",
+      "questionText": "All flowering plants end their life cycle with",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 2,
+      "options": [
+        "A. seed formation.",
+        "B. seed development.",
+        "C. seed dispersal.",
+        "D. seed germination."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 2 from the 2022 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2024_q4",
+      "questionText": "Grasshopper management is crucial because of all the following reasons except",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 4,
+      "options": [
+        "A. damage to crops.",
+        "B. incomplete metamorphosis.",
+        "C. ecosystem disruption.",
+        "D. livestock harm."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 4 from the 2024 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2024_q40",
+      "questionText": "A mother took her child to the hospital and upon investigation, it was noticed that the child's diet was lacking in zinc. What could this result in?I. Decreased growth in the childII. Anaemia and constipationIII. Inability of the body to fight infection",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 40,
+      "options": [
+        "A. I, II and III",
+        "B. I and III only",
+        "C. II and III only",
+        "D. I and II only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 40 from the 2024 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2025_q23",
+      "questionText": "Combination of science, technology and innovation is needed in Ghana because it",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 23,
+      "options": [
+        "A. equips students to travel abroad and work.",
+        "B. makes students develop interest in science, technology and innovation.",
+        "C. makes students understand their environment better.",
+        "D. promotes national development."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 23 from the 2025 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2025_q26",
+      "questionText": "A grassland ecosystem that consists of snakes, toads and grasshoppers is most likely to produce a food chain of",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 26,
+      "options": [
+        "A. toad → grass → grasshopper → snake.",
+        "B. grass → grasshopper → toad → snake.",
+        "C. grasshopper → grass → toad → snake.",
+        "D. grass → toad → grasshopper → snake."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 26 from the 2025 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_1995_q4",
+      "questionText": "(a)\n\n \n\nDistinguish between sexual reproduction and asexual reproduction.\n\n(b)\n\n \n\nState the vegetative part that can be used to propagate each of the following plants:\n\n(i)\n\n \n\ncassava\n\n(ii)\n\n \n\nonion\n\n(iii)\n\n \n\nbanana\n\n(iv)\n\n \n\nyam\n\n(v)\n\n \n\nginger\n\n(vi)\n\n \n\npineapple\n\n(c)\n\n \n\n(i)\n\n \n\nDefine density of a substance.\n\n(ii)\n\n \n\nDescribe how you would determine the density of a sample of soil in the laboratory.\n\n(d)\n\n \n\nState one solvent for each of the following substances\n\n(i)\n\n \n\nCommon salt\n\n(ii)\n\n \n\nPaint\n\n(iii)\n\n \n\nCoal tar\n\n(iv)\n\n \n\nSucrose\n\n(v)\n\n \n\nChlorophyll",
+      "type": "essay",
+      "year": "1995",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1995 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2004_q2",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nList four parts of a plant that are used for asexual reproduction.\n\nii)\n\n \n\nGive two reasons why sexual reproduction is more advantageous than asexual reproduction.\n\nb)\n\n \n\ni)\n\n \n\nExplain why atoms are electrically neutral.\n\nii)\n\n \n\nWrite the systematic names of the following substances:\n\nα)\n\n \n\nCuO\n\nβ)\n\n \n\nSO2\n\nc)\n\n \n\ni)\n\n \n\nWhat is dispersion of light?\n\nii)\n\n \n\nDraw and label a diagram of dispersion of light through a triangular glass prism.",
+      "type": "essay",
+      "year": "2004",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2004 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2005_q4",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nExplain vegetative reproduction\n\n(ii)\n\n \n\nState two differences between sexual reproduction and vegetative reproduction.\n\n(iii)\n\n \n\nGive one advantage of vegetative reproduction.\n\n(b)\n\n \n\n(i)\n\n \n\nName suitable solvents for the following substances:\n\noil paint, fat, common salt, plant pigments.\n\n(ii)\n\n \n\nWhat is the name given to a substance dissolved by a solvent?\n\n(c)\n\n \n\nThe diagram below represent a simple machine.\n\n\n\n(i)\n\n \n\nWhat class of simple machine does it represent?\n\n(ii)\n\n \n\nName the parts labelled I, II and III\n\n(iii)\n\n \n\nGive two examples of machines used in everyday life which work on the same principle as the system illustrate above.",
+      "type": "essay",
+      "year": "2005",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2005 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2019_q2",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nWhat is a food chain?\n\nii)\n\n \n\nWhy is the plant in any food chain referred to as producer?\n\niii)\n\n \n\nWhat is the term given to the other organisms that depend directly or indirectly on the producer for food.\n\nb)\n\n \n\nThe diagram below is an illustration of the picture obtained on a screen when an opaque object is placed in the in the path of a light source.\n\nStudy the diagram carefully and answer the questions that follow.\n\n\n\ni)\n\n \n\nName each of the shadows that is cast on the screen:\n\nα)\n\n \n\nA;\n\nβ)\n\n \n\nB.\n\nii)\n\n \n\nWhat does the shadow of the object cast on the screen illustrate?\n\nc)\n\n \n\nDescribe briefly how a sample of pure sugar could be obtained from a mixture of sugar and sand.\n\nd)\n\n \n\nState three ways by which soil can be conserved.",
+      "type": "essay",
+      "year": "2019",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2019 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Life Cycles"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

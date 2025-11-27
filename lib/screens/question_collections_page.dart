@@ -5,7 +5,6 @@ import '../models/question_collection_model.dart';
 import '../services/question_service.dart';
 import 'quiz_taker_page.dart';
 import 'theory_year_questions_list.dart';
-import 'dart:math' as math;
 
 /// Page that displays past questions grouped as collections (e.g., "BECE RME 1999 MCQ")
 /// This provides a much cleaner UI when there are hundreds of questions across multiple years
@@ -23,13 +22,17 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
   
   List<QuestionCollection> _collections = [];
   List<QuestionCollection> _filteredCollections = [];
+  List<QuestionCollection> _loadedCollections = []; // For lazy loading
   bool _isLoading = false;
+  bool _isLoadingMore = false; // For pagination loading
+  bool _hasMoreCollections = true; // Track if more collections available
   bool _randomizeQuestions = false;
   // Map to track question count selection per collection
   final Map<String, int> _selectedQuestionCounts = {};
   // Pagination
   int _currentPage = 0;
   final int _pageSize = 20;
+  final int _initialLoadSize = 12; // Load first 12 collections quickly
   
   // Filters
   String _selectedQuestionType = 'All Types'; // MCQ or Theory
@@ -53,7 +56,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
   Future<void> _loadCollections() async {
     setState(() => _isLoading = true);
     try {
-      debugPrint('🚀 Loading question collections...');
+      debugPrint('🚀 Loading question collections with lazy loading...');
       
       // Load questions from main collection
       final mainQuestions = await _questionService.getQuestions(
@@ -177,21 +180,75 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
       
       debugPrint('📦 Total collections: ${allCollections.length} (${autoCollections.length} auto + ${savedCollections.length} saved)');
       
+      // Store all collections for lazy loading
+      _collections = allCollections;
+      
+      // Load only first 12 collections initially for fast loading
+      final initialCollections = allCollections.take(_initialLoadSize).toList();
+      
       setState(() {
-        _collections = allCollections;
-        _filteredCollections = allCollections;
+        _loadedCollections = initialCollections;
+        _filteredCollections = initialCollections;
         _currentPage = 0; // reset pagination
         _isLoading = false;
+        _hasMoreCollections = allCollections.length > _initialLoadSize;
       });
       
       // Apply initial subject filter if provided
       if (widget.initialSubject != null) {
         _applyInitialSubjectFilter();
       }
+      
+      // Load remaining collections in background
+      if (_hasMoreCollections) {
+        _loadRemainingCollectionsInBackground();
+      }
+      
     } catch (e) {
       debugPrint('❌ Error loading collections: $e');
       setState(() => _isLoading = false);
     }
+  }
+
+  // Load remaining collections in background without blocking UI
+  void _loadRemainingCollectionsInBackground() {
+    Future.delayed(const Duration(milliseconds: 100), () {
+      if (mounted && _hasMoreCollections) {
+        final remainingCollections = _collections.skip(_initialLoadSize).toList();
+        setState(() {
+          _loadedCollections.addAll(remainingCollections);
+          _hasMoreCollections = false;
+        });
+        debugPrint('✅ All collections loaded in background (${remainingCollections.length} additional collections)');
+      }
+    });
+  }
+
+  // Load more collections when user clicks "Load More" button
+  Future<void> _loadMoreCollections() async {
+    if (_isLoadingMore || !_hasMoreCollections) return;
+
+    setState(() => _isLoadingMore = true);
+
+    // Simulate loading delay for smooth UX
+    await Future.delayed(const Duration(milliseconds: 500));
+
+    final nextPage = _currentPage + 1;
+    final startIndex = (_currentPage * _pageSize);
+    final endIndex = (nextPage * _pageSize);
+
+    final moreCollections = _collections.skip(startIndex).take(_pageSize).toList();
+
+    if (moreCollections.isNotEmpty) {
+      setState(() {
+        _loadedCollections.addAll(moreCollections);
+        _currentPage = nextPage;
+        _hasMoreCollections = endIndex < _collections.length;
+      });
+      debugPrint('📄 Loaded page $_currentPage: ${moreCollections.length} more collections');
+    }
+
+    setState(() => _isLoadingMore = false);
   }
 
   void _applyInitialSubjectFilter() {
@@ -207,7 +264,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
   void _applyFilters() {
     setState(() {
       _currentPage = 0; // reset to first page when filters change
-      _filteredCollections = _collections.where((collection) {
+      _filteredCollections = _loadedCollections.where((collection) {
         // Question type filter (MCQ vs Theory)
         if (_selectedQuestionType != 'All Types') {
           final isMCQ = collection.questionType == QuestionType.multipleChoice;
@@ -556,13 +613,6 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
   }
 
   Widget _buildCollectionsList(bool isSmallScreen) {
-    // Compute paginated slice
-    final total = _filteredCollections.length;
-    final totalPages = total == 0 ? 1 : (total / _pageSize).ceil();
-    final start = _currentPage * _pageSize;
-    final end = math.min(start + _pageSize, total);
-    final paged = start < end ? _filteredCollections.sublist(start, end) : <QuestionCollection>[];
-
     return Container(
       padding: EdgeInsets.symmetric(
         horizontal: isSmallScreen ? 16 : 24,
@@ -573,7 +623,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
           // Collections grid / list
           isSmallScreen
               ? Column(
-                  children: paged.map((collection) {
+                  children: _filteredCollections.map((collection) {
                     return _buildCollectionCard(collection, isSmallScreen);
                   }).toList(),
                 )
@@ -586,16 +636,41 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                     mainAxisSpacing: 16,
                     childAspectRatio: 2.1, // 15% height reduction (was 1.8)
                   ),
-                  itemCount: paged.length,
+                  itemCount: _filteredCollections.length,
                   itemBuilder: (context, index) {
-                    return _buildCollectionCard(paged[index], isSmallScreen);
+                    return _buildCollectionCard(_filteredCollections[index], isSmallScreen);
                   },
                 ),
 
           const SizedBox(height: 12),
 
-          // Pagination controls
-          if (total > _pageSize)
+          // Load More Button (if more collections available)
+          if (_hasMoreCollections && !_isLoadingMore)
+            Padding(
+              padding: const EdgeInsets.all(16),
+              child: ElevatedButton(
+                onPressed: _loadMoreCollections,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFFD62828),
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+                child: const Text('Load More Collections'),
+              ),
+            ),
+
+          // Loading indicator for background loading
+          if (_isLoadingMore)
+            const Padding(
+              padding: EdgeInsets.all(16),
+              child: CircularProgressIndicator(color: Color(0xFFD62828)),
+            ),
+
+          // Legacy pagination controls (for filtered results if needed)
+          if (_filteredCollections.length > _pageSize && !_hasMoreCollections)
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -605,10 +680,13 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                   label: const Text('Previous'),
                 ),
                 const SizedBox(width: 12),
-                Text('Page ${_currentPage + 1} of $totalPages', style: GoogleFonts.montserrat()),
+                Text('Page ${_currentPage + 1} of ${(_filteredCollections.length / _pageSize).ceil()}',
+                     style: GoogleFonts.montserrat()),
                 const SizedBox(width: 12),
                 TextButton.icon(
-                  onPressed: _currentPage < totalPages - 1 ? () => setState(() => _currentPage++) : null,
+                  onPressed: _currentPage < (_filteredCollections.length / _pageSize).ceil() - 1
+                      ? () => setState(() => _currentPage++)
+                      : null,
                   icon: const Icon(Icons.chevron_right),
                   label: const Text('Next'),
                 ),

@@ -1,0 +1,108 @@
+{
+  "topic": "Meal Planning",
+  "questions": [
+    {
+      "id": "career_technology_2024_q1",
+      "questionText": "One important factor to consider in meal planning is foods in season because",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 1,
+      "options": [
+        "A. their cooking time is reduced.",
+        "B. they cut down on cost.",
+        "C. meal is readily available.",
+        "D. they can easily be preserved."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 1 from the 2024 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2024"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    },
+    {
+      "id": "career_technology_2024_q6",
+      "questionText": "Kofi went to a restaurant and selected a menu with individually priced dishes. The name of this kind of service is",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 6,
+      "options": [
+        "A. table d'hôte.",
+        "B. special party menu.",
+        "C. ethnic menu.",
+        "D. à la carte."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 6 from the 2024 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2024"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    },
+    {
+      "id": "career_technology_2025_q38",
+      "questionText": "A group of students designed a water-filtering device for rural communities to purify water from nearby rivers. Before distributing the device, they need to test and evaluate its",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2025",
+      "section": "A",
+      "questionNumber": 38,
+      "options": [
+        "A. aesthetics.",
+        "B. cost.",
+        "C. functionality.",
+        "D. size."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 38 from the 2025 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2025"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2025",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    }
+  ],
+  "questionCount": 3
+}

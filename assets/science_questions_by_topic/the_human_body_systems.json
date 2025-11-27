@@ -1,0 +1,3475 @@
+{
+  "topic": "The Human Body Systems",
+  "totalQuestions": 113,
+  "questions": [
+    {
+      "id": "integrated_science_1990_q17",
+      "questionText": "The brain and the spinal cord are part of the",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 17,
+      "options": [
+        "A. digestive system",
+        "B. circulatory system",
+        "C. respiratory system",
+        "D. nervous system",
+        "E. excretory system"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 17 from the 1990 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1990_q32",
+      "questionText": "Which of the following organs are connected by the ureter?",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 32,
+      "options": [
+        "A. Liver and kidney",
+        "B. Kidney and bladder",
+        "C. Bladder and heart",
+        "D. Intestines and anus",
+        "E. Lungs and bladder"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 32 from the 1990 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1991_q1",
+      "questionText": "The digestion of carbohydrates starts in the",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 1,
+      "options": [
+        "A. mouth",
+        "B. throat",
+        "C. stomach",
+        "D. duodenum",
+        "E. ileum"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 1 from the 1991 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1991_q17",
+      "questionText": "Which of these is not a sense organ?",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 17,
+      "options": [
+        "A. Eye",
+        "B. Ear",
+        "C. Nose",
+        "D. Skin",
+        "E. Heart"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 17 from the 1991 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1992_q36",
+      "questionText": "The Central Nervous System consists of",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 36,
+      "options": [
+        "A. the brain and the spinal cord",
+        "B. the brain and the ears",
+        "C. the spinal cord and eyes",
+        "D. the brain, eyes and ears",
+        "E. eyes, ears, skin and spinal cord"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 36 from the 1992 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1993_q24",
+      "questionText": "Which of the following organisms causes bilharziasis?",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 24,
+      "options": [
+        "A. Tapeworm",
+        "B. Blood fluke",
+        "C. Blood worm",
+        "D. Round worm",
+        "E. Liver fluke"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 24 from the 1993 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1993_q27",
+      "questionText": "All the following are sense organs except the",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 27,
+      "options": [
+        "A. eye",
+        "B. brain",
+        "C. ear",
+        "D. skin",
+        "E. tongue"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 27 from the 1993 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1993_q5",
+      "questionText": "Which of the following is an excretory organ?",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 5,
+      "options": [
+        "A. Anus",
+        "B. Eye",
+        "C. Heart",
+        "D. Skin",
+        "E. Pancreas"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 5 from the 1993 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1994_q32",
+      "questionText": "The male and female sex cells of a plant are respectively in the",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 32,
+      "options": [
+        "A. Sperm and egg",
+        "B. Pollen grain and ovary",
+        "C. Sperm and ovary",
+        "D. Ovary and ovule",
+        "E. Embryo and seed"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 32 from the 1994 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1994_q8",
+      "questionText": "Which of the following organs is the center of the Central Nervous System?",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 8,
+      "options": [
+        "A. Kidney",
+        "B. Liver",
+        "C. Heart",
+        "D. Brain",
+        "E. Lung"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 8 from the 1994 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1995_q13",
+      "questionText": "Excretion in animals involves the removal of",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 13,
+      "options": [
+        "A. water from the body",
+        "B. urine and faeces from the body",
+        "C. blood from the body",
+        "D. waste materials from the body cells",
+        "E. undigested food from the body"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 13 from the 1995 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1995_q32",
+      "questionText": "What structure links the mouth with the stomach? The",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 32,
+      "options": [
+        "A. duodenum",
+        "B. oesophagus",
+        "C. Ileum",
+        "D. trachea",
+        "E. colon"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 32 from the 1995 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1996_q2",
+      "questionText": "The excretory organs in man are the",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 2,
+      "options": [
+        "A. Kidneys and urethra",
+        "B. Kidneys and the skin",
+        "C. Kidneys, lungs and the skin",
+        "D. Kidneys and the lungs",
+        "E. Kidneys, bladder and urethra"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 2 from the 1996 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1996_q23",
+      "questionText": "The blood in mammals is composed of",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 23,
+      "options": [
+        "A. a red liquid",
+        "B. red blood cells and white blood cells",
+        "C. liquid plasma and solid corpuscles",
+        "D. blood protein and glycerol",
+        "E. sugar and mineral salts only\n\n24. In a machine, 200.0 J of energy was lost as heat. If the energy input is 600.0 J, what is the efficiency of the machine?"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 23 from the 1996 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1996_q38",
+      "questionText": "In which part of the alimentary canal is food finally changed into a form that can be absorbed into the bloodstream?",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 38,
+      "options": [
+        "A. small intestines",
+        "B. oesophagus",
+        "C. mouth",
+        "D. stomach",
+        "E. large intestines"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 38 from the 1996 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1996_q6",
+      "questionText": "Which of the following arrangements is the correct order of increasing complexity of the structure?",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 6,
+      "options": [
+        "A. Cells → systems → tissues → organs",
+        "B. Cells → tissues → systems → organs",
+        "C. Cells → organs → tissues → systems",
+        "D. Cells → systems → organs → tissues",
+        "E. Cells → tissues → organs → systems"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 6 from the 1996 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1997_q1",
+      "questionText": "Digested food is absorbed into the blood stream through the",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 1,
+      "options": [
+        "A. duodenum",
+        "B. large intestines",
+        "C. rectum",
+        "D. small intestines",
+        "E. stomach\n\n2. Which of the following is parasite?"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 1 from the 1997 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1997_q13",
+      "questionText": "Which of the following form part of the alimentary canal?I. ColonII. GulletIII. LiverIV. Pancreas",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 13,
+      "options": [
+        "A. I and II only",
+        "B. I and IV only",
+        "C. II and III only",
+        "D. II and IV only",
+        "E. I, II and III only\n\n15. An example of a simple lever whose effort is at its centre is"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 13 from the 1997 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1997_q23",
+      "questionText": "Which of the following carry deoxygenated blood in the body?",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 23,
+      "options": [
+        "A. Arteries",
+        "B. Red blood cells",
+        "C. Valves",
+        "D. Veins",
+        "E. White blood cells"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 23 from the 1997 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1997_q26",
+      "questionText": "In which of the following is urine produced?",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 26,
+      "options": [
+        "A. Bladder",
+        "B. Kidney",
+        "C. Liver",
+        "D. Penis and vagina",
+        "E. uterus"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 26 from the 1997 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1997_q30",
+      "questionText": "Which of the following organs help to improve soil fertility?",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 30,
+      "options": [
+        "A. Earthworms",
+        "B. Guinea worms",
+        "C. Hookworms",
+        "D. Roundworms",
+        "E. Threadworms"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 30 from the 1997 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1997_q7",
+      "questionText": "The purpose of vaccination is to",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 7,
+      "options": [
+        "A. replace poisoned tissues",
+        "B. kill disease-producing organisms in the body",
+        "C. increase the activity of white blood cells",
+        "D. induce the production of anti bodies",
+        "E. cure the disease"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 7 from the 1997 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1997_q9",
+      "questionText": "Which of the following gives the correct order by which blood circulates continuously through the circulatory system?",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 9,
+      "options": [
+        "A. Heart → veins → organs → arteries → heart",
+        "B. Heart → arteries → organs → veins → heart",
+        "C. Heart → arteries → veins → organs → heart",
+        "D. Heart → organs → arteries → veins → heart",
+        "E. Heart → veins → arteries → organs → heart"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 9 from the 1997 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1998_q23",
+      "questionText": "About 55% of blood is made up of the plasma while the remaining 45% is made up of",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 23,
+      "options": [
+        "A. Cells",
+        "B. Cochlea",
+        "C. Iris",
+        "D. Retina",
+        "E. Trachea"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 23 from the 1998 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1998_q4",
+      "questionText": "The central nervous system is made up of the",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 4,
+      "options": [
+        "A. Brain only",
+        "B. Spinal cord only",
+        "C. Brain and sense organs",
+        "D. Brain and spinal cord",
+        "E. Spinal cord and sense organs"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 4 from the 1998 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1999_q2",
+      "questionText": "What structure links the mouth to the stomach",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 2,
+      "options": [
+        "A. Colon",
+        "B. Duodenum",
+        "C. Oesophagus",
+        "D. Rumen",
+        "E. Trachea"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 2 from the 1999 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1999_q22",
+      "questionText": "The main parts of the central nervous system are the",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 22,
+      "options": [
+        "A. brain and nerves",
+        "B. spinal cord and the nerves",
+        "C. brain and the spinal cord",
+        "D. brain, the nerves and the spinal cord",
+        "E. brain, the eyes, the ears and the nerves"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 22 from the 1999 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1999_q27",
+      "questionText": "The male sex cells in the flower are found in the",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 27,
+      "options": [
+        "A. filament",
+        "B. ovary",
+        "C. D.  \n\npollen grains",
+        "E. stigma"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 27 from the 1999 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1999_q29",
+      "questionText": "Digestion of protein starts in the",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 29,
+      "options": [
+        "A. duodenum",
+        "B. gullet",
+        "C. mouth",
+        "D. small intestine",
+        "E. stomach"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 29 from the 1999 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1999_q3",
+      "questionText": "Which of the following organisms causes bilharziasis?",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 3,
+      "options": [
+        "A. Blood fluke",
+        "B. Bloodworm",
+        "C. Liver fluke",
+        "D. Roundworm",
+        "E. Tapeworm"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 3 from the 1999 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2000_q1",
+      "questionText": "Which pf the following organs is used by the fish for movement?",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 1,
+      "options": [
+        "A. Eye",
+        "B. Fin",
+        "C. Gill",
+        "D. Tail",
+        "E. Mouth"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 1 from the 2000 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2000_q18",
+      "questionText": "The name of the smallest blood vessel in humans is",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 18,
+      "options": [
+        "A. artery.",
+        "B. arteriole.",
+        "C. capillary.",
+        "D. vein.",
+        "E. venule."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 18 from the 2000 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2000_q5",
+      "questionText": "The organ that removes metabolic wastes from the human body is",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 5,
+      "options": [
+        "A. anus.",
+        "B. heart.",
+        "C. kidney.",
+        "D. rectum.",
+        "E. spleen."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 5 from the 2000 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2000_q8",
+      "questionText": "Which of the following statements about mammals is true?",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 8,
+      "options": [
+        "A. They have hairs",
+        "B. They lay eggs",
+        "C. They have feathers",
+        "D. They have beaks",
+        "E. They are cold blooded"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 8 from the 2000 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2001_q12",
+      "questionText": "Which of the following parts of the human body are sense organs?I. TongueII. HairIII. NoseIV. Skin",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 12,
+      "options": [
+        "A. I and IV only",
+        "B. II and III only",
+        "C. I, II and III only",
+        "D. I, III and IV only",
+        "E. I, II, III and IV"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 12 from the 2001 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2001_q24",
+      "questionText": "Which of the following pairs of organs are part of the central nervous system?",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 24,
+      "options": [
+        "A. Spinal cord and the eyes",
+        "B. Brain and spinal cord",
+        "C. Brain and the ears",
+        "D. Eyes and the ears",
+        "E. Eyes and brain"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 24 from the 2001 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2001_q36",
+      "questionText": "The organism which lives in the human blood as a parasite is",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 36,
+      "options": [
+        "A. louse.",
+        "B. plasmodium.",
+        "C. roundworm.",
+        "D. tapeworm.",
+        "E. tick."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 36 from the 2001 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2001_q5",
+      "questionText": "The organ in the human body which is responsible for the removal of urea is the",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 5,
+      "options": [
+        "A. heart.",
+        "B. kidney.",
+        "C. lung.",
+        "D. liver.",
+        "E. bladder."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 5 from the 2001 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2001_q7",
+      "questionText": "The bilharzia worm can enter the human body through the",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 7,
+      "options": [
+        "A. anus.",
+        "B. ear.",
+        "C. mouth.",
+        "D. nostrils.",
+        "E. skin"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 7 from the 2001 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2002_q22",
+      "questionText": "Excess carbohydrate in the human body is stored as",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 22,
+      "options": [
+        "A. amino acid.",
+        "B. fatty acid.",
+        "C. glycogen.",
+        "D. glucose."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 22 from the 2002 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2002_q23",
+      "questionText": "Carbon dioxide in the blood is removed from the body through the",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 23,
+      "options": [
+        "A. kidneys.",
+        "B. lungs.",
+        "C. mouth.",
+        "D. skin."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 23 from the 2002 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2002_q25",
+      "questionText": "The liquid component of the blood is known as",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 25,
+      "options": [
+        "A. cytoplasm.",
+        "B. haemoglobin.",
+        "C. plasma.",
+        "D. platelets."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 25 from the 2002 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2002_q26",
+      "questionText": "Digested food substances are absorbed into the blood stream in the",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 26,
+      "options": [
+        "A. kidneys.",
+        "B. liver.",
+        "C. stomach.",
+        "D. ileum."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 26 from the 2002 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2002_q29",
+      "questionText": "The embryo of a mammal develops from",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 29,
+      "options": [
+        "A. eggs fertilized inside the body.",
+        "B. eggs fertilized outside the body.",
+        "C. self fertilized eggs.",
+        "D. only female sex cells."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 29 from the 2002 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2004_q16",
+      "questionText": "The testis in mammals produces",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 16,
+      "options": [
+        "A. blood.",
+        "B. lymph.",
+        "C. sperms.",
+        "D. urine."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 16 from the 2004 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2004_q6",
+      "questionText": "Use the diagrams below to answer the question below\n\n\n\nWhich of the following statements is correct about the circuit diagrams above? The cells in diagram",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 6,
+      "options": [
+        "A. X are in series and the key is open.",
+        "B. X are in parallel and the key is open.",
+        "C. Y are in series and the key is closed.",
+        "D. Y are in parallel and the key is closed."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 6 from the 2004 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2004_q7",
+      "questionText": "Use the diagrams below to answer the question below\n\n\n\nThe total emf of the cells in diagram Y is",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 7,
+      "options": [
+        "A. 4.50 V.",
+        "B. 3.00 V.",
+        "C. 1.50 V",
+        "D. 0.75 V."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 7 from the 2004 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2005_q26",
+      "questionText": "Which of the following parasites lives in the blood of humans?",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 26,
+      "options": [
+        "A. Louse",
+        "B. Plasmodium",
+        "C. Tapeworm",
+        "D. Tick"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 26 from the 2005 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2005_q35",
+      "questionText": "The function of blood platelets is to",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 35,
+      "options": [
+        "A. carry carbon dioxide.",
+        "B. fight against diseases.",
+        "C. help in clotting.",
+        "D. help maintain constant body temperature."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 35 from the 2005 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2006_q17",
+      "questionText": "Which of these organs in humans releases carbon dioxide as a waste product?",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 17,
+      "options": [
+        "A. Kidney",
+        "B. Liver",
+        "C. Lung",
+        "D. Skin"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 17 from the 2006 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2006_q27",
+      "questionText": "Vaccination is carried out to",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 27,
+      "options": [
+        "A. enable sores to heal faster.",
+        "B. increase the red blood cells of a person.",
+        "C. enable a person's white blood cells to fight against diseases.",
+        "D. kill germs in a person's body."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 27 from the 2006 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2006_q38",
+      "questionText": "Arteries are blood vessels which carry",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 38,
+      "options": [
+        "A. blood to the heart.",
+        "B. carbon dioxide to the air.",
+        "C. blood away from the art.",
+        "D. oxygen to the lungs."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 38 from the 2006 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2006_q39",
+      "questionText": "Which of the following structures is not involved in blood circulation?",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 39,
+      "options": [
+        "A. Capillary",
+        "B. Heart",
+        "C. Muscle",
+        "D. vein"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 39 from the 2006 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2007_q11",
+      "questionText": "Digestion of proteins starts from the",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 11,
+      "options": [
+        "A. duodenum.",
+        "B. ileum.",
+        "C. mouth.",
+        "D. stomach."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 11 from the 2007 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2007_q12",
+      "questionText": "A reflex action involves the",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 12,
+      "options": [
+        "A. brain and nerves.",
+        "B. bones and nerves.",
+        "C. brain and muscles.",
+        "D. spinal cord and nerves."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 12 from the 2007 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2007_q13",
+      "questionText": "Which of the following structures is not part of the central nervous systems?",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 13,
+      "options": [
+        "A. Brain",
+        "B. Spinal cord",
+        "C. Nerves",
+        "D. Veins"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 13 from the 2007 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2007_q18",
+      "questionText": "Exchange of gases takes place in the respiratory system through the",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 18,
+      "options": [
+        "A. bronchi.",
+        "B. lungs.",
+        "C. nostrils.",
+        "D. trachea."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 18 from the 2007 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2007_q36",
+      "questionText": "Oxygen in the blood finally reaches the parts of the body through the",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 36,
+      "options": [
+        "A. arteries.",
+        "B. alveoli.",
+        "C. capillaries.",
+        "D. veins."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 36 from the 2007 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2008_q37",
+      "questionText": "Blood is prevented from flowing back into the veins by the",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 37,
+      "options": [
+        "A. arteries.",
+        "B. capillaries.",
+        "C. heart.",
+        "D. valves."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 37 from the 2008 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2008_q39",
+      "questionText": "Soluble digested food substances enter the blood of the human body by a process called",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 39,
+      "options": [
+        "A. absorption.",
+        "B. egestion.",
+        "C. excretion.",
+        "D. ingestion."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 39 from the 2008 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2009_q16",
+      "questionText": "The central nervous system consists of the",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 16,
+      "options": [
+        "A. spinal cord and spine.",
+        "B. brain and the nerves.",
+        "C. brain and the spinal cord.",
+        "D. skeletal system and skull."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 16 from the 2009 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2009_q18",
+      "questionText": "All veins in the body carry blood that does not contain oxygen with the exception of the veins from the",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 18,
+      "options": [
+        "A. heart.",
+        "B. kidneys.",
+        "C. lungs.",
+        "D. liver."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 18 from the 2009 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2009_q29",
+      "questionText": "The mosquito and housefly are harmful in that they",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 29,
+      "options": [
+        "A. suck blood.",
+        "B. bite and cause pain.",
+        "C. settle on food.",
+        "D. spread diseases."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 29 from the 2009 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2009_q39",
+      "questionText": "Oxygen is made available to all cells of the human body by the",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 39,
+      "options": [
+        "A. plasma.",
+        "B. platelets.",
+        "C. white blood cells.",
+        "D. red blood cells."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 39 from the 2009 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2010_q11",
+      "questionText": "The farm animal which has crop as part of its digestive system is the",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 11,
+      "options": [
+        "A. fowl.",
+        "B. goat.",
+        "C. pig.",
+        "D. sheep."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 11 from the 2010 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2010_q27",
+      "questionText": "Which of the following blood vessels carries deoxygenated blood?",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 27,
+      "options": [
+        "A. Aorta",
+        "B. Pulmonary artery",
+        "C. Pulmonary vein",
+        "D. Renal artery"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 27 from the 2010 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2010_q36",
+      "questionText": "Which of the following components of human blood is dissolved in the plasma?",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 36,
+      "options": [
+        "A. Mineral salts",
+        "B. Phagocytes",
+        "C. Platelets",
+        "D. Red blood cells"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 36 from the 2010 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2010_q39",
+      "questionText": "The human sex cells are produced in the",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 39,
+      "options": [
+        "A. scrotum and uterus.",
+        "B. testis and ovary.",
+        "C. penis and vagina.",
+        "D. scrotum and ovary."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 39 from the 2010 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2010_q40",
+      "questionText": "The human sex cells are produced in the",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 40,
+      "options": [
+        "A. scrotum and uterus.",
+        "B. testis and ovary.",
+        "C. penis and vagina.",
+        "D. scrotum and ovary."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 40 from the 2010 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2010_q9",
+      "questionText": "The structure in the respiratory system of humans where gaseous exchange occurs is",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 9,
+      "options": [
+        "A. alveolus.",
+        "B. bronchus.",
+        "C. nostril.",
+        "D. trachea."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 9 from the 2010 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2011_q17",
+      "questionText": "In which part of the digestive system of a fowl does grinding of feed take place?",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 17,
+      "options": [
+        "A. Crop",
+        "B. Gizzard",
+        "C. Oesophagus",
+        "D. Proventriculus"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 17 from the 2011 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2011_q2",
+      "questionText": "The structure that stores sperms temporarily in the male reproductive system of humans is",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 2,
+      "options": [
+        "A. epididymis.",
+        "B. scrotal disc.",
+        "C. sperm duct.",
+        "D. testes."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 2 from the 2011 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2011_q25",
+      "questionText": "Which of the following pairs of structures form part of the female reproductive system of humans?",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 25,
+      "options": [
+        "A. Urethra and uterus",
+        "B. Cervix and uterus",
+        "C. Ureter and uterus",
+        "D. Cervix and ureter"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 25 from the 2011 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2011_q40",
+      "questionText": "Which of the following arrangements show the correct order of increasing complexity of structures in living organisms.",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 40,
+      "options": [
+        "A. cells → organs → tissues → systems",
+        "B. cells → tissues → organs → systems",
+        "C. cells → systems → tissues → organs",
+        "D. cells → tissues → systems → organs"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 40 from the 2011 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2012_q12",
+      "questionText": "A reflex action involves the",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 12,
+      "options": [
+        "A. brain and muscles.",
+        "B. brain and nerves.",
+        "C. spinal cord and muscles.",
+        "D. spinal cord and nerves."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 12 from the 2012 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2012_q22",
+      "questionText": "Which of the following substances are carried by the blood?I. HormonesII. UrineIII. OxygenIV. Carbon dioxide",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 22,
+      "options": [
+        "A. I and III only",
+        "B. II and III only",
+        "C. I, II and IV only",
+        "D. I, III and IV only"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 22 from the 2012 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2013_q32",
+      "questionText": "In the digestive system of ruminants, vitamins are synthesized in the",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 32,
+      "options": [
+        "A. abomasum.",
+        "B. omasum.",
+        "C. reticulum.",
+        "D. rumen"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 32 from the 2013 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2013_q33",
+      "questionText": "The best way of protecting oneself from high blood pressure is to",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 33,
+      "options": [
+        "A. consume alcoholic drinks.",
+        "B. eat high carbohydrate diet.",
+        "C. engage in smoking.",
+        "D. exercise regularly."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 33 from the 2013 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2013_q7",
+      "questionText": "The hereditary material that is passed on from parents to offspring is known as",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 7,
+      "options": [
+        "A. gene.",
+        "B. sperm.",
+        "C. red blood cell.",
+        "D. white blood cell."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 7 from the 2013 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2014_q25",
+      "questionText": "An example of a disease vector is",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 25,
+      "options": [
+        "A. earthworm",
+        "B. liver fluke",
+        "C. tapeworm",
+        "D. tick"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 25 from the 2014 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2014_q37",
+      "questionText": "Which of the following pairs of structures are parts of the respiratory system of humans?",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 37,
+      "options": [
+        "A. Fallopian tube and alveoli",
+        "B. Pharynx and esophagus",
+        "C. Trachea and alveoli",
+        "D. Trachea and duodenum"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 37 from the 2014 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2015_q27",
+      "questionText": "A structure in the human reproductive system which stores sperms temporarily is the",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 27,
+      "options": [
+        "A. epididymis.",
+        "B. penis.",
+        "C. scrotum.",
+        "D. vulva."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 27 from the 2015 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2015_q3",
+      "questionText": "The component of the human blood which transport oxygen to all parts of the body",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 3,
+      "options": [
+        "A. plasma.",
+        "B. platelets.",
+        "C. red blood cells.",
+        "D. white blood cells."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 3 from the 2015 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2015_q32",
+      "questionText": "One advantage of soft water over hard water is that soft water",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 32,
+      "options": [
+        "A. Has a pleasant taste",
+        "B. Can prevent heart diseases",
+        "C. Does not waste soap",
+        "D. Forms scales in kettle"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 32 from the 2015 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2015_q39",
+      "questionText": "The function of the platelets in the circulatory system of humans is to",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 39,
+      "options": [
+        "A. Transport oxygen",
+        "B. Transport carbon dioxide",
+        "C. Clot of blood",
+        "D. Defend the blood"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 39 from the 2015 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2016_q3",
+      "questionText": "The blood vessel that carries oxygenated blood from the lungs to the heart is unknown as",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 3,
+      "options": [
+        "A. pulmonary artery.",
+        "B. pulmonary vein.",
+        "C. vena cana.",
+        "D. aorta."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 3 from the 2016 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2016_q9",
+      "questionText": "Which of the following animal parasites could be controlled by hand picking?",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 9,
+      "options": [
+        "A. Liver fluke",
+        "B. Tapeworm",
+        "C. Tick",
+        "D. Roundworm"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 9 from the 2016 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2018_q17",
+      "questionText": "Ringworm is a disease which attacks the",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 17,
+      "options": [
+        "A. skin.",
+        "B. lungs.",
+        "C. liver.",
+        "D. kidneys."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 17 from the 2018 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2018_q40",
+      "questionText": "The function of the platelets in the circulatory system of humans is to",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 40,
+      "options": [
+        "A. transport oxygen.",
+        "B. transport carbon dioxide.",
+        "C. defend the body.",
+        "D. cloth the blood."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 40 from the 2018 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2019_q32",
+      "questionText": "Which of the following enzymes helps in digestion of protein in the human stomach?I. ProteasesII. AmylaseIII. Lipases",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 32,
+      "options": [
+        "A. I only",
+        "B. II only",
+        "C. I and II only",
+        "D. II and III only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 32 from the 2019 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2019_q36",
+      "questionText": "The function of the white blood cells in humans is to",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 36,
+      "options": [
+        "A. produce haemoglobin.",
+        "B. produce digestive enzymes.",
+        "C. ensure blood clot during an injury.",
+        "D. produce antibodies to fight disease causing organisms."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 36 from the 2019 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2020_q2",
+      "questionText": "Which part of the human body stores sperms temporarily?",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 2,
+      "options": [
+        "A. Epididymis",
+        "B. Scrotum",
+        "C. Prostate gland",
+        "D. Sperm duct"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 2 from the 2020 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2020_q3",
+      "questionText": "An advantage of soft water over hard water is that soft water",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 3,
+      "options": [
+        "A. is good for formation of strong bones in humans",
+        "B. prevents heart diseases",
+        "C. has a pleasant smell",
+        "D. saves a lot of soap when used in washing"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 3 from the 2020 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2020_q39",
+      "questionText": "The structure which enables a fish to breate in water is",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 39,
+      "options": [
+        "A. buccal cavity",
+        "B. gills",
+        "C. swim bladder",
+        "D. lungs"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 39 from the 2020 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2021_q18",
+      "questionText": "The function of the white blood cells in humans is to",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 18,
+      "options": [
+        "A. produce haemoglobin.",
+        "B. ensure blood clot during an injury.",
+        "C. produce antibodies to engulf disease-causing organisms.",
+        "D. produce digestive enzymes."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 18 from the 2021 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2021_q19",
+      "questionText": "Mosquito pupa breathes through tubes called",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 19,
+      "options": [
+        "A. trachea.",
+        "B. siphon.",
+        "C. lungs.",
+        "D. gills."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 19 from the 2021 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2021_q3",
+      "questionText": "Which of the following organisms is an ecto-parasite of animals?",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 3,
+      "options": [
+        "A. Fleas",
+        "B. Tapeworm",
+        "C. Liver fluke",
+        "D. Roundworm"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 3 from the 2021 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2022_q38",
+      "questionText": "Digestion of protein begins in the stomach and ends in the",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 38,
+      "options": [
+        "A. large intestine.",
+        "B. small intestine.",
+        "C. appendix.",
+        "D. caecum."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 38 from the 2022 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2023_q16",
+      "questionText": "Which of the following pairs of structures are present in animal cells?",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 16,
+      "options": [
+        "A. Mitochondrion and Chloroplast",
+        "B. Nucleus and chloroplast",
+        "C. Vacuole and nucleus",
+        "D. Cell wall and mitochondrion"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 16 from the 2023 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2023_q33",
+      "questionText": "Which of the following statements distinguishes arteries from veins?",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 33,
+      "options": [
+        "A. Arteries have relatively narrow lumen while veins have relatively wide lumen.",
+        "B. Arteries transport blood to the heart while veins carry blood away from the heart.",
+        "C. Arteries carry deoxygenated blood while veins carry oxygenated blood.",
+        "D. Arteries have valves while veins do not have valves."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 33 from the 2023 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2024_q11",
+      "questionText": "A student who complained of stomach upset was given first aid with Mg(OH)2 boldly written on it. What could be the common name of the first aid the student was given?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 11,
+      "options": [
+        "A. Milk of aluminium",
+        "B. Milk of magnesia",
+        "C. Trisilicate",
+        "D. Martins liver salt"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 11 from the 2024 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2024_q27",
+      "questionText": "Digestion of rice in humans starts from the",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 27,
+      "options": [
+        "A. stomach.",
+        "B. gullet.",
+        "C. mouth.",
+        "D. colon."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 27 from the 2024 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2024_q9",
+      "questionText": "Canned foods and drinks have expiry dates on them. The hazard involved in taking an expired drink is",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 9,
+      "options": [
+        "A. food poisoning.",
+        "B. impaired hearing.",
+        "C. poor circulation of blood.",
+        "D. suffocation."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 9 from the 2024 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2025_q22",
+      "questionText": "Which of the following substances are major components of human blood?I. HormonesII. PlateletsIII. PlasmaIV. White blood cells",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 22,
+      "options": [
+        "A. I and II only",
+        "B. II and III only",
+        "C. III and IV only",
+        "D. II, III and IV only"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 22 from the 2025 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2025_q25",
+      "questionText": "Which of the following heart conditions in humans is caused by plaque deposits in the arteries?",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 25,
+      "options": [
+        "A. Atherosclerosis",
+        "B. Heart attack",
+        "C. Heart failure",
+        "D. Stroke"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 25 from the 2025 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_1997_q4",
+      "questionText": "(a)\n\n \n\nDefine the following terms and give an example each\n\n(i)\n\n \n\nHerbivore\n\n(ii)\n\n \n\nCarnivore\n\n(iii)\n\n \n\nOmnivore\n\n(b)\n\n \n\nTwo dry cells connected in parallel are in turn connected in series with a bulb and switch.\n\nDraw a circuit diagram to illustrate this arrangement.\n\n(c)\n\n \n\nList four garden tools\n\n(d)\n\n \n\nWhat property of water causes mosquito larvae to float on it?\n\n(e)\n\n \n\nDescribe an experiment you prepared to show that some part of air is used in burning.",
+      "type": "essay",
+      "year": "1997",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1997 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2001_q4",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nWhat is digestion?\n\nii)\n\n \n\nDescribe briefly how food is digested in the stomach.\n\nb)\n\n \n\ni)\n\n \n\nWhat is meant by eclipse of the sun?\n\nii)\n\n \n\nWith the aid of a labelled diagram, distinguish between total eclipse and partial eclipse.\n\nc)\n\n \n\ni)\n\n \n\nState the difference between a physical change and a chemical change.\n\nii)\n\n \n\nGive one example of each of a physical change and a chemical change.",
+      "type": "essay",
+      "year": "2001",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2001 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2005_q3",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nGive two differences between a vein and an artery.\n\n(ii)\n\n \n\nState two functions of red blood cells.\n\n(iii)\n\n \n\nMention two diseases associated with the circulatory system.\n\n(b)\n\n \n\n(i)\n\n \n\nClassify the following processes into a physical change and a chemical change:\n\nCooking of food;Melting of candle;Melting of ice;Rusting of iron;Dissolution of sugar in water;Burning of wood into ash.\n\n(ii)\n\n \n\nExplain the basis of the classification in (b)(i).\n\n(c)\n\n \n\n(i)\n\n \n\nState the laws of reflection.\n\n(ii)\n\n \n\nDraw a ray diagram of light incident at an angle of 40o on the surface of a plane mirror.",
+      "type": "essay",
+      "year": "2005",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2005 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2014_q5",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nWhat is refraction of light?\n\n(ii)\n\n \n\nSketch a diagram to show the path of a light ray when it travels from air to glass.\n\n(b)\n\n \n\nExplain why it is difficult to separate iron and sulphur mixture after strong heating.\n\n(c)\n\n \n\n(i)\n\n \n\nGive two examples of digestive enzymes produced in humans.\n\n(ii)\n\n \n\nFor each of the enzymes given in (i), name the part of the human body where the enzyme is produced.\n\n(d)\n\n \n\nList four methods of applying fertilizers to crops.",
+      "type": "essay",
+      "year": "2014",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2014 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2015_q3",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nMention the junctions of a transistor.\n\nii)\n\n \n\nDraw the circuit symbol for n-p-n transistor.\n\nb)\n\n \n\nState one function of the following parts of the human circulatory system:\n\ni)\n\n \n\nBlood;\n\nii)\n\n \n\nBlood vessels;\n\niii)\n\n \n\nHeart.\n\nc)\n\n \n\nClassify each of the following substances as element, compound or mixture:\n\ni)\n\n \n\nAir;\n\nii)\n\n \n\nBrass;\n\niii)\n\n \n\nChlorine;\n\niv)\n\n \n\nGold;\n\nv)\n\n \n\nWater.\n\nd)\n\n \n\nState three ways of caring for farm machines.",
+      "type": "essay",
+      "year": "2015",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2020_q3",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nState two differences between an ecosystem and a habitat.\n\nii)\n\n \n\nWhat is meant by the term blood?\n\nb)\n\n \n\nExplain why it is difficult to separate iron and sulphur mixture after strong heating.\n\nc)\n\n \n\nDraw and label a diagram of a ray of light which makes an angle of 350 with the surface of a plane mirror.\n\nd)\n\n \n\nState two\n\ni)\n\n \n\nadvantages of a land rotation.\n\nii)\n\n \n\ndisadvantages of land rotation.",
+      "type": "essay",
+      "year": "2020",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2020 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2024_q1",
+      "questionText": "(a)\n\n \n\nFig. 1(a) is an illustration of the longitudinal section of the mammalian heart.\n\nStudy it carefully and answer the questions that follow\n\n\n\n(i)\n\n \n\nState one function for each of the parts labelled I, II, IX and X.\n\n(ii)\n\n \n\nExplain briefly why the left lower part of the heart has a thicker muscle.\n\n(iii)\n\n \n\nState two ways by which the flow of blood to and from the mammalian heart as shown in Fig 1(a) can be kept at acceptable levels.\n\n(iv)\n\n \n\nName two parts of the heart where oxygenated blood can be found.\n\n(b)\n\n \n\nFig. 1(b) is an illustration of three sets of plant parts labelled P(maize grains), Q(tomato seedlings) and R(cassava cutting).\n\nStudy it carefully and answer the questions that follow\n\n\n\n(i)\n\n \n\nDescribe briefly how each of the parts labelled P, Q and R are planted on seedbed.\n\n(ii)\n\n \n\nState four conditions under which R can be cultivated to produce high yield.\n\n(c)\n\n \n\nFig. 1(c) is an electric circuit diagram\n\nStudy it carefully and answer the questions that follow\n\n\n\n(i)\n\n \n\nState one function for each of the parts labelled I, II, III and IV.\n\n(ii)\n\n \n\nIf the voltmeter reads 2.4 V and the ammeter reads 0.8 A when the circuit is closed, calculate the value of the part labelled IV.\n\n(iii)\n\n \n\nState one way of conserving the value of the part labelled I in the circuit.\n\n(iv)\n\n \n\nState two observations that can be made when the circuit is closed.\n\n(d)\n\n \n\nFig. 1(d) illustrates an experiment performed to separate the components of a mixture.\n\nStudy it carefully and answer the questions that follow\n\n\n\n(i)\n\n \n\nDescribe briefly the process of this experiment.\n\n(ii)\n\n \n\nState one function for each of the parts labelled II and IV.\n\n(iii)\n\n \n\nState two precautions that should be taken to obtain reliable results when performing this experiment.\n\n \n\nSECTION B\n\nAnswer three questions only from this section",
+      "type": "essay",
+      "year": "2024",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2024 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2024_q4",
+      "questionText": "(a)\n\n \n\nA student who went to bed immediately after eating complained of stomach upset the next morning. A doctor prescribed a liver salt, whose major composition is NaHCO3 as the medication.\n\nUsing a balanced chemical equation, explain how the liver salt would relieve the student from this discomfort.\n\n(b)\n\n \n\nFig. 4 is an illustration of a body of mass 20 kg placed on top of a wall of height 10 m.\n\n\n\nCalculate the energy of the body.\n\n(c)\n\n \n\n(i)\n\n \n\nDefine the term light emitting diode (LED).\n\n(ii)\n\n \n\nMention two devices that use LED in their operation.\n\n(d)\n\n \n\nA student was tasked to prepare a raised nursery bed for nursing tomato seeds:\n\n(i)\n\n \n\nSuggest two simple tools that could be used in the nursery bed preparation;\n\n(ii)\n\n \n\nState one function each of the tools listed in (d(i).\n\n(e)\n\n \n\n(i)\n\n \n\nState three observable features of an animal cell.\n\n(ii)\n\n \n\nState two functions of a nerve cell.\n\n \n\n(a)\n\n \n\nFig. 5 is an electrical circuit diagram.\n\nStudy it and answer the questions that follow.\n\n\n\nCalculate the:\n\n(i)\n\n \n\neffective resistance in the circuit when it is closed;\n\n(ii)\n\n \n\ncurrent that will flow through the circuit when it is closed.\n\n(b)\n\n \n\n(i)\n\n \n\nDifferentiate between an organic fertilizer and an inorganic fertilizer.\n\n(ii)\n\n \n\nOutline briefly the steps involved in preparing raised beds.\n\n(c)\n\n \n\n(i)\n\n \n\nState one function each of the following components of blod:\n\n(α)\n\n \n\nred blood cells;\n\n(β)\n\n \n\nwhite blood cells;\n\n(γ)\n\n \n\nblood plasma.\n\n(ii)\n\n \n\nExplain briefly the impact of each of the following organisms on humans:\n\n(α)\n\n \n\nhousefly;\n\n(β)\n\n \n\ngrasshopper.\n\n(d)\n\n \n\nDescribe briefly the formation of an ammonia molecule after an interaction between 1H and 7N atoms.",
+      "type": "essay",
+      "year": "2024",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2024 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "The Human Body Systems"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

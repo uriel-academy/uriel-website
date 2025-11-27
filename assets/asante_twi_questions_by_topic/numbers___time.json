@@ -1,0 +1,157 @@
+{
+  "topic": "Numbers & Time",
+  "questions": [
+    {
+      "id": "asante_twi_2023_q4",
+      "year": 2023,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Edin a ɛdidi soɔ yi mu deɛ ewɔ he na ɛyɛ apɛntɛdin?",
+      "questionNumber": 4,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Abrafi",
+        "B. Ɔsɛe",
+        "C. Moosi",
+        "D. Kwaku"
+      ],
+      "correctAnswer": "C. Moosi",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2023_q5",
+      "year": 2023,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Edin Tawia firi ... mu.",
+      "questionNumber": 5,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Atoyerɛnkɛm",
+        "B. Awosuo",
+        "C. Awomawuo",
+        "D. Awoɔ-nnidisoɔ"
+      ],
+      "correctAnswer": "D. Awoɔ-nnidisoɔ",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "theory_asante_twi_2023_q1",
+      "questionText": "(a)\n\n \n\nKyerɛ sɛnti nnan a wobɛpɛ sɛ wokɔ Ntoasoɔ Sɔkuu (SHS) pɔtee bi berɛ a woawie Junior High School.\n\n(b)\n\n \n\nWoyɛ wo gyinapɛn sofoɔ panin. Kyerɛ sɛnti nnan a ɛsɛ sɛ wo mfɛfoɔ no ba sukuu ntɛm.\n\n(c)\n\n \n\nTwerɛ lɛtɛ kuma w'adamfo a ɔwɔ sukuu foforɔ mu na kyerɛ no w'adamfo a wopɛ n'asɛm pa ara ho asɛm. Kyerɛ sɛnti mmienu a wopɛ n'asɛm.\n\n(d)\n\n \n\nKyerɛ sɛnti nnan a wopene anaa wompene mmaatwa so wɔ Mfitiaseɛ Sukuu mu.\n\n  \n\nPART IICOMPREHENSION(10 Marks)\n\nKenkan deɛ ɛdidi soɔ yi na bua nsɛmmisa no nyinaa.",
+      "questionNumber": 1,
+      "marks": 10,
+      "type": "essay",
+      "subject": "asanteTwi",
+      "subjectDisplay": "Asante Twi",
+      "examType": "bece",
+      "year": "2023",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2023 Asante Twi",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2023",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148614,
+        "_nanoseconds": 882000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148614,
+        "_nanoseconds": 882000000
+      }
+    },
+    {
+      "id": "theory_asante_twi_2023_q2",
+      "questionText": "Ɔpanin bi tenaa ase a na ɔwɔ yerenom baanu. Ɔwaree ne yere panin no, mfeɛ num akyi na ɔwaree kumaa no nso. Na ne yere kumaa no yɛ obonini. Ne yere panin no deɛ na ɔyɛ ɔwofoɔ a ɔwɔmma baasa.\n\nNa ɔpanin yi a ɔyɛ okuani no wɔ mfuo akɛseɛ mmiɛnsa. Ɔde mfuo no mu mmienu maa ne yerenom no sɛ wɔnyɛ mu nnwuma mfa. Obiara yeree ne ho yɛɛ ne deɛmu adwuma. Sɛ wode mfuo mmienu no toto ho a,kumaa no deɛ yɛɛ frɔmfrɔm senee ɔpanin no yei maa kumaa no bɛyɛɛ osikani maa ne werɛ firii awerɛhoɔ a na ɔdi wɔ awoɔ a na ɔnwo no ho. Na ɔtaa de ne sika totɔ ntadeɛ ma ne kora mma no.\n\nƐduruu mmerɛ bi no, ɔyere kumaa no hunuu sɛ nsakyeraeɛ aba ne kora no nneyɛɛ mu. Ne saa nti, ɔyere kumaa no yɛɛ n'adwene sɛ ɔnyɛ ade pa biara a ɛbɛsɔ ne kora no ani bio.\n\nƐbaa saa no, anwanwadeɛ bi sii ɔyere kumaa no afuom hɔ. Mmoa bi hyɛɛ aseɛ sɛee n'afuo no maa no kɔbɔɔ ne kunu amanneɛ.\n\nYei maa ne kunu no kɔɔ afuom hɔ hɔhwɛɛ deɛ asie no. Ɔhunuu Ɔnwansane kɛseɛ bi sɛ ɔresɛe afuo no, ɔgyenee n'ani hwɛɛ Ɔnwansane kɛseɛ no too ne tuo. Aboa no danee nipa a na ɔsɛ ne yere panin no. Ɔpanin no ho dwirii no yie.\n\n(a)\n\n \n\nƆpanin no yere mu hwan na ɔyɛ obonini?\n\n(b)\n\n \n\nNa ɔpanin no mma yɛ sɛn?\n\n(c)\n\n \n\nWogye di sɛ deɛn nti na ɔpanin no de mfuo no mu mmienu maa ne yerenom no?\n\n(d)\n\n \n\nKyerɛ saa asɛm yi ase sɛdeɛ ɛteɛ wɔ ayɛsɛm no mu: frɔmfrɔm.\n\n(e)\n\n \n\nAdɛn nti na ɔyere kumaa no yɛɛ n'adwene sɛ ɔmmoa ne kora mma no bio?\n\n(f)\n\n \n\nAnwanwadeɛ sononko bɛn na ɔyere kumaa no hunuu wɔ n'afuo no mu?\n\n(g)\n\n \n\nAdɛn nti na ne kunu no too ɔnwansane kɛseɛ no tuo?\n\n(h)\n\n \n\nƆpanin no too ɔnwansane kɛseɛ no tuo no, anwanwadeɛ bɛn na esiiɛ?\n\n(i)\n\n \n\nAdesuadeɛ bɛn na wosua firii ayɛsɛm no mu?\n\n(j)\n\n \n\nFa nsɛmfua a ɛmmoro nson to ayɛsɛm no din.\n\n  \n\nPART IIILEXIS AND STRUCTURE(20 Marks)",
+      "questionNumber": 2,
+      "marks": 20,
+      "type": "essay",
+      "subject": "asanteTwi",
+      "subjectDisplay": "Asante Twi",
+      "examType": "bece",
+      "year": "2023",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2023 Asante Twi",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2023",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148614,
+        "_nanoseconds": 882000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148614,
+        "_nanoseconds": 882000000
+      }
+    },
+    {
+      "id": "theory_asante_twi_2024_q1",
+      "questionText": "(a)\n\n \n\nWo papa pɛ sɛ woyɛ lɔyani anaa tikyani. Twerɛ lɛtɛ kɔma no, na kyerɛ sɛnti ɛnam na wopɛ sɛ woyɛ mu baako.\n\n(b)\n\n \n\nKyerɛkyerɛ nnoɔma ahodoɔ mmienu a ɛde lɔre akwanhyia ba mu, na kyerɛ akwan ahodoɔ mmienu a yɛbɛfa so asi ano.\n\n(c)\n\n \n\nKa onipa bi a wopɛ n'asɛm pa ara wɔ wo kurom ho asɛm, na kyerɛ deɛ nti a wopɛ n'asɛm.\n\n(d)\n\n \n\nTwerɛ abasɛm bi a n'awieeɛ ne sɛ, \" ... na ɔnuu ne ho wɔ deɛ ɔyɛeɛ no ho\".\n\n \n\nPART IICOMPREHENSION[10 marks]\n\nKenkan deɛ ɛdidi soɔ yi na bua nsɛmmisa no nyinaa.",
+      "questionNumber": 1,
+      "marks": 10,
+      "type": "essay",
+      "subject": "asanteTwi",
+      "subjectDisplay": "Asante Twi",
+      "examType": "bece",
+      "year": "2024",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2024 Asante Twi",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148614,
+        "_nanoseconds": 882000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148614,
+        "_nanoseconds": 882000000
+      }
+    }
+  ],
+  "questionCount": 5
+}

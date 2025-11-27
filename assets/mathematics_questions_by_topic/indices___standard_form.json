@@ -1,0 +1,2124 @@
+{
+  "topic": "Indices & Standard Form",
+  "questions": [
+    {
+      "id": "0lF9W1wtBCVMG7asYJmH",
+      "year": "1991",
+      "subject": "mathematics",
+      "questionNumber": 23,
+      "questionText": "If a6 ÷ a4 = 64. Find a",
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479566,
+        "_nanoseconds": 809000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1991"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 8",
+        "B. 10",
+        "C. 16",
+        "D. 20",
+        "E. 24"
+      ],
+      "updatedAt": {
+        "_seconds": 1763487077,
+        "_nanoseconds": 776000000
+      }
+    },
+    {
+      "id": "1ULh1lqPqUgkErSLRxSJ",
+      "year": "2002",
+      "subject": "mathematics",
+      "questionNumber": 14,
+      "questionText": "Convert 121five to a base ten numeral.",
+      "options": [
+        "A. 21",
+        "B. 35",
+        "C. 36",
+        "D. 40"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480103,
+        "_nanoseconds": 391000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2002"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 895000000
+      }
+    },
+    {
+      "id": "1ZSibdNgI14sQzoH8SxM",
+      "year": "2019",
+      "subject": "mathematics",
+      "questionNumber": 33,
+      "questionText": "Evaluate: (0.07 x 0.02) ÷ 14.",
+      "options": [
+        "A. 0.01",
+        "B. 0.001",
+        "C. 0.0001",
+        "D. 0.00001"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480501,
+        "_nanoseconds": 519000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2019"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487100,
+        "_nanoseconds": 643000000
+      }
+    },
+    {
+      "id": "20BDoqcGFEDwppWCPSiu",
+      "year": "2020",
+      "subject": "mathematics",
+      "questionNumber": 3,
+      "questionText": "Express 4382.93 in standard form.",
+      "options": [
+        "A. 438293 x 104",
+        "B. 43.8293 x 102",
+        "C. 4.38293 x 104",
+        "D. 4.38293 x 103"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480507,
+        "_nanoseconds": 339000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2020"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2020_q3_img3.jpg",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542251,
+        "_nanoseconds": 244000000
+      }
+    },
+    {
+      "id": "3Fbe4UIWSo5M1QWWpuKm",
+      "year": "1998",
+      "subject": "mathematics",
+      "questionNumber": 5,
+      "questionText": "Write 1101101two in base ten",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480008,
+        "_nanoseconds": 284000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1998"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 31",
+        "B. 43",
+        "C. 108",
+        "D. 109",
+        "E. 218"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1998_q5_img5.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542155,
+        "_nanoseconds": 190000000
+      }
+    },
+    {
+      "id": "3bvf5DAJURUVWg6YgU2D",
+      "year": "2017",
+      "subject": "mathematics",
+      "questionNumber": 27,
+      "questionText": "Divide 64.5 by 0.015, leaving the answer in standard form.",
+      "options": [
+        "A. 4.3 x 104",
+        "B. 4.3 x 103",
+        "C. 4.3 x 102",
+        "D. 4.3 x 10"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480452,
+        "_nanoseconds": 169000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2017"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2017_q27_img27.jpg",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542220,
+        "_nanoseconds": 607000000
+      }
+    },
+    {
+      "id": "3y3q0xu27i07tJDVRcmj",
+      "year": "1990",
+      "subject": "mathematics",
+      "questionNumber": 13,
+      "questionText": "If a = 22 × 23 ÷ 24, find the value of a",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479530,
+        "_nanoseconds": 942000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1990"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 29",
+        "B. 25",
+        "C. 22",
+        "D. 2",
+        "E. 20"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487076,
+        "_nanoseconds": 950000000
+      }
+    },
+    {
+      "id": "9HApjMIKuAt7P9VZzDyn",
+      "year": "1990",
+      "subject": "mathematics",
+      "questionNumber": 25,
+      "questionText": "Write 1204five as a number in base ten.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479540,
+        "_nanoseconds": 380000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1990"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 9996",
+        "B. 179",
+        "C. 39",
+        "D. 35",
+        "E. 19"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487076,
+        "_nanoseconds": 950000000
+      }
+    },
+    {
+      "id": "9QWxdxgq2KImV0BP9cE0",
+      "year": "2012",
+      "subject": "mathematics",
+      "questionNumber": 33,
+      "questionText": "Convert 84 to a base five numeral.",
+      "options": [
+        "A. 4130five",
+        "B. 3014five",
+        "C. 314five",
+        "D. 114five"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480341,
+        "_nanoseconds": 516000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2012"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 925000000
+      }
+    },
+    {
+      "id": "CT2ArooFxPflZsZEXky1",
+      "year": "2007",
+      "subject": "mathematics",
+      "questionNumber": 38,
+      "questionText": "Convert 37ten to a base two numeral.",
+      "options": [
+        "A. 100101",
+        "B. 100111",
+        "C. 101101",
+        "D. 110101"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480230,
+        "_nanoseconds": 304000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2007"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 958000000
+      }
+    },
+    {
+      "id": "EOoJMb0d3cRtX3vDwlQF",
+      "year": "2008",
+      "subject": "mathematics",
+      "questionNumber": 22,
+      "questionText": "Write 17ten in base two numeral.",
+      "options": [
+        "A. 1001",
+        "B. 10001",
+        "C. 11001",
+        "D. 11011"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480243,
+        "_nanoseconds": 918000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2008"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487091,
+        "_nanoseconds": 763000000
+      }
+    },
+    {
+      "id": "F4aG5FGoVM8G0GzEFtYQ",
+      "year": "2003",
+      "subject": "mathematics",
+      "questionNumber": 18,
+      "questionText": "Write 83000 in standard form.",
+      "options": [
+        "A. 8.3x10-4",
+        "B. 8.3x10-3",
+        "C. 8.3x103",
+        "D. 8.3x104"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480128,
+        "_nanoseconds": 151000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2003"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487087,
+        "_nanoseconds": 736000000
+      }
+    },
+    {
+      "id": "F7TqjLGENP4kVqxibHVJ",
+      "year": "1999",
+      "subject": "mathematics",
+      "questionNumber": 5,
+      "questionText": "Change 10111two to base ten.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480030,
+        "_nanoseconds": 686000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1999"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 15",
+        "B. 17",
+        "C. 23",
+        "D. 25",
+        "E. 29"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1999_q5_img5.png",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542159,
+        "_nanoseconds": 153000000
+      }
+    },
+    {
+      "id": "FP7hSHOyDKdt9zXgjenU",
+      "year": "1991",
+      "subject": "mathematics",
+      "questionNumber": 5,
+      "questionText": "Write 4687.02 in standard form.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479556,
+        "_nanoseconds": 265000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1991"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 46.8702 x 103",
+        "B. 46.8702 x 104",
+        "C. 4.68702 x 105",
+        "D. 4.68702 x 103",
+        "E. 0.468702 x 104"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1991_q5_img5.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542106,
+        "_nanoseconds": 523000000
+      }
+    },
+    {
+      "id": "IeWNQMcpYYDVpw5YZf8j",
+      "year": "2013",
+      "subject": "mathematics",
+      "questionNumber": 6,
+      "questionText": "Convert 2114five to a base ten numeral.",
+      "options": [
+        "A. 194",
+        "B. 280",
+        "C. 284",
+        "D. 300"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480349,
+        "_nanoseconds": 71000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2013"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487095,
+        "_nanoseconds": 754000000
+      }
+    },
+    {
+      "id": "IgmvpI9QwZcxdbamHkOv",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 5,
+      "questionText": "The numbers 32, 33, 34, ..., ..., 42 form a sequence in base 5. Find the missing numbers.",
+      "options": [
+        "A. 35, 36",
+        "B. 30,31",
+        "C. 40, 41",
+        "D. 31, 41"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480279,
+        "_nanoseconds": 835000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2010_q5_img5.png",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542193,
+        "_nanoseconds": 744000000
+      }
+    },
+    {
+      "id": "JFTvPFcqvCCX6SEAlZxj",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 18,
+      "questionText": "Express 2345 in standard form.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480083,
+        "_nanoseconds": 105000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 2.345 x 101",
+        "B. 2.345 x 102",
+        "C. 2.345 x 103",
+        "D. 2.345 x 104",
+        "E. 2.345 x 105"
+      ],
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 59000000
+      }
+    },
+    {
+      "id": "JMnQ5WWX9pt2MVMfWVea",
+      "year": "2015",
+      "subject": "mathematics",
+      "questionNumber": 6,
+      "questionText": "Express 1205 as a number in base 10.",
+      "options": [
+        "A. 25",
+        "B. 27",
+        "C. 32",
+        "D. 35"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480394,
+        "_nanoseconds": 692000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2015"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487097,
+        "_nanoseconds": 370000000
+      }
+    },
+    {
+      "id": "MhszPiR0XNdjGhO7sxnf",
+      "year": "2011",
+      "subject": "mathematics",
+      "questionNumber": 39,
+      "questionText": "Write 3560 in standard form.",
+      "options": [
+        "A. 3.56 x 10-4",
+        "B. 3.56 x 10-3",
+        "C. 3.56 x 103",
+        "D. 3.56 x 104"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480322,
+        "_nanoseconds": 232000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2011"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 125000000
+      }
+    },
+    {
+      "id": "MhtonpqZ2S5SJrywgTrI",
+      "year": "2003",
+      "subject": "mathematics",
+      "questionNumber": 24,
+      "questionText": "Change 17ten to a base two numeral.",
+      "options": [
+        "A. 101",
+        "B. 1001",
+        "C. 1000",
+        "D. 10001"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480131,
+        "_nanoseconds": 508000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2003"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487087,
+        "_nanoseconds": 736000000
+      }
+    },
+    {
+      "id": "OYATBdErdNORCSv2KWBf",
+      "year": "2004",
+      "subject": "mathematics",
+      "questionNumber": 25,
+      "questionText": "Convert 134five to a base ten numeral",
+      "options": [
+        "A. 16",
+        "B. 40",
+        "C. 44",
+        "D. 220"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480154,
+        "_nanoseconds": 625000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2004"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487088,
+        "_nanoseconds": 551000000
+      }
+    },
+    {
+      "id": "POFPEHOaMEZTXBdEk6f1",
+      "year": "2008",
+      "subject": "mathematics",
+      "questionNumber": 36,
+      "questionText": "Write the number 34.1 in standard form.",
+      "options": [
+        "A. 3.41 x 10-2",
+        "B. 3.41 x 10-1",
+        "C. 3.41 x 100",
+        "D. 3.41 x 10"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480251,
+        "_nanoseconds": 812000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2008"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487091,
+        "_nanoseconds": 763000000
+      }
+    },
+    {
+      "id": "QZ6WAyf8cbiWRtWRuIGQ",
+      "year": "1999",
+      "subject": "mathematics",
+      "questionNumber": 10,
+      "questionText": "Calculate, correct to two decimal places, 0.61 ÷ 0.8",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480033,
+        "_nanoseconds": 451000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1999"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 0.07",
+        "B. 0.08",
+        "C. 0.76",
+        "D. 0.83",
+        "E. 7.62"
+      ],
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487084,
+        "_nanoseconds": 387000000
+      }
+    },
+    {
+      "id": "R1Cv1dV5NCcLYftMAU90",
+      "year": "2011",
+      "subject": "mathematics",
+      "questionNumber": 7,
+      "questionText": "Convert 222five to a number in base ten.",
+      "options": [
+        "A. 30",
+        "B. 52",
+        "C. 60",
+        "D. 62"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480303,
+        "_nanoseconds": 767000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2011"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 125000000
+      }
+    },
+    {
+      "id": "S3ieXtdHovL3bIp5WLua",
+      "year": "2006",
+      "subject": "mathematics",
+      "questionNumber": 20,
+      "questionText": "Express 87ten as a base five numeral.",
+      "options": [
+        "A. 302five",
+        "B. 322five",
+        "C. 3022five",
+        "D. 3202five"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480197,
+        "_nanoseconds": 207000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2006"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 135000000
+      }
+    },
+    {
+      "id": "SO5QAMSZlhEaMTX7kR3x",
+      "year": "1997",
+      "subject": "mathematics",
+      "questionNumber": 1,
+      "questionText": "Convert 320five to a base ten numeral.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479983,
+        "_nanoseconds": 557000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1997"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 25",
+        "B. 77",
+        "C. 85",
+        "D. 86",
+        "E. 90"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1997_q1_img1.png",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542148,
+        "_nanoseconds": 190000000
+      }
+    },
+    {
+      "id": "TfHapg7LCSJNIUrI25SA",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 8,
+      "questionText": "If 8.51 ÷ 2.3 = 3.7, find the value of 85.1 ÷ 2.3",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479580,
+        "_nanoseconds": 261000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 0.037",
+        "B. 0.37",
+        "C. 3.7",
+        "D. 37",
+        "E. 370"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1992_q8_img8.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542115,
+        "_nanoseconds": 49000000
+      }
+    },
+    {
+      "id": "V7e1E0956HwcxknVLsZH",
+      "year": "2006",
+      "subject": "mathematics",
+      "questionNumber": 16,
+      "questionText": "Express 962 in standard form.",
+      "options": [
+        "A. 96.2 x 10",
+        "B. 9.62 x 102",
+        "C. 0.962 x 103",
+        "D. 0.0962 x 104"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480194,
+        "_nanoseconds": 951000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2006"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 135000000
+      }
+    },
+    {
+      "id": "VfKdLCVY2FK9VwaOlMik",
+      "year": "1990",
+      "subject": "mathematics",
+      "questionNumber": 14,
+      "questionText": "The distance between two towns is 12875 km. Express this distance in standard form.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479531,
+        "_nanoseconds": 721000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1990"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1.2875 x 103 km",
+        "B. 1.2875 x 104 km",
+        "C. 12.875 x 103 km",
+        "D. 128.75 x 102 km",
+        "E. 12.875 x 104 km"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487076,
+        "_nanoseconds": 950000000
+      }
+    },
+    {
+      "id": "XajKc6FXd2vjqYajJJmm",
+      "year": "2019",
+      "subject": "mathematics",
+      "questionNumber": 2,
+      "questionText": "Express 0.000344 in standard form.",
+      "options": [
+        "A. 3.44 x 10-6",
+        "B. 3.44 x 10-5",
+        "C. 3.44 x 10-4",
+        "D. 3.44 x 10-3"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480483,
+        "_nanoseconds": 965000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2019"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2019_q2_img2.jpg",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542240,
+        "_nanoseconds": 283000000
+      }
+    },
+    {
+      "id": "YU0MQ7vGfCijsfNZqm4w",
+      "year": "1990",
+      "subject": "mathematics",
+      "questionNumber": 29,
+      "questionText": "Evaluate 10 ÷ (3 1 2 + 1 1 5 )",
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479543,
+        "_nanoseconds": 496000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1990"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 2 6 47",
+        "B. 4 2 35",
+        "C. 4",
+        "D. 2 1 6",
+        "E. 4 7 10"
+      ],
+      "updatedAt": {
+        "_seconds": 1763487076,
+        "_nanoseconds": 950000000
+      }
+    },
+    {
+      "id": "Z1lva5pLGVgC5dB8QhxX",
+      "year": "1990",
+      "subject": "mathematics",
+      "questionNumber": 4,
+      "questionText": "Convert 25ten to a base two numeral. A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479523,
+        "_nanoseconds": 847000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1990"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1000",
+        "B. 100111",
+        "C. 10101",
+        "D. 11001",
+        "E. 11100"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1990_q4_img4.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542098,
+        "_nanoseconds": 920000000
+      }
+    },
+    {
+      "id": "ZYOWkbTRLqVMfceNDwqb",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 36,
+      "questionText": "Express 4037 in standard form.",
+      "options": [
+        "A. 4.037 x 10-4",
+        "B. 4.037 x 10-3",
+        "C. 4.037 x 103",
+        "D. 4.037 x 104"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480297,
+        "_nanoseconds": 343000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763485034,
+        "_nanoseconds": 745000000
+      }
+    },
+    {
+      "id": "bL9SFdtwXYKW7uwSKzcr",
+      "year": "2022",
+      "subject": "mathematics",
+      "questionNumber": 22,
+      "questionText": "Write 1930.54 in standard form.",
+      "options": [
+        "A. 1.93054 X 103",
+        "B. 1.93054 X 10-3",
+        "C. 1.93054 X 10-2",
+        "D. 1.93054 X 102"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480563,
+        "_nanoseconds": 756000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2022"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2022_q22_img22.png",
+      "updatedAt": {
+        "_seconds": 1763542279,
+        "_nanoseconds": 172000000
+      }
+    },
+    {
+      "id": "d1bkMtvaZeUSDCnmwnzk",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 5,
+      "questionText": "Change 124five to a base ten numeral.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480075,
+        "_nanoseconds": 874000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 24",
+        "B. 35",
+        "C. 39",
+        "D. 42",
+        "E. 55"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2001_q5_img5.png",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542166,
+        "_nanoseconds": 642000000
+      }
+    },
+    {
+      "id": "dvfBYXfpESvqRzIQXvMs",
+      "year": "1995",
+      "subject": "mathematics",
+      "questionNumber": 26,
+      "questionText": "Convert 133five to a base ten numeral.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479743,
+        "_nanoseconds": 597000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1995"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 23",
+        "B. 25",
+        "C. 31",
+        "D. 40",
+        "E. 43"
+      ],
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 77000000
+      }
+    },
+    {
+      "id": "fLrtsNrvLMC4iczAXdoJ",
+      "year": "1994",
+      "subject": "mathematics",
+      "questionNumber": 19,
+      "questionText": "Find the value of m given that m = (36 ÷ 34) × 27",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479628,
+        "_nanoseconds": 794000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1994"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 31",
+        "B. 32",
+        "C. 35",
+        "D. 36",
+        "E. 313"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487080,
+        "_nanoseconds": 244000000
+      }
+    },
+    {
+      "id": "fRcUbQY9aeLk2IPOsSBH",
+      "year": "1994",
+      "subject": "mathematics",
+      "questionNumber": 20,
+      "questionText": "Express 0.0043216 in standard form.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479629,
+        "_nanoseconds": 349000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1994"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 4.3216 x 10-4",
+        "B. 4.3216 x 10-3",
+        "C. 4.3216 x 10",
+        "D. 4.3216 x 103",
+        "E. 4.3216 x 104"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487080,
+        "_nanoseconds": 244000000
+      }
+    },
+    {
+      "id": "h5P0RunsCKxGE2J9Yu1Y",
+      "year": "2009",
+      "subject": "mathematics",
+      "questionNumber": 2,
+      "questionText": "Write 2340000 in standard form.",
+      "options": [
+        "A. 2.34 x 10-6",
+        "B. 2.34 x 10-5",
+        "C. 2.34 x 106",
+        "D. 2.34 x 107"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480255,
+        "_nanoseconds": 419000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2009"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487092,
+        "_nanoseconds": 558000000
+      }
+    },
+    {
+      "id": "hgXxtpQgzx1YSWt3PE5v",
+      "year": "1997",
+      "subject": "mathematics",
+      "questionNumber": 29,
+      "questionText": "Express 57ten as a base two (binary) numeral.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479999,
+        "_nanoseconds": 236000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1997"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 101011two",
+        "B. 100111two",
+        "C. 11010two",
+        "D. 110111two",
+        "E. 111001two"
+      ],
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487082,
+        "_nanoseconds": 727000000
+      }
+    },
+    {
+      "id": "jh8IujuxwY0gLYlh9QnO",
+      "year": "2023",
+      "subject": "mathematics",
+      "questionNumber": 1,
+      "questionText": "Write 0.01723 in standard form.",
+      "options": [
+        "A. 0.01723 x 10-2",
+        "B. 0.01723 x 102",
+        "C. 1.723 x 10-2",
+        "D. 1.723 x 102"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482460,
+        "_nanoseconds": 902000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2023"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2023_q1_img1.png",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542281,
+        "_nanoseconds": 125000000
+      }
+    },
+    {
+      "id": "jt5kgMoxFR77bZ6b22Dl",
+      "year": "2014",
+      "subject": "mathematics",
+      "questionNumber": 7,
+      "questionText": "Convert 243five to a base ten numeral.",
+      "options": [
+        "A. 40",
+        "B. 43",
+        "C. 45",
+        "D. 73"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480372,
+        "_nanoseconds": 478000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2014"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2014_q7_img7.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542204,
+        "_nanoseconds": 492000000
+      }
+    },
+    {
+      "id": "k01VW3M5bw4SE1xX7FEr",
+      "year": "1996",
+      "subject": "mathematics",
+      "questionNumber": 30,
+      "questionText": "Express the product of 162.5 x 0.5 in standard form.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479977,
+        "_nanoseconds": 130000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1996"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 81.25 x 10-1",
+        "B. 81.25 x 10",
+        "C. 8.125 x 10-1",
+        "D. 8.125 x 10",
+        "E. 0.8125 x 10-2"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 915000000
+      }
+    },
+    {
+      "id": "kvBAjxZ7XI5x5fc8dc4y",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 5,
+      "questionText": "Convert 39ten to a base five numeral.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479578,
+        "_nanoseconds": 737000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 100111",
+        "B. 1110",
+        "C. 234",
+        "D. 124",
+        "E. 103"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1992_q5_img5.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542112,
+        "_nanoseconds": 707000000
+      }
+    },
+    {
+      "id": "nozJK4bYXTA7lq5kQgac",
+      "year": "1993",
+      "subject": "mathematics",
+      "questionNumber": 21,
+      "questionText": "Find in base ten the value of 4 in 143five.",
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479608,
+        "_nanoseconds": 367000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1993"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 48",
+        "B. 40",
+        "C. 25",
+        "D. 20",
+        "E. 9"
+      ],
+      "updatedAt": {
+        "_seconds": 1763487079,
+        "_nanoseconds": 424000000
+      }
+    },
+    {
+      "id": "otP8TzuhW588QAnztFH5",
+      "year": "2000",
+      "subject": "mathematics",
+      "questionNumber": 7,
+      "questionText": "Convert 206 to a base five numeral.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480054,
+        "_nanoseconds": 313000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2000"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 411five",
+        "B. 4011five",
+        "C. 3321five",
+        "D. 1311five",
+        "E. 1131five"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2000_q7_img7.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542163,
+        "_nanoseconds": 638000000
+      }
+    },
+    {
+      "id": "pvQc9zJDy3PAZBCuM7W2",
+      "year": "2007",
+      "subject": "mathematics",
+      "questionNumber": 11,
+      "questionText": "Change 110011two to number in base ten.",
+      "options": [
+        "A. 51",
+        "B. 50",
+        "C. 48",
+        "D. 32"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480214,
+        "_nanoseconds": 914000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2007"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2007_q11_img11.png",
+      "updatedAt": {
+        "_seconds": 1763542186,
+        "_nanoseconds": 819000000
+      }
+    },
+    {
+      "id": "qnoy9DKD9d78KmRuRabx",
+      "year": "2012",
+      "subject": "mathematics",
+      "questionNumber": 7,
+      "questionText": "Convert 42 to a base two numeral.",
+      "options": [
+        "A. 1001010two",
+        "B. 1010010two",
+        "C. 1010100two",
+        "D. 101010two"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480326,
+        "_nanoseconds": 895000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2012"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 925000000
+      }
+    },
+    {
+      "id": "r20cSjHxOUbk7NqsMwiB",
+      "year": "1994",
+      "subject": "mathematics",
+      "questionNumber": 27,
+      "questionText": "Evaluate ( 2 3 − 1 4 )÷ 5 6 .",
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479633,
+        "_nanoseconds": 117000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1994"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1 2",
+        "B. 1 5",
+        "C. 2 3",
+        "D. -2",
+        "E. -12"
+      ],
+      "updatedAt": {
+        "_seconds": 1763487080,
+        "_nanoseconds": 244000000
+      }
+    },
+    {
+      "id": "rUJ6I8vQQAhUz7ZPmgfA",
+      "year": "2005",
+      "subject": "mathematics",
+      "questionNumber": 36,
+      "questionText": "Calculate 82.5 ÷ 0.25, expressing the answer in the standard form",
+      "options": [
+        "A. 3.3 x 10-3",
+        "B. 3.3 x 10",
+        "C. 3.3 x 102",
+        "D. 3.3 x 103"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480183,
+        "_nanoseconds": 560000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2005"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487089,
+        "_nanoseconds": 336000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2001_q0",
+      "questionText": "014 x 0.03\n\n, leaving your answer in standard form.",
+      "questionNumber": 0,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2001",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2001 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2001",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2014_q0",
+      "questionText": "12\n\n and leave your answer in standard form.",
+      "questionNumber": 0,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2014",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2014 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2014",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "wAb4Yv12s5tsEzvtpE6v",
+      "year": "2015",
+      "subject": "mathematics",
+      "questionNumber": 16,
+      "questionText": "Express 625.13 in standard form.",
+      "options": [
+        "A. 6.2513 x 10-2",
+        "B. 6.2513 x 10-4",
+        "C. 6.2513 x 102",
+        "D. 6.2513 x 104"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480400,
+        "_nanoseconds": 370000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2015"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487097,
+        "_nanoseconds": 370000000
+      }
+    },
+    {
+      "id": "yod4dKnmfIqH3gDnEM54",
+      "year": "1999",
+      "subject": "mathematics",
+      "questionNumber": 4,
+      "questionText": "Write in standard form 1342.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480030,
+        "_nanoseconds": 132000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1999"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 0.1342 x 10-3",
+        "B. 0.1342 x 10-4",
+        "C. 13.42 x 102",
+        "D. 1.342 x 103",
+        "E. 1.342 x 104"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1999_q4_img4.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542158,
+        "_nanoseconds": 663000000
+      }
+    }
+  ],
+  "questionCount": 54
+}

@@ -1,0 +1,660 @@
+{
+  "topic": "Post-Independence Ghana",
+  "totalQuestions": 22,
+  "questions": [
+    {
+      "id": "social_studies_1992_q38",
+      "questionText": ". When the civil war broke out in Liberia a peace-keeping force was sent there by",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 38,
+      "options": [
+        "A. Organization of African Trade Union Unity",
+        "B. Organization of African Unity (OAU)",
+        "C. United Nations Organization (UNO)",
+        "D. Non-Aligned Movement (NAM)",
+        "E. Economic Community of West African States (ECOWAS)"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 38 from the 1992 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Post-Independence Ghana"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1995_q13",
+      "questionText": "The United Nations Day is celebrated every year on",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 13,
+      "options": [
+        "A. 24th October",
+        "B. 24th November",
+        "C. 24th December",
+        "D. 24th January",
+        "E. 24th February"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 13 from the 1995 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Post-Independence Ghana"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1995_q35",
+      "questionText": "The Headquarters of the United Nations Organization is in",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 35,
+      "options": [
+        "A. Geneva",
+        "B. Washington",
+        "C. New York",
+        "D. Amsterdam",
+        "E. Addis Ababa"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 35 from the 1995 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Post-Independence Ghana"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1995_q36",
+      "questionText": "The body that is working to prevent another world war is the",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 36,
+      "options": [
+        "A. United Nations Organization (UNO)",
+        "B. League of Nations",
+        "C. Non-Aligned Movement (NAM)",
+        "D. Organization of African Unity (OAU)",
+        "E. Economic Community of West African States (ECOWAS)"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 36 from the 1995 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Post-Independence Ghana"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1996_q33",
+      "questionText": "The main objective of the Economic Community of West African States (ECOWAS) is to",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 33,
+      "options": [
+        "A. promote political freedom",
+        "B. reduce political conflicts",
+        "C. promote economic integration",
+        "D. increase industrialization in West Africa",
+        "E. promote political unity in West Africa"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 33 from the 1996 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Post-Independence Ghana"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1997_q20",
+      "questionText": "The body that is working to prevent another world war is the",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 20,
+      "options": [
+        "A. United Nations Organization (UNO)",
+        "B. League of Nations",
+        "C. Non-Aligned Movement (NAM)",
+        "D. Organization of African Unity (OAU)",
+        "E. Economic Community of West African States (ECOWAS)"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 20 from the 1997 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Post-Independence Ghana"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1998_q29",
+      "questionText": "What body replaced the League of Nations after the Second World War",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 29,
+      "options": [
+        "A. OAU",
+        "B. IMF",
+        "C. ECOWAS",
+        "D. UNO",
+        "E. NATO"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 29 from the 1998 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Post-Independence Ghana"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2002_q35",
+      "questionText": "The first person to be appointed the Secretary-General of the United Nations Organization was",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 35,
+      "options": [
+        "A. Dag Hammarskjold.",
+        "B. U‟Thant",
+        "C. Trygve Lie",
+        "D. Peres de Cuellar"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 35 from the 2002 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Post-Independence Ghana"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2002_q38",
+      "questionText": "In which city was the treaty establishing the ECOWAS signed?",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 38,
+      "options": [
+        "A. Lagos",
+        "B. Accra",
+        "C. Lome",
+        "D. Abidjan"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 38 from the 2002 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Post-Independence Ghana"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2003_q40",
+      "questionText": "Which of the following organizations was the first to be formed?",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 40,
+      "options": [
+        "A. Organization of African Unity (OAU)",
+        "B. League of Nations",
+        "C. Economic Community of West African States (ECOWAS)",
+        "D. United Nations Organization (UNO)"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 40 from the 2003 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Post-Independence Ghana"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2004_q36",
+      "questionText": "Ghana receives loans and aid from the World Bank because of its membership of the",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 36,
+      "options": [
+        "A. African Union (AU)",
+        "B. Commonwealth",
+        "C. United Nations Organization (UNO)",
+        "D. Non-Aligned Movement (NAM)"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 36 from the 2004 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Post-Independence Ghana"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2004_q37",
+      "questionText": "The Voluntary Service Overseas is associated with the",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 37,
+      "options": [
+        "A. Economic Community of West African States (ECOWAS)",
+        "B. United Nations Organization (UNO)",
+        "C. African Union (AU)",
+        "D. Commonwealth"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 37 from the 2004 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Post-Independence Ghana"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2006_q36",
+      "questionText": "To become a member of the United Nations Organization, a country has to",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 36,
+      "options": [
+        "A. pay her membership dues",
+        "B. belong to a sub-regional body",
+        "C. be independent",
+        "D. maintain a strong military force"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 36 from the 2006 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Post-Independence Ghana"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2011_q35",
+      "questionText": "The African Union (AU) was officially launched on 9th July, 2002 in",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 35,
+      "options": [
+        "A. South Africa",
+        "B. Libya",
+        "C. Nigeria",
+        "D. Ethiopia"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 35 from the 2011 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Post-Independence Ghana"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2012_q23",
+      "questionText": "The international organization formed to maintain world peace after the Second World War is known as",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 23,
+      "options": [
+        "A. The League of Nations",
+        "B. United Nations Organisation",
+        "C. Commonwealth of Nations",
+        "D. Non-aligned Movement"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 23 from the 2012 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Post-Independence Ghana"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2014_q21",
+      "questionText": "Which of the following international organizations is the largest financial contributor to Ghana's developmental projects?",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 21,
+      "options": [
+        "A. African Union (AU)",
+        "B. Economic Community of West African States (ECOWAS)",
+        "C. The Commonwealth",
+        "D. United Nations Organization"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 21 from the 2014 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Post-Independence Ghana"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2015_q29",
+      "questionText": "The highest level of Ghana's co-operation with the international community is through her membership of the",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 29,
+      "options": [
+        "A. African Union",
+        "B. Economic Community of West African States",
+        "C. Non-Aligned Movement",
+        "D. United Nations Organization"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 29 from the 2015 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Post-Independence Ghana"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2024_q12",
+      "questionText": "Which of the following military rulers of Ghana implemented the Economic Recovery Program (ERP)?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 12,
+      "options": [
+        "A. Jerry J. Rawlings",
+        "B. Ignatius K. Acheampong",
+        "C. Frederick K. Akuffo",
+        "D. Joseph",
+        "A. Ankrah"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 12 from the 2024 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Post-Independence Ghana"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_1996_q6",
+      "questionText": "a)\n\n \n\nState any four aims of the United Nations Organization (U.N.O).\n\nb)\n\n \n\nExplain two problems facing the United Nations Organization (UNO).",
+      "type": "essay",
+      "year": "1996",
+      "questionNumber": 6,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1996 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Post-Independence Ghana"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2003_q5",
+      "questionText": "a)\n\n \n\nState any four aims of the United Nations Organization\n\nb)\n\n \n\nExplain two problems facing the United Nations Organization",
+      "type": "essay",
+      "year": "2003",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2003 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Post-Independence Ghana"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2011_q3",
+      "questionText": "(a)\n\n \n\nHighlight any four contributions of Ghana to the United Nations Organization.\n\n(b)\n\n \n\nIn what four ways has Ghana benefited from the United Nations Organization?",
+      "type": "essay",
+      "year": "2011",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2011 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Post-Independence Ghana"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2015_q4",
+      "questionText": "a)\n\n \n\nHighlight any four contributions of Ghana to the United Nations Organization.\n\nb)\n\n \n\nState four benefits Ghana enjoys from the United Nations Organization.\n\n  \n\nSECTION III\n\nSOCIAL AND ECONOMIC DEVELOPMENT",
+      "type": "essay",
+      "year": "2015",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Post-Independence Ghana"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

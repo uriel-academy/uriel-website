@@ -1,0 +1,5579 @@
+{
+  "topic": "Production & Entrepreneurship",
+  "totalQuestions": 184,
+  "questions": [
+    {
+      "id": "social_studies_1990_q23",
+      "questionText": "Which of the following is not an irrigation farming area in West Africa?",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 23,
+      "options": [
+        "A. Inland Niger Delta",
+        "B. Sokoto River Valley",
+        "C. Accra Plains",
+        "D. Richard Toll District",
+        "E. Chad Basin"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 23 from the 1990 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1990_q28",
+      "questionText": "At the Berlin Conference of 1884-85 the Europeans agreed on how to",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 28,
+      "options": [
+        "A. divide Africa among themselves",
+        "B. spread Christianity in Africa",
+        "C. trade with the Africans",
+        "D. tax the Africans",
+        "E. stop the slave trade"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 28 from the 1990 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1990_q31",
+      "questionText": "Which of the following is a tertiary occupation?",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 31,
+      "options": [
+        "A. Wood Cutting",
+        "B. Manufacturing",
+        "C. Quarrying",
+        "D. Teaching",
+        "E. Fishing"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 31 from the 1990 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1991_q17",
+      "questionText": "The Jos plateau in Nigeria is noted for the production of",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 17,
+      "options": [
+        "A. Gold",
+        "B. Bauxite",
+        "C. Tin",
+        "D. Diamond",
+        "E. Coal"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 17 from the 1991 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1991_q23",
+      "questionText": "The first capital town to be built by the Asantes was",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 23,
+      "options": [
+        "A. Kumawu",
+        "B. Kumasi",
+        "C. Kokofu",
+        "D. Nsuta",
+        "E. Asantemanso"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 23 from the 1991 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1991_q32",
+      "questionText": "Bauxite is the raw material for the production of",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 32,
+      "options": [
+        "A. brass",
+        "B. steel",
+        "C. aluminium",
+        "D. bronze",
+        "E. copper"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 32 from the 1991 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1991_q35",
+      "questionText": "The system of apartheid was practiced in",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 35,
+      "options": [
+        "A. Ireland",
+        "B. Congo",
+        "C. Korea",
+        "D. South-Africa",
+        "E. Britain"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 35 from the 1991 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1991_q38",
+      "questionText": "The system of apartheid was practiced in",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 38,
+      "options": [
+        "A. Ireland",
+        "B. Congo",
+        "C. Korea",
+        "D. South-Africa",
+        "E. Britain"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 38 from the 1991 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1991_q8",
+      "questionText": "The capital of the Upper East Region is",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 8,
+      "options": [
+        "A. Bolgatanga",
+        "B. Tamale",
+        "C. Wa",
+        "D. Bawku",
+        "E. Zuarungu"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 8 from the 1991 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1992_q13",
+      "questionText": "Wine production from grapes is an important industry in",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 13,
+      "options": [
+        "A. Senegal",
+        "B. South Africa",
+        "C. Sierra Leone",
+        "D. Zimbabwe",
+        "E. The Sudan"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 13 from the 1992 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1992_q16",
+      "questionText": "The former capital of the Gold Coast (Ghana) was",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 16,
+      "options": [
+        "A. Sekondi",
+        "B. Cape Coast",
+        "C. Dodowa",
+        "D. Ho",
+        "E. Sunyani"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 16 from the 1992 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1992_q31",
+      "questionText": "Where in Ghana is irrigation farming practiced?",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 31,
+      "options": [
+        "A. Aburi",
+        "B. Vea",
+        "C. Obuasi",
+        "D. Enchi",
+        "E. Salaga"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 31 from the 1992 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1993_q15",
+      "questionText": "The hot dry winds that blow over most parts of Ghana during the harmattan are the",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 15,
+      "options": [
+        "A. south-west monsoon",
+        "B. south easterly winds",
+        "C. north-westerly winds",
+        "D. north-east trade winds",
+        "E. easterly winds"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 15 from the 1993 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1993_q3",
+      "questionText": "Use the contour line above to answer the question belowThe landform shown is a",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 3,
+      "options": [
+        "A. cliff",
+        "B. valley",
+        "C. ridge",
+        "D. plateau",
+        "E. spur"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 3 from the 1993 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1993_q31",
+      "questionText": "Trade between two countries is called",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 31,
+      "options": [
+        "A. barter trade",
+        "B. surplus trade",
+        "C. domestic trade",
+        "D. multilateral trade",
+        "E. bilateral trade"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 31 from the 1993 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1993_q8",
+      "questionText": "Which of the following is not a coastal landform?",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 8,
+      "options": [
+        "A. Cliff",
+        "B. Estuary",
+        "C. Sandbar",
+        "D. Lagoon",
+        "E. Inselberg\n\n9. A common feature found along the lower course of a river is a"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 8 from the 1993 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1994_q12",
+      "questionText": "The first capital of Ga-Adamgbe was",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 12,
+      "options": [
+        "A. Accra",
+        "B. Ayawaso",
+        "C. Nsawam",
+        "D. Krobo-Odumase",
+        "E. Somanya"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 12 from the 1994 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1994_q37",
+      "questionText": "The aspect of production concerned with the provision of services is",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 37,
+      "options": [
+        "A. Primary Production",
+        "B. Secondary Production",
+        "C. Tertiary Production",
+        "D. Industrial Production",
+        "E. Food Crop Production"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 37 from the 1994 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1995_q15",
+      "questionText": "The British Togoland joined Ghana in the year",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 15,
+      "options": [
+        "A. 1948",
+        "B. 1951",
+        "C. 1956",
+        "D. 1957",
+        "E. 1961"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 15 from the 1995 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1995_q26",
+      "questionText": "26. Which of the following is a secondary economic activity?",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 26,
+      "options": [
+        "A. Forestry",
+        "B. Fishing",
+        "C. Quarrying",
+        "D. Ranching",
+        "E. Manufacturing"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 26 from the 1995 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1995_q4",
+      "questionText": "The League of Nations was formed immediately after the",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 4,
+      "options": [
+        "A. Middle East War",
+        "B. Gulf War",
+        "C. First World War",
+        "D. Second World War",
+        "E. Falkland War"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 4 from the 1995 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1996_q11",
+      "questionText": "The League of Nations was formed soon after the",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 11,
+      "options": [
+        "A. Middle West War",
+        "B. First World War",
+        "C. Second World War",
+        "D. E.  Falkland War"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 11 from the 1996 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1996_q19",
+      "questionText": "Use the sketch map of Ghana above to answer belowThe town lettered C is a/an",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 19,
+      "options": [
+        "A. district capital",
+        "B. national capital",
+        "C. regional capital",
+        "D. rail terminus",
+        "E. industrial centre"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 19 from the 1996 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1996_q21",
+      "questionText": "Which of the following is a land-locked country in West Africa?",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 21,
+      "options": [
+        "A. Burkina Faso",
+        "B. Ghana",
+        "C. Nigeria",
+        "D. Sierra Leone",
+        "E. Liberia"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 21 from the 1996 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1996_q28",
+      "questionText": "Which of the following cannot be considered as an economic activity?",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 28,
+      "options": [
+        "A. Farming",
+        "B. Manufacturing",
+        "C. Teaching",
+        "D. Learning",
+        "E. Driving"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 28 from the 1996 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1996_q29",
+      "questionText": "The system of trade in which goods are directly exchanged for goods is known as",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 29,
+      "options": [
+        "A. monetary economy",
+        "B. exchange economy",
+        "C. barter economy",
+        "D. primitive economy",
+        "E. socialist economy"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 29 from the 1996 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1996_q31",
+      "questionText": "Trade between two countries is called",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 31,
+      "options": [
+        "A. barter trade",
+        "B. surplus trade",
+        "C. domestic trade",
+        "D. multilateral trade",
+        "E. bilateral trade"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 31 from the 1996 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1996_q34",
+      "questionText": "Mixed farming involves the growing of a",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 34,
+      "options": [
+        "A. single crop on a large scale",
+        "B. variety of crops on a large scale",
+        "C. single crop for export only",
+        "D. variety of crops and rearing of animals",
+        "E. single crop for feeding animals"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 34 from the 1996 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1996_q7",
+      "questionText": "Aburi is normally cooler than Nsawam because",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 7,
+      "options": [
+        "A. Nsawam is nearer the coast",
+        "B. Nsawam is in the Savanna zone",
+        "C. Nsawam is an industrial town",
+        "D. Aburi is on a highland",
+        "E. Aburi is in the forest belt"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 7 from the 1996 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1997_q14",
+      "questionText": "The South-Western corner of Ghana has rains throughout the year because it is mostly influenced by the",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 14,
+      "options": [
+        "A. North-East Trade Winds",
+        "B. Overhead Sun",
+        "C. Easterly Winds",
+        "D. South-West Monsoon",
+        "E. Inter-tropical Convergence Zone"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 14 from the 1997 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1997_q22",
+      "questionText": "The Jos Plateau in Nigeria is noted for the production of",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 22,
+      "options": [
+        "A. gold",
+        "B. bauxite",
+        "C. tin",
+        "D. diamond",
+        "E. coal"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 22 from the 1997 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1997_q27",
+      "questionText": "Cape Verde Island is found off the coast of",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 27,
+      "options": [
+        "A. South Africa",
+        "B. West Africa",
+        "C. North Africa",
+        "D. East Africa",
+        "E. Central Africa"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 27 from the 1997 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1997_q40",
+      "questionText": "The Mediterranean lands are well known for the production of",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 40,
+      "options": [
+        "A. minerals",
+        "B. textiles",
+        "C. citrus",
+        "D. metals",
+        "E. chemicals"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 40 from the 1997 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1998_q13",
+      "questionText": "Which of the following is engaged in tertiary production?",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 13,
+      "options": [
+        "A. Carpenter",
+        "B. Farmer",
+        "C. Miner",
+        "D. Teacher",
+        "E. Hunter"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 13 from the 1998 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1998_q18",
+      "questionText": "The total land area of Ghana is approximately",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 18,
+      "options": [
+        "A. 218,447 km2",
+        "B. 228,447 km2",
+        "C. 238,447 km2",
+        "D. 258,447 km2",
+        "E. 338,447 km2"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 18 from the 1998 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1998_q19",
+      "questionText": "The North-East Trade Winds are",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 19,
+      "options": [
+        "A. Monsoon",
+        "B. Fohn",
+        "C. Easterlies",
+        "D. Harmattan",
+        "E. Westerlies"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 19 from the 1998 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1998_q33",
+      "questionText": "The first Europeans to come to the Gold Coast landed at",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 33,
+      "options": [
+        "A. Cape Coast",
+        "B. Elmina",
+        "C. Axim",
+        "D. Accra",
+        "E. Kumasi"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 33 from the 1998 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1998_q36",
+      "questionText": "Wine production from grapes is an important industry in",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 36,
+      "options": [
+        "A. Senegal",
+        "B. South Africa",
+        "C. Sierra Leone",
+        "D. Zimbabwe",
+        "E. The Sudan"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 36 from the 1998 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1998_q37",
+      "questionText": "The Triangular Trade was carried on among",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 37,
+      "options": [
+        "A. Europe, Africa and Asia",
+        "B. Europe, West Africa and the Americas",
+        "C. Britain, Germany and America",
+        "D. Europe, America and Ghana",
+        "E. Europe, Canada and Africa"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 37 from the 1998 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1998_q5",
+      "questionText": "Bauxite is the raw material for the production of",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 5,
+      "options": [
+        "A. brass",
+        "B. steel",
+        "C. aluminium",
+        "D. bronze",
+        "E. copper"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 5 from the 1998 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1999_q17",
+      "questionText": "The capital of British Gold Coast was moved from Cape Coast to Accra in",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 17,
+      "options": [
+        "A. 1850",
+        "B. 1872",
+        "C. 1874",
+        "D. 1877",
+        "E. 1896"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 17 from the 1999 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1999_q25",
+      "questionText": "The farming practice, which combines crop cultivation and animal rearing, is called",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 25,
+      "options": [
+        "A. Mixed cropping",
+        "B. Mixed farming",
+        "C. Ranching",
+        "D. Nomadism",
+        "E. Transhuman"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 25 from the 1999 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1999_q28",
+      "questionText": "Countries in North Africa are noted for the production of",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 28,
+      "options": [
+        "A. crude oil",
+        "B. diamond",
+        "C. iron ore",
+        "D. gold",
+        "E. bauxite"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 28 from the 1999 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1999_q34",
+      "questionText": "Which of the following animals was mostly used during the Trans-Saharan Trade?",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 34,
+      "options": [
+        "A. Elephants",
+        "B. Ass",
+        "C. Donkey",
+        "D. Horse",
+        "E. Camel"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 34 from the 1999 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2000_q11",
+      "questionText": "Which of the following is not a coastal landform?",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 11,
+      "options": [
+        "A. Stack",
+        "B. Sand bar",
+        "C. Spit",
+        "D. Levee",
+        "E. Lagoon"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 11 from the 2000 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2000_q14",
+      "questionText": "The prevailing winds that blow over most parts of northern Ghana between November and February are the",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 14,
+      "options": [
+        "A. South-West monsoon winds",
+        "B. North-East monsoon winds",
+        "C. North-East Trade winds",
+        "D. Westerly winds",
+        "E. Easterly winds"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 14 from the 2000 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2000_q36",
+      "questionText": "One of the reasons for the partition of West Africa by the Europeans was to",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 36,
+      "options": [
+        "A. spread the gospel",
+        "B. stop the slave trade",
+        "C. protect the indigenous people",
+        "D. protect their places of trade",
+        "E. set up industries."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 36 from the 2000 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2001_q18",
+      "questionText": "The British first came to the Gold Coast as",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 18,
+      "options": [
+        "A. tourists",
+        "B. teachers",
+        "C. doctors",
+        "D. traders",
+        "E. engineers"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 18 from the 2001 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2001_q21",
+      "questionText": "Which of the following can be described as a secondary activity ?",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 21,
+      "options": [
+        "A. Farming",
+        "B. Mining",
+        "C. Lumbering",
+        "D. Teaching",
+        "E. Carpentry"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 21 from the 2001 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2001_q8",
+      "questionText": "The cool winds that blow from the sea to the land during the day are referred to as",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 8,
+      "options": [
+        "A. land breeze",
+        "B. sea breeze",
+        "C. trade winds",
+        "D. off-shore winds",
+        "E. air mass"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 8 from the 2001 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2002_q12",
+      "questionText": "Which of the following countries in West Africa is landlocked?",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 12,
+      "options": [
+        "A. Mali",
+        "B. Nigeria",
+        "C. Ghana",
+        "D. Sierra Leone"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 12 from the 2002 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2002_q14",
+      "questionText": "A highland which has a steep slope on one side and a gentle slope on the other side is called",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 14,
+      "options": [
+        "A. a plateau",
+        "B. an escarpment",
+        "C. a ridge",
+        "D. a conical hill"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 14 from the 2002 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2002_q3",
+      "questionText": "Which of the following is a man-made feature?",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 3,
+      "options": [
+        "A. Ridge",
+        "B. Bridge",
+        "C. Lowland",
+        "D. Mountain"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 3 from the 2002 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2002_q31",
+      "questionText": "In the seventeenth century the first capital of the Ga state was",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 31,
+      "options": [
+        "A. Pokuase",
+        "B. Bortianor",
+        "C. Abokobi",
+        "D. Ayawaso"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 31 from the 2002 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2002_q37",
+      "questionText": "The Jos Plateau in Nigeria is noted for the production of",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 37,
+      "options": [
+        "A. coal",
+        "B. diamond",
+        "C. tin",
+        "D. bauxite"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 37 from the 2002 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2002_q6",
+      "questionText": "A lowland between two hills is known as a",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 6,
+      "options": [
+        "A. valley",
+        "B. plain",
+        "C. ridge",
+        "D. spur"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 6 from the 2002 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2003_q1",
+      "questionText": "Countries in North Africa are noted for the production of",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 1,
+      "options": [
+        "A. iron ore",
+        "B. gold",
+        "C. crude oil",
+        "D. diamond"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 1 from the 2003 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2003_q12",
+      "questionText": "The beast of burden which was used to increase the volume of the Trans-Saharan Trade was the",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 12,
+      "options": [
+        "A. camel",
+        "B. ass",
+        "C. bull",
+        "D. donkey"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 12 from the 2003 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2003_q32",
+      "questionText": "Which of the following countries is the largest producer of rice in the world?",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 32,
+      "options": [
+        "A. India",
+        "B. Thailand",
+        "C. China",
+        "D. Indonesia"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 32 from the 2003 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2003_q36",
+      "questionText": "One of the reasons for the partition of West Africa by the Europeans was to",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 36,
+      "options": [
+        "A. stop the slave trade",
+        "B. protect the indigenous people",
+        "C. protect their places of trade",
+        "D. spread the gospel"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 36 from the 2003 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2004_q10",
+      "questionText": "The Asante Kingdom was colonized by the British through",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 10,
+      "options": [
+        "A. trade agreement",
+        "B. persuasion",
+        "C. military invasion",
+        "D. co-operation"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 10 from the 2004 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2004_q19",
+      "questionText": "Which of the following should be identified as the major causes of ethnic conflicts in Ghana?I. Chieftaincy disputesII. Land disputesIII. Cultural similaritiesIV. Struggling for contracts",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 19,
+      "options": [
+        "A. I and II",
+        "B. II and III",
+        "C. II and IV",
+        "D. III and IV"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 19 from the 2004 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2004_q2",
+      "questionText": "The first Europeans to arrive in Ghana in 1471 came from",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 2,
+      "options": [
+        "A. France",
+        "B. Spain",
+        "C. Switzerland",
+        "D. Portugal"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 2 from the 2004 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2004_q23",
+      "questionText": "Which of the following may not be considered in finding one‟s direction home, when one‟s way is lost in the forest?",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 23,
+      "options": [
+        "A. Prominent landscape",
+        "B. Shouting for help",
+        "C. Direction of the sun",
+        "D. Direction of the wind"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 23 from the 2004 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2004_q31",
+      "questionText": ". Efficiency of the labour force is achieved through",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 31,
+      "options": [
+        "A. poor work attitude",
+        "B. moral education",
+        "C. sacrificial work",
+        "D. training and retraining"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 31 from the 2004 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2004_q33",
+      "questionText": "Productivity in agriculture can be increased in Ghana through",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 33,
+      "options": [
+        "A. changes in the land tenure system",
+        "B. the employment of more labourers",
+        "C. application of modern technology",
+        "D. relying on foreign experts"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 33 from the 2004 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2004_q34",
+      "questionText": "Which of the following business enterprises is privately owned?",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 34,
+      "options": [
+        "A. Ghana Railways Corporation",
+        "B. Unilever Ghana Limited",
+        "C. Ghana Water Company",
+        "D. Ghana Highways Authority"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 34 from the 2004 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2004_q35",
+      "questionText": "Productivity in the Public Service is low because of",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 35,
+      "options": [
+        "A. poor work attitude",
+        "B. aged workers",
+        "C. abundant production",
+        "D. effective supervision"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 35 from the 2004 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2005_q1",
+      "questionText": "The Trans-Atlantic slave trade increased in volume because of the",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 1,
+      "options": [
+        "A. opening of more goldmines in South Africa",
+        "B. greater use of machines in factories in Europe",
+        "C. demand for labour in America and Brazil",
+        "D. revolt of the slaves in West Indies"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 1 from the 2005 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2005_q16",
+      "questionText": "The poll to determine whether British Togoland should join Ghana or not is known as",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 16,
+      "options": [
+        "A. referendum",
+        "B. general election",
+        "C. plebiscite",
+        "D. electoral college"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 16 from the 2005 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2005_q25",
+      "questionText": "In which of the following combinations of labour and output is productivity highest?",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 25,
+      "options": [
+        "A. Two men producing thirty bags in an hour",
+        "B. Three men producing forty bags in an hour",
+        "C. Four men producing fifty bags in an hour",
+        "D. Five men producing sixty bags in an hour"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 25 from the 2005 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2005_q5",
+      "questionText": "The location of an object measured in degrees is known as",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 5,
+      "options": [
+        "A. cardinal point",
+        "B. bearing",
+        "C. landmark",
+        "D. survey beacon"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 5 from the 2005 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2006_q1",
+      "questionText": "The slave trade became largely unprofitable from the early 1800s due to",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 1,
+      "options": [
+        "A. laziness of the slaves",
+        "B. the emergence of the Industrial Revolution in Europe",
+        "C. the high cost of slaves in West Africa",
+        "D. so many revolts by the slaves from Africa"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 1 from the 2006 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2006_q27",
+      "questionText": "Which of the following state-owned enterprises is most vital to Ghana‟s development?",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 27,
+      "options": [
+        "A. Ghana Railway Corporation",
+        "B. State Transport Corporation",
+        "C. Tema Oil Refinery",
+        "D. Ghana Highway Authority"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 27 from the 2006 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2006_q28",
+      "questionText": "Industrial areas are sited outside residential estates because",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 28,
+      "options": [
+        "A. of easier access to labour",
+        "B. of environmental pollution",
+        "C. land acquisition is easier",
+        "D. cost of production is cheaper"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 28 from the 2006 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2006_q29",
+      "questionText": "Which of the following political events occurred first in the history of Ghana",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 29,
+      "options": [
+        "A. The formation of the Convention People‟s Party (CPP)",
+        "B. The passing of the Lands Bill",
+        "C. The formation of the Fante Confederation",
+        "D. The passing of the Poll Tax Ordinance"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 29 from the 2006 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2006_q3",
+      "questionText": "Which of the following workers are involved in primary production",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 3,
+      "options": [
+        "A. Miners",
+        "B. Goldsmiths",
+        "C. Accountants",
+        "D. Carpenters"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 3 from the 2006 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2006_q30",
+      "questionText": "The prairie provinces in Canada are noted for the production of",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 30,
+      "options": [
+        "A. wheat",
+        "B. oats",
+        "C. cotton",
+        "D. barley"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 30 from the 2006 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2007_q3",
+      "questionText": "The Trans-Atlantic trade was discredited with the sale of",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 3,
+      "options": [
+        "A. gold",
+        "B. slaves",
+        "C. textiles",
+        "D. muskets"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 3 from the 2007 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2007_q30",
+      "questionText": "Which of the following is a human resource?",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 30,
+      "options": [
+        "A. Labour",
+        "B. Land",
+        "C. Capital",
+        "D. Timber"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 30 from the 2007 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2007_q36",
+      "questionText": "When Ghana co-operates with neighbouring countries, it results in",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 36,
+      "options": [
+        "A. democratic rule",
+        "B. loss of cultural identity",
+        "C. friendly relations",
+        "D. changes in land tenure system"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 36 from the 2007 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2007_q4",
+      "questionText": "The colonization process in the Gold Coast included all but one of the following:",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 4,
+      "options": [
+        "A. agreements",
+        "B. persuasion",
+        "C. force",
+        "D. trade"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 4 from the 2007 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2007_q40",
+      "questionText": "Primary production contributes to the development of Ghana in two of the following ways:I. supplies raw materialsII. provides services for manufacturingIII. ensures the flow of money for tradingIV. provides employment for many people",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 40,
+      "options": [
+        "A. I and II only",
+        "B. II and III only",
+        "C. I and IV only",
+        "D. III and IV only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 40 from the 2007 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2007_q5",
+      "questionText": "Before World War 1, Togoland was a colony of",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 5,
+      "options": [
+        "A. France",
+        "B. Germany",
+        "C. Britain",
+        "D. Portugal"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 5 from the 2007 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2008_q1",
+      "questionText": "The primary reason for the arrival of the British to the Gold Coast was to",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 1,
+      "options": [
+        "A. trade in spices",
+        "B. trade in gold",
+        "C. rule the people",
+        "D. evangelize"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 1 from the 2008 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2008_q13",
+      "questionText": "In Ghana, state-owned enterprises are important because they",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 13,
+      "options": [
+        "A. make a lot of profit",
+        "B. employ a majority of the labour force",
+        "C. produce all the goods for society",
+        "D. provide vital goods and services"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 13 from the 2008 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2008_q17",
+      "questionText": "Which of the following is a tertiary economic activity",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 17,
+      "options": [
+        "A. Weaving",
+        "B. Quarrying",
+        "C. Farming",
+        "D. Banking"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 17 from the 2008 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2008_q23",
+      "questionText": "One major cause of poverty in Ghana is",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 23,
+      "options": [
+        "A. low productivity",
+        "B. poor health facilities",
+        "C. small labour force",
+        "D. corruption"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 23 from the 2008 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2008_q31",
+      "questionText": "The state supports private businesses because they",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 31,
+      "options": [
+        "A. make a lot of profit",
+        "B. organize trade fairs",
+        "C. produce essential goods",
+        "D. pay taxes for development"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 31 from the 2008 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2008_q34",
+      "questionText": "The Cape Coast castle is a valuable national asset because it promotes",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 34,
+      "options": [
+        "A. trade",
+        "B. education",
+        "C. tourism",
+        "D. civilization"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 34 from the 2008 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2008_q36",
+      "questionText": "Ghana cooperates with other nations mainly to",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 36,
+      "options": [
+        "A. ensure her political stability",
+        "B. develop her national trade",
+        "C. maintain internal peace",
+        "D. maintain international peace"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 36 from the 2008 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2008_q8",
+      "questionText": "The main reason for the transatlantic slave trade was that",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 8,
+      "options": [
+        "A. the trans-Saharan trade had declined",
+        "B. trade in gold was no longer profitable",
+        "C. Red Indians could not work on plantations",
+        "D. cheap labour was needed on American plantations"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 8 from the 2008 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2009_q13",
+      "questionText": "Which of the following industries is having negative influences on the Ghanaian culture?",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 13,
+      "options": [
+        "A. Mining",
+        "B. Agriculture",
+        "C. Fishing",
+        "D. Tourism"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 13 from the 2009 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2009_q18",
+      "questionText": "The Mediterranean lands are known for the production of",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 18,
+      "options": [
+        "A. citrus",
+        "B. tea",
+        "C. grains",
+        "D. vegetables"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 18 from the 2009 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2009_q29",
+      "questionText": "The construction industry is an example of",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 29,
+      "options": [
+        "A. secondary production",
+        "B. tertiary production",
+        "C. primary production",
+        "D. subsistence production"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 29 from the 2009 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2009_q35",
+      "questionText": "Another name for the North-East Trade Winds is",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 35,
+      "options": [
+        "A. Fohn",
+        "B. Harmattan",
+        "C. Monsoon",
+        "D. Westerlies"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 35 from the 2009 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2009_q7",
+      "questionText": "Ghana co-operates with other nations mainly to",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 7,
+      "options": [
+        "A. ensure her political stability",
+        "B. develop her national trade",
+        "C. maintain internal peace",
+        "D. maintain international peace"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 7 from the 2009 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2010_q14",
+      "questionText": "Which of the following is a regional capital in Northern Ghana",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 14,
+      "options": [
+        "A. Navrongo",
+        "B. Wa",
+        "C. Bawku",
+        "D. Yendi"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 14 from the 2010 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2010_q17",
+      "questionText": "The main effect of the Trans-Atlantic Slave Trade is the reduction of",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 17,
+      "options": [
+        "A. capital resource",
+        "B. human resource",
+        "C. natural resource",
+        "D. mineral resource"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 17 from the 2010 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2010_q20",
+      "questionText": "Private businesses can contribute to the development of the nation by",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 20,
+      "options": [
+        "A. registering their businesses",
+        "B. purchasing expensive machines",
+        "C. paying their taxes as required",
+        "D. producing expensive goods"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 20 from the 2010 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2010_q3",
+      "questionText": "Irresponsible adolescent behaviour usually results in",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 3,
+      "options": [
+        "A. self-reliance",
+        "B. loss of dignity",
+        "C. broken homes",
+        "D. drug abuse"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 3 from the 2010 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2010_q31",
+      "questionText": "If a distance of 40 kilometres on land is represented by 10 centimetres on a map, what is the scale of the map?",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 31,
+      "options": [
+        "A. 1 centimetre to 2 kilometres",
+        "B. 1 centimetre to 4 kilometres",
+        "C. 1 centimetre to 5 kilometres",
+        "D. 1 centimetre to 8 kilometres"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 31 from the 2010 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2010_q39",
+      "questionText": "Tourism in Ghana promotes the growth of the",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 39,
+      "options": [
+        "A. film industry",
+        "B. hotel industry",
+        "C. textile industry",
+        "D. health industry"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 39 from the 2010 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2010_q40",
+      "questionText": "Tourism in Ghana promotes the growth of the",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 40,
+      "options": [
+        "A. film industry",
+        "B. hotel industry",
+        "C. textile industry",
+        "D. health industry"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 40 from the 2010 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2011_q19",
+      "questionText": "The most important factor that can help improve productivity in state enterprises is",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 19,
+      "options": [
+        "A. working throughout the year",
+        "B. working for longer hours",
+        "C. by increasing public holidays",
+        "D. proper supervision"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 19 from the 2011 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2011_q23",
+      "questionText": "Industries must be located outside residential areas to",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 23,
+      "options": [
+        "A. avoid pollution",
+        "B. encourage competition among firms",
+        "C. reduce cost of production",
+        "D. reduce industrial accidents"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 23 from the 2011 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2011_q25",
+      "questionText": "The state can promote the growth of private enterprises by",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 25,
+      "options": [
+        "A. taking over their control and management",
+        "B. increasing taxes on their earnings",
+        "C. increasing imports of similar products",
+        "D. organizing training sessions for their managers"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 25 from the 2011 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2011_q27",
+      "questionText": "The main reason for encouraging farmers in Ghana to produce more cocoa is to",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 27,
+      "options": [
+        "A. generate more foreign exchange",
+        "B. help determine the best cocoa farmer",
+        "C. set up more cocoa factories",
+        "D. promote the manufacturing of more cocoa products"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 27 from the 2011 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2011_q30",
+      "questionText": "The tertiary sector of the Ghanaian economy provides",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 30,
+      "options": [
+        "A. services",
+        "B. raw materials",
+        "C. finished goods",
+        "D. industrial machinery"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 30 from the 2011 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2011_q32",
+      "questionText": "Productivity in the mining sector can be increased in Ghana through",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 32,
+      "options": [
+        "A. improvement in the land tenure system",
+        "B. the employment of more labourers",
+        "C. the application of modern technology",
+        "D. the use of locally manufactured tools"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 32 from the 2011 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2011_q33",
+      "questionText": "One main reason for the abolition of the slave trade was",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 33,
+      "options": [
+        "A. lack of finance for the traders",
+        "B. lack of market for slaves",
+        "C. the inhuman nature of the trade",
+        "D. lack of cultural support"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 33 from the 2011 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2011_q38",
+      "questionText": "A major effect of lateness to school and work is that it",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 38,
+      "options": [
+        "A. increases the cost of living",
+        "B. takes away leisure time",
+        "C. causes ill feeling among colleagues",
+        "D. reduces productivity"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 38 from the 2011 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2011_q39",
+      "questionText": "Which of the following business units raises its capital through the sale of shares?",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 39,
+      "options": [
+        "A. Public Corporations",
+        "B. Joint-stock Companies",
+        "C. Partnership",
+        "D. Co-operative societies"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 39 from the 2011 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2012_q11",
+      "questionText": "An extensive area of lowland is called a",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 11,
+      "options": [
+        "A. ridge.",
+        "B. valley.",
+        "C. plain.",
+        "D. plateau."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 11 from the 2012 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2012_q2",
+      "questionText": "Which of the following is a primary activity?",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 2,
+      "options": [
+        "A. Plywood processing",
+        "B. Fruit canning",
+        "C. Cocoa cultivation",
+        "D. Textile production"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 2 from the 2012 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2013_q14",
+      "questionText": "Which of the following represents the earth's surface or part of it drawn to scale?",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 14,
+      "options": [
+        "A. Layout",
+        "B. Sketch",
+        "C. Map",
+        "D. Landmark"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 14 from the 2013 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2013_q32",
+      "questionText": "To ensure their continuous survival, private enterprises must do all the following except",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 32,
+      "options": [
+        "A. producing quality goods.",
+        "B. keeping proper records.",
+        "C. paying taxes regularly.",
+        "D. using only foreign labour."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 32 from the 2013 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2014_q24",
+      "questionText": "Cocoa production is classified as",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 24,
+      "options": [
+        "A. cottage industry",
+        "B. primary industry",
+        "C. secondary industry",
+        "D. tertiary industry"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 24 from the 2014 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2014_q26",
+      "questionText": "Private business help in developing the nation when they",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 26,
+      "options": [
+        "A. increase their profit",
+        "B. import consumer goods",
+        "C. pay appropriate taxes",
+        "D. produce more goods"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 26 from the 2014 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2014_q27",
+      "questionText": "The main reason for establishing state owned enterprises is to",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 27,
+      "options": [
+        "A. create competition in the country.",
+        "B. generate foreign exchange for the country.",
+        "C. generate profit for the state.",
+        "D. provide essential service to the public."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 27 from the 2014 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2014_q36",
+      "questionText": "The main reason for the abolishing of the slave trade was the",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 36,
+      "options": [
+        "A. difficulties in the trade.",
+        "B. inhuman nature of the trade.",
+        "C. lack of finance.",
+        "D. lack of market for slaves."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 36 from the 2014 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2015_q19",
+      "questionText": "An effect of the slave trade on Africans was that they",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 19,
+      "options": [
+        "A. acquired much wealth",
+        "B. travelled far",
+        "C. abandoned their religion",
+        "D. were humiliated"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 19 from the 2015 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2015_q38",
+      "questionText": "Productivity measures",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 38,
+      "options": [
+        "A. production of goods",
+        "B. production of services",
+        "C. profit made out of production",
+        "D. output per-man-hour"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 38 from the 2015 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2015_q39",
+      "questionText": "Private businesses can contribute to the development of the nation by",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 39,
+      "options": [
+        "A. making more profits",
+        "B. motivating the workers",
+        "C. paying their taxes as required",
+        "D. registering their businesses"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 39 from the 2015 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2016_q19",
+      "questionText": "Which of the following men fought for the abolishing of the slave trade?",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 19,
+      "options": [
+        "A. Andreas Riss",
+        "B. Gordon Guggisberg",
+        "C. James Somerset",
+        "D. William Wilberforce"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 19 from the 2016 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2016_q3",
+      "questionText": "In Ghana, state owned enterprises are important because they",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 3,
+      "options": [
+        "A. produce all the goods for the society",
+        "B. make a lot of profit",
+        "C. provide vital goods and services",
+        "D. employ majority of the labour force"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 3 from the 2016 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2016_q36",
+      "questionText": "Private businesses help in building the nation when they",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 36,
+      "options": [
+        "A. increase their profits",
+        "B. import consumer goods",
+        "C. pay appropriate taxes",
+        "D. produce more goods"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 36 from the 2016 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2016_q38",
+      "questionText": "Some state owned enterprises are often sold to private individuals due to",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 38,
+      "options": [
+        "A. sufficient raw materials",
+        "B. adequate market",
+        "C. adequate skilled labour",
+        "D. poor management"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 38 from the 2016 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2016_q8",
+      "questionText": "Which of the following is used to represent landmarks on maps?",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 8,
+      "options": [
+        "A. Conventional signs",
+        "B. Histogram",
+        "C. Mathematical symbols",
+        "D. Plain sketches"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 8 from the 2016 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2017_q10",
+      "questionText": "Conventional signs enable map users to identify",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 10,
+      "options": [
+        "A. planets.",
+        "B. rock profiles.",
+        "C. cardinal points.",
+        "D. land marks."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 10 from the 2017 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2017_q16",
+      "questionText": "Ghana is still not self-reliant because the country depends on",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 16,
+      "options": [
+        "A. foreign financial support.",
+        "B. crude agricultural tools.",
+        "C. primary industries.",
+        "D. subsistence agriculture."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 16 from the 2017 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2017_q19",
+      "questionText": "The Upper East regional capital lies",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 19,
+      "options": [
+        "A. North-West of Kumasi.",
+        "B. North-East of Kumasi.",
+        "C. South-East of Kumasi.",
+        "D. South-West of Kumasi."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 19 from the 2017 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2017_q23",
+      "questionText": "The state can best promote private sector business by",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 23,
+      "options": [
+        "A. supplying office equipment.",
+        "B. guaranteeing financial support.",
+        "C. increasing wages and salaries.",
+        "D. offering all the needs of entrepreneurs."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 23 from the 2017 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2017_q24",
+      "questionText": "Productivity measures",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 24,
+      "options": [
+        "A. production of goods.",
+        "B. production of services.",
+        "C. output per man-hours.",
+        "D. profit made out of production."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 24 from the 2017 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2018_q26",
+      "questionText": "Motivation and supervision help in the efficient use of",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 26,
+      "options": [
+        "A. natural resource.",
+        "B. mineral resource.",
+        "C. capital resource.",
+        "D. health industry."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 26 from the 2018 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2018_q27",
+      "questionText": "Tourism in Ghana promotes the growth of",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 27,
+      "options": [
+        "A. hotel industry.",
+        "B. film industry.",
+        "C. textile industry.",
+        "D. health industry."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 27 from the 2018 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2018_q34",
+      "questionText": "To sustain the operation of a business, one must",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 34,
+      "options": [
+        "A. have a group of managers.",
+        "B. join national pension schemes.",
+        "C. produce quality goods",
+        "D. relate with business abroad"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 34 from the 2018 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2018_q37",
+      "questionText": "One positive effect of colonization on Ghana is the",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 37,
+      "options": [
+        "A. contribution to peace keeping missions.",
+        "B. engagement in national trade.",
+        "C. foundation for infrastructural developments.",
+        "D. excessive use of foreign goods."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 37 from the 2018 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2018_q8",
+      "questionText": "An effect of land degradation is",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 8,
+      "options": [
+        "A. bad farming practices.",
+        "B. excessive quarrying.",
+        "C. improper layouts.",
+        "D. loss of soil fertility.E."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 8 from the 2018 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2019_q16",
+      "questionText": "The following are reasons for the migration of ethnic groups in Ghana except",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 16,
+      "options": [
+        "A. peace and security.",
+        "B. fertile lands.",
+        "C. outbreak of diseases.",
+        "D. trade and commerce."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 16 from the 2019 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2019_q25",
+      "questionText": "State Owned Enterprises are established mainly to",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 25,
+      "options": [
+        "A. make substantial profit.",
+        "B. produce goods for export.",
+        "C. provide vital services.",
+        "D. supervise private businesses."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 25 from the 2019 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2019_q34",
+      "questionText": "Private businesses can ensure their continuous survival mainly through",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 34,
+      "options": [
+        "A. exporting their products.",
+        "B. making more profits.",
+        "C. paying less tax to the government.",
+        "D. production of quality goods."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 34 from the 2019 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2019_q8",
+      "questionText": "Which of the following factors is a reason for Ghana's cultural diversity?",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 8,
+      "options": [
+        "A. Ethnic grouping",
+        "B. Foreign trade",
+        "C. Internal trade",
+        "D. Colonization"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 8 from the 2019 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2020_q15",
+      "questionText": "Entrepreneurs in need of larger capital can come together to form a",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 15,
+      "options": [
+        "A. joint stock company.",
+        "B. partnership.",
+        "C. state corporation.",
+        "D. sole proprietorship."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 15 from the 2020 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2020_q20",
+      "questionText": "Which of the following factors is usually available in the rural areas of Ghana?",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 20,
+      "options": [
+        "A. skilled labour",
+        "B. capital",
+        "C. Entrepreneurs",
+        "D. unskilled labour"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 20 from the 2020 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2020_q35",
+      "questionText": "The risk bearing of a business organization falls on the",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 35,
+      "options": [
+        "A. customers.",
+        "B. entrepreneurs.",
+        "C. workers.",
+        "D. bankers."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 35 from the 2020 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2020_q38",
+      "questionText": "One disadvantage of Sole proprietorship form of business in Ghana is",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 38,
+      "options": [
+        "A. inadequate capital for expansion.",
+        "B. lack of unskilled labour.",
+        "C. inadequate raw materials.",
+        "D. poor management technique."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 38 from the 2020 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2021_q1",
+      "questionText": "In a working environment, productivity means",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 1,
+      "options": [
+        "A. output of the country",
+        "B. management of workers.",
+        "C. output per worker.",
+        "D. quality of resource."
+      ],
+      "correctAnswer": null,
+      "explanation": "This is question 1 from the 2021 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2021_q24",
+      "questionText": "Which of the following business enterprises is the commonest and easiest to form in Ghana?",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 24,
+      "options": [
+        "A. Partnerships",
+        "B. Sole proprietorship",
+        "C. Public joint stock companies",
+        "D. Co-operative Societies"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 24 from the 2021 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2021_q29",
+      "questionText": "Which of the following business enterprises raise capital through the scale of shares?",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 29,
+      "options": [
+        "A. Partnership",
+        "B. Sole proprietorship",
+        "C. Joint stock companies",
+        "D. Co-operative societies."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 29 from the 2021 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2021_q32",
+      "questionText": "Which of the following is not a business enterprise?",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 32,
+      "options": [
+        "A. Rural banks",
+        "B. Joint stock companies",
+        "C. Financial savings",
+        "D. Co-operative societies."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 32 from the 2021 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2021_q34",
+      "questionText": "Which of the following is not a feature of a sketched map?",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 34,
+      "options": [
+        "A. Tile",
+        "B. Key",
+        "C. Scale",
+        "D. Landmark"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 34 from the 2021 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2022_q32",
+      "questionText": "The person who combines the factors of production such as land, labour and capital is called",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 32,
+      "options": [
+        "A. shop keeper",
+        "B. operation",
+        "C. producer",
+        "D. entrepreneur"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 32 from the 2022 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2022_q35",
+      "questionText": "The sole proprietor enjoys all the following advantages except",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 35,
+      "options": [
+        "A. high profits",
+        "B. privacy",
+        "C. quick decisions",
+        "D. unlimited liability"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 35 from the 2022 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2022_q38",
+      "questionText": "Food production in Ghana faces the problem of",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 38,
+      "options": [
+        "A. access to foreign exchange",
+        "B. post-harvest losses",
+        "C. all your round rainfall",
+        "D. loss of valuable trees"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 38 from the 2022 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2022_q7",
+      "questionText": "The early introduction of formal education by the colonialists in the Gold Coast, led to",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 7,
+      "options": [
+        "A. improvement in foreign trade.",
+        "B. improvement in foreign trade.",
+        "C. increase in labour force.",
+        "D. improvement in crop production."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 7 from the 2022 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2023_q28",
+      "questionText": "Europeans presence and activities on the Gold Coast included the following except",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 28,
+      "options": [
+        "A. trading with the people.",
+        "B. evangelizing the people.",
+        "C. destroying farm lands for gold.",
+        "D. spreading European civilization."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 28 from the 2023 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2023_q29",
+      "questionText": "Primary production is important in Ghana because it provides",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 29,
+      "options": [
+        "A. credit.",
+        "B. capital.",
+        "C. employment.",
+        "D. services."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 29 from the 2023 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2024_q17",
+      "questionText": "Which of the following entrepreneurial skills is most important for someone starting a business to acquire in order to help overcome unexpected challenges?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 17,
+      "options": [
+        "A. Risk taking",
+        "B. Adaptability",
+        "C. Leadership",
+        "D. Savings"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 17 from the 2024 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2024_q32",
+      "questionText": "Which of the following scenarios, best describes an application of social security benefits?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 32,
+      "options": [
+        "A. A family member receives financial support after the death of the bread winner",
+        "B. A community receives funds for a new irrigation project",
+        "C. A teacher receives a scholarship to study abroad",
+        "D. An entrepreneur receives a loan to expand the business"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 32 from the 2024 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2024_q9",
+      "questionText": "The destruction of farm lands by cattle and the confrontation between herdsmen and farming communities in Ghana can best be resolved by",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 9,
+      "options": [
+        "A. local farmers always standing by to drive away herdsmen.",
+        "B. encouraging the practice of cattle ranching in our communities.",
+        "C. allowing the game and wildlife department to take charge of cattle rearing in the communities.",
+        "D. seizing and distributing some of the cattle to the affected communities."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 9 from the 2024 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2025_q25",
+      "questionText": "One negative effect of colonization on the Ghanaian society is the",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 25,
+      "options": [
+        "A. introduction of formal education.",
+        "B. introduction of currency.",
+        "C. adulteration of our culture.",
+        "D. introduction of plantation farming."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 25 from the 2025 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2025_q3",
+      "questionText": "Your father intends to begin a new business by raising capital through the sale of shares.This type of business enterprise is known as",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 3,
+      "options": [
+        "A. partnership.",
+        "B. sole proprietorship.",
+        "C. joint Stock company.",
+        "D. co-operative society."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 3 from the 2025 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2025_q37",
+      "questionText": "To ensure the survival of private enterprises, the government of Ghana must support",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 37,
+      "options": [
+        "A. advertising the products of private enterprises oversees and provide tax exemption.",
+        "B. controlling and providing vital services and strict control.",
+        "C. payment of their tax obligation and other commitments.",
+        "D. providing efficient management and direct control."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 37 from the 2025 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_1992_q6",
+      "questionText": "Write on any five problems of food production in Africa.",
+      "type": "essay",
+      "year": "1992",
+      "questionNumber": 6,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1992 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_1994_q1",
+      "questionText": "With the aid of contour lines, describe any four of the following land forms:\n\n(a)\n\n \n\nValley\n\n(b)\n\n \n\nSpur\n\n(c)\n\n \n\nCol\n\n(d)\n\n \n\nEscarpment\n\n(e)\n\n \n\nRidge",
+      "type": "essay",
+      "year": "1994",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1994 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_1994_q6",
+      "questionText": "State five problems of food production in Africa",
+      "type": "essay",
+      "year": "1994",
+      "questionNumber": 6,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1994 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_1996_q5",
+      "questionText": "a)\n\n \n\nState four conditions necessary for economic growth and high productivity.\n\nb)\n\n \n\nGive three reasons why Ghana's economy is not growing.",
+      "type": "essay",
+      "year": "1996",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1996 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_1998_q5",
+      "questionText": "a)\n\n \n\nWhat was the Trans-Saharan Trade?\n\nb)\n\n \n\nState four effects of the Trans-Saharan Trade on Western Sudan\n\nc)\n\n \n\nState five items of the Trans-Saharan Trade",
+      "type": "essay",
+      "year": "1998",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1998 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2003_q4",
+      "questionText": "a)\n\n \n\nName four plantation farms and their locations in Ghana.\n\nb)\n\n \n\nState four effects of plantation farming in Ghana\n\n  \n\nPART III\n\nWEST AFRICA, AFRICA AND THE WORLD",
+      "type": "essay",
+      "year": "2003",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2003 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2004_q6",
+      "questionText": "a)\n\n \n\nState four contributions of the manufacturing industry to the economy of Ghana.\n\nb)\n\n \n\nList any four problems facing the manufacturing industry in Ghana.",
+      "type": "essay",
+      "year": "2004",
+      "questionNumber": 6,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2004 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2005_q6",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nWhat is a state owned enterprise?\n\nii)\n\n \n\nIdentify any four problems that face state owned enterprises in Ghana.\n\nb)\n\n \n\nHow can the problems identified in (a) (ii) be solved?",
+      "type": "essay",
+      "year": "2005",
+      "questionNumber": 6,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2005 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2008_q1",
+      "questionText": "(a)\n\n \n\nGive four reasons why the transatlantic slave trade continued for a long time.\n\n(b)\n\n \n\nState four negative effects of the slave trade on West Africa",
+      "type": "essay",
+      "year": "2008",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2008 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2008_q5",
+      "questionText": "(a)\n\n \n\nWhat is productivity\n\n(b)\n\n \n\nIn which four ways can productivity be increased in Ghana?",
+      "type": "essay",
+      "year": "2008",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2008 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2008_q6",
+      "questionText": "(a)\n\n \n\nWhat is private enterprise?\n\n(b)\n\n \n\nOutline any four roles the Government of Ghana could play to promote private enterprise.",
+      "type": "essay",
+      "year": "2008",
+      "questionNumber": 6,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2008 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2012_q6",
+      "questionText": "(a)\n\n \n\nGive four reasons for the establishment of state owned enterprises in Ghana.\n\n(b)\n\n \n\nHighlight four problems facing state owned enterprises in Ghana.",
+      "type": "essay",
+      "year": "2012",
+      "questionNumber": 6,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2012 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2015_q6",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nDefine primary production.\n\nii)\n\n \n\nState two examples of primary production.\n\nb)\n\n \n\nSuggest four ways by which productivity can be increased in the primary sector.",
+      "type": "essay",
+      "year": "2015",
+      "questionNumber": 6,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2016_q6",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nWhat is a State Enterprise?\n\nii)\n\n \n\nWhat is a Private Enterprise?\n\nb)\n\n \n\nSuggest four ways by which the state can promote private enterprises.",
+      "type": "essay",
+      "year": "2016",
+      "questionNumber": 6,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2016 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2017_q5",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nDefine primary production.\n\nii)\n\n \n\nList two examples of a primary production industry in Ghana.\n\nb)\n\n \n\nIdentify five problems facing primary industries in Ghana.",
+      "type": "essay",
+      "year": "2017",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2017 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2018_q2",
+      "questionText": "a)\n\n \n\nList five characteristics of the North East Trade winds in Ghana.\n\nb)\n\n \n\nDescribe five effects of the North East Trade winds in Ghana.\n\n \n\nSECTION II\n\nGOVERNMANCE, POLITICS AND STABILITY",
+      "type": "essay",
+      "year": "2018",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2018 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2018_q5",
+      "questionText": "Outline five ways by which State Owned Enterprises differ from Private Owned Enterprises.",
+      "type": "essay",
+      "year": "2018",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2018 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2019_q6",
+      "questionText": "a)\n\n \n\nDifferentiate between tourism and leisure.\n\nb)\n\n \n\nName the regional capitals in which the following tourists sites can be located in Ghana:\n\ni)\n\n \n\nLake Bosomtwi;\n\nii)\n\n \n\nVolta Estuary;\n\niii)\n\n \n\nMole National Park;\n\niv)\n\n \n\nUssher Fort\n\nc)\n\n \n\nDescribe four ways by which tourism can be promoted in Ghana",
+      "type": "essay",
+      "year": "2019",
+      "questionNumber": 6,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2019 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2020_q6",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nDistinguish between education and training.\n\nii)\n\n \n\nList four examples of primary production.\n\nb)\n\n \n\nIn what four ways can productivity at work places be improved in Ghana?",
+      "type": "essay",
+      "year": "2020",
+      "questionNumber": 6,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2020 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2022_q1",
+      "questionText": "a)\n\n \n\nDraw an outline of the globe\n\nb)\n\n \n\ni\n\n \n\nArticle Circle\n\nii\n\n \n\nTropic of Capricorn\n\niii\n\n \n\nLatitude 0o\n\niv\n\n \n\nDirection of Earth's rotation\n\nv\n\n \n\nNorth Pole\n\nc)\n\n \n\ni\n\n \n\nState two major highlands in Ghana\n\nii\n\n \n\nState two major lowlands in Ghana\n\nd)\n\n \n\nOutline two uses of International Dateline",
+      "type": "essay",
+      "year": "2022",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2022 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Production & Entrepreneurship"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

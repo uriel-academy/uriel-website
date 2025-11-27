@@ -1,0 +1,72 @@
+{
+  "topic": "Music",
+  "questions": [
+    {
+      "id": "theory_creative_arts_2024_q4",
+      "questionText": "(a)\n\n \n\nOn the music manuscript provided, notate the following letters on the Treble Staff using minims or half notes:\n\n(i)\n\n \n\nECG;\n\n(ii)\n\n \n\nBAD;\n\n(iii)\n\n \n\nAGF.\n\n(b)\n\n \n\nPlace the underlisted instruments under their respective classification in the table below:\n\n(i)\n\n \n\nDonno;\n\n(ii)\n\n \n\nSeperewa;\n\n(iii)\n\n \n\nMbira;\n\n(iv)\n\n \n\nAtenteben;\n\n(v)\n\n \n\nMmensuon.\n\nCHORDOPHONE\n\nIDEOPHONE\n\nMEMBRANOPHONE\n\nAEROPHONE\n\n\n\n\n\n\n\n\n\n(c)\n\n \n\nIn a particular song, bar 1 has four quavers, bar 2 has one minim and bar 3 has two crotchets.\n\nIdentify the time signature for the song.\n\n(d)\n\n \n\nExplain why the song Yɛn ara asaase ni is in a binary form.",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "creativeArts",
+      "subjectDisplay": "Creative Arts",
+      "examType": "bece",
+      "year": "2024",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2024 Creative Arts",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148615,
+        "_nanoseconds": 891000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148615,
+        "_nanoseconds": 891000000
+      }
+    },
+    {
+      "id": "theory_creative_arts_2024_q5",
+      "questionText": "(a)\n\n \n\nUsing the tonic solfa notation, write the members of the following:\n\n(i)\n\n \n\nChord I;\n\n(ii)\n\n \n\nChord IV;\n\n(iii)\n\n \n\nChord V.\n\n(b)\n\n \n\nAt a choral music concert in your school, you would enjoy the words and the harmonious voices as the performance unfolds.\n\nIdentify and describe any three voice parts that you would find delightful during the performance.\n\n(c)\n\n \n\nWrite short notes on any one of the following composers; focusing on his hometown, genre of words, one example of his works and contribution made to society.\n\n(i)\n\n \n\nEphraim Amu;\n\n(ii)\n\n \n\nAgya Koo Nimo;\n\n(iii)\n\n \n\nBlack Sherif.",
+      "questionNumber": 5,
+      "marks": 5,
+      "type": "essay",
+      "subject": "creativeArts",
+      "subjectDisplay": "Creative Arts",
+      "examType": "bece",
+      "year": "2024",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2024 Creative Arts",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148615,
+        "_nanoseconds": 891000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148615,
+        "_nanoseconds": 891000000
+      }
+    }
+  ],
+  "questionCount": 2
+}

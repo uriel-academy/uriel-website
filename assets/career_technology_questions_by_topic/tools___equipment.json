@@ -1,0 +1,176 @@
+{
+  "topic": "Tools & Equipment",
+  "questions": [
+    {
+      "id": "career_technology_2024_q18",
+      "questionText": "A suitable cutting tool used for neatening an open seam on a denim skirt is",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 18,
+      "options": [
+        "A. pinking shears.",
+        "B. cutting shears.",
+        "C. trimming scissors.",
+        "D. embroidery scissors."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 18 from the 2024 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2024"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    },
+    {
+      "id": "career_technology_2024_q19",
+      "questionText": "A major equipment used to assemble parts of a garment is the",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 19,
+      "options": [
+        "A. neatening machine.",
+        "B. embroidery machine.",
+        "C. sewing machine.",
+        "D. quilting machine."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 19 from the 2024 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2024"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    },
+    {
+      "id": "career_technology_2024_q21",
+      "questionText": "Craftsmen have been tasked to prepare an artefact for use in a household. Which of the following practices must not be encouraged in the workshop",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 21,
+      "options": [
+        "A. Replacing broken parts of tools",
+        "B. Reporting frayed flexes",
+        "C. Tagging faulty equipment",
+        "D. Using a mushroomed head chisel"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 21 from the 2024 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2024"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    },
+    {
+      "id": "career_technology_2025_q18",
+      "questionText": "An important safety rule to observe in the food laboratory is to",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2025",
+      "section": "A",
+      "questionNumber": 18,
+      "options": [
+        "A. avoid carrying tiny objects and tools in the pocket.",
+        "B. ensure efficient lighting and ventilation.",
+        "C. avoid long sleeve dresses when cooking.",
+        "D. cut away from the body when using cutting tools."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 18 from the 2025 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2025"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2025",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    },
+    {
+      "id": "career_technology_2025_q4",
+      "questionText": "The main reason why it is advisable to do proper clearing and washing up of utensils in the food laboratory after the days work is to",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2025",
+      "section": "A",
+      "questionNumber": 4,
+      "options": [
+        "A. keep the family healthy.",
+        "B. increase the lifespan of equipment.",
+        "C. rid the food laboratory of pest.",
+        "D. prevent accidents in the food laboratory."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 4 from the 2025 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2025"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2025",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    }
+  ],
+  "questionCount": 5
+}

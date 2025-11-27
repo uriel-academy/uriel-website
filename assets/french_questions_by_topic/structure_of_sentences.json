@@ -1,0 +1,864 @@
+{
+  "topic": "Structure of Sentences",
+  "questions": [
+    {
+      "id": "theory_french_1991_q36",
+      "questionText": "………………… âge as-tu ?37. ……………… est le jardin ?38. Il y à …………….d’élèves dans la classe ?39. …………………… est-ce que tu pars ?40. …………………. apprend-elle le français ?",
+      "questionNumber": 36,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1991",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1991 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1991",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_1993_q16",
+      "questionText": "Tu ……………….. le chemin. (trouve / trouves)17. Ils ……………………….des exercices. (font / faites)18. Nous ………………… un journal. (lisent / lisons)19. Le chauffeur …………. son argent. (demande / demandes)20. Les élèves ………………. au football. (joues / jouent)21. Elle ………………….. à son frère. (parle / parles)22. J’……………… la musique africaine. (écoute / écoutes)23. Maman …………. la boîte. (ouvre / ouvres)24. Il …………………avec son frère. (sort / sortent)25. Vous …………….. en retard (êtes / est)\n\n(bonne, cloche, yeux, se ton)",
+      "questionNumber": 16,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1993",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1993 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1993",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_1994_q36",
+      "questionText": "…………….. trouvez-vous l’examen ? Il est très difficile37. De …………………. couleur est ta robe ? Ma robe est verte38. ………………….. va cette dame ? Elle va à gare.39. ……………. âge a ton oncle ? Il a 45 ans.40. ……………….. courez-vous si vite ? Parce que je sui en retard",
+      "questionNumber": 36,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1994",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1994 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1994",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_1995_q36",
+      "questionText": "Les élèves …………..beaucoup jouer. (aime / aiment)37. Elle …………… une belle robe. (portes / porte)38. Nous ………….. au marché à 10 heures. (arrivent / arrivons)39. Il…………… au restaurant pour manger. (va / vont)40. Tu ne ……… pas dans la maison. (joue / joues)",
+      "questionNumber": 36,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1995",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1995 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1995",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_1996_q31",
+      "questionText": "Il pleut, Ama porte ………………parapluie. (sa / son)32. …………… cousin me donne une nouvelle robe. (Ma / Mon)33. …………amis sont tous partis en France. (Leurs / Leur)34. L’homme …………….arrive est mon père. (que / qui)35. ……………….pleures-tu (Quoi / Pourquoi)\n\n(au, que, quand, cette, cheres)",
+      "questionNumber": 31,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1996",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1996 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1996",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_1998_q31",
+      "questionText": "Il y a ………………………… de livres dans le sac ?32. ……………………………. pantalon voulez-vous ?33. ……………………………… t’appelles-tu ?34. Qui est-ce ……………………..va à l’école ?35. …………………………………. est ton dictionnaire de français ?\n\n(parce qu’, avec, pour, dans, sur)",
+      "questionNumber": 31,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1998",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1998 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1998",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2000_q16",
+      "questionText": "Nous allons ………………….cinéma. (au/ aux / à)",
+      "questionNumber": 16,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2000_q17",
+      "questionText": "Pauline travaille ………………….l’aéroport. (en / au / à )",
+      "questionNumber": 17,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2000_q20",
+      "questionText": "Michael arrive ………………….Abidjan. (en / à / dans)\n\n\n\n(journal, sous, chemise, marché, café)",
+      "questionNumber": 20,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2000_q9",
+      "questionText": "Papa travaille ………………….Cote d’Ivoire. (au / en / dans)",
+      "questionNumber": 9,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2001_q45",
+      "questionText": "minutes\n\n\n\nAnswer one question only using the spaces provided in this question paper\n\nCredit will be given for clarity of expression and orderly presentation of material\n\nYour composition should be written in French and should be between 60 and 80 words long\n\nThe outline below each question will guide you",
+      "questionNumber": 45,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2001",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2001 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2001",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2002_q2",
+      "questionText": "Examine carefully the pictures below and narrate the story.\n\n\n\nA. - Pourquoi Doudou pleure-t-il ? B. - Qu’est-ce que sa mère lui\n\n\n\ndonne ?\n\n\n\nC. - Qu’est-ce que Doudou voit ?\n\n\n\nD. - Qu’est-ce qui Doudou veut faire ?\n\n- Qu’est-ce qui arrive ?\n\n\n\nE. - Qu’est-ce qui se passe ? F. - Pourquoi Doudou pleure",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2002",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2002 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2002",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2002_q45",
+      "questionText": "minutes\n\n\n\nAnswer one question only using the spaces provided in this question paper\n\nCredit will be given for clarity of expression and orderly presentation of material\n\nYour composition should be written in French and should be between 60 and 80 words long\n\nThe outline below each question will guide you",
+      "questionNumber": 45,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2002",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2002 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2002",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2003_q45",
+      "questionText": "minutes\n\n\n\nAnswer one question only using the spaces provided in this question paper\n\nCredit will be given for clarity of expression and orderly presentation of material\n\nYour composition should be written in French and should be between 60 and 80 words long\n\nThe outline below each question will guide you",
+      "questionNumber": 45,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2003",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2003 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2003",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2004_q45",
+      "questionText": "minutes\n\n\n\nAnswer one question only using the spaces provided in this question paper\n\nCredit will be given for clarity of expression and orderly presentation of material\n\nYour composition should be written in French and should be between 60 and 80 words long\n\nThe outline below each question will guide you",
+      "questionNumber": 45,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2004",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2004 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2004",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2005_q45",
+      "questionText": "minutes\n\n\n\nAnswer one question only using the spaces provided in this question paper\n\nCredit will be given for clarity of expression and orderly presentation of material\n\nYour composition should be written in French and should be between 60 and 80 words long\n\nThe outline below each question will guide you",
+      "questionNumber": 45,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2005",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2005 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2005",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2006_q45",
+      "questionText": "minutes\n\n\n\nAnswer one question only using the spaces provided in this question paper\n\nCredit will be given for clarity of expression and orderly presentation of material\n\nYour composition should be written in French and should be between 60 and 80 words long\n\nThe outline below each question will guide you",
+      "questionNumber": 45,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2006",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2006 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2006",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2007_q45",
+      "questionText": "minutes\n\n\n\nAnswer one question only using the spaces provided in this question paper\n\nCredit will be given for clarity of expression and orderly presentation of material\n\nYour composition should be written in French and should be between 60 and 80 words long\n\nThe outline below each question will guide you",
+      "questionNumber": 45,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2007",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2007 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2007",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2009_q45",
+      "questionText": "minutes\n\n\n\nAnswer one question only using the spaces provided in this question paper\n\nCredit will be given for clarity of expression and orderly presentation of material\n\nYour composition should be written in French and should be between 60 and 80 words long\n\nThe outline below each question will guide you",
+      "questionNumber": 45,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2009",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2009 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2009",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2010_q45",
+      "questionText": "minutes\n\n\n\nAnswer one question only using the spaces provided in this question paper\n\nCredit will be given for clarity of expression and orderly presentation of material\n\nYour composition should be written in French and should be between 60 and 80 words long\n\nThe outline below each question will guide you",
+      "questionNumber": 45,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2010",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2010 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2010",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2011_q45",
+      "questionText": "minutes\n\n\n\nAnswer one question only using the spaces provided in this question paper\n\nCredit will be given for clarity of expression and orderly presentation of material\n\nYour composition should be written in French and should be between 60 and 80 words long\n\nThe outline below each question will guide you",
+      "questionNumber": 45,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2011",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2011 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2011",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2012_q45",
+      "questionText": "minutes\n\n\n\nAnswer one question only using the spaces provided in this question paper\n\nCredit will be given for clarity of expression and orderly presentation of material\n\nYour composition should be written in French and should be between 60 and 80 words long\n\nThe outline below each question will guide you",
+      "questionNumber": 45,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2012",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2012 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2012",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2013_q45",
+      "questionText": "minutes\n\nCOMPOSITION\n\n\n\nAnswer one question only using the spaces provided in this question paper\n\nCredit will be given for clarity of expression and orderly presentation of material\n\nYour composition should be written in French and should be between 60 and 80 words long\n\nThe outline below each question will guide you",
+      "questionNumber": 45,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2013",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2013 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2013",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2014_q45",
+      "questionText": "minutes\n\n\n\nAnswer one question only using the spaces provided in this question paper\n\nCredit will be given for clarity of expression and orderly presentation of material\n\nYour composition should be written in French and should be between 60 and 80 words\n\nlong\n\nThe outline below each question will guide you",
+      "questionNumber": 45,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2014",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2014 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2014",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2015_q45",
+      "questionText": "minutes\n\n\n\nAnswer one question only using the spaces provided in this question paper\n\nCredit will be given for clarity of expression and orderly presentation of material\n\nYour composition should be written in French and should be between 60 and 80 words long\n\nThe outline below each question will guide you",
+      "questionNumber": 45,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2015",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2015",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2025_q45",
+      "questionText": "minutes\n\nIl y a deux questions dans cette partie. Rèpondez à toutes les questions.\n\nThere are two questions in this part. Answer both questions.",
+      "questionNumber": 45,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2025",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2025 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2025",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    }
+  ],
+  "questionCount": 26
+}

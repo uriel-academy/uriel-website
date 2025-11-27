@@ -1,0 +1,1686 @@
+{
+  "topic": "Guided Writing",
+  "questions": [
+    {
+      "id": "theory_english_2010_q1",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2010",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2010 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2010",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "questionText": "Write a letter to your father asking permission to join your schoolmates who are going on an excursion.",
+      "partHeader": "PART A - WRITING",
+      "paperInstructions": ""
+    },
+    {
+      "id": "theory_english_2010_q2",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2010",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2010 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2010",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "Write an article for publication in a local newspaper on the topic: Every school should have a library.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2010_q3",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2010",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2010 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2010",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "Write a short story illustrating the saying: All that glitters is not gold.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2011_q1",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2011",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2011 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2011",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "questionText": "Write a letter to your District Director of Education giving at least, two reasons why caning should be banned in schools.",
+      "partHeader": "PART A - WRITING",
+      "paperInstructions": ""
+    },
+    {
+      "id": "theory_english_2011_q2",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2011",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2011 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2011",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "Write a story which ends with the expression: '................ what a dream!'",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2011_q3",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2011",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2011 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2011",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "As secretary of the Friends of the Environment club, write a speech you would give to the students of your school on the need to keep the environment clean.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2012_q1",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2012",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2012 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2012",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "questionText": "Write a letter to the Member of Parliament of your constituency, telling him/her about the rise in armed robbery in your area. Suggest at least two ways to check it.",
+      "partHeader": "PART A - WRITING",
+      "paperInstructions": ""
+    },
+    {
+      "id": "theory_english_2012_q2",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2012",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2012 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2012",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "Write a story which ends with the sentence: We arrived just in time to save the situation.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2012_q3",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2012",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2012 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2012",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "Your father has received the 'National Best Farmer's Award'. Write a letter to your brother who is outside the country, describing the ceremony.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2013_q1",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2013",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2013 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2013",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "questionText": "Write a letter to your friend telling him or her three ways in which the computer has made learning easier for students.",
+      "partHeader": "PART A - WRITING",
+      "paperInstructions": ""
+    },
+    {
+      "id": "theory_english_2013_q2",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2013",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2013 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2013",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "Write an article for publication in a national newspaper discussing at least two reasons why students should cultivate the habit of reading.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2013_q3",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2013",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2013 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2013",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "Describe one national event that took place recently and state at least two effects it had on the people in your area.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2014_q1",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2014",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2014 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2014",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "questionText": "You have been offered admission to a Senior High School to pursue a programme which you do not like. Write a letter to the headmaster of the school stating at least two reasons why you want the programme changed.",
+      "partHeader": "PART A - WRITING",
+      "paperInstructions": ""
+    },
+    {
+      "id": "theory_english_2014_q2",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2014",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2014 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2014",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "Write an article to be published in a national newspaper on why every school should have a library.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2014_q3",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2014",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2014 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2014",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "Write the speech you would give at your school's graduation day on The school's achievements and failures in the academic year.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2015_q1",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2015",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2015",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "questionText": "Write a letter to the Presiding Member of your district assembly telling him or her about two of the achievements of your community over the last five years and the plans for the future.",
+      "partHeader": "PART A - WRITING",
+      "paperInstructions": ""
+    },
+    {
+      "id": "theory_english_2015_q2",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2015",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2015",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "Your friend has informed you that his or her uncle has decided not to look after him or her in school anymore. Write to your friend's uncle giving him at least, two reasons why he should change his mind.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2015_q3",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2015",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2015",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "Write arguments for or against the topic: It is more advantageous to live in the village than in the city.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2016_q1",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2016",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2016 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2016",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "questionText": "Write a letter to your friend describing how you saved a child who was in danger.",
+      "partHeader": "PART A - WRITING",
+      "paperInstructions": ""
+    },
+    {
+      "id": "theory_english_2016_q2",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2016",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2016 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2016",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "Write an article for publication in your school magazine on the topic; The relationship between parents and their children should be cordial.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2016_q3",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2016",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2016 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2016",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "Write a story which ends with the sentence, We were lucky that night.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2017_q1",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2017",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2017 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2017",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "questionText": "You have been installed a chief in your hometown. Write a letter to your friend in another school telling him or her, at least, two things you intend doing to develop the town.",
+      "partHeader": "PART A - WRITING",
+      "paperInstructions": ""
+    },
+    {
+      "id": "theory_english_2017_q2",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2017",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2017 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2017",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "Write an article for publication in one of the national newspapers on the topic: The usefulness of the mobile phone.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2017_q3",
+      "questionNumber": 3,
+      "marks": 30,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2017",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2017 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2017",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "Write a story that ends with the expression: So it pays to be kind to strangers.\n\n \n\nPART BCOMPREHENSION[30 marks]\n\nRead the following passage carefully and answer all the questions which follow.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2018_q1",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2018",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2018 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2018",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "questionText": "As a School Prefect, write a letter to your District or Municipal or Metropolitan Chief Executive requesting the maintenance of the building in your school.",
+      "partHeader": "PART A - WRITING",
+      "paperInstructions": ""
+    },
+    {
+      "id": "theory_english_2018_q2",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2018",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2018 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2018",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "Write arguments for or against the topic: Life in the city is more dangerous than that in the village.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2018_q3",
+      "questionNumber": 3,
+      "marks": 30,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2018",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2018 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2018",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "Write a report to the Headteacher of your school about how a senior girl beat up a junior boy.\n\n  \n\nPART BCOMPREHENSION[30 marks]\n\nRead the following passage carefully and answer all the questions which follow.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2019_q1",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2019",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2019 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2019",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "questionText": "Write a letter to your headmaster discussing two games that should be encouraged among the students in your school.",
+      "partHeader": "PART A - WRITING",
+      "paperInstructions": ""
+    },
+    {
+      "id": "theory_english_2019_q2",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2019",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2019 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2019",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "Write an article for publication in your school magazine on why every student should be computer-literate.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2019_q3",
+      "questionNumber": 3,
+      "marks": 30,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2019",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2019 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2019",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "Write an interesting story which ends with the words, It pays to be kind to strangers.\n\n \n\nPART BCOMPREHENSION[30 marks]\n\nRead the following passage carefully and answer all the questions which follow.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2020_q1",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2020",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2020 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2020",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "questionText": "Write an article for the publication in a national newspaper on the topic, The harmful effects of examination malpractice.",
+      "partHeader": "PART A - WRITING",
+      "paperInstructions": ""
+    },
+    {
+      "id": "theory_english_2020_q2",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2020",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2020 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2020",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "As the senior prefect of your school, write a letter to the headmaster, discussing two reasons why, the school should instill moral values into the students.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2020_q3",
+      "questionNumber": 3,
+      "marks": 30,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2020",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2020 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2020",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "Writ a speech you should give to the people in your community on how to keep the environment clean.\n\n \n\nPART BCOMPREHENSION[30 marks]\n\nRead the following passage carefully and answer all the questions which follow.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2021_q1",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2021",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2021 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2021",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "questionText": "Write a letter to the Ministry of Transport suggesting two ways of improving the public transport road system in the country.",
+      "partHeader": "PART A - WRITING",
+      "paperInstructions": ""
+    },
+    {
+      "id": "theory_english_2021_q2",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2021",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2021 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2021",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "As the main speaker in a debate on the motion, Students should not wear uniform to school, write your speech for or against the motion.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2021_q3",
+      "questionNumber": 3,
+      "marks": 30,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2021",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2021 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2021",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "Write a letter to invite your cousin to spend the holidays with your grandparents, giving two reasons why he/she should pay them a visit.\n\n \n\nPART BCOMPREHENSION[30 marks]\n\nRead the following passage carefully and answer all the questions which follow.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2022_q1",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2022",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2022 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2022",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "questionText": "Write an article for publication in your school magazine on the topic, My Role Model and how he/she has Influenced me.",
+      "partHeader": "PART A - WRITING",
+      "paperInstructions": ""
+    },
+    {
+      "id": "theory_english_2022_q2",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2022",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2022 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2022",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "Write an interesting story that ends with the expression, Unfortunately I realized when it was too late that my friend was a wolf in sheep's clothing.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2022_q3",
+      "questionNumber": 3,
+      "marks": 30,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2022",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2022 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2022",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "Write a letter to your friend describing two ways in which you prepared for your father's birthday party and tell him/her what made the party a memorable one.\n\n \n\nPART BCOMPREHENSION[30 marks]\n\nRead the following passage carefully and answer all the questions which follow.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2023_q1",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2023",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2023 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2023",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "questionText": "Write a letter to the Director of Health of your district, discussing two ways in which the activities of some food sellers affect the health of people in your community and suggest one solution to the problem.",
+      "partHeader": "PART A - WRITING",
+      "paperInstructions": ""
+    },
+    {
+      "id": "theory_english_2023_q2",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2023",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2023 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2023",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "Narrate an interesting story that ends with the statement, Indeed, it was a great achievement.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2023_q3",
+      "questionNumber": 3,
+      "marks": 30,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2023",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2023 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2023",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "Write an article for publication in a national newspaper on two effects of poor disposal of waste on the people and suggest two ways of solving the problem.\n\n  \n\nPART BCOMPREHENSION[30 marks]\n\nRead the following passage carefully and answer all the questions which follow.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2024_q1",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2024",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2024 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "questionText": "Your friend who lives in another town thinks that school life is boring and wants to leave school to start petty trading. Write a letter to encourage him/her to remain in school. In the letter, discuss two aspects of school life that you find enjoyable.",
+      "partHeader": "PART A - WRITING",
+      "paperInstructions": ""
+    },
+    {
+      "id": "theory_english_2024_q2",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2024",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2024 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "A teacher from your school won the first prize as the National Best Teacher. You were selected to represent your school at the ceremony. Write a report on what you saw and discuss two lessons you learned as you observed the event.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2024_q3",
+      "questionNumber": 3,
+      "marks": 30,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2024",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2024 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "It is an election year and the major political parties have started campaigning. As a peace-loving member of your community, write an article for publication in a local newspaper of the community, discussing two ways of maintaining peace during the period.\n\n  \n\nPART BCOMPREHENSION[30 marks]\n\nRead the following passage carefully and answer all the questions which follow.",
+      "partHeader": "PART A - WRITING"
+    },
+    {
+      "id": "theory_english_2025_q1",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2025",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2025 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2025",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "partHeader": "PART A - WRITING",
+      "questionText": "Your composition should be about 250 words long.",
+      "paperInstructions": "hour\n\nThis paper consists of three parts: A, B and C.\n\nAnswer three questions in all; one question from Part A and all the questions in Part B and Part C.\n\nAnswer all questions in your answer booklet.\n\nCredit will be given for clarity of expression and orderly presentation of material\n\nPART A\n\nWRITING\n\n[30 marks]\n\nAnswer one question only from this part."
+    },
+    {
+      "id": "theory_english_2025_q2",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2025",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2025 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2025",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "partHeader": "PART A - WRITING",
+      "paperInstructions": "",
+      "questionText": "The government has announced the addition of new public holidays. Write an article to be published in a national newspaper on two effects of public holidays on teaching and learning."
+    },
+    {
+      "id": "theory_english_2025_q3",
+      "questionNumber": 3,
+      "marks": 20,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2025",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2025 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2025",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "partHeader": "PART A - WRITING",
+      "paperInstructions": "",
+      "questionText": "You once doubted your abilities, but an experience changed your mindset completely. Write your story, ending with the statement, \"I will never compare myself with anyone again.\"\n\n \n\nPART B\n\nREADING\n\n[20 marks]"
+    }
+  ],
+  "questionCount": 48
+}

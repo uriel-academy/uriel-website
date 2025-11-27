@@ -1,0 +1,40 @@
+{
+  "topic": "Ingredients & Tools",
+  "questions": [
+    {
+      "id": "career_technology_2024_q11",
+      "questionText": "An example of kitchen hygiene practice is",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 11,
+      "options": [
+        "A. cleaning food items before use.",
+        "B. washing utensils before use.",
+        "C. washing hands before handling food.",
+        "D. wearing clean clothes."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 11 from the 2024 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2024"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    }
+  ],
+  "questionCount": 1
+}

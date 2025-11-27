@@ -1,0 +1,72 @@
+{
+  "topic": "Dance",
+  "questions": [
+    {
+      "id": "theory_creative_arts_2024_q6",
+      "questionText": "(a)\n\n \n\nAdzo and Komla are about to perform the Bɔbɔɔbɔ dance.\n\nList three costume items they would use.\n\n(b)\n\n \n\nIn the performance of African music and dance, the stage is well used by all performers so that the audience can enjoy the performance.\n\nDescribe how drummers, singers and dancers are arranged on a stage during the performance of \"Kpanlogo\".\n\n(c)\n\n \n\nWrite short notes on any one of the following performing art personalities; focusing on the profession, contribution to society and an example of any of their works:\n\n(i)\n\n \n\nMartin Owusu;\n\n(ii)\n\n \n\nFrancis Nii Yartey;\n\n(iii)\n\n \n\nAma Atta Aidoo.\n\n(d)\n\n \n\nAt a festival in your hometown, you observed colourfully dressed and energetic dancers perform various traditional dances. Reflecting on the performances, you came to a realization that dance drama plays a significant role in the Ghanaian culture.\n\nState three of such roles that came to mind during the reflection.",
+      "questionNumber": 6,
+      "marks": 5,
+      "type": "essay",
+      "subject": "creativeArts",
+      "subjectDisplay": "Creative Arts",
+      "examType": "bece",
+      "year": "2024",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2024 Creative Arts",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148615,
+        "_nanoseconds": 891000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148615,
+        "_nanoseconds": 891000000
+      }
+    },
+    {
+      "id": "theory_creative_arts_2024_q7",
+      "questionText": "(a)\n\n \n\nIn the table below, group the listed traditional dances under the following ethnic groups.\n\nDANCES: Bamaya, Gahu, Gota, Kete, Nagla and Takai.\n\nEWE\n\nAKAN\n\nMOLE-DAGBANI\n\n\n\n\n\n\n\n(b)\n\n \n\nDescribe each of the following type of dance movements:\n\n(i)\n\n \n\nAlignment;\n\n(ii)\n\n \n\nBalance.\n\n(c)\n\n \n\nSome years ago, storytelling was a form of entertainment for most Ghanaian traditional societies. However, in today's digital age, the television and internet are filled with a lot of soap operas, which may not be suitable for children.\n\nState two reasons why story telling should still be encouraged in the Ghanaian culture.",
+      "questionNumber": 7,
+      "marks": 5,
+      "type": "essay",
+      "subject": "creativeArts",
+      "subjectDisplay": "Creative Arts",
+      "examType": "bece",
+      "year": "2024",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2024 Creative Arts",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148615,
+        "_nanoseconds": 891000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148615,
+        "_nanoseconds": 891000000
+      }
+    }
+  ],
+  "questionCount": 2
+}

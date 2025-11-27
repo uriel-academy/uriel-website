@@ -1,0 +1,120 @@
+{
+  "generatedAt": "2025-11-27T20:23:26.154Z",
+  "topics": [
+    {
+      "name": "Whole Numbers",
+      "filename": "whole_numbers.json",
+      "questionCount": 64
+    },
+    {
+      "name": "Fractions",
+      "filename": "fractions.json",
+      "questionCount": 29
+    },
+    {
+      "name": "Decimals",
+      "filename": "decimals.json",
+      "questionCount": 25
+    },
+    {
+      "name": "Percentages",
+      "filename": "percentages.json",
+      "questionCount": 81
+    },
+    {
+      "name": "Ratios & Proportions",
+      "filename": "ratios___proportions.json",
+      "questionCount": 75
+    },
+    {
+      "name": "Indices & Standard Form",
+      "filename": "indices___standard_form.json",
+      "questionCount": 54
+    },
+    {
+      "name": "Sets",
+      "filename": "sets.json",
+      "questionCount": 21
+    },
+    {
+      "name": "Algebraic Expressions",
+      "filename": "algebraic_expressions.json",
+      "questionCount": 173
+    },
+    {
+      "name": "Algebraic Operations",
+      "filename": "algebraic_operations.json",
+      "questionCount": 5
+    },
+    {
+      "name": "Linear Equations",
+      "filename": "linear_equations.json",
+      "questionCount": 202
+    },
+    {
+      "name": "Inequalities",
+      "filename": "inequalities.json",
+      "questionCount": 43
+    },
+    {
+      "name": "Functions & Relations",
+      "filename": "functions___relations.json",
+      "questionCount": 53
+    },
+    {
+      "name": "Graphs",
+      "filename": "graphs.json",
+      "questionCount": 96
+    },
+    {
+      "name": "Plane Geometry",
+      "filename": "plane_geometry.json",
+      "questionCount": 120
+    },
+    {
+      "name": "Circle Geometry",
+      "filename": "circle_geometry.json",
+      "questionCount": 9
+    },
+    {
+      "name": "Geometric Constructions",
+      "filename": "geometric_constructions.json",
+      "questionCount": 2
+    },
+    {
+      "name": "Measurement",
+      "filename": "measurement.json",
+      "questionCount": 115
+    },
+    {
+      "name": "Transformations & Symmetry",
+      "filename": "transformations___symmetry.json",
+      "questionCount": 28
+    },
+    {
+      "name": "Pythagoras' Theorem",
+      "filename": "pythagoras__theorem.json",
+      "questionCount": 8
+    },
+    {
+      "name": "Data Collection",
+      "filename": "data_collection.json",
+      "questionCount": 5
+    },
+    {
+      "name": "Data Representation",
+      "filename": "data_representation.json",
+      "questionCount": 106
+    },
+    {
+      "name": "Measures of Central Tendency",
+      "filename": "measures_of_central_tendency.json",
+      "questionCount": 51
+    },
+    {
+      "name": "Probability",
+      "filename": "probability.json",
+      "questionCount": 46
+    }
+  ]
+}

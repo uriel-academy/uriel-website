@@ -1,0 +1,418 @@
+{
+  "totalQuestions": 82,
+  "categorizedQuestions": 80,
+  "unclassifiedQuestions": 2,
+  "classificationRate": "97.6",
+  "classifications": [
+    {
+      "questionId": "creativeArts_2024_1",
+      "topic": "Digital Art Basics",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_10",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_11",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_12",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_13",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_14",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_15",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_16",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_17",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_18",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_19",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_2",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_20",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_21",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_22",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_23",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_24",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_25",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_26",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_27",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_28",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_29",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_3",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_30",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_31",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_32",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_33",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_34",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_35",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_36",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_37",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_38",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_39",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_4",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_40",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_5",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_6",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_7",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_8",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2024_9",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_1",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_10",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_11",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_12",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_13",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_14",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_15",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_16",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_17",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_18",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_19",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_2",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_20",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_21",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_22",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_23",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_24",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_25",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_26",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_27",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_28",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_29",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_3",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_30",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_31",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_32",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_4",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_5",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_6",
+      "topic": "Digital Art Basics",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_7",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_8",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "creativeArts_2025_9",
+      "topic": "Design Process",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_creative_arts_2024_q1",
+      "topic": "Drawing",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_creative_arts_2024_q2",
+      "topic": "Drama",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_creative_arts_2024_q3",
+      "topic": "unclassified",
+      "reason": "Insufficient keyword matches"
+    },
+    {
+      "questionId": "theory_creative_arts_2024_q4",
+      "topic": "Music",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_creative_arts_2024_q5",
+      "topic": "Music",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_creative_arts_2024_q6",
+      "topic": "Dance",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_creative_arts_2024_q7",
+      "topic": "Dance",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_creative_arts_2025_q1",
+      "topic": "Drawing",
+      "reason": "Intelligent keyword matching with scoring"
+    },
+    {
+      "questionId": "theory_creative_arts_2025_q2",
+      "topic": "unclassified",
+      "reason": "Insufficient keyword matches"
+    },
+    {
+      "questionId": "theory_creative_arts_2025_q3",
+      "topic": "Sculpture & Modelling",
+      "reason": "Intelligent keyword matching with scoring"
+    }
+  ]
+}

@@ -1,0 +1,557 @@
+{
+  "topic": "Ecosystems",
+  "totalQuestions": 18,
+  "questions": [
+    {
+      "id": "integrated_science_1990_q16",
+      "questionText": "All of the following are herbivores except",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 16,
+      "options": [
+        "A. sheep",
+        "B. dog",
+        "C. goat",
+        "D. grasscutter",
+        "E. rabbit"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 16 from the 1990 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "Ecosystems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1994_q15",
+      "questionText": "Which of the following is not a characteristic of all living organisms",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 15,
+      "options": [
+        "A. Respiration",
+        "B. Reproduction",
+        "C. Photosynthesis",
+        "D. Feeding",
+        "E. Excretion"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 15 from the 1994 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "Ecosystems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2002_q20",
+      "questionText": "Which of the following characteristics are common to all living things?\n\nI. Response to stimuli.II. RespirationIII. Movement from place to placeIV. Grow",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 20,
+      "options": [
+        "A. I and II only",
+        "B. I and III only",
+        "C. I, II and III only",
+        "D. I, II and IV only"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 20 from the 2002 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Ecosystems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2002_q33",
+      "questionText": "The major cause of pollution at a stone quarry is",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 33,
+      "options": [
+        "A. dust.",
+        "B. human waste.",
+        "C. acid disposal.",
+        "D. smoke."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 33 from the 2002 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Ecosystems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2006_q14",
+      "questionText": "Which of the following life processes leads to the release of energy?",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 14,
+      "options": [
+        "A. Absorption of food",
+        "B. Digestion of food",
+        "C. Photosynthesis",
+        "D. Respiration"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 14 from the 2006 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Ecosystems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2009_q17",
+      "questionText": "Which of the following life processes is not performed by all living things?",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 17,
+      "options": [
+        "A. Excretion",
+        "B. Photosynthesis",
+        "C. Reproduction",
+        "D. Respiration"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 17 from the 2009 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Ecosystems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2010_q14",
+      "questionText": "Which of the following statements about bush fires is/are true?\n\nI. They cause air pollutionII. They deplete vegetation coverIII. They contribute to global warming",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 14,
+      "options": [
+        "A. I only",
+        "B. II only",
+        "C. II and III only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 14 from the 2010 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "Ecosystems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2013_q10",
+      "questionText": "External respiration in living organisms is also known as",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 10,
+      "options": [
+        "A. aerobic respiration.",
+        "B. anaerobic respiration.",
+        "C. gaseous respiration.",
+        "D. tissue respiration."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 10 from the 2013 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Ecosystems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2013_q13",
+      "questionText": "One way of ensuring that organisms are not endangered is to",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 13,
+      "options": [
+        "A. allow them to be hunted.",
+        "B. allow their predators to outnumber them.",
+        "C. protect their habitats.",
+        "D. pollute their habitats."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 13 from the 2013 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Ecosystems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2013_q38",
+      "questionText": "Which of the following human activities maintains the carbon cycle?",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 38,
+      "options": [
+        "A. Bush burning",
+        "B. Felling of trees",
+        "C. Release of fumes from factories",
+        "D. Replanting of trees felled as timber"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 38 from the 2013 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Ecosystems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2015_q30",
+      "questionText": "The component of a living cell responsible for respiration is",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 30,
+      "options": [
+        "A. chloroplast",
+        "B. mitochondrion",
+        "C. nucleus",
+        "D. vacuole"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 30 from the 2015 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Ecosystems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2020_q20",
+      "questionText": "The process by which metabolic wastes are removed from the body is called",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 20,
+      "options": [
+        "A. respiration",
+        "B. excretion",
+        "C. ingestion",
+        "D. egestion"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 20 from the 2020 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Ecosystems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2020_q5",
+      "questionText": "Which of the following processes removes carbon from the atmosphere?",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 5,
+      "options": [
+        "A. Respiration",
+        "B. Burning",
+        "C. Decomposition",
+        "D. Photosynthesis"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 5 from the 2020 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Ecosystems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2022_q26",
+      "questionText": "Green plants have the ability to make their own food hence they are known as",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 26,
+      "options": [
+        "A. producers.",
+        "B. parasites.",
+        "C. consumers.",
+        "D. decomposers."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 26 from the 2022 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Ecosystems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2022_q5",
+      "questionText": "Which of the following processes is an example of a physical change?",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 5,
+      "options": [
+        "A. Fermentation of food",
+        "B. Respiration",
+        "C. Magnetization of iron",
+        "D. Lighting a match"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 5 from the 2022 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Ecosystems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2024_q17",
+      "questionText": "The consequences of the greenhouse effect on humans includeI. flooding of coastal citiesII. desertification of fertile areasIII. increased number of stormsIV. increased use of fossil fuels",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 17,
+      "options": [
+        "A. I, II, III and IV",
+        "B. II and III only",
+        "C. I, II and III only",
+        "D. I and II only"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 17 from the 2024 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Ecosystems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2024_q20",
+      "questionText": "Which of the following natural cycles directly involves the sun?I. Carbon cycleII. Water cycleIII. Nitrogen cycle",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 20,
+      "options": [
+        "A. I, II and III",
+        "B. I and II only",
+        "C. II and III only",
+        "D. I only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 20 from the 2024 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Ecosystems"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2011_q2",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nWhat are ruminants?\n\nii)\n\n \n\nGive two examples of ruminants.\n\nb)\n\n \n\ni)\n\n \n\nWhat is force?\n\nii)\n\n \n\nState two effects of forces on the body.\n\nc)\n\n \n\ni)\n\n \n\nMention two ways in which the carbon cycle can be maintained.\n\nii)\n\n \n\nState one environmental effect when the carbon cycle is disrupted.\n\nd)\n\n \n\ni)\n\n \n\nMention the three sub-atomic particles.\n\nii)\n\n \n\nState the relative charge on each of the three sub-atomic particles mentioned in (d) (i) above.\n\niii)\n\n \n\nName the particle formed when an atom loses an electron.",
+      "type": "essay",
+      "year": "2011",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2011 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Ecosystems"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "topic": "Food Preparation",
+  "questions": [
+    {
+      "id": "career_technology_2025_q19",
+      "questionText": "Whilst cereals, fats and oils provide energy to the body, fruits and vegetables provide",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2025",
+      "section": "A",
+      "questionNumber": 19,
+      "options": [
+        "A. growth.",
+        "B. safety.",
+        "C. repair.",
+        "D. protection."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 19 from the 2025 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2025"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2025",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    },
+    {
+      "id": "career_technology_2025_q30",
+      "questionText": "The structure helps to",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2025",
+      "section": "A",
+      "questionNumber": 30,
+      "options": [
+        "A. reduce weight.",
+        "B. increase stability.",
+        "C. make unit attractive.",
+        "D. make handling easier."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 30 from the 2025 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2025"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2025",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    }
+  ],
+  "questionCount": 2
+}

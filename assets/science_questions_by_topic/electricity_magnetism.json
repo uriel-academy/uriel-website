@@ -1,0 +1,676 @@
+{
+  "topic": "Electricity & Magnetism",
+  "totalQuestions": 22,
+  "questions": [
+    {
+      "id": "integrated_science_1990_q25",
+      "questionText": "The shape of a child’s nose may resemble that of the mother due to",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 25,
+      "options": [
+        "A. heredity",
+        "B. similarity",
+        "C. reflection",
+        "D. familiarity",
+        "E. attraction"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 25 from the 1990 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "Electricity & Magnetism"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1998_q30",
+      "questionText": "Calculate the voltage across a wire of resistance 4 ohms if 3 amperes of current is passed through it.",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 30,
+      "options": [
+        "A. 0.75 V",
+        "B. 1.00 V",
+        "C. 1.33 V",
+        "D. 7.00 V",
+        "E. 12.00 V"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 30 from the 1998 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Electricity & Magnetism"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1999_q35",
+      "questionText": "A plastic pen on rubbing in the hair attracts pieces of paper. What force is responsible for the attraction?",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 35,
+      "options": [
+        "A. Electrostatic force",
+        "B. Frictional force",
+        "C. Gravitational force",
+        "D. Magnetic force",
+        "E. Centripetal force"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 35 from the 1999 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Electricity & Magnetism"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2000_q26",
+      "questionText": "The attracting power of magnets is greatest at the",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 26,
+      "options": [
+        "A. centre.",
+        "B. edges.",
+        "C. poles.",
+        "D. sides.",
+        "E. surface."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 26 from the 2000 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Electricity & Magnetism"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2006_q5",
+      "questionText": "When the north poles of two magnets are brought together they",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 5,
+      "options": [
+        "A. attract each other.",
+        "B. repel each other.",
+        "C. first attract and then repel each other.",
+        "D. have no effect on each other."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 5 from the 2006 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Electricity & Magnetism"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2010_q34",
+      "questionText": "The use of resistance breeds of farm animals in controlling diseases is a",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 34,
+      "options": [
+        "A. biological control method.",
+        "B. chemical control method.",
+        "C. cultural control method.",
+        "D. physical control method."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 34 from the 2010 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "Electricity & Magnetism"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2012_q20",
+      "questionText": "Which of the following electronic components are used to produce oscillator circuits?I. TransistorII. InductorIII. Capacitor",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 20,
+      "options": [
+        "A. I and II only",
+        "B. I and III only",
+        "C. II and III only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 20 from the 2012 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Electricity & Magnetism"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2012_q31",
+      "questionText": "In electrical circuits, the component that protects appliances against high currents is the",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 31,
+      "options": [
+        "A. capacitor.",
+        "B. fuse.",
+        "C. resistor.",
+        "D. switch."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 31 from the 2012 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Electricity & Magnetism"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2014_q34",
+      "questionText": "In electronic circuits, LEDs are used to indicate the absence or presence of",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 34,
+      "options": [
+        "A. emitter and collector",
+        "B. electric current",
+        "C. p-n junction",
+        "D. voltage source"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 34 from the 2014 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Electricity & Magnetism"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2014_q38",
+      "questionText": "Which of the following effects is not a result of illegal connection of electricity?It can",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 38,
+      "options": [
+        "A. lead to fire outbreak",
+        "B. lead to frequent power cut-off",
+        "C. increase the flow of current in the supply chain",
+        "D. cause damage to electrical appliance"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 38 from the 2014 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Electricity & Magnetism"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2015_q4",
+      "questionText": "The importance of fuse in an electrical circuit is to",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 4,
+      "options": [
+        "A. regulate the voltage.",
+        "B. prevent damage to electrical appliances.",
+        "C. alter the flow of current in the circuit.",
+        "D. minimize the use of current."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 4 from the 2015 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Electricity & Magnetism"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2017_q25",
+      "questionText": "Which of the following changes normally occur during old age in humans?",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 25,
+      "options": [
+        "A. Grey hair starts appearing",
+        "B. Mental alertness increases",
+        "C. Broadening of the chest",
+        "D. Attraction to the the opposite sex"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 25 from the 2017 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Electricity & Magnetism"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2017_q5",
+      "questionText": "A rheostat is used in an electric circuit in order to",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 5,
+      "options": [
+        "A. increase electric current only.",
+        "B. decrease electric current only.",
+        "C. keep electric current constant.",
+        "D. increase and decrease electric current."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 5 from the 2017 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Electricity & Magnetism"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2019_q4",
+      "questionText": "In electronic circuits, LEDs are used to indicate the absence or presence of",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 4,
+      "options": [
+        "A. voltage source.",
+        "B. p-n junction.",
+        "C. electric current.",
+        "D. emitted and collector."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 4 from the 2019 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Electricity & Magnetism"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2020_q26",
+      "questionText": "The major charge carriers in p-type semiconductors are",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 26,
+      "options": [
+        "A. anions",
+        "B. electrons",
+        "C. holes",
+        "D. neutral"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 26 from the 2020 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Electricity & Magnetism"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2021_q38",
+      "questionText": "The current flowing through a resistor of resistance 10 ohms is 2.5",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 38,
+      "options": [
+        "A. What is the potential difference between the two terminals of the resistor?",
+        "A. 4V",
+        "B. 12.5 V",
+        "C. 25 V",
+        "D. 50 V"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 38 from the 2021 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Electricity & Magnetism"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2022_q8",
+      "questionText": "A capacitor is connected in a series circuit with LED, a battery and a switch. When the circuit is closed, the LED",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 8,
+      "options": [
+        "A. comes on and stays on.",
+        "B. flashes and goes off.",
+        "C. does not come on.",
+        "D. flashes and stays on."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 8 from the 2022 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Electricity & Magnetism"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2023_q31",
+      "questionText": "The current in a resistor is 3",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 31,
+      "options": [
+        "A. If the resistance of the resistor is 4 ohms, determine the potential difference across the resistor.",
+        "A. 0.75 V",
+        "B. 1.33 V",
+        "C. 7.00 V",
+        "D. 12.00 V"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 31 from the 2023 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Electricity & Magnetism"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2024_q31",
+      "questionText": "An electrical engineer was in your school to replace a 20 W bulb with a 50 W bulb.Use this information to answer the question belowThe 50 W bulb is likely toI. increase the brightness in the room.II. increase the amount of electricity consumed.III. destroy the habitat of pests.",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 31,
+      "options": [
+        "A. I, II and III",
+        "B. I and III only",
+        "C. II and III only",
+        "D. I and II only"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 31 from the 2024 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Electricity & Magnetism"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2024_q6",
+      "questionText": "Which of the following sets of devices operate on the principle of magnetism?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 6,
+      "options": [
+        "A. Loudspeakers, compass, alarms",
+        "B. Loudspeakers, alarms, LCD TV",
+        "C. Compass, loudspeakers, LCD TV",
+        "D. Compass, loudspeakers, LCD TV"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 6 from the 2024 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Electricity & Magnetism"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_1991_q4",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nName the gas which is used in both rusting and burning\n\n(ii)\n\n \n\nState two ways in which rusting can be prevented in everyday life.\n\n(b)\n\n \n\nClassify each of the following items as element, compound, mixture or colloid:\n\n(i)\n\n \n\nSodium chloride\n\n(ii)\n\n \n\nSugar solution\n\n(iii)\n\n \n\nFog\n\n(iv)\n\n \n\nHydrogen\n\n(v)\n\n \n\nSulphur\n\n(c)\n\n \n\n(i)\n\n \n\nUse any three of the following to form a food chain:\n\nMan, bird, green grass, goat, grasshopper\n\n(ii)\n\n \n\nName two diseases that can be controlled by immunization.\n\n(d)\n\n \n\n(i)\n\n \n\nA boy throws a stone vertically up into the air. What are the energy changes that take place as the stone falls to the ground?\n\n(ii)\n\n \n\nGive two appliances which use electromagnets in their operation\n\n(iii)\n\n \n\nList two ways in which a magnet can lose its magnetism.",
+      "type": "essay",
+      "year": "1991",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1991 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Electricity & Magnetism"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2022_q4",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nName the stages in the life cycle of a mosquito.\n\n(ii)\n\n \n\nName the stage at which feeding does not take place.\n\n(b)\n\n \n\nExplain briefly why air is regarded as a mixture.\n\n(c)\n\n \n\n(i)\n\n \n\nWhat is a magnetic pole?\n\n(ii)\n\n \n\nState two uses of temporary magnets.\n\n(d)\n\n \n\nGive four reasons for planting crops in rows.",
+      "type": "essay",
+      "year": "2022",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2022 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Electricity & Magnetism"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

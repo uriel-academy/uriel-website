@@ -1,0 +1,935 @@
+{
+  "topic": "Resources & Sustainability",
+  "totalQuestions": 31,
+  "questions": [
+    {
+      "id": "social_studies_1994_q39",
+      "questionText": "Which of the following economic activities does not cause deforestation in Ghana?",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 39,
+      "options": [
+        "A. Lumbering",
+        "B. Fishing",
+        "C. Crop Growing",
+        "D. Mining",
+        "E. Charcoal making"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 39 from the 1994 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1995_q37",
+      "questionText": "Which of the following cannot be considered as an environmental hazard?",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 37,
+      "options": [
+        "A. Desertification",
+        "B. Bush fires",
+        "C. Afforestation",
+        "D. Soil erosion",
+        "E. Air pollution"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 37 from the 1995 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2001_q37",
+      "questionText": "Preservation of fish can be done in the following ways except",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 37,
+      "options": [
+        "A. drying",
+        "B. salting",
+        "C. smoking",
+        "D. canning",
+        "E. boiling"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 37 from the 2001 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2001_q39",
+      "questionText": "Water pollution is caused by all the following except",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 39,
+      "options": [
+        "A. oil spillage",
+        "B. recycling of waste",
+        "C. sewage disposal",
+        "D. alluvial mining",
+        "E. oil drilling"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 39 from the 2001 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2004_q29",
+      "questionText": "Ghana is not economically independent because of her",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 29,
+      "options": [
+        "A. poor natural resources",
+        "B. low per capita income",
+        "C. poor banking practices",
+        "D. over-reliance on foreign loans"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 29 from the 2004 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2007_q13",
+      "questionText": "The most economical way to dispose of domestic and industrial waste is",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 13,
+      "options": [
+        "A. sieving",
+        "B. burning",
+        "C. recycling",
+        "D. dumping"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 13 from the 2007 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2007_q28",
+      "questionText": "One of the ways of ensuring sustainable development is to",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 28,
+      "options": [
+        "A. encourage subsistence agriculture",
+        "B. encourage religious worship",
+        "C. increase public holidays",
+        "D. protect public property"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 28 from the 2007 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2009_q27",
+      "questionText": "In order to fully develop our natural resources we must",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 27,
+      "options": [
+        "A. bring in experts from abroad",
+        "B. train our human resource",
+        "C. go for loans from abroad for farming",
+        "D. compel the youth to undertake farming"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 27 from the 2009 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2010_q34",
+      "questionText": "Motivation and supervision help in the efficient use of",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 34,
+      "options": [
+        "A. human resources",
+        "B. national resources",
+        "C. mineral resources",
+        "D. capital resources"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 34 from the 2010 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2011_q37",
+      "questionText": "Which of the following economic activities does not cause deforestation in Ghana?",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 37,
+      "options": [
+        "A. Crop growing",
+        "B. Lumbering",
+        "C. Fishing",
+        "D. Charcoal burning"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 37 from the 2011 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2013_q4",
+      "questionText": "A major environmental problem facing municipal and metropolitan assemblies in Ghana is",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 4,
+      "options": [
+        "A. waste management.",
+        "B. air pollution.",
+        "C. deforestation.",
+        "D. gully erosion"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 4 from the 2013 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2015_q31",
+      "questionText": "One major environment problem facing municipal and metropolitan assembles in Ghana is",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 31,
+      "options": [
+        "A. air pollution",
+        "B. deforestation",
+        "C. road accidents",
+        "D. waste management"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 31 from the 2015 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2015_q40",
+      "questionText": "The main aim of the National Road Safety Commission in Ghana is to protect",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 40,
+      "options": [
+        "A. capital resources",
+        "B. human resources",
+        "C. mineral resources",
+        "D. natural resources"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 40 from the 2015 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2016_q32",
+      "questionText": "The most economical way of disposing domestic and industrial waste is by",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 32,
+      "options": [
+        "A. burning",
+        "B. dumping",
+        "C. recycling",
+        "D. sieving"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 32 from the 2016 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2018_q20",
+      "questionText": "Conflicts that destroy lives and property must be prevented by",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 20,
+      "options": [
+        "A. security agents",
+        "B. all citizens",
+        "C. Environmental Protection Agency (EPA)",
+        "D. National Disaster Management Organization (NADMO)"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 20 from the 2018 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2018_q24",
+      "questionText": "Which of the following practices is the best way of conserving Ghana's forest?",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 24,
+      "options": [
+        "A. Growing of cover crops",
+        "B. Replanting of trees",
+        "C. Promoting the use of charcoal",
+        "D. Deforestation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 24 from the 2018 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2019_q1",
+      "questionText": "Environmental degradation is mainly caused by",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 1,
+      "options": [
+        "A. natural disasters.",
+        "B. human activities.",
+        "C. civil wars.",
+        "D. global warming."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 1 from the 2019 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2019_q7",
+      "questionText": "Which of the following does not constitute environmental degradation?",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 7,
+      "options": [
+        "A. Deforestation",
+        "B. Bush burning",
+        "C. Air pollution",
+        "D. Mixed farming"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 7 from the 2019 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2020_q12",
+      "questionText": "One major reason for Ghana's corporation with international bodies is that, she",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 12,
+      "options": [
+        "A. has the resources to help others in times of need.",
+        "B. respect her colonial masters.",
+        "C. does not want to be isolated in times of future needs.",
+        "D. needs to expand her foreign exchange."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 12 from the 2020 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2020_q21",
+      "questionText": "Which of the following resources must be increasingly used for the rapid development of the nation?",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 21,
+      "options": [
+        "A. Natural resources",
+        "B. Human resources",
+        "C. Local markets",
+        "D. External markets"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 21 from the 2020 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2020_q30",
+      "questionText": "In order to fully develop our natural resources, we must",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 30,
+      "options": [
+        "A. bring in experts from abroad",
+        "B. go for loans from abroad",
+        "C. train our human resources",
+        "D. compel our youth to undertake farming"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 30 from the 2020 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2021_q12",
+      "questionText": "Sustainable development in Ghana depends upon",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 12,
+      "options": [
+        "A. peace and stability.",
+        "B. untapped natural resources.",
+        "C. untapped natural resources.",
+        "D. University graduates."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 12 from the 2021 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2021_q2",
+      "questionText": "The best way of disposing industrial and domestic waste is by",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 2,
+      "options": [
+        "A. dumping.",
+        "B. burning.",
+        "C. burying.",
+        "D. recycling."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 2 from the 2021 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2024_q18",
+      "questionText": "In 1957 the people of Ghana gained independence from the British colonial rule after a long political struggle. What was the main reason for Ghana's independence? To",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 18,
+      "options": [
+        "A. make Ghanaian culture and traditions superior to the British",
+        "B. gain economic freedom and control our natural resources",
+        "C. adopt a new political system and form a government",
+        "D. unite with other African countries and form a single nation"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 18 from the 2024 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2024_q23",
+      "questionText": "The following factors affect Ghana's ability to exploit its natural resources effectively except",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 23,
+      "options": [
+        "A. inadequate capital resource.",
+        "B. limited technical expertise.",
+        "C. low level technology.",
+        "D. farming activities."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 23 from the 2024 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2024_q39",
+      "questionText": "A company is planning to build a soap factory in a rural area. The factory will provide jobs for the youth but may also pollute nearby rivers.Which of the following options best represents a sustainable development approach?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 39,
+      "options": [
+        "A. Build the factory with environmental impact assessment",
+        "B. Build the factory with some environmental considerations",
+        "C. Build the factory without environmental considerations",
+        "D. Reject the factory proposal to protect the environment"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 39 from the 2024 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2025_q23",
+      "questionText": "A lot of foreigners visit Ghana yearly to see beautiful sceneries. By this, they contribute to the economy through",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 23,
+      "options": [
+        "A. exploitation of natural resources.",
+        "B. exploitation of culture.",
+        "C. revenue generation and foreign exchange.",
+        "D. developing infrastructure only."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 23 from the 2025 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2001_q5",
+      "questionText": "a)\n\n \n\nMention four causes of desertification in West Africa.\n\nb)\n\n \n\nWhat measures can be taken to control desertification in West Africa?",
+      "type": "essay",
+      "year": "2001",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2001 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2007_q5",
+      "questionText": "a)\n\n \n\nMention four natural resources of a country.\n\nb)\n\n \n\nIn what four ways can the natural resources of Ghana be exploited and used more efficiently?",
+      "type": "essay",
+      "year": "2007",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2007 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2015_q1",
+      "questionText": "a)\n\n \n\nDescribe four bad effects of deforestation.\n\nb)\n\n \n\nIn what four ways can deforestation be minimized in Ghana?",
+      "type": "essay",
+      "year": "2015",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2020_q5",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nList four types of natural resources in Ghana\n\nii)\n\n \n\nGive an example each of the natural resources listed in (a)(i)\n\nb)\n\n \n\nIn what four ways can the use of natural resources in Ghana be sustained?",
+      "type": "essay",
+      "year": "2020",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2020 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Resources & Sustainability"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

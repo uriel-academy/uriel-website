@@ -1,0 +1,2315 @@
+{
+  "topic": "Nouns & Pronouns",
+  "questions": [
+    {
+      "id": "ga_2022_q13",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Mɛɛ tsakemɔ anaa yɛ Afuabe mli?",
+      "questionNumber": 13,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865165,
+        "_nanoseconds": 870000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Hulɔ tsoɔ gbaŋgbaŋ.",
+        "B. Jeŋ feɔ fuu.",
+        "C. Kɔyɔɔ tswaa waa.",
+        "D. Nugbɔ shwaa herebii."
+      ],
+      "correctAnswer": "B. Jeŋ feɔ fuu."
+    },
+    {
+      "id": "ga_2022_q14",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Miji Ga nyɔji lɛ mli Kai loo Mansa.",
+      "questionNumber": 14,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865165,
+        "_nanoseconds": 870000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Abɛibe",
+        "B. Otsokrikri",
+        "C. Alemle",
+        "D. Otukwajaŋ"
+      ],
+      "correctAnswer": "B. Otsokrikri"
+    },
+    {
+      "id": "ga_2022_q15",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Mi pɛ ji nyɔŋ ni hiɛ kooloo gbɛi.",
+      "questionNumber": 15,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865165,
+        "_nanoseconds": 870000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Otsokrikri",
+        "B. Abɛibe",
+        "C. Agbɛinaa",
+        "D. Otukwajaŋ"
+      ],
+      "correctAnswer": "A. Otsokrikri"
+    },
+    {
+      "id": "ga_2022_q16",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Nu nɛɔ yɛ mimli shi akɛ ŋulami gbɛi wo mi.",
+      "questionNumber": 16,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865165,
+        "_nanoseconds": 870000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Agbiɛnaa",
+        "B. Otukwajaŋ",
+        "C. Manyawale",
+        "D. Maawɛɛ"
+      ],
+      "correctAnswer": "A. Agbiɛnaa"
+    },
+    {
+      "id": "ga_2022_q17",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Kɛ okɛ mo ko jɛ tsɛ kɛ nyɛ lɛ, omɛni ni?",
+      "questionNumber": 17,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865165,
+        "_nanoseconds": 870000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Tsɛbi",
+        "B. Nyɛmi",
+        "C. Suɔlɔ",
+        "D. Nyɛbi"
+      ],
+      "correctAnswer": "B. Nyɛmi"
+    },
+    {
+      "id": "ga_2022_q18",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Kɛ atsɛɔ mɔ ko Kwashi lɛ, belɛ afɔ lɛ ...",
+      "questionNumber": 18,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865165,
+        "_nanoseconds": 870000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Soo",
+        "B. Sohaa",
+        "C. Hɔɔ",
+        "D. Hugbaa"
+      ],
+      "correctAnswer": "D. Hugbaa"
+    },
+    {
+      "id": "ga_2022_q19",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Yoo ni esɛɛbii enyɔ ji onyɛ lɛ, omɛni ni?",
+      "questionNumber": 19,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865165,
+        "_nanoseconds": 870000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Onaa",
+        "B. Onyɛkwɛ",
+        "C. Onyɛnukpa",
+        "D. Onyɛfio"
+      ],
+      "correctAnswer": "C. Onyɛnukpa"
+    },
+    {
+      "id": "ga_2022_q2",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Yɛ fɔmɔnaatoo naa lɛ, kromɔ binuu lɛ atsɛɔ lɛ .......",
+      "questionNumber": 2,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865165,
+        "_nanoseconds": 870000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Atɛ",
+        "B. Tɛte",
+        "C. Kwei",
+        "D. ŋmai"
+      ],
+      "correctAnswer": "B. Tɛte"
+    },
+    {
+      "id": "ga_2022_q20",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Ataa Sai bii lɛ amɛ mɛni ji Ataa Sai nyɛmiyoo nukpa Bɔle?",
+      "questionNumber": 20,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865165,
+        "_nanoseconds": 870000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Naa",
+        "B. Nyɛnukpa",
+        "C. Nyɛkwɛ",
+        "D. Nyɛ"
+      ],
+      "correctAnswer": "B. Nyɛnukpa"
+    },
+    {
+      "id": "ga_2022_q21",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Tsutsu lɛ namɛi yeɔ saji?",
+      "questionNumber": 21,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865165,
+        "_nanoseconds": 870000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Maŋtsɛmɛi",
+        "B. Lɔyafoi",
+        "C. Tsofatsɛmɛi",
+        "D. Yeimeji"
+      ],
+      "correctAnswer": "A. Maŋtsɛmɛi"
+    },
+    {
+      "id": "ga_2022_q22",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Atsɛɔ mɛi ni ekpe kɛ miiye sane yɛ maŋtsɛ koishi akɛ ...",
+      "questionNumber": 22,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865165,
+        "_nanoseconds": 870000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. ajinafoi",
+        "B. kojolɔi",
+        "C. bɛgwafoi",
+        "D. asrafoi"
+      ],
+      "correctAnswer": "A. ajinafoi"
+    },
+    {
+      "id": "ga_2022_q23",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Atsɛɔ mɔ ko ni tsɔɔ bɔ ni nɔ ko tee nɔ yɛ saneyeli mli akɛ",
+      "questionNumber": 23,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865165,
+        "_nanoseconds": 870000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. ajinafonyo.",
+        "B. sabefeelɔ.",
+        "C. naawielɔ.",
+        "D. odasefonyo."
+      ],
+      "correctAnswer": "C. naawielɔ."
+    },
+    {
+      "id": "ga_2022_q24",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Tsɔɔmɔ nɔ hewɔ ni afaaa mɔ ko yi nɔ daa, asaŋ ajieee lɛ shi enyɛɔ etsuɔ shikwɛɛ nitsumɔ ...",
+      "questionNumber": 24,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865165,
+        "_nanoseconds": 870000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. afɔ lɛ awo nitsumɔ lɛ mli",
+        "B. anaaa nitsumɔ lɛ he sɛɛ",
+        "C. abilaa kpitioo kpitioo yɛ nitsumɔ lɛ mli",
+        "D. asumɔɔɔ nakai nitsumɔ lɛ"
+      ],
+      "correctAnswer": "A. afɔ lɛ awo nitsumɔ lɛ mli"
+    },
+    {
+      "id": "ga_2022_q25",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Afeɔ enɛmɛi fɛɛ kɛtsɔɔ hiɛ dani awoɔ yoo yi nyɔmɔ bɛja ...",
+      "questionNumber": 25,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865165,
+        "_nanoseconds": 870000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. agboshimɔ",
+        "B. kpeemɔ",
+        "C. kplɛmɔ",
+        "D. shidaa"
+      ],
+      "correctAnswer": "D. shidaa"
+    },
+    {
+      "id": "ga_2022_q26",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Namɔ ji boi ekpaa yoo? Yoo ni ...",
+      "questionNumber": 26,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865165,
+        "_nanoseconds": 870000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. keɔ mɔ ni ekpaa ekpaa",
+        "B. hɔɔ mama boi",
+        "C. gbala eye emu",
+        "D. buɔ mamai srɔtoi srɔtoi"
+      ],
+      "correctAnswer": "C. gbala eye emu"
+    },
+    {
+      "id": "ga_2022_q27",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Kɛji nuu ko jus hi ekɛ mɔ ko ŋa na nɔkofeemɔ ni amɔ lɛ lɛ, aheɔ nook yɛ edɛŋ dani aheɔ ayifale hu. Mɛni ni?",
+      "questionNumber": 27,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865165,
+        "_nanoseconds": 870000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Bɛlɛ",
+        "B. Duŋsa",
+        "C. Mama",
+        "D. Samfee"
+      ],
+      "correctAnswer": "B. Duŋsa"
+    },
+    {
+      "id": "ga_2022_q28",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Shwɛmɔ lalai haa ...",
+      "questionNumber": 28,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865165,
+        "_nanoseconds": 870000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. mɔ mli fuɔ",
+        "B. etɔɔɔ mɔ",
+        "C. shwɛmɔ ŋɔɔ",
+        "D. shwɛmɔ jieɔ mɔ tsine"
+      ],
+      "correctAnswer": "C. shwɛmɔ ŋɔɔ"
+    },
+    {
+      "id": "ga_2022_q30",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Yɛ ŋkpaiyeli mli lɛ, anyɛɔ adamɔɔ shi, asɔɔ shi, akulaa shi loo ...",
+      "questionNumber": 30,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865165,
+        "_nanoseconds": 870000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. eteɔ shi",
+        "B. ataa shi",
+        "C. atumɔɔ shi",
+        "D. kaa shi"
+      ],
+      "correctAnswer": "B. ataa shi"
+    },
+    {
+      "id": "ga_2022_q31",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Namɛi yeɔ Hogbetsotso afi lɛ?",
+      "questionNumber": 31,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Shiŋkpabii",
+        "B. Aŋulamɛi",
+        "C. Guabii",
+        "D. Adamɛi"
+      ],
+      "correctAnswer": "B. Aŋulamɛi"
+    },
+    {
+      "id": "ga_2022_q33",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Dagombabii kɛ ... afiyeli lɛ shwɛɛɛ kwraa.",
+      "questionNumber": 33,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Damba",
+        "B. Hogbetsotso",
+        "C. Kundum",
+        "D. Odwira"
+      ],
+      "correctAnswer": "A. Damba"
+    },
+    {
+      "id": "ga_2022_q35",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Kɛji asaa maŋtsɛ ni eta jaraŋ lɛ, nibii ni anaa yɛ ehe lɛ, ekome ji ...",
+      "questionNumber": 35,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. hiŋmɛiglase",
+        "B. samfee",
+        "C. akekre",
+        "D. kla"
+      ],
+      "correctAnswer": "C. akekre"
+    },
+    {
+      "id": "ga_2022_q36",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Blema lɛ, mɛi ni juɔ maŋtsɛ he ehaa lɛ ji ...",
+      "questionNumber": 36,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. hii onukpai",
+        "B. eŋa",
+        "C. yeimeji",
+        "D. enanemɛi"
+      ],
+      "correctAnswer": "C. yeimeji"
+    },
+    {
+      "id": "ga_2022_q37",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Blema lɛ, aheɔ ayeɔ akɛ, kɛji gbekɛ ko yakwɛ gbonyo lɛ ...",
+      "questionNumber": 37,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. ebaana sisa",
+        "B. ehe baaye",
+        "C. ehiɛ baatsɔ afa",
+        "D. elaŋmɔ baakpɔtɔ"
+      ],
+      "correctAnswer": "D. elaŋmɔ baakpɔtɔ"
+    },
+    {
+      "id": "ga_2022_q38",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Faa ni abuuu lɛ lɛ, no ...",
+      "questionNumber": 38,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. joɔ",
+        "B. ŋɔɔ",
+        "C. shaa mɔ",
+        "D. shaa bo"
+      ],
+      "correctAnswer": "C. shaa mɔ"
+    },
+    {
+      "id": "ga_2022_q39",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Kɛji okɛɛ okome obaaye lɛ ...",
+      "questionNumber": 39,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. aŋmɛɔ he ahaa bo",
+        "B. eshɛɔ bo musu moŋ",
+        "C. kwɛmɔ kɛkɛ akwɛɔ bo",
+        "D. oyeɔ ni odɔɔ fu"
+      ],
+      "correctAnswer": "D. oyeɔ ni odɔɔ fu"
+    },
+    {
+      "id": "ga_2022_q40",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Wuɔ kɛ tumo bɛ shidaa lɛ ... ni.",
+      "questionNumber": 40,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. nitsumɔ ŋamɔ",
+        "B. shidaa ŋamɔ nɔheremɔ",
+        "C. daa ŋamɔ",
+        "D. fɔmɔ ŋamɔ"
+      ],
+      "correctAnswer": "B. shidaa ŋamɔ nɔheremɔ"
+    },
+    {
+      "id": "ga_2022_q7",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Kɛji okwaafonyo kpa abele lɛ akɛtoɔ ... mli",
+      "questionNumber": 7,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865165,
+        "_nanoseconds": 870000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. shwapo",
+        "B. tsu",
+        "C. adeka",
+        "D. aboŋo"
+      ],
+      "correctAnswer": "D. aboŋo"
+    },
+    {
+      "id": "ga_2022_q8",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Afɔɔ mɔ awoɔ nitsumɔi nɛɛ fɛɛ mli bɛja ...",
+      "questionNumber": 8,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865165,
+        "_nanoseconds": 870000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. gbɔbimɔ",
+        "B. polisiyeli",
+        "C. tɛŋdaakpamɔ",
+        "D. wuoyaa"
+      ],
+      "correctAnswer": "B. polisiyeli"
+    },
+    {
+      "id": "ga_2022_q9",
+      "year": 2022,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Tɛŋdaa lɛ tsɔɔ ... mli kɛ boteɔ sasɛŋ mli",
+      "questionNumber": 9,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865165,
+        "_nanoseconds": 870000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. ododobeŋ",
+        "B. kpaa",
+        "C. bu",
+        "D. gbɛ"
+      ],
+      "correctAnswer": "A. ododobeŋ"
+    },
+    {
+      "id": "ga_2023_q1",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Kɛji mɔ ko jɛ gbɛfaa eba lɛ, aflaaa lɛ ja aha lɛ ... da.",
+      "questionNumber": 1,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. sɛi kɛ nu",
+        "B. niyenii kɛ nu",
+        "C. kɔmi kɛ shitɔ",
+        "D. nu kɛ able"
+      ],
+      "correctAnswer": "A. sɛi kɛ nu"
+    },
+    {
+      "id": "ga_2023_q10",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Mitsɛ Ataa Ofori nii ji Ataa Akpɔ. Ataa Akpɔ feɔ ...",
+      "questionNumber": 10,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. minanashishi",
+        "B. minanakaka",
+        "C. minii",
+        "D. minanakansoa"
+      ],
+      "correctAnswer": "D. minanakansoa"
+    },
+    {
+      "id": "ga_2023_q11",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Te atseɔ maŋtsɛ fai ni ebuɔ lɛ tɛŋŋ?",
+      "questionNumber": 11,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Akekre",
+        "B. Sɛŋfai",
+        "C. kotofai",
+        "D. kuliŋbai"
+      ],
+      "correctAnswer": "A. Akekre"
+    },
+    {
+      "id": "ga_2023_q12",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Mɛɛ maŋ lumɔ taa gbatsu naa?",
+      "questionNumber": 12,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Asafoiatsɛ",
+        "B. Maŋkralo",
+        "C. Wulɔmɔ",
+        "D. Shipi"
+      ],
+      "correctAnswer": "C. Wulɔmɔ"
+    },
+    {
+      "id": "ga_2023_q14",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Te nibii nɛɛ ateŋ nɔ ni adesatalɔ hiɛɔ be mli ni eeta adesa yɛ jara nɔ?",
+      "questionNumber": 14,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Tsi",
+        "B. Tu",
+        "C. Tso",
+        "D. Bɔlɔ"
+      ],
+      "correctAnswer": "C. Tso"
+    },
+    {
+      "id": "ga_2023_q15",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Wuɔbi ni nyiɛɔ enyɛ nane he lɛ, emiɔ aga shwuɔ. Abɛ nɛɛ wieɔ ... he",
+      "questionNumber": 15,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. heshitswaa",
+        "B. humifeemɔ",
+        "C. hiɛnɔkamɔ",
+        "D. mɔdeŋbɔɔ"
+      ],
+      "correctAnswer": "B. humifeemɔ"
+    },
+    {
+      "id": "ga_2023_q16",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Akpaaa mɔ ... aŋaaa mɔ.",
+      "questionNumber": 16,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. mama",
+        "B. atade",
+        "C. mɔ shi",
+        "D. fai"
+      ],
+      "correctAnswer": "A. mama"
+    },
+    {
+      "id": "ga_2023_q17",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Mɔ ko kɛ eshigbeemɔhe efeee ...",
+      "questionNumber": 17,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. ehejuuuhe",
+        "B. enitsumɔhe",
+        "C. ewɔɔhe",
+        "D. eyelihe"
+      ],
+      "correctAnswer": "C. ewɔɔhe"
+    },
+    {
+      "id": "ga_2023_q2",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Mɔ folo ŋaa maŋ onukpa akɛ ...",
+      "questionNumber": 2,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. ha manye",
+        "B. he manye",
+        "C. te tɛŋŋ?",
+        "D. te oyɔɔ tɛŋŋ?"
+      ],
+      "correctAnswer": "A. ha manye"
+    },
+    {
+      "id": "ga_2023_q20",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Aharabata nyɔɔŋ lɛ nɔ lɛ, kɔyɔɔ gbiŋ ... ko tswaa.",
+      "questionNumber": 20,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. ŋmaii",
+        "B. ŋanii",
+        "C. huyɛɛ",
+        "D. blɛoo"
+      ],
+      "correctAnswer": "B. ŋanii"
+    },
+    {
+      "id": "ga_2023_q21",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Yɛ Otsokrikri nyɔɔŋ lɛ nɔ lɛ akɛni ... waa diɛŋtsɛ hewɔ lɛ, bai kɛ ŋa nɔ tsei gbiɔ wesee.",
+      "questionNumber": 21,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. hulu tsoɔ",
+        "B. nugbɔ nɛɔ",
+        "C. kɔɔyɔɔ tswaa",
+        "D. eyaa jara"
+      ],
+      "correctAnswer": "A. hulu tsoɔ"
+    },
+    {
+      "id": "ga_2023_q23",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Nibii ni he hiaa yɛ ŋkaiyeli mli lɛ eko eji ...",
+      "questionNumber": 23,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. able",
+        "B. akwei",
+        "C. ŋmɛ",
+        "D. daa"
+      ],
+      "correctAnswer": "D. daa"
+    },
+    {
+      "id": "ga_2023_q24",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Kɛji maŋ onukpa ko miiyee ŋkpai lɛ, ejieɔ ... yɛ etokota mli.",
+      "questionNumber": 24,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. eniji",
+        "B. enaji",
+        "C. ehiŋmɛi",
+        "D. emusu"
+      ],
+      "correctAnswer": "B. enaji"
+    },
+    {
+      "id": "ga_2023_q25",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Te wiemɔ hiao lɛ shishi lɛ?",
+      "questionNumber": 25,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Aba mli",
+        "B. Nakai",
+        "C. Lɛɛlɛŋ",
+        "D. Kaashe gbeyei"
+      ],
+      "correctAnswer": "A. Aba mli"
+    },
+    {
+      "id": "ga_2023_q26",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Yɛ ŋkpaiyeli mli lɛ mɛɛ hewalɛ tsɛ atsɛɔ klɛŋklɛŋ?",
+      "questionNumber": 26,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Sisa",
+        "B. Shikpɔŋ",
+        "C. Jemawɔji",
+        "D. Nyɔŋmɔ"
+      ],
+      "correctAnswer": "C. Jemawɔji"
+    },
+    {
+      "id": "ga_2023_q28",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Kɛji binuu kɛ enyɛ awo ni fɔ lɛ na bɔlɛ lɛ, ...",
+      "questionNumber": 28,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. etsɛ musu eha ehe",
+        "B. ebaana nii",
+        "C. ehiɛ baadi lɛ",
+        "D. ehiŋmɛi baajwa"
+      ],
+      "correctAnswer": "A. etsɛ musu eha ehe"
+    },
+    {
+      "id": "ga_2023_q29",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Nɔ ko yɛ eŋɔɔɔ ni ayeee hu shi kɛji onine sa he lɛ ja odɛŋ sa onaa.",
+      "questionNumber": 29,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Siklitɛ",
+        "B. Aiskrim",
+        "C. La",
+        "D. Abonua"
+      ],
+      "correctAnswer": "C. La"
+    },
+    {
+      "id": "ga_2023_q30",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Agbaa ajenu ejaakɛ ...",
+      "questionNumber": 30,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. afiteɔ be",
+        "B. ehaa miishɛ",
+        "C. etsiɔ hɔmɔ naa",
+        "D. ewoɔ mɔ anihao"
+      ],
+      "correctAnswer": "B. ehaa miishɛ"
+    },
+    {
+      "id": "ga_2023_q32",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Adesa toinɔwomɔ wiemɔ lɛ ji ...",
+      "questionNumber": 32,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. ajenu loo",
+        "B. mikata otoi sɛɛ",
+        "C. mita nyɛ loo",
+        "D. ha onaa aya"
+      ],
+      "correctAnswer": "C. mita nyɛ loo"
+    },
+    {
+      "id": "ga_2023_q33",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Kusum ni afeɔ kɛsaa yoo kɛhaa gbala mlibotemɔ ji ...",
+      "questionNumber": 33,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. yeianii",
+        "B. hiianii",
+        "C. otofoshii",
+        "D. toigbuu"
+      ],
+      "correctAnswer": "C. otofoshii"
+    },
+    {
+      "id": "ga_2023_q35",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Shikwɛɛ heboi sɔŋŋ nɛ bɛja ...",
+      "questionNumber": 35,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. kɔlaŋmɔɔ",
+        "B. mama kɛ adasaŋ",
+        "C. lapaŋmɔɔ",
+        "D. shɛɛti kɛ trɔsa"
+      ],
+      "correctAnswer": "D. shɛɛti kɛ trɔsa"
+    },
+    {
+      "id": "ga_2023_q37",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Gbɔmɛi nɛɛ ateŋ namɔ ji biyoo ni ji ekpaa?",
+      "questionNumber": 37,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Tsotsoo",
+        "B. Fofo",
+        "C. Badu",
+        "D. Ashami"
+      ],
+      "correctAnswer": "D. Ashami"
+    },
+    {
+      "id": "ga_2023_q38",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Tsɔɔmɔ gbɛi Ahia lɛ shishi",
+      "questionNumber": 38,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Etsɛ sumɔɔ nitsumɔ.",
+        "B. Etsɛ bɛ jeŋ.",
+        "C. Enyɛ efa gbɛ.",
+        "D. Enyɛ bɛ jeŋ"
+      ],
+      "correctAnswer": "B. Etsɛ bɛ jeŋ."
+    },
+    {
+      "id": "ga_2023_q4",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Bi klɛŋklɛŋ ni afɔ ji?",
+      "questionNumber": 4,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Kromɔ",
+        "B. Tsintɔ",
+        "C. Nakutso",
+        "D. Abanuma"
+      ],
+      "correctAnswer": "A. Kromɔ"
+    },
+    {
+      "id": "ga_2023_q40",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Mɛni gbi gbɛi akɛwoɔ gbekɛ nuu ni afɔ lɛ soo?",
+      "questionNumber": 40,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Kwaku",
+        "B. Kwami",
+        "C. Kwao",
+        "D. Kwashi"
+      ],
+      "correctAnswer": "C. Kwao"
+    },
+    {
+      "id": "ga_2023_q5",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Gbɛi ni baa nɛɛ fɛɛ lɛ, gbogbabi agbɛii bɛja ...",
+      "questionNumber": 5,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Owuade",
+        "B. Yakayoo",
+        "C. Abotsi",
+        "D. Dedei"
+      ],
+      "correctAnswer": "D. Dedei"
+    },
+    {
+      "id": "ga_2023_q6",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Miwu ji Ataa Oko, enyɛminuu Tawia ŋa ji Ofoole. Mi mɛni ji Ofoole?",
+      "questionNumber": 6,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Mikwafa",
+        "B. Miwuyo",
+        "C. Mishaayo",
+        "D. Minua"
+      ],
+      "correctAnswer": "A. Mikwafa"
+    },
+    {
+      "id": "ga_2023_q7",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Gbɛi ni nuu kɛhaa egbogbohekalɔ ji ...",
+      "questionNumber": 7,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. enyɛ",
+        "B. eŋa",
+        "C. eshaayoo",
+        "D. ebienyɛ"
+      ],
+      "correctAnswer": "B. eŋa"
+    },
+    {
+      "id": "ga_2023_q8",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Mitsɛ ji Ataa Kwei, minyɛ awo ji Awo Kaile. Mi mɛni ji Ataa Kwei kɛ Awo Kaile?",
+      "questionNumber": 8,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Miwekumɛi",
+        "B. Mishiatsɛmɛi",
+        "C. Mifɔlɔi",
+        "D. Minanemɛi"
+      ],
+      "correctAnswer": "C. Mifɔlɔi"
+    },
+    {
+      "id": "ga_2023_q9",
+      "year": 2023,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Beni Awo Atswei kɛ Ataa Ajei bahi shi lɛ, ekɛ binuu kome ba. Ataa Ajei mɛni ni Awo Atswei binuu lɛ?",
+      "questionNumber": 9,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Ebanuma",
+        "B. Ebinuu",
+        "C. Enabi",
+        "D. Eshieŋtsɛ"
+      ],
+      "correctAnswer": "A. Ebanuma"
+    },
+    {
+      "id": "ga_2024_q11",
+      "year": 2024,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Namɔ yeɔ sane ni ebaka wekumuu fɛɛ hiɛ?",
+      "questionNumber": 11,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Tsɛ",
+        "B. Nii",
+        "C. Wekunukpa",
+        "D. Jasetsɛ"
+      ],
+      "correctAnswer": "C. Wekunukpa"
+    },
+    {
+      "id": "ga_2024_q12",
+      "year": 2024,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Ataa Oblite kɛ Naa Lamiɔkɔ yɛ akɛ wekumɛi shi amɛjɛɛɛ musu kome mli. Mɛni osusuɔ akɛ fee amɛ wekumɛi?",
+      "questionNumber": 12,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Shika",
+        "B. Naanyobɔɔ",
+        "C. Gbalashihilɛ",
+        "D. Niyeli"
+      ],
+      "correctAnswer": "C. Gbalashihilɛ"
+    },
+    {
+      "id": "ga_2024_q15",
+      "year": 2024,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Mɛni akɛyoɔ wulɔmɔ yɛ maŋlumɛi ateŋ?",
+      "questionNumber": 15,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Afli ka enineŋ shi.",
+        "B. Etswa akwajaŋ.",
+        "C. Ekɛ ni yɛŋ pɛ ni saa ehe.",
+        "D. Lɛ ewieɔ yɛ gwabɔɔ mli."
+      ],
+      "correctAnswer": "C. Ekɛ ni yɛŋ pɛ ni saa ehe."
+    },
+    {
+      "id": "ga_2024_q16",
+      "year": 2024,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Wulɔmɔ gbatsu lɛ nihii nii kome ...",
+      "questionNumber": 16,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. nuu ni afeko lɛ hii anii eyaaa mli",
+        "B. yoo ni eku ewao mli pɛ yaa jɛmɛ",
+        "C. mɔ ni wooo tokota boteee jɛmɔ",
+        "D. mɔ ni awo lɛ kromɔ tsuŋ pɛ boteɔ jɛmɛ"
+      ],
+      "correctAnswer": "A. nuu ni afeko lɛ hii anii eyaaa mli"
+    },
+    {
+      "id": "ga_2024_q17",
+      "year": 2024,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Mɛi ni baa nɛɛ fɛɛ waa kɛtsɛseɔ maŋtsɛ hee ni awolɛ bɛja ...",
+      "questionNumber": 17,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. jaasetsɛ",
+        "B. otsaamɛ",
+        "C. wulɔmɔ",
+        "D. maŋkralo"
+      ],
+      "correctAnswer": "B. otsaamɛ"
+    },
+    {
+      "id": "ga_2024_q18",
+      "year": 2024,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Akpaa gbɛ akɛ otsaamɛ afee mɔ ko ni naa tse ejaakɛ ...",
+      "questionNumber": 18,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. ewieɔ maŋtsɛ lɛ naa yɛ gwabɔɔ ko mli",
+        "B. eyeɔ maŋtsɛ yɛ saneyeli mli",
+        "C. esa akɛ ewiemɔ lɛ fɛɛ afee agwaseaŋ nɔ sɔŋŋ",
+        "D. wɔsɛɛ lɛ ebaaye maŋtsɛ lɛ sɛɛ"
+      ],
+      "correctAnswer": "A. ewieɔ maŋtsɛ lɛ naa yɛ gwabɔɔ ko mli"
+    },
+    {
+      "id": "ga_2024_q19",
+      "year": 2024,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Wuolɛatsɛ ji lumɛi lɛ ateŋ mɔ ni ...",
+      "questionNumber": 19,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. kwɛɔ ŋshɔnaa kɛ ŋshɔ he nitsumɔi fɛɛ",
+        "B. ejawara maŋ lɛ",
+        "C. yeɔ sane",
+        "D. kojoɔ maŋtsɛ kɛji efee nɔ ni esaaa"
+      ],
+      "correctAnswer": "A. kwɛɔ ŋshɔnaa kɛ ŋshɔ he nitsumɔi fɛɛ"
+    },
+    {
+      "id": "ga_2024_q2",
+      "year": 2024,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Mɛɛ be mli ashiɔ Ga fɔmɔ bi ko otofo? Kɛji mɔ lɛ ...",
+      "questionNumber": 2,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. etee eklɛŋklɛŋ tsui asɛɛ",
+        "B. eklɛŋklɛŋ bɔlɛ",
+        "C. egbe sukuu naa",
+        "D. ele nihoomɔ"
+      ],
+      "correctAnswer": "A. etee eklɛŋklɛŋ tsui asɛɛ"
+    },
+    {
+      "id": "ga_2024_q20",
+      "year": 2024,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Mɛni ji nibii nɛɛ ekome nɔni akwɛɔ kɛwoɔ mɔ ko akɛ maŋtsɛ? Akwɛɔ kɛji mɔ lɛ",
+      "questionNumber": 20,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. eyɛ hefatalɔ",
+        "B. etee sukuu",
+        "C. eyɛ shika",
+        "D. kɛji ejɛ maŋtsɛyeli shia"
+      ],
+      "correctAnswer": "D. kɛji ejɛ maŋtsɛyeli shia"
+    },
+    {
+      "id": "ga_2024_q21",
+      "year": 2024,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Nitsumɔ kome ni akɛyoɔ Akwashɔŋtsɛ ji akɛ lɛ ...",
+      "questionNumber": 21,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. enyiɛɔ asafoŋbii lɛ ahiɛ yɛ ta be amli.",
+        "B. lɛ ji maŋtsɛ lɛ kpasalɔ",
+        "C. lɛ ehuɔ mumuŋ tai fɛɛ haa adesa",
+        "D. lɛ ekojoɔ maŋ saji ni kɔɔ wɔji kɛ wulɔmɔ lɛ he."
+      ],
+      "correctAnswer": "B. lɛ ji maŋtsɛ lɛ kpasalɔ"
+    },
+    {
+      "id": "ga_2024_q22",
+      "year": 2024,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Nɔ ko ni kla tsuɔ yɛ maŋtsɛ he ji, esaa maŋtsɛ lɛ niyenii naa dani maŋtsɛ lɛ yeɔ. Mɛni osusuɔ akɛ eji nɔ hewɔ? Ejaakɛ ...",
+      "questionNumber": 22,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. maŋtsɛ lɛ wala yɛ edɛŋ",
+        "B. lɛ ekwɛɔ maŋtsɛ lɛ",
+        "C. be fɛɛ be lɛ, esa akɛ lɛ egbo eha maŋtsɛ lɛ",
+        "D. ebɛje lɛ jogbaŋŋ kɛ tsofa"
+      ],
+      "correctAnswer": "A. maŋtsɛ lɛ wala yɛ edɛŋ"
+    },
+    {
+      "id": "ga_2024_q23",
+      "year": 2024,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Anaa kɔnsonati okadii nɛɛ fɛɛ yɛ Ga mli bɛja ...",
+      "questionNumber": 23,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. /b/",
+        "B. /g/",
+        "C. /c/",
+        "D. /f/"
+      ],
+      "correctAnswer": "C. /c/"
+    },
+    {
+      "id": "ga_2024_q26",
+      "year": 2024,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Anuɔ wiemɔ ni baa nɛɛ fɛɛ yɛ ŋkpaiyeli gbɛjianɔtoo bɛ ja ...",
+      "questionNumber": 26,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. alɔnte diŋŋ ko akafo wɔteŋ",
+        "B. gbɔ ni ba lɛ esɛɛ tuŋŋ ehiɛ faŋŋ",
+        "C. wɔyɛ wɔnu wɔkɔji anɔ ajɔ wɔ",
+        "D. afi aya ni enanina wɔ"
+      ],
+      "correctAnswer": "B. gbɔ ni ba lɛ esɛɛ tuŋŋ ehiɛ faŋŋ"
+    },
+    {
+      "id": "ga_2024_q27",
+      "year": 2024,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Be ni anu akɛ Adukwei efɔ lɛ, shiaŋbii lɛ eko tee eyasra lɛ ni ekɛɛ akɛ; onine nɔ ayilɔ. Enɛ tsɔɔ akɛ",
+      "questionNumber": 27,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. eye kunim",
+        "B. eye beŋ",
+        "C. efɔ nuu",
+        "D. efɔ yoo"
+      ],
+      "correctAnswer": "A. eye kunim"
+    },
+    {
+      "id": "ga_2024_q29",
+      "year": 2024,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Hulu ni tsoɔ waa lɛ ha atadei ni aka lɛ yɛ ...",
+      "questionNumber": 29,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. sakoo",
+        "B. hiahia",
+        "C. waa",
+        "D. jogbaŋŋ"
+      ],
+      "correctAnswer": "A. sakoo"
+    },
+    {
+      "id": "ga_2024_q3",
+      "year": 2024,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Kɛji awo otofo yoo loo nuu ko tsuŋ lɛ, atsɔɔ lɛ nibii babaoo. Nibii nɛɛ eko ji ...",
+      "questionNumber": 3,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. bɔ ni akɛ wu loo ŋa hiɔ shi",
+        "B. bɔ ni ahiɔ ŋmaa",
+        "C. bɔ ni atsuɔ nii",
+        "D. bɔ ni abuɔ mɔ"
+      ],
+      "correctAnswer": "D. bɔ ni abuɔ mɔ"
+    },
+    {
+      "id": "ga_2024_q30",
+      "year": 2024,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Moi nanemɛi lɛ fɛɛ bɔi lɛ ŋmɔlɔ be mli ni ana akɛ ekɛ ebɛku ni yeɔ nii lɛ. Tsɔɔmɔ nɔ heɔ ni amɛŋmɔɔ lɛ lɛ?",
+      "questionNumber": 30,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Akɛ abɛku yeee nii",
+        "B. Akɛ abɛku juɔ he pɛ",
+        "C. Akɛ abɛku kpaa muu",
+        "D. Akɛ abɛku ŋaa mɔ"
+      ],
+      "correctAnswer": "A. Akɛ abɛku yeee nii"
+    },
+    {
+      "id": "ga_2024_q32",
+      "year": 2024,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Kooloi nɛɛ fɛɛ ahe fɔɔ kaa yɛ adesatamɔ mli bɛja ...",
+      "questionNumber": 32,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. anaanu",
+        "B. jata",
+        "C. too",
+        "D. onufu"
+      ],
+      "correctAnswer": "C. too"
+    },
+    {
+      "id": "ga_2024_q33",
+      "year": 2024,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Nɔ kome ni akɛyoɔ wojiaŋsane ji akɛ ...",
+      "questionNumber": 33,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. ehiɛ tsakeɔ be fɛɛ be",
+        "B. ayɛ nɔtsɛ",
+        "C. ayɛ mɛi pɔtɛɛ ni ŋmaa",
+        "D. ayɛ mɛi pɔtɛɛ ni kaneɔ"
+      ],
+      "correctAnswer": "B. ayɛ nɔtsɛ"
+    },
+    {
+      "id": "ga_2024_q35",
+      "year": 2024,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Wojiaŋsane hiɛ sui nɛɛ fɛɛ bɛja ...",
+      "questionNumber": 35,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. ayɛ be ni aŋma",
+        "B. ayɛ mɔni ŋma",
+        "C. ayɛ wolo lɛ yitso",
+        "D. ahɔɔ kɛ jarawalɛ"
+      ],
+      "correctAnswer": "D. ahɔɔ kɛ jarawalɛ"
+    },
+    {
+      "id": "ga_2024_q37",
+      "year": 2024,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Ŋmɛnɛŋmɛnɛ lumɔyeli tamɔɔɔ blemabii anɔ lɛ ejaakɛ ...",
+      "questionNumber": 37,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. akɛ shikasuɔmɔ titri ni woleɔ amɛ ŋmɛnɛ",
+        "B. akwɛɔ mɔ pɔtɛɛ ni mɔ lɛ ji",
+        "C. akwɛɔ kɛji kpa ko yɛ egbɔmɔtso lɛ he",
+        "D. akwɛɔ nii ni eyɔɔ"
+      ],
+      "correctAnswer": "A. akɛ shikasuɔmɔ titri ni woleɔ amɛ ŋmɛnɛ"
+    },
+    {
+      "id": "ga_2024_q38",
+      "year": 2024,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Tsɔɔmɔ nitsumɔ ni mligbalalɔ tsuɔ yɛ sanemuu mli.",
+      "questionNumber": 38,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Egbalaa gbɛiwiemɔ lɛ mli",
+        "B. Egbalaa feemɔwiemɔ lɛ mli",
+        "C. Egbalaa feemɔ kɛ gbɛi lɛ mli",
+        "D. Egbalaa gbɛi kɛ sutsɔɔlɔ lɛ mli"
+      ],
+      "correctAnswer": "B. Egbalaa feemɔwiemɔ lɛ mli"
+    },
+    {
+      "id": "ga_2024_q4",
+      "year": 2024,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Afeɔ kusumi nɛɛ ateŋ ekome ahaa gbekɛ nuu ko ni eshɛ nuu.",
+      "questionNumber": 4,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Otseŋtse",
+        "B. Yishɛɛ",
+        "C. Kɔihamɔ",
+        "D. Dɛŋtuwoo"
+      ],
+      "correctAnswer": "D. Dɛŋtuwoo"
+    },
+    {
+      "id": "ga_2024_q40",
+      "year": 2024,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Nibii ni baa nɛɛ fɛɛ he fɔɔ kaa yɛ sukuu bɛja ...",
+      "questionNumber": 40,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. gbɛnaa hiɛmɔ",
+        "B. tsɔsemɔ",
+        "C. nikasemɔ",
+        "D. niyeli"
+      ],
+      "correctAnswer": "D. niyeli"
+    },
+    {
+      "id": "ga_2024_q7",
+      "year": 2024,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Naa Ayele wekumɛi bɔi tɔkemɔ akɛ Ayelenyɛ miifite kusum be mli ni amɛna akɛ jeee Ayeletsɛ ni kɛ Ayele ha Nii Yemo gbala lɛ. Mɛni ha wekumɛi lɛ bɔi tɔkemɔ lɛ? Ejaakɛ ...",
+      "questionNumber": 7,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Ayeletsɛ ekwɛɛɛ lɛ kɛjɛ egbekɛbii ashi tɔɔ.",
+        "B. Ayele tsɛ ni sa akɛ ekɛ lɛ aha.",
+        "C. Ayele tsɛ egbo.",
+        "D. Ayele tsɛ efa gbɛ."
+      ],
+      "correctAnswer": "B. Ayele tsɛ ni sa akɛ ekɛ lɛ aha."
+    },
+    {
+      "id": "ga_2024_q8",
+      "year": 2024,
+      "subject": "ga",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Nibii nɛɛ ateŋ ekome fata nɔ hewɔ ni aboteɔ gbla mli.",
+      "questionNumber": 8,
+      "difficulty": "medium",
+      "createdAt": {
+        "_seconds": 1762865166,
+        "_nanoseconds": 943000000
+      },
+      "createdBy": "admin_import",
+      "options": [
+        "A. Etsɔɔ akɛ oshɛ",
+        "B. Mpoatswaa",
+        "C. Shwiewoo",
+        "D. Ayeee nii yɛ maŋ mli ja shia"
+      ],
+      "correctAnswer": "C. Shwiewoo"
+    },
+    {
+      "id": "theory_ga_2022_q3",
+      "questionText": "Ha saji ni abibii lɛ fɛɛ hetoo. Ŋmaa hetoo lɛ yɛ hetoohamɔ wolo lɛ nɔ.\n\nTsɔɔmɔ wiemɔ weku mli ni wiemɔ ni afo eshishi yɛ sanemuu fɛɛ sanemuu mli lɛ yɔɔ.\n\na)\n\n \n\nWɔ skul yɛ maŋ lɛ mli.\n\nb)\n\n \n\nEŋmɔ yɛ jɔɔ yoo lɛ mli.\n\nc)\n\n \n\nGbekɛbii lɛ na amtsɛ.\n\nd)\n\n \n\nKooloi lɛ na wɔ ni amɛjo foi.\n\ne)\n\n \n\nŊmɛnɛ lɛ mite shi mra.\n\nŊmaa gbɛiwiemɔ ni yɔɔ sanemuu fɛɛ sanemuu mli.\n\nf)\n\n \n\nWɔkpe sɛɛ kɛtee sukuu.\n\ng)\n\n \n\nYeifɔyei pii amli jɔ.\n\nh)\n\n \n\nEsha ni etsɔ lamlu.\n\ni)\n\n \n\nMaŋoi pii yɛ jɛmɛ.\n\nj)\n\n \n\nMinyɛ wɔ vii.\n\nFeemɔ sanemuji nɛɛ dabi.\n\nk)\n\n \n\nBa biɛ!\n\nl)\n\n \n\nEsa akɛ wɔna datrɛfonyo lɛ nɔŋŋ.\n\nm)\n\n \n\nAmɛgbe niyeli lɛ naa.\n\nn)\n\n \n\nWɔbaana naa kɛ.\n\no)\n\n \n\nMitsɛ ha mi shika.\n\nSaamɔ oŋmala sanemuji nɛɛ ni okɛ niŋmaa mli okadii awowoo hei ni sa akɛ amɛhiɔ.\n\np)\n\n \n\nMɛɛbe mana bo ekoŋŋ\n\nq)\n\n \n\nAmɛye amɛnu ni amɛjo.\n\nr)\n\n \n\nWɔle akɛ wɔbaŋ\n\ns)\n\n \n\nTee shi\n\nt)\n\n \n\nTsɔɔlɔ lɛ kɛɛ, mikplɛŋ nɔ kɔkɔɔkɔ.",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "ga",
+      "subjectDisplay": "Ga",
+      "examType": "bece",
+      "year": "2022",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2022 Ga",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2022",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148619,
+        "_nanoseconds": 809000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148619,
+        "_nanoseconds": 809000000
+      }
+    },
+    {
+      "id": "theory_ga_2023_q2",
+      "questionText": "Kanemɔ sane ni baa nɛɛ, ni oha sanebimɔi ni nyiɛ sɛɛ lɛ fɛɛ hetoo.\n\nJeee nuu ko ni yɔɔ ŋamɛi enyɔ. Ekɛ eŋa nukpa lɛ hi shi afii enumɔ dani ekɛ mɔ ni ji enyɔ lɛ hi shi. Sɛɛkpee ŋa lɛ kene ni, shi onukpa lɛ yɛ bii etɛ.\n\nNuu lɛ hulɔ ni, eyɛ ŋmɔji wuji etɛ. Ekɛ enyɔ ha eŋamɛi lɛ koni amɛtsu mli nii. Mɔ ko mɔ ko tsuuu enaanyo nɔ mli nii fe akɛ enɔ pɛ. Yoo kene lɛ ŋmɔshi nibii shwere fe enienyɛ nɔ lɛ. Ena edɛŋ kpɔtɔɔ ni no ha ehiɛ kpa bi ni ebɛ lɛ nɔ. Ekɛ eshika lɛ eko heɔ atadei ewoɔ ebienyɛ bii lɛ.\n\nBei kplaŋŋ sɛɛ lɛ, hene nɛɛ yɔse akɛ ebienyɛ lɛ kɛ lɛ sharamɔ etsake kwraa. No hewɔ lɛ, ekpa nibii kpakpai ni efeɔ ni nomɛi haa ehiɛ baa nyam yɛ ebienyɛ lɛ hiɛ lɛ feemɔ.\n\nSane kome hu ji akɛ naakpɛɛ nɔ ko tee nɔ yɛ eŋmɔ lɛ mli. Kooloi komɛi bɔi eŋmɔshi nibii lɛ ahiɛ kpatamɔ. Egba nɔ ni yaa nɔ yɛ eŋmɔ lɛ mli lɛ etsɔɔ ewu.\n\nEwu lɛ shara shi kɛtee ŋmɔ lɛ mli eyakwɛ ehiŋmɛiŋ. Ena ofrote agbo ko ni miikpata ŋmɔshi nibii lɛ ahiɛ. Oya ni egbala etu lɛ, esusu lɛ ni etswa lɛ. Naakpɛɛ sane kome ji akɛ ofrote agbo lɛ tsake ehe etsɔ gbɔmɔ adesa ni je eŋa nukpa lɛ. Nuu lɛ jwɛŋmɔ shɛɛɛ nɔ ni ena lɛ he kwraa.\n\na)\n\n \n\nŊamɛi lɛ ateŋ namɔ ji kene?\n\nb)\n\n \n\nBii enyiɛ nuu lɛ yɔɔ?\n\nc)\n\n \n\nMɛni osusuɔ akɛ no hewɔ ni nuu lɛ kɛ eŋmɔji enyɔ lɛ ha eŋamɛi lɛ?\n\nd)\n\n \n\nMɛni ji wiemɔ shwere ni akɛtsu nii yɛ sane lɛ mli lɛ shishi?\n\ne)\n\n \n\nMɛni hewɔ ni kene lɛ kpa ebienyɛ bii lɛ wamɔ lɛ?\n\nf)\n\n \n\nMɛni yoo lɛ yɔse akɛ miiya nɔ yɛ eŋmɔ lɛ mli lɛ?\n\ng)\n\n \n\nMɛni hewɔ nuu lɛ tswa ofrote lɛ tu lɛ?\n\nh)\n\n \n\nMɛni naakpɛɛ nɔ ko ba yɛ tutswaa lɛ sɛɛ?\n\ni)\n\n \n\nMɛni nikasemɔ ona kɛjɛ adesa lɛ mli?\n\nj)\n\n \n\nWo sane ni okane nɛɛ gbɛi. Gbɛi lɛ akafa fe wiemɔkulibii kpawo.",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "ga",
+      "subjectDisplay": "Ga",
+      "examType": "bece",
+      "year": "2023",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2023 Ga",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2023",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148619,
+        "_nanoseconds": 809000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148619,
+        "_nanoseconds": 809000000
+      }
+    },
+    {
+      "id": "theory_ga_2023_q3",
+      "questionText": "Ha saji ni abibii lɛ fɛɛ hetoo. Ŋmaa hetoo lɛ yɛ hetoohamɔ wolo lɛ nɔ. Kɛ tsamɔwiemɔ ni sa ahɔlɔ gbɛi ni ashishii yɛ saji ni baa nɛɛ mli li amli.\n\na)\n\n \n\nKwei ...... Awo baaba.\n\nb)\n\n \n\nKɛ jeee Tsotsoo lɛ ...... Mole baatere adeka lɛ.\n\nc)\n\n \n\nWɔna polisifonyo lɛ ...... wɔnako julɔ lɛ.\n\nd)\n\n \n\nMiyaŋ shia ...... mibɛ shika.\n\ne)\n\n \n\nHelatsɛ lɛ nyɛŋ enyiɛ ...... owo lɛ.\n\nŊmalamɔ nɔkwɛmɔnɔ kome kome oha wiemɔkui nɛɛ eko fɛɛ eko.\n\nf)\n\n \n\nKɔsoŋ gbɛi;\n\ng)\n\n \n\nGbɛi sisa;\n\nh)\n\n \n\nFeemɔwiemɔ;\n\ni)\n\n \n\nSutsɔɔlɔ;\n\nj)\n\n \n\nNajiaŋgbɛi.\n\nŊmalamɔ wiemɔ ni kɛ wiemɔi ni afolɔ amɛshi lɛ shiɔ koŋ.\n\nk)\n\n \n\nKaale ji gbekɛ yoo ni he yɛ fɛo.\n\nl)\n\n \n\nTsɔɔlɔ lɛ kadi nitsumɔ lɛ oyayai.\n\nm)\n\n \n\nNikaselɔ nukpa lɛ hiɛ kashi jogbaŋŋ.\n\nn)\n\n \n\nHei! Aku ta shi yɛ biɛ.\n\no)\n\n \n\nAbossey wo atade kakadaŋŋ ko.\n\nŊmalamɔ sutsɔɔlɔ srɔtoi ni yɔɔ saji ni baa nɛɛ mli.\n\np)\n\n \n\nMaŋtsɛ lɛ he okpɔŋɔ yɛŋ.\n\nq)\n\n \n\nYoo ni fi duku wuɔfɔ su lɛ minyɛ ni.\n\nr)\n\n \n\nWɔtsɔɔlɔ lɛ ji nuu ni hiɛ kashi lɛ.\n\ns)\n\n \n\nNuu kpitioo lɛ ji lɔyafonyo.\n\nt)\n\n \n\nMaŋoi ni etsutsui bɛ tso lɛ nɔ.",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "ga",
+      "subjectDisplay": "Ga",
+      "examType": "bece",
+      "year": "2023",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2023 Ga",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2023",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148619,
+        "_nanoseconds": 809000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148619,
+        "_nanoseconds": 809000000
+      }
+    }
+  ],
+  "questionCount": 88
+}

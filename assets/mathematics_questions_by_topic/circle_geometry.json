@@ -1,0 +1,367 @@
+{
+  "topic": "Circle Geometry",
+  "questions": [
+    {
+      "id": "0ekwHAu4jMHAJnEYoDQO",
+      "year": "2018",
+      "subject": "mathematics",
+      "questionNumber": 40,
+      "questionText": "Which of the following statements best describes the construction below?",
+      "options": [
+        "A. Construction of line AB from P.",
+        "B. Construction of perpendicular from P to meet line AB.",
+        "C. Construction of an arc of a circle with center P.",
+        "D. Construction of the bisector of line AB."
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480482,
+        "_nanoseconds": 659000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2018"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487099,
+        "_nanoseconds": 837000000
+      }
+    },
+    {
+      "id": "9DceWr4FFUS8j6XOJBfo",
+      "year": "1990",
+      "subject": "mathematics",
+      "questionNumber": 32,
+      "questionText": "What is the name of the line segment drawn to join any two points on the circumference of a circle?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479545,
+        "_nanoseconds": 872000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1990"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. arc",
+        "B. chord",
+        "C. radius",
+        "D. sector",
+        "E. segment"
+      ],
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487076,
+        "_nanoseconds": 950000000
+      }
+    },
+    {
+      "id": "FYSnhwQbhOu8af7S7CC0",
+      "year": "2017",
+      "subject": "mathematics",
+      "questionNumber": 38,
+      "questionText": "The distance from the centre of a circle to any point on it is called",
+      "options": [
+        "A. circumference.",
+        "B. diameter.",
+        "C. radius.",
+        "D. sector."
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480458,
+        "_nanoseconds": 498000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2017"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487099,
+        "_nanoseconds": 25000000
+      }
+    },
+    {
+      "id": "K9UixyY7TqyJ18hEaitQ",
+      "year": "1999",
+      "subject": "mathematics",
+      "questionNumber": 11,
+      "questionText": "The diagram below shows a circle with centre O, S and T are points on the circle. Use it to answer the question below What name is given to the shaded region?",
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480034,
+        "_nanoseconds": 13000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1999"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. sector",
+        "B. segment",
+        "C. radii",
+        "D. arc",
+        "E. cone"
+      ],
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487084,
+        "_nanoseconds": 387000000
+      }
+    },
+    {
+      "id": "MICeTzSxD5nG3LK5A0R5",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 6,
+      "questionText": "Amadu walked to a point such that he is always the same distance from two villages P and Q. Which of the following best describes the locus of Amadu?",
+      "options": [
+        "A. An arc passing through line PQ",
+        "B. A circle passing through line PQ",
+        "C. Straight line PQ",
+        "D. Perpendicular bisector of line PQ"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482496,
+        "_nanoseconds": 242000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2024_q6_img6.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542285,
+        "_nanoseconds": 534000000
+      }
+    },
+    {
+      "id": "oOrdWiC2V0vac0xHzQvD",
+      "year": "2007",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "The diagram below shows a circle center O. If A and B are points on the circle, what name is given to the shaded region?",
+      "options": [
+        "A. Chord",
+        "B. Segment",
+        "C. Sector",
+        "D. Arc"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480224,
+        "_nanoseconds": 537000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2007"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 958000000
+      }
+    },
+    {
+      "id": "qabCsNiBOMGM7FbmgfpK",
+      "year": "2022",
+      "subject": "mathematics",
+      "questionNumber": 9,
+      "questionText": "The longest chord of a circle is the",
+      "options": [
+        "A. segment.",
+        "B. sector.",
+        "C. circumference.",
+        "D. diameter."
+      ],
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480556,
+        "_nanoseconds": 302000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2022"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2022_q9_img9.jpg",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542272,
+        "_nanoseconds": 805000000
+      }
+    },
+    {
+      "id": "ynVzXPiPclRThnbP5GrL",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 10,
+      "questionText": "The locus of points equidistant from a fixed point is called a",
+      "options": [
+        "A. chord.",
+        "B. circle.",
+        "C. mediator.",
+        "D. diameter."
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482499,
+        "_nanoseconds": 209000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 904000000
+      }
+    },
+    {
+      "id": "yqbbCrm6uv2XHSzs1ziO",
+      "year": "1999",
+      "subject": "mathematics",
+      "questionNumber": 12,
+      "questionText": "The diagram below shows a circle with centre O, S and T are points on the circle. Use it to answer the question below The line ST is called",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480034,
+        "_nanoseconds": 580000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1999"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. an arc",
+        "B. a chord",
+        "C. a diameter",
+        "D. a radius",
+        "E. a segment"
+      ],
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487084,
+        "_nanoseconds": 387000000
+      }
+    }
+  ],
+  "questionCount": 9
+}

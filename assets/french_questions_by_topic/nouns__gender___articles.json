@@ -1,0 +1,1194 @@
+{
+  "topic": "Nouns, Gender & Articles",
+  "questions": [
+    {
+      "id": "theory_french_1990_q16",
+      "questionText": "La mangue coûte 20 cedis. …………. coûte la mangue ?17. Il va à l’école. ………………….. va t-il ?18. Il arrive à midi. ……………..… est-ce qu’il arrive ?19. Il est six heures. ………………… heure est-il ?20. Le professeur sort de la classe. …………. sort de la classe ?",
+      "questionNumber": 16,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1990",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1990 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1990",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_1990_q21",
+      "questionText": "Ama ……………… la porte (fermer)22. Le professeur …………. au tableau (écrire)23. Elles ……………..de belles robes. (porter)24. Je ……………. à l’hôpital. (aller)25. Nous ………… le petit déjeuner. (prendre)26. Vous ………….. une règle ? (avoir)27. Tu ………….étudiant ? (être)\n\n(Nous, Ce, grand, Ma belle)",
+      "questionNumber": 21,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1990",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1990 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1990",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_1990_q28",
+      "questionText": "J’ai un ……………… sac.29. C’est une ……………robe30. …………….. mère est vendeuse.31. ……………. allons au champ.32. ……………… garçon est intelligent.",
+      "questionNumber": 28,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1990",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1990 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1990",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_1990_q33",
+      "questionText": "…………….. élèves jouent dans la cour.34. Il fait …………….. devoir.35. ……………… enfant pleure.36. Il boit …………. café.\n\n(toi, la capitale, cadeau, bon)",
+      "questionNumber": 33,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1990",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1990 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1990",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_1990_q37",
+      "questionText": "Accra est …………… du Ghana.38. Je mange un …………… repas.39. Lève-…………….. mon enfant.40. C’est un …………… de Papa",
+      "questionNumber": 37,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1990",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1990 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1990",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_1991_q16",
+      "questionText": "Cette femme est ………………… (vieil / vieille)17. Son …………….chapeau est sur la table. (joli / jolie)18. La robe est ……………………. (blanc / blanche)19. C’est un ……………. garçon. (grand / grands)20. J’aime la musique ……………. (ghanéenne / ghanéen)21. Ama pose des questions …………… (intelligents / intelligentes)22. Ce n’est pas la ……………….. réponse. (bonne / bon)23. Le professeur parle à ………… voix. (haut / haute)24. Serwa et Kofi sont ……………….. (sage / sages)25. La chambre est ………………. (petit / petite)\n\n(orange, malade, petit, riche, pagnes)",
+      "questionNumber": 16,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1991",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1991 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1991",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_1992_q16",
+      "questionText": "Tu …………. au cinéma ce soir ? (va / vas)17. Les hommes ………….au revoir. (dites / disent)18. Nous ……………. un bon professeur. (avons / ont)19. La fille …………… la télévision. (regarde / regardent)20. Il ………………… sa leçon. (apprend / apprennent)21. Vous ………….. tous sages. (sommes / êtes )22. Je ……………… le petit déjeuner. (prépare / préparez)23. Le professeur …………aux élèves. (parle / parles)24. Les deux enfants …….. à l’école. (arrive / arrivent)25. Mon père ……….dans son champ (travaille / travailles)\n\n(mon, bleue, heures, moi, crayon)26. Je porte une robe ………………..27. Le ……………….est sur la table28. Je me lève à six …………….. du matin.29. ……………..école est derrière le marché.30. Apporte- …………… la règle.",
+      "questionNumber": 16,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1992",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1992 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1992",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_1992_q36",
+      "questionText": "Je fais mon devoir …………………. tu fais ici ?37. Elles sont absentes parce qu’elles sont fatiguées. ……….sont-elles absentent ?38. La route est très mauvaise……………….. est la route ?39. Kofi lave les assiettes ……………… les assiettes ?40. Nous lisons un livre de grammaire ………..livre lisez-vous ?",
+      "questionNumber": 36,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1992",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1992 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1992",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_1993_q26",
+      "questionText": "Tu mets……………….stylo le dans sac.27. Il …………………..lave chaque matin28. La ………………….sonne.29. Fermez-les …………..30. Ils quittent le village de ……………. heure.",
+      "questionNumber": 26,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1993",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1993 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1993",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_1994_q1",
+      "questionText": "Le professeur parle ………………….. (lent / lentement)2. Kwesi lit un journal …………………… (américain / américaines)3. Elle écoute un …………………chanson. (belle / bel)4. Tu parles …………………le français (bon / bien)5. Ali achète beaucoup …………….. livres. (de / de)6. Il parle trop ; il est ……………… (méchant / bavard)7. Mon père est vieux mais ma mère est …… (jaune / jeune)8. Effacez ………………. tableau noir. (le / du)9. Je mets le cahier …………. la table. ( sur / près )10. La classe commence……….neuf heures. (au / à )11. Regarde …………….. enfant (cet / ce)12. Quel jour sommes …………aujourd’hui ? (vous / nous)13. Le film n’est pas très ………………. (intéressant / intéressante )14. Je suis malade ; je vais voir le …………… (cultivateur / docteur)15. Il pose ……….. questions. (beaucoup / plusieurs)",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1994",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1994 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1994",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_1995_q21",
+      "questionText": "…………… viens-tu ? Je viens de Bolgatanga22. ………………. de crayons avez-vous ? Nous avons trois crayons23. ………………. est ici ? Monsieur Kofi est ici.24. ……………. vont tes petits frère ? Ils vont bien25. ………………est la capitale du Burkina Faso ? Ouagadougou est la capitale du Burkina Faso.",
+      "questionNumber": 21,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1995",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1995 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1995",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_1995_q31",
+      "questionText": "Papa va ………… Togo32. Mon oncle est ………….. France33. Le fils …………mon oncle est mon cousin.34. Les cahiers sont ………… le sac.35. Le professeur parle ………… étudiants.",
+      "questionNumber": 31,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1995",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1995 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1995",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_1996_q36",
+      "questionText": "Le président va …………… Cameroun37. ………………. orange est mûre, il faut la manger.38. La mangue ………….. je mange est très douce39. …………….. êtes-vous arrive à l’école ?40. Les tomates sont ……………..",
+      "questionNumber": 36,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1996",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1996 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1996",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_1997_q21",
+      "questionText": "Est-ce que vous ………… vos devoirs à la maison ? (fait / faites)22. Kofi………………manger avant de partir. (dois / doit)23. Nous devons …………. à la plage aujourd’hui. (aller / allons)24. Je ………….. mon livre sur la table. (mets / met)25. Les filles ………………. derrière le dortoir. (joues / jouent)\n\n(son, par, cette, dans, et)",
+      "questionNumber": 21,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1997",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1997 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1997",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_1999_q26",
+      "questionText": "Ama ……………..une belle chanson ? (chanter)27. Est-ce que tu ………… souvent la télévision ?(regarder)28. Mon frère et moi ………un beau jardin. (avoir)29. Les élèves ………. très contents. (être)30. Qu’est-ce que vous ………ce soir ? (faire)",
+      "questionNumber": 26,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "1999",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1999 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1999",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2000_q11",
+      "questionText": "Le vieil homme n’à pas ………………….chiens. (des / du / de)",
+      "questionNumber": 11,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2000_q12",
+      "questionText": "D’habitude le tableau noir est ………………….la classe (derrière / devant / près de)",
+      "questionNumber": 12,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2000_q13",
+      "questionText": "Ali va chercher son pantalon chez le …………………. (tailleur / mécanicien / cultivateur)",
+      "questionNumber": 13,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2000_q14",
+      "questionText": "Les garçons jouent ………………….football. (du / le / au)",
+      "questionNumber": 14,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2000_q15",
+      "questionText": "Le ………………….hôtel se trouve au centre ville. (nouvel / nouvelle / nouveau)",
+      "questionNumber": 15,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2000_q18",
+      "questionText": "Le bébé boit ………………….lait. (du / de / de la)",
+      "questionNumber": 18,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2000_q19",
+      "questionText": "Les élèves jouent ………………….la cour. (à / dans / près)",
+      "questionNumber": 19,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2000_q21",
+      "questionText": "Les sandales sont ………………….le lit",
+      "questionNumber": 21,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2000_q22",
+      "questionText": "Saydou boit du ………………….",
+      "questionNumber": 22,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2000_q23",
+      "questionText": "La ………………….est sale",
+      "questionNumber": 23,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2000_q24",
+      "questionText": "Le professeur lit le ………………….",
+      "questionNumber": 24,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2000_q31",
+      "questionText": "Les oranges ………………….bonnes. (être)",
+      "questionNumber": 31,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2000_q34",
+      "questionText": "Ils ………………….les livres. (ranger)",
+      "questionNumber": 34,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2000_q37",
+      "questionText": "Le chat ………………….du bruit. (faire)",
+      "questionNumber": 37,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2000_q4",
+      "questionText": "Fatou met une jupe …………………. (bleu / rouge noir)",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2000_q40",
+      "questionText": "Vous ………………….quelque chose ? (chercher)\n\n\n\nPART 2\n\nCOMPOSITION\n\nJojo the late comer\n\n\n\nJoojo arrive ____1____ en retard à l&#39;école. Le directeur ____2____ punit souvent. C’est _____3____ Jojo ne\n\nl’aime _____4______\n\nAujourd’hui ____5____ Jojo arrive en retard ____6____ l’école. Il _____7____ dans la salle _____8_____\n\nclasse. Ses ____9____ et le professeur ____10____ sont pas là.\n\n____11____sont-ils? Jojo attend mais ils n’____12___ pas. Après  _____13___, il entend ____14____ amis\n\nchanter. Il va voir. Tous ____15____ élèves chantent, dansent et mangent de ____16___ choses. C’est\n\n\n\nl’____17____ du directeur. Ils donnent des jouets ____18____ élèves. Jojo aussi ____19____ un jouet mais\n\nil arrive ____20____ tard.\n\n\n\nOu ses le les\n\ntoujours veut arrivent camarades\n\nminutes pas à trop\n\nbonnes ne aussi aux\n\npourquoi entre anniversaire de",
+      "questionNumber": 40,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2000_q5",
+      "questionText": "Sekou prend son petit déjeuner …………………. (l’après-midi / le soir / le matin)",
+      "questionNumber": 5,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2000_q6",
+      "questionText": "L’élève efface le tableau avec un …………………. (torchon / mouchoir / pagne)",
+      "questionNumber": 6,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2000_q8",
+      "questionText": "………………….fleur me plait. (Cette / Ce Cet)",
+      "questionNumber": 8,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2006_q1",
+      "questionText": "Write a composition in French about the teacher you like best\n\n\n\n(a) - Le nom du professeur\n\n(b) - Son âge\n\n(c) - Sa taille\n\n(d) - Son teint\n\n(e) - La matière qu’il / elle enseigne\n\n(f) - Sa nationalité\n\n(g) - Ses enfants\n\n(h) - Ce qu’il / elle fait après  les cours\n\n(i) - Pourquoi vous l’aimez",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2006",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2006 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2006",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    },
+    {
+      "id": "theory_french_2007_q1",
+      "questionText": "Write a letter to a pen pal telling him about yourself\n\n(a) - Votre adresse et la date\n\n(b) - La salutation\n\n(c) - Votre nom\n\n(d) - Votre âge\n\n(e) - Votre ville natale / village natal\n\n(f) - Votre nationalité\n\n(g) - Les langues que vous parlez\n\n(h) - Votre école et classe\n\n(i) - Votre famille\n\n(j) - Ce que vous aimez\n\n(k) - La conclusion et votre prénom",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "french",
+      "subjectDisplay": "French",
+      "examType": "bece",
+      "year": "2007",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2007 French",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2007",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148618,
+        "_nanoseconds": 649000000
+      }
+    }
+  ],
+  "questionCount": 36
+}

@@ -1,0 +1,58 @@
+{
+  "topic": "unclassified",
+  "questions": [
+    {
+      "id": "asante_twi_2023_q22",
+      "year": 2023,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Aboa bɛn na wɔbɔ no mmrane sɔ ɛserɛ mu sɛe?",
+      "questionNumber": 22,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Ɛkoɔ",
+        "B. Kɔkɔte",
+        "C. Gyata",
+        "D. Ɔsono"
+      ],
+      "correctAnswer": "C. Gyata",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    },
+    {
+      "id": "asante_twi_2024_q14",
+      "year": 2024,
+      "subject": "asanteTwi",
+      "topics": [],
+      "examType": "bece",
+      "section": "",
+      "marks": 1,
+      "isActive": true,
+      "type": "multiple_choice",
+      "questionText": "Wo papa nana yɛ wo deɛn? Wo ...",
+      "questionNumber": 14,
+      "difficulty": "medium",
+      "createdBy": "admin_import",
+      "options": [
+        "A. Nana",
+        "B. Nanakansoa",
+        "C. Papa",
+        "D. Wɔfa"
+      ],
+      "correctAnswer": "B. Nanakansoa",
+      "createdAt": {
+        "_seconds": 1764274503,
+        "_nanoseconds": 33000000
+      }
+    }
+  ],
+  "questionCount": 2
+}

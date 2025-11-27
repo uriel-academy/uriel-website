@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2025-11-27T20:15:37.329Z",
+  "topics": [
+    {
+      "name": "Greetings & Introductions",
+      "filename": "greetings___introductions.json",
+      "questionCount": 0
+    },
+    {
+      "name": "Family & Relationships",
+      "filename": "family___relationships.json",
+      "questionCount": 26
+    },
+    {
+      "name": "Daily Activities",
+      "filename": "daily_activities.json",
+      "questionCount": 6
+    },
+    {
+      "name": "Nouns & Pronouns",
+      "filename": "nouns___pronouns.json",
+      "questionCount": 37
+    },
+    {
+      "name": "Verbs & Tenses",
+      "filename": "verbs___tenses.json",
+      "questionCount": 0
+    },
+    {
+      "name": "Sentence Structure",
+      "filename": "sentence_structure.json",
+      "questionCount": 0
+    },
+    {
+      "name": "Food & Drinks",
+      "filename": "food___drinks.json",
+      "questionCount": 1
+    },
+    {
+      "name": "Animals & Nature",
+      "filename": "animals___nature.json",
+      "questionCount": 0
+    },
+    {
+      "name": "Numbers & Time",
+      "filename": "numbers___time.json",
+      "questionCount": 5
+    },
+    {
+      "name": "Reading Comprehension",
+      "filename": "reading_comprehension.json",
+      "questionCount": 0
+    },
+    {
+      "name": "Writing Skills",
+      "filename": "writing_skills.json",
+      "questionCount": 0
+    }
+  ]
+}

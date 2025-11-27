@@ -1,0 +1,552 @@
+{
+  "topic": "Environmental Conservation",
+  "totalQuestions": 18,
+  "questions": [
+    {
+      "id": "integrated_science_1992_q19",
+      "questionText": "Which of the following human activities causes pollution of the environment?",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 19,
+      "options": [
+        "A. Cutting down timber in the forest for firewood",
+        "B. Overgrazing of the field by cattle",
+        "C. Burning of coal and petrol in industries",
+        "D. Building dams across rivers",
+        "E. Destruction of diseased crops"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 19 from the 1992 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Environmental Conservation"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1993_q32",
+      "questionText": "Which of the following is not a function of the lens in the human eye? It",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 32,
+      "options": [
+        "A. allows light rays to pass through it",
+        "B. refracts the light rays passing through it",
+        "C. helps to focus the image onto the retina",
+        "D. becomes thinner when focusing a distant object",
+        "E. reflects part of the light rays falling on it\n\n35. Which of the following practices in a community will increase its environmental pollution?"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 32 from the 1993 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Environmental Conservation"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1994_q9",
+      "questionText": "Soil fertility can be conserved by all the following methods except",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 9,
+      "options": [
+        "A. mulching",
+        "B. afforestation",
+        "C. deforestation",
+        "D. crop rotation",
+        "E. green manuring"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 9 from the 1994 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "Environmental Conservation"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1997_q17",
+      "questionText": "Which of the following activities of man causes both air and water pollution?",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 17,
+      "options": [
+        "A. Afforestation",
+        "B. Construction of houses",
+        "C. Construction of roads",
+        "D. Deforestation",
+        "E. Industrialization\n\n20. The number of hydrogen atoms present in two molecules of water is"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 17 from the 1997 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Environmental Conservation"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1997_q6",
+      "questionText": "According to the principle of conservation of energy, ‘energy can",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 6,
+      "options": [
+        "A. be created and destroyed",
+        "B. be created but not destroyed",
+        "C. be destroyed but not created",
+        "D. be reduced but not increased",
+        "E. neither be created nor destroyed"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 6 from the 1997 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Environmental Conservation"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1999_q26",
+      "questionText": "Spitting in public is a bad social habit because it",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 26,
+      "options": [
+        "A. makes the environment humid",
+        "B. reduces the amount of air in the body",
+        "C. reduces the amount of water in the body",
+        "D. releases disease-causing organisms into the environment",
+        "E. reduces the amount of saliva in the mouth"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 26 from the 1999 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Environmental Conservation"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2008_q17",
+      "questionText": "The amount of light that enters the eye is reduced by the size of the",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 17,
+      "options": [
+        "A. lens.",
+        "B. iris.",
+        "C. pupil.",
+        "D. retina."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 17 from the 2008 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Environmental Conservation"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2011_q27",
+      "questionText": "All the living and non-living things that surround an organism constitute its",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 27,
+      "options": [
+        "A. community.",
+        "B. ecosystem.",
+        "C. environment.",
+        "D. habitat."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 27 from the 2011 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Environmental Conservation"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2012_q32",
+      "questionText": "One benefit of technology to industrialization is",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 32,
+      "options": [
+        "A. environmental pollution.",
+        "B. reduction in skilful labour",
+        "C. provision of machinery.",
+        "D. increase in cost of production of goods."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 32 from the 2012 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Environmental Conservation"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2013_q20",
+      "questionText": "A place where an organism can live and interbreed successfully is called",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 20,
+      "options": [
+        "A. community.",
+        "B. ecosystem.",
+        "C. environment.",
+        "D. habitat."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 20 from the 2013 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Environmental Conservation"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2016_q33",
+      "questionText": "The conversion of agricultural produce from its original form to other desirable forms is termed",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 33,
+      "options": [
+        "A. preservation.",
+        "B. processing.",
+        "C. recycling.",
+        "D. storage."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 33 from the 2016 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Environmental Conservation"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2021_q8",
+      "questionText": "Which of the following methods can be used to prevent iron from rusting?I. PaintingII. AlloyingIII. Keeping the iron in a desiccatorIV. Keeping iron in a moist environment",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 8,
+      "options": [
+        "A. I and II only",
+        "B. II and IV only",
+        "C. I, II and III only",
+        "D. II, III and IV only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 8 from the 2021 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Environmental Conservation"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2023_q13",
+      "questionText": "One benefit of technology to industrialization is",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 13,
+      "options": [
+        "A. increase in cost of production.",
+        "B. reduction in skillful labour.",
+        "C. provision of machinery.",
+        "D. environmental pollution."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 13 from the 2023 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Environmental Conservation"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2024_q25",
+      "questionText": "Which of the following statements best describes the term green economy? It includes",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 25,
+      "options": [
+        "A. reduced ecological services.",
+        "B. loss of biodiversity.",
+        "C. reduced carbon emissions.",
+        "D. degrading the environment."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 25 from the 2024 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Environmental Conservation"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2025_q14",
+      "questionText": "Which of the following waste disposal practices is best for plastic disposal?",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 14,
+      "options": [
+        "A. Burning",
+        "B. Composting",
+        "C. Incineration",
+        "D. Recycling"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 14 from the 2025 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Environmental Conservation"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2025_q34",
+      "questionText": "Germs that infect the respiratory system are frequently spread throughI. mucus.II. air pollution.III. coughs.",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 34,
+      "options": [
+        "A. I only",
+        "B. II only",
+        "C. II and III only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 34 from the 2025 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Environmental Conservation"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2015_q5",
+      "questionText": "a)\n\n \n\nWhat is vegetable crop?\n\nb)\n\n \n\ni)\n\n \n\nWhat is air pollution?\n\nii)\n\n \n\nState two humans activities that lead to air pollution.\n\nc)\n\n \n\ni)\n\n \n\nList three modes of heat transfer.\n\nii)\n\n \n\nName the type of medium in which each mode of heat transfer you have listed in (i) takes place.\n\nd)\n\n \n\nGive three reasons why proteins are important in the diet of mammals.",
+      "type": "essay",
+      "year": "2015",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Environmental Conservation"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2020_q2",
+      "questionText": "a)\n\n \n\nState three external features of the weaver birds that adapt to live successfully in its environment.\n\nb)\n\n \n\nList four harmful effects of air pollution.\n\nc)\n\n \n\ni)\n\n \n\nDraw the magnetic lines of force around a bar magnet.\n\nii)\n\n \n\nIf the work input of a machine is 30 joules, what would be its efficiency when the work output is 25 joules?\n\nd)\n\n \n\nOutline three principles involved in vegetable crop production.",
+      "type": "essay",
+      "year": "2020",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2020 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Environmental Conservation"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

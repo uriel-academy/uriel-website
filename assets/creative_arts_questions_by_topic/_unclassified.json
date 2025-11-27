@@ -1,0 +1,72 @@
+{
+  "topic": "unclassified",
+  "questions": [
+    {
+      "id": "theory_creative_arts_2024_q3",
+      "questionText": "(a)\n\n \n\nYour school intends to organize an exhibition during the upcoming 20th Anniversary Celebration.\n\nAs the leader of the organizing team, explain three factors that will guide a successful planning and organizing of the exhibition.\n\n(i)\n\n \n\n(ii)\n\n \n\n(iii)\n\n \n\n(b)\n\n \n\nImagine yourself in a Creative Art and Design class, and you are to assemble pieces of materials into artworks for the exhibition.\n\nIdentify two essential tools you would use for each of the listed activities below:\n\n(i)\n\n \n\nCutting of wires and papers;\n\n(ii)\n\n \n\nMaking holes in metals and plastics;\n\n(iii)\n\n \n\nJoining of lead and copper.",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "creativeArts",
+      "subjectDisplay": "Creative Arts",
+      "examType": "bece",
+      "year": "2024",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2024 Creative Arts",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148615,
+        "_nanoseconds": 891000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148615,
+        "_nanoseconds": 891000000
+      }
+    },
+    {
+      "id": "theory_creative_arts_2025_q2",
+      "questionText": "(a)\n\n \n\nThe Black star party has 85,000 members. The party intends to embark on rally in December, 2025. They have therefore decided to print a new cloth for the rally.\n\nAs a student artist:\n\n(i)\n\n \n\nidentify the most appropriate method to be used for printing the cloth for the members;\n\n[2 marks]\n\n(ii)\n\n \n\nstate two reasons for the choice of printing method identified in (i) above.\n\n[4 marks]\n\n(iii)\n\n \n\nList three wet media that would be useful for the printing of the cloth.\n\n[3 marks]\n\n(b)\n\n \n\nYour teacher tasked the class to weave a stole to be used by the final year leavers for their 10th graduation celebration.\n\nAs a creative student:\n\n(i)\n\n \n\nenumerate the two sets of yarns that would be used for the stole;\n\n[2 marks]\n\n(ii)\n\n \n\ndescribe any one of the yarns enumerated in (i) above;\n\n[2 marks]\n\n(iii)\n\n \n\nList any two tools that would help in weaving the stole.\n\n[2 marks]",
+      "questionNumber": 2,
+      "marks": 2,
+      "type": "essay",
+      "subject": "creativeArts",
+      "subjectDisplay": "Creative Arts",
+      "examType": "bece",
+      "year": "2025",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2025 Creative Arts",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2025",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148615,
+        "_nanoseconds": 891000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148615,
+        "_nanoseconds": 891000000
+      }
+    }
+  ],
+  "questionCount": 2
+}

@@ -1,0 +1,74 @@
+{
+  "topic": "Personal Competencies",
+  "questions": [
+    {
+      "id": "career_technology_2024_q12",
+      "questionText": "A young entrepreneur is always researching into how to improve product and skills to bring about change in an establishment. This young entrepreneur is described as being",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 12,
+      "options": [
+        "A. confident.",
+        "B. dedicated.",
+        "C. determined.",
+        "D. innovative."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 12 from the 2024 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2024"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    },
+    {
+      "id": "career_technology_2025_q1",
+      "questionText": "A major factor to consider when selecting a sewing machine for a cousin who is an apprentice dressmaker is",
+      "type": "multipleChoice",
+      "subject": "careerTechnology",
+      "examType": "bece",
+      "year": "2025",
+      "section": "A",
+      "questionNumber": 1,
+      "options": [
+        "A. facilities available.",
+        "B. the skills of the user.",
+        "C. maintenance facilities available.",
+        "D. type of sewing work to be done."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 1 from the 2025 BECE Career Technology exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Career Technology",
+        "BECE",
+        "2025"
+      ],
+      "createdAt": "2025-11-20T23:42:31.356Z",
+      "updatedAt": "2025-11-20T23:42:31.356Z",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2025",
+        "importDate": "2025-11-20T23:42:31.356Z",
+        "verified": true
+      }
+    }
+  ],
+  "questionCount": 2
+}

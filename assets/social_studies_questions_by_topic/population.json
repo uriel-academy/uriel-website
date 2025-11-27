@@ -1,0 +1,1254 @@
+{
+  "topic": "Population",
+  "totalQuestions": 42,
+  "questions": [
+    {
+      "id": "social_studies_2003_q15",
+      "questionText": "People running away from Liberia because of the war to stay at Budumburam near Accra become ............... in Ghana",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 15,
+      "options": [
+        "A. victims",
+        "B. armed robbers",
+        "C. soldiers",
+        "D. refugees"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 15 from the 2003 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2004_q30",
+      "questionText": "Low savings by Ghanaian workers is mainly due to",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 30,
+      "options": [
+        "A. high dependency ratio",
+        "B. low exchange rate of the cedi",
+        "C. laziness of Ghanaian workers",
+        "D. extravagant living of Ghanaians"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 30 from the 2004 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2005_q24",
+      "questionText": "Ghana is described as a developing country because she has a high",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 24,
+      "options": [
+        "A. per capita income",
+        "B. population growth rate",
+        "C. level of industrialization",
+        "D. level of literacy"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 24 from the 2005 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2006_q2",
+      "questionText": "The migration routes of the Guan are traced to an area around the",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 2,
+      "options": [
+        "A. Pra basin",
+        "B. Offin basin",
+        "C. Volta basin",
+        "D. Ankobra basin"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 2 from the 2006 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2007_q31",
+      "questionText": "The territorial waters of Ghana are protected by the",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 31,
+      "options": [
+        "A. Air force",
+        "B. Police",
+        "C. Navy",
+        "D. Immigration Service"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 31 from the 2007 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2009_q14",
+      "questionText": "Which of the following is not a social problem in Ghana?",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 14,
+      "options": [
+        "A. Low standard of living",
+        "B. Low agricultural production",
+        "C. Low literacy rate",
+        "D. High birth rate"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 14 from the 2009 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2010_q38",
+      "questionText": "Indiscipline is a problem to the Ghanaian society because it",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 38,
+      "options": [
+        "A. reduces productivity",
+        "B. destroys the educational system",
+        "C. encourages bribery and corruption",
+        "D. leads to high birth rate"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 38 from the 2010 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2011_q16",
+      "questionText": "One major reason for the migration of ethnic groups into modern Ghana was the search for",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 16,
+      "options": [
+        "A. means of livelihood",
+        "B. religious protection",
+        "C. military weapons",
+        "D. good neighbours"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 16 from the 2011 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2012_q1",
+      "questionText": "Indiscipline is a problem in the Ghanaian society because it",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 1,
+      "options": [
+        "A. reduces productivity.",
+        "B. destroys the educational system.",
+        "C. leads to high birth rate.",
+        "D. encourages bribery and corruption."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 1 from the 2012 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2012_q27",
+      "questionText": "Family planning is beneficial to Ghanaians because it",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 27,
+      "options": [
+        "A. helps in giving respect and honour to fathers",
+        "B. increase life expectancy of children",
+        "C. helps restore the health of mothers",
+        "D. brings about equitable distribution of income"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 27 from the 2012 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2012_q30",
+      "questionText": "One factor responsible for the low rate of economic development in Ghana is",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 30,
+      "options": [
+        "A. misappropriation of state resources",
+        "B. misuse of individual resources",
+        "C. increase of taxes on industries",
+        "D. slow rate of population growth"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 30 from the 2012 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2013_q11",
+      "questionText": "During their migration, the Akan first settled at",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 11,
+      "options": [
+        "A. Bono Manso.",
+        "B. Dormaa Ahenkro.",
+        "C. Asante Manso.",
+        "D. Denkyira."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 11 from the 2013 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2013_q13",
+      "questionText": "Unity among Ghanaians can best be promoted through",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 13,
+      "options": [
+        "A. inter-ethnic migration.",
+        "B. formal education.",
+        "C. opinion leaders.",
+        "D. good environmental practice."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 13 from the 2013 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2013_q22",
+      "questionText": "One reason for the migration of many ethnic groups into Ghana is",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 22,
+      "options": [
+        "A. education",
+        "B. security",
+        "C. marriage",
+        "D. religion"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 22 from the 2013 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2013_q24",
+      "questionText": "The integrity of the nation can be defended by",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 24,
+      "options": [
+        "A. encouraging immigration.",
+        "B. reporting saboteurs.",
+        "C. educating the youth.",
+        "D. cleaning the environment."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 24 from the 2013 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2014_q32",
+      "questionText": "The integrity of the nation can be defended by",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 32,
+      "options": [
+        "A. educating the youth.",
+        "B. encouraging immigration.",
+        "C. cleaning the environment.",
+        "D. reporting saboteurs."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 32 from the 2014 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2014_q8",
+      "questionText": "The most effective measure for reducing the rapid population growth in Ghana is promoting",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 8,
+      "options": [
+        "A. adolescent counselling",
+        "B. women empowerment",
+        "C. gender equality",
+        "D. girl-child education"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 8 from the 2014 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2014_q9",
+      "questionText": "Which of the following situations is an effect of rapid population growth in Ghana?",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 9,
+      "options": [
+        "A. Decrease in food production",
+        "B. High dependency burden",
+        "C. High standard of living",
+        "D. Low productivity"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 9 from the 2014 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2015_q12",
+      "questionText": "The integrity of the nation can be defended by",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 12,
+      "options": [
+        "A. cleaning the environment",
+        "B. educating the youth",
+        "C. encouraging immigration",
+        "D. reporting saboteurs"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 12 from the 2015 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2015_q33",
+      "questionText": "A good layout and enforcement of town planning laws can help reduce",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 33,
+      "options": [
+        "A. emergence of slums",
+        "B. influx of immigrants",
+        "C. population growth",
+        "D. substance abuse"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 33 from the 2015 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2016_q15",
+      "questionText": "The high dependency problem of some families can be solved by",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 15,
+      "options": [
+        "A. encouraging parents to feed their children properly",
+        "B. practicing family planning",
+        "C. sending the children to school",
+        "D. sharing the responsibility with relatives"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 15 from the 2016 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2016_q34",
+      "questionText": "High birth rate in developing countries can lead to",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 34,
+      "options": [
+        "A. high income per head",
+        "B. low income per head",
+        "C. low dependency ratio",
+        "D. skilled labour force"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 34 from the 2016 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2016_q35",
+      "questionText": "Changes in culture is important for",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 35,
+      "options": [
+        "A. ethnic disintegration",
+        "B. international recognition",
+        "C. population growth",
+        "D. national development"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 35 from the 2016 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2017_q21",
+      "questionText": "The most effective measure for reducing the rapid population growth in Ghana is by promoting",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 21,
+      "options": [
+        "A. gender equality.",
+        "B. girl-child education.",
+        "C. adolescent counseling.",
+        "D. woman empowerment"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 21 from the 2017 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2017_q26",
+      "questionText": "A good layout and enforcement of Town Planning laws can help reduce",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 26,
+      "options": [
+        "A. substance abuse.",
+        "B. influx of immigrants.",
+        "C. emergence of slums.",
+        "D. population growth."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 26 from the 2017 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2017_q6",
+      "questionText": "The most common reason for the migration of various ethnic groups to modern Ghana is",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 6,
+      "options": [
+        "A. tourism.",
+        "B. security.",
+        "C. religion.",
+        "D. adventure."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 6 from the 2017 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2018_q5",
+      "questionText": "Where did the Akans first settle during `their migration?",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 5,
+      "options": [
+        "A. Dormaa Ahenkro",
+        "B. Bono Manso",
+        "C. Denkyira",
+        "D. Asante Manso"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 5 from the 2018 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2019_q20",
+      "questionText": "Ghana's contribution to the United Nation (UN) can be seen in the following areas except",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 20,
+      "options": [
+        "A. provision of funds to refugees.",
+        "B. peace keeping",
+        "C. payment of dues",
+        "D. sale of produce"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 20 from the 2019 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2020_q31",
+      "questionText": "Which of the following is an effect of rapid population growth in Ghana?",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 31,
+      "options": [
+        "A. High dependency burden",
+        "B. Low productivity",
+        "C. High standard of living",
+        "D. Decrease in food production"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 31 from the 2020 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2020_q5",
+      "questionText": "One factor not likely to bring about cultural change in society is",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 5,
+      "options": [
+        "A. formal education.",
+        "B. high birth rate.",
+        "C. informal education.",
+        "D. superstitious beliefs."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 5 from the 2020 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2020_q9",
+      "questionText": "Which of the following factors is a cause of unemployment in Ghana?",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 9,
+      "options": [
+        "A. polygamy",
+        "B. immigration",
+        "C. rapid population growth",
+        "D. rapid urbanization"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 9 from the 2020 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2022_q36",
+      "questionText": "Which of the following factors is one of the major reasons for Ghana's cultural diversity",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 36,
+      "options": [
+        "A. Colonization",
+        "B. Migration",
+        "C. Foreign trade",
+        "D. internal trade"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 36 from the 2022 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2022_q9",
+      "questionText": "The growth rate of Ghana's population can be reduced mainly through",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 9,
+      "options": [
+        "A. .family planning.",
+        "B. legislation",
+        "C. public education.",
+        "D. abortion"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 9 from the 2022 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2023_q17",
+      "questionText": "Which place did the Akans settle first during their migration to their present locations?",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 17,
+      "options": [
+        "A. Denkyira",
+        "B. Dormaa Ahinkro",
+        "C. Bono Manso",
+        "D. Chiraa"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 17 from the 2023 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2024_q22",
+      "questionText": "It has been observed that the population of Ghana has been rising rapidly over the years. What is the primary reason for the rapidly growing population?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 22,
+      "options": [
+        "A. Improved health care and sanitation",
+        "B. Increased education and family planning",
+        "C. High birth rate and low death rate",
+        "D. Increased immigration and low emigration"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 22 from the 2024 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2025_q26",
+      "questionText": "Rapid population growth of any country will result in",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 26,
+      "options": [
+        "A. better medical facilities.",
+        "B. high family expectation on female adult.",
+        "C. pressure on social facilities in the communities.",
+        "D. proper upbringing of many children."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 26 from the 2025 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2005_q4",
+      "questionText": "a)\n\n \n\nIdentify any four social problems of rapid population growth in Ghana.\n\nb)\n\n \n\nSuggest any four ways of reducing population growth in Ghana.\n\n \n\nPART III\n\nSOCIAL AND ECONOMIC DEVELOPMENT",
+      "type": "essay",
+      "year": "2005",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2005 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2007_q4",
+      "questionText": "6%\n\na)\n\n \n\nCalculate, showing working:\n\ni)\n\n \n\nthe total population;\n\nii)\n\n \n\nthe percentage of the population that is supported by the working population\n\nb)\n\n \n\nState any four effects of this age distribution on development in Ghana.",
+      "type": "essay",
+      "year": "2007",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2007 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2009_q5",
+      "questionText": "a)\n\n \n\nState four causes of high birth rate in Ghana.\n\nb)\n\n \n\nIn what four ways can high birth rate be reduced in Ghana?",
+      "type": "essay",
+      "year": "2009",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2009 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2015_q3",
+      "questionText": "a)\n\n \n\nState four reasons for the migration of different ethnic groups in Ghana.\n\nb)\n\n \n\nSuggest four ways of sustaining peace and unity among the different ethnic groups in Ghana.",
+      "type": "essay",
+      "year": "2015",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2016_q2",
+      "questionText": "a)\n\n \n\nState four negative effects of rapid population growth on the development of Ghana.\n\nb)\n\n \n\nHighlight any four ways by which rapid population growth can be reduced in Ghana.\n\n  \n\nSECTION II\n\nGOVERNMANCE, POLITICS AND STABILITY",
+      "type": "essay",
+      "year": "2016",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2016 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2022_q4",
+      "questionText": "a)\n\n \n\nList four major ethnic groups in Ghana\n\nb)\n\n \n\nDescribe the migration routes of\n\ni\n\n \n\nAkans\n\nii\n\n \n\nEwes\n\nc)\n\n \n\nExplain three factors that promoted the ethnic migrations into Ghana\n\n  \n\nSECTION III\n\nSOCIAL AND ECONOMIC DEVELOPMENT",
+      "type": "essay",
+      "year": "2022",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2022 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Population"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

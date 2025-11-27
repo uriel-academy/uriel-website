@@ -1,0 +1,1751 @@
+{
+  "topic": "Probability",
+  "questions": [
+    {
+      "id": "3aFQh268ywuwgrvLzAe6",
+      "year": "2004",
+      "subject": "mathematics",
+      "questionNumber": 38,
+      "questionText": "The marks scored by 8 pupils in a science test are: 3, 7, 8, 8, 5, 4, 8, 4. Use it to answer the question below. What is the probability that a pupil chosen at random scored 4 marks?",
+      "options": [
+        "A. 1 2",
+        "B. 1 4",
+        "C. 1 8",
+        "D. 2 47"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480161,
+        "_nanoseconds": 905000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2004"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487088,
+        "_nanoseconds": 551000000
+      }
+    },
+    {
+      "id": "5ntFHirsQNhfrKM4jwYY",
+      "year": "2005",
+      "subject": "mathematics",
+      "questionNumber": 21,
+      "questionText": "A bag contains 4 blue and 8 red balls. What is the probability of picking a blue ball at random from the bag?",
+      "options": [
+        "A. 1 3",
+        "B. 1 2",
+        "C. 2 3",
+        "D. 3 4"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480174,
+        "_nanoseconds": 944000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2005"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487089,
+        "_nanoseconds": 336000000
+      }
+    },
+    {
+      "id": "6s1EA4pVQxAHLaxJvw5c",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 16,
+      "questionText": "A bag contains 12 mangoes of which 4 are not ripe. What is the chance of picking at random a ripe mango from the bag?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479584,
+        "_nanoseconds": 423000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1 8",
+        "B. 1 4",
+        "C. 1 3",
+        "D. 1 2",
+        "E. 2 3"
+      ],
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487078,
+        "_nanoseconds": 582000000
+      }
+    },
+    {
+      "id": "7LJNgx78VnVe6gc67jzh",
+      "year": "2013",
+      "subject": "mathematics",
+      "questionNumber": 17,
+      "questionText": "If S = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, find the probability that a number selected at random from S is odd.",
+      "options": [
+        "A. 3 8",
+        "B. 1 4",
+        "C. 1 2",
+        "D. 5 8"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480355,
+        "_nanoseconds": 242000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2013"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487095,
+        "_nanoseconds": 754000000
+      }
+    },
+    {
+      "id": "86uW8Elj9A9YBt9fZRhd",
+      "year": "2023",
+      "subject": "mathematics",
+      "questionNumber": 24,
+      "questionText": "A bag contains 20 oranges of which 6 are bad. Find the probability of picking a good orange from the bag.",
+      "options": [
+        "A. 1 20",
+        "B. 3 10",
+        "C. 1 6",
+        "D. 7 10"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482478,
+        "_nanoseconds": 792000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2023"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 62000000
+      }
+    },
+    {
+      "id": "9triKqnHbZ6AVp3z0Svc",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 32,
+      "questionText": "A fair coin and a fair die are rolled together once. Find the probability of obtaining a tail and an odd number.",
+      "options": [
+        "A. 1 4",
+        "B. 1 3",
+        "C. 2 3",
+        "D. 1 2"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482512,
+        "_nanoseconds": 406000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 904000000
+      }
+    },
+    {
+      "id": "EawYpcgbvqR2vnUONyY8",
+      "year": "2006",
+      "subject": "mathematics",
+      "questionNumber": 21,
+      "questionText": "A bag contains 6 blue and 5 black balls. What is the probability of picking a black ball at random?",
+      "options": [
+        "A. 1 11",
+        "B. 1 5",
+        "C. 5 11",
+        "D. 6 11"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480197,
+        "_nanoseconds": 749000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2006"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 135000000
+      }
+    },
+    {
+      "id": "EwCXbb0JoVII9ItfOO0u",
+      "year": "2011",
+      "subject": "mathematics",
+      "questionNumber": 31,
+      "questionText": "There are 10 red and 15 green balls in a bag. Find the probability of selecting at random a red ball from the bag.",
+      "options": [
+        "A. 3 5",
+        "B. 2 5",
+        "C. 1 10",
+        "D. 1 25"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480317,
+        "_nanoseconds": 571000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2011"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 125000000
+      }
+    },
+    {
+      "id": "IlNSkZFfOmwQ0Nck2H0a",
+      "year": "2005",
+      "subject": "mathematics",
+      "questionNumber": 38,
+      "questionText": "What is the number of all possible outcomes of tossing a die?",
+      "options": [
+        "A. 2",
+        "B. 3",
+        "C. 4",
+        "D. 6"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480184,
+        "_nanoseconds": 690000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2005"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487089,
+        "_nanoseconds": 336000000
+      }
+    },
+    {
+      "id": "JhsL0zQ9dZjAn7wXJUsj",
+      "year": "2003",
+      "subject": "mathematics",
+      "questionNumber": 21,
+      "questionText": "There are 12 red and 8 blue balls in a bag. If a ball is selected at random from the bag, what is the probability that it is red?",
+      "options": [
+        "A. 2 5",
+        "B. 2 3",
+        "C. 3 5",
+        "D. 4 5"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480129,
+        "_nanoseconds": 830000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2003"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487087,
+        "_nanoseconds": 736000000
+      }
+    },
+    {
+      "id": "Lu96oY0Orq3iQ2UqcA6i",
+      "year": "2008",
+      "subject": "mathematics",
+      "questionNumber": 25,
+      "questionText": "The letters in the word HIPPOPOTAMUS are placed in a box. What is the probability of taking out a letter that is a vowel?",
+      "options": [
+        "A. 1 12",
+        "B. 3 12",
+        "C. 5 12",
+        "D. 7 12"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480245,
+        "_nanoseconds": 598000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2008"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487091,
+        "_nanoseconds": 763000000
+      }
+    },
+    {
+      "id": "LyxCeUJcVxaugAVT62AU",
+      "year": "2021",
+      "subject": "mathematics",
+      "questionNumber": 13,
+      "questionText": "A bag contains 5 red and 7 black balls of the same size. What is the probability of picking a black ball?",
+      "options": [
+        "A. ",
+        "B. ",
+        "C. ",
+        "D. "
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480535,
+        "_nanoseconds": 761000000
+      },
+      "difficulty": "medium",
+      "createdBy": "system_import",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2021"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2021_q13_img13.jpg",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542261,
+        "_nanoseconds": 570000000
+      }
+    },
+    {
+      "id": "O68lJboA1cXctlaWTa5I",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 21,
+      "questionText": "There are 15 white and 25 black identical balls in a box. If a ball is selected at random from the box, find the probability that it is white.",
+      "options": [
+        "A. 1 25",
+        "B. 1 15",
+        "C. 3 8",
+        "D. 5 8"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482505,
+        "_nanoseconds": 550000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 904000000
+      }
+    },
+    {
+      "id": "Oi3M5Rz0A75CyD6cFo1u",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 19,
+      "questionText": "Eighteen cards are numbered from 11 to 29. If one card is chosen at random, what is the probability that it contains the digit 2?",
+      "options": [
+        "A. 3 9",
+        "B. 7 18",
+        "C. 5 9",
+        "D. 11 19"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480287,
+        "_nanoseconds": 747000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763485025,
+        "_nanoseconds": 107000000
+      }
+    },
+    {
+      "id": "T77OMiPRFMNHJzUyZ8q9",
+      "year": "1991",
+      "subject": "mathematics",
+      "questionNumber": 18,
+      "questionText": "The marks obtained by 10 children in a mental drill are: 0, 1, 3, 3, 5, 7, 8, 9, 9, 9. Use this information to answer the question below. What is the probability that a child chosen at random scored 3 marks?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479564,
+        "_nanoseconds": 197000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1991"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 2 54",
+        "B. 3 54",
+        "C. 2 10",
+        "D. 3 10",
+        "E. 1 3"
+      ],
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487077,
+        "_nanoseconds": 776000000
+      }
+    },
+    {
+      "id": "U6oGPIOFlGYGHjLCJyx2",
+      "year": "1994",
+      "subject": "mathematics",
+      "questionNumber": 17,
+      "questionText": "The following are the scores obtained by girls in a beauty contest: 12, 16, 19, 14, 17, 8, 11, 19. What is the probability of obtaining a score of 19?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479627,
+        "_nanoseconds": 750000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1994"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1 9",
+        "B. 1 8",
+        "C. 1 4",
+        "D. 19 53",
+        "E. 19 108"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1994_q17_img17.png",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542137,
+        "_nanoseconds": 297000000
+      }
+    },
+    {
+      "id": "UXj7mpMFGyJUKl2uFsuy",
+      "year": "1990",
+      "subject": "mathematics",
+      "questionNumber": 30,
+      "questionText": "A bag contains 24 marbles, 10 of which are blue and the rest green. A boy picks a marble at random from the bag. What is the probability that he picks a green marble?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479544,
+        "_nanoseconds": 281000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1990"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1 14",
+        "B. 7 17",
+        "C. 5 12",
+        "D. 7 12",
+        "E. 7 10"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487076,
+        "_nanoseconds": 950000000
+      }
+    },
+    {
+      "id": "W4sDObn39MFrtizhvMPO",
+      "year": "2017",
+      "subject": "mathematics",
+      "questionNumber": 34,
+      "questionText": "A match box contains 40 sticks. If 15 of them are spolit, find the probability that a stick chosen at random is not spoilt?",
+      "options": [
+        "A. ",
+        "B. ",
+        "C. ",
+        "D. "
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480456,
+        "_nanoseconds": 243000000
+      },
+      "difficulty": "medium",
+      "createdBy": "system_import",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2017"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2017_q34_img34.png",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542224,
+        "_nanoseconds": 0
+      }
+    },
+    {
+      "id": "eT0XhSLQ7hO8tgyPwuxE",
+      "year": "1995",
+      "subject": "mathematics",
+      "questionNumber": 14,
+      "questionText": "Kofi throws a die. What is the probability that he throws the number 2?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479736,
+        "_nanoseconds": 999000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1995"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1",
+        "B. 2 3",
+        "C. 1 2",
+        "D. 1 3",
+        "E. 1 6"
+      ],
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 77000000
+      }
+    },
+    {
+      "id": "i5BA1sJFNl2XDROauXoc",
+      "year": "1997",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "The marks obtained by 10 boys in a test are 0, 1, 3, 3, 5, 7, 8, 9, 9, 9. Use this information to answer the question below What is the probability that a boy chosen at random scored 3?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479998,
+        "_nanoseconds": 677000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1997"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1 27",
+        "B. 1 18",
+        "C. 1 10",
+        "D. 1 5",
+        "E. 1 3"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487082,
+        "_nanoseconds": 727000000
+      }
+    },
+    {
+      "id": "jhF1cCV7y4pntSIBvx2m",
+      "year": "2002",
+      "subject": "mathematics",
+      "questionNumber": 35,
+      "questionText": "A bag contains 6 white and 8 red balls. What is the probability that a ball picked at random will be a white ball?",
+      "options": [
+        "A. 1 7",
+        "B. 3 7",
+        "C. 4 7",
+        "D. 6 7"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480115,
+        "_nanoseconds": 115000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2002"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 895000000
+      }
+    },
+    {
+      "id": "lfN3ijljgZ1gu7GxaEwg",
+      "year": "2012",
+      "subject": "mathematics",
+      "questionNumber": 17,
+      "questionText": "A box contains 30 identical balls of which 16 are white and the rest yellow. If a girl picks a ball at random from the box, what is the probability that it is a yellow ball?",
+      "options": [
+        "A. 1 16",
+        "B. 7 15",
+        "C. 8 15",
+        "D. 7 8"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480332,
+        "_nanoseconds": 459000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2012"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 925000000
+      }
+    },
+    {
+      "id": "loV6cBw8o6F2cTpTkOYM",
+      "year": "1994",
+      "subject": "mathematics",
+      "questionNumber": 16,
+      "questionText": "What is the probability of obtaining a prime number when a fair die is thrown once?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479627,
+        "_nanoseconds": 197000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1994"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 2 3",
+        "B. 1 2",
+        "C. 1 3",
+        "D. 1 6",
+        "E. 5 6"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1994_q16_img16.png",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542136,
+        "_nanoseconds": 811000000
+      }
+    },
+    {
+      "id": "lpHVKRTKbIlIYiqLLBnW",
+      "year": "1995",
+      "subject": "mathematics",
+      "questionNumber": 20,
+      "questionText": "Five cards are numbered one to five. A card is picked at random. What is the probability that it has an even number?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479740,
+        "_nanoseconds": 254000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1995"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1",
+        "B. 4 5",
+        "C. 3 5",
+        "D. 2 5",
+        "E. 1 5"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 77000000
+      }
+    },
+    {
+      "id": "mHGYFj7RL7JchRhWFQlk",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 30,
+      "questionText": "Use the information below to answer the question below The scores obtained by 8 pupils in a test are 2, 3, 4, 5, 7, 8, 8 and 9 What is the probability that a pupil chosen at random scores 8 marks?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480089,
+        "_nanoseconds": 866000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1 8",
+        "B. 4 23",
+        "C. 1 4",
+        "D. 1 3",
+        "E. 1 2"
+      ],
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 59000000
+      }
+    },
+    {
+      "id": "mOMPopWmHYqbRaCNtxcb",
+      "year": "2016",
+      "subject": "mathematics",
+      "questionNumber": 18,
+      "questionText": "What is the probability of obtaining 4, when a fair die is tossed once?",
+      "options": [
+        "A. 1 6",
+        "B. 1 2",
+        "C. 2 3",
+        "D. 5 6"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480424,
+        "_nanoseconds": 203000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2016"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487098,
+        "_nanoseconds": 192000000
+      }
+    },
+    {
+      "id": "nPj8IzVxzSXvEjL8pRvl",
+      "year": "2011",
+      "subject": "mathematics",
+      "questionNumber": 38,
+      "questionText": "What is the value of 7 in the number 832713?",
+      "options": [
+        "A. Seven thousand",
+        "B. Seven hundred",
+        "C. Seventy",
+        "D. Seven"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480321,
+        "_nanoseconds": 654000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2011"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 125000000
+      }
+    },
+    {
+      "id": "o0ryZR0z0hyiihPLO5rr",
+      "year": "2025",
+      "subject": "mathematics",
+      "questionNumber": 22,
+      "questionText": "A box contains 10 green and 8 white balls of the same size. If a ball is selected at random from the box, what is the probability that it is green?",
+      "options": [
+        "A. 1 10",
+        "B. 4 5",
+        "C. 5 9",
+        "D. 4 9"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482528,
+        "_nanoseconds": 746000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2025"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487105,
+        "_nanoseconds": 685000000
+      }
+    },
+    {
+      "id": "pJK0DlCbT7yBkxADYosE",
+      "year": "1999",
+      "subject": "mathematics",
+      "questionNumber": 24,
+      "questionText": "There are 15 red and 25 black balls in a bag. Find the probability of selecting a black ball from the bag.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480041,
+        "_nanoseconds": 335000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1999"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1 25",
+        "B. 1 15",
+        "C. 3 8",
+        "D. 3 5",
+        "E. 5 8"
+      ],
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487084,
+        "_nanoseconds": 387000000
+      }
+    },
+    {
+      "id": "qrgL0FAWyHm0PLSTA1NY",
+      "year": "1998",
+      "subject": "mathematics",
+      "questionNumber": 20,
+      "questionText": "A bag contains 5 black and 6 white balls. What is the probability of picking a white ball?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480016,
+        "_nanoseconds": 572000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1998"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1 11",
+        "B. 1 6",
+        "C. 1 5",
+        "D. 5 11",
+        "E. 6 11"
+      ],
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487083,
+        "_nanoseconds": 561000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1999_q25",
+      "questionText": "students in a class took an examination in Mathematics and Science. 17 of them passed in Science and 8 passed in both Mathematics and Science. 3 students did not pass in any of the subjects.\n\nFind\n\n(i)\n\n \n\nhow many passed in Mathematics;\n\n(ii)\n\n \n\nthe probability of meeting a student who passed in one subject only.",
+      "questionNumber": 25,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1999",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1999 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1999",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2000_q3",
+      "questionText": "Score (x)\n\nTally\n\nFrequency (f)\n\nfx\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(a)\n\n \n\nCopy and complete the table.\n\n(b)\n\n \n\nFind the mean of the distribution.\n\n(c)\n\n \n\nIf a pupil is selected at random from the form, what is the probability that he/she scored 4 marks?",
+      "questionNumber": 3,
+      "marks": 4,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2000",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2000",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2005_q6",
+      "questionText": "(a)\n\n \n\nConstruct a frequency distribution table for the data.\n\n(b)\n\n \n\nWhat is the modal mark?\n\n(c)\n\n \n\nCalculate the mean mark.\n\n(d)\n\n \n\nHow many pupils scored more than 6 marks?\n\n(e)\n\n \n\nWhat is the probability that a student chosen at random obtained 2 marks?",
+      "questionNumber": 6,
+      "marks": 6,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2005",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2005 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2005",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2007_q1",
+      "questionText": "(a)\n\n \n\nIn a class of 39 students, 19 offer French and 25 offer Ga. Five students do not offer any of the two languages. How many students offer only French?\n\n(b)\n\n \n\n\n\nIn the diagram above, AC is parallel to DG, angle BFG = 118° and angle ABE = 83°.\n\nFind the value of\n\n(i)\n\n \n\nangle CBF;\n\n(ii)\n\n \n\nx.\n\n(c)\n\n \n\nA fair die is thrown once.\n\n(i)\n\n \n\nWrite down the set of all the possible outcomes.\n\n(ii)\n\n \n\nFind the probability of obtaining a multiple of 2.\n\n(iii)\n\n \n\nWhat is the probability of obtaining a prime number?",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2007",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2007 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2007",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2008_q3",
+      "questionText": "(i)\n\n \n\nConstruct a frequency distribution table for this data.\n\n(ii)\n\n \n\nWhat is the mode of the distribution?\n\n(iii)\n\n \n\nCalculate the mean mark.\n\n(iv)\n\n \n\nWhat percentage of the pupils passed, if the pass mark is 6?\n\n(v)\n\n \n\nWhat is the probability that a pupil selected at random scored not more than 5 marks?\n\n(b)\n\n \n\nSimplify 7",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2008",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2008 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2008",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2010_q1",
+      "questionText": "(a)\n\n \n\nFrom the distribution, determine\n\n(i)\n\n \n\nthe mode;\n\n(ii)\n\n \n\nthe mean.\n\n(b)\n\n \n\nIf a student is selected at random, find the probability that his/her name will contain more than 7 letters.\n\n(c)\n\n \n\nDraw a bar chart for the distribution.",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2010",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2010 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2010",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2012_q30",
+      "questionText": "(i)\n\n \n\nDraw a pie chart for the distribution.\n\n(ii)\n\n \n\nWhat is the probability that a student chosen at random from the distribution, offers Chemistry?\n\n(b)\n\n \n\nA woman bought 210 oranges for GH₵7.50. She sold all of them at 3 for 15 Gp. Find the\n\n(i)\n\n \n\ntotal selling price of the oranges;\n\n(ii)\n\n \n\npercentage profit.",
+      "questionNumber": 30,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2012",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2012 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2012",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2013_q1",
+      "questionText": "(a)\n\n \n\nFifty students in a class took an examination in French and Mathematics. If 14 of them passed French only, 23 passed in both French and Mathematics and 5 of them failed in both subjects, find\n\n(i)\n\n \n\nthe number of students who passed in French\n\n(ii)\n\n \n\nthe probability of selecting a student who passed in Mathematics\n\n(b)\n\n \n\nSolve the inequality 2x −1",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2013",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2013 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2013",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2014_q48",
+      "questionText": "(i)\n\n \n\nMake a stem-and-leaf plot of the marks above.\n\n(ii)\n\n \n\nFind the probability of selecting a student who scored between 40 and 50.\n\n(iii)\n\n \n\nFind the number of students who passed the examination, if the pass mark was 30.",
+      "questionNumber": 48,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2014",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2014 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2014",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2016_q2",
+      "questionText": "at2, find the value of s.\n\n(b)\n\n \n\nThe selling price of a gas cooker is GH₵450.00. If a customer is allowed a discount of 20%, calculate the:\n\n(i)\n\n \n\ndiscount;\n\n(ii)\n\n \n\namount paid by the customer.\n\n(c)\n\n \n\nA crate of minerals containing ten bottles of Coca Cola and fourteen bottles of Fanta was given to some children for a birthday party. If a child chose a drink at random from the crate, find the probability that it was Fanta.",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2016",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2016 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2016",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2019_q3",
+      "questionText": "a\n\n \n\nIn an examination 60 candidates passed Integrated Science or Mathematics. If 15 passed both subjects and 9 more passed Mathematics than Integrated Science, find the:i) number of candidates who passed in each subject;ii) probability that a candidate passed exactly one subject.\n\nb\n\n \n\nFactorize: xy + 6x + 3y + 18",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2019",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2019 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2019",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "uHiqXfI6Nn59QVXGqd5M",
+      "year": "2007",
+      "subject": "mathematics",
+      "questionNumber": 12,
+      "questionText": "A boy throws a die once. What is the probability of getting the number 4?",
+      "options": [
+        "A. 1 6",
+        "B. 1 3",
+        "C. 1 2",
+        "D. 5 6"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480215,
+        "_nanoseconds": 463000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2007"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2007_q12_img12.png",
+      "updatedAt": {
+        "_seconds": 1763542187,
+        "_nanoseconds": 307000000
+      }
+    },
+    {
+      "id": "vLvZsjJXzu1papUVOn29",
+      "year": "1993",
+      "subject": "mathematics",
+      "questionNumber": 19,
+      "questionText": "The probability of obtaining a head when a coin is tossed is 1 3 . What is the probability of obtaining a tail?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479607,
+        "_nanoseconds": 334000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1993"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1",
+        "B. 2 3",
+        "C. 1 2",
+        "D. 1 3",
+        "E. 0"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487079,
+        "_nanoseconds": 424000000
+      }
+    },
+    {
+      "id": "vSDQ61TmnUicl9pLhnhs",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 15,
+      "questionText": "There are 20 beads in a box. Some are red and some green. The chance that one bead taken at random from the box is red is 1 4 . Find the number of red beads in the box.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479583,
+        "_nanoseconds": 912000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 16",
+        "B. 15",
+        "C. 10",
+        "D. 5",
+        "E. 4"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487078,
+        "_nanoseconds": 582000000
+      }
+    },
+    {
+      "id": "xcpWVSdXpoN1ECH5OSlJ",
+      "year": "2014",
+      "subject": "mathematics",
+      "questionNumber": 26,
+      "questionText": "There are 20 identical balls in a box. Twelve are blue and the rest are green. If one ball is taken at random from the box, find the probability that the ball is green.",
+      "options": [
+        "A. 1 20",
+        "B. 2 5",
+        "C. 3 5",
+        "D. 3 4"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480383,
+        "_nanoseconds": 324000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2014"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487096,
+        "_nanoseconds": 588000000
+      }
+    },
+    {
+      "id": "zxhEcauRJS3xHtLF0rVW",
+      "year": "2019",
+      "subject": "mathematics",
+      "questionNumber": 22,
+      "questionText": "A number is selected at random from: 25,26,27,28,...,35. Find the probability that the number selected is a prime number.",
+      "options": [
+        "A. 6⁄11",
+        "B. 3⁄11",
+        "C. 2⁄11",
+        "D. 1⁄11"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480495,
+        "_nanoseconds": 309000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2019"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487100,
+        "_nanoseconds": 643000000
+      }
+    }
+  ],
+  "questionCount": 46
+}

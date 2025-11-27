@@ -1,0 +1,39 @@
+{
+  "topic": "Drama",
+  "questions": [
+    {
+      "id": "theory_creative_arts_2024_q2",
+      "questionText": "A Creative Art and Design teacher assigned the class to produce artworks intended to educate learners on keeping the school compound and the classrooms neat.\n\nAs a Creative Art and Design learner:\n\n(a)\n\n \n\nGive two artworks that you would produce to solve the problem.\n\n(b)\n\n \n\nState the appropriate technique that you would use to produce each artwork in (a) above.\n\n(c)\n\n \n\nIn an orderly manner, state that first four design processes that you would use in designing the artworks.\n\n(d)\n\n \n\nBalance is one of the key principles of design that could be used in the production of the artworks in (a). Identify any two types of balance and explain only one of them.\n\n(e)\n\n \n\nEnumerate two precautions that should be observed during the production of the artworks in (a) above.",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "creativeArts",
+      "subjectDisplay": "Creative Arts",
+      "examType": "bece",
+      "year": "2024",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2024 Creative Arts",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148615,
+        "_nanoseconds": 891000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148615,
+        "_nanoseconds": 891000000
+      }
+    }
+  ],
+  "questionCount": 1
+}

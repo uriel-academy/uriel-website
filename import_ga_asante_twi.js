@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const args = require('minimist')(process.argv.slice(2));
 
-const saPath = args.serviceAccount || 'uriel-academy-41fb0-firebase-adminsdk-fbsvc-4f2dfa7d5b.json';
+const saPath = args.serviceAccount || './uriel-academy-41fb0-firebase-adminsdk-fbsvc-4f2dfa7d5b.json';
 const assetsDir = path.join(__dirname, 'assets', 'ghanaian language');
 
 (async () => {

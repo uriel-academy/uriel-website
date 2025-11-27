@@ -1,0 +1,2913 @@
+{
+  "topic": "Ratios & Proportions",
+  "questions": [
+    {
+      "id": "09M7Uzq3l9C11Lxgd6cb",
+      "year": "2019",
+      "subject": "mathematics",
+      "questionNumber": 37,
+      "questionText": "The simple interest on GH₵ 450.00 for 4 years is GH₵ 45.00, find the rate of interest",
+      "options": [
+        "A. 2.5 %",
+        "B. 10 %",
+        "C. 25 %",
+        "D. 6.5 %"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480503,
+        "_nanoseconds": 777000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2019"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487100,
+        "_nanoseconds": 643000000
+      }
+    },
+    {
+      "id": "0MKNbqd7PLs7b3ZX5gdc",
+      "year": "2009",
+      "subject": "mathematics",
+      "questionNumber": 23,
+      "questionText": "The height of a flag pole in a scale drawing is 5 cm. If the scale is 1 cm to 3 m, what is the actual height of the pole?",
+      "options": [
+        "A. 10 m",
+        "B. 15 m",
+        "C. 8 m",
+        "D. 5 m"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480267,
+        "_nanoseconds": 252000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2009"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487092,
+        "_nanoseconds": 558000000
+      }
+    },
+    {
+      "id": "1r8xIdvUOzUfM8b3bUXK",
+      "year": "2004",
+      "subject": "mathematics",
+      "questionNumber": 20,
+      "questionText": "An article costs ₵60,000.00. The price was increased by 10%. Find the new price.",
+      "options": [
+        "A. ₵54,000.00",
+        "B. ₵61,000.00",
+        "C. ₵66,000.00",
+        "D. ₵70,000.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480151,
+        "_nanoseconds": 881000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2004"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487088,
+        "_nanoseconds": 551000000
+      }
+    },
+    {
+      "id": "2Edn9gvQDXpIQmQBTRGt",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 10,
+      "questionText": "An amount of money is shared between Kofi and Ama in the ratio 3 : 5. If Ama received ₵4,650.00, what is Kofi's share?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479581,
+        "_nanoseconds": 323000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵930.00",
+        "B. ₵1,550.00",
+        "C. ₵1,743.75",
+        "D. ₵2,790.00",
+        "E. ₵2,906.25"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1992_q10_img10.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542116,
+        "_nanoseconds": 693000000
+      }
+    },
+    {
+      "id": "2hMykXyNuU8hawjPj3Xz",
+      "year": "2008",
+      "subject": "mathematics",
+      "questionNumber": 7,
+      "questionText": "The ratio 8 : 12 is equivalent to y : 9. What is the value of y.",
+      "options": [
+        "A. 4",
+        "B. 5",
+        "C. 6",
+        "D. 7"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480235,
+        "_nanoseconds": 583000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2008"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2008_q7_img7.png",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542190,
+        "_nanoseconds": 728000000
+      }
+    },
+    {
+      "id": "2iZ8zZRBh5Q2NQpu7aJQ",
+      "year": "2011",
+      "subject": "mathematics",
+      "questionNumber": 20,
+      "questionText": "Eight copies of a book cost GH₵ 16.00. Find the cost of 5 copies.",
+      "options": [
+        "A. GH₵ 2.00",
+        "B. GH₵ 3.20",
+        "C. GH₵ 5.00",
+        "D. GH₵ 10.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480311,
+        "_nanoseconds": 35000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2011"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 125000000
+      }
+    },
+    {
+      "id": "3enBfN6KbQXwywfmYhf4",
+      "year": "2025",
+      "subject": "mathematics",
+      "questionNumber": 37,
+      "questionText": "How long will the simple interest on GH₵ 550.00 AT 12% per annum be GH₵ 132.00?",
+      "options": [
+        "A. 1 year",
+        "B. 2 years",
+        "C. 4 years",
+        "D. 12 years"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482537,
+        "_nanoseconds": 145000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2025"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487105,
+        "_nanoseconds": 685000000
+      }
+    },
+    {
+      "id": "42ik48D9U9AIEf8SVOVW",
+      "year": "2007",
+      "subject": "mathematics",
+      "questionNumber": 19,
+      "questionText": "Jojo and Fiifi shared an amount of money in the ratio 3 : 4 respectively. If Fiifi had ₵ 140, 000 how much was shared?",
+      "options": [
+        "A. ₵ 200,000.00",
+        "B. ₵ 220,000.00",
+        "C. ₵ 245,000.00",
+        "D. ₵ 280,000.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480219,
+        "_nanoseconds": 448000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2007"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 958000000
+      }
+    },
+    {
+      "id": "4TknUObjH3NLvRPNPsLC",
+      "year": "2017",
+      "subject": "mathematics",
+      "questionNumber": 12,
+      "questionText": "A woman deposited an amount of GH₵ 50,000.00 at a bank for 2 years at a rate of 20% per annum. Find the simple interest.",
+      "options": [
+        "A. GH₵ 1,000.00",
+        "B. GH₵ 2,000.00",
+        "C. GH₵ 10,000.00",
+        "D. GH₵ 20,000.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480443,
+        "_nanoseconds": 650000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2017"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2017_q12_img12.jpg",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542213,
+        "_nanoseconds": 268000000
+      }
+    },
+    {
+      "id": "4VaKueLgiqsOZbkDgtAU",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 11,
+      "questionText": "If $1.00 = ₵340.00, what was the cedi value of an article which cost $6.50?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479581,
+        "_nanoseconds": 822000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵6,630.00",
+        "B. ₵2,380.00",
+        "C. ₵2,210.00",
+        "D. ₵346.50",
+        "E. ₵333.50"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1992_q11_img11.png",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542117,
+        "_nanoseconds": 490000000
+      }
+    },
+    {
+      "id": "4pW5b0lS7TMjFUKc6Mjs",
+      "year": "2000",
+      "subject": "mathematics",
+      "questionNumber": 24,
+      "questionText": "The marked price of a radio set is ₵450,000. A discount of 5% of the marked price is allowed. What is the selling price of the radio set?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480063,
+        "_nanoseconds": 938000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2000"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵427,000",
+        "B. ₵427,500",
+        "C. ₵428,571",
+        "D. ₵472,500",
+        "E. ₵473,684"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487085,
+        "_nanoseconds": 254000000
+      }
+    },
+    {
+      "id": "5nUCdjF1s6YvIOCSbqJt",
+      "year": "2017",
+      "subject": "mathematics",
+      "questionNumber": 10,
+      "questionText": "Evelyn saved GH₵ 35.48 every month for 8 months. How much did she save?",
+      "options": [
+        "A. GH₵ 183.60",
+        "B. GH₵ 280.63",
+        "C. GH₵ 283.20",
+        "D. GH₵ 283.84"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480442,
+        "_nanoseconds": 523000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2017"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2017_q10_img10.jpg",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542212,
+        "_nanoseconds": 283000000
+      }
+    },
+    {
+      "id": "7OVkxfj5lcf3r5p0dHf7",
+      "year": "2004",
+      "subject": "mathematics",
+      "questionNumber": 36,
+      "questionText": "Prices of items in a shop were reduced by 10% during a reduction sale. If a customer bought an electric fan for ₵81,000.00, what was its original price?",
+      "options": [
+        "A. ₵72,900.00",
+        "B. ₵73,900.00",
+        "C. ₵89,100.00",
+        "D. ₵90,000.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480160,
+        "_nanoseconds": 771000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2004"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487088,
+        "_nanoseconds": 551000000
+      }
+    },
+    {
+      "id": "8LJs0qteRDDBXUzUqs9x",
+      "year": "2006",
+      "subject": "mathematics",
+      "questionNumber": 4,
+      "questionText": "The number of boys in a school is 120. If the ratio of boys to girls is 5 : 7, find the total number of students in the school.",
+      "options": [
+        "A. 240",
+        "B. 288",
+        "C. 600",
+        "D. 840"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480188,
+        "_nanoseconds": 253000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2006"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2006_q4_img4.png",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542179,
+        "_nanoseconds": 931000000
+      }
+    },
+    {
+      "id": "9XIasFckOPuDf0F30CdU",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 23,
+      "questionText": "Find the interest on GH₵ 400.00 for 2 years at 10% simple interest per annum.",
+      "options": [
+        "A. GH₵ 8.00",
+        "B. GH₵ 40.00",
+        "C. GH₵ 80.00",
+        "D. GH₵ 60.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482506,
+        "_nanoseconds": 692000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 904000000
+      }
+    },
+    {
+      "id": "A68Dsf53AVXD5wEN79ya",
+      "year": "1991",
+      "subject": "mathematics",
+      "questionNumber": 33,
+      "questionText": "Kojo paid ₵270,000.00 for a TV set after he had been given a discount of 10%. Find the marked price.",
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479572,
+        "_nanoseconds": 54000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1991"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵300,000.00",
+        "B. ₵297,000.00",
+        "C. ₵280,000.00",
+        "D. ₵260,000.00",
+        "E. ₵243,000.00"
+      ],
+      "updatedAt": {
+        "_seconds": 1763487077,
+        "_nanoseconds": 776000000
+      }
+    },
+    {
+      "id": "AwrwckJ4z9CgWOC9MMNN",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 1,
+      "questionText": "Two brands of air conditioners S and T cost GH₵ 3,000.00 and GH₵ 4,000.00 respectively. A company budgeted GH₵ 20,000.00 to buy air conditioners. If the company bought 5 units of brand S instead of brand T, how much did it save?",
+      "options": [
+        "A. GH₵ 1,000.00",
+        "B. GH₵ 5,000.00",
+        "C. GH₵ 20,000.00",
+        "D. GH₵ 15,000.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482492,
+        "_nanoseconds": 382000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2024_q1_img1.png",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542283,
+        "_nanoseconds": 85000000
+      }
+    },
+    {
+      "id": "DJTMpBnpKyPniYSmFK8L",
+      "year": "2018",
+      "subject": "mathematics",
+      "questionNumber": 11,
+      "questionText": "Find the simple interest on GH₵ 600.00 saved for 2 years 8 months at 5% per anum.",
+      "options": [
+        "A. GH₵ 64.00",
+        "B. GH₵ 80.00",
+        "C. GH₵ 84.00",
+        "D. GH₵ 92.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480466,
+        "_nanoseconds": 25000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2018"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2018_q11_img11.jpg",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542229,
+        "_nanoseconds": 875000000
+      }
+    },
+    {
+      "id": "DyMLFfqQ2uM3yetpUN7p",
+      "year": "2025",
+      "subject": "mathematics",
+      "questionNumber": 26,
+      "questionText": "Esi made sales of 15 twenty cedi notes, 14 ten cedi notes and 15 two cedi notes. Find her total sales.",
+      "options": [
+        "A. GH₵ 305.00",
+        "B. GH₵ 440.00",
+        "C. GH₵ 470.00",
+        "D. GH₵ 740.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482531,
+        "_nanoseconds": 292000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2025"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487105,
+        "_nanoseconds": 685000000
+      }
+    },
+    {
+      "id": "FllOqhDdmNuR7QOHEG9v",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 2,
+      "questionText": "Zalia and Amina shared an amount of money in the ratio 2 : 5. If Amina had GH₵ 150.00 more than Zalia, how much did they share?",
+      "options": [
+        "A. GH₵ 100.00",
+        "B. GH₵ 250.00",
+        "C. GH₵ 450.00",
+        "D. GH₵ 350.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482493,
+        "_nanoseconds": 155000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2024_q2_img2.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542283,
+        "_nanoseconds": 583000000
+      }
+    },
+    {
+      "id": "JXOzxqchdBGuSVr6NFxY",
+      "year": "2016",
+      "subject": "mathematics",
+      "questionNumber": 4,
+      "questionText": "A boy bought 3 pairs of socks at GH₵17.50 per a pair and paid with two GH₵50.00 notes. How much change was he given?",
+      "options": [
+        "A. GH₵27.50",
+        "B. GH₵37.50",
+        "C. GH₵47.50",
+        "D. GH₵48.50"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480416,
+        "_nanoseconds": 403000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2016"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487098,
+        "_nanoseconds": 192000000
+      }
+    },
+    {
+      "id": "JckOCn8LWhCjhlLTslHR",
+      "year": "2005",
+      "subject": "mathematics",
+      "questionNumber": 37,
+      "questionText": "The price of a gas cooker costing ₵450,000.00 was increased by 10%. Find its new price.",
+      "options": [
+        "A. ₵45,000.00",
+        "B. ₵49,000.00",
+        "C. ₵405,000.00",
+        "D. ₵495,000.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480184,
+        "_nanoseconds": 127000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2005"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487089,
+        "_nanoseconds": 336000000
+      }
+    },
+    {
+      "id": "KVDkeHkHiofxystFDQuc",
+      "year": "2009",
+      "subject": "mathematics",
+      "questionNumber": 31,
+      "questionText": "A sales girl receives a 5 % commission on all she sells. Find how much she has to sell to receive GH₵ 15.00.",
+      "options": [
+        "A. GH₵ 750.00",
+        "B. GH₵ 300.00",
+        "C. GH₵ 75.00",
+        "D. GH₵ 30.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480271,
+        "_nanoseconds": 702000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2009"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487092,
+        "_nanoseconds": 558000000
+      }
+    },
+    {
+      "id": "L8RNuUqKxYtZEJ2UXVIU",
+      "year": "2012",
+      "subject": "mathematics",
+      "questionNumber": 29,
+      "questionText": "A watch gains 1 1 2 minutes per hour. What is the total time gained from 12 noon to 12 midnight in a day?",
+      "options": [
+        "A. 9 minutes",
+        "B. 15 minutes",
+        "C. 18 minutes",
+        "D. 36 minutes"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480339,
+        "_nanoseconds": 238000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2012"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 925000000
+      }
+    },
+    {
+      "id": "NCyFxRLPkStTgbHizl0T",
+      "year": "2014",
+      "subject": "mathematics",
+      "questionNumber": 23,
+      "questionText": "Kofi, Kojo and Ama shared GH₵480,000.00 in the ratio 3:5:4. How much did Ama receive?",
+      "options": [
+        "A. GH₵160,000.00",
+        "B. GH₵200,000.00",
+        "C. GH₵218,181.81",
+        "D. GH₵342,859.14"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480381,
+        "_nanoseconds": 638000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2014"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487096,
+        "_nanoseconds": 588000000
+      }
+    },
+    {
+      "id": "NQFsY4k7FWK034VOzCy3",
+      "year": "1997",
+      "subject": "mathematics",
+      "questionNumber": 37,
+      "questionText": "If 50 oranges cost ₵2,500.00 how many oranges can be bought for ₵15,000.00?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480003,
+        "_nanoseconds": 671000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1997"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 3",
+        "B. 30",
+        "C. 60",
+        "D. 300",
+        "E. 360"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487082,
+        "_nanoseconds": 727000000
+      }
+    },
+    {
+      "id": "PFng4j7E6ltza9jADDcR",
+      "year": "2008",
+      "subject": "mathematics",
+      "questionNumber": 35,
+      "questionText": "Find 12 1 2 % of GH₵ 80.00",
+      "options": [
+        "A. GH₵ 8.00",
+        "B. GH₵ 10.00",
+        "C. GH₵ 12.00",
+        "D. GH₵ 12.50"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480251,
+        "_nanoseconds": 254000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2008"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487091,
+        "_nanoseconds": 763000000
+      }
+    },
+    {
+      "id": "Qj4pi8tBpVcUlHdoapoW",
+      "year": "2008",
+      "subject": "mathematics",
+      "questionNumber": 24,
+      "questionText": "Express 6 days is to 3 weeks as a ratio in its simplest form.",
+      "options": [
+        "A. 1 : 2",
+        "B. 2 : 1",
+        "C. 2 : 7",
+        "D. 7 : 2"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480245,
+        "_nanoseconds": 50000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2008"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487091,
+        "_nanoseconds": 763000000
+      }
+    },
+    {
+      "id": "QkCSlt1l9ju84hnujENF",
+      "year": "2025",
+      "subject": "mathematics",
+      "questionNumber": 21,
+      "questionText": "Charles and Helen started a business with an amount of GH₵ 7,000.00. If their contributions were in the ratio 4:3 respectively, find Helen's contribution.",
+      "options": [
+        "A. GH₵ 2,500.00",
+        "B. GH₵ 3,000.00",
+        "C. GH₵ 4,000.00",
+        "D. GH₵ 5,000.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482528,
+        "_nanoseconds": 146000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2025"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487105,
+        "_nanoseconds": 685000000
+      }
+    },
+    {
+      "id": "Qx08yxnpZdcbNyJ3cM7H",
+      "year": "1995",
+      "subject": "mathematics",
+      "questionNumber": 31,
+      "questionText": "The heights of two boys are in the ratio 4 : 5. The shorter boy is 80 cm. What is the height of the taller boy?",
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479954,
+        "_nanoseconds": 684000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1995"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 100 cm",
+        "B. 150 cm",
+        "C. 164 cm",
+        "D. 180 cm",
+        "E. 200 cm"
+      ],
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 77000000
+      }
+    },
+    {
+      "id": "S1XM9WQFIHgrJo7jK5gH",
+      "year": "1993",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "A bottle of soft drink costs ₵200.00. The commission paid on one bottle is 2% of the cost price. Find the commission paid on 24 bottles of the soft drink.",
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479611,
+        "_nanoseconds": 982000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1993"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵96.00",
+        "B. ₵296.00",
+        "C. ₵400.00",
+        "D. ₵4,704.00",
+        "E. ₵4,800.00"
+      ],
+      "updatedAt": {
+        "_seconds": 1763487079,
+        "_nanoseconds": 424000000
+      }
+    },
+    {
+      "id": "Sha1QZBvZBXSW8NDVkYK",
+      "year": "1994",
+      "subject": "mathematics",
+      "questionNumber": 25,
+      "questionText": "Write ₵35,632.00 correct to the nearest thousand cedis.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479632,
+        "_nanoseconds": 37000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1994"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵40,000.00",
+        "B. ₵36,000.00",
+        "C. ₵35,600.00",
+        "D. ₵35,000.00",
+        "E. ₵30,000.00"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487080,
+        "_nanoseconds": 244000000
+      }
+    },
+    {
+      "id": "UD2ODe3sobw9bH6dsRah",
+      "year": "2005",
+      "subject": "mathematics",
+      "questionNumber": 27,
+      "questionText": "Eric and Ebo are to share an amount of ₵800,000.00 in the ratio 5:3 respectively. What will be Ebo's share?",
+      "options": [
+        "A. ₵30,000.00",
+        "B. ₵50,000.00",
+        "C. ₵300,000.00",
+        "D. ₵500,000.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480178,
+        "_nanoseconds": 437000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2005"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487089,
+        "_nanoseconds": 336000000
+      }
+    },
+    {
+      "id": "VZyFP3YbgcfSGClN2FDe",
+      "year": "1997",
+      "subject": "mathematics",
+      "questionNumber": 30,
+      "questionText": "The scale of a map is 1 : 100,000. What is the distance (in km) between two towns 4 cm apart on the map?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479999,
+        "_nanoseconds": 780000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1997"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 0.04",
+        "B. 0.4",
+        "C. 4.0",
+        "D. 40",
+        "E. 400"
+      ],
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487082,
+        "_nanoseconds": 727000000
+      }
+    },
+    {
+      "id": "WTSWVJbwQAzgntob87jg",
+      "year": "2016",
+      "subject": "mathematics",
+      "questionNumber": 12,
+      "questionText": "Find the simple interest on GH₵120,000.00 for 5 months at 12% per annum.",
+      "options": [
+        "A. GH₵6,000.00",
+        "B. GH₵7,200.00",
+        "C. GH₵50,000.00",
+        "D. GH₵72,000.00"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480420,
+        "_nanoseconds": 844000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2016"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487098,
+        "_nanoseconds": 192000000
+      }
+    },
+    {
+      "id": "YTquDMNp5CkYVimNI81P",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 20,
+      "questionText": "Kofi and Ama shared an amount of money in the ratio 3 : 2 respectively. If Kofi had ₵60,000.00, how much was shared?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480084,
+        "_nanoseconds": 254000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵36,000.00",
+        "B. ₵40,000.00",
+        "C. ₵90,000.00",
+        "D. ₵100,000.00",
+        "E. ₵120,000.00"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 59000000
+      }
+    },
+    {
+      "id": "ZPl4z8Y9IPkCl5tbGVvE",
+      "year": "1996",
+      "subject": "mathematics",
+      "questionNumber": 29,
+      "questionText": "The ratio of boys to girls in a school is 9 : 11. If there are 400 pupils in the school, how many boys are there?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479976,
+        "_nanoseconds": 572000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1996"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 80",
+        "B. 120",
+        "C. 180",
+        "D. 220",
+        "E. 280"
+      ],
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 915000000
+      }
+    },
+    {
+      "id": "ZSSQecgBuuRtKCfUuWwA",
+      "year": "2013",
+      "subject": "mathematics",
+      "questionNumber": 38,
+      "questionText": "A man shared an amount of money between his two children, Esi and Ato in the ratio 2:3 respectively. If Ato received GH₵ 45.00, what was the total amount shared?",
+      "options": [
+        "A. GH₵ 18.00",
+        "B. GH₵ 27.50",
+        "C. GH₵ 75.00",
+        "D. GH₵ 112.50"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480367,
+        "_nanoseconds": 204000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2013"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487095,
+        "_nanoseconds": 754000000
+      }
+    },
+    {
+      "id": "a59aYhufXAqEG107aI3l",
+      "year": "2018",
+      "subject": "mathematics",
+      "questionNumber": 12,
+      "questionText": "The number of girls in a mixed school is 420. If the ratio of boys to girls in the school is 3:2, how many students are in the school?",
+      "options": [
+        "A. 1050",
+        "B. 1470",
+        "C. 1630",
+        "D. 1680"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480466,
+        "_nanoseconds": 574000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2018"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2018_q12_img12.jpg",
+      "updatedAt": {
+        "_seconds": 1763542230,
+        "_nanoseconds": 374000000
+      }
+    },
+    {
+      "id": "bIsK5vUeuRtBCdqQO1g9",
+      "year": "1991",
+      "subject": "mathematics",
+      "questionNumber": 21,
+      "questionText": "Adjoa and Ama share ₵600.00 between them in the ratio 3 : 2. Find Adjoa's share.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479565,
+        "_nanoseconds": 732000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1991"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵200.00",
+        "B. ₵240.00",
+        "C. ₵300.00",
+        "D. ₵360.00",
+        "E. ₵400.00"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487077,
+        "_nanoseconds": 776000000
+      }
+    },
+    {
+      "id": "cj8CnOmbY6mW1ONiQzwR",
+      "year": "2006",
+      "subject": "mathematics",
+      "questionNumber": 13,
+      "questionText": "Three children share an amount of ₵910,800.00 in the ratio 2 : 3 : 4. What will be the highest share?",
+      "options": [
+        "A. ₵202,400.00",
+        "B. ₵303,600.00",
+        "C. ₵404,800.00",
+        "D. ₵455,400.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480193,
+        "_nanoseconds": 299000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2006"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 135000000
+      }
+    },
+    {
+      "id": "dNB01WrXg3k51NWhMyKr",
+      "year": "2017",
+      "subject": "mathematics",
+      "questionNumber": 29,
+      "questionText": "Elias bought five books. Their mean price was GH₵ 3.25. The total cost for four of the books was GH₵ 11.75. What was the cost of the fifth book?",
+      "options": [
+        "A. GH₵ 3.50",
+        "B. GH₵ 4.00",
+        "C. GH₵ 4.20",
+        "D. GH₵ 4.50"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480453,
+        "_nanoseconds": 320000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2017"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2017_q29_img29.jpg",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542221,
+        "_nanoseconds": 565000000
+      }
+    },
+    {
+      "id": "eA0elqV1hsIqHc08eDuF",
+      "year": "2021",
+      "subject": "mathematics",
+      "questionNumber": 9,
+      "questionText": "Kofi and Ama shared an amount of GH₵ 3,000.00 in the ratio 2:3. Find the amount received by Kofi.",
+      "options": [
+        "A. GH₵ 1,000.00",
+        "B. GH₵ 1,200.00",
+        "C. GH₵ 1,500.00",
+        "D. GH₵ 1,800.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480533,
+        "_nanoseconds": 495000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2021"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2021_q9_img9.png",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542259,
+        "_nanoseconds": 635000000
+      }
+    },
+    {
+      "id": "f7imRWdBWSk91T6ZWTxU",
+      "year": "2015",
+      "subject": "mathematics",
+      "questionNumber": 22,
+      "questionText": "A write watch is priced GH₵2,000.00. A shopkeeper allows a discount of 2% on the cost price. Find the discount on 20 of such wrist watches.",
+      "options": [
+        "A. GH₵500.00",
+        "B. GH₵600.00",
+        "C. GH₵800.00",
+        "D. GH₵1,000.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480403,
+        "_nanoseconds": 832000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2015"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487097,
+        "_nanoseconds": 370000000
+      }
+    },
+    {
+      "id": "fHPqq2VyTvugwSd7k1I4",
+      "year": "2017",
+      "subject": "mathematics",
+      "questionNumber": 21,
+      "questionText": "Mr. Agyekum has 11 of the GH₵ 20.00 notes, 15 of the GH₵ 10.00 notes and 6 of the GH₵ 5.00 notes. How much does Mr. Agyekum have altogether?",
+      "options": [
+        "A. GH₵ 280.00",
+        "B. GH₵ 320.00",
+        "C. GH₵ 360.00",
+        "D. GH₵ 400.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480448,
+        "_nanoseconds": 737000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2017"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2017_q21_img21.jpg",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542217,
+        "_nanoseconds": 667000000
+      }
+    },
+    {
+      "id": "fxN8RBqGaJB9OZzW1mFZ",
+      "year": "2012",
+      "subject": "mathematics",
+      "questionNumber": 24,
+      "questionText": "Kofi invested GH₵ 150,000 at 2.5% per annum simple interest. How long will it take this amount to yield an interest of GH₵11,250.00?",
+      "options": [
+        "A. 2 years",
+        "B. 3 years",
+        "C. 4 years",
+        "D. 5 years"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480336,
+        "_nanoseconds": 385000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2012"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 925000000
+      }
+    },
+    {
+      "id": "gR7Z86P8p4OgCuXwBara",
+      "year": "1993",
+      "subject": "mathematics",
+      "questionNumber": 2,
+      "questionText": "Find the missing number in the following binary operation: 1 1 0 0 1 1 0 - * * * * * * * 1 1 1 0 1 1",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479598,
+        "_nanoseconds": 443000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1993"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 111011",
+        "B. 101001",
+        "C. 100011",
+        "D. 101110",
+        "E. 101011"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1993_q2_img2.png",
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763542121,
+        "_nanoseconds": 415000000
+      }
+    },
+    {
+      "id": "gUvQYnCKmsrkcSjGx7yx",
+      "year": "2000",
+      "subject": "mathematics",
+      "questionNumber": 19,
+      "questionText": "The ratio 9 : x is equivalent to 36 : 20. What is the value of x?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480061,
+        "_nanoseconds": 142000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2000"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 4",
+        "B. 5",
+        "C. 6",
+        "D. 8",
+        "E. 10"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487085,
+        "_nanoseconds": 254000000
+      }
+    },
+    {
+      "id": "hi2ONvR88SPgkTF76S4S",
+      "year": "2013",
+      "subject": "mathematics",
+      "questionNumber": 24,
+      "questionText": "How many 15Gp Christmas cards can be bought with GH₵18.00?",
+      "options": [
+        "A. 120",
+        "B. 150",
+        "C. 180",
+        "D. 270"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480359,
+        "_nanoseconds": 149000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2013"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487095,
+        "_nanoseconds": 754000000
+      }
+    },
+    {
+      "id": "i3oQiPL1yA233N3BLq8e",
+      "year": "2021",
+      "subject": "mathematics",
+      "questionNumber": 20,
+      "questionText": "Find the simple interest on GH₵ 600.00 which was saved for 8 months at 5% per annum.",
+      "options": [
+        "A. GH₵ 20.00",
+        "B. GH₵ 40.00",
+        "C. GH₵ 45.00",
+        "D. GH₵ 240.00"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480539,
+        "_nanoseconds": 732000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2021"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2021_q20_img20.jpg",
+      "updatedAt": {
+        "_seconds": 1763542264,
+        "_nanoseconds": 990000000
+      }
+    },
+    {
+      "id": "ivr3Of51lEBakGKT0JW6",
+      "year": "2014",
+      "subject": "mathematics",
+      "questionNumber": 14,
+      "questionText": "I gave a storekeeper a GH₵10.00 note for goods I bought. He asked me for another 15 Gp for ease of change. If he then gave me 50 Gp, how much did I pay for the goods?",
+      "options": [
+        "A. GH₵9.35",
+        "B. GH₵9.45",
+        "C. GH₵9.65",
+        "D. GH₵10.65"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480376,
+        "_nanoseconds": 545000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2014"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487096,
+        "_nanoseconds": 588000000
+      }
+    },
+    {
+      "id": "kwFIgaD4cqYzoIHbPz0J",
+      "year": "2020",
+      "subject": "mathematics",
+      "questionNumber": 31,
+      "questionText": "There are 15 females in a debating club. If the ratio of females to males is 3:2, how many members are in the club?",
+      "options": [
+        "A. 6",
+        "B. 10",
+        "C. 22",
+        "D. 25"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480523,
+        "_nanoseconds": 158000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2020"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487101,
+        "_nanoseconds": 629000000
+      }
+    },
+    {
+      "id": "lnsjHaEdHX4aJUbKKEeu",
+      "year": "2002",
+      "subject": "mathematics",
+      "questionNumber": 30,
+      "questionText": "A man divided his 360 cattle among his three sons in the ratio 7 : 6 : 5. How many cattle did the one who had the smallest share receive?",
+      "options": [
+        "A. 100",
+        "B. 120",
+        "C. 140",
+        "D. 160"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480112,
+        "_nanoseconds": 372000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2002"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 895000000
+      }
+    },
+    {
+      "id": "mV5RlcTYAthmeDOvMJAA",
+      "year": "2015",
+      "subject": "mathematics",
+      "questionNumber": 13,
+      "questionText": "A man invested GH₵800.00 in a bank at a simple interest rate of 5% per annum. Find his total amount in the bank at the end of one year.",
+      "options": [
+        "A. GH₵840.00",
+        "B. GH₵860.00",
+        "C. GH₵900.00",
+        "D. GH₵960.00"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480398,
+        "_nanoseconds": 659000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2015"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487097,
+        "_nanoseconds": 370000000
+      }
+    },
+    {
+      "id": "ni7TkijN9Q5mPgc3mnKc",
+      "year": "2012",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "Esi went to the market and bought 500 g of meat, 850 g of fish and 900 g of eggs. What is the total weight of the items she bought in kilograms?",
+      "options": [
+        "A. 2.20 kg",
+        "B. 2.25 kg",
+        "C. 2.35 kg",
+        "D. 22.50 kg"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480338,
+        "_nanoseconds": 675000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2012"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 925000000
+      }
+    },
+    {
+      "id": "ovIDlFqLjHwhCPdnEmvD",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 36,
+      "questionText": "The cost of three items at a shop are GH₵ 72.00, GH₵ 1,105.00 and GH₵ 216.00. If a customer bought all the three items and received a change of GH₵ 107.00, how much did he initially give the shopkeeper?",
+      "options": [
+        "A. GH₵ 1,300.00",
+        "B. GH₵ 1,400.00",
+        "C. GH₵ 2,000.00",
+        "D. GH₵ 1,500.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482514,
+        "_nanoseconds": 611000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 904000000
+      }
+    },
+    {
+      "id": "ovb0kjidpnymUcHJ7E3G",
+      "year": "2000",
+      "subject": "mathematics",
+      "questionNumber": 25,
+      "questionText": "If 60% of the pupils in a school is 240, find the total enrolment in the school.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480064,
+        "_nanoseconds": 508000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2000"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 144",
+        "B. 160",
+        "C. 360",
+        "D. 384",
+        "E. 400"
+      ],
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487085,
+        "_nanoseconds": 254000000
+      }
+    },
+    {
+      "id": "p3xklgJnvpfulX0J5WSl",
+      "year": "1999",
+      "subject": "mathematics",
+      "questionNumber": 27,
+      "questionText": "A trader received a commission of 25% on the sales he made in a month. His commission was ₵180,000.00. Find his total sales for the month.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480042,
+        "_nanoseconds": 991000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1999"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵135,000.00",
+        "B. ₵150,000.00",
+        "C. ₵240,000.00",
+        "D. ₵540,000.00",
+        "E. ₵720,000.00"
+      ],
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487084,
+        "_nanoseconds": 387000000
+      }
+    },
+    {
+      "id": "qN1T5WXshJ7kkUAraoIG",
+      "year": "2023",
+      "subject": "mathematics",
+      "questionNumber": 16,
+      "questionText": "Find the simple interest on GH₵ 350.00 for 4 years at 5% per annum.",
+      "options": [
+        "A. GH₵ 20.00",
+        "B. GH₵ 35.00",
+        "C. GH₵ 70.00",
+        "D. GH₵ 140.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482472,
+        "_nanoseconds": 540000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2023"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 62000000
+      }
+    },
+    {
+      "id": "qcvSpUFcmCbcC85QEzBj",
+      "year": "1991",
+      "subject": "mathematics",
+      "questionNumber": 29,
+      "questionText": "Express the ratio of 64 cm to 48 cm in its simplest form.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479569,
+        "_nanoseconds": 945000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1991"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 3 : 4",
+        "B. 4 : 3",
+        "C. 16 : 12",
+        "D. 12 : 16",
+        "E. 64 : 48"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487077,
+        "_nanoseconds": 776000000
+      }
+    },
+    {
+      "id": "qsYtH3WNbnELEkaS55GW",
+      "year": "1998",
+      "subject": "mathematics",
+      "questionNumber": 14,
+      "questionText": "On a map, two towns P and Q are 15.5 cm apart. The scale of the map is 1 cm: 4 km. Calculate the actual distance between P and Q.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480013,
+        "_nanoseconds": 288000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1998"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 15.5 km",
+        "B. 31 km",
+        "C. 46 km",
+        "D. 60 km",
+        "E. 62 km"
+      ],
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487083,
+        "_nanoseconds": 561000000
+      }
+    },
+    {
+      "id": "rtsR2hrZoHu1PavwKq0V",
+      "year": "2016",
+      "subject": "mathematics",
+      "questionNumber": 14,
+      "questionText": "A car costs GH₵12,500.00. A discount of 9% is given for cash payment. Find the cost of the car when payment is made by cash.",
+      "options": [
+        "A. GH₵10,250.00",
+        "B. GH₵11,250.00",
+        "C. GH₵11,375.00",
+        "D. GH₵13,625.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480421,
+        "_nanoseconds": 972000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2016"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487098,
+        "_nanoseconds": 192000000
+      }
+    },
+    {
+      "id": "sdYoNWBOwlEQJEtOLFO2",
+      "year": "1997",
+      "subject": "mathematics",
+      "questionNumber": 32,
+      "questionText": "Adwoa and Ama share an amount of ₵6,000.00 in the ratio 3 : 2. Find Adwoa's share.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480000,
+        "_nanoseconds": 900000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1997"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵2,000.00",
+        "B. ₵2,400.00",
+        "C. ₵3,000.00",
+        "D. ₵3,600.00",
+        "E. ₵4,000.00"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487082,
+        "_nanoseconds": 727000000
+      }
+    },
+    {
+      "id": "tIs23GNtESg3J9TyKoES",
+      "year": "1991",
+      "subject": "mathematics",
+      "questionNumber": 34,
+      "questionText": "In a secondary school class, 23 pupils study Economics, 6 pupils study both Government and Economics. 48 pupils study either Government or Economics or both. Use this information to answer the question below. What is the total number of pupils who study Government?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479572,
+        "_nanoseconds": 619000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1991"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 17",
+        "B. 23",
+        "C. 24",
+        "D. 25",
+        "E. 31"
+      ],
+      "explanation": "",
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487077,
+        "_nanoseconds": 776000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2002_q2",
+      "questionText": "A shop sells a pencil at ₵500.00 and a pen at ₵2,000.00\n\n(a)\n\n \n\nIf Afua bought 8 pencils and 5 pens, how much did she pay together for them?\n\n(b)\n\n \n\nThe price of a pencil is increased by 20% and a pen by 10%. Find how much she will pay for 10 pencils and 8 pens.",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2002",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2002 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2002",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2009_q100",
+      "questionText": ", gives the interest, I on a principal, P invested at a rate, R per annum for time, T years.\n\n(i)\n\n \n\nFind the simple interest on GH₵ 3,600.00 at 15% per annum for 2 years.\n\n(ii)\n\n \n\nMake R the subject of the simple interest formula.\n\n(iii)\n\n \n\nAt what rate per annum will GH₵ 6,000.00 earn GH₵ 2,400.00 simple interest in 2 years?",
+      "questionNumber": 100,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2009",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2009 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2009",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2011_q300",
+      "questionText": "y (cost in GH₵)",
+      "questionNumber": 300,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2011",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2011 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2011",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2011_q8",
+      "questionText": "of his money and had GH₵ 15.00 left. How much did he have?",
+      "questionNumber": 8,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2011",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2011 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2011",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2012_q0",
+      "questionText": "0015\n\n, leaving the answer in standard form.\n\n(b)\n\n \n\nAn amount of GH₵4,200.00 was shared betwen Aba and Kwame. If Aba had",
+      "questionNumber": 0,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2012",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2012 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2012",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2024_q2",
+      "questionText": "m2. The school has Administration and Classroom block, Library, School Park, Roads and Walkways.\n\nThe areas of the Administration and Classroom block, Library and School Park are 300",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2024",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2024 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2025_q4",
+      "questionText": "(a)\n\n \n\nA woman borrowed GH₵ 5,300.00 to pay for her child's university fees. If she borrowed at a rate of 8% simple interest per annum for 9 months, find the interest paid.\n\n(b)\n\n \n\nA father shared his piece of land to his three children. The first child had",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2025",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2025 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2025",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "tlug3X2Nf1MjlF5531Ps",
+      "year": "1991",
+      "subject": "mathematics",
+      "questionNumber": 19,
+      "questionText": "A trader received a commission of 12 1 2 % on sales made in a month. His commission was ₵35,000.00. Find his total sales for the month.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479564,
+        "_nanoseconds": 715000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1991"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵36,250.00",
+        "B. ₵59,750.00",
+        "C. ₵245,000.00",
+        "D. ₵280,000.00",
+        "E. ₵315,000.00"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487077,
+        "_nanoseconds": 776000000
+      }
+    },
+    {
+      "id": "uo2Kqz5yOGjGTr9gHBc7",
+      "year": "2011",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "Kwame and Ama shared an amount of money in the ratio 5:4 respectively. If Kwame had GH₵ 9.00, how much did they share?",
+      "options": [
+        "A. GH₵ 16.20",
+        "B. GH₵ 36.00",
+        "C. GH₵ 45.00",
+        "D. GH₵ 81.00"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480315,
+        "_nanoseconds": 830000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2011"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 125000000
+      }
+    },
+    {
+      "id": "z0lJJoUsVjHOt6L6Ugnw",
+      "year": "2020",
+      "subject": "mathematics",
+      "questionNumber": 6,
+      "questionText": "The cost of 12 note books is GH₵ 54.84. Find the cost of one note book.",
+      "options": [
+        "A. GH₵ 5.57",
+        "B. GH₵ 4.67",
+        "C. GH₵ 4.57",
+        "D. GH₵ 3.57"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480509,
+        "_nanoseconds": 24000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2020"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2020_q6_img6.jpg",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542252,
+        "_nanoseconds": 759000000
+      }
+    },
+    {
+      "id": "zVVdoxoXOyi39NiMdAEL",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 22,
+      "questionText": "Araba bought an electric cooker for ₵540,000.00 at a discount of 10%. Find the actual price of the electric cooker.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480085,
+        "_nanoseconds": 365000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵469,000.00",
+        "B. ₵496,000.00",
+        "C. ₵594,000.00",
+        "D. ₵600,000.00",
+        "E. ₵605,000.00"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 59000000
+      }
+    }
+  ],
+  "questionCount": 75
+}

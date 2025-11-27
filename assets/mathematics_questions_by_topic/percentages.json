@@ -1,0 +1,3141 @@
+{
+  "topic": "Percentages",
+  "questions": [
+    {
+      "id": "1GUdHVFU24f2N55eDjPc",
+      "year": "2014",
+      "subject": "mathematics",
+      "questionNumber": 13,
+      "questionText": "Kofi paid rent of GH₵1,800.00 each year. If the rent is 0.3 of his annual income, find his annual income.",
+      "options": [
+        "A. GH₵600.00",
+        "B. GH₵5,400.00",
+        "C. GH₵6,000.00",
+        "D. GH₵18,000.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480375,
+        "_nanoseconds": 985000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2014"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487096,
+        "_nanoseconds": 588000000
+      }
+    },
+    {
+      "id": "1XZETUxiWN99POLHsryo",
+      "year": "1994",
+      "subject": "mathematics",
+      "questionNumber": 7,
+      "questionText": "In how many years will ₵5,000.00 yield a simple interest of ₵1,000.00 at a rate of 5% per annum.",
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479622,
+        "_nanoseconds": 377000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1994"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 4 years",
+        "B. 5 years",
+        "C. 10 years",
+        "D. 25 years",
+        "E. 30 years"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1994_q7_img7.png",
+      "updatedAt": {
+        "_seconds": 1763542131,
+        "_nanoseconds": 263000000
+      }
+    },
+    {
+      "id": "2TFbnxARRaO5jyRdosRr",
+      "year": "1997",
+      "subject": "mathematics",
+      "questionNumber": 5,
+      "questionText": "Express 30 cm as a percentage of 2 m.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479985,
+        "_nanoseconds": 743000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1997"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 0.5%",
+        "B. 1.5%",
+        "C. 6.7%",
+        "D. 15%",
+        "E. 66.7%"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1997_q5_img5.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542150,
+        "_nanoseconds": 165000000
+      }
+    },
+    {
+      "id": "327kBIqk8mEW0Pb7cwGp",
+      "year": "1995",
+      "subject": "mathematics",
+      "questionNumber": 12,
+      "questionText": "In a school, 80 pupils wrote an examination and 64 of them passed. What is the percentage of pupils who passed?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479735,
+        "_nanoseconds": 934000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1995"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 8%",
+        "B. 16%",
+        "C. 20%",
+        "D. 64%",
+        "E. 80%"
+      ],
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 77000000
+      }
+    },
+    {
+      "id": "35d1PwaIXAGk0y1Bbb06",
+      "year": "1994",
+      "subject": "mathematics",
+      "questionNumber": 18,
+      "questionText": "Express 25 as a percentage of 75.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479628,
+        "_nanoseconds": 285000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1994"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 300%",
+        "B. 100%",
+        "C. 50%",
+        "D. 33.3%",
+        "E. 25%"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1994_q18_img18.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542137,
+        "_nanoseconds": 801000000
+      }
+    },
+    {
+      "id": "3FEerbRPyuxlkXIHrb95",
+      "year": "2013",
+      "subject": "mathematics",
+      "questionNumber": 2,
+      "questionText": "Express 1.25 as a percentage.",
+      "options": [
+        "A. 25%",
+        "B. 75%",
+        "C. 125%",
+        "D. 175%"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480346,
+        "_nanoseconds": 809000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2013"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2013_q2_img2.png",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542199,
+        "_nanoseconds": 598000000
+      }
+    },
+    {
+      "id": "3qgSiLqG0ctGI4hPyMfh",
+      "year": "1990",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "A tank contains 250 litres of water. If 96 litres are used, what percentage of the original quantity is left?",
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479542,
+        "_nanoseconds": 707000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1990"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 61.6%",
+        "B. 60.5%",
+        "C. 59.0%",
+        "D. 54.2%",
+        "E. 38.4%"
+      ],
+      "updatedAt": {
+        "_seconds": 1763487076,
+        "_nanoseconds": 950000000
+      }
+    },
+    {
+      "id": "4WrNWvlj4OebD1LdkUTr",
+      "year": "1996",
+      "subject": "mathematics",
+      "questionNumber": 31,
+      "questionText": "What is 16% of ₵500,000.00?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479977,
+        "_nanoseconds": 672000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1996"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵80",
+        "B. ₵8,000",
+        "C. ₵80,000",
+        "D. ₵420,000",
+        "E. ₵492,000"
+      ],
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 915000000
+      }
+    },
+    {
+      "id": "6aSDQbJ9ViW85121BLY5",
+      "year": "1998",
+      "subject": "mathematics",
+      "questionNumber": 16,
+      "questionText": "Mansah obtained 150 marks out of 240 marks in an English test. What was her percentage score?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480014,
+        "_nanoseconds": 359000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1998"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 33.33%",
+        "B. 37.5%",
+        "C. 41.67%",
+        "D. 62.5%",
+        "E. 79.1%"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487083,
+        "_nanoseconds": 561000000
+      }
+    },
+    {
+      "id": "6sLLZ4UX5Ll6ODJoJfge",
+      "year": "2021",
+      "subject": "mathematics",
+      "questionNumber": 17,
+      "questionText": "Esi bought a television set for GH₵ 1,500.00. If she sold it at a profit of 20%, find the selling price.",
+      "options": [
+        "A. GH₵ 1,200.00",
+        "B. GH₵ 1,500.00",
+        "C. GH₵ 1,750.00",
+        "D. GH₵ 1,800.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480538,
+        "_nanoseconds": 20000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2021"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2021_q17_img17.jpg",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542263,
+        "_nanoseconds": 517000000
+      }
+    },
+    {
+      "id": "8BS8yaTNk22tYpkJfI01",
+      "year": "2014",
+      "subject": "mathematics",
+      "questionNumber": 8,
+      "questionText": "A pineapple which was bought for GH₵1.00 was sold at GH₵1.30. Calculate the profit percent.",
+      "options": [
+        "A. 10%",
+        "B. 20%",
+        "C. 23%",
+        "D. 30%"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480373,
+        "_nanoseconds": 40000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2014"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2014_q8_img8.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542204,
+        "_nanoseconds": 988000000
+      }
+    },
+    {
+      "id": "8tFCPea0YZ6hdk9K7BHm",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 12,
+      "questionText": "Find the simple interest on ₵28,000.00 at 3 1 2 % per annum for 6 months.",
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479582,
+        "_nanoseconds": 359000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵490.00",
+        "B. ₵560.00",
+        "C. ₵980.00",
+        "D. ₵4,000.00",
+        "E. ₵5,880.00"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1992_q12_img12.png",
+      "updatedAt": {
+        "_seconds": 1763542118,
+        "_nanoseconds": 288000000
+      }
+    },
+    {
+      "id": "BQ2wH3O8XtY3QQvvM1bv",
+      "year": "1998",
+      "subject": "mathematics",
+      "questionNumber": 13,
+      "questionText": "A man bought a car for ₵5.5 million and sold it for ₵6.5 million. Find the percentage gain.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480012,
+        "_nanoseconds": 747000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1998"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1.54%",
+        "B. 1.82%",
+        "C. 15.38%",
+        "D. 18.18%",
+        "E. 84.44%"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487083,
+        "_nanoseconds": 561000000
+      }
+    },
+    {
+      "id": "CBFarivywIEGk4Sl7YTY",
+      "year": "1998",
+      "subject": "mathematics",
+      "questionNumber": 26,
+      "questionText": "A man deposited an amount of ₵50,000.00 at a bank for 2 years at a rate of 20%. Find the simple interest.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480019,
+        "_nanoseconds": 932000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1998"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵1,000.00",
+        "B. ₵2,000.00",
+        "C. ₵10,000.00",
+        "D. ₵20,000.00",
+        "E. ₵200,000.00"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487083,
+        "_nanoseconds": 561000000
+      }
+    },
+    {
+      "id": "DH4xTveJGDLuTcHQMYXl",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 10,
+      "questionText": "Express 5 8 as a decimal fraction.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480078,
+        "_nanoseconds": 660000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 0.125",
+        "B. 0.375",
+        "C. 0.625",
+        "D. 0.750",
+        "E. 0.875"
+      ],
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 59000000
+      }
+    },
+    {
+      "id": "DmPP5AzOsSAt3ToxcWgT",
+      "year": "1995",
+      "subject": "mathematics",
+      "questionNumber": 27,
+      "questionText": "Find the simple interest on ₵15,000.00 at rate of 20% per annum for 5 years.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479744,
+        "_nanoseconds": 129000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1995"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵10,000.00",
+        "B. ₵15,000.00",
+        "C. ₵30,000.00",
+        "D. ₵50,000.00",
+        "E. ₵90,000.00"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 77000000
+      }
+    },
+    {
+      "id": "E2qMpzHHZu9z2f3Fc9zX",
+      "year": "2011",
+      "subject": "mathematics",
+      "questionNumber": 35,
+      "questionText": "A length of a ribbon is 16.8 m long. How many ribbons 0.36 m long can be cut from it?",
+      "options": [
+        "A. 0.46",
+        "B. 4.60",
+        "C. 46",
+        "D. 460"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480319,
+        "_nanoseconds": 864000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2011"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 125000000
+      }
+    },
+    {
+      "id": "FZlA1lW7qzYSM07YY2SP",
+      "year": "2007",
+      "subject": "mathematics",
+      "questionNumber": 24,
+      "questionText": "What percentage of 5 is 0.25?",
+      "options": [
+        "A. 4%",
+        "B. 5%",
+        "C. 20%",
+        "D. 25%"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480222,
+        "_nanoseconds": 280000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2007"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 958000000
+      }
+    },
+    {
+      "id": "FkdXYbkXBj3Xln51lsR9",
+      "year": "2005",
+      "subject": "mathematics",
+      "questionNumber": 18,
+      "questionText": "A woman bought a sewing machine for ₵800,000.00 and sold it for ₵920,000.00. Find the percentage profit",
+      "options": [
+        "A. 12%",
+        "B. 13%",
+        "C. 15%",
+        "D. 16.4%"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480173,
+        "_nanoseconds": 247000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2005"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487089,
+        "_nanoseconds": 336000000
+      }
+    },
+    {
+      "id": "GDxPM40235B6JJflBDgt",
+      "year": "2011",
+      "subject": "mathematics",
+      "questionNumber": 36,
+      "questionText": "A refrigerator was sold for GH₵ 200.00 at a loss of 10%. Find the cost price.",
+      "options": [
+        "A. GH₵ 180.00",
+        "B. GH₵ 190.48",
+        "C. GH₵ 220.00",
+        "D. GH₵ 222.22"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480320,
+        "_nanoseconds": 425000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2011"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 125000000
+      }
+    },
+    {
+      "id": "I4vdUHOmTb39gaSaMsHt",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 21,
+      "questionText": "Workers are required to pay 4 1 2 % of their salaries into an educational fund. A worker’s salary is ₵120,000.00. How much does he pay into the educational fund?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480084,
+        "_nanoseconds": 820000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵5,332.00",
+        "B. ₵5,400.00",
+        "C. ₵6,000.00",
+        "D. ₵10,800.00",
+        "E. ₵11,500.00"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 59000000
+      }
+    },
+    {
+      "id": "I7xUyg5mnGS6r8DDdTNN",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 13,
+      "questionText": "A hawker is carrying a basket load of three types of fruits: oranges, mangoes and pears. If 2 5 of the fruits are oranges and 6 25 mangoes, what percentage of the fruits are pears?",
+      "options": [
+        "A. 9 %",
+        "B. 18 %",
+        "C. 64 %",
+        "D. 36 %"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482500,
+        "_nanoseconds": 855000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 904000000
+      }
+    },
+    {
+      "id": "ItgbjjikmHpda3VT2ABu",
+      "year": "1995",
+      "subject": "mathematics",
+      "questionNumber": 5,
+      "questionText": "Write 356.07 in standard form.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479732,
+        "_nanoseconds": 167000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1995"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 35.607 x 10",
+        "B. 35.607 x 102",
+        "C. 3.5607 x 102",
+        "D. 3.5607 x 10-2",
+        "E. 0.35607 x 103"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1995_q5_img5.png",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542140,
+        "_nanoseconds": 249000000
+      }
+    },
+    {
+      "id": "KZsBAAekhsjfxY2BpWH7",
+      "year": "2002",
+      "subject": "mathematics",
+      "questionNumber": 37,
+      "questionText": "A rod 200 cm long is broken into two parts. The shorter part is one-quarter of the length of the rod. Express the shorter part as a percentage of the longer part.",
+      "options": [
+        "A. 25%",
+        "B. 30%",
+        "C. 33.33%",
+        "D. 66.67%"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480116,
+        "_nanoseconds": 227000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2002"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 895000000
+      }
+    },
+    {
+      "id": "LHYycDvb1RHwdhgDTpdg",
+      "year": "1999",
+      "subject": "mathematics",
+      "questionNumber": 17,
+      "questionText": "There are 6 girls and 18 boys in a class. What percentage of the class are girls?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480037,
+        "_nanoseconds": 409000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1999"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 14.40%",
+        "B. 25.00%",
+        "C. 33.33%",
+        "D. 66.67%",
+        "E. 75.00%"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487084,
+        "_nanoseconds": 387000000
+      }
+    },
+    {
+      "id": "LPRd9s1c31x36R27Wkq5",
+      "year": "2003",
+      "subject": "mathematics",
+      "questionNumber": 16,
+      "questionText": "Express 2 5 as a percentage.",
+      "options": [
+        "A. 20%",
+        "B. 25%",
+        "C. 40%",
+        "D. 80%"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480127,
+        "_nanoseconds": 37000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2003"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487087,
+        "_nanoseconds": 736000000
+      }
+    },
+    {
+      "id": "MDETGjWig8BYrkTkAHLW",
+      "year": "2018",
+      "subject": "mathematics",
+      "questionNumber": 14,
+      "questionText": "Ama bought a pair of sandals for GH₵ 20.00 and solid it at GH₵ 24.00. Find the percentage profit.",
+      "options": [
+        "A. 4 %",
+        "B. 17 %",
+        "C. 20 %",
+        "D. 44 %"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480467,
+        "_nanoseconds": 707000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2018"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2018_q14_img14.jpg",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542231,
+        "_nanoseconds": 376000000
+      }
+    },
+    {
+      "id": "MJePRGMuWMINCizpzak4",
+      "year": "1994",
+      "subject": "mathematics",
+      "questionNumber": 14,
+      "questionText": "Kwame, Atsu and Kojo shared a profit of ₵500,000.00 in the ratio 1 : 4 : 3 respectively. How much did Atsu get?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479626,
+        "_nanoseconds": 153000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1994"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵62,500.00",
+        "B. ₵125,000.00",
+        "C. ₵187,500.00",
+        "D. ₵250,000.00",
+        "E. ₵312,500.00"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1994_q14_img14.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542135,
+        "_nanoseconds": 818000000
+      }
+    },
+    {
+      "id": "N8P0aLS82GhS21ks9LN8",
+      "year": "2012",
+      "subject": "mathematics",
+      "questionNumber": 21,
+      "questionText": "Kojo is 20% heavier than Afua. If Kojo weighs 6 kg, what is Afua’s weight?",
+      "options": [
+        "A. 4.8 kg",
+        "B. 5.0 kg",
+        "C. 6.0 kg",
+        "D. 7.2 kg"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480334,
+        "_nanoseconds": 706000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2012"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 925000000
+      }
+    },
+    {
+      "id": "NC6WcwqvG12MlTC88Bug",
+      "year": "1993",
+      "subject": "mathematics",
+      "questionNumber": 5,
+      "questionText": "Find 2 1 2 % of ₵2,000.00",
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479599,
+        "_nanoseconds": 978000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1993"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵40.00",
+        "B. ₵50.00",
+        "C. ₵100.00",
+        "D. ₵800.00",
+        "E. ₵5,000.00"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1993_q5_img5.png",
+      "updatedAt": {
+        "_seconds": 1763542123,
+        "_nanoseconds": 754000000
+      }
+    },
+    {
+      "id": "NOc8QHlMw2VI7rx9UKpL",
+      "year": "2015",
+      "subject": "mathematics",
+      "questionNumber": 14,
+      "questionText": "John sold a car for GH₵60,000.00 and made a profit of 20%. What is the cost price of the car?",
+      "options": [
+        "A. GH₵48,000.00",
+        "B. GH₵50,000.00",
+        "C. GH₵72,000.00",
+        "D. GH₵132,000.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480399,
+        "_nanoseconds": 240000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2015"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487097,
+        "_nanoseconds": 370000000
+      }
+    },
+    {
+      "id": "OMXOBkyAyAeFUQHbxfTY",
+      "year": "2009",
+      "subject": "mathematics",
+      "questionNumber": 7,
+      "questionText": "In a town of 42,800 inhabitants, 48% are male. The rest are female. How many more females are there than males?",
+      "options": [
+        "A. 22,256",
+        "B. 20,544",
+        "C. 1,712",
+        "D. 1,612"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480258,
+        "_nanoseconds": 147000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2009"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487092,
+        "_nanoseconds": 558000000
+      }
+    },
+    {
+      "id": "Of0IP2B6Nt8Hy5mfRce5",
+      "year": "2013",
+      "subject": "mathematics",
+      "questionNumber": 36,
+      "questionText": "Aba bought a carton of fish at GHC 80.00 and sold it at a profit of GHC 13.60. Find the selling price.",
+      "options": [
+        "A. GH₵ 66.40",
+        "B. GH₵ 93.60",
+        "C. GH₵ 103.60",
+        "D. GH₵ 144.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480366,
+        "_nanoseconds": 71000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2013"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487095,
+        "_nanoseconds": 754000000
+      }
+    },
+    {
+      "id": "PIHzkzU3FQsQLUV5v7jy",
+      "year": "2021",
+      "subject": "mathematics",
+      "questionNumber": 34,
+      "questionText": "A trader bought 100 tubers of yam for GH₵ n each. All the yams were sold at GH₵ m each. Find the profit.",
+      "options": [
+        "A. GH₵ 100(m - n)",
+        "B. GH₵ 100(m + n)",
+        "C. GH₵ 100(n - m)",
+        "D. GH₵ 100( nm )"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480547,
+        "_nanoseconds": 677000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2021"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487102,
+        "_nanoseconds": 440000000
+      }
+    },
+    {
+      "id": "Q0i5lIGWYR6bJJh0oaTM",
+      "year": "2025",
+      "subject": "mathematics",
+      "questionNumber": 35,
+      "questionText": "Mr Adu bought 400 bags of maize for his farm animals. If he used 120 bags to feed the animals, find the percentage of the maize left.",
+      "options": [
+        "A. 70%",
+        "B. 60%",
+        "C. 50%",
+        "D. 40%"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482536,
+        "_nanoseconds": 67000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2025"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487105,
+        "_nanoseconds": 685000000
+      }
+    },
+    {
+      "id": "SHyGGq9rJy1f3UVGUp1b",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 37,
+      "questionText": "Akosua buys 480 pineapples for ₵24,000.00. She sells all the pineapples for ₵28,000.00. Find her profit percent.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479595,
+        "_nanoseconds": 555000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 13.9%",
+        "B. 16.7%",
+        "C. 20%",
+        "D. 40%",
+        "E. 83.3%"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487078,
+        "_nanoseconds": 582000000
+      }
+    },
+    {
+      "id": "SlTSmOHuYOU7ZzoAYcRn",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 14,
+      "questionText": "A housing agent makes a commission of GH₵ 103,500 when he sells a house for GH₵ 690,000. Calculate the percentage of his commission.",
+      "options": [
+        "A. 15.0 %",
+        "B. 10.0 %",
+        "C. 7.5 %",
+        "D. 5.0 %"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480284,
+        "_nanoseconds": 818000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487093,
+        "_nanoseconds": 318000000
+      }
+    },
+    {
+      "id": "SzsyFvVtiSxjf8RdaOPS",
+      "year": "2002",
+      "subject": "mathematics",
+      "questionNumber": 20,
+      "questionText": "A set of furniture was sold for ₵300,000.00 at a profit of 20%. Find the cost price.",
+      "options": [
+        "A. ₵250,000",
+        "B. ₵240,000",
+        "C. ₵200,000",
+        "D. ₵180,000"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480106,
+        "_nanoseconds": 766000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2002"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 895000000
+      }
+    },
+    {
+      "id": "VmU8cAsIemPTRhXwTpVC",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 32,
+      "questionText": "Express 7 min. 30 sec. as a percentage of 1 hour.",
+      "options": [
+        "A. 2.5%",
+        "B. 7.5%",
+        "C. 11.7%",
+        "D. 12.5%"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480295,
+        "_nanoseconds": 76000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487093,
+        "_nanoseconds": 318000000
+      }
+    },
+    {
+      "id": "WNVXRFhaZg5nyMOuW5Xt",
+      "year": "2018",
+      "subject": "mathematics",
+      "questionNumber": 38,
+      "questionText": "In a class, there are 12 girls and 48 boys. Find the percentage of boys in the class.",
+      "options": [
+        "A. 20%",
+        "B. 40%",
+        "C. 60%",
+        "D. 80%"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480481,
+        "_nanoseconds": 525000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2018"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487099,
+        "_nanoseconds": 837000000
+      }
+    },
+    {
+      "id": "WYSTULsHB0GMO4HdtIC6",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 7,
+      "questionText": "Find the total cost of 25 pens and 75 books if each pen costs GH₵ 0.20 and each book costs GH₵ 0.30.",
+      "options": [
+        "A. GH₵ 22.50",
+        "B. GH₵ 23.50",
+        "C. GH₵ 27.50",
+        "D. GH₵ 50.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480280,
+        "_nanoseconds": 931000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487093,
+        "_nanoseconds": 318000000
+      }
+    },
+    {
+      "id": "XxgoMHeBaKBdWpzUSqP9",
+      "year": "2005",
+      "subject": "mathematics",
+      "questionNumber": 8,
+      "questionText": "In an examination 40% of the students failed. The number of students that passed was 180. How many students failed?",
+      "options": [
+        "A. 120",
+        "B. 270",
+        "C. 300",
+        "D. 450"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480167,
+        "_nanoseconds": 690000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2005"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487089,
+        "_nanoseconds": 336000000
+      }
+    },
+    {
+      "id": "YnqcIMU5Ied2a4uDMqvZ",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 15,
+      "questionText": "A simple interest of GH₵ 37,500.00 is earned on an amount of GH₵ 500,000.00 for 3 years. Calculate the percentage rate.",
+      "options": [
+        "A. 20.0 %",
+        "B. 10.0 %",
+        "C. 5.0 %",
+        "D. 2.5 %"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480285,
+        "_nanoseconds": 371000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487093,
+        "_nanoseconds": 318000000
+      }
+    },
+    {
+      "id": "Yw6ZvfuAg3LbgnFq8BzH",
+      "year": "2005",
+      "subject": "mathematics",
+      "questionNumber": 32,
+      "questionText": "Kofi had 100 mangoes and sold 80 of them. What is the percentage of mangoes left?",
+      "options": [
+        "A. 12.5%",
+        "B. 18%",
+        "C. 20%",
+        "D. 25%"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480181,
+        "_nanoseconds": 294000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2005"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487089,
+        "_nanoseconds": 336000000
+      }
+    },
+    {
+      "id": "ZKrPuSPid9yRPlKbJ1w3",
+      "year": "2012",
+      "subject": "mathematics",
+      "questionNumber": 9,
+      "questionText": "A tank contains 400 litres of water. If 100 litres is used, what percentage is left?",
+      "options": [
+        "A. 25%",
+        "B. 30%",
+        "C. 40%",
+        "D. 75%"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480328,
+        "_nanoseconds": 10000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2012"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 925000000
+      }
+    },
+    {
+      "id": "djfNH3MJjP9eOXVrErRl",
+      "year": "2006",
+      "subject": "mathematics",
+      "questionNumber": 25,
+      "questionText": "In an examination, 154 out of 175 candidates passed. What percentage failed?",
+      "options": [
+        "A. 6%",
+        "B. 12%",
+        "C. 13%",
+        "D. 18%"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480200,
+        "_nanoseconds": 28000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2006"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 135000000
+      }
+    },
+    {
+      "id": "eBI2RNYye7kgTq24XWCb",
+      "year": "2007",
+      "subject": "mathematics",
+      "questionNumber": 4,
+      "questionText": "Express 5 16 as a decimal fraction.",
+      "options": [
+        "A. 0.3333",
+        "B. 0.3125",
+        "C. 0.2667",
+        "D. 0.2500"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480211,
+        "_nanoseconds": 59000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2007"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2007_q4_img4.png",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542183,
+        "_nanoseconds": 396000000
+      }
+    },
+    {
+      "id": "eGGOsvQEbFuaDpiBUsFO",
+      "year": "2002",
+      "subject": "mathematics",
+      "questionNumber": 4,
+      "questionText": "In an examination, 25% of the candidates failed to obtain the pass mark. The number of candidates who passed was 150. How many candidates failed?",
+      "options": [
+        "A. 113",
+        "B. 100",
+        "C. 50",
+        "D. 38"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480097,
+        "_nanoseconds": 845000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2002"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2002_q4_img4.png",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542169,
+        "_nanoseconds": 162000000
+      }
+    },
+    {
+      "id": "g0BkIwvyivUh2ncNNjVI",
+      "year": "2019",
+      "subject": "mathematics",
+      "questionNumber": 35,
+      "questionText": "Express 30 minutes as a percentage of 3 hours 20 minutes",
+      "options": [
+        "A. 12.5 %",
+        "B. 15 %",
+        "C. 16⅔ %",
+        "D. 20 %"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480502,
+        "_nanoseconds": 647000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2019"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487100,
+        "_nanoseconds": 643000000
+      }
+    },
+    {
+      "id": "hmlEShYl02QIPPlmG1Lz",
+      "year": "2022",
+      "subject": "mathematics",
+      "questionNumber": 30,
+      "questionText": "Express 3/8 as a decimal fraction.",
+      "options": [
+        "A. 0.429",
+        "B. 0.375",
+        "C. 0.365",
+        "D. 0.625"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480568,
+        "_nanoseconds": 389000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2022"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487103,
+        "_nanoseconds": 234000000
+      }
+    },
+    {
+      "id": "hxJDULjcNI9pgeJ6UfZn",
+      "year": "2023",
+      "subject": "mathematics",
+      "questionNumber": 32,
+      "questionText": "Convert 12.03 metres to centimetres.",
+      "options": [
+        "A. 0.1203 cm",
+        "B. 120.3",
+        "C. 1203 cm",
+        "D. 12030 cm"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482485,
+        "_nanoseconds": 82000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2023"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 62000000
+      }
+    },
+    {
+      "id": "j2JN5VwoRpPTVrlvSdII",
+      "year": "2008",
+      "subject": "mathematics",
+      "questionNumber": 11,
+      "questionText": "Osei bought a hat for GH₵ 5.00. He sold it to Yaovi at a profit of 20%. How much did Yaovi pay for the hat?",
+      "options": [
+        "A. GH₵ 4.80",
+        "B. GH₵ 5.50",
+        "C. GH₵ 6.00",
+        "D. GH₵ 7.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480237,
+        "_nanoseconds": 801000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2008"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487091,
+        "_nanoseconds": 763000000
+      }
+    },
+    {
+      "id": "jckygxvJ9l6bsG46egQP",
+      "year": "2022",
+      "subject": "mathematics",
+      "examType": "bece",
+      "questionNumber": 36,
+      "questionText": "Peter had GH₵ 200.00 and spent GH₵ 83.00. What percentage of the money is left?",
+      "options": [
+        "A. 29.06%",
+        "B. 70.94%",
+        "C. 58.50%",
+        "D. 41.50%"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "type": "multipleChoice",
+      "section": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2022"
+      ],
+      "createdBy": "system_import_v2",
+      "isActive": true,
+      "createdAt": {
+        "_seconds": 1763485289,
+        "_nanoseconds": 639000000
+      },
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487103,
+        "_nanoseconds": 234000000
+      }
+    },
+    {
+      "id": "lznphkXyWz5sFVe9lQdy",
+      "year": "2008",
+      "subject": "mathematics",
+      "questionNumber": 19,
+      "questionText": "A trader buys a dozen pens at GH₵ 4.80 and sells them at 48 Gp each. Find her percentage profit.",
+      "options": [
+        "A. 5%",
+        "B. 10%",
+        "C. 15%",
+        "D. 20%"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480242,
+        "_nanoseconds": 255000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2008"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487091,
+        "_nanoseconds": 763000000
+      }
+    },
+    {
+      "id": "lzupnDu2InvlgxEI9KEE",
+      "year": "2011",
+      "subject": "mathematics",
+      "questionNumber": 10,
+      "questionText": "An article which costs GH¢ 25.00 was sold for GH¢ 35.00. Find the percentage profit made.",
+      "options": [
+        "A. 10%",
+        "B. 28%",
+        "C. 40%",
+        "D. 70%"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480305,
+        "_nanoseconds": 445000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2011"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 125000000
+      }
+    },
+    {
+      "id": "muy7RrGQYjZAHdHuiHRr",
+      "year": "1996",
+      "subject": "mathematics",
+      "questionNumber": 8,
+      "questionText": "At what rate of simple interest will ₵5,000.00 amount to ₵7,500 if saved for 5 years?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479964,
+        "_nanoseconds": 612000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1996"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 5%",
+        "B. 6 2 3 %",
+        "C. 7 1 2 %",
+        "D. 10%",
+        "E. 12 1 2 %"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1996_q8_img8.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542146,
+        "_nanoseconds": 698000000
+      }
+    },
+    {
+      "id": "pcLJ5uNJo1MMHzHLT1Hg",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 36,
+      "questionText": "Express 3 8 as a percentage.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479595,
+        "_nanoseconds": 22000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 0.373%",
+        "B. 12%",
+        "C. 25%",
+        "D. 37 1 2 %",
+        "E. 40%"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487078,
+        "_nanoseconds": 582000000
+      }
+    },
+    {
+      "id": "qOeehs6ivFKXTdfJwDAu",
+      "year": "2020",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "Add the following numbers: 2.4,0.042,1.12 and 0.342.",
+      "options": [
+        "A. 2.184",
+        "B. 3.904",
+        "C. 4.282",
+        "D. 6.200"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480521,
+        "_nanoseconds": 467000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2020"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487101,
+        "_nanoseconds": 629000000
+      }
+    },
+    {
+      "id": "rZYed0JExSc4GNOm8T2s",
+      "year": "2014",
+      "subject": "mathematics",
+      "questionNumber": 11,
+      "questionText": "A boy scores 17 25 in a French test. Express his score as a percentage.",
+      "options": [
+        "A. 17%",
+        "B. 34%",
+        "C. 68%",
+        "D. 85%"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480374,
+        "_nanoseconds": 821000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2014"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2014_q11_img11.png",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542206,
+        "_nanoseconds": 458000000
+      }
+    },
+    {
+      "id": "rcmxIEVgLZX7V6WWsf5i",
+      "year": "2017",
+      "subject": "mathematics",
+      "questionNumber": 33,
+      "questionText": "Express as a decimal fraction.",
+      "options": [
+        "A. 0.3200",
+        "B. 0.3125",
+        "C. 0.3676",
+        "D. 0.3222"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480455,
+        "_nanoseconds": 662000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2017"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2017_q33_img33.png",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542223,
+        "_nanoseconds": 518000000
+      }
+    },
+    {
+      "id": "rrPJ5E8GeGydUAgENsDb",
+      "year": "2023",
+      "subject": "mathematics",
+      "questionNumber": 34,
+      "questionText": "A book was sold for GH₵ 48.00 at a profit of 20%. Find the cost price.",
+      "options": [
+        "A. GH₵ 38.40",
+        "B. GH₵ 40.00",
+        "C. GH₵ 60.00",
+        "D. GH₵ 57.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482486,
+        "_nanoseconds": 663000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2023"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 62000000
+      }
+    },
+    {
+      "id": "s5P4UEgapfoARizKUOb7",
+      "year": "1990",
+      "subject": "mathematics",
+      "questionNumber": 11,
+      "questionText": "In an examination, 60% of the candidates passed. The number that passed was 240. How many candidates failed?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479529,
+        "_nanoseconds": 372000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1990"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 140",
+        "B. 160",
+        "C. 360",
+        "D. 400",
+        "E. 600"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487076,
+        "_nanoseconds": 950000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1992_q2",
+      "questionText": "A landlady rented out her house for ₵240,000.00 for one year. During the year she paid 15% of the rent as income tax. She also paid 25% of the rent as property tax and spent ₵10,000.00 on repairs.\n\nCalculate:\n\n(a)\n\n \n\nThe landlady's total expenses.\n\n(b)\n\n \n\nThe remainder of the rent after the landlady's expenses.\n\n(c)\n\n \n\nThe percentage of the rent she spent on repairs.",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1992",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1992 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1992",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1993_q3",
+      "questionText": "Olu bought a radio for ₵65,000.00. After one year the radio was valued at 75% of the cost price.\n\n(a)\n\n \n\nWhat was the price of the radio after one year?\n\n(b)\n\n \n\nIf he sold the radio for ₵55,700.00, calculate his profit or loss over the cost price.",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1993",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1993 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1993",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1998_q3",
+      "questionText": "(a)\n\n \n\nA man travelled from Bakwa to Pabam. The distance between the two towns is 510 km. At Pabam he covered additional 40 km on official duties. He returned to Bakwa the next day.\n\n(i)\n\n \n\nFind the total distance covered by the man\n\n(ii)\n\n \n\nIf the car used one litre of petrol to cover 20 km, find the amount of petrol used for the whole journey.\n\n(iii)\n\n \n\nIf a litre of petrol cost ₵522.00, calculate the total cost of petrol used for the whole journey.\n\n(b)\n\n \n\nA woman sold an article for ₵200,000.00. She made a profit of 25%. Find the cost price of the article",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1998",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1998 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1998",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1999_q1",
+      "questionText": "(a)\n\n \n\nKofi and Kojo were given ₵38,000.00 to share. Kojo had ₵7,500.00 more than Kofi. Find\n\n(i)\n\n \n\nKofi's share\n\n(ii)\n\n \n\nKojo's share\n\n(b)\n\n \n\nA trader paid ₵1500.00 for 6 drinking cups. One of the cups got broken. He sold the remaining 5, making a profit of 10%.\n\nCalculate\n\n(i)\n\n \n\nthe cost price of each of the six cups;\n\n(ii)\n\n \n\nthe selling price of each of the five cups;\n\n(iii)\n\n \n\nthe profit made on each cup sold.",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1999",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1999 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1999",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2004_q2",
+      "questionText": "% and produced 49,000 tonnes. How many tonnes was it producing before?",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2004",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2004 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2004",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2005_q4",
+      "questionText": "A woman borrowed ₵2,000,000.00 from a bank at a rate of 15% per annum simple interest for 2 years.\n\n(a)\n\n \n\nFind\n\n(i)\n\n \n\nthe interest for the 2 years;\n\n(ii)\n\n \n\nhow much she paid in all to the bank after the 2 years.\n\n(b)\n\n \n\nShe used the ₵2,000,000.00 to purchase a fridge and sold it at a profit of 45%. Find the selling price of the fridge.\n\n(c)\n\n \n\nIf she used the amount raised from the sale of the fridge to pay for the bank loan and interest, find how much money is left.",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2005",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2005 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2005",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2006_q1",
+      "questionText": "(a)\n\n \n\nA trader sold 250 articles for ₵525,000.00 at a profit of 25%.\n\n(i)\n\n \n\nCalculate the cost price of each article.\n\n(ii)\n\n \n\nIf the trader had wanted 45% profit on the cost price, how much should he have sold each of the articles?\n\n(b)\n\n \n\nFind the simple interest on ₵880,000.00 for 2",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2006",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2006 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2006",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2006_q4",
+      "questionText": "of his monthly salary on rent,",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2006",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2006 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2006",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "tqJcmb1N4G0fVMFaTzqz",
+      "year": "2022",
+      "subject": "mathematics",
+      "questionNumber": 16,
+      "questionText": "A shop is rented at GH₵ 9.00 per month. How much money is paid in 1½ years?",
+      "options": [
+        "A. GH₵ 162.00",
+        "B. GH₵ 135.00",
+        "C. GH₵ 6.00",
+        "D. GH₵ 13.00"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480560,
+        "_nanoseconds": 300000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2022"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2022_q16_img16.jpg",
+      "updatedAt": {
+        "_seconds": 1763542276,
+        "_nanoseconds": 203000000
+      }
+    },
+    {
+      "id": "trR2lcnNFOSaMXsCvVdX",
+      "year": "2022",
+      "subject": "mathematics",
+      "examType": "bece",
+      "questionNumber": 37,
+      "questionText": "If a trader made a profit of 10% in selling a shirt for GH₵ 44.00, find the cost price",
+      "options": [
+        "A. GH₵ 39.60",
+        "B. GH₵ 38.50",
+        "C. GH₵ 48.40",
+        "D. GH₵ 40.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "type": "multipleChoice",
+      "section": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2022"
+      ],
+      "createdBy": "system_import_v2",
+      "isActive": true,
+      "createdAt": {
+        "_seconds": 1763485290,
+        "_nanoseconds": 183000000
+      },
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487103,
+        "_nanoseconds": 234000000
+      }
+    },
+    {
+      "id": "ud1pGrSw17T39BN0gjkS",
+      "year": "2025",
+      "subject": "mathematics",
+      "questionNumber": 5,
+      "questionText": "A man spends GH₵ 560.0 out of his weekly wage of GH₵ 700.00 and saves the rest. What percentage did he save?",
+      "options": [
+        "A. 10%",
+        "B. 15%",
+        "C. 20%",
+        "D. 25%"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482519,
+        "_nanoseconds": 684000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2025"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487105,
+        "_nanoseconds": 685000000
+      }
+    },
+    {
+      "id": "v0y1s2wxZDdNQ8zCrtK5",
+      "year": "1996",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "A woman bought 210 oranges for ₵650.00. She sold all of them at 3 for ₵20.00. How much profit did she make?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479975,
+        "_nanoseconds": 996000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1996"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵350.00",
+        "B. ₵450.00",
+        "C. ₵550.00",
+        "D. ₵650.00",
+        "E. ₵750.00"
+      ],
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 915000000
+      }
+    },
+    {
+      "id": "w8lPNN6oOpBNrwyRBGFF",
+      "year": "2023",
+      "subject": "mathematics",
+      "questionNumber": 19,
+      "questionText": "John walks for 22 1 2 minutes and runs 7 1 2 minutes to school. What percentage of the total time does he spend walking?",
+      "options": [
+        "A. 25%",
+        "B. 30%",
+        "C. 33%",
+        "D. 75%"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482474,
+        "_nanoseconds": 845000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2023"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 62000000
+      }
+    },
+    {
+      "id": "wOHR2gJ9uZy54LPb2g3k",
+      "year": "2011",
+      "subject": "mathematics",
+      "questionNumber": 3,
+      "questionText": "Express 5 as a percentage of 4.",
+      "options": [
+        "A. 125%",
+        "B. 120%",
+        "C. 25%",
+        "D. 20%"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480301,
+        "_nanoseconds": 477000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2011"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2011_q3_img3.png",
+      "updatedAt": {
+        "_seconds": 1763542195,
+        "_nanoseconds": 695000000
+      }
+    },
+    {
+      "id": "xLKQ0sDLhMQYjQshG57o",
+      "year": "2020",
+      "subject": "mathematics",
+      "questionNumber": 10,
+      "questionText": "A trader sold a radio set for GH₵ 72.00 making a profit of 8%. Find, correct to the nearest Ghana cedi, the cost of the radio set.",
+      "options": [
+        "A. GH₵ 66.00",
+        "B. GH₵ 67.00",
+        "C. GH₵ 77.00",
+        "D. GH₵ 78.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480511,
+        "_nanoseconds": 283000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2020"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2020_q10_img10.jpg",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542254,
+        "_nanoseconds": 729000000
+      }
+    },
+    {
+      "id": "xkDnh0tMiXFxqCgicy3O",
+      "year": "2005",
+      "subject": "mathematics",
+      "questionNumber": 24,
+      "questionText": "Kofi deposited ₵500,000.00 with a bank for 2 years at a rate of 10% per annum. Find the simple interest",
+      "options": [
+        "A. ₵10,000.00",
+        "B. ₵20,000.00",
+        "C. ₵50,000.00",
+        "D. ₵100,000.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480176,
+        "_nanoseconds": 706000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2005"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487089,
+        "_nanoseconds": 336000000
+      }
+    },
+    {
+      "id": "yXklwNdFr1JwcecnqFHm",
+      "year": "2000",
+      "subject": "mathematics",
+      "questionNumber": 22,
+      "questionText": "A man deposited an amount of money in his savings account for 5 years. The rate of interest was 14% per annum. If the interest was ₵35,000.00, find the amount deposited.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480062,
+        "_nanoseconds": 820000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2000"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵85,000.00",
+        "B. ₵50,000.00",
+        "C. ₵39,900.00",
+        "D. ₵24,500.00",
+        "E. ₵15,000.00"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487085,
+        "_nanoseconds": 254000000
+      }
+    },
+    {
+      "id": "yrQLVbz5RjdmMHoWQfVV",
+      "year": "1998",
+      "subject": "mathematics",
+      "questionNumber": 19,
+      "questionText": "Kwaku had 300 mangoes. He sold 240 of them. What is the percentage of the mangoes left?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480016,
+        "_nanoseconds": 23000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1998"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 8%",
+        "B. 20%",
+        "C. 25%",
+        "D. 26%",
+        "E. 80%"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487083,
+        "_nanoseconds": 561000000
+      }
+    },
+    {
+      "id": "ysfaz1ec1oPCkEvzezEk",
+      "year": "2025",
+      "subject": "mathematics",
+      "questionNumber": 16,
+      "questionText": "It costs a carpenter GH₵ 25.00 to make a chair. How much should it be sold to make a profit of 40%?",
+      "options": [
+        "A. GH₵ 15.00",
+        "B. GH₵ 35.00",
+        "C. GH₵ 40.00",
+        "D. GH₵ 50.00"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482525,
+        "_nanoseconds": 466000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2025"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487105,
+        "_nanoseconds": 685000000
+      }
+    }
+  ],
+  "questionCount": 81
+}

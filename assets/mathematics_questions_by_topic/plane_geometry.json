@@ -1,0 +1,4789 @@
+{
+  "topic": "Plane Geometry",
+  "questions": [
+    {
+      "id": "0BkJ9t1SGA5Tk6BkMRsV",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 37,
+      "questionText": "Use the diagram above to answer the question below. Find the angle MON.",
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480093,
+        "_nanoseconds": 784000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 48°",
+        "B. 52°",
+        "C. 58°",
+        "D. 65°",
+        "E. 75°"
+      ],
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 59000000
+      }
+    },
+    {
+      "id": "0hrrvPKFmis6KK2Cb2tO",
+      "year": "2016",
+      "subject": "mathematics",
+      "questionNumber": 30,
+      "questionText": "The sum of the interior angles of a regular polygon is 540o. Find the number of sides of the polygon.",
+      "options": [
+        "A. 7",
+        "B. 6",
+        "C. 5",
+        "D. 4"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480431,
+        "_nanoseconds": 18000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2016"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487098,
+        "_nanoseconds": 192000000
+      }
+    },
+    {
+      "id": "0sT35ZcgparGWJci9sLG",
+      "year": "2008",
+      "subject": "mathematics",
+      "questionNumber": 30,
+      "questionText": "Which of the following is not a quadrilateral?",
+      "options": [
+        "A. Hexagon",
+        "B. Kite",
+        "C. Rectangle",
+        "D. Trapezium"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480248,
+        "_nanoseconds": 440000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2008"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487091,
+        "_nanoseconds": 763000000
+      }
+    },
+    {
+      "id": "1PlXrL7Wf4w6JNyZbX9s",
+      "year": "1994",
+      "subject": "mathematics",
+      "questionNumber": 34,
+      "questionText": "Find the size of the angle marked a in the diagram above.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479636,
+        "_nanoseconds": 915000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1994"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 30°",
+        "B. 60°",
+        "C. 90°",
+        "D. 120°",
+        "E. 180°"
+      ],
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487080,
+        "_nanoseconds": 244000000
+      }
+    },
+    {
+      "id": "2ARuGJztUv7LiyduZcup",
+      "year": "2004",
+      "subject": "mathematics",
+      "questionNumber": 34,
+      "questionText": "An angle which is more than 90° but less than 180° is",
+      "options": [
+        "A. an acute angle",
+        "B. a right angle",
+        "C. an obtuse angle",
+        "D. a reflex angle"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480159,
+        "_nanoseconds": 664000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2004"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487088,
+        "_nanoseconds": 551000000
+      }
+    },
+    {
+      "id": "2iWoVByGgiZK8cckMOq3",
+      "year": "2005",
+      "subject": "mathematics",
+      "questionNumber": 39,
+      "questionText": "In the diagram, QRS is a triangle. Angle QRS = 50° and angle RST = 120°. Find angle RQS.",
+      "options": [
+        "A. 60°",
+        "B. 65°",
+        "C. 70°",
+        "D. 80°"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480185,
+        "_nanoseconds": 237000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2005"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487089,
+        "_nanoseconds": 336000000
+      }
+    },
+    {
+      "id": "3Tk5CMRrHNUSVgAL9SO2",
+      "year": "2013",
+      "subject": "mathematics",
+      "questionNumber": 16,
+      "questionText": "Use the diagram below to answer the question below. Find the angle marked b.",
+      "options": [
+        "A. 150o",
+        "B. 140o",
+        "C. 110o",
+        "D. 100o"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480354,
+        "_nanoseconds": 657000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2013"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487095,
+        "_nanoseconds": 754000000
+      }
+    },
+    {
+      "id": "3Z1s7n6CZ6mIYKDiKH4Y",
+      "year": "2000",
+      "subject": "mathematics",
+      "questionNumber": 35,
+      "questionText": "Name the geometrical figure shown in the diagram below.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480070,
+        "_nanoseconds": 50000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2000"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. parallelogram",
+        "B. triangle",
+        "C. cone",
+        "D. tetrahedron",
+        "E. pyramid"
+      ],
+      "explanation": "",
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487085,
+        "_nanoseconds": 254000000
+      }
+    },
+    {
+      "id": "4dt4f72Wh6EmKr6uaY8I",
+      "year": "1999",
+      "subject": "mathematics",
+      "questionNumber": 39,
+      "questionText": "The figure above is the net of",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480049,
+        "_nanoseconds": 698000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1999"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. a cylinder",
+        "B. a triangle",
+        "C. a pyramid",
+        "D. a cone",
+        "E. a sphere"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487084,
+        "_nanoseconds": 387000000
+      }
+    },
+    {
+      "id": "4lhysA9znbQtVqVFz8LT",
+      "year": "1994",
+      "subject": "mathematics",
+      "questionNumber": 4,
+      "questionText": "How many lines of symmetry does a rectangle have?",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479620,
+        "_nanoseconds": 802000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1994"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1",
+        "B. 2",
+        "C. 3",
+        "D. 9",
+        "E. 11"
+      ],
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1994_q4_img4.png",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542128,
+        "_nanoseconds": 982000000
+      }
+    },
+    {
+      "id": "7w9XNxc7L9U2ctcKNg2b",
+      "year": "2023",
+      "subject": "mathematics",
+      "questionNumber": 26,
+      "questionText": "In the diagram, AB is parallel to CD, Angle AGE is 80o, angle CFG = 5k and angle CFE = r. Use the information to answer the question below. Find the value of k",
+      "options": [
+        "A. 16o",
+        "B. 20o",
+        "C. 80o",
+        "D. 160o"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482480,
+        "_nanoseconds": 349000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2023"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 62000000
+      }
+    },
+    {
+      "id": "8dyAPEaEyEhYCgouQ29o",
+      "year": "1995",
+      "subject": "mathematics",
+      "questionNumber": 40,
+      "questionText": "In the diagram above, ∆ABC is an isosceles triangle. ∠ABD is 108°. Find the value of y.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479959,
+        "_nanoseconds": 781000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1995"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 72",
+        "B. 60",
+        "C. 48",
+        "D. 36",
+        "E. 24"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 77000000
+      }
+    },
+    {
+      "id": "8oJN3ZyShfsNanQtdske",
+      "year": "1990",
+      "subject": "mathematics",
+      "questionNumber": 39,
+      "questionText": "The diagram above shows the construction for:",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479551,
+        "_nanoseconds": 364000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1990"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. Copying a given angle",
+        "B. Bisecting a line segment",
+        "C. Drawing a perpendicular to a given line",
+        "D. Bisecting a given angle",
+        "E. Drawing an angle of 30° Mark"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487076,
+        "_nanoseconds": 950000000
+      }
+    },
+    {
+      "id": "9yfCwGc29PkJPBZ8SkRH",
+      "year": "2003",
+      "subject": "mathematics",
+      "questionNumber": 36,
+      "questionText": "Find the size of the angle marked f, in the diagram above",
+      "options": [
+        "A. 56°",
+        "B. 72°",
+        "C. 108°",
+        "D. 128°"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480138,
+        "_nanoseconds": 223000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2003"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487087,
+        "_nanoseconds": 736000000
+      }
+    },
+    {
+      "id": "AwjhFuOesm8g2MWZJ2Jb",
+      "year": "2003",
+      "subject": "mathematics",
+      "questionNumber": 33,
+      "questionText": "The value of an obtuse angle lies between",
+      "options": [
+        "A. 0° and 90°",
+        "B. 90° and 180°",
+        "C. 90° and 270°",
+        "D. 180° and 360°"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480136,
+        "_nanoseconds": 530000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2003"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487087,
+        "_nanoseconds": 736000000
+      }
+    },
+    {
+      "id": "B62uGfZtDol1o8oaROXh",
+      "year": "2002",
+      "subject": "mathematics",
+      "questionNumber": 38,
+      "questionText": "In the figure below, MN and PQ are straight lines. Find the value of the angle marked x in the figure.",
+      "options": [
+        "A. 65°",
+        "B. 75°",
+        "C. 85°",
+        "D. 155°"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480116,
+        "_nanoseconds": 783000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2002"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 895000000
+      }
+    },
+    {
+      "id": "B7DVvHB8CD5N9clXxAYX",
+      "year": "1991",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "Which of the following would you use to measure an angle?",
+      "options": [
+        "A. Ruler",
+        "B. A pair of compasses",
+        "C. A set square",
+        "D. A protractor"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479569,
+        "_nanoseconds": 417000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1991"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487077,
+        "_nanoseconds": 776000000
+      }
+    },
+    {
+      "id": "CEmGJn5Ql7P6YT4fy1K3",
+      "year": "2015",
+      "subject": "mathematics",
+      "questionNumber": 34,
+      "questionText": "What is the name of the figure above?",
+      "options": [
+        "A. Cuboid",
+        "B. Kite",
+        "C. Triangle",
+        "D. Pyramid"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480410,
+        "_nanoseconds": 609000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2015"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487097,
+        "_nanoseconds": 370000000
+      }
+    },
+    {
+      "id": "CcsFOUJlTDsr6L8Zb5iL",
+      "year": "1994",
+      "subject": "mathematics",
+      "questionNumber": 29,
+      "questionText": "In the diagram, G1OH1 is an enlargement of triangle GOH with scale factor k. If |GG1| = 5cm, |GO| = 2 cm and |G1H1| = 1 cm, what is the value of k?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479634,
+        "_nanoseconds": 210000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1994"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. - 5 2",
+        "B. - 3 2",
+        "C. - 2 5",
+        "D. 2 3",
+        "E. 3 2"
+      ],
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487080,
+        "_nanoseconds": 244000000
+      }
+    },
+    {
+      "id": "DvXKjyCxrKYU93ACqt9N",
+      "year": "2002",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "A rectangle has a length of 8 cm and a breadth of 6 cm. How long is its diagonal?",
+      "options": [
+        "A. 10",
+        "B. 14",
+        "C. 28",
+        "D. 50"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480111,
+        "_nanoseconds": 225000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2002"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 895000000
+      }
+    },
+    {
+      "id": "EStLzFDHYeqBDTTICRyB",
+      "year": "2015",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "At eight O'clock, which of the following is the angle between the hour and the minute hands of the clock?",
+      "options": [
+        "A. 150o",
+        "B. 120o",
+        "C. 90o",
+        "D. 60o"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480407,
+        "_nanoseconds": 220000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2015"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487097,
+        "_nanoseconds": 370000000
+      }
+    },
+    {
+      "id": "EU9KZVKiQxXXLHtOlIzk",
+      "year": "1993",
+      "subject": "mathematics",
+      "questionNumber": 22,
+      "questionText": "If the interior angle of a regular polygon is 120°, how many sides does it have?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479608,
+        "_nanoseconds": 888000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1993"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 5",
+        "B. 6",
+        "C. 7",
+        "D. 8",
+        "E. 9"
+      ],
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487079,
+        "_nanoseconds": 424000000
+      }
+    },
+    {
+      "id": "Ep3wYLnmoEikEcMQ06i0",
+      "year": "2018",
+      "subject": "mathematics",
+      "questionNumber": 16,
+      "questionText": "In the diagram, QP is parallel to ST, angle QPR = 68o and angle SRT = 40o. Use the information to answer the question below: Find the value of angle PQR.",
+      "options": [
+        "A. 40o",
+        "B. 68o",
+        "C. 72o",
+        "D. 108o"
+      ],
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480468,
+        "_nanoseconds": 821000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2018"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2018_q16_img16.jpg",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542232,
+        "_nanoseconds": 330000000
+      }
+    },
+    {
+      "id": "HARkRMsPzivltihBXNV6",
+      "year": "2011",
+      "subject": "mathematics",
+      "questionNumber": 24,
+      "questionText": "In the following diagram RS and WV are parallel lines. The value of the angle marked α is",
+      "options": [
+        "A. 38o",
+        "B. 52o",
+        "C. 58o",
+        "D. 64o"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480313,
+        "_nanoseconds": 431000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2011"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 125000000
+      }
+    },
+    {
+      "id": "HBx8aqqDea64gcOL0BTP",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 14,
+      "questionText": "How many lines of symmetry has an isosceles triangle?",
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480080,
+        "_nanoseconds": 872000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1",
+        "B. 2",
+        "C. 3",
+        "D. 4",
+        "E. 5"
+      ],
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 59000000
+      }
+    },
+    {
+      "id": "Hg3oIhfOVUY7Zlizg75H",
+      "year": "2014",
+      "subject": "mathematics",
+      "questionNumber": 22,
+      "questionText": "In an enlargement with scale factor 2, which of the following statements is not true?",
+      "options": [
+        "A. Each length is multiplied by 2.",
+        "B. Each angle remains the same.",
+        "C. The shape of the figure does not change.",
+        "D. The size of the figure does not change."
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480381,
+        "_nanoseconds": 33000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2014"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487096,
+        "_nanoseconds": 588000000
+      }
+    },
+    {
+      "id": "I9qJGXPLP4fSsp0dNeRA",
+      "year": "1997",
+      "subject": "mathematics",
+      "questionNumber": 6,
+      "questionText": "What solid can be made from this net?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479986,
+        "_nanoseconds": 312000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1997"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. triangle",
+        "B. rectangular pyramid",
+        "C. triangular prism",
+        "D. rectangular prism",
+        "E. triangular pyramid"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1997_q6_img6.png",
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763542150,
+        "_nanoseconds": 693000000
+      }
+    },
+    {
+      "id": "IYiygJBK5AqXRAvao13F",
+      "year": "1997",
+      "subject": "mathematics",
+      "questionNumber": 3,
+      "questionText": "In the diagram below, P is the set of numbers in the circle and Q is the set of numbers in the triangle. What is P ∩ Q?",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479984,
+        "_nanoseconds": 652000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1997"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. {1, 2, 4}",
+        "B. {5, 6}",
+        "C. {7}",
+        "D. {1, 2, 4, 5, 6, 7}",
+        "E. { }"
+      ],
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1997_q3_img3.png",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542149,
+        "_nanoseconds": 185000000
+      }
+    },
+    {
+      "id": "KceRdtdF6LhNeQgPXz6z",
+      "year": "2021",
+      "subject": "mathematics",
+      "questionNumber": 18,
+      "questionText": "In the diagram, line AB is parallel to line PD. Find the value of x.",
+      "options": [
+        "A. 20o",
+        "B. 80o",
+        "C. 100o",
+        "D. 120o"
+      ],
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480538,
+        "_nanoseconds": 585000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2021"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2021_q18_img18.jpg",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542264,
+        "_nanoseconds": 15000000
+      }
+    },
+    {
+      "id": "LmSw0Kr4awAKJIu4JoAM",
+      "year": "2012",
+      "subject": "mathematics",
+      "questionNumber": 34,
+      "questionText": "In the diagrams below, triangle A1B1C1 is an enlargement of triangle ABC. Determine the scale factor.",
+      "options": [
+        "A. 0.50",
+        "B. 0.75",
+        "C. 2.00",
+        "D. 4.00"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480342,
+        "_nanoseconds": 79000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2012"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 925000000
+      }
+    },
+    {
+      "id": "M0nXca0KzXQ523AWqUgf",
+      "year": "1995",
+      "subject": "mathematics",
+      "questionNumber": 35,
+      "questionText": "In the figure below, triangle ABC is an enlargement of triangle ADE. If |AE| = 20 cm and |EC| = 10 cm. What is the scale factor of the enlargement?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479956,
+        "_nanoseconds": 970000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1995"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1 2",
+        "B. 3 2",
+        "C. 2",
+        "D. 5 2",
+        "E. 3"
+      ],
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 77000000
+      }
+    },
+    {
+      "id": "MTfcdPdjWZIkhBPcJWec",
+      "year": "2008",
+      "subject": "mathematics",
+      "questionNumber": 20,
+      "questionText": "Find the angle through which the minute hand of a clock moves from 5.15 p.m. to 5.25 p.m.",
+      "options": [
+        "A. 30°",
+        "B. 45°",
+        "C. 60°",
+        "D. 120°"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480242,
+        "_nanoseconds": 795000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2008"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487091,
+        "_nanoseconds": 763000000
+      }
+    },
+    {
+      "id": "MdDJknavpYdpXnUDnLoB",
+      "year": "2006",
+      "subject": "mathematics",
+      "questionNumber": 7,
+      "questionText": "The base of an isosceles triangle is 7cm long. Each of the other two sides is x cm long. What will be the expression for its perimeter?",
+      "options": [
+        "A. x + 7",
+        "B. x + 14",
+        "C. 2x - 7",
+        "D. 2x + 7"
+      ],
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480189,
+        "_nanoseconds": 936000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2006"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2006_q7_img7.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542181,
+        "_nanoseconds": 428000000
+      }
+    },
+    {
+      "id": "N4QfOhHHLvo0cRPAPgiC",
+      "year": "1994",
+      "subject": "mathematics",
+      "questionNumber": 24,
+      "questionText": "In triangle ABC, |AB| = |BC| = 5 cm, and |AC| = 8 cm. Find |BD|.",
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479631,
+        "_nanoseconds": 510000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1994"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 3 cm",
+        "B. 4 cm",
+        "C. 9 cm",
+        "D. 33 cm",
+        "E. 41 cm"
+      ],
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487080,
+        "_nanoseconds": 244000000
+      }
+    },
+    {
+      "id": "NFVUjcEHwJeFea7H6avF",
+      "year": "2007",
+      "subject": "mathematics",
+      "questionNumber": 8,
+      "questionText": "The pie chart above shows the distribution of 360 pupils to various houses in a school. Use it to answer the question below Find the value of the angle marked X°.",
+      "options": [
+        "A. 30°",
+        "B. 40°",
+        "C. 100°",
+        "D. 150°"
+      ],
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480213,
+        "_nanoseconds": 274000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2007"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2007_q8_img8.png",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542185,
+        "_nanoseconds": 368000000
+      }
+    },
+    {
+      "id": "NFXoCPe5xyDSOuQnZqma",
+      "year": "1998",
+      "subject": "mathematics",
+      "questionNumber": 37,
+      "questionText": "In the diagram above, rectangle AEFG is an enlargement of the rectangle ABCD. If |AB| = 5 cm and |AE| = 15 cm. What is the scale factor of the enlargement?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480026,
+        "_nanoseconds": 23000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1998"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1 3",
+        "B. 1 2",
+        "C. 2",
+        "D. 3",
+        "E. 10"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487083,
+        "_nanoseconds": 561000000
+      }
+    },
+    {
+      "id": "NeXjZoysOCNHD3GHPdwn",
+      "year": "2005",
+      "subject": "mathematics",
+      "questionNumber": 23,
+      "questionText": "An equilateral triangle has side 16cm. A square has the same perimeter as the equilateral triangle. What is the area of the square?",
+      "options": [
+        "A. 48 cm2",
+        "B. 96 cm2",
+        "C. 144 cm2",
+        "D. 256 cm2"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480176,
+        "_nanoseconds": 65000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2005"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487089,
+        "_nanoseconds": 336000000
+      }
+    },
+    {
+      "id": "ODab0Mcz3bhC6cELKl9A",
+      "year": "2003",
+      "subject": "mathematics",
+      "questionNumber": 34,
+      "questionText": "In the diagram above, AB is parallel to CD. Angles x and y are",
+      "options": [
+        "A. alternate angles",
+        "B. corresponding angles",
+        "C. vertically opposite angles",
+        "D. co-interior angles"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480137,
+        "_nanoseconds": 90000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2003"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487087,
+        "_nanoseconds": 736000000
+      }
+    },
+    {
+      "id": "OIY8B0rUbvyHZQHuBO5a",
+      "year": "1997",
+      "subject": "mathematics",
+      "questionNumber": 14,
+      "questionText": "In the following figure below, triangle M′ON′ is an enlargement of triangle MON, with centre O. Use this information to answer the question below Find OM",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479990,
+        "_nanoseconds": 846000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1997"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 9",
+        "B. 6",
+        "C. 4.5",
+        "D. 3",
+        "E. 1.5"
+      ],
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487082,
+        "_nanoseconds": 727000000
+      }
+    },
+    {
+      "id": "OLg8gua9T5GmyLhHOyM7",
+      "year": "1994",
+      "subject": "mathematics",
+      "questionNumber": 37,
+      "questionText": "In the diagram below, find the size of the angle marked e°.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479638,
+        "_nanoseconds": 484000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1994"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 52°",
+        "B. 56°",
+        "C. 72°",
+        "D. 108°",
+        "E. 128°"
+      ],
+      "explanation": "",
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487080,
+        "_nanoseconds": 244000000
+      }
+    },
+    {
+      "id": "Oq7VimtpEiLiMyfN58qr",
+      "year": "2014",
+      "subject": "mathematics",
+      "questionNumber": 34,
+      "questionText": "Use the diagram below to answer the question below. Find the angle marked d.",
+      "options": [
+        "A. 38o",
+        "B. 40o",
+        "C. 48o",
+        "D. 88o"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480387,
+        "_nanoseconds": 805000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2014"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487096,
+        "_nanoseconds": 588000000
+      }
+    },
+    {
+      "id": "OqTFKSG0DQGl7kFwdjDq",
+      "year": "2007",
+      "subject": "mathematics",
+      "questionNumber": 17,
+      "questionText": "Use the diagram below to answer the question below. Angles NTZ and QZT are",
+      "options": [
+        "A. alternate angles.",
+        "B. corresponding angles",
+        "C. complementary angles",
+        "D. supplementary angles"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480218,
+        "_nanoseconds": 297000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2007"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 958000000
+      }
+    },
+    {
+      "id": "OxSoPHtEdmEabiOwU7lD",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 38,
+      "questionText": "Use the diagram above to answer the question below. Angle MON and PMO are",
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480094,
+        "_nanoseconds": 328000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. Alternate angles",
+        "B. vertically opposite angles",
+        "C. Corresponding angles",
+        "D. adjacent angles",
+        "E. Complementary angles"
+      ],
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 59000000
+      }
+    },
+    {
+      "id": "POrTBczdHJRi4tnRQxaB",
+      "year": "1995",
+      "subject": "mathematics",
+      "questionNumber": 13,
+      "questionText": "The interior angle of a regular polygon is 120°. How many sides has the polygon?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479736,
+        "_nanoseconds": 477000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1995"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 3",
+        "B. 4",
+        "C. 5",
+        "D. 6",
+        "E. 8"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 77000000
+      }
+    },
+    {
+      "id": "PQ9tsz8BSzW3INjwOyub",
+      "year": "2012",
+      "subject": "mathematics",
+      "questionNumber": 4,
+      "questionText": "How many diagonals are in a rectangle?",
+      "options": [
+        "A. 1",
+        "B. 2",
+        "C. 3",
+        "D. 4"
+      ],
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480325,
+        "_nanoseconds": 217000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2012"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2012_q4_img4.png",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542198,
+        "_nanoseconds": 112000000
+      }
+    },
+    {
+      "id": "QAgl0c2TW7cnxAzBQe99",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 34,
+      "questionText": "In the diagram below, triangle QRT is the enlargement of QST. Which side of triangle QRT corresponds to side QT of triangle QST?",
+      "options": [
+        "A. TS",
+        "B. TR",
+        "C. QR",
+        "D. SR"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480296,
+        "_nanoseconds": 206000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763485033,
+        "_nanoseconds": 428000000
+      }
+    },
+    {
+      "id": "QsBmsbzCyKHerLT7nO7J",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 18,
+      "questionText": "The pie chart is to be drawn from the data in the following table: Cassava 20% Yam 17% Plantain 28% Maize 35% What will be the value of the angle of the sector for maize?",
+      "options": [
+        "A. 126.0 o",
+        "B. 100.8 o",
+        "C. 72.0 o",
+        "D. 61.2 o"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480287,
+        "_nanoseconds": 168000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487093,
+        "_nanoseconds": 318000000
+      }
+    },
+    {
+      "id": "R4sHUsNtipF9sIwKmxLl",
+      "year": "2016",
+      "subject": "mathematics",
+      "questionNumber": 40,
+      "questionText": "The instrument used to measure the angle between two lines that meet at a point is known as a",
+      "options": [
+        "A. pair of compasses.",
+        "B. set-square.",
+        "C. protractor.",
+        "D. pair of dividers."
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480436,
+        "_nanoseconds": 747000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2016"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487098,
+        "_nanoseconds": 192000000
+      }
+    },
+    {
+      "id": "RFhMxSSiZwxRK2e8hBcG",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 12,
+      "questionText": "In the diagram, line PQ is parallel to line ST. Find the value of the angle marked x.",
+      "options": [
+        "A. 140°",
+        "B. 220°",
+        "C. 290°",
+        "D. 285°"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482500,
+        "_nanoseconds": 308000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 904000000
+      }
+    },
+    {
+      "id": "RMLYxgGagNhiByGzoOsg",
+      "year": "1997",
+      "subject": "mathematics",
+      "questionNumber": 13,
+      "questionText": "In the following figure below, triangle M′ON′ is an enlargement of triangle MON, with centre O. Use this information to answer the question below Find the scale factor of the enlargement",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479990,
+        "_nanoseconds": 282000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1997"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 9",
+        "B. 3",
+        "C. 2",
+        "D. –2",
+        "E. –3"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487082,
+        "_nanoseconds": 727000000
+      }
+    },
+    {
+      "id": "T5vnsxx6UlCciJigodrE",
+      "year": "2012",
+      "subject": "mathematics",
+      "questionNumber": 38,
+      "questionText": "(38) In the diagram below, line PQ is parallel to RS and UV is a line drawn through PQ and RS. Use the diagram to answer the question below. Find angle a.",
+      "options": [
+        "A. 35o",
+        "B. 55o",
+        "C. 135o",
+        "D. 145o"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480344,
+        "_nanoseconds": 363000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2012"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 925000000
+      }
+    },
+    {
+      "id": "UOhczJWYD3ZIM3arSoY4",
+      "year": "2004",
+      "subject": "mathematics",
+      "questionNumber": 23,
+      "questionText": "The angles of a triangle are in the ratio 3 : 2 : 1. Find the value of the smallest angle.",
+      "options": [
+        "A. 30°",
+        "B. 45°",
+        "C. 60°",
+        "D. 90°"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480153,
+        "_nanoseconds": 515000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2004"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487088,
+        "_nanoseconds": 551000000
+      }
+    },
+    {
+      "id": "VtkXMAxaPI2SHBfibgAZ",
+      "year": "1995",
+      "subject": "mathematics",
+      "questionNumber": 38,
+      "questionText": "The angles a and b in the figure above are",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479958,
+        "_nanoseconds": 646000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1995"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. interior opposite",
+        "B. corresponding",
+        "C. vertically opposite",
+        "D. acute",
+        "E. alternate"
+      ],
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 77000000
+      }
+    },
+    {
+      "id": "W8PD0axeSOtDJYH30XYE",
+      "year": "2023",
+      "subject": "mathematics",
+      "questionNumber": 25,
+      "questionText": "In the diagram, AB is parallel to CD, Angle AGE is 80o, angle CFG = 5k and angle CFE = r. Use the information to answer the question below. What is the value of r?",
+      "options": [
+        "A. 16o",
+        "B. 20o",
+        "C. 80o",
+        "D. 160o"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482479,
+        "_nanoseconds": 570000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2023"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 62000000
+      }
+    },
+    {
+      "id": "WKTD6SKBk7vatyQVpNac",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 17,
+      "questionText": "Which of the following is not quadrilateral?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480082,
+        "_nanoseconds": 548000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. square",
+        "B. rectangle",
+        "C. rhombus",
+        "D. triangle",
+        "E. parallelogram"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 59000000
+      }
+    },
+    {
+      "id": "Xl3IKRUaLut9TrCkAnwu",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 29,
+      "questionText": "The interior angle of a regular polygon is 120o. How many sides has the polygon?",
+      "options": [
+        "A. 3",
+        "B. 4",
+        "C. 5",
+        "D. 6"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480293,
+        "_nanoseconds": 369000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487093,
+        "_nanoseconds": 318000000
+      }
+    },
+    {
+      "id": "XqKP67b4djVeUFBFefFH",
+      "year": "2009",
+      "subject": "mathematics",
+      "questionNumber": 19,
+      "questionText": "In the figure below, PQ and RS are straight lines. Find the value of the angle marked w°.",
+      "options": [
+        "A. 27°",
+        "B. 53°",
+        "C. 63°",
+        "D. 127°"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480264,
+        "_nanoseconds": 994000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2009"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487092,
+        "_nanoseconds": 558000000
+      }
+    },
+    {
+      "id": "XzyMz2xFECIo9lHTC7Yu",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 23,
+      "questionText": "A polygon has 10 sides. Which of the following gives the sum of its interior angles?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479588,
+        "_nanoseconds": 126000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 2 x 180°",
+        "B. 4 x 180°",
+        "C. 6 x 180°",
+        "D. 8 x 180°",
+        "E. 10 x 180°"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487078,
+        "_nanoseconds": 582000000
+      }
+    },
+    {
+      "id": "Y7CZRwdQkEHC5tcMKQ20",
+      "year": "2009",
+      "subject": "mathematics",
+      "questionNumber": 21,
+      "questionText": "In the following diagram, rectangle OABC is enlarged into rectangle OA1B1C1 from center O. OC = 5 cm, OA = 2 cm and AA1 = 1 cm. Use the diagram to answer the question below. Find the scale factor of the enlargement.",
+      "options": [
+        "A. 1",
+        "B. 1.5",
+        "C. 2",
+        "D. 2.5"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480266,
+        "_nanoseconds": 133000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2009"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487092,
+        "_nanoseconds": 558000000
+      }
+    },
+    {
+      "id": "ZInkIXZKrCZppvf0lPXU",
+      "year": "2000",
+      "subject": "mathematics",
+      "questionNumber": 2,
+      "questionText": "In the Venn diagram Q is the set of numbers inside the circle and R is the set of numbers inside the triangle. Find Q ∩ R.",
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480051,
+        "_nanoseconds": 538000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2000"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. {1, 5}",
+        "B. {2, 3, 4}",
+        "C. {6, 7, 8}",
+        "D. {1,2,3,4,5}",
+        "E. {1,2,3,4,5,6,7,8}"
+      ],
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2000_q2_img2.png",
+      "updatedAt": {
+        "_seconds": 1763542161,
+        "_nanoseconds": 123000000
+      }
+    },
+    {
+      "id": "ZVwOLOJv1jdMSFcFnoqk",
+      "year": "1999",
+      "subject": "mathematics",
+      "questionNumber": 37,
+      "questionText": "In the diagram, ML and PQ are parallel lines. Find the value of v",
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480048,
+        "_nanoseconds": 589000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1999"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 32°",
+        "B. 40°",
+        "C. 58°",
+        "D. 140°",
+        "E. 180°"
+      ],
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487084,
+        "_nanoseconds": 387000000
+      }
+    },
+    {
+      "id": "ZuaVi9ocdui5g2lSDHf1",
+      "year": "1993",
+      "subject": "mathematics",
+      "questionNumber": 38,
+      "questionText": "In the diagram below, the angle of elevation of K from M is",
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479617,
+        "_nanoseconds": 394000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1993"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 17°",
+        "B. 73°",
+        "C. 90°",
+        "D. 107°",
+        "E. 163°"
+      ],
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487079,
+        "_nanoseconds": 424000000
+      }
+    },
+    {
+      "id": "ZzWJ3zDgpiwqoMWAJhT4",
+      "year": "1994",
+      "subject": "mathematics",
+      "questionNumber": 12,
+      "questionText": "Calculate the size of an exterior angle of a regular pentagon.",
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479625,
+        "_nanoseconds": 78000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1994"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 72°",
+        "B. 90°",
+        "C. 108°",
+        "D. 360°",
+        "E. 540°"
+      ],
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1994_q12_img12.png",
+      "updatedAt": {
+        "_seconds": 1763542134,
+        "_nanoseconds": 825000000
+      }
+    },
+    {
+      "id": "bOSLfGpNhq8DO6VM6n7s",
+      "year": "2016",
+      "subject": "mathematics",
+      "questionNumber": 34,
+      "questionText": "Study the triangle of odd numbers and use it to answer the question below. 13 b c 19 7 9 a 3 5 1 Evaluate: 13 + b + c + 19.",
+      "options": [
+        "A. 62",
+        "B. 64",
+        "C. 74",
+        "D. 76"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480433,
+        "_nanoseconds": 280000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2016"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487098,
+        "_nanoseconds": 192000000
+      }
+    },
+    {
+      "id": "bZtKyPJugDHLUxB9hfHd",
+      "year": "2020",
+      "subject": "mathematics",
+      "questionNumber": 9,
+      "questionText": "Which of the following polygons does not have a line of symmetry?",
+      "options": [
+        "A. Kite",
+        "B. Isosceles triangle",
+        "C. Trapezium",
+        "D. Rhombus"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480510,
+        "_nanoseconds": 703000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2020"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2020_q9_img9.jpg",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542254,
+        "_nanoseconds": 236000000
+      }
+    },
+    {
+      "id": "blpJ4zWscGUz65PdC738",
+      "year": "2002",
+      "subject": "mathematics",
+      "questionNumber": 23,
+      "questionText": "The pie chart shows the distribution of programmes offered by 720 students at Kofikrom. Use this information to answer the question below. Find the value of the angle marked y.",
+      "options": [
+        "A. 90°",
+        "B. 100°",
+        "C. 110°",
+        "D. 120°"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480108,
+        "_nanoseconds": 445000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2002"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 895000000
+      }
+    },
+    {
+      "id": "cO747ADfKSOvFC5EgwE0",
+      "year": "2011",
+      "subject": "mathematics",
+      "questionNumber": 27,
+      "questionText": "In the diagram below, AB and CD are two intersecting straight lines. Find the value of the angle marked y.",
+      "options": [
+        "A. 130o",
+        "B. 115o",
+        "C. 65o",
+        "D. 60o"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480315,
+        "_nanoseconds": 171000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2011"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 125000000
+      }
+    },
+    {
+      "id": "dlnk2IItVtOiEL3LLjV5",
+      "year": "2003",
+      "subject": "mathematics",
+      "questionNumber": 32,
+      "questionText": "How many lines of symmetry has an equilateral triangle?",
+      "options": [
+        "A. 1",
+        "B. 2",
+        "C. 3",
+        "D. 4"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480135,
+        "_nanoseconds": 965000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2003"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487087,
+        "_nanoseconds": 736000000
+      }
+    },
+    {
+      "id": "e4Zbq1e5HKcwRDAcGtIz",
+      "year": "2004",
+      "subject": "mathematics",
+      "questionNumber": 19,
+      "questionText": "Find the value of x in the polygon below",
+      "options": [
+        "A. 12°",
+        "B. 36°",
+        "C. 60°",
+        "D. 72°"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480151,
+        "_nanoseconds": 332000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2004"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487088,
+        "_nanoseconds": 551000000
+      }
+    },
+    {
+      "id": "eGMclUfc15bxIAHr29CN",
+      "year": "2004",
+      "subject": "mathematics",
+      "questionNumber": 4,
+      "questionText": "The angle formed by one complete revolution is equivalent to",
+      "options": [
+        "A. one right angle",
+        "B. two right angles",
+        "C. three right angles",
+        "D. four right angles"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480142,
+        "_nanoseconds": 897000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2004"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487088,
+        "_nanoseconds": 551000000
+      }
+    },
+    {
+      "id": "eTCxeebkfcBp0umBNqKa",
+      "year": "1990",
+      "subject": "mathematics",
+      "questionNumber": 17,
+      "questionText": "The pie chart shows the monthly expenditure of Mr. Awuah whose monthly income is ₵18,000.00. Use the chart to answer the question below. What is the size of the angle that represents savings?",
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479534,
+        "_nanoseconds": 124000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1990"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 40°",
+        "B. 60°",
+        "C. 130°",
+        "D. 230°",
+        "E. 320°"
+      ],
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487076,
+        "_nanoseconds": 950000000
+      }
+    },
+    {
+      "id": "efJ7JsXpY7o52UygZsBu",
+      "year": "1993",
+      "subject": "mathematics",
+      "questionNumber": 37,
+      "questionText": "In the diagram below AC // DF. Angle CBT is 40° and angle DET is 140°",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479616,
+        "_nanoseconds": 847000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1993"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 320°",
+        "B. 280°",
+        "C. 220°",
+        "D. 100°",
+        "E. 80°"
+      ],
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487079,
+        "_nanoseconds": 424000000
+      }
+    },
+    {
+      "id": "fZWjmXjus2boPhenPukl",
+      "year": "1991",
+      "subject": "mathematics",
+      "questionNumber": 32,
+      "questionText": "Find the tangent of the angle marked y in the diagram below.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479571,
+        "_nanoseconds": 523000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1991"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 3 5",
+        "B. 3 4",
+        "C. 4 5",
+        "D. 4 3",
+        "E. 5 3"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487077,
+        "_nanoseconds": 776000000
+      }
+    },
+    {
+      "id": "gzrVbU4jPUedOu2F7Sta",
+      "year": "2025",
+      "subject": "mathematics",
+      "questionNumber": 6,
+      "questionText": "Two interior angles of a triangle are (3x - 10)° and (4x + 20)°. Find an expression for the third angle.",
+      "options": [
+        "A. (170 - 7x)°",
+        "B. (150 - 5x)°",
+        "C. (120 - 7x)°",
+        "D. (100 - 5x)°"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482520,
+        "_nanoseconds": 197000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2025"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487105,
+        "_nanoseconds": 685000000
+      }
+    },
+    {
+      "id": "hT32rIxDkR2bQd3xg3vT",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 16,
+      "questionText": "A point P (3, 4) is rotated through an angle of 90° anticlockwise about the origin O. Find the image P1 of rotation",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480081,
+        "_nanoseconds": 993000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. (3, -4)",
+        "B. (4, -3)",
+        "C. (-3, 4)",
+        "D. (-4, 3)",
+        "E. (-4, -3)"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 59000000
+      }
+    },
+    {
+      "id": "hyCNOiyWKFoBmm4WxW42",
+      "year": "1997",
+      "subject": "mathematics",
+      "questionNumber": 18,
+      "questionText": "In the diagram above, PQ is parallel to RS and |PR| = |QR|. Use the diagram to answer the question below. Find b.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479993,
+        "_nanoseconds": 59000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1997"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 29",
+        "B. 46",
+        "C. 88",
+        "D. 92",
+        "E. 105"
+      ],
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487082,
+        "_nanoseconds": 727000000
+      }
+    },
+    {
+      "id": "iKgqS8ED9jNhmWKbpMPZ",
+      "year": "2013",
+      "subject": "mathematics",
+      "questionNumber": 32,
+      "questionText": "Which of the following best describes the construction?",
+      "options": [
+        "A. Constructing a perpendicular at P",
+        "B. Constructing the bisector of line PQ",
+        "C. Constructing an angle of 30o at P",
+        "D. Constructing an angle of 45o at P"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480363,
+        "_nanoseconds": 863000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2013"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487095,
+        "_nanoseconds": 754000000
+      }
+    },
+    {
+      "id": "iL4V3rpw0GtvPqkMpZYp",
+      "year": "1998",
+      "subject": "mathematics",
+      "questionNumber": 39,
+      "questionText": "Which of the following best describes the statement: \"The locus of points 6 cm from a fixed point O?\"",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480027,
+        "_nanoseconds": 165000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1998"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. A parallel line 6 cm from O",
+        "B. A vertical line 6 cm from point O",
+        "C. A horizontal line 6 cm from point O",
+        "D. An equilateral triangle of side 6 cm",
+        "E. A circle with centre O and radius 6 cm"
+      ],
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487083,
+        "_nanoseconds": 561000000
+      }
+    },
+    {
+      "id": "iObFi3KXebvicrSruLov",
+      "year": "1993",
+      "subject": "mathematics",
+      "questionNumber": 33,
+      "questionText": "The diagram above shows the construction of :",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479614,
+        "_nanoseconds": 681000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1993"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. the perpendicular bisector of the line",
+        "B. an angle of 45° at the point A",
+        "C. an angle of 45° at the point B",
+        "D. an angle of 90° at the point O",
+        "E. an angle of 90° at the point B"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487079,
+        "_nanoseconds": 424000000
+      }
+    },
+    {
+      "id": "izYcqAFR1ixBQ365cKFO",
+      "year": "1990",
+      "subject": "mathematics",
+      "questionNumber": 2,
+      "questionText": "In the diagram, Q is the set of numbers inside the circle and T is the set of numbers inside the triangle. Find Q U T.",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479522,
+        "_nanoseconds": 271000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1990"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. {5}",
+        "B. {6, 7}",
+        "C. {3, 4, 5}",
+        "D. {5, 6, 7}",
+        "E. {3, 4, 5, 6, 7}"
+      ],
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1990_q2_img2.png",
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763542097,
+        "_nanoseconds": 258000000
+      }
+    },
+    {
+      "id": "kFAGU8BVvzrwKLaq5FNz",
+      "year": "2013",
+      "subject": "mathematics",
+      "questionNumber": 15,
+      "questionText": "Use the diagram below to answer the question below. Find the angle marked a.",
+      "options": [
+        "A. 70o",
+        "B. 50o",
+        "C. 40o",
+        "D. 30o"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480354,
+        "_nanoseconds": 89000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2013"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487095,
+        "_nanoseconds": 754000000
+      }
+    },
+    {
+      "id": "l1ejRZuPdmy9ePYM82Lu",
+      "year": "2007",
+      "subject": "mathematics",
+      "questionNumber": 16,
+      "questionText": "Use the diagram below to answer the question below. Find the size of angle y.",
+      "options": [
+        "A. 75°",
+        "B. 80°",
+        "C. 100°",
+        "D. 105°"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480217,
+        "_nanoseconds": 723000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2007"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 958000000
+      }
+    },
+    {
+      "id": "lsUk6RjUwq1Rau4xIog6",
+      "year": "2016",
+      "subject": "mathematics",
+      "questionNumber": 35,
+      "questionText": "Study the triangle of odd numbers and use it to answer the question below. 13 b c 19 7 9 a 3 5 1 Evaluate: a + b + c",
+      "options": [
+        "A. 24",
+        "B. 29",
+        "C. 36",
+        "D. 43"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480433,
+        "_nanoseconds": 920000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2016"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487098,
+        "_nanoseconds": 192000000
+      }
+    },
+    {
+      "id": "m00MDhQghJ0zMoThG7Nr",
+      "year": "2002",
+      "subject": "mathematics",
+      "questionNumber": 18,
+      "questionText": "Which of the following best describes the construction below?",
+      "options": [
+        "A. Constructing an angle of 60°",
+        "B. Constructing the perpendicular bisector of AB",
+        "C. Constructing a circle about the midpoint of AB",
+        "D. Constructing an angle of 180°"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480105,
+        "_nanoseconds": 627000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2002"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 895000000
+      }
+    },
+    {
+      "id": "mc6nWZRP7wTyEjQvl9HI",
+      "year": "2020",
+      "subject": "mathematics",
+      "questionNumber": 20,
+      "questionText": "The pie chart shows the household budget of a family. Use the information to answer the question below Find the angle for INSURANCE AND TAXES.",
+      "options": [
+        "A. 45o",
+        "B. 54o",
+        "C. 60o",
+        "D. 72o"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480516,
+        "_nanoseconds": 889000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2020"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487101,
+        "_nanoseconds": 629000000
+      }
+    },
+    {
+      "id": "mm9NJkrJSlc2XD1s65LY",
+      "year": "2000",
+      "subject": "mathematics",
+      "questionNumber": 39,
+      "questionText": "Which of the following best describes the construction in the diagram?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480072,
+        "_nanoseconds": 355000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2000"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. Constructing a 30° angle.",
+        "B. Constructing a 60° angle.",
+        "C. Bisecting a line segment.",
+        "D. Bisecting a given angle.",
+        "E. Drawing a perpendicular from a given point."
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487085,
+        "_nanoseconds": 254000000
+      }
+    },
+    {
+      "id": "mtLbz7XMrSn2ji9MqCjR",
+      "year": "1998",
+      "subject": "mathematics",
+      "questionNumber": 32,
+      "questionText": "In the triangle RST, ∠RST is 90°, |RS| = 4 cm and |ST| = 3 cm. What is the length of RT?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480023,
+        "_nanoseconds": 272000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1998"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 2 cm",
+        "B. 3 cm",
+        "C. 4 cm",
+        "D. 5 cm",
+        "E. 7 cm"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487083,
+        "_nanoseconds": 561000000
+      }
+    },
+    {
+      "id": "nCCL1DpxaocDJ4hxB8cy",
+      "year": "1997",
+      "subject": "mathematics",
+      "questionNumber": 19,
+      "questionText": "In the diagram above, PQ is parallel to RS and |PR| = |QR|. Use the diagram to answer the question below. Find the value of c.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479993,
+        "_nanoseconds": 634000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1997"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 29",
+        "B. 46",
+        "C. 75",
+        "D. 88",
+        "E. 105"
+      ],
+      "explanation": "",
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487082,
+        "_nanoseconds": 727000000
+      }
+    },
+    {
+      "id": "ntbEF6Xn0y2lzuKGVeJq",
+      "year": "2003",
+      "subject": "mathematics",
+      "questionNumber": 40,
+      "questionText": "The point P moves in a plane such that it is always at equal distance from two fixed points, A and B in the same plane. Which of these is the locus of the point P?",
+      "options": [
+        "A. The bisector of angle PAB",
+        "B. A circle centre B and radius AB",
+        "C. A circle with AB as the diameter",
+        "D. The perpendicular bisector of line AB."
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480140,
+        "_nanoseconds": 486000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2003"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487087,
+        "_nanoseconds": 736000000
+      }
+    },
+    {
+      "id": "oEGsH9iSey4pIyp1NtAw",
+      "year": "2009",
+      "subject": "mathematics",
+      "questionNumber": 9,
+      "questionText": "The pie chart below shows the performance of Kate in her final examination. Use the diagram to answer the question below. What is the angle for French?",
+      "options": [
+        "A. 120o",
+        "B. 100o",
+        "C. 70o",
+        "D. 35o"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480259,
+        "_nanoseconds": 293000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2009"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487092,
+        "_nanoseconds": 558000000
+      }
+    },
+    {
+      "id": "oH6iwhY4wvSOe4oIKmKB",
+      "year": "2016",
+      "subject": "mathematics",
+      "questionNumber": 25,
+      "questionText": "An angle which is greater than 180o but less than 360o is",
+      "options": [
+        "A. a right angle.",
+        "B. an acute angle.",
+        "C. an obtuse angle.",
+        "D. a reflex angle."
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480428,
+        "_nanoseconds": 202000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2016"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487098,
+        "_nanoseconds": 192000000
+      }
+    },
+    {
+      "id": "oOJA08TgisSmYXGmCwZN",
+      "year": "2000",
+      "subject": "mathematics",
+      "questionNumber": 38,
+      "questionText": "Find the value of the angle marked y in the diagram.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480071,
+        "_nanoseconds": 789000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2000"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 35°",
+        "B. 43°",
+        "C. 67°",
+        "D. 78°",
+        "E. 137°"
+      ],
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487085,
+        "_nanoseconds": 254000000
+      }
+    },
+    {
+      "id": "on41qoB71zX3Jdv5wF3v",
+      "year": "2015",
+      "subject": "mathematics",
+      "questionNumber": 30,
+      "questionText": "Which of the following best describes the statement: \"The locus of a point which moves so that its distance from two fixed points are always equal\"?",
+      "options": [
+        "A. Bisector of angle",
+        "B. Perpendicular bisector",
+        "C. Circle",
+        "D. Two parallel lines"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480408,
+        "_nanoseconds": 343000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2015"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487097,
+        "_nanoseconds": 370000000
+      }
+    },
+    {
+      "id": "osnPs9YdlNt9mnnxpsj0",
+      "year": "2023",
+      "subject": "mathematics",
+      "questionNumber": 33,
+      "questionText": "A quadrilateral with one pair of opposite sides parallel is called",
+      "options": [
+        "A. kite.",
+        "B. rectangle.",
+        "C. square.",
+        "D. trapezium."
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482485,
+        "_nanoseconds": 871000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2023"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 62000000
+      }
+    },
+    {
+      "id": "pcrBOUbsrbQ9WP96FoDC",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 11,
+      "questionText": "The following are the angles formed at the centre of a circle: 30°, 70°, 120°, 2x and 5x. Find the value of x.",
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480079,
+        "_nanoseconds": 221000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 20",
+        "B. 40",
+        "C. 70",
+        "D. 100",
+        "E. 140"
+      ],
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 59000000
+      }
+    },
+    {
+      "id": "phzCX7dIR6XWaSK6y2uW",
+      "year": "2017",
+      "subject": "mathematics",
+      "questionNumber": 7,
+      "questionText": "The sum of the interior angles of a regular polygon with 10 sides is",
+      "options": [
+        "A. 144o.",
+        "B. 900o.",
+        "C. 1,440o.",
+        "D. 1,800o."
+      ],
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480440,
+        "_nanoseconds": 861000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2017"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2017_q7_img7.jpg",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542210,
+        "_nanoseconds": 808000000
+      }
+    },
+    {
+      "id": "r9Yivb7CIVN56CMJEteQ",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 36,
+      "questionText": "In an enlargement with scale factor k, which of the following statements is not true?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480093,
+        "_nanoseconds": 220000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. Each length is multiplied by k",
+        "B. Each angle remains the same",
+        "C. The shape of the figure does not change",
+        "D. The size of the figure does not change",
+        "E. Corresponding lines are parallel"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 59000000
+      }
+    },
+    {
+      "id": "rEVUOpXQVt1ZAK6DOCnV",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 40,
+      "questionText": "Which of the following statements best describes the construction below?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480095,
+        "_nanoseconds": 435000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. Construction of a horizontal line CD",
+        "B. Construction of a line parallel to AB",
+        "C. Construction of the bisector of AB.",
+        "D. Construction of a top line",
+        "E. Construction of a vertical line."
+      ],
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 59000000
+      }
+    },
+    {
+      "id": "rKGoArbGQSe2se1P248Z",
+      "year": "1993",
+      "subject": "mathematics",
+      "questionNumber": 4,
+      "questionText": "Which of these has the least number of lines of symmetry?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479599,
+        "_nanoseconds": 464000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1993"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. An equilateral triangle",
+        "B. A rectangle",
+        "C. A square",
+        "D. A circle",
+        "E. An isosceles triangle"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1993_q4_img4.png",
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763542122,
+        "_nanoseconds": 952000000
+      }
+    },
+    {
+      "id": "ruPTrxw7yZVaUZVJdHqw",
+      "year": "2018",
+      "subject": "mathematics",
+      "questionNumber": 17,
+      "questionText": "In the diagram, QP is parallel to ST, angle QPR = 68o and angle SRT = 40o. Use the information to answer the question below: Find the value of angle TSR.",
+      "options": [
+        "A. 40o",
+        "B. 68o",
+        "C. 72o",
+        "D. 112o"
+      ],
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480469,
+        "_nanoseconds": 390000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2018"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2018_q17_img17.jpg",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542232,
+        "_nanoseconds": 823000000
+      }
+    },
+    {
+      "id": "sHHLXfM0Oj1gxUxcZRrJ",
+      "year": "2017",
+      "subject": "mathematics",
+      "questionNumber": 23,
+      "questionText": "In the diagram, UVW is an isosceles triangle. |UV| = |UW| and angle VUW = 70o. Find angle UVW.",
+      "options": [
+        "A. 70o",
+        "B. 60o",
+        "C. 55o",
+        "D. 35o"
+      ],
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480449,
+        "_nanoseconds": 856000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2017"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2017_q23_img23.png",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542218,
+        "_nanoseconds": 641000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1995_q2",
+      "questionText": "), C(1, 4).\n\n(ii)\n\n \n\nJoin the points to form a triangle. What type of triangle have you drawn?\n\n(d)\n\n \n\nDraw the image triangle A1B1C1 of ABC under a reflection in the y-axis, where A→A1, B→B1 and C→C1. Label the vertices and the co-ordinates clearly.\n\n(e)\n\n \n\nDraw the image triangle A2B2C2 of triangle ABC under an enlargement with scale factor –1 with the centre of enlargement as the origin (0,0), where A→A2, B→B2 and C→C2. Show all lines of enlargement. Label the vertices and co-ordinates clearly\n\n(f)\n\n \n\nWhat single transformation maps A1B1C1 onto A2B2C2 where A1→A2, B1→ B2 and C1→C2?",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1995",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1995 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1995",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1997_q7",
+      "questionText": "]\n\n(b)\n\n \n\nEach of the interior angles of a regular polygon is 140°. How many sides does it have?",
+      "questionNumber": 7,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1997",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1997 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1997",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2001_q3",
+      "questionText": "-4\n\n)\n\n such that A1→A2, B1→B2, and C1→C2. Label the vertices of triangle A2B2C2\n\n(e)\n\n \n\nJoin the vertices A1B1B2 and C. Name the figure formed.\n\n(f)\n\n \n\nFind A1B1\n\n→",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2001",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2001 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2001",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2004_q0",
+      "questionText": ")\n\n and Q′, the image of Q by the same vector.\n\n(c)\n\n \n\n(i)\n\n \n\nJoin PQQ′P′.\n\n(ii)\n\n \n\nMeasure angles PQQ′ and PP′Q′.\n\n(d)\n\n \n\n(i)\n\n \n\nFind the vectors PQ\n\n→\n\n and P′Q'\n\n→\n\n(ii)\n\n \n\nWhat is the shape of PQQ′P′?",
+      "questionNumber": 0,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2004",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2004 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2004",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2017_q2",
+      "questionText": "(x -2) + 5.\n\nii\n\n \n\nIllustrate the answer in b(i) on a number line.\n\nc\n\n \n\n\n\nIn the diagram, AB is parallel to CD.\n\nFind the value of:\n\ni\n\n \n\nx;\n\nii\n\n \n\ny.",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2017",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2017 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2017",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2022_q2",
+      "questionText": "(a)\n\n \n\nSimplify:\n\n \n\n\n\n(b)\n\n \n\nFind the product of (2x - 3) and (2x + 3).\n\n(c)\n\n \n\n\n\nIn the diagram, ABC is an equilateral triangle. Find the value of (x + y).",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2022",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2022 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2022",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2025_q5",
+      "questionText": "(a)\n\n \n\nThe pie chart shows the weight (in kg) of items Mrs. Mensah bought for her household.\n\n\n\n(i)\n\n \n\nWhat angle represents fish?\n\n(ii)\n\n \n\nIf she bought a total of 20 kg of items,\n\n(α)\n\n \n\nwhat is the weight of flour bought?\n\n(β)\n\n \n\nexpress, correct to one decimal place, the weight of sugar as a percentage of the weight of rice.\n\n(b)\n\n \n\nIn a class of 30 students, five wear glasses. If a student is selected at random from the class, what is the probability that the student does not wear glasses?",
+      "questionNumber": 5,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2025",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2025 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2025",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "u4T1x1TnxpOFG07h6oxG",
+      "year": "2009",
+      "subject": "mathematics",
+      "questionNumber": 22,
+      "questionText": "In the following diagram, rectangle OABC is enlarged into rectangle OA1B1C1 from center O. OC = 5 cm, OA = 2 cm and AA1 = 1 cm. Use the diagram to answer the question below. Calculate OC1.",
+      "options": [
+        "A. 7.5 cm",
+        "B. 8 cm",
+        "C. 9 cm",
+        "D. 12 cm"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480266,
+        "_nanoseconds": 685000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2009"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487092,
+        "_nanoseconds": 558000000
+      }
+    },
+    {
+      "id": "uNFCgQnS0KpG97NPSGE4",
+      "year": "1997",
+      "subject": "mathematics",
+      "questionNumber": 17,
+      "questionText": "In the diagram above, PQ is parallel to RS and |PR| = |QR|. Use the diagram to answer the question below. What is a?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479992,
+        "_nanoseconds": 504000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1997"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 29",
+        "B. 46",
+        "C. 75",
+        "D. 88",
+        "E. 134"
+      ],
+      "explanation": "",
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487082,
+        "_nanoseconds": 727000000
+      }
+    },
+    {
+      "id": "uQthYYYx1mRSTHUdFKDm",
+      "year": "2009",
+      "subject": "mathematics",
+      "questionNumber": 32,
+      "questionText": "Arrangle the following fractions in ascending order: 7 12 , 3 5 , 7 15 , 3 4",
+      "options": [
+        "A. 3 5 , 7 15 , 7 12 , 3 4",
+        "B. 7 12 , 7 15 , 3 5 , 3 4",
+        "C. 7 15 , 7 12 , 3 5 , 3 4",
+        "D. 3 5 , 3 4 , 7 12 , 7 15"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480272,
+        "_nanoseconds": 250000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2009"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487092,
+        "_nanoseconds": 558000000
+      }
+    },
+    {
+      "id": "uYhpzKNdfTvdd0pNHaXV",
+      "year": "2022",
+      "subject": "mathematics",
+      "questionNumber": 3,
+      "questionText": "Which of the following is not a quadrilateral?",
+      "options": [
+        "A. Rhombus",
+        "B. Parallelogram",
+        "C. Rectangle",
+        "D. Triangle"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480552,
+        "_nanoseconds": 955000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2022"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2022_q3_img3.jpg",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542269,
+        "_nanoseconds": 897000000
+      }
+    },
+    {
+      "id": "ua9F1OTYtPRWltbABvGa",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 26,
+      "questionText": "Which of the following geometric figures is the plane shape of a cube?",
+      "options": [
+        "A. Circle",
+        "B. Rectangle",
+        "C. Square",
+        "D. Triangle"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480291,
+        "_nanoseconds": 678000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487093,
+        "_nanoseconds": 318000000
+      }
+    },
+    {
+      "id": "uklt0ufHbRB2S7fclQXi",
+      "year": "2005",
+      "subject": "mathematics",
+      "questionNumber": 22,
+      "questionText": "Find the size of the angle marked y in the diagram.",
+      "options": [
+        "A. 35°",
+        "B. 45°",
+        "C. 55°",
+        "D. 90°"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480175,
+        "_nanoseconds": 502000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2005"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487089,
+        "_nanoseconds": 336000000
+      }
+    },
+    {
+      "id": "unv02xloDwsNopCyhaLJ",
+      "year": "2008",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "How many lines of symmetry has an equilateral triangle?",
+      "options": [
+        "A. 1",
+        "B. 2",
+        "C. 3",
+        "D. 4"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480247,
+        "_nanoseconds": 327000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2008"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487091,
+        "_nanoseconds": 763000000
+      }
+    },
+    {
+      "id": "vdtIBiLYWZHjBWPK4x58",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 27,
+      "questionText": "How many lines of symmetry has a rectangle?",
+      "options": [
+        "A. 4",
+        "B. 3",
+        "C. 2",
+        "D. 1"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480292,
+        "_nanoseconds": 245000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487093,
+        "_nanoseconds": 318000000
+      }
+    },
+    {
+      "id": "wrDBVfciMMidsukXXW6N",
+      "year": "1999",
+      "subject": "mathematics",
+      "questionNumber": 40,
+      "questionText": "In the diagram below, MNO is a triangle. Angle MON = 72° and angle OMN = 68°. Find angle ONP.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480050,
+        "_nanoseconds": 261000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1999"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 40°",
+        "B. 68°",
+        "C. 72°",
+        "D. 112°",
+        "E. 140°"
+      ],
+      "explanation": "",
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487084,
+        "_nanoseconds": 387000000
+      }
+    },
+    {
+      "id": "xRqCZM4I5RR6RZrnoDmV",
+      "year": "2016",
+      "subject": "mathematics",
+      "questionNumber": 26,
+      "questionText": "How many lines of symmetry has a rectangle?",
+      "options": [
+        "A. 1",
+        "B. 2",
+        "C. 3",
+        "D. 4"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480428,
+        "_nanoseconds": 785000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2016"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487098,
+        "_nanoseconds": 192000000
+      }
+    },
+    {
+      "id": "xnYAL76cyNjZ4bUJoiPW",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 37,
+      "questionText": "Which of the following angles can be constructed by using the arcs at point C in the diagram below?",
+      "options": [
+        "A. 30o",
+        "B. 45o",
+        "C. 60o",
+        "D. 75o"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480297,
+        "_nanoseconds": 917000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763485035,
+        "_nanoseconds": 345000000
+      }
+    },
+    {
+      "id": "yteNOg79cxsKTU1OQGXi",
+      "year": "2012",
+      "subject": "mathematics",
+      "questionNumber": 39,
+      "questionText": "In the diagram below, line PQ is parallel to RS and UV is a line drawn through PQ and RS. Use the diagram to answer the question below. Angle b and angle c are",
+      "options": [
+        "A. alternate angles.",
+        "B. vertically opposite angles.",
+        "C. corresponding angles.",
+        "D. interior opposite angles."
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480344,
+        "_nanoseconds": 938000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2012"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 925000000
+      }
+    }
+  ],
+  "questionCount": 120
+}

@@ -1,0 +1,3579 @@
+{
+  "topic": "Graphs",
+  "questions": [
+    {
+      "id": "0TDd0bXZR2MWimopOLzj",
+      "year": "2015",
+      "subject": "mathematics",
+      "questionNumber": 33,
+      "questionText": "Given that vectors u = ( -3 5 ) and v = ( 2 -3 ) , calculate 2v - u.",
+      "options": [
+        "A. ( 1 -1 )",
+        "B. ( -1 1 )",
+        "C. ( -7 -11 )",
+        "D. ( 7 -11 )"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480410,
+        "_nanoseconds": 32000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2015"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487097,
+        "_nanoseconds": 370000000
+      }
+    },
+    {
+      "id": "0XXOiWvMz7cnZUk3Dpa7",
+      "year": "2002",
+      "subject": "mathematics",
+      "questionNumber": 17,
+      "questionText": "Arrange the following fractions in descending order of magnitude: 1 2 , 17 20 , 3 4",
+      "options": [
+        "A. 3 4 , 17 20 , 1 2",
+        "B. 17 20 , 3 4 , 1 2",
+        "C. 1 2 , 3 4 , 17 20",
+        "D. 1 2 , 17 20 , 3 4"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480105,
+        "_nanoseconds": 69000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2002"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 895000000
+      }
+    },
+    {
+      "id": "1KJ5DNPei5peacW5vgjk",
+      "year": "2012",
+      "subject": "mathematics",
+      "questionNumber": 11,
+      "questionText": "Arrange the following fractions in descending order of magnitude: 2 3 , 5 7 , 2 5 , 1 2 .",
+      "options": [
+        "A. 5 7 , 2 5 , 2 3 , 1 2",
+        "B. 5 7 , 2 3 , 1 2 , 2 5",
+        "C. 1 2 , 2 5 , 5 7 , 2 3",
+        "D. 1 2 , 5 7 , 2 3 , 2 5"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480329,
+        "_nanoseconds": 106000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2012"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 925000000
+      }
+    },
+    {
+      "id": "2XgL8B8JeYWtDSe3FvfQ",
+      "year": "2008",
+      "subject": "mathematics",
+      "questionNumber": 40,
+      "questionText": "If r = ( 2 5 ) and t = ( -2 -3 ) , evaluate r + t.",
+      "options": [
+        "A. ( 0 -2 )",
+        "B. ( 0 2 )",
+        "C. ( 4 2 )",
+        "D. ( 4 8 )"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480254,
+        "_nanoseconds": 95000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2008"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487091,
+        "_nanoseconds": 763000000
+      }
+    },
+    {
+      "id": "2n1cRG9kwAnLkfvXSzqT",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 33,
+      "questionText": "If the gradient of a straight line is zero, then the line",
+      "options": [
+        "A. is vertical.",
+        "B. is horizontal.",
+        "C. falls to the right.",
+        "D. rises to the right."
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482512,
+        "_nanoseconds": 979000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 904000000
+      }
+    },
+    {
+      "id": "3UYnupuNsgzMZt6hcIUY",
+      "year": "2017",
+      "subject": "mathematics",
+      "questionNumber": 25,
+      "questionText": "The point D (4,3) is reflected in the y-axis. Find the coordinates of its image.",
+      "options": [
+        "A. (-4,-3)",
+        "B. (-3,4)",
+        "C. (-4,3)",
+        "D. (3,-4)"
+      ],
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480451,
+        "_nanoseconds": 0
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2017"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2017_q25_img25.png",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542219,
+        "_nanoseconds": 617000000
+      }
+    },
+    {
+      "id": "4kSjCeF6y1bxO3akej7A",
+      "year": "2023",
+      "subject": "mathematics",
+      "questionNumber": 17,
+      "questionText": "A straight line passes through the points P(-5,-3) and Q(-4,-7). Find the gradient of the line PQ.",
+      "options": [
+        "A. -4",
+        "B. - 1 4",
+        "C. 1 4",
+        "D. 4"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482473,
+        "_nanoseconds": 292000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2023"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 62000000
+      }
+    },
+    {
+      "id": "5J7okJkllYfpqdhegcS7",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 15,
+      "questionText": "The diagram shows the graph of a linear relation of the form y = mx + c. Use the graph to answer the question below Find the equation of the relation.",
+      "options": [
+        "A. y = -2x + 3",
+        "B. y = -2x + 2",
+        "C. y = 2x + 3",
+        "D. y = 2x - 3"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482501,
+        "_nanoseconds": 965000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 904000000
+      }
+    },
+    {
+      "id": "66SRYKhX2dW3Pc7wR021",
+      "year": "2019",
+      "subject": "mathematics",
+      "questionNumber": 26,
+      "questionText": "In the diagram, line MN is parallel to line TU, line TS cuts line MN at O and ∠MOS = 115o. Find ∠OTU.",
+      "options": [
+        "A. 65o",
+        "B. 55o",
+        "C. 45o",
+        "D. 25o"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480497,
+        "_nanoseconds": 553000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2019"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487100,
+        "_nanoseconds": 643000000
+      }
+    },
+    {
+      "id": "7Qw74xeBRB15kv9W4XLg",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 31,
+      "questionText": "Use the graph of the straight line below to answer the question below Determine the value of x when y is 3.",
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480090,
+        "_nanoseconds": 409000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1 2",
+        "B. 1 1 2",
+        "C. 2",
+        "D. 3",
+        "E. 8"
+      ],
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 59000000
+      }
+    },
+    {
+      "id": "8Dt6eb8s2mNphBbDjKk6",
+      "year": "1998",
+      "subject": "mathematics",
+      "questionNumber": 24,
+      "questionText": "A graph of a straight line AB is shown below. Use it to answer the question below Find the gradient of the line AB",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480018,
+        "_nanoseconds": 814000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1998"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1",
+        "B. 2",
+        "C. 3",
+        "D. 4",
+        "E. 5"
+      ],
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487083,
+        "_nanoseconds": 561000000
+      }
+    },
+    {
+      "id": "AJJszct61q0fTHcyVB0B",
+      "year": "2006",
+      "subject": "mathematics",
+      "questionNumber": 19,
+      "questionText": "Arrange the fractions 3 4 , 2 3 , 4 5 in ascending order of magnitude.",
+      "options": [
+        "A. 3 4 , 2 3 , 4 5",
+        "B. 4 5 , 2 3 , 3 4",
+        "C. 4 5 , 3 4 , 2 3",
+        "D. 2 3 , 3 4 , 4 5"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480196,
+        "_nanoseconds": 648000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2006"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 135000000
+      }
+    },
+    {
+      "id": "AhZcseUKwJDRDnr2InOJ",
+      "year": "2019",
+      "subject": "mathematics",
+      "questionNumber": 18,
+      "questionText": "Find the gradient of the straight line which passes through the points (-3,4) and (3,-2).",
+      "options": [
+        "A. 2",
+        "B. 1",
+        "C. -2",
+        "D. -1"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480492,
+        "_nanoseconds": 949000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2019"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2019_q18_img18.jpg",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542248,
+        "_nanoseconds": 283000000
+      }
+    },
+    {
+      "id": "CIMdr4KJsqfakVaQhz2q",
+      "year": "2013",
+      "subject": "mathematics",
+      "questionNumber": 3,
+      "questionText": "Arrange the following in ascending order of magnitude: 0.301,0.3,0.33,0.03.",
+      "options": [
+        "A. 0.03,0.3,0.301,0.33",
+        "B. 0.03,0.301,0.3,0.33",
+        "C. 0.33,0.3,0.301,0.03",
+        "D. 0.33,0.301,0.3,0.03"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480347,
+        "_nanoseconds": 395000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2013"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2013_q3_img3.png",
+      "updatedAt": {
+        "_seconds": 1763542200,
+        "_nanoseconds": 94000000
+      }
+    },
+    {
+      "id": "CNJ2QzYbImpFMV4VULy3",
+      "year": "2022",
+      "subject": "mathematics",
+      "questionNumber": 7,
+      "questionText": "The point S(4, 3) is reflected in the y-axis, Find the coordinates of the image of S.",
+      "options": [
+        "A. (-3,4)",
+        "B. (4,-3)",
+        "C. (3,-4)",
+        "D. (-4,3)"
+      ],
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480555,
+        "_nanoseconds": 207000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2022"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2022_q7_img7.jpg",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542271,
+        "_nanoseconds": 849000000
+      }
+    },
+    {
+      "id": "CbsTbV2YRisKhfDwD28Y",
+      "year": "2021",
+      "subject": "mathematics",
+      "questionNumber": 29,
+      "questionText": "Find the gradient of the line that joins the points A(-3,5) and B(7,-2).",
+      "options": [
+        "A. ",
+        "B. ",
+        "C. ",
+        "D. "
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480544,
+        "_nanoseconds": 835000000
+      },
+      "difficulty": "medium",
+      "createdBy": "system_import",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2021"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "updatedAt": {
+        "_seconds": 1763487102,
+        "_nanoseconds": 440000000
+      }
+    },
+    {
+      "id": "DEPzHvMYKQX6flAqqXIA",
+      "year": "1998",
+      "subject": "mathematics",
+      "questionNumber": 29,
+      "questionText": "In the diagram below, PQR is an isosceles triangle. |PQ| = |PR|, ∠QPR = 40° and QRS is a straight line. Find angle PRS.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480021,
+        "_nanoseconds": 646000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1998"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 40°",
+        "B. 70°",
+        "C. 100°",
+        "D. 110°",
+        "E. 140°"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487083,
+        "_nanoseconds": 561000000
+      }
+    },
+    {
+      "id": "DTKp8yQYl2oD4LwK6yHU",
+      "year": "2022",
+      "subject": "mathematics",
+      "questionNumber": 25,
+      "questionText": "The stem and leaf plot shows the weights (kg) of cocoa bags weighed in a week. Use the information to answer the question below: Stem Leaf 4 0,5,7,9 5 1,3,4,5,7,8 6 0,2,3,4,4,4,4,5,6,8 7 1,2,3,4,5,8,8,9 8 2,3,5,6,9 9 4,5 What is the median weight of the bags of cocoa?",
+      "options": [
+        "A. 62 kg",
+        "B. 65 kg",
+        "C. 61 kg",
+        "D. 68 kg"
+      ],
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480565,
+        "_nanoseconds": 476000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2022"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2022_q25_img25.png",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542280,
+        "_nanoseconds": 631000000
+      }
+    },
+    {
+      "id": "EWq1FM3WABJdCiju6gAe",
+      "year": "2018",
+      "subject": "mathematics",
+      "questionNumber": 20,
+      "questionText": "Find the slope of the line 3x - 6y = 33.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480471,
+        "_nanoseconds": 248000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2018"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. -3",
+        "D. 3"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2018_q20_img20.jpg",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542234,
+        "_nanoseconds": 276000000
+      }
+    },
+    {
+      "id": "EkC8iE9DZE964vbD0phN",
+      "year": "1998",
+      "subject": "mathematics",
+      "questionNumber": 25,
+      "questionText": "A graph of a straight line AB is shown below. Use it to answer the question below Find the coordinates of the point at which the line cuts the y-axis.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480019,
+        "_nanoseconds": 370000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1998"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. (1, 0)",
+        "B. (0, 1)",
+        "C. (-1, 0)",
+        "D. (0, -1)",
+        "E. (0, 0)"
+      ],
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487083,
+        "_nanoseconds": 561000000
+      }
+    },
+    {
+      "id": "F8sNvAe0iifC71z7ZnJd",
+      "year": "2018",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "If u = ( 3 1 ) and v = ( -2 1 ) , evaluate 6v + 2u.",
+      "options": [
+        "A. ( -1 3 )",
+        "B. ( -6 8 )",
+        "C. ( 1 3 )",
+        "D. ( 6 8 )"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480475,
+        "_nanoseconds": 760000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2018"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2018_q28_img28.jpg",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542238,
+        "_nanoseconds": 298000000
+      }
+    },
+    {
+      "id": "FASklXt56CAld9C7gOoF",
+      "year": "2014",
+      "subject": "mathematics",
+      "questionNumber": 12,
+      "questionText": "Arrange the following fractions in ascending order of magnitude, 2 5 , 5 12 and 3 4 .",
+      "options": [
+        "A. 2 5 , 3 4 , 5 12",
+        "B. 2 5 , 5 12 , 3 4",
+        "C. 5 12 , 2 5 , 3 4",
+        "D. 3 4 , 2 5 , 5 12"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480375,
+        "_nanoseconds": 401000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2014"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487096,
+        "_nanoseconds": 588000000
+      }
+    },
+    {
+      "id": "FSlUg3xB5FyJnjk9tmMP",
+      "year": "2022",
+      "subject": "mathematics",
+      "questionNumber": 26,
+      "questionText": "The stem and leaf plot shows the weights (kg) of cocoa bags weighed in a week. Use the information to answer the question below: Stem Leaf 4 0,5,7,9 5 1,3,4,5,7,8 6 0,2,3,4,4,4,4,5,6,8 7 1,2,3,4,5,8,8,9 8 2,3,5,6,9 9 4,5 What is the modal weight of the bags of cocoa?",
+      "options": [
+        "A. 68 kg",
+        "B. 60 kg",
+        "C. 64 kg",
+        "D. 65 kg"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480566,
+        "_nanoseconds": 29000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2022"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487103,
+        "_nanoseconds": 234000000
+      }
+    },
+    {
+      "id": "Ffeu3S6PkGQtb0CDd5qI",
+      "year": "2023",
+      "subject": "mathematics",
+      "questionNumber": 12,
+      "questionText": "The stem and leaf plot shows the marks scored by students in a French test. Use the information to answer the question below. Stem Leaf 2 0    2    5    7    8 3 2    7    9 4 3    5    5    5 5 4    6    6    8 6 3    5    7 7 0    6 How many students took the test?",
+      "options": [
+        "A. 20",
+        "B. 21",
+        "C. 22",
+        "D. 27"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482469,
+        "_nanoseconds": 451000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2023"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 62000000
+      }
+    },
+    {
+      "id": "IfGMaYpecn3e3BGCEo1K",
+      "year": "2025",
+      "subject": "mathematics",
+      "questionNumber": 34,
+      "questionText": "Find the gradient of the line which passes through the points (2, 3) and (-4, 5).",
+      "options": [
+        "A. -3",
+        "B. - 1 3",
+        "C. 1 3",
+        "D. 3"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482535,
+        "_nanoseconds": 554000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2025"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487105,
+        "_nanoseconds": 685000000
+      }
+    },
+    {
+      "id": "JJJndLPrC6bA4XYtVp9y",
+      "year": "2022",
+      "subject": "mathematics",
+      "questionNumber": 24,
+      "questionText": "The stem and leaf plot shows the weights (kg) of cocoa bags weighed in a week. Use the information to answer the question below: Stem Leaf 4 0,5,7,9 5 1,3,4,5,7,8 6 0,2,3,4,4,4,4,5,6,8 7 1,2,3,4,5,8,8,9 8 2,3,5,6,9 9 4,5 How many bags of cocoa were weighed in the week?",
+      "options": [
+        "A. 35",
+        "B. 29",
+        "C. 6",
+        "D. 41"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480564,
+        "_nanoseconds": 905000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2022"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2022_q24_img24.png",
+      "updatedAt": {
+        "_seconds": 1763542280,
+        "_nanoseconds": 149000000
+      }
+    },
+    {
+      "id": "K91CJsCJ5J2uvDmaeDI7",
+      "year": "2000",
+      "subject": "mathematics",
+      "questionNumber": 18,
+      "questionText": "It takes 15 men, 48 days to weed a plot of land. How many men can weed the same plot of land in 16 days, if they work at the same rate?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480060,
+        "_nanoseconds": 579000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2000"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 5",
+        "B. 18",
+        "C. 32",
+        "D. 45",
+        "E. 48"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487085,
+        "_nanoseconds": 254000000
+      }
+    },
+    {
+      "id": "LT2rIStyrXEU0rKO3Vkq",
+      "year": "2020",
+      "subject": "mathematics",
+      "questionNumber": 30,
+      "questionText": "Find the equation of the straight line passing through the points (-3,5) and (6,8)",
+      "options": [
+        "A. y = ⅓x",
+        "B. y = ⅓x+6",
+        "C. y = ⅓x-10",
+        "D. y = ⅓x+14"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480522,
+        "_nanoseconds": 601000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2020"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487101,
+        "_nanoseconds": 629000000
+      }
+    },
+    {
+      "id": "NNAjgavc7Gfs5nbsKOp8",
+      "year": "2006",
+      "subject": "mathematics",
+      "questionNumber": 40,
+      "questionText": "Given that vector a = ( -2 3 ) and vector b = ( 2 -5 ) , find a + 2b.",
+      "options": [
+        "A. ( 6 13 )",
+        "B. ( 2 -13 )",
+        "C. ( -2 7 )",
+        "D. ( 2 -7 )"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480208,
+        "_nanoseconds": 677000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2006"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 135000000
+      }
+    },
+    {
+      "id": "Nl1bmVneJcS0jtkzvZzJ",
+      "year": "2006",
+      "subject": "mathematics",
+      "questionNumber": 30,
+      "questionText": "In the figure PQR is a straight line. Angle TQP = x°, angle TQS = 102° and angle SQR = 2x°. Find the value of x.",
+      "options": [
+        "A. 78",
+        "B. 39",
+        "C. 34",
+        "D. 26"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480202,
+        "_nanoseconds": 951000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2006"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 135000000
+      }
+    },
+    {
+      "id": "O6n5zh21PyjA7b01bH6u",
+      "year": "1996",
+      "subject": "mathematics",
+      "questionNumber": 35,
+      "questionText": "Use the graph below to answer the question below. The travel graph describes the journey of a cyclist from Town X to Town Y. State the period within which he travelled to town Y after his first rest?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479979,
+        "_nanoseconds": 935000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1996"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1:00 – 2:00 pm",
+        "B. 1:00 – 4:00 pm",
+        "C. 1:15 – 1:30 pm",
+        "D. 1:30 – 2:00 pm",
+        "E. 2:00 – 4:00 pm"
+      ],
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 915000000
+      }
+    },
+    {
+      "id": "PczlfvjspKSueRnCK6Sp",
+      "year": "1996",
+      "subject": "mathematics",
+      "questionNumber": 17,
+      "questionText": "Find k in the vector equation ( 3 4 ) + k ( 3 4 ) = - ( 3 4 ) .",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479969,
+        "_nanoseconds": 755000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1996"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. -3",
+        "B. -2",
+        "C. -1",
+        "D. - 3 4",
+        "E. 2"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 915000000
+      }
+    },
+    {
+      "id": "Qs6OGuLcPhLWGYPrPntM",
+      "year": "2023",
+      "subject": "mathematics",
+      "questionNumber": 8,
+      "questionText": "Tony shared 2 3 of his plot of land equally among his three sons. What fraction of the plot did each get?",
+      "options": [
+        "A. 2 9",
+        "B. 1 3",
+        "C. 1 2",
+        "D. 5 9"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482466,
+        "_nanoseconds": 372000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2023"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 62000000
+      }
+    },
+    {
+      "id": "RU7xxPUZKakxB1TYPU0K",
+      "year": "2014",
+      "subject": "mathematics",
+      "questionNumber": 39,
+      "questionText": "Find the gradient of the line which passes through the points M(-1,2) and N(6,-3).",
+      "options": [
+        "A. -5 7",
+        "B. -7 5",
+        "C. 5 7",
+        "D. 7 5"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480390,
+        "_nanoseconds": 581000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2014"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487096,
+        "_nanoseconds": 588000000
+      }
+    },
+    {
+      "id": "RhFKDBB9ouoM0aUW7jvU",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 24,
+      "questionText": "The diagram shows the conversion graph for miles and kilometres. Use it to answer the question below Find in kilometres, the equivalent of 4 miles.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479588,
+        "_nanoseconds": 658000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 2.5",
+        "B. 3",
+        "C. 3.5",
+        "D. 6",
+        "E. 6.4"
+      ],
+      "explanation": "",
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487078,
+        "_nanoseconds": 582000000
+      }
+    },
+    {
+      "id": "SaJW2U9UHHvjKy0ots0v",
+      "year": "2017",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "The point Q(-2,3) is rotated anticlockwise about the origin through an angle of 90o. Find the coordinates of its image.",
+      "options": [
+        "A. (-3,-2)",
+        "B. (-3,2)",
+        "C. (3,-2)",
+        "D. (3,2)"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480452,
+        "_nanoseconds": 728000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2017"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2017_q28_img28.jpg",
+      "updatedAt": {
+        "_seconds": 1763542221,
+        "_nanoseconds": 86000000
+      }
+    },
+    {
+      "id": "SlFRF7MYi6mENgIFchdr",
+      "year": "2023",
+      "subject": "mathematics",
+      "questionNumber": 11,
+      "questionText": "The stem and leaf plot shows the marks scored by students in a French test. Use the information to answer the question below. Stem Leaf 2 0    2    5    7    8 3 2    7    9 4 3    5    5    5 5 4    6    6    8 6 3    5    7 7 0    6 What is the modal mark?",
+      "options": [
+        "A. 35",
+        "B. 45",
+        "C. 56",
+        "D. 76"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482468,
+        "_nanoseconds": 673000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2023"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 62000000
+      }
+    },
+    {
+      "id": "VWxp9jHBJCkJxcBajBOS",
+      "year": "2025",
+      "subject": "mathematics",
+      "questionNumber": 30,
+      "questionText": "The points M(1, 3) and N(4, 5) are in the number plane. Find the vector MN → .",
+      "options": [
+        "A. ( 3 2 )",
+        "B. ( -3 -2 )",
+        "C. ( 5 8 )",
+        "D. ( -5 -8 )"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482533,
+        "_nanoseconds": 444000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2025"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487105,
+        "_nanoseconds": 685000000
+      }
+    },
+    {
+      "id": "XzmJAqC1pdD69WuwEdFh",
+      "year": "2013",
+      "subject": "mathematics",
+      "questionNumber": 14,
+      "questionText": "Calculate the gradient of the straight line joining the points A(3,5) and B(–2,3).",
+      "options": [
+        "A. 5 2",
+        "B. 2 5",
+        "C. - 2 5",
+        "D. - 5 2"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480353,
+        "_nanoseconds": 518000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2013"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487095,
+        "_nanoseconds": 754000000
+      }
+    },
+    {
+      "id": "ZMxgcLd4WCTkYeNo5w3z",
+      "year": "1993",
+      "subject": "mathematics",
+      "questionNumber": 36,
+      "questionText": "In the diagram, ABCD is a parallelogram; BC and AF are straight lines. Angle ABC = 110° and angle DEF = 40°. Find the angle marked θ.",
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479616,
+        "_nanoseconds": 317000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1993"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 30°",
+        "B. 40°",
+        "C. 50°",
+        "D. 70°",
+        "E. 110°"
+      ],
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487079,
+        "_nanoseconds": 424000000
+      }
+    },
+    {
+      "id": "a6d9AlejukAz4YSbp2P8",
+      "year": "2009",
+      "subject": "mathematics",
+      "questionNumber": 38,
+      "questionText": "Write the vector ( 6 cm W 4 cm S ) using cartesian components.",
+      "options": [
+        "A. ( -6 -4 )",
+        "B. ( -4 -6 )",
+        "C. ( -6 4 )",
+        "D. ( 6 -4 )"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480275,
+        "_nanoseconds": 612000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2009"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487092,
+        "_nanoseconds": 558000000
+      }
+    },
+    {
+      "id": "gL7Jz0cKTLLaTurmdt8u",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 19,
+      "questionText": "Given the vectors m = ( 5 -1 ) and n = ( -4 2 ) , find 2m + n.",
+      "options": [
+        "A. ( 6 0 )",
+        "B. ( -6 0 )",
+        "C. ( 0 6 )",
+        "D. ( 0 -6 )"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482504,
+        "_nanoseconds": 300000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 904000000
+      }
+    },
+    {
+      "id": "iHMtdf7glAX0QLPPfHst",
+      "year": "2012",
+      "subject": "mathematics",
+      "questionNumber": 23,
+      "questionText": "Given the points S(5, -2) and T(3, 2), calculate the gradient of the line ST.",
+      "options": [
+        "A. -2",
+        "B. - 3 5",
+        "C. 1 2",
+        "D. 2"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480335,
+        "_nanoseconds": 825000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2012"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 925000000
+      }
+    },
+    {
+      "id": "iXInD1PweOPGONfnNAMs",
+      "year": "2009",
+      "subject": "mathematics",
+      "questionNumber": 8,
+      "questionText": "What set does the following graph represent?",
+      "options": [
+        "A. {x:x < 2}",
+        "B. {x:x ≤ 2}",
+        "C. {x:x > 2}",
+        "D. {x:x ≥ 2}"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480258,
+        "_nanoseconds": 729000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2009"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487092,
+        "_nanoseconds": 558000000
+      }
+    },
+    {
+      "id": "inQkqr3FP8q10BdJgGB7",
+      "year": "1999",
+      "subject": "mathematics",
+      "questionNumber": 35,
+      "questionText": "E is the point (4, 2) and F the point (2, 1). Calculate the gradient of the straight line EF.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480047,
+        "_nanoseconds": 440000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1999"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. - 1 2",
+        "B. -2",
+        "C. 2",
+        "D. 1 2",
+        "E. 0"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487084,
+        "_nanoseconds": 387000000
+      }
+    },
+    {
+      "id": "lyfO7PlNBWqSfe9sRnr5",
+      "year": "1996",
+      "subject": "mathematics",
+      "questionNumber": 16,
+      "questionText": "P(2, 5) and Q(-2, 3) are points in the Cartesian plane, find the vector PQ → .",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479969,
+        "_nanoseconds": 174000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1996"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ( 4 2 )",
+        "B. ( -4 -2 )",
+        "C. ( 4 -2 )",
+        "D. ( -4 2 )",
+        "E. ( 0 -2 )"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 915000000
+      }
+    },
+    {
+      "id": "mljYVD8FyqVVDjtezBS6",
+      "year": "2008",
+      "subject": "mathematics",
+      "questionNumber": 6,
+      "questionText": "Arrange the following in descending order of magnitude: 0.32, 2 5 , 27%, 1 3 .",
+      "options": [
+        "A. 0.32, 2 5 , 27%, 1 3",
+        "B. 0.32, 1 3 , 2 5 , 27%",
+        "C. 27%, 0.32, 1 3 , 2 5",
+        "D. 2 5 , 1 3 , 0.32, 27%"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480235,
+        "_nanoseconds": 18000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2008"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2008_q6_img6.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542190,
+        "_nanoseconds": 244000000
+      }
+    },
+    {
+      "id": "oJ4iY7Kdvo9GlESFiTxU",
+      "year": "1996",
+      "subject": "mathematics",
+      "questionNumber": 36,
+      "questionText": "Use the graph below to answer the question below. The travel graph describes the journey of a cyclist from Town X to Town Y. How many minutes did the cyclist spend at town Y?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479980,
+        "_nanoseconds": 520000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1996"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 15 minutes",
+        "B. 20 minutes",
+        "C. 30 minutes",
+        "D. 45 minutes",
+        "E. 60 minutes"
+      ],
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 915000000
+      }
+    },
+    {
+      "id": "poeN8sA7d0jUCmgV5Tfn",
+      "year": "1996",
+      "subject": "mathematics",
+      "questionNumber": 34,
+      "questionText": "Use the graph below to answer the question below. The travel graph describes the journey of a cyclist from Town X to Town Y. What was the average speed for the return journey from town Y to town X",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479979,
+        "_nanoseconds": 351000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1996"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 100 kmh-1",
+        "B. 50 kmh-1",
+        "C. 33.33 kmh-1",
+        "D. 25 kmh-1",
+        "E. 20 kmh-1"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 915000000
+      }
+    },
+    {
+      "id": "qPMQbwI9n5p3M7sSrNib",
+      "year": "2006",
+      "subject": "mathematics",
+      "questionNumber": 38,
+      "questionText": "The point P(3, 4) is translated by the vector ( 3 -2 ) to a new position P'. Find the coordinates of the image P'",
+      "options": [
+        "A. (0, 2)",
+        "B. (6, -2)",
+        "C. (6, 2)",
+        "D. (6, 6)"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480207,
+        "_nanoseconds": 579000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2006"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 135000000
+      }
+    },
+    {
+      "id": "qv6gWDiDcaJsdWoSuvYD",
+      "year": "2007",
+      "subject": "mathematics",
+      "questionNumber": 40,
+      "questionText": "If the vector m = ( 3 2 ) and n = ( -1 3 ) , find m - 2n.",
+      "options": [
+        "A. ( -1 4 )",
+        "B. ( 1 -4 )",
+        "C. ( 5 4 )",
+        "D. ( 5 -4 )"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480231,
+        "_nanoseconds": 428000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2007"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 958000000
+      }
+    },
+    {
+      "id": "swktB4pLxG2mSniFSFl5",
+      "year": "2015",
+      "subject": "mathematics",
+      "questionNumber": 31,
+      "questionText": "The point K(1,5) is rotated through 90o anti-clockwise about the origin. Find the coordinates of the image of K.",
+      "options": [
+        "A. (5,-1)",
+        "B. (-5,1)",
+        "C. (-1,5)",
+        "D. (1,-5)"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480408,
+        "_nanoseconds": 921000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2015"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487097,
+        "_nanoseconds": 370000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1991_q2",
+      "questionText": "Using a ruler and a pair of compasses only,\n\n(a)\n\n \n\nconstruct the triangle XYZ, in which |YZ| = 6 cm, angle XYZ = 60° and |XZ| = 9 cm. Measure |XY|\n\n(b)\n\n \n\n(i)\n\n \n\nconstruct the mediator of YZ.\n\n(ii)\n\n \n\ndraw a circle, centre X and radius 5 cm. Measure |YA|, where A is the point of intersection of the mediator and the circle in the triangular region XYZ",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1991",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1991 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1991",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1992_q5",
+      "questionText": "Using a ruler and a pair of compasses only,\n\n(a)\n\n \n\ndraw |PQ| = 9 cm\n\n(b)\n\n \n\nconstruct a perpendicular to PQ at Q\n\n(c)\n\n \n\nconstruct angle QPS = 60° at the point P on PQ such that |PS| = 6.5cm\n\n(d)\n\n \n\nconstruct a line parallel to PQ through S. let the perpendicular through Q and the parallel through S, meet at R. Measure |PR|.",
+      "questionNumber": 5,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1992",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1992 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1992",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1993_q4",
+      "questionText": "(a)\n\n \n\nUsing a scale of 2 cm to 1unit on both axes, draw two perpendicular lines OX and OY on a graph sheet.\n\n(b)\n\n \n\nOn this graph sheet, mark the x-axis from –5 to 5 and the y-axis from –6 to 6.\n\n(c)\n\n \n\nPlot on the same graph sheet the points A(-2, 4) and B(4, -5). Join the points A and B with the help of a ruler.\n\n(d)\n\n \n\nUsing the graph , find\n\n(i)\n\n \n\nthe gradient (slope) of the line AB;\n\n(ii)\n\n \n\nthe value of x, when y = 0;\n\n(iii)\n\n \n\nthe value of y when x = 2\n\n(e)\n\n \n\nPlot on the same graph sheet the points C(-3, -1) and D(3, 3). Join the points C and D. with the help of a protractor, measure the angle between the lines AB and CD. What is the gradient of the line CD?",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1993",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1993 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1993",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1994_q3",
+      "questionText": "Using a ruler and a pair of compasses only,\n\n(a)\n\n \n\nconstruct triangle PQR in which |PQ| = 8 cm, angle QPR = 45° and angle PQR = 90°. Measure |QR|\n\n(b)\n\n \n\nconstruct the mediator of line PQ to meet line PR at the point S.\n\n(c)\n\n \n\nWith S as the centre and radius 3 cm, construct a circle",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1994",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1994 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1994",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1994_q4",
+      "questionText": "Using a scale of 2 cm to 1 unit on both axis, draw two perpendicular lines OX and OY on a graph sheet. Mark the x-axis from –5 to 5 and the y-axis from –6 to 6. Mark the origin O.\n\n(i)\n\n \n\nDraw on the same graph sheet, indicating in each case, the co-ordinates of all the vertices the square ABCD where A(1, 2), B(4, 2), C(4, 5) and D(1, 5) are the respective points.\n\n(ii)\n\n \n\nUsing the y-axis as a mirror line draw the image A1B1C1D1 of square ABCD where A→A1,B→B1, C→C1 and D→D1.\n\n(iii)\n\n \n\nDraw an enlargement A2B2C2D2 of the square ABCD with scale factor –1 from O, such that A→A2, B→B2, C→C2 and D→D2.\n\n(iv)\n\n \n\nWhat single transformation maps A2B2C2D2 onto the square A1B1C1D1?",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1994",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1994 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1994",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1995_q4",
+      "questionText": "(a)\n\n \n\nUsing a scale of 2 cm to 1 unit on both axes, draw two perpendicular axes, OX and OY on a graph sheet.\n\n(b)\n\n \n\nOn the graph sheet, mark the x-axis from –5 to 5 and the y-axis from –6 to 6\n\n(c)\n\n \n\n(i)\n\n \n\nPlot on the same graph sheet the points A(1, 1",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1995",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1995 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1995",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1996_q5",
+      "questionText": "(a)\n\n \n\nUsing a scale of 2 cm to 2 units on both axes draw two perpendicular axis, OX and OY on a graph sheet.\n\n(b)\n\n \n\nOn this graph sheet, mark the x-axis from –10 to 10 and the y-axis from –12 to 12\n\n(c)\n\n \n\nPlot on the same graph sheet the points A(2, 1), B(3, 4) and C(4, 2). Join the points to form a triangle ABC.\n\n(d)\n\n \n\nDraw an enlargement A1B1C1 of triangle ABC with scale factor 2 from the origin O(0, 0), such that A→A1, B→B1 and C→C1. Indicate the co-ordinates of triangle A1B1C1. Show all lines of transformation.\n\n(e)\n\n \n\nUsing the x-axis as mirror line, draw the image A2B2C2 of triangle ABC, where A→A2, B→B2 and C→C2. Indicate the co-ordinates of triangle A2B2C2.",
+      "questionNumber": 5,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1996",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1996 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1996",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1997_q3",
+      "questionText": "(a)\n\n \n\nIf 2y – 5x + 10 = 0, find:\n\n(i)\n\n \n\ny, when x = 2;\n\n(ii)\n\n \n\nx, when y = 5\n\n(b)\n\n \n\n(i)\n\n \n\nUsing a scale of 2 cm to 1 unit on both axes, draw two perpendicular lines OX and OY on a graph sheet.\n\n(ii)\n\n \n\nOn the same graph sheet, mark the x-axis from –5 to 5 and the y-axis from –6 to 6.\n\n(iii)\n\n \n\nPlot on the same graph sheet, the points A(0, -5) and B(4, 5). Join AB using a ruler.\n\n(iv)\n\n \n\nFind the gradient of the line AB\n\n(v)\n\n \n\nMeasure the acute angle that the line AB makes with the x-axis, using a protractor.",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1997",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1997 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1997",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1998_q4",
+      "questionText": "(a)\n\n \n\nThe pie chart shows angles representing the number of candidates who applied for admission into four programmes at a senior secondary school. The number of pupils who applied were 1080.\n\n\n\nFind:\n\n(i)\n\n \n\nthe angle x° representing the Vocational programme.\n\n(ii)\n\n \n\nthe number of candidates who applied for Business programme.\n\n(iii)\n\n \n\ncorrect to the nearest whole number the percentage of the number of applicants who applied for General Programme.\n\n(b)\n\n \n\nThe data below shows the distribution of the masses of pupils in a school. On a graph paper, draw a bar chart for the distribution.\n\nMass (kilograms)",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1998",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1998 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1998",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1999_q4",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nUsing a scale of 2cm to 2 units on both axes, draw two perpendicular axes OX and OY on a graph sheet.\n\n(ii)\n\n \n\nOn the same graph sheet, mark the x-axis from –10 to 10 and the y-axes from –12 to 12.\n\n(iii)\n\n \n\nPlot the points A(0, 10), B(-6, -2), C(4, 3) and D(-3,-11).\n\nUse a ruler to join the point A to B and also point C to D.\n\n(b)\n\n \n\n(i)\n\n \n\nDraw the line x = -2 to meet AB at P and CD at Q.\n\n(ii)\n\n \n\nUse a protractor to measure angles BPQ and PQC.\n\n(iii)\n\n \n\nWhat is the common name given to angles BPQ and PQC?\n\n(iv)\n\n \n\nState the relationship between lines AB and CD.",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1999",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1999 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1999",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2001_q4",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nUsing a scale of 2 cm to 1 unit on both axes, draw two perpendicular axes OX and OY on a graph sheet.\n\n(ii)\n\n \n\nOn the same graph sheet, mark the x-axes from –5 to 5 and the y-axis from –6 to 6.\n\n(b)\n\n \n\nOn the same graph sheet, plot the points A(2, 5), B(4, 3) and C(1, 1). Join the points A, B and C to form a triangle.\n\n(c)\n\n \n\nReflect triangle ABC in the y-axis such that A→A1, B→B1 and C→C1. Label the vertices of triangle A1B1C1\n\n(d)\n\n \n\nTranslate triangle A1B1C1 by the vector \n\n(",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2001",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2001 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2001",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2002_q7",
+      "questionText": "(ii)\n\n \n\nUsing a scale of 2 cm to 1 unit on the x-axis and 2 cm to 2 units on the y-axis, plot the ordered pairs (x, y) on a graph sheet.\n\n(iii)\n\n \n\nUse a ruler to join the joints plotted.\n\n(iv)\n\n \n\nUse your graph to find\n\n(α)\n\n \n\nx when y = 4\n\n(β)\n\n \n\ny when x = -2.5",
+      "questionNumber": 7,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2002",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2002 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2002",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2004_q5",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nUsing a scale of 2 cm to 1 unit on both axes, draw two perpendicular axes OX and OY on a graph sheet.\n\n(ii)\n\n \n\nOn the same graph sheet, mark the x-axis from –5 to 5 and the y-axis from –6 to 6.\n\n(b)\n\n \n\nPlot the points,\n\n(i)\n\n \n\nP(1, -2) and Q(4, 5)\n\n(ii)\n\n \n\nP′ the image of P under a translation by the vector \n\n(\n\n-5",
+      "questionNumber": 5,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2004",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2004 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2004",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2005_q0",
+      "questionText": "(b)\n\n \n\n(i)\n\n \n\nUsing a scale of 2 cm to 20 units on both axes, draw two perpendicular axes OX and OY.\n\n(ii)\n\n \n\nMark both axes from 0 to 180.\n\n(iii)\n\n \n\nPlot all the seven points. Use a ruler to join all the points.\n\n(c)\n\n \n\nUsing your graph, find\n\n(i)\n\n \n\ny when x = 100;\n\n(ii)\n\n \n\nx when y = 70.",
+      "questionNumber": 0,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2005",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2005 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2005",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2005_q5",
+      "questionText": "(a)\n\n \n\nUsing a pair of compasses and ruler only, construct\n\n(i)\n\n \n\ntriangle ABC with │AB│ = 10cm, angle ABC = 30° and angle CAB = 60° ;\n\n(ii)\n\n \n\na perpendicular from the point C to meet the line AB at P.\n\n(b)\n\n \n\n(i)\n\n \n\nExtend line CP to the point D such that │BC│ = │BD│.\n\n(ii)\n\n \n\nJoin A to D and B to D.\n\n(iii)\n\n \n\nMeasure │AC│ and │AD│.\n\n(c)\n\n \n\nWhat type of quadrilateral is ADBC?",
+      "questionNumber": 5,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2005",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2005 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2005",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2006_q7",
+      "questionText": "-\n\n-\n\n(a)\n\n \n\n(i)\n\n \n\nCopy the mapping and fill in the missing numbers\n\n(ii)\n\n \n\nUsing a scale of 2 cm to 1 unit on both axes on a graph sheet, choose the origin O and draw the perpendicular axes OX and OY.\n\n(iii)\n\n \n\nOn the same graph sheet, mark the x-axis from 0 to 5 and the y-axis from 0 to 12.\n\n(iv)\n\n \n\nPlot on the graph sheet the ordered pairs (x, y) from the mapping and join all the points using a straight edge.\n\n(b)\n\n \n\nFrom your graph, find:\n\n(i)\n\n \n\ny when x = 3.5;\n\n(ii)\n\n \n\nx when y = 8;\n\n(iii)\n\n \n\nthe gradient of the line y = 2x + 3.",
+      "questionNumber": 7,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2006",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2006 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2006",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2007_q6",
+      "questionText": "(a)\n\n \n\nUsing a scale of 2 cm to 2 units on both axes, draw two perpendicular axes OX and OY on a graph sheet. On the same graph sheet, mark the x-axis from -10 to 10 and the y-axis from -10 to 10.\n\n(i)\n\n \n\nPlot A(2, 2), B(6, 2) and C(4, 6). Join AB, BC and AC\n\n(ii)\n\n \n\nDraw the image triangle A1B1C1 of triangle ABC under a clockwise rotation of 90° about the origin, where A→A1, B→B1 and C→C1.\n\n(iii)\n\n \n\nDraw the image triangle A2B2C2 of triangle ABC under a reflection in the y-axis, where A→A2, B→B2 and C→C2\n\n(b)\n\n \n\nWhen 12 is added to a certain number and the sum is multiplied by 4, the result is 60. Find the number",
+      "questionNumber": 6,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2007",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2007 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2007",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2008_q2",
+      "questionText": "(q + p).\n\nFind the vector r.",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2008",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2008 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2008",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2008_q5",
+      "questionText": "(a)\n\n \n\nUsing a ruler and a pair of compasses only,\n\n(i)\n\n \n\nconstruct triangle ABC with sides |AB| = 7 cm, |BC| = 8 cm and |AC| = 9 cm;\n\n(ii)\n\n \n\ndraw the perpendicular bisectors of the three sides;\n\n(iii)\n\n \n\nlocate the point of the intersection, O, of the perpendicular bisector;\n\n(iv)\n\n \n\nwith center O and radius OA, draw a circle to pass through the vertices of the triangle.\n\n(b)\n\n \n\nMeasure and write down the radius of the circle you have drawn in (a)(iv).\n\n(c)\n\n \n\nFind the product of (2x - 3) and (x -1).",
+      "questionNumber": 5,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2008",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2008 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2008",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2009_q3",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nUsing a scale of 2 cm to 1 unit on both axes, draw two perpendicular axes OX and OY on a graph sheet.\n\n(ii)\n\n \n\nMark on the same graph sheet, the x-axis from -5 to 5 and y-axis from -6 to 6.\n\n(iii)\n\n \n\nPlot the points A(2, 5), B(2, 2) and C(4, 2). Join the points A, B and C to form triangle ABC.\n\n(iv)\n\n \n\nUsing the y as mirror line, draw the image triangle A1B1C1 of the triangle ABC such that A → A1, B → B1 and C → C1. Write down the coordinates of A1, B1 and C1.\n\n(v)\n\n \n\nDraw the image triangle A2B2C2 of triangle ABC under anticlockwise rotation of 180° about the origin where A → A2, B → B2 and C → C2. Write down the coordinates of A2, B2 and C2.\n\n(b)\n\n \n\nGiven that a = \n\n(\n\n-3",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2009",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2009 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2009",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2009_q4",
+      "questionText": "(a)\n\n \n\nThe ratio of the sheep to goats on a farm is 4 : 7. If there are 1,428 sheep, find how many goats are on the farm.\n\n(b)\n\n \n\nUsing a ruler and a pair of compasses only, construct a triangle ABC with |AB| = 6cm, |AC| = 8 cm and angle BAC = 30°. Construct the bisector of angle ACB to meet line AB at D.\n\n(i)\n\n \n\nMeasure |AD| and |BD|.\n\n(ii)\n\n \n\nWrite down the ratio |AD|:|BD|",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2009",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2009 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2009",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2009_q45",
+      "questionText": "(b)\n\n \n\n(i)\n\n \n\nOn a graph sheet, draw two perpendicular axes 0x and 0y.\n\n(ii)\n\n \n\nUsing a scale of 2 cm to ₵50,000.00 on the 0x axis and 2 cm to GH₵ 5.00 on the 0y axis, mark 0x axis from 0 to ₵500,000.00 and 0y axis from 0 to GH₵ 50.00.\n\n(c)\n\n \n\nPlot the points and join them with a straight line.\n\n(d)\n\n \n\nFrom your graph, find the value of\n\n(i)\n\n \n\nGH₵ 8.00 in cedis (₵);\n\n(ii)\n\n \n\nGH₵ 35.00 in cedis(₵);\n\n(iii)\n\n \n\n₵260,000.00 in Ghana cedis (GH₵).",
+      "questionNumber": 45,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2009",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2009 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2009",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2010_q4",
+      "questionText": "(b)\n\n \n\nUsing a scale of 2 cm to 1 unit on both axes, draw two perpendicular lines OX and OY on a graph sheet for the x-axis from -5 to 5 and the y-axis from -6 to 6.\n\n(i)\n\n \n\nPlot the points A(2, 3) and B(-3, 4) and join them with a long straight line.\n\n(ii)\n\n \n\nPlot on the same graph sheet, the points C(4, 2) and D(-2, -3) and join them with a long straight line to meet the line through AB.\n\n(iii)\n\n \n\nMeasure the angle between the lines through AB and CD.\n\n(iv)\n\n \n\nFind the coordinates of the point at which the lines through AB and CD meet.\n\n Show Solution",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2010",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2010 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2010",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2011_q12",
+      "questionText": "50\n\n\n\n(b)\n\n \n\n(i)\n\n \n\nOn a graph sheet, draw two perpendicular axes OX and OY.\n\n(ii)\n\n \n\nUsing a scale of 2 cm to 50 grammes on the x-axis and 2 cm to GH₵ 2.00 on the y-axis draw the graph of the relation y = \n\nx",
+      "questionNumber": 12,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2011",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2011 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2011",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2011_q20",
+      "questionText": ".\n\n(c)\n\n \n\nUsing the graph, find\n\n(i)\n\n \n\nthe cost of 175 grammes of rice;\n\n(ii)\n\n \n\nthe weight of rice that can be bought with GH₵ 14.00",
+      "questionNumber": 20,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2011",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2011 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2011",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2012_q6",
+      "questionText": "(i)\n\n \n\nUsing a scale of 2 cm to 1 unit on both axes, draw two perpendicular axes Ox and Oy on a graph sheet.\n\n(ii)\n\n \n\nMark on the same graph sheet, the x-axis from -5 to 5 and y-axis from -6 to 6.\n\n(iii)\n\n \n\nPlot the points P(4, 2), Q(2, 5) and R(2, 2). Join the points P, Q, R to form a triangle PQR\n\n(iv)\n\n \n\nUsing the x-axis as a mirror line, draw the image P1Q1R1 of the triangle PQR such that P→P1, Q→Q1, R→R1\n\n(v)\n\n \n\nWrite down the coordinates of P1, Q1 and R1.\n\n(vi)\n\n \n\nTranslate triangle PQR by the vector \n\n(\n\n-1\n\n-1\n\n)\n\n such that P→P2, Q→Q2, R→R2\n\n(vii)\n\n \n\nLabel the vertices of triangle P2Q2R2",
+      "questionNumber": 6,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2012",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2012 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2012",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2013_q13",
+      "questionText": "(b)\n\n \n\n(i)\n\n \n\nUsing a scale of 2 cm to 2 units on both axes, draw two perpendicular axes 0x and 0y on a graph sheet.\n\n(ii)\n\n \n\nMark the x-axis from -6 to 10 and y-axis from -6 to 14.\n\n(iii)\n\n \n\nUsing the table, plot all the points of the relation y = 2x + 5 on the graph.\n\n(iv)\n\n \n\nDraw a straight line through the points.\n\n(c)\n\n \n\nUse the graph to find\n\n(i)\n\n \n\ny when x = 1.6\n\n(ii)\n\n \n\nx when y = 10",
+      "questionNumber": 13,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2013",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2013 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2013",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2015_q17",
+      "questionText": "(ii)\n\n \n\nDetermine the rule for the mapping.\n\n(b)\n\n \n\nDraw two perpendicular axes 0x and 0y on a graph sheet.\n\n(c)\n\n \n\nUsing a scale of 2 cm to 1 unit on the x-axis and 2 cm to 2 units on the y-axis, mark the x-axis from 0 to 8 and y-axis from 0 to 20.\n\n(d)\n\n \n\nPlot the point for each ordered pair (x,y) and join them with a straight line.\n\n(e)\n\n \n\nFind:\n\n(i)\n\n \n\ny when x is 0;\n\n(ii)\n\n \n\nx when y is 14.",
+      "questionNumber": 17,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2015",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2015",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2015_q4",
+      "questionText": "(a)\n\n \n\nUsing a ruler and a pair of compasses only, construct triangle PST with angle PST = 30o, |ST| = 9 cm and |PS| = 12 cm.\n\n(b)\n\n \n\nWith T as center, draw a circle of radius 6 cm.\n\n(c)\n\n \n\nConstruct the perpendicular bisector (mediator) of line PS.\n\n(d)\n\n \n\nLabel the intersections of the circle and the mediator Q1 and Q2.\n\n(e)\n\n \n\n(i)\n\n \n\nMeasure |Q1Q2|.\n\n(ii)\n\n \n\nMeasure angle Q1TQ2.",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2015",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2015",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2016_q4",
+      "questionText": "(a)\n\n \n\nUsing a scale of 2 cm to 1 unit on both axes, draw on a graph sheet two perpendicular axes 0x and 0y for -5 ≤ x ≤ 5 and -5 ≤ y ≤ 5.\n\n(i)\n\n \n\nPlot, indicating the coordinates of all points P(1,1), Q(1,2),R(2,2) and S(2,1) on the graph sheet. Join the points to form square PQRS.\n\n(ii)\n\n \n\nDraw and indicate clearly all coordinates, the image P1Q1R1S1 of square PQRS under an enlargement from the origin with a scale factor of 2, where P → P1,Q → Q1, R → R1 and S → S1.\n\n(iii)\n\n \n\nDraw and indicate clearly all coordinates, the image P2Q2R2S2 of square P1Q1R1S1 under a reflection in the x-axis where P1 → P2,Q1 → Q2, R1 → R2 and S1 → S2.\n\n(b)\n\n \n\nUsing the graph in (a), find the gradient of line R2S.",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2016",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2016 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2016",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2016_q6",
+      "questionText": "(a)\n\n \n\nUsing a ruler and a pair of compasses only, construct:\n\n(i)\n\n \n\ntriangle XYZ with |XY| = 9 cm,|YZ| = 12 cm and |XZ| = 8 cm.\n\n(ii)\n\n \n\nthe perpendicular bisector of line XY.\n\n(iii)\n\n \n\nthe perpendicular bisector of line XZ.\n\n(b)\n\n \n\n(i)\n\n \n\nLabel the point of intersection of the two bisectors as T;\n\n(ii)\n\n \n\nWith point T as center, draw a circle of radius 6 cm.\n\n(c)\n\n \n\nMeasure:\n\n(i)\n\n \n\n|TX|;\n\n(ii)\n\n \n\nangle XYZ.",
+      "questionNumber": 6,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2016",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2016 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2016",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2017_q3",
+      "questionText": "a\n\n \n\nUsing a rule and a pair of compasses only, construct:\n\ni\n\n \n\na triangle ABC with |BC| = 9 cm, |AC| = 8 cm and |AB| = 6 cm;\n\nii\n\n \n\nthe perpendicular bisector of line BC;\n\niii\n\n \n\nthe bisector of angle ACB.\n\nb\n\n \n\nLabel the point of intersection of the two bisectors as Y.\n\nc\n\n \n\nDraw a line to join B and Y.\n\nd\n\n \n\nMeasure:\n\ni\n\n \n\n|BY|;\n\nii\n\n \n\n|YC|;\n\niii\n\n \n\nthe base angles of triangle BYC.\n\ne\n\n \n\nWhat type of triangle is BYC?",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2017",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2017 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2017",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2018_q32",
+      "questionText": "Use the data to answer the following questions:\n\ni\n\n \n\nmake a Stem and Leaf plot of the data;\n\nii\n\n \n\nhow many students scored more than 10 marks and less than 20 marks?\n\niii\n\n \n\nwhat is the probability of a student scoring less than 20 marks?",
+      "questionNumber": 32,
+      "marks": 10,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2018",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2018 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2018",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2020_q1",
+      "questionText": "a)\n\n \n\nIf M = {Prime integers between 1 and 11} and N = {factors of 12}, find:(i) M ∪ N(ii) M ∩ N\n\nb)\n\n \n\nSimplify 45 ÷ 3 + 2 x 8 - 12 + 42\n\nc)\n\n \n\n\n\nIn the diagram, x, y and z are angles on a straight line. If xo : zo = 2 : 3 and y = 80o, find x.",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2020",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2020 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2020",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2023_q6",
+      "questionText": "(a)\n\n \n\nUsing a scale of 2 cm to 2 units on both axes, draw on a graph sheet two perpendicular axes, 0x and 0y, for the interval -10 ≤ x ≤ 10 and -10 ≤ y ≤ 10.\n\n(b)\n\n \n\nOn the same graph sheet, draw:\n\n(i)\n\n \n\na quadrilateral ABCD with vertices A(2,4),B(2,8),C(8,8) and D(8,4);\n\n(ii)\n\n \n\nthe image A1B1C1D1 of ABCD under a translation by vector \n\n(\n\n-5\n\n-2\n\n)\n\n, where A → A1, B → B1, C → C1 and D → D1;\n\n(iii)\n\n \n\nthe image A2B2C2D2 of ABCD under a reflection in the y-axis, where A → A2, B → B2, C → C2 and D → D2.\n\n(c)\n\n \n\n(i)\n\n \n\nWhat type of quadrilateral is ABCD?\n\n(ii)\n\n \n\nFind the gradient of A2B1.",
+      "questionNumber": 6,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2023",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2023 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2023",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2024_q68",
+      "questionText": "(b)\n\n \n\nUsing a scale of 2 cm to 10 units on the vertical axis (°F) and 2 cm to 5 units on the horizontal axis (°C), draw a linear graph for the relation.\n\n(c)\n\n \n\nUse the graph to find the temperature in degrees celsius when F = 55 degrees.\n\n(d)\n\n \n\nInterpret the slope of the relation.",
+      "questionNumber": 68,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2024",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2024 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2024",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "uhWHTB5GxABX4Ii6Hxhh",
+      "year": "2022",
+      "subject": "mathematics",
+      "questionNumber": 11,
+      "questionText": "Given that P(3,-2) and Q(-2,4) are points in a plane, find the gradient of the line joining P to Q.",
+      "options": [
+        "A. -6⁄5",
+        "B. 6⁄5",
+        "C. 5⁄6",
+        "D. -5⁄6"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480557,
+        "_nanoseconds": 428000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2022"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2022_q11_img11.jpg",
+      "updatedAt": {
+        "_seconds": 1763542273,
+        "_nanoseconds": 759000000
+      }
+    },
+    {
+      "id": "v30KzAjsfly9gFMpRfjm",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 14,
+      "questionText": "The diagram shows the graph of a linear relation of the form y = mx + c. Use the graph to answer the question below Find the slope of the relation.",
+      "options": [
+        "A. -2",
+        "B. -1",
+        "C. 2",
+        "D. 1"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482501,
+        "_nanoseconds": 402000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 904000000
+      }
+    },
+    {
+      "id": "vp3UBAAf8e8aM6WunPVp",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 27,
+      "questionText": "The point P(-2, 3) is translated by a vector ( -1 3 ) to a point R. Find the coordinates R.",
+      "options": [
+        "A. (6, -2)",
+        "B. (-3, 6)",
+        "C. (-3, -6)",
+        "D. (-1, 0)"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482509,
+        "_nanoseconds": 307000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 904000000
+      }
+    },
+    {
+      "id": "yNrtmkdtAlOVkbdKyKV0",
+      "year": "1990",
+      "subject": "mathematics",
+      "questionNumber": 10,
+      "questionText": "X is a point on the line segment AB such that |AB| = 10 cm and |AX| = 4 cm. Find the ratio |AX| : |XB|",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479528,
+        "_nanoseconds": 581000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1990"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 5 : 3",
+        "B. 3 : 2",
+        "C. 5 : 4",
+        "D. 1 : 1",
+        "E. 2 : 3"
+      ],
+      "explanation": "",
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487076,
+        "_nanoseconds": 950000000
+      }
+    },
+    {
+      "id": "yWqyj0Z6TRXaAsFpSH6s",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 25,
+      "questionText": "The diagram shows the conversion graph for miles and kilometres. Use it to answer the question below Express 4 kilometres in miles.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479589,
+        "_nanoseconds": 203000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 6.4",
+        "B. 6",
+        "C. 3.5",
+        "D. 3",
+        "E. 2.5"
+      ],
+      "explanation": "",
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487078,
+        "_nanoseconds": 582000000
+      }
+    },
+    {
+      "id": "zCqvsKF0Te0Ye3AiuYag",
+      "year": "2011",
+      "subject": "mathematics",
+      "questionNumber": 22,
+      "questionText": "The gradient of the straight line that passes through points A(3,2) and B(4,8) is",
+      "options": [
+        "A. - 1 6",
+        "B. - 1 2",
+        "C. 2",
+        "D. 6"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480312,
+        "_nanoseconds": 177000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2011"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 125000000
+      }
+    },
+    {
+      "id": "zK3LosFpipd4EtyqRiPO",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 32,
+      "questionText": "Use the graph of the straight line below to answer the question below Find the gradient of line MN.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480090,
+        "_nanoseconds": 974000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. –2",
+        "B. –1",
+        "C. 1",
+        "D. 3 2",
+        "E. 2"
+      ],
+      "explanation": "",
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 59000000
+      }
+    },
+    {
+      "id": "zjAFRY43NXsBhSYY7UzM",
+      "year": "2016",
+      "subject": "mathematics",
+      "questionNumber": 13,
+      "questionText": "Fifteen boys took 12 hours to weed a plot of land. If nine boys work at the same rate, how long will it take them to weed the plot of land?",
+      "options": [
+        "A. 6 hours",
+        "B. 7 1 2",
+        "C. 11 1 2",
+        "D. 20 hours"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480421,
+        "_nanoseconds": 406000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2016"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487098,
+        "_nanoseconds": 192000000
+      }
+    }
+  ],
+  "questionCount": 96
+}

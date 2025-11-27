@@ -1,0 +1,1148 @@
+{
+  "topic": "Fractions",
+  "questions": [
+    {
+      "id": "1UUBMNEzh7Q5k2yk0LW4",
+      "year": "2013",
+      "subject": "mathematics",
+      "questionNumber": 31,
+      "questionText": "In an office, 2 3 of the telephone bill is paid by Tom, 1 5 by Azuma and the remaining by Tina. What fraction is paid by Tina?",
+      "options": [
+        "A. 2 15",
+        "B. 1 4",
+        "C. 1 3",
+        "D. 7 15"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480363,
+        "_nanoseconds": 293000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2013"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487095,
+        "_nanoseconds": 754000000
+      }
+    },
+    {
+      "id": "1XAQ0kPld1ibLNau4pgN",
+      "year": "1990",
+      "subject": "mathematics",
+      "questionNumber": 7,
+      "questionText": "Mr. Mensah withdrew some money from the bank. He gave 1 2 of it to his sons and 1 3 to his daughter. If he had ₵500.00 left, how much did he take from the bank?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479526,
+        "_nanoseconds": 243000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1990"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵600.00",
+        "B. ₵750.00",
+        "C. ₵1500.00",
+        "D. ₵2000.00",
+        "E. ₵3000.00"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1990_q7_img7.png",
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763542101,
+        "_nanoseconds": 101000000
+      }
+    },
+    {
+      "id": "2csCbaEFojo4ak66UxYz",
+      "year": "2007",
+      "subject": "mathematics",
+      "questionNumber": 13,
+      "questionText": "Arrange the following fractions from the highest to the lowest: 5 6 , 4 5 and 4 7",
+      "options": [
+        "A. 4 7 , 4 5 , 5 6",
+        "B. 4 5 , 5 6 , 4 7",
+        "C. 5 6 , 4 5 , 4 7",
+        "D. 4 7 , 5 6 , 4 5"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480216,
+        "_nanoseconds": 11000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2007"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 958000000
+      }
+    },
+    {
+      "id": "2kgyqIXowzZhBuLgpGdD",
+      "year": "1995",
+      "subject": "mathematics",
+      "questionNumber": 6,
+      "questionText": "Divide (1 1 2 + 1 4 ) by (1 1 2 − 1 4 )",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479732,
+        "_nanoseconds": 703000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1995"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 5 7",
+        "B. 1",
+        "C. 1 2 5",
+        "D. 1 3 4",
+        "E. 3"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1995_q6_img6.png",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542140,
+        "_nanoseconds": 739000000
+      }
+    },
+    {
+      "id": "35QeFqKo0w8ZCW34LPMw",
+      "year": "2015",
+      "subject": "mathematics",
+      "questionNumber": 10,
+      "questionText": "Arrange the following fractions in ascending order: 5 8 , 11 20 , 7 10 .",
+      "options": [
+        "A. 5 8 , 11 20 , 7 10",
+        "B. 7 10 , 5 8 , 11 20",
+        "C. 11 20 , 5 8 , 7 10",
+        "D. 5 8 , 7 10 , 11 20"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480396,
+        "_nanoseconds": 957000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2015"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487097,
+        "_nanoseconds": 370000000
+      }
+    },
+    {
+      "id": "4Ddo9vuaR2cuveTuiije",
+      "year": "1997",
+      "subject": "mathematics",
+      "questionNumber": 8,
+      "questionText": "Arrange the following fractions in descending order 9 16 , 5 8 , 0.62",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479987,
+        "_nanoseconds": 441000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1997"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 9 16 , 0.62, 5 8",
+        "B. 0.62, 5 8 , 9 16",
+        "C. 5 8 , 9 16 , 0.62",
+        "D. 5 8 , 0.62, 9 16",
+        "E. 0.62, 9 16 , 5 8"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1997_q8_img8.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542151,
+        "_nanoseconds": 672000000
+      }
+    },
+    {
+      "id": "4U2v39mkYhdFTRaVm4Tu",
+      "year": "2025",
+      "subject": "mathematics",
+      "questionNumber": 24,
+      "questionText": "A trader sold half of a piece of cloth and used two-fifths of the remaining to sew a dress. What fraction of the cloth was left?",
+      "options": [
+        "A. 1 10",
+        "B. 3 10",
+        "C. 1 5",
+        "D. 1 2"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482530,
+        "_nanoseconds": 232000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2025"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487105,
+        "_nanoseconds": 685000000
+      }
+    },
+    {
+      "id": "7HItj13Nf8zVyJoyn3oE",
+      "year": "2025",
+      "subject": "mathematics",
+      "questionNumber": 3,
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482518,
+        "_nanoseconds": 651000000
+      },
+      "difficulty": "medium",
+      "createdBy": "system_import",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2025"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "options": [
+        "A. 2.",
+        "B. 5.",
+        "C. 25.",
+        "D. 125."
+      ],
+      "correctAnswer": "C",
+      "questionText": "When 0.24 is expressed in the lowest form as a/b, the denominator is",
+      "updatedAt": {
+        "_seconds": 1763487105,
+        "_nanoseconds": 685000000
+      }
+    },
+    {
+      "id": "BAmxmXBJFLWvYtdrbxL1",
+      "year": "2012",
+      "subject": "mathematics",
+      "questionNumber": 37,
+      "questionText": "Which of the following fractions is equivalent to 3 5 ?",
+      "options": [
+        "A. 21 30",
+        "B. 12 20",
+        "C. 15 45",
+        "D. 6 15"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480343,
+        "_nanoseconds": 823000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2012"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 925000000
+      }
+    },
+    {
+      "id": "BslKmCHeqIJE8Z9NST6c",
+      "year": "2019",
+      "subject": "mathematics",
+      "questionNumber": 23,
+      "questionText": "Express 12/25 in decimal fraction.",
+      "options": [
+        "A. 0.0408",
+        "B. 0.048",
+        "C. 0.408",
+        "D. 0.48"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480495,
+        "_nanoseconds": 868000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2019"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487100,
+        "_nanoseconds": 643000000
+      }
+    },
+    {
+      "id": "CO8JJhA7mIfRr6z5afC9",
+      "year": "2000",
+      "subject": "mathematics",
+      "questionNumber": 15,
+      "questionText": "Amina spends 17 35 of her pocket money on transport and food. If she spends 2 7 on transport only, what fraction does she spend on food?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480058,
+        "_nanoseconds": 877000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2000"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1 4",
+        "B. 1 5",
+        "C. 5 7",
+        "D. 15 28",
+        "E. 18 35"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487085,
+        "_nanoseconds": 254000000
+      }
+    },
+    {
+      "id": "Ce21IrYe7Ah1y3hPVsx6",
+      "year": "2003",
+      "subject": "mathematics",
+      "questionNumber": 12,
+      "questionText": "Express 1.25 as a mixed fraction in its lowest form.",
+      "options": [
+        "A. 1 1 25",
+        "B. 1 4 25",
+        "C. 1 1 4",
+        "D. 3 4"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480124,
+        "_nanoseconds": 810000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2003"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487087,
+        "_nanoseconds": 736000000
+      }
+    },
+    {
+      "id": "GjUzCVndFLA3Q5Ve5POq",
+      "year": "2011",
+      "subject": "mathematics",
+      "questionNumber": 6,
+      "questionText": "Express 0.125 as a fraction in its lowest form.",
+      "options": [
+        "A. 1 8",
+        "B. 1 9",
+        "C. 1 12",
+        "D. 1 16"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480303,
+        "_nanoseconds": 145000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2011"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 125000000
+      }
+    },
+    {
+      "id": "IDlKynZ9AU6XVshA6UxJ",
+      "year": "2000",
+      "subject": "mathematics",
+      "questionNumber": 23,
+      "questionText": "Arrange the following fractions from the lowest to the highest: 3 4 , 2 3 and 3 5 .",
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480063,
+        "_nanoseconds": 380000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2000"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 3 5 , 2 3 , 3 4",
+        "B. 3 5 , 3 4 , 2 3",
+        "C. 3 4 , 2 3 , 3 5",
+        "D. 3 4 , 3 5 , 2 3",
+        "E. 2 3 , 3 5 , 3 4"
+      ],
+      "updatedAt": {
+        "_seconds": 1763487085,
+        "_nanoseconds": 254000000
+      }
+    },
+    {
+      "id": "NUfNEnM2pxjdpRg2P3Rk",
+      "year": "2002",
+      "subject": "mathematics",
+      "questionNumber": 3,
+      "questionText": "Express 1 25 as a decimal fraction.",
+      "options": [
+        "A. 0.4",
+        "B. 0.04",
+        "C. 0.004",
+        "D. 0.0004"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480097,
+        "_nanoseconds": 285000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2002"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2002_q3_img3.png",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542168,
+        "_nanoseconds": 654000000
+      }
+    },
+    {
+      "id": "Q10bz6d1cD7W7b2ebwdb",
+      "year": "1995",
+      "subject": "mathematics",
+      "questionNumber": 22,
+      "questionText": "Arrange the following fractions in descending order 3 4 , 5 8 , 4 5 , 13 20",
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479741,
+        "_nanoseconds": 403000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1995"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 4 5 , 3 4 , 13 20 , 5 8",
+        "B. 4 5 , 5 8 , 3 4 , 13 20",
+        "C. 5 8 , 4 5 , 3 4 , 13 20",
+        "D. 4 5 , 5 8 , 13 20 , 3 4",
+        "E. 13 20 , 5 8 , 4 5 , 3 4"
+      ],
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 77000000
+      }
+    },
+    {
+      "id": "RPouVlY97H1lfiG7f79B",
+      "year": "2008",
+      "subject": "mathematics",
+      "questionNumber": 23,
+      "questionText": "What fraction of a revolution is 72°?",
+      "options": [
+        "A. 1 6",
+        "B. 1 5",
+        "C. 2 5",
+        "D. 5 8"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480244,
+        "_nanoseconds": 472000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2008"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487091,
+        "_nanoseconds": 763000000
+      }
+    },
+    {
+      "id": "RzloaLYW8h4DhPG4HjLc",
+      "year": "2022",
+      "subject": "mathematics",
+      "questionNumber": 15,
+      "questionText": "Arrange the following fractions from the lowest to the highest:",
+      "options": [
+        "A. ¼ , ⅗ , ⅔",
+        "B. ⅔ , ¼ , ⅗",
+        "C. ⅔ , ⅗ , ¼",
+        "D. ⅗ , ¼ , ⅔"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480559,
+        "_nanoseconds": 681000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2022"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2022_q15_img15.jpg",
+      "updatedAt": {
+        "_seconds": 1763542275,
+        "_nanoseconds": 707000000
+      }
+    },
+    {
+      "id": "S4cNF7wgXxgrJBkhWY7T",
+      "year": "1997",
+      "subject": "mathematics",
+      "questionNumber": 16,
+      "questionText": "A student spends 17 35 of his pocket money on transport and fruits. He spends 5 6 of the remainder on sweets. What fraction of his pocket money does he spend on sweets?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479991,
+        "_nanoseconds": 933000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1997"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 4 7",
+        "B. 3 7",
+        "C. 17 35",
+        "D. 18 35",
+        "E. 17 42"
+      ],
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487082,
+        "_nanoseconds": 727000000
+      }
+    },
+    {
+      "id": "UIxbfQ1cJT4nqOqAsXZL",
+      "year": "1993",
+      "subject": "mathematics",
+      "questionNumber": 7,
+      "questionText": "Arrange the fractions 3 4 , 2 3 , 3 5 in ascending order.",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479601,
+        "_nanoseconds": 17000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1993"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 2 3 , 3 4 , 3 5",
+        "B. 3 4 , 2 3 , 3 5",
+        "C. 3 5 , 2 3 , 3 4",
+        "D. 3 5 , 3 4 , 2 3",
+        "E. 3 4 , 3 5 , 2 3"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1993_q7_img7.png",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542125,
+        "_nanoseconds": 287000000
+      }
+    },
+    {
+      "id": "VVcQDif6X4hN3RhnCQqQ",
+      "year": "1999",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "Kwame travelled from Accra to Kumasi. He travelled 3 10 of the journey by lorry, 2 5 of the journey by taxi and the rest by train. What fraction of the journey did he travel by train?",
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480043,
+        "_nanoseconds": 530000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1999"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 3 10",
+        "B. 3 5",
+        "C. 7 10",
+        "D. 3 25",
+        "E. 22 55"
+      ],
+      "updatedAt": {
+        "_seconds": 1763487084,
+        "_nanoseconds": 387000000
+      }
+    },
+    {
+      "id": "Z7zc95JleF3o7mowdH4F",
+      "year": "2012",
+      "subject": "mathematics",
+      "questionNumber": 25,
+      "questionText": "Express 3.75 as a mixed fraction.",
+      "options": [
+        "A. 3 1 5",
+        "B. 3 1 4",
+        "C. 3 1 3",
+        "D. 3 3 4"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480336,
+        "_nanoseconds": 963000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2012"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 925000000
+      }
+    },
+    {
+      "id": "nyyrajhl7M5iSAzQ3mU5",
+      "year": "2004",
+      "subject": "mathematics",
+      "questionNumber": 35,
+      "questionText": "Arrange the following fractions in ascending order: 4 1 4 , 4 1 2 , 4 1 3",
+      "options": [
+        "A. 4 1 4 , 4 1 3 , 4 1 2",
+        "B. 4 1 3 , 4 1 2 , 4 1 4",
+        "C. 4 1 2 , 4 1 3 , 4 1 4",
+        "D. 4 1 4 , 4 1 2 , 4 1 3"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480160,
+        "_nanoseconds": 223000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2004"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "updatedAt": {
+        "_seconds": 1763487088,
+        "_nanoseconds": 551000000
+      }
+    },
+    {
+      "id": "pnvGPI0kl7PqK3FTTDXO",
+      "year": "2013",
+      "subject": "mathematics",
+      "questionNumber": 33,
+      "questionText": "Express 0.055 as a common fraction",
+      "options": [
+        "A. 11 40",
+        "B. 5 18",
+        "C. 1 40",
+        "D. 11 200"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480364,
+        "_nanoseconds": 415000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2013"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487095,
+        "_nanoseconds": 754000000
+      }
+    },
+    {
+      "id": "t0r89hU6TOIROf0dIh9m",
+      "year": "2015",
+      "subject": "mathematics",
+      "questionNumber": 11,
+      "questionText": "Abena spent 1 5 of her money on sweets, 4 7 on provisions and the rest on gari. What fraction of her money did she spend on gari?",
+      "options": [
+        "A. 27 35",
+        "B. 13 35",
+        "C. 8 35",
+        "D. 5 35"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480397,
+        "_nanoseconds": 499000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2015"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487097,
+        "_nanoseconds": 370000000
+      }
+    },
+    {
+      "id": "tGgvjOSssXCrvvhrH5q9",
+      "year": "1991",
+      "subject": "mathematics",
+      "questionNumber": 7,
+      "questionText": "A boy spent 2 7 of his pocket money on transport and 1 5 on sweets. What fraction of his pocket money does he spend on transport and sweets?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479557,
+        "_nanoseconds": 829000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1991"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 2 35",
+        "B. 3 35",
+        "C. 1 7",
+        "D. 17 35",
+        "E. 18 35"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1991_q7_img7.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542108,
+        "_nanoseconds": 60000000
+      }
+    },
+    {
+      "id": "wOBiYtMWt4FpKFY2rrIn",
+      "year": "2019",
+      "subject": "mathematics",
+      "questionNumber": 9,
+      "questionText": "There are 12 boys and 18 girls in a class Find the fraction of boys in the class.",
+      "options": [
+        "A. ⅖",
+        "B. ⅗",
+        "C. ⅔",
+        "D. ¾"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480487,
+        "_nanoseconds": 954000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2019"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2019_q9_img9.jpg",
+      "updatedAt": {
+        "_seconds": 1763542243,
+        "_nanoseconds": 795000000
+      }
+    },
+    {
+      "id": "wruFy6fk88H486yEUXSO",
+      "year": "2020",
+      "subject": "mathematics",
+      "questionNumber": 14,
+      "questionText": "What fraction of 3 weeks is 18 days?",
+      "options": [
+        "A. ⅙",
+        "B. 6⁄7",
+        "C. 1⁄7",
+        "D. 9⁄11"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480513,
+        "_nanoseconds": 497000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2020"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487101,
+        "_nanoseconds": 629000000
+      }
+    },
+    {
+      "id": "x0bVuelhR03o9CQac4BJ",
+      "year": "1999",
+      "subject": "mathematics",
+      "questionNumber": 14,
+      "questionText": "Which of the following fractions is the greatest? 1 6 , 1 4 , 1 2 , 1 3 , 1 5",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480035,
+        "_nanoseconds": 718000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1999"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1 6",
+        "B. 1 5",
+        "C. 1 4",
+        "D. 1 3",
+        "E. 1 2"
+      ],
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487084,
+        "_nanoseconds": 387000000
+      }
+    }
+  ],
+  "questionCount": 29
+}

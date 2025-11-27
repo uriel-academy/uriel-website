@@ -1,0 +1,2644 @@
+{
+  "topic": "The Solar System",
+  "totalQuestions": 85,
+  "questions": [
+    {
+      "id": "integrated_science_1990_q1",
+      "questionText": "Which of the following is a liquid?",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 1,
+      "options": [
+        "A. Iron",
+        "B. Mercury",
+        "C. Brass",
+        "D. Gold",
+        "E. Aluminium"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 1 from the 1990 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1990_q23",
+      "questionText": "Which of the following soil organisms improve soil fertility?",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 23,
+      "options": [
+        "A. Ant-lion",
+        "B. Red ant",
+        "C. Millipede",
+        "D. Snail",
+        "E. Earthworm"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 23 from the 1990 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1990_q37",
+      "questionText": "The sun and the planets form the",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 37,
+      "options": [
+        "A. universe",
+        "B. atmosphere",
+        "C. milky way",
+        "D. constellation",
+        "E. solar system"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 37 from the 1990 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1990_q40",
+      "questionText": "The sun and the planets form the",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 40,
+      "options": [
+        "A. universe",
+        "B. atmosphere",
+        "C. milky way",
+        "D. constellation",
+        "E. solar system"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 40 from the 1990 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1992_q33",
+      "questionText": "Which of the following forces tends to pull forces towards the centre of the earth?",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 33,
+      "options": [
+        "A. Electrostatic force",
+        "B. Magnetic force",
+        "C. Force of gravity",
+        "D. Force of attraction",
+        "E. Centrifugal force"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 33 from the 1992 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1992_q38",
+      "questionText": "Which of the following is the name of the darkest part of a shadow formed when a large source of light falls on an object?",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 38,
+      "options": [
+        "A. Partial eclipse",
+        "B. Lunar eclipse",
+        "C. Total eclipse",
+        "D. Penumbra",
+        "E. Umbra"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 38 from the 1992 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1993_q14",
+      "questionText": "The force which acts between planets and keeps them in their orbits is called",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 14,
+      "options": [
+        "A. electrical force",
+        "B. magnetic force",
+        "C. gravitational force",
+        "D. frictional force",
+        "E. elastic force"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 14 from the 1993 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1993_q35",
+      "questionText": "Which of the following has a different physical state from the others under ordinary conditions?",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 35,
+      "options": [
+        "A. Zinc",
+        "B. Lead",
+        "C. Iron",
+        "D. Mercury",
+        "E. Aluminium"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 35 from the 1993 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1993_q37",
+      "questionText": "During an eclipse of the moon, the",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 37,
+      "options": [
+        "A. Sun and the moon are on one side of the earth",
+        "B. Earth and the sun are on one side of the moon",
+        "C. Sun comes between earth and moon in a straight line",
+        "D. Earth comes between sun and moon in a straight line",
+        "E. Moon comes between sun and earth in a straight line"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 37 from the 1993 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1993_q38",
+      "questionText": "Which of the following has a different physical state from the others under ordinary conditions?",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 38,
+      "options": [
+        "A. Zinc",
+        "B. Lead",
+        "C. Iron",
+        "D. Mercury",
+        "E. Aluminium"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 38 from the 1993 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1993_q40",
+      "questionText": "During an eclipse of the moon, the",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 40,
+      "options": [
+        "A. Sun and the moon are on one side of the earth",
+        "B. Earth and the sun are on one side of the moon",
+        "C. Sun comes between earth and moon in a straight line",
+        "D. Earth comes between sun and moon in a straight line",
+        "E. Moon comes between sun and earth in a straight line"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 40 from the 1993 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1994_q2",
+      "questionText": "Pluto is the darkest planet because it",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 2,
+      "options": [
+        "A. is larger than the sun",
+        "B. is the largest planet",
+        "C. is beyond the reach of the sun’s rays",
+        "D. is smaller than the sun",
+        "E. falls in the penumbra region of an eclipse"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 2 from the 1994 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1994_q34",
+      "questionText": ". During an eclipse of the sun, the region that has total darkness is known as",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 34,
+      "options": [
+        "A. umbra",
+        "B. orbit",
+        "C. penumbra",
+        "D. shadow",
+        "E. satellite"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 34 from the 1994 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1995_q14",
+      "questionText": "Which of the following is an indirect source of light?",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 14,
+      "options": [
+        "A. Torch light",
+        "B. The sun",
+        "C. Fire",
+        "D. The moon",
+        "E. Candle flame"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 14 from the 1995 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1995_q26",
+      "questionText": "Which of the following is not characteristic of all living organisms? The ability to",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 26,
+      "options": [
+        "A. break down food to obtain energy",
+        "B. produce food using the sun’s energy",
+        "C. make use of food nutrients to grow",
+        "D. respond to changes within the environment",
+        "E. give rise to young new individuals"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 26 from the 1995 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1995_q28",
+      "questionText": "Which of the following bodies is a satellite of the earth?",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 28,
+      "options": [
+        "A. Mars",
+        "B. Sun",
+        "C. Venus",
+        "D. Moon",
+        "E. Mercury"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 28 from the 1995 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1995_q30",
+      "questionText": "The darkest part of a shadow formed when a large source of light is used is the",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 30,
+      "options": [
+        "A. Partial eclipse",
+        "B. Lunar eclipse",
+        "C. night",
+        "D. penumbra",
+        "E. umbra"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 30 from the 1995 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1995_q37",
+      "questionText": "Which of the following is likely to happen when the relative humidity is high?",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 37,
+      "options": [
+        "A. It is likely to rain",
+        "B. It is likely to be dry",
+        "C. It is likely to be sunny",
+        "D. The day will be hot",
+        "E. It will be windy"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 37 from the 1995 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1995_q39",
+      "questionText": "Which of the following statements about the solar system is true? The",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 39,
+      "options": [
+        "A. sun moves round the earth",
+        "B. planets move round the sun",
+        "C. planets move round the moon",
+        "D. sun moves in its orbit",
+        "E. sun moves round the moon"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 39 from the 1995 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1996_q19",
+      "questionText": "Soil aeration can be improved by",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 19,
+      "options": [
+        "A. Adding mineral to the soil",
+        "B. Application of fertilizer to the soil",
+        "C. Weathering",
+        "D. Activities of earthworms",
+        "E. Manuring"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 19 from the 1996 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1996_q3",
+      "questionText": "Which of the following farming practices is the best way of maintaining soil fertility?",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 3,
+      "options": [
+        "A. Crop rotation",
+        "B. Seasonal cropping",
+        "C. Constant ploughing",
+        "D. Bush burning",
+        "E. Mono cropping\n\n4. Which of the following is not considered as a reflex action?"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 3 from the 1996 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1996_q9",
+      "questionText": "The darkest part of a shadow formed during an eclipse is called",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 9,
+      "options": [
+        "A. Lunar eclipse",
+        "B. Annular eclipse",
+        "C. Penumbra",
+        "D. Umbra",
+        "E. Solar eclipse\n\n10. The main waste products formed in plants are"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 9 from the 1996 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1997_q19",
+      "questionText": "The darkest part of a shadow formed during an eclipse is called",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 19,
+      "options": [
+        "A. annular eclipse",
+        "B. lunar eclipse",
+        "C. penumbra",
+        "D. solar eclipse",
+        "E. umbra"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 19 from the 1997 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1997_q29",
+      "questionText": "Which of the following planets is nearest to the earth?",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 29,
+      "options": [
+        "A. Jupiter",
+        "B. Mercury",
+        "C. Pluto",
+        "D. Saturn",
+        "E. Venus"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 29 from the 1997 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1997_q3",
+      "questionText": "The planet earth is located in a galaxy known as",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 3,
+      "options": [
+        "A. constellation",
+        "B. meteorites",
+        "C. milky way",
+        "D. satellite",
+        "E. super nova"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 3 from the 1997 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1997_q8",
+      "questionText": "Which of the following planets may be seen as a bright star in early mornings or evenings?",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 8,
+      "options": [
+        "A. Jupiter",
+        "B. Mars",
+        "C. Saturn",
+        "D. Uranus",
+        "E. Venus"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 8 from the 1997 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1998_q26",
+      "questionText": "A body which moves round the earth is called",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 26,
+      "options": [
+        "A. A meteorite",
+        "B. A satellite",
+        "C. A star",
+        "D. Jupiter",
+        "E. The sun"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 26 from the 1998 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1998_q7",
+      "questionText": "How many times is the sun overhead at the equator within a year?",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 7,
+      "options": [
+        "A. 1",
+        "B. 2",
+        "C. 3",
+        "D. 4",
+        "E. 5"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 7 from the 1998 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1998_q8",
+      "questionText": "A group of stars form",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 8,
+      "options": [
+        "A. The universe",
+        "B. The atmosphere",
+        "C. The solar system",
+        "D. The planetary system",
+        "E. A galaxy"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 8 from the 1998 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1999_q17",
+      "questionText": "The smallest planet known in the solar system is",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 17,
+      "options": [
+        "A. Earth",
+        "B. Jupiter",
+        "C. Mars",
+        "D. Mercury",
+        "E. Venus"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 17 from the 1999 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1999_q25",
+      "questionText": "The eclipse of the moon occurs when the",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 25,
+      "options": [
+        "A. moon and the sun are in a straight line",
+        "B. earth and the sun are in a straight line",
+        "C. sun is between the earth and the moon",
+        "D. earth is between the sun and the moon",
+        "E. moon comes between the sun and the earth"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 25 from the 1999 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1999_q30",
+      "questionText": "The sun, the heavenly bodies and the planets form the",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 30,
+      "options": [
+        "A. atmosphere",
+        "B. galaxy",
+        "C. milky way",
+        "D. solar system",
+        "E. universe"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 30 from the 1999 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2000_q15",
+      "questionText": "The heavenly body that produces and emits its own light is",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 15,
+      "options": [
+        "A. Mars.",
+        "B. meteorite.",
+        "C. the moon.",
+        "D. the sun.",
+        "E. Venus."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 15 from the 2000 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2000_q2",
+      "questionText": "A group of stars found in the universe is called",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 2,
+      "options": [
+        "A. galaxy.",
+        "B. meteor.",
+        "C. meteorite.",
+        "D. planet.",
+        "E. solar system."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 2 from the 2000 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2000_q32",
+      "questionText": "Which of the following heavenly bodies is at the centre of the planetary system?",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 32,
+      "options": [
+        "A. Earth",
+        "B. Mercury",
+        "C. Pluto",
+        "D. Sun",
+        "E. Venus"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 32 from the 2000 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2000_q33",
+      "questionText": "Legumes are generally included in crop rotation because they",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 33,
+      "options": [
+        "A. are easy to uproot in preparation for the next planting season.",
+        "B. are able to fix atmospheric nitrogen in the soil.",
+        "C. have short life span.",
+        "D. are good cover crops.",
+        "E. have high market value."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 33 from the 2000 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2001_q17",
+      "questionText": "Seasonal changes are the result of the",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 17,
+      "options": [
+        "A. rotation and tilting of the earth.",
+        "B. revolution and tilting of the earth.",
+        "C. revolution and rotation of the earth.",
+        "D. revolution and tilting of the moon.",
+        "E. revolution and rotation of the moon."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 17 from the 2001 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2001_q28",
+      "questionText": "The fraction of the earth's surface that faces the sun at any particular time is",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 28,
+      "options": [
+        "A. 14",
+        "B. 13",
+        "C. 12",
+        "D. 23",
+        "E. 34"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 28 from the 2001 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2001_q6",
+      "questionText": "The sun and the planets form the",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 6,
+      "options": [
+        "A. atmosphere.",
+        "B. constellation.",
+        "C. milky way.",
+        "D. solar system.",
+        "E. universe."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 6 from the 2001 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2002_q32",
+      "questionText": "The formation of humus is aided by",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 32,
+      "options": [
+        "A. earthworms.",
+        "B. insects.",
+        "C. rats.",
+        "D. wind."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 32 from the 2002 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2002_q38",
+      "questionText": "Which of the following heavenly bodies is a star?",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 38,
+      "options": [
+        "A. Earth",
+        "B. Moon",
+        "C. Sun",
+        "D. Milky way"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 38 from the 2002 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2002_q39",
+      "questionText": "The planet in our solar system which has the largest orbit is",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 39,
+      "options": [
+        "A. Jupiter.",
+        "B. Mars.",
+        "C. Pluto.",
+        "D. Venus."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 39 from the 2002 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2002_q40",
+      "questionText": "The planet in our solar system which has the largest orbit is",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 40,
+      "options": [
+        "A. Jupiter.",
+        "B. Mars.",
+        "C. Pluto.",
+        "D. Venus."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 40 from the 2002 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2003_q37",
+      "questionText": "The earth moves completely round the sun once in every",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 37,
+      "options": [
+        "A. 1 day.",
+        "B. 28 days.",
+        "C. 30 days.",
+        "D. 365 days."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 37 from the 2003 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2003_q38",
+      "questionText": "A smaller heavenly body, which orbits a bigger one could be described as a",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 38,
+      "options": [
+        "A. comet.",
+        "B. meteor.",
+        "C. moon.",
+        "D. sun."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 38 from the 2003 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2005_q3",
+      "questionText": "A safety device which opens an electric circuit to prevent too much current from passing through the circuit is the",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 3,
+      "options": [
+        "A. earth wire.",
+        "B. lightning conductor.",
+        "C. fuse.",
+        "D. switch."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 3 from the 2005 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2005_q30",
+      "questionText": "How long does it take the moon to move completely around the earth?",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 30,
+      "options": [
+        "A. 1 day",
+        "B. 28 days",
+        "C. 30 days",
+        "D. 365 days"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 30 from the 2005 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2005_q5",
+      "questionText": "The source of all forms of energy can be traced to",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 5,
+      "options": [
+        "A. clouds.",
+        "B. earthquakes.",
+        "C. tides.",
+        "D. sunlight."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 5 from the 2005 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2006_q29",
+      "questionText": "The type of cloud found closest to the earth's surface is",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 29,
+      "options": [
+        "A. cirrus.",
+        "B. cumulus.",
+        "C. stratus.",
+        "D. stratocumulus"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 29 from the 2006 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2006_q31",
+      "questionText": "The planet which is farthest away from the sun is",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 31,
+      "options": [
+        "A. Jupiter.",
+        "B. Mercury.",
+        "C. Mars.",
+        "D. Pluto"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 31 from the 2006 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2007_q31",
+      "questionText": "Which of the following is at the centre of the solar system?",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 31,
+      "options": [
+        "A. Earth",
+        "B. Mars",
+        "C. Moon",
+        "D. Sun"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 31 from the 2007 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2008_q3",
+      "questionText": "A mirror is used to direct sunlight onto the wall of a classroom by",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 3,
+      "options": [
+        "A. dispersion.",
+        "B. refraction.",
+        "C. reflection.",
+        "D. radiation."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 3 from the 2008 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2008_q31",
+      "questionText": "How long does it take the moon to go completely round the earth?",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 31,
+      "options": [
+        "A. 1 day",
+        "B. 28 days",
+        "C. 30 days",
+        "D. 365 days"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 31 from the 2008 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2008_q7",
+      "questionText": "Which of the following bodies are natural sources of light?I. MoonII. SunIII. Firefly",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 7,
+      "options": [
+        "A. I and II only",
+        "B. I and III only",
+        "C. II and III only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 7 from the 2008 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2009_q31",
+      "questionText": "Day and night occur because the earth",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 31,
+      "options": [
+        "A. moves round the sun.",
+        "B. moves from east to west.",
+        "C. moves round the moon.",
+        "D. rotates on its axis."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 31 from the 2009 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2009_q40",
+      "questionText": "The force which pulls all objects towards the centre of the earth is the",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 40,
+      "options": [
+        "A. frictional force.",
+        "B. electrostatic force.",
+        "C. gravitational force.",
+        "D. rotational force."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 40 from the 2009 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2010_q18",
+      "questionText": "The fifth planet from the sun in the solar system is",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 18,
+      "options": [
+        "A. Jupiter.",
+        "B. Mars.",
+        "C. Neptune.",
+        "D. Venus."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 18 from the 2010 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2011_q28",
+      "questionText": "Which of the following crops should be planted after cassava in crop rotation?",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 28,
+      "options": [
+        "A. Cocoyam",
+        "B. Cowpea",
+        "C. Onion",
+        "D. Yam"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 28 from the 2011 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2013_q8",
+      "questionText": "The solar system is made up of the",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 8,
+      "options": [
+        "A. earth, moon and stars.",
+        "B. sun, comets and meteors.",
+        "C. sun, earth and moon.",
+        "D. sun, planets and other heavenly bodies."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 8 from the 2013 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2014_q2",
+      "questionText": "The eclipse formed when the moon comes between the sun and the earth is known as",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 2,
+      "options": [
+        "A. annular eclipse",
+        "B. lunar eclipse",
+        "C. solar eclipse",
+        "D. total eclipse"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 2 from the 2014 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2015_q21",
+      "questionText": "Which of the following heavenly bodies is a star?",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 21,
+      "options": [
+        "A. Jupitar",
+        "B. Moon",
+        "C. Sun",
+        "D. Venus"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 21 from the 2015 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2015_q29",
+      "questionText": "A farming system which requires at least three years programme is",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 29,
+      "options": [
+        "A. mixed cropping",
+        "B. crop rotation",
+        "C. organic farming farming",
+        "D. mixed farming"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 29 from the 2015 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2016_q12",
+      "questionText": "The cultivation of different crops on different plots of a farmland in a definite cycle is called",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 12,
+      "options": [
+        "A. land rotation.",
+        "B. shifting cultivation.",
+        "C. crop rotation.",
+        "D. mixed cropping."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 12 from the 2016 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2016_q23",
+      "questionText": "An example of a body that does not produce its own light is the",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 23,
+      "options": [
+        "A. moon.",
+        "B. sun.",
+        "C. star.",
+        "D. fire fly."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 23 from the 2016 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2016_q35",
+      "questionText": "A metal that is used as a thermometric liquid is",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 35,
+      "options": [
+        "A. aluminium.",
+        "B. copper.",
+        "C. mercury.",
+        "D. silver."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 35 from the 2016 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2017_q34",
+      "questionText": "Which of the following practices is not a principle of crop rotation?",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 34,
+      "options": [
+        "A. Legumes should be added to the rotation programme.",
+        "B. Deep rooted crops should be followed by shallow rooted crops.",
+        "C. Crops that are closely related should follow each other.",
+        "D. Fallow period should be allowed during the time of rotation."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 34 from the 2017 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2018_q4",
+      "questionText": "The farming system that makes effective use of available soil nutrients in a growing season is",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 4,
+      "options": [
+        "A. crop rotation.",
+        "B. land rotation.",
+        "C. mixed cropping.",
+        "D. mixed farming."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 4 from the 2018 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2020_q31",
+      "questionText": "The nearest planet to the sun in the solar system is",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 31,
+      "options": [
+        "A. Earth",
+        "B. Mars",
+        "C. Mercury",
+        "D. Venus"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 31 from the 2020 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2021_q16",
+      "questionText": "A farming system which involves the growing of rice and the rearing of fowls is known as",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 16,
+      "options": [
+        "A. crop rotation.",
+        "B. mixed farming.",
+        "C. mixed cropping.",
+        "D. organic farming."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 16 from the 2021 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2021_q21",
+      "questionText": "Which of the following planets is at the center of the solar system?",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 21,
+      "options": [
+        "A. Earth",
+        "B. Venus",
+        "C. Mars",
+        "D. Sun"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 21 from the 2021 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2022_q14",
+      "questionText": "Which of the following planets are closer to the sun than the Earth?",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 14,
+      "options": [
+        "A. Venus and Mars",
+        "B. Venus and Mercury",
+        "C. Mercury and Mars",
+        "D. Venus and Saturn"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 14 from the 2022 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2022_q21",
+      "questionText": "Which of the following bodies are natural sources of light?\n\nI. Moon\n\nII. Sun\n\nIII. Glow Worm",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 21,
+      "options": [
+        "A. I and II only",
+        "B. I and III only",
+        "C. II and III only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 21 from the 2022 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2022_q32",
+      "questionText": "The practice of growing cowpea and maize on a piece of land at the same time is known as",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 32,
+      "options": [
+        "A. mixed farming.",
+        "B. mixed cropping.",
+        "C. land rotation.",
+        "D. crop rotation."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 32 from the 2022 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2022_q33",
+      "questionText": "A lunar eclipse may occur when the",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 33,
+      "options": [
+        "A. moon is between the earth and the sun.",
+        "B. sun is between the earth and the moon.",
+        "C. earth is between the sun and the moon.",
+        "D. moon is positioned far away from the earth."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 33 from the 2022 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2023_q27",
+      "questionText": "The farming system that makes the most effective use of land is",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 27,
+      "options": [
+        "A. crop rotation.",
+        "B. land rotation.",
+        "C. mixed cropping.",
+        "D. mixed farming."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 27 from the 2023 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2023_q36",
+      "questionText": "The brightest of all the planets is",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 36,
+      "options": [
+        "A. Mars.",
+        "B. Saturn.",
+        "C. Uranus.",
+        "D. Venus."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 36 from the 2023 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2024_q19",
+      "questionText": "Which of the following nursery beds is suitable for a flood prone area?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 19,
+      "options": [
+        "A. Plain bed",
+        "B. Sunken bed",
+        "C. Raised bed",
+        "D. Flat bed"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 19 from the 2024 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2025_q1",
+      "questionText": "The following factors hinder vegetable production in Ghana except?",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 1,
+      "options": [
+        "A. high cost of agricultural chemicals.",
+        "B. lack of market for farm produce.",
+        "C. irregular rainfall pattern.",
+        "D. availability of sunlight."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 1 from the 2025 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2025_q16",
+      "questionText": "Which of the following organisms is prokaryotic?",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 16,
+      "options": [
+        "A. Bacteria",
+        "B. Earthworm",
+        "C. Fungus",
+        "D. Plant"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 16 from the 2025 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2025_q30",
+      "questionText": "Which of the following statements best explains the term ecosystem? It is",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 30,
+      "options": [
+        "A. a group of organisms of the same species that live in the same place at the same time.",
+        "B. a group of populations living in the same area at the same time.",
+        "C. the part of the earth's environment where life exists.",
+        "D. a community of living and non-living things interacting with each other."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 30 from the 2025 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2025_q7",
+      "questionText": "Charles Darwin is famous for",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 7,
+      "options": [
+        "A. discovering penicillin.",
+        "B. his work on the origin of the universe.",
+        "C. his work in the field of physics.",
+        "D. his theory of natural selection."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 7 from the 2025 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_1991_q2",
+      "questionText": "(a)\n\n \n\nDefine the following processes:\n\n(i)\n\n \n\nExcretion\n\n(ii)\n\n \n\nRespiration\n\n(iii)\n\n \n\nName one organ in man which is responsible for each of the processes in (a) (i) and (ii) above\n\n(b)\n\n \n\nMention three ways of protecting people from infection during an outbreak of cholera.\n\n(c)\n\n \n\nWrite down the chemical names of the following compounds.\n\n(i)\n\n \n\nMgCl2\n\n(ii)\n\n \n\nFeS\n\n(iii)\n\n \n\nCuSO4\n\n(iv)\n\n \n\nNH4OH\n\n(d)\n\n \n\nList the names of the planets in order of their distances away from the sun; starting with the one nearest to it.",
+      "type": "essay",
+      "year": "1991",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1991 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_1994_q4",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nList the various planets of the solar system in the order they occur starting with the planet nearest the sun\n\n(ii)\n\n \n\nState one difference between the eclipse of the sun and the eclipse of the moon.\n\n(b)\n\n \n\n(i)\n\n \n\nDefine the term force\n\n(ii)\n\n \n\nState three types of force\n\n(iii)\n\n \n\nA box is pulled by a force of 20 N through a distance of 8 m along a smooth floor.\n\nCalculate the work done by the force.\n\n(c)\n\n \n\nDraw simple electrical circuits showing the following arrangements:\n\n(i)\n\n \n\nA switch and a light bulb in series with two dry cells in series\n\n(ii)\n\n \n\nA switch and a light bulb in series with two dry cells in parallel\n\n(d)\n\n \n\nName two diseases that can be controlled by immunization",
+      "type": "essay",
+      "year": "1994",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1994 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2017_q6",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nWhat is an alloy?\n\nii)\n\n \n\nState two causes of corrosion of metals.\n\nb)\n\n \n\ni)\n\n \n\nWhat is a planet?\n\nii)\n\n \n\nName two planets between the Sun and the Earth.\n\nc)\n\n \n\nState four functions of the circulatory system in humans.\n\nd)\n\n \n\ni)\n\n \n\nDefine the term crop rotation.\n\nii)\n\n \n\nGive one example of a chemical method of controlling pests on crop farms.",
+      "type": "essay",
+      "year": "2017",
+      "questionNumber": 6,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2017 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2023_q5",
+      "questionText": "a)\n\n \n\nState three ways in which mulching restores soil resources.\n\nb)\n\n \n\ni)\n\n \n\nName the two elements that combines to form ammonia gas.\n\nii)\n\n \n\nWrite a balanced chemical equation for the formation of ammonia from the elements named in (i).\n\nc)\n\n \n\nThe following information is on the feeding habits of some organisms:\n\ni)\n\n \n\nman feeds on grasscutter;\n\nii)\n\n \n\ntoad feeds on grasshopper;\n\niii)\n\n \n\nsnake feeds on toad;\n\niv)\n\n \n\ngoat feeds on grass;\n\nv)\n\n \n\nman feeds on hawk;\n\nvi)\n\n \n\ngrasshopper feeds on grass;\n\nvii)\n\n \n\nhawk feeds on snake;\n\nviii)\n\n \n\ngrasscutter feeds on grass.\n\nUse all the information given above to construct a food web.\n\nd)\n\n \n\ni)\n\n \n\nWhat is a galaxy?\n\nii)\n\n \n\nState the relationship between stars and galaxies.\n\niii)\n\n \n\nExplain briefly the term milky way.\n\n Show Solution",
+      "type": "essay",
+      "year": "2023",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2023 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "The Solar System"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

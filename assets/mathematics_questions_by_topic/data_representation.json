@@ -1,0 +1,4113 @@
+{
+  "topic": "Data Representation",
+  "questions": [
+    {
+      "id": "0kdiIPZqlK7JwspASsIu",
+      "year": "2012",
+      "subject": "mathematics",
+      "questionNumber": 26,
+      "questionText": "A map is drawn to the scale 1:100,000. What distance in kilometres is represented by 5 cm on the map?",
+      "options": [
+        "A. 0.5 km",
+        "B. 5.0 km",
+        "C. 50.0 km",
+        "D. 500.0 km"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480337,
+        "_nanoseconds": 528000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2012"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 925000000
+      }
+    },
+    {
+      "id": "1b0Lp3QrmZxdMZjeSoay",
+      "year": "2000",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "The bar chart shows the mark distribution of pupils in a test. Use it to answer the question below How many pupils took the test?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480066,
+        "_nanoseconds": 166000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2000"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 5",
+        "B. 20",
+        "C. 25",
+        "D. 29",
+        "E. 30"
+      ],
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487085,
+        "_nanoseconds": 254000000
+      }
+    },
+    {
+      "id": "4AsLwfJW1ZqIhYcvfOPK",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 5,
+      "questionText": "In the diagram, P and Q are two sets and U is the universal set. Use the information to answer the question below How many members are in set Q",
+      "options": [
+        "A. 2",
+        "B. 3",
+        "C. 8",
+        "D. 5"
+      ],
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482495,
+        "_nanoseconds": 463000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2024_q5_img5.png",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542285,
+        "_nanoseconds": 65000000
+      }
+    },
+    {
+      "id": "4C41iLYVqOVWd0ALl3WJ",
+      "year": "1991",
+      "subject": "mathematics",
+      "questionNumber": 11,
+      "questionText": "Use the diagram below to answer the question below. What is the value of b°?",
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479560,
+        "_nanoseconds": 559000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1991"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 68°",
+        "B. 75°",
+        "C. 105°",
+        "D. 112°",
+        "E. 124°"
+      ],
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487077,
+        "_nanoseconds": 776000000
+      }
+    },
+    {
+      "id": "4Lni2jzSOomPlI9TKCyW",
+      "year": "2008",
+      "subject": "mathematics",
+      "questionNumber": 17,
+      "questionText": "The table below shows the average rainfall in a town from March 2003 to August 2003. Use it to answer the question below. Month March April May June July August Rainfall (mm) 96 147 281 452 265 139 What was the total amount of rainfall in May, June and July?",
+      "options": [
+        "A. 696 mm",
+        "B. 930 mm",
+        "C. 998 mm",
+        "D. 1020 mm"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480241,
+        "_nanoseconds": 153000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2008"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487091,
+        "_nanoseconds": 763000000
+      }
+    },
+    {
+      "id": "4U74toCQ5nMuXQImYoiy",
+      "year": "2016",
+      "subject": "mathematics",
+      "questionNumber": 16,
+      "questionText": "The table shows the marks of some students in a test. Use the information to answer the question below. Marks 0 1 2 3 4 5 6 7 8 9 10 Number of students 3 4 5 4 5 4 7 3 4 2 2 What is the modal mark?",
+      "options": [
+        "A. 2",
+        "B. 5",
+        "C. 6",
+        "D. 10"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480423,
+        "_nanoseconds": 81000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2016"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487098,
+        "_nanoseconds": 192000000
+      }
+    },
+    {
+      "id": "57dmAw9dcZBBiw29IX9Y",
+      "year": "1997",
+      "subject": "mathematics",
+      "questionNumber": 24,
+      "questionText": "Find the bearing of Q from P in the diagram above.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479996,
+        "_nanoseconds": 392000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1997"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 030°",
+        "B. 060°",
+        "C. 070°",
+        "D. 090°",
+        "E. 150°"
+      ],
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487082,
+        "_nanoseconds": 727000000
+      }
+    },
+    {
+      "id": "58uQ3CSoyhCop7OC972d",
+      "year": "2006",
+      "subject": "mathematics",
+      "questionNumber": 23,
+      "questionText": "The table below gives the ages of members of a juvenile club. Use it to answer the question below Age in years 8 9 10 11 Frequency 5 10 6 9 How many people are in the club?",
+      "options": [
+        "A. 15",
+        "B. 20",
+        "C. 30",
+        "D. 38"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480198,
+        "_nanoseconds": 855000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2006"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 135000000
+      }
+    },
+    {
+      "id": "5T4Y8XwrTBUjcKkp9GfP",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 40,
+      "questionText": "The pie chart shows the distribution of crops on a farm of area 250 hectares. Use it to answer the question below. What fraction of the farm is planted with pepper?",
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479597,
+        "_nanoseconds": 164000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1 3",
+        "B. 1 4",
+        "C. 1 5",
+        "D. 2 9",
+        "E. 7 32"
+      ],
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487078,
+        "_nanoseconds": 582000000
+      }
+    },
+    {
+      "id": "6OdXrZjO3Vs0cy8VB3ST",
+      "year": "2014",
+      "subject": "mathematics",
+      "questionNumber": 29,
+      "questionText": "A boy walks on a bearing 070o. Which of the following diagrams show his direction?",
+      "options": [
+        "A. ",
+        "B. ",
+        "C. ",
+        "D. "
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480384,
+        "_nanoseconds": 975000000
+      },
+      "difficulty": "medium",
+      "createdBy": "system_import",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2014"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "explanation": "\n\n⚠️ Note: This question requires a diagram/figure that is not yet available. The complete question with images will be added soon.",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487096,
+        "_nanoseconds": 588000000
+      }
+    },
+    {
+      "id": "6TcGFNAhWunDLzW7ufYI",
+      "year": "2019",
+      "subject": "mathematics",
+      "questionNumber": 20,
+      "questionText": "Find ∠QPS in the diagram.",
+      "options": [
+        "A. 70o",
+        "B. 40o",
+        "C. 35o",
+        "D. 20o"
+      ],
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480494,
+        "_nanoseconds": 81000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2019"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2019_q20_img20.jpg",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542249,
+        "_nanoseconds": 276000000
+      }
+    },
+    {
+      "id": "6qUTQPyOTwor9fDyFz6r",
+      "year": "2012",
+      "subject": "mathematics",
+      "questionNumber": 16,
+      "questionText": "The table below shows the day and night temperatures of a town during a week. Use it to answer the question below. Week Temperature (oC) Day Night Monday 33 24 Tuesday 29 25 Wednesday 32 23 Thursday 34 26 Friday 32 24 Saturday 30 24 Sunday 30 25 On which day was the change in temperature the least?",
+      "options": [
+        "A. Monday",
+        "B. Saturday",
+        "C. Sunday",
+        "D. Tuesday"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480331,
+        "_nanoseconds": 908000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2012"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 925000000
+      }
+    },
+    {
+      "id": "7BQOsq3qZA5uTZJtAaWD",
+      "year": "1993",
+      "subject": "mathematics",
+      "questionNumber": 18,
+      "questionText": "The table below gives the number of goals scored by a football team in a league season: Number of goals scored in a match 0 1 2 3 4 5 Frequency 1 7 6 4 1 1 Use it to answer the question below. What is the total number of matches played in the league season?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479606,
+        "_nanoseconds": 785000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1993"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 6",
+        "B. 7",
+        "C. 19",
+        "D. 20",
+        "E. 40"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487079,
+        "_nanoseconds": 424000000
+      }
+    },
+    {
+      "id": "7PdembCagJCxkUcd6rvg",
+      "year": "1998",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "Calculate the bearing of town P from town K in the diagram below.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480021,
+        "_nanoseconds": 85000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1998"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 005°",
+        "B. 085°",
+        "C. 095°",
+        "D. 265°",
+        "E. 275°"
+      ],
+      "explanation": "",
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487083,
+        "_nanoseconds": 561000000
+      }
+    },
+    {
+      "id": "7RRqKNnkOwWybJ0nbMg7",
+      "year": "1993",
+      "subject": "mathematics",
+      "questionNumber": 17,
+      "questionText": "The table below gives the number of goals scored by a football team in a league season: Number of goals scored in a match 0 1 2 3 4 5 Frequency 1 7 6 4 1 1 Use it to answer the question below. What is the mean number of goals scored by the team?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479606,
+        "_nanoseconds": 258000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1993"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 7",
+        "B. 6",
+        "C. 4",
+        "D. 2",
+        "E. 1"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487079,
+        "_nanoseconds": 424000000
+      }
+    },
+    {
+      "id": "7nPHHqJsbuaCgeVCR8Cg",
+      "year": "2014",
+      "subject": "mathematics",
+      "questionNumber": 19,
+      "questionText": "The pie chart shows how Kwaku spends his monthly salary. Use this information to answer the question below. Find the value of x.",
+      "options": [
+        "A. 65o",
+        "B. 75o",
+        "C. 85o",
+        "D. 100o"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480379,
+        "_nanoseconds": 353000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2014"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487096,
+        "_nanoseconds": 588000000
+      }
+    },
+    {
+      "id": "96vOlL33KWZiAyAe9Vr3",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 3,
+      "questionText": "In the diagram, set Q has 30 members and set T has 25 members. Q ∩ T has 10 members. Find the number of members of Q U T",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479577,
+        "_nanoseconds": 677000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 35",
+        "B. 45",
+        "C. 55",
+        "D. 65",
+        "E. 75"
+      ],
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1992_q3_img3.png",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542111,
+        "_nanoseconds": 158000000
+      }
+    },
+    {
+      "id": "BTnoSF6SaHAQMPqzhaHZ",
+      "year": "2009",
+      "subject": "mathematics",
+      "questionNumber": 10,
+      "questionText": "The pie chart below shows the performance of Kate in her final examination. Use the diagram to answer the question below. If Kate scored 60% in Social Studies, what was her score in Economics?",
+      "options": [
+        "A. 45%",
+        "B. 54%",
+        "C. 72%",
+        "D. 90%"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480259,
+        "_nanoseconds": 839000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2009"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487092,
+        "_nanoseconds": 558000000
+      }
+    },
+    {
+      "id": "CUWx5vbq1sTqFXxvzdyI",
+      "year": "2009",
+      "subject": "mathematics",
+      "questionNumber": 35,
+      "questionText": "The table below shows the ages of children at a birthday party. Ages(years) No. of Children 1 3 2 4 3 2 4 5 5 4 6 4 7 6 8 4 9 2 10 1 Use this table to answer the question below. What is the modal age?",
+      "options": [
+        "A. 10",
+        "B. 7",
+        "C. 5",
+        "D. 4"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480273,
+        "_nanoseconds": 925000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2009"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487092,
+        "_nanoseconds": 558000000
+      }
+    },
+    {
+      "id": "Cz1tRzMaypMoZtAsCC7o",
+      "year": "2011",
+      "subject": "mathematics",
+      "questionNumber": 33,
+      "questionText": "The table below gives the distribution of ages of students in a class. Use it to answer the question below. Ages (years) 13 14 15 16 17 Number of students 3 10 6 7 4 What is the modal age?",
+      "options": [
+        "A. 14",
+        "B. 15",
+        "C. 16",
+        "D. 17"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480318,
+        "_nanoseconds": 710000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2011"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 125000000
+      }
+    },
+    {
+      "id": "DIS4Egihj7s8QZdk3h9X",
+      "year": "2020",
+      "subject": "mathematics",
+      "questionNumber": 7,
+      "questionText": "Which of the following inequalities is represented on the number line?",
+      "options": [
+        "A. -2>y>2",
+        "B. -2≤ y < 2",
+        "C. -2 ≥ y > 2",
+        "D. -2 < y ≤ 2"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480509,
+        "_nanoseconds": 566000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2020"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2020_q7_img7.jpg",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542253,
+        "_nanoseconds": 252000000
+      }
+    },
+    {
+      "id": "DY6Q5KDz2Rtlp1SLp3Is",
+      "year": "1999",
+      "subject": "mathematics",
+      "questionNumber": 22,
+      "questionText": "The table below shows the average monthly rainfall at Nankese from March, 1996 to August, 1996. Month Mar Apr May Jun Jul Aug Rainfall (mm) 99 145 227 450 267 142 Use it to answer the question below. What was the total amount of rainfall recorded in April, May and July?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480040,
+        "_nanoseconds": 225000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1999"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 422 mm",
+        "B. 639 mm",
+        "C. 72 mm",
+        "D. 994 mm",
+        "E. 1,139 mm"
+      ],
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487084,
+        "_nanoseconds": 387000000
+      }
+    },
+    {
+      "id": "ECoUta57CcphCctvTN6R",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 13,
+      "questionText": "The bar chart shows the distances of 5 villages, P, Q, R, S and T from a market town. Use it to answer the question below. Which village is farthest from the market town?",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479582,
+        "_nanoseconds": 876000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. P",
+        "B. Q",
+        "C. R",
+        "D. S",
+        "E. T"
+      ],
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1992_q13_img13.png",
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763542119,
+        "_nanoseconds": 69000000
+      }
+    },
+    {
+      "id": "EEjqwsIK7OJBviKb8jdj",
+      "year": "2020",
+      "subject": "mathematics",
+      "questionNumber": 17,
+      "questionText": "Use the diagram below to answer the question below Find the value of x.",
+      "options": [
+        "A. 68o",
+        "B. 75o",
+        "C. 112o",
+        "D. 124o"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480515,
+        "_nanoseconds": 208000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2020"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487101,
+        "_nanoseconds": 629000000
+      }
+    },
+    {
+      "id": "EGN0ukIHnwPorDuuQNvw",
+      "year": "1994",
+      "subject": "mathematics",
+      "questionNumber": 2,
+      "questionText": "Which of the following describes the relationship between the sets A and B in the Venn diagram below?",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479619,
+        "_nanoseconds": 729000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1994"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. A ⊂ B",
+        "B. A ∩ B = 5",
+        "C. A ∩ B = ∅",
+        "D. A ∪ B = {1, 2, 3, 4, 5, 6, 7}",
+        "E. B ⊂ A"
+      ],
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1994_q2_img2.png",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542127,
+        "_nanoseconds": 353000000
+      }
+    },
+    {
+      "id": "EZS1p6EINveQQAJzsVh0",
+      "year": "2011",
+      "subject": "mathematics",
+      "questionNumber": 34,
+      "questionText": "The table below gives the distribution of ages of students in a class. Use it to answer the question below. Ages (years) 13 14 15 16 17 Number of students 3 10 6 7 4 If a student is selected at random from the class, what is the probability that the student is 15 years old?",
+      "options": [
+        "A. 1 5",
+        "B. 1 3",
+        "C. 1 2",
+        "D. 2 3"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480319,
+        "_nanoseconds": 304000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2011"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 125000000
+      }
+    },
+    {
+      "id": "EoURsPUvnT84X6J7ERlH",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 34,
+      "questionText": "Madam Nancy wants to know which of the teachers in her school is liked best by most of the students. Which of the following methods is most suitable for collecting the data?",
+      "options": [
+        "A. Experiment",
+        "B. Database",
+        "C. Questionnaire",
+        "D. Observation"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482513,
+        "_nanoseconds": 534000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 904000000
+      }
+    },
+    {
+      "id": "FOSXD43Oy2exFiHETi7d",
+      "year": "2020",
+      "subject": "mathematics",
+      "questionNumber": 27,
+      "questionText": "Find the value of t in the diagram.",
+      "options": [
+        "A. 12",
+        "B. 8",
+        "C. 4",
+        "D. 3"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480520,
+        "_nanoseconds": 894000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2020"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487101,
+        "_nanoseconds": 629000000
+      }
+    },
+    {
+      "id": "FUy4jIeragc115XCPwZv",
+      "year": "2020",
+      "subject": "mathematics",
+      "questionNumber": 25,
+      "questionText": "If 480 pupils in a school are boys representing 80% of the school's enrolment. Find the total number of pupils in the school.",
+      "options": [
+        "A. 384",
+        "B. 540",
+        "C. 600",
+        "D. 864"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480519,
+        "_nanoseconds": 763000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2020"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487101,
+        "_nanoseconds": 629000000
+      }
+    },
+    {
+      "id": "GpsQwTKRyrkWN27buJA4",
+      "year": "2015",
+      "subject": "mathematics",
+      "questionNumber": 40,
+      "questionText": "A hall which is 20 m long is represented on a diagram as 10 cm long. What is the scale of the diagram?",
+      "options": [
+        "A. 1:200",
+        "B. 1:250",
+        "C. 1:400",
+        "D. 1:500"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480413,
+        "_nanoseconds": 969000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2015"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487097,
+        "_nanoseconds": 370000000
+      }
+    },
+    {
+      "id": "H2ivPV7OUwxA5EKpY3hp",
+      "year": "2003",
+      "subject": "mathematics",
+      "questionNumber": 29,
+      "questionText": "Which of the following represents the net of a pyramid?",
+      "options": [
+        "A. ",
+        "B. ",
+        "C. ",
+        "D. "
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480134,
+        "_nanoseconds": 291000000
+      },
+      "difficulty": "medium",
+      "createdBy": "system_import",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2003"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487087,
+        "_nanoseconds": 736000000
+      }
+    },
+    {
+      "id": "ILwQl88eeeaIRjMIbOvw",
+      "year": "2009",
+      "subject": "mathematics",
+      "questionNumber": 37,
+      "questionText": "The table below shows the ages of children at a birthday party. Ages(years) No. of Children 1 3 2 4 3 2 4 5 5 4 6 4 7 6 8 4 9 2 10 1 Use this table to answer the question below. How many children are 7 or more years old?",
+      "options": [
+        "A. 28",
+        "B. 22",
+        "C. 13",
+        "D. 6"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480275,
+        "_nanoseconds": 51000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2009"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487092,
+        "_nanoseconds": 558000000
+      }
+    },
+    {
+      "id": "K3gYeCuhD1xudmJWZz0h",
+      "year": "2008",
+      "subject": "mathematics",
+      "questionNumber": 18,
+      "questionText": "The table below shows the average rainfall in a town from March 2003 to August 2003. Use it to answer the question below. Month March April May June July August Rainfall (mm) 96 147 281 452 265 139 What was the mean rainfall in the town over the six months?",
+      "options": [
+        "A. 230 mm",
+        "B. 281 mm",
+        "C. 366 mm",
+        "D. 452 mm"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480241,
+        "_nanoseconds": 688000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2008"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487091,
+        "_nanoseconds": 763000000
+      }
+    },
+    {
+      "id": "O6c5dbqg7JQR33mMLcTu",
+      "year": "2007",
+      "subject": "mathematics",
+      "questionNumber": 36,
+      "questionText": "Which of the following is represented by vector AB → in the diagram above?",
+      "options": [
+        "A. (5 cm, 045°)",
+        "B. (5 cm, 135°)",
+        "C. (5 cm, 180°)",
+        "D. (5 cm, 225°)"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480229,
+        "_nanoseconds": 180000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2007"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 958000000
+      }
+    },
+    {
+      "id": "OO0ASyxALvAeyOLuc9sp",
+      "year": "1990",
+      "subject": "mathematics",
+      "questionNumber": 12,
+      "questionText": "A table which cost ₵2,400.00 to manufacture was sold for ₵3,000.00. Find the profit percent.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479530,
+        "_nanoseconds": 165000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1990"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 80%",
+        "B. 25%",
+        "C. 24%",
+        "D. 20%",
+        "E. 11.1%"
+      ],
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487076,
+        "_nanoseconds": 950000000
+      }
+    },
+    {
+      "id": "OPnP9JorvfOBKFq61heU",
+      "year": "1995",
+      "subject": "mathematics",
+      "questionNumber": 36,
+      "questionText": "Which of the number lines below represents the inequality 2 < x ≤ 6?",
+      "options": [
+        "A. ",
+        "B. ",
+        "C. ",
+        "D. E."
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479957,
+        "_nanoseconds": 517000000
+      },
+      "difficulty": "medium",
+      "createdBy": "system_import",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1995"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "explanation": "\n\n⚠️ Note: This question requires a diagram/figure that is not yet available. The complete question with images will be added soon.",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 77000000
+      }
+    },
+    {
+      "id": "TcCMQqSWUQiJ1A86yHnG",
+      "year": "2009",
+      "subject": "mathematics",
+      "questionNumber": 36,
+      "questionText": "The table below shows the ages of children at a birthday party. Ages(years) No. of Children 1 3 2 4 3 2 4 5 5 4 6 4 7 6 8 4 9 2 10 1 Use this table to answer the question below. A child is selected at random, what is the probability that he or she is 4 years old?",
+      "options": [
+        "A. 4 35",
+        "B. 1 7",
+        "C. 2 5",
+        "D. 4 5"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480274,
+        "_nanoseconds": 484000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2009"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487092,
+        "_nanoseconds": 558000000
+      }
+    },
+    {
+      "id": "TxNlJ2hfIeqBrz694CCP",
+      "year": "2001",
+      "subject": "mathematics",
+      "questionNumber": 12,
+      "questionText": "On a map 1 cm represents 4.5 km. What is the actual distance between two towns which are 4 cm apart on the map?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480079,
+        "_nanoseconds": 770000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2001"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 9 km",
+        "B. 16 km",
+        "C. 18 km",
+        "D. 19 km",
+        "E. 21 km"
+      ],
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 59000000
+      }
+    },
+    {
+      "id": "U0X4xsvtqKfemnn94JfR",
+      "year": "1990",
+      "subject": "mathematics",
+      "questionNumber": 38,
+      "questionText": "The length of a field, 1.2 km long is represented on a map by a line 40 mm long. What is the scale of the map?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479550,
+        "_nanoseconds": 595000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1990"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1 : 100",
+        "B. 1 : 300",
+        "C. 1 : 1000",
+        "D. 1 : 3000",
+        "E. 1 : 30000"
+      ],
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487076,
+        "_nanoseconds": 950000000
+      }
+    },
+    {
+      "id": "UQCE7EEaDnLdqoqjWK74",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 14,
+      "questionText": "The bar chart shows the distances of 5 villages, P, Q, R, S and T from a market town. Use it to answer the question below. How much farther is village Q than village R from the market town?",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479583,
+        "_nanoseconds": 402000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 2 km",
+        "B. 3 km",
+        "C. 4 km",
+        "D. 5 km",
+        "E. 6 km"
+      ],
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1992_q14_img14.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542119,
+        "_nanoseconds": 860000000
+      }
+    },
+    {
+      "id": "WPk1pZ9CBkOSxeunK6qB",
+      "year": "2014",
+      "subject": "mathematics",
+      "questionNumber": 20,
+      "questionText": "The pie chart shows how Kwaku spends his monthly salary. Use this information to answer the question below. Kwaku earns GH₵630.00 a month. How much of this does he spend on food?",
+      "options": [
+        "A. GH₵140.00",
+        "B. GH₵157.00",
+        "C. GH₵210.00",
+        "D. GH₵350.00"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480379,
+        "_nanoseconds": 907000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2014"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487096,
+        "_nanoseconds": 588000000
+      }
+    },
+    {
+      "id": "WXSwuvvuI2N4iqrrl9pI",
+      "year": "2020",
+      "subject": "mathematics",
+      "questionNumber": 18,
+      "questionText": "Use the diagram below to answer the question below Find the value of y.",
+      "options": [
+        "A. 68o",
+        "B. 75o",
+        "C. 112o",
+        "D. 124o"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480515,
+        "_nanoseconds": 768000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2020"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487101,
+        "_nanoseconds": 629000000
+      }
+    },
+    {
+      "id": "WvbCTUkdUynLLuYMeveq",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 4,
+      "questionText": "In the diagram, P and Q are two sets and U is the universal set. Use the information to answer the question below Find P ∩ Q.",
+      "options": [
+        "A. {c, d, e}",
+        "B. {a, b}",
+        "C. {c, b, c, d, e}",
+        "D. {f, g, h}"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482494,
+        "_nanoseconds": 702000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2024_q4_img4.png",
+      "updatedAt": {
+        "_seconds": 1763542284,
+        "_nanoseconds": 557000000
+      }
+    },
+    {
+      "id": "X9Qsg8BfhsMPWSQsOVog",
+      "year": "2000",
+      "subject": "mathematics",
+      "questionNumber": 27,
+      "questionText": "The bar chart shows the mark distribution of pupils in a test. Use it to answer the question below What is the modal mark?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480065,
+        "_nanoseconds": 625000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2000"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 4",
+        "B. 5",
+        "C. 6",
+        "D. 7",
+        "E. 8"
+      ],
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487085,
+        "_nanoseconds": 254000000
+      }
+    },
+    {
+      "id": "Y9o1aLC0vE0VMuafvTeb",
+      "year": "2021",
+      "subject": "mathematics",
+      "questionNumber": 14,
+      "questionText": "On a map, 1⁄3 cm represents 5km. If two towns A and B are 18 cm apart on the map, what is the actual distance between them?",
+      "options": [
+        "A. 27 km",
+        "B. 30 km",
+        "C. 240 km",
+        "D. 270 km"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480536,
+        "_nanoseconds": 334000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2021"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2021_q14_img14.jpg",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542262,
+        "_nanoseconds": 63000000
+      }
+    },
+    {
+      "id": "bcYLCWISfpwGU2MMQgIt",
+      "year": "1991",
+      "subject": "mathematics",
+      "questionNumber": 38,
+      "questionText": "From the diagram below, calculate the bearing of point X from Y.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479574,
+        "_nanoseconds": 822000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1991"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 035°",
+        "B. 045°",
+        "C. 135°",
+        "D. 145°",
+        "E. 225°"
+      ],
+      "explanation": "",
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487077,
+        "_nanoseconds": 776000000
+      }
+    },
+    {
+      "id": "byVk8x9Hic62XZFZ5xcs",
+      "year": "2019",
+      "subject": "mathematics",
+      "questionNumber": 39,
+      "questionText": "In the Venn diagram M and N are the subsets of the universal set U. Use this information to answer the question below. Find M ∩ N",
+      "options": [
+        "A. {7}",
+        "B. {2,7}",
+        "C. {3,5,8}",
+        "D. {1,2,3,4,5,6,7,8,9}"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480504,
+        "_nanoseconds": 928000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2019"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487100,
+        "_nanoseconds": 643000000
+      }
+    },
+    {
+      "id": "cYyuWzmaDEpdeMIaBhFU",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 22,
+      "questionText": "In the diagram below, find the bearing of P from Q",
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479587,
+        "_nanoseconds": 589000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 045°",
+        "B. 090°",
+        "C. 135°",
+        "D. 180°",
+        "E. 270°"
+      ],
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487078,
+        "_nanoseconds": 582000000
+      }
+    },
+    {
+      "id": "d2m7mW8gp06GR1tOO7GU",
+      "year": "2024",
+      "subject": "mathematics",
+      "questionNumber": 38,
+      "questionText": "Number on die 1 2 3 4 5 6 Frequency 4 3 3 2 3 5 The table shows the results when a student tossed a die many times. Use the information to answer the question below How many times did the student throw the die?",
+      "options": [
+        "A. 6",
+        "B. 18",
+        "C. 21",
+        "D. 20"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482515,
+        "_nanoseconds": 755000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2024"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487104,
+        "_nanoseconds": 904000000
+      }
+    },
+    {
+      "id": "dB2gu7IzaLIti7CMmPKA",
+      "year": "2002",
+      "subject": "mathematics",
+      "questionNumber": 24,
+      "questionText": "The pie chart shows the distribution of programmes offered by 720 students at Kofikrom. Use this information to answer the question below. How many more students offered science subjects than Arts subjects.",
+      "options": [
+        "A. 40",
+        "B. 80",
+        "C. 160",
+        "D. 240"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480109,
+        "_nanoseconds": 14000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2002"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487086,
+        "_nanoseconds": 895000000
+      }
+    },
+    {
+      "id": "fEs8VZTq6SjI1LvCxv3w",
+      "year": "1996",
+      "subject": "mathematics",
+      "questionNumber": 18,
+      "questionText": "In the above diagram, |RS| = |RT|. Find a",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479970,
+        "_nanoseconds": 354000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1996"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 146°",
+        "B. 81°",
+        "C. 73°",
+        "D. 65°",
+        "E. 34°"
+      ],
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 915000000
+      }
+    },
+    {
+      "id": "fuKlyjl4Fe6iYxtQCcZS",
+      "year": "2013",
+      "subject": "mathematics",
+      "questionNumber": 35,
+      "questionText": "The table below shows the distribution of workers in some trades. Trade Shoe making Mining Road transport Agriculture Manufacturing goods Number of workers 300,000 25,000 160,000 225,000 165,000 Use this information to answer the question below. How many people are employed under all the trade?",
+      "options": [
+        "A. 325,000",
+        "B. 485,000",
+        "C. 650,000",
+        "D. 875,000"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480365,
+        "_nanoseconds": 528000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2013"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487095,
+        "_nanoseconds": 754000000
+      }
+    },
+    {
+      "id": "hajxaDpADFdjMHUM9Owe",
+      "year": "2006",
+      "subject": "mathematics",
+      "questionNumber": 24,
+      "questionText": "The table below gives the ages of members of a juvenile club. Use it to answer the question below Age in years 8 9 10 11 Frequency 5 10 6 9 What is the modal age of the members of the club?",
+      "options": [
+        "A. 8 years",
+        "B. 9 years",
+        "C. 10 years",
+        "D. 11 years"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480199,
+        "_nanoseconds": 447000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2006"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 135000000
+      }
+    },
+    {
+      "id": "jkP1qHLNu29zK4uRUjjO",
+      "year": "2011",
+      "subject": "mathematics",
+      "questionNumber": 37,
+      "questionText": "The diagram above is the net of a",
+      "options": [
+        "A. cone.",
+        "B. cuboid.",
+        "C. rectangular prism.",
+        "D. pyramid"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480321,
+        "_nanoseconds": 92000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2011"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 125000000
+      }
+    },
+    {
+      "id": "k9zUjfaXr8LpxcifAZBx",
+      "year": "2014",
+      "subject": "mathematics",
+      "questionNumber": 2,
+      "questionText": "The Venn diagram shows the number of pupils who offer Mathematics (M) and/or English (E) in a class. Use this information to answer the question below. How many pupils offer Mathematics?",
+      "options": [
+        "A. 10",
+        "B. 18",
+        "C. 25",
+        "D. 28"
+      ],
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480369,
+        "_nanoseconds": 647000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2014"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2014_q2_img2.png",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542202,
+        "_nanoseconds": 70000000
+      }
+    },
+    {
+      "id": "kNgEvRuloOKjXrzlXwyd",
+      "year": "1994",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "A boy walked 7 km on a bearing 060°. Which of the following diagrams shows his direction.",
+      "options": [
+        "A. ",
+        "B. ",
+        "C. ",
+        "D. E."
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479633,
+        "_nanoseconds": 672000000
+      },
+      "difficulty": "medium",
+      "createdBy": "system_import",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1994"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "explanation": "\n\n⚠️ Note: This question requires a diagram/figure that is not yet available. The complete question with images will be added soon.",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487080,
+        "_nanoseconds": 244000000
+      }
+    },
+    {
+      "id": "kenwxbuLPmIhYMsTwVMQ",
+      "year": "2013",
+      "subject": "mathematics",
+      "questionNumber": 34,
+      "questionText": "The table below shows the distribution of workers in some trades. Trade Shoe making Mining Road transport Agriculture Manufacturing goods Number of workers 300,000 25,000 160,000 225,000 165,000 Use this information to answer the question below. Which trade employed the most number of workers?",
+      "options": [
+        "A. Agriculture",
+        "B. Manufacturing",
+        "C. Shoe making",
+        "D. Road transport"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480364,
+        "_nanoseconds": 988000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2013"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487095,
+        "_nanoseconds": 754000000
+      }
+    },
+    {
+      "id": "lBsbSJNFlhSt7hUSPqvv",
+      "year": "1990",
+      "subject": "mathematics",
+      "questionNumber": 16,
+      "questionText": "The pie chart shows the monthly expenditure of Mr. Awuah whose monthly income is ₵18,000.00. Use the chart to answer the question below. How much does Mr. Awuah spend on rent?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479533,
+        "_nanoseconds": 299000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1990"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ₵90.00",
+        "B. ₵450.00",
+        "C. ₵4,500.00",
+        "D. ₵9,000.00",
+        "E. ₵16,200.00"
+      ],
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487076,
+        "_nanoseconds": 950000000
+      }
+    },
+    {
+      "id": "lY53TkY581BD6QDJx3EQ",
+      "year": "2011",
+      "subject": "mathematics",
+      "questionNumber": 32,
+      "questionText": "The table below gives the distribution of ages of students in a class. Use it to answer the question below. Ages (years) 13 14 15 16 17 Number of students 3 10 6 7 4 How many students are in the class?",
+      "options": [
+        "A. 20",
+        "B. 30",
+        "C. 45",
+        "D. 75"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480318,
+        "_nanoseconds": 152000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2011"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487094,
+        "_nanoseconds": 125000000
+      }
+    },
+    {
+      "id": "lZ9YHbxHNQx1KvK4HGCH",
+      "year": "2014",
+      "subject": "mathematics",
+      "questionNumber": 21,
+      "questionText": "The pie chart shows how Kwaku spends his monthly salary. Use this information to answer the question below. What percentage of his salary does he spend on rent and utilities?",
+      "options": [
+        "A. 12.1%",
+        "B. 12.5%",
+        "C. 22.2%",
+        "D. 33.3%"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480380,
+        "_nanoseconds": 481000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2014"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487096,
+        "_nanoseconds": 588000000
+      }
+    },
+    {
+      "id": "mJO6jqlhxK21xDhm31eR",
+      "year": "1993",
+      "subject": "mathematics",
+      "questionNumber": 16,
+      "questionText": "The table below gives the number of goals scored by a football team in a league season: Number of goals scored in a match 0 1 2 3 4 5 Frequency 1 7 6 4 1 1 Use it to answer the question below. Find the total number of goals scored by the team.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479605,
+        "_nanoseconds": 720000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1993"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 41",
+        "B. 40",
+        "C. 20",
+        "D. 19",
+        "E. 15"
+      ],
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487079,
+        "_nanoseconds": 424000000
+      }
+    },
+    {
+      "id": "mJXvHjRwQriaUfBHV60e",
+      "year": "1990",
+      "subject": "mathematics",
+      "questionNumber": 15,
+      "questionText": "The pie chart shows the monthly expenditure of Mr. Awuah whose monthly income is ₵18,000.00. Use the chart to answer the question below. What fraction of Mr. Awuah's income is spent on food?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479532,
+        "_nanoseconds": 533000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1990"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 1 6",
+        "B. 1 4",
+        "C. 1 3",
+        "D. 2 5",
+        "E. 1 2"
+      ],
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487076,
+        "_nanoseconds": 950000000
+      }
+    },
+    {
+      "id": "n2JGpob4JenRhfdCuNNz",
+      "year": "2007",
+      "subject": "mathematics",
+      "questionNumber": 9,
+      "questionText": "The pie chart above shows the distribution of 360 pupils to various houses in a school. Use it to answer the question below How many more students are in Yellow House than in Blue House?",
+      "options": [
+        "A. 30",
+        "B. 40",
+        "C. 70",
+        "D. 100"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480213,
+        "_nanoseconds": 819000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2007"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2007_q9_img9.png",
+      "updatedAt": {
+        "_seconds": 1763542185,
+        "_nanoseconds": 859000000
+      }
+    },
+    {
+      "id": "n8jKVf0RMjAyKsLOkCGU",
+      "year": "1991",
+      "subject": "mathematics",
+      "questionNumber": 10,
+      "questionText": "Use the diagram below to answer the question below. Find the value of a°",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479560,
+        "_nanoseconds": 14000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1991"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 68°",
+        "B. 75°",
+        "C. 105°",
+        "D. 112°",
+        "E. 124°"
+      ],
+      "explanation": "",
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487077,
+        "_nanoseconds": 776000000
+      }
+    },
+    {
+      "id": "nG2s6vpXKgOHhbOJpXr9",
+      "year": "2007",
+      "subject": "mathematics",
+      "questionNumber": 3,
+      "questionText": "Name the geometrical figure shown in the diagram below.",
+      "options": [
+        "A. Cuboid",
+        "B. Cone",
+        "C. Pyramid",
+        "D. Sphere"
+      ],
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480210,
+        "_nanoseconds": 524000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2007"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2007_q3_img3.png",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763542182,
+        "_nanoseconds": 900000000
+      }
+    },
+    {
+      "id": "nRcsHKJCpjoaaIil7la0",
+      "year": "2016",
+      "subject": "mathematics",
+      "questionNumber": 17,
+      "questionText": "The table shows the marks of some students in a test. Use the information to answer the question below. Marks 0 1 2 3 4 5 6 7 8 9 10 Number of students 3 4 5 4 5 4 7 3 4 2 2 How many students failed the test, if the pass mark was 4?",
+      "options": [
+        "A. 4",
+        "B. 6",
+        "C. 16",
+        "D. 21"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480423,
+        "_nanoseconds": 645000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2016"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487098,
+        "_nanoseconds": 192000000
+      }
+    },
+    {
+      "id": "ppJ9ifvoVOg6kmg6BfcM",
+      "year": "2014",
+      "subject": "mathematics",
+      "questionNumber": 16,
+      "questionText": "A hall which is 8 m long is represented on a diagram as 4 cm long. What is the scale of the diagram?",
+      "options": [
+        "A. 1 : 200",
+        "B. 1 : 250",
+        "C. 1 : 400",
+        "D. 1 : 800"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480377,
+        "_nanoseconds": 678000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2014"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763487096,
+        "_nanoseconds": 588000000
+      }
+    },
+    {
+      "id": "qPgHScYDKZYlJSyouqqE",
+      "year": "1994",
+      "subject": "mathematics",
+      "questionNumber": 40,
+      "questionText": "If a number is selected at random from the table below, what is the probability that the number is 5? Number 1 3 5 7 9 Frequency 25 15 8 10 2",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479640,
+        "_nanoseconds": 17000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1994"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 8 25",
+        "B. 4 25",
+        "C. 1 12",
+        "D. 2 15",
+        "E. 5 8"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487080,
+        "_nanoseconds": 244000000
+      }
+    },
+    {
+      "id": "qqTqOWKHoC5SMsou1SU7",
+      "year": "2019",
+      "subject": "mathematics",
+      "questionNumber": 40,
+      "questionText": "In the Venn diagram M and N are the subsets of the universal set U. Use this information to answer the question below. How many members are in the set N?",
+      "options": [
+        "A. 2",
+        "B. 3",
+        "C. 4",
+        "D. 6"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480505,
+        "_nanoseconds": 485000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2019"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487100,
+        "_nanoseconds": 643000000
+      }
+    },
+    {
+      "id": "rr1Qeq1LcKxLWuR1WRWv",
+      "year": "2020",
+      "subject": "mathematics",
+      "questionNumber": 21,
+      "questionText": "The pie chart shows the household budget of a family. Use the information to answer the question below If the family's income was GH₵ 40,000.00, how much was spent on clothing?",
+      "options": [
+        "A. GH₵ 1,600.00",
+        "B. GH₵ 2,000.00",
+        "C. GH₵ 3,200.00",
+        "D. GH₵ 4,400.00"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480517,
+        "_nanoseconds": 459000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2020"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487101,
+        "_nanoseconds": 629000000
+      }
+    },
+    {
+      "id": "sNQycJhR17QqxJCmQtmd",
+      "year": "2004",
+      "subject": "mathematics",
+      "questionNumber": 10,
+      "questionText": "Which of the following inequalities is represented on the number line below?",
+      "options": [
+        "A. -2 < x < 3",
+        "B. -2 ≤ x < 3",
+        "C. -2 ≤ x ≤ 3",
+        "D. -2 < x ≤ 3"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480146,
+        "_nanoseconds": 229000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2004"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487088,
+        "_nanoseconds": 551000000
+      }
+    },
+    {
+      "id": "smb275qhNSvN5YJ4zZa1",
+      "year": "1995",
+      "subject": "mathematics",
+      "questionNumber": 16,
+      "questionText": "Find the value of p in the diagram below.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479738,
+        "_nanoseconds": 80000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1995"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 110",
+        "B. 90",
+        "C. 70",
+        "D. 50",
+        "E. 40"
+      ],
+      "explanation": "",
+      "correctAnswer": "E",
+      "updatedAt": {
+        "_seconds": 1763487081,
+        "_nanoseconds": 77000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1990_q3",
+      "questionText": "(a)\n\n \n\nDraw a bar chart showing this information, using a scale of 2 cm to 1 unit on the vertical axis.\n\n(b)\n\n \n\nHow many pupils are in the class?\n\n(c)\n\n \n\nWhat is the percentage of pupils who prefer Club-cola?",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1990",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1990 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1990",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1991_q4",
+      "questionText": "(a)\n\n \n\nThe following table shows the distribution of votes in an election for class prefect.\n\nName\n\nNumber of votes\n\nAcquaye",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1991",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1991 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1991",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1992_q3",
+      "questionText": "(a)\n\n \n\nDraw a bar chart for the distribution.\n\n(b)\n\n \n\nA pupil is chosen at random from the class. What is the probability that the pupil obtained 7 marks?",
+      "questionNumber": 3,
+      "marks": 7,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1992",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1992 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1992",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1992_q4",
+      "questionText": "The table below gives the frequency distribution of the marks obtained in a class test by a group of 64 pupils.\n\nMarks (Out of ten)\n\nFrequency",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1992",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1992 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1992",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1994_q5",
+      "questionText": "The following table gives the distribution of sales of soft drinks sold by the Jatokrom JSS canteen in one week.\n\nSoft Drink\n\nNo. of Bottles Sold\n\nFanta",
+      "questionNumber": 5,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1994",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1994 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1994",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1994_q7",
+      "questionText": "Draw a pie chart to illustrate the sales.",
+      "questionNumber": 7,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1994",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1994 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1994",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1995_q1",
+      "questionText": "(a)\n\n \n\nThere are 20 students in a hostel. 16 of them are fluent in French and 10 of them are fluent in English. Each student is fluent in at least one of the two languages.\n\n(i)\n\n \n\nIllustrate this information on a Venn diagram\n\n(ii)\n\n \n\nHow many students are fluent in both English and French?\n\n(b)\n\n \n\nThe sum of the ages of two brothers Kofi and Kweku is 35. Kofi's age is two-thirds of Kweku's age. Find their ages.",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1995",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1995 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1995",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1996_q10",
+      "questionText": "(a)\n\n \n\nDraw a pie chart for the distribution.\n\n(b)\n\n \n\nWhat is the modal Ghanaian language?\n\n(c)\n\n \n\nIf a pupil is selected at random from the form, what is the probability that he speaks Ga?",
+      "questionNumber": 10,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1996",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1996 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1996",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1996_q3",
+      "questionText": "The table below shows the distribution of pupils in a JSS form one (1) class who speak some of the Ghanaian languages.\n\nGhanaian Language\n\nNo. of students who speak the language\n\nNzema",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1996",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1996 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1996",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1997_q4",
+      "questionText": "(a)\n\n \n\nThe table below shows the distribution of the ages (in years) of children who were treated in a clinic in a day.\n\nAge (years)",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1997",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1997 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1997",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2002_q10",
+      "questionText": "(a)\n\n \n\n(i)\n\n \n\nDraw a pie chart for the distribution above.\n\n(ii)\n\n \n\nWhat dish was prepared most?\n\n(iii)\n\n \n\nWhat percentage of students prepared fried rice\n\n(b)\n\n \n\nWhat is the probability that a student chosen at random cooked fried plantain and beans?",
+      "questionNumber": 10,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2002",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2002 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2002",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2003_q3",
+      "questionText": "The table shows the distribution of the ages (in years) of children in a nursery school.\n\nAge (years)",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2003",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2003 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2003",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2006_q24",
+      "questionText": "Draw a pie chart for the distribution.\n\n(b)\n\n \n\n(i)\n\n \n\nEvaluate: 5",
+      "questionNumber": 24,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2006",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2006 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2006",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2006_q6",
+      "questionText": "(a)\n\n \n\nThe following table shows the distribution of grades obtained by 120 students in an examination.\n\nGrade\n\nA\n\nB\n\nC\n\nD\n\nNo. of students",
+      "questionNumber": 6,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2006",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2006 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2006",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2008_q25",
+      "questionText": "(i)\n\n \n\nRepresent the information on a pie chart.\n\n(ii)\n\n \n\nWhat percentage of the vehicles were lorries?\n\n(b)\n\n \n\nAkosua was granted a loan of GH₵ 96.00. The interest rate was 24% per annum.\n\nCalculate the\n\n(i)\n\n \n\ninterest at the end of the year\n\n(ii)\n\n \n\ntotal amount she had to pay at the end of the year\n\n(iii)\n\n \n\namount she still owes, if Akosua was able to pay only GH₵ 60.00 at the end of the year.",
+      "questionNumber": 25,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2008",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2008 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2008",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2010_q6",
+      "questionText": "The following table shows the frequency distribution of the number of letters in the surnames of some students in a school.\n\nNo. of letters",
+      "questionNumber": 6,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2010",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2010 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2010",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2011_q2",
+      "questionText": "(2a - b)\n\n(b)\n\n \n\nThe number of pupils in a primary school is given in the table below:\n\nClass\n\nOne\n\nTwo\n\nThree\n\nFour\n\nFive\n\nSix\n\nNumber of pupils",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2011",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2011 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2011",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2012_q3",
+      "questionText": "(a)\n\n \n\nThe table shows the number of students who scored more than 80% in the listed subject.\n\nSubject\n\nNumber of students\n\nBiology",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2012",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2012 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2012",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2012_q7",
+      "questionText": "of the amount,\n\n(i)\n\n \n\nhow much did Kwame receive?\n\n(ii)\n\n \n\nwhat percentage of Aba's share did Kwame receive?\n\n(c)\n\n \n\nFind the value of x in the diagram below.",
+      "questionNumber": 7,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2012",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2012 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2012",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2015_q1",
+      "questionText": "(a)\n\n \n\nIn a class of 70 students, 40 belong to the Red Cross Society, 27 belong to the Girls' Guide Society and 12 belong to both the Red Cross Society and the Girl's Guide Society. The remaining students do not belong to any of the two societies.\n\n(i)\n\n \n\nIllustrate the information on a Venn diagram.\n\n(ii)\n\n \n\nHow many students belong to the Red Cross Society only?\n\n(iii)\n\n \n\nHow many students do not belong to any of the two societies?\n\n(b)\n\n \n\nA farmer uses",
+      "questionNumber": 1,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2015",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2015",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2016_q3",
+      "questionText": "(a)\n\n \n\nA doctor treated 2,000 patients over a period of time. If he worked for 5 hours a day and spend 15 minutes on each patient, how many days did the doctor spend to treat all the patients?\n\n(b)\n\n \n\nThe pie chart shows the distribution of textbooks to six classes A,B,C,D,E and F in a school.\n\n\n\n(i)\n\n \n\nIf class D was given 720 textbooks, how many textbooks were distributed to each of the remaining classes?\n\n(ii)\n\n \n\nWhat is the average number of textbooks distributed to the classes?\n\n(iii)\n\n \n\nHow many classes had less than the average number of textbooks distributed?",
+      "questionNumber": 3,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2016",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2016 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2016",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2021_q6",
+      "questionText": "The table shows the number of marbles students sent to class for Mathematics lesson.\n\nNumber of Marbles(x)\n\nNumber of Students(f)\n\nfx",
+      "questionNumber": 6,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2021",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2021 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2021",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "toqSwqtgg6aa8xwrk1wp",
+      "year": "1996",
+      "subject": "mathematics",
+      "questionNumber": 2,
+      "questionText": "The following addition is done in base ten. What number represents abc? 2 2 2 3 4 3 a b c 1 0 0 0",
+      "explanation": "",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479961,
+        "_nanoseconds": 92000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1996"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 324",
+        "B. 242",
+        "C. 423",
+        "D. 435",
+        "E. 234"
+      ],
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_1996_q2_img2.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542143,
+        "_nanoseconds": 740000000
+      }
+    },
+    {
+      "id": "tszML9mMRlNqm89sEjWU",
+      "year": "2010",
+      "subject": "mathematics",
+      "questionNumber": 39,
+      "questionText": "In the diagram above, the bearing of point B from A is",
+      "options": [
+        "A. 340o",
+        "B. 220o",
+        "C. 140o",
+        "D. 50o"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480299,
+        "_nanoseconds": 21000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2010"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "updatedAt": {
+        "_seconds": 1763485036,
+        "_nanoseconds": 567000000
+      }
+    },
+    {
+      "id": "ujRQ4zealzSQGrKNohB9",
+      "year": "1991",
+      "subject": "mathematics",
+      "questionNumber": 20,
+      "questionText": "A map of a large town is drawn to the scale of 1 : 100,000. What is the distance in kilometres (km) represented by a line segment 4 cm along the map?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479565,
+        "_nanoseconds": 216000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1991"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 0.04 km",
+        "B. 0.4 km",
+        "C. 4 km",
+        "D. 40 km",
+        "E. 400 km"
+      ],
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487077,
+        "_nanoseconds": 776000000
+      }
+    },
+    {
+      "id": "uuSVFCtv9WblvRv3dObA",
+      "year": "2005",
+      "subject": "mathematics",
+      "questionNumber": 1,
+      "questionText": "In the diagram above, A and B are two intersecting sets. How many members are in the set B?",
+      "options": [
+        "A. 2",
+        "B. 3",
+        "C. 5",
+        "D. 7"
+      ],
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480163,
+        "_nanoseconds": 804000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2005"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2005_q1_img1.png",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542176,
+        "_nanoseconds": 992000000
+      }
+    },
+    {
+      "id": "vR3E6zilSldTmdBzOnMJ",
+      "year": "2014",
+      "subject": "mathematics",
+      "questionNumber": 33,
+      "questionText": "Use the diagram below to answer the question below. Find the value of e.",
+      "options": [
+        "A. 38o",
+        "B. 40o",
+        "C. 88o",
+        "D. 92o"
+      ],
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480387,
+        "_nanoseconds": 237000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2014"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487096,
+        "_nanoseconds": 588000000
+      }
+    },
+    {
+      "id": "vhaTaWWHLOC7Y0rfTv6z",
+      "year": "2017",
+      "subject": "mathematics",
+      "questionNumber": 15,
+      "questionText": "Find the value of x in the diagram.",
+      "options": [
+        "A. 28o",
+        "B. 30o",
+        "C. 34o",
+        "D. 60o"
+      ],
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480445,
+        "_nanoseconds": 381000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2017"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2017_q15_img15.jpg",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763542214,
+        "_nanoseconds": 738000000
+      }
+    },
+    {
+      "id": "vrZjCbHpyYbZGo9mpNT3",
+      "year": "2002",
+      "subject": "mathematics",
+      "questionNumber": 7,
+      "questionText": "The Venn diagram below shows the number of pupils in a class of 40, who speak Twi or Ga or neither. Use it to answer the question below. How many pupils speak Twi and Ga?",
+      "options": [
+        "A. 17",
+        "B. 11",
+        "C. 7",
+        "D. 5"
+      ],
+      "correctAnswer": "A",
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480099,
+        "_nanoseconds": 494000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2002"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2002_q7_img7.png",
+      "updatedAt": {
+        "_seconds": 1763542170,
+        "_nanoseconds": 611000000
+      }
+    },
+    {
+      "id": "waHHAUWAgPTH9u2Wyg8l",
+      "year": "1991",
+      "subject": "mathematics",
+      "questionNumber": 12,
+      "questionText": "Use the diagram below to answer the question below. What is the value of c°?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479561,
+        "_nanoseconds": 90000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1991"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. 68°",
+        "B. 75°",
+        "C. 105°",
+        "D. 112°",
+        "E. 124°"
+      ],
+      "explanation": "",
+      "correctAnswer": "C",
+      "updatedAt": {
+        "_seconds": 1763487077,
+        "_nanoseconds": 776000000
+      }
+    },
+    {
+      "id": "wdOG7EhaOYazFOS2nlhw",
+      "year": "1992",
+      "subject": "mathematics",
+      "questionNumber": 28,
+      "questionText": "The diagram below shows two points P and Q in the number plane. Find the vector PQ.",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479590,
+        "_nanoseconds": 816000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1992"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. ( 6 4 )",
+        "B. ( 6 -4 )",
+        "C. ( -6 4 )",
+        "D. ( 4 -6 )",
+        "E. ( -4 -6 )"
+      ],
+      "explanation": "",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487078,
+        "_nanoseconds": 582000000
+      }
+    },
+    {
+      "id": "xkkDdCN7mso05Dedxghw",
+      "year": "2025",
+      "subject": "mathematics",
+      "questionNumber": 15,
+      "questionText": "Which of the following inequalities is represented on the number line?",
+      "options": [
+        "A. x < 2",
+        "B. x ≤ 3",
+        "C. x > 3",
+        "D. x ≥ 2"
+      ],
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763482524,
+        "_nanoseconds": 909000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2025"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "correctAnswer": "B",
+      "updatedAt": {
+        "_seconds": 1763487105,
+        "_nanoseconds": 685000000
+      }
+    },
+    {
+      "id": "yR1uEdyBt9ofNQHSkben",
+      "year": "1999",
+      "subject": "mathematics",
+      "questionNumber": 21,
+      "questionText": "The table below shows the average monthly rainfall at Nankese from March, 1996 to August, 1996. Month Mar Apr May Jun Jul Aug Rainfall (mm) 99 145 227 450 267 142 Use it to answer the question below. Which month recorded the highest amount of rainfall?",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480039,
+        "_nanoseconds": 663000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1999"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. March",
+        "B. April",
+        "C. May",
+        "D. June",
+        "E. July"
+      ],
+      "explanation": "",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487084,
+        "_nanoseconds": 387000000
+      }
+    },
+    {
+      "id": "ydbEpO2JJf2yybtx2F1A",
+      "year": "2014",
+      "subject": "mathematics",
+      "questionNumber": 3,
+      "questionText": "The Venn diagram shows the number of pupils who offer Mathematics (M) and/or English (E) in a class. Use this information to answer the question below. How many pupils offer only one subject?",
+      "options": [
+        "A. 3",
+        "B. 7",
+        "C. 18",
+        "D. 21"
+      ],
+      "imageUrl": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480370,
+        "_nanoseconds": 179000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2014"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "needsImage": true,
+      "createdBy": "system_import_v2",
+      "explanation": "",
+      "imageBeforeQuestion": "https://storage.googleapis.com/uriel-academy-41fb0.firebasestorage.app/mathematics_images/math_2014_q3_img3.png",
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763542202,
+        "_nanoseconds": 547000000
+      }
+    }
+  ],
+  "questionCount": 106
+}

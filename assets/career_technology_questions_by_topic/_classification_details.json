@@ -1,0 +1,468 @@
+{
+  "totalQuestions": 92,
+  "categorizedQuestions": 30,
+  "unclassifiedQuestions": 62,
+  "classificationRate": "32.6",
+  "classifications": [
+    {
+      "questionId": "career_technology_2024_q1",
+      "topic": "Meal Planning",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q10",
+      "topic": "Garment Construction",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q11",
+      "topic": "Ingredients & Tools",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q12",
+      "topic": "Personal Competencies",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q13",
+      "topic": "Garment Construction",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q14",
+      "topic": "Career Choices",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q15",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q16",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q17",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q18",
+      "topic": "Tools & Equipment",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q19",
+      "topic": "Tools & Equipment",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q2",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q20",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q21",
+      "topic": "Tools & Equipment",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q22",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q23",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q24",
+      "topic": "Work Ethics",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q25",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q26",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q27",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q28",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q29",
+      "topic": "Simple Projects",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q3",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q30",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q31",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q32",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q33",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q34",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q35",
+      "topic": "Garment Construction",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q36",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q37",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q38",
+      "topic": "Career Choices",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q39",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q4",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q40",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q5",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q6",
+      "topic": "Meal Planning",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q7",
+      "topic": "Career Choices",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q8",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2024_q9",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q1",
+      "topic": "Personal Competencies",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q10",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q11",
+      "topic": "Basic Stitches",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q12",
+      "topic": "Basic Stitches",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q13",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q14",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q15",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q16",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q17",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q18",
+      "topic": "Tools & Equipment",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q19",
+      "topic": "Food Preparation",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q2",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q20",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q21",
+      "topic": "Career Choices",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q22",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q23",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q24",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q25",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q26",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q27",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q28",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q29",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q3",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q30",
+      "topic": "Food Preparation",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q31",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q32",
+      "topic": "Garment Construction",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q33",
+      "topic": "Garment Construction",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q34",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q35",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q36",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q37",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q38",
+      "topic": "Meal Planning",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q39",
+      "topic": "Career Choices",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q4",
+      "topic": "Tools & Equipment",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q40",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q5",
+      "topic": "Cleaning & Maintenance",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q6",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q7",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q8",
+      "topic": "Safety at Home",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "career_technology_2025_q9",
+      "topic": "Basic Stitches",
+      "reason": "Keyword match"
+    },
+    {
+      "questionId": "theory_career_technology_2024_q1",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "theory_career_technology_2024_q2",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "theory_career_technology_2024_q3",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "theory_career_technology_2024_q4",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "theory_career_technology_2024_q5",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "theory_career_technology_2024_q6",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "theory_career_technology_2025_q1",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "theory_career_technology_2025_q2",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "theory_career_technology_2025_q3",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "theory_career_technology_2025_q4",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "theory_career_technology_2025_q5",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    },
+    {
+      "questionId": "theory_career_technology_2025_q6",
+      "topic": "unclassified",
+      "reason": "No keyword match"
+    }
+  ]
+}

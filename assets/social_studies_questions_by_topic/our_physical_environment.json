@@ -1,0 +1,5936 @@
+{
+  "topic": "Our Physical Environment",
+  "totalQuestions": 198,
+  "questions": [
+    {
+      "id": "social_studies_1990_q12",
+      "questionText": "Which of the following is not found in West Africa?",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 12,
+      "options": [
+        "A. Fouta Djallon Mountains",
+        "B. Guinea highlands",
+        "C. Jos Plateau",
+        "D. Akwapim-Togo Ranges",
+        "E. Ahaggar Plateau"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 12 from the 1990 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1990_q17",
+      "questionText": "Which of the following features is not associated with rivers?",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 17,
+      "options": [
+        "A. Delta",
+        "B. Waterfalls",
+        "C. Ria",
+        "D. Meander",
+        "E. Crater"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 17 from the 1990 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1990_q18",
+      "questionText": "Rotation of the earth causes",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 18,
+      "options": [
+        "A. Day and night",
+        "B. Seasons",
+        "C. Eclipses",
+        "D. Equinoxes",
+        "E. Solstices"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 18 from the 1990 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1990_q19",
+      "questionText": "Which of the following minerals is not mined in Ghana?",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 19,
+      "options": [
+        "A. Gold",
+        "B. Tin",
+        "C. Diamond",
+        "D. Manganese",
+        "E. Bauxite"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 19 from the 1990 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1990_q9",
+      "questionText": "Which of the following rivers flows into Lake Volta?",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 9,
+      "options": [
+        "A. Tano",
+        "B. Afram",
+        "C. Pra",
+        "D. Bia",
+        "E. Densu"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 9 from the 1990 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1991_q18",
+      "questionText": "The Meteorological Services Department deals with",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 18,
+      "options": [
+        "A. water",
+        "B. star",
+        "C. power",
+        "D. minerals",
+        "E. weather"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 18 from the 1991 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1991_q28",
+      "questionText": "The Mediterranean lands are well known for the production of",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 28,
+      "options": [
+        "A. minerals",
+        "B. textiles",
+        "C. citrus",
+        "D. metals",
+        "E. chemicals\n\n31. Which of the following diseases cannot be prevented by immunization?"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 28 from the 1991 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1991_q9",
+      "questionText": "The highest annual rainfall in Ghana is recorded at",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 9,
+      "options": [
+        "A. Accra",
+        "B. Kumasi",
+        "C. Sunyani",
+        "D. Navrongo",
+        "E. Axim"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 9 from the 1991 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1992_q1",
+      "questionText": "The colour used on maps for vegetation is",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 1,
+      "options": [
+        "A. brown",
+        "B. green",
+        "C. yellow",
+        "D. red",
+        "E. violet"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 1 from the 1992 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1992_q15",
+      "questionText": "What type of rainfall is likely to be experienced in the Cameroon Mountains?",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 15,
+      "options": [
+        "A. Cyclonic",
+        "B. Relief",
+        "C. Conventional",
+        "D. Monsoon",
+        "E. Line squalls"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 15 from the 1992 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1992_q25",
+      "questionText": "The instrument used for measuring humidity is",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 25,
+      "options": [
+        "A. barometer",
+        "B. thermometer",
+        "C. rain gauge",
+        "D. wind vane",
+        "E. hygrometer"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 25 from the 1992 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1992_q28",
+      "questionText": "Which of the following is a killer disease among children?",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 28,
+      "options": [
+        "A. Tuberculosis",
+        "B. Yellow fever",
+        "C. Measles",
+        "D. Malaria",
+        "E. Kwashiorkor"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 28 from the 1992 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1992_q3",
+      "questionText": "The layer of gases which surrounds the earth is known as",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 3,
+      "options": [
+        "A. atmosphere",
+        "B. temperature",
+        "C. sunshine",
+        "D. ozone",
+        "E. cloud\n\n4. Which of the following is not an agent of erosion?"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 3 from the 1992 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1992_q34",
+      "questionText": "Most of the lakes in East Africa were formed as a result of the",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 34,
+      "options": [
+        "A. rift valley system",
+        "B. fold mountain system",
+        "C. action of volcanoes",
+        "D. action of tropical winds",
+        "E. action of waves"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 34 from the 1992 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1992_q36",
+      "questionText": "The Adomi Bridge is built on one of the following rivers",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 36,
+      "options": [
+        "A. Volta",
+        "B. Ankobra",
+        "C. Tano",
+        "D. Pra",
+        "E. Densu"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 36 from the 1992 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1993_q1",
+      "questionText": "The colour used for showing rivers and lakes on topographical maps is",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 1,
+      "options": [
+        "A. red",
+        "B. blue",
+        "C. brown",
+        "D. green",
+        "E. yellow"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 1 from the 1993 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1993_q10",
+      "questionText": "Use the table below, which shows the temperature and rainfall figures recorded for town A to answer the question below.ClimateMonthsJanFebMarAprMayJunJulAugSeptOctNovDecTemperature°C202830302526302020212020Rainfall(mm)102030561101201003535302010In which month was the highest rainfall recorded?",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 10,
+      "options": [
+        "A. April",
+        "B. May",
+        "C. June",
+        "D. July",
+        "E. August"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 10 from the 1993 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1993_q11",
+      "questionText": "Use the table below, which shows the temperature and rainfall figures recorded for town A to answer the question below.ClimateMonthsJanFebMarAprMayJunJulAugSeptOctNovDecTemperature°C202830302526302020212020Rainfall(mm)102030561101201003535302010The total amount of rainfall recorded for the year was",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 11,
+      "options": [
+        "A. 576 mm",
+        "B. 607 mm",
+        "C. 667 mm",
+        "D. 706 mm",
+        "E. 767 mm"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 11 from the 1993 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1993_q12",
+      "questionText": "Use the table below, which shows the temperature and rainfall figures recorded for town A to answer the question below.ClimateMonthsJanFebMarAprMayJunJulAugSeptOctNovDecTemperature°C202830302526302020212020Rainfall(mm)102030561101201003535302010The annual range of temperature was",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 12,
+      "options": [
+        "A. 10 °C",
+        "B. 20 °C",
+        "C. 21 °C",
+        "D. 25 °C",
+        "E. 30 °C"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 12 from the 1993 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1993_q13",
+      "questionText": "Which of the following statements best describes the position of Ghana?",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 13,
+      "options": [
+        "A. Ghana is to the east of the Republic of Togo",
+        "B. Burkina Faso is the southern neighbour of Ghana",
+        "C. Ghana is to the immediate west of Niger",
+        "D. Ghana is to the immediate east of La Cote d‟Ivoire",
+        "E. Ghana is boarded to the north by the Gulf of Guinea.\n\n14. The main vegetation types found in the Northern parts of Ghana is"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 13 from the 1993 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1993_q17",
+      "questionText": "Which of the following minerals is not mined in Ghana?",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 17,
+      "options": [
+        "A. Gold",
+        "B. Diamond",
+        "C. Tin",
+        "D. Manganese",
+        "E. Bauxite"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 17 from the 1993 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1993_q33",
+      "questionText": "Most of the lakes in East Africa were formed as a result of the",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 33,
+      "options": [
+        "A. rift valley system",
+        "B. fold mountain system",
+        "C. action of volcanoes",
+        "D. action of wind",
+        "E. action of sea waves"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 33 from the 1993 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1993_q37",
+      "questionText": "All the following are metallic minerals except",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 37,
+      "options": [
+        "A. bauxite",
+        "B. copper",
+        "C. gold",
+        "D. diamond",
+        "E. manganese"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 37 from the 1993 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1993_q38",
+      "questionText": "In which of the following countries is the system of apartheid commonly practiced",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 38,
+      "options": [
+        "A. Egypt",
+        "B. Mauritania",
+        "C. Kenya",
+        "D. Nigeria",
+        "E. South Africa\n\n39. Which of the following organizations was set up mainly to help solve the problem of hunger and disease in the world?"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 38 from the 1993 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1994_q10",
+      "questionText": "Convectional rainfall is caused by",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 10,
+      "options": [
+        "A. sinking cold air",
+        "B. ocean currents",
+        "C. mountains",
+        "D. rising warm air",
+        "E. air masses"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 10 from the 1994 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1994_q11",
+      "questionText": "To determine the climate of a place, its weather records are studied for at least",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 11,
+      "options": [
+        "A. 10 years",
+        "B. 20 years",
+        "C. 30 years",
+        "D. 40 years",
+        "E. 50 years"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 11 from the 1994 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1994_q18",
+      "questionText": "Lumbering is difficult in the tropical rain forest regions because of",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 18,
+      "options": [
+        "A. high temperature",
+        "B. lack of roads",
+        "C. high technology",
+        "D. high rainfall",
+        "E. wild animals"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 18 from the 1994 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1994_q38",
+      "questionText": "Which of the following diseases does not attack livestock?",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 38,
+      "options": [
+        "A. Kwashiorkor",
+        "B. Coccidiosis",
+        "C. Anthrax",
+        "D. Newcastle",
+        "E. Sleeping Sickness"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 38 from the 1994 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1994_q8",
+      "questionText": "Coal often occurs in",
+      "type": "multipleChoice",
+      "year": "1994",
+      "questionNumber": 8,
+      "options": [
+        "A. igneous rocks",
+        "B. volcanic rocks",
+        "C. sedimentary rocks",
+        "D. plutonic rocks",
+        "E. metamorphic rocks"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 8 from the 1994 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1994"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1995_q14",
+      "questionText": "Which of the following areas in Ghana is most likely to experience relief rainfall?",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 14,
+      "options": [
+        "A. Lowlands",
+        "B. Accra Plains",
+        "C. Northern Lowlands",
+        "D. Kwahu Scarp",
+        "E. Afram Plains"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 14 from the 1995 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1995_q20",
+      "questionText": "The largest vegetation type in Ghana is",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 20,
+      "options": [
+        "A. Sahel savanna",
+        "B. Guinea savannah",
+        "C. Mangrove forest",
+        "D. Coastal thicket",
+        "E. Evergreen forest"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 20 from the 1995 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1995_q22",
+      "questionText": "The meeting point of two rivers is called the",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 22,
+      "options": [
+        "A. mouth",
+        "B. drainage",
+        "C. source",
+        "D. terminus",
+        "E. confluence"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 22 from the 1995 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1995_q23",
+      "questionText": "Which of the following is a bad effect of heavy rainfall?",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 23,
+      "options": [
+        "A. Provision of potable water",
+        "B. Provision of water for irrigation",
+        "C. Increasing the volume of streams",
+        "D. Causing erosion of soil",
+        "E. Promotion of plant growth"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 23 from the 1995 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1995_q25",
+      "questionText": "Which of the following is not an element of the weather?",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 25,
+      "options": [
+        "A. Rain",
+        "B. Wind",
+        "C. Thermometer",
+        "D. Sunshine",
+        "E. Cloud"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 25 from the 1995 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1995_q3",
+      "questionText": "Children under the age of five years should be immunized against all the following diseases except",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 3,
+      "options": [
+        "A. Polio",
+        "B. Tetanus",
+        "C. Cholera",
+        "D. Diphtheria",
+        "E. Whooping cough"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 3 from the 1995 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1996_q30",
+      "questionText": "Which of the minerals is not mined in Ghana?",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 30,
+      "options": [
+        "A. Gold",
+        "B. Bauxite",
+        "C. Tin",
+        "D. Manganese",
+        "E. Diamond"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 30 from the 1996 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1996_q37",
+      "questionText": "All the following are metallic minerals except",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 37,
+      "options": [
+        "A. bauxite",
+        "B. copper",
+        "C. gold",
+        "D. diamond",
+        "E. manganese"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 37 from the 1996 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1996_q38",
+      "questionText": "There is a large population of white settlers in the highland areas of East Africa because",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 38,
+      "options": [
+        "A. of the beautiful natural vegetation",
+        "B. it is safe to travel along the steep slopes",
+        "C. of sufficient sunshine and warmth",
+        "D. of the availability of rainfall",
+        "E. of the cool and healthy atmosphere"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 38 from the 1996 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1996_q40",
+      "questionText": "Most of the lakes in East Africa were formed as a result of the",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 40,
+      "options": [
+        "A. rift valley system",
+        "B. fold mountain system",
+        "C. action of volcanoes",
+        "D. action of tropical wind",
+        "E. action of waves"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 40 from the 1996 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1996_q5",
+      "questionText": "The time in Ghana is different from the time in Nigeria because of differences in",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 5,
+      "options": [
+        "A. geological size",
+        "B. longitudinal position",
+        "C. population size",
+        "D. climate condition",
+        "E. latitudinal position"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 5 from the 1996 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1996_q6",
+      "questionText": "Some rivers meander in their lower course because",
+      "type": "multipleChoice",
+      "year": "1996",
+      "questionNumber": 6,
+      "options": [
+        "A. the land there is almost flat",
+        "B. the land there is very steep",
+        "C. the river erodes vertically at that stage",
+        "D. deposition is very low at this stage",
+        "E. the land there is strongly undulating"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 6 from the 1996 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1996"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1997_q1",
+      "questionText": "Our environment is made up of",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 1,
+      "options": [
+        "A. plants and animals",
+        "B. roads and rivers",
+        "C. natural and man-made things",
+        "D. vegetation and climate",
+        "E. only non-living things"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 1 from the 1997 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1997_q15",
+      "questionText": "Which of the following vegetation types cannot be found in Ghana?",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 15,
+      "options": [
+        "A. Mangrove Forest",
+        "B. Temperate Woodland",
+        "C. Tropical Deciduous Forest",
+        "D. Guinea Savanna",
+        "E. Sudan Savanna"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 15 from the 1997 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1997_q31",
+      "questionText": "The Meteorological Services Department deals with",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 31,
+      "options": [
+        "A. water",
+        "B. stars",
+        "C. power",
+        "D. minerals",
+        "E. weather"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 31 from the 1997 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1997_q35",
+      "questionText": "The liquid rock beneath the earth‟s surface is called the",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 35,
+      "options": [
+        "A. mantle",
+        "B. crust",
+        "C. magma",
+        "D. layer",
+        "E. atmosphere"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 35 from the 1997 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1997_q7",
+      "questionText": "Latitudes and longitudes are used to",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 7,
+      "options": [
+        "A. decorate maps",
+        "B. locate object on maps",
+        "C. show the direction of streams flow",
+        "D. show heights of mountains on maps",
+        "E. show pressure distribution on maps"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 7 from the 1997 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1997_q8",
+      "questionText": "A teacher explained to his class that Kete Krachi is sited at the meeting place of two rivers. Kete Krachi can therefore be described as",
+      "type": "multipleChoice",
+      "year": "1997",
+      "questionNumber": 8,
+      "options": [
+        "A. group town",
+        "B. delta town",
+        "C. ridge settlement",
+        "D. riverine settlement",
+        "E. confluence town"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 8 from the 1997 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1997"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1998_q3",
+      "questionText": "Which of the following is not an element of the weather?",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 3,
+      "options": [
+        "A. Rain",
+        "B. Wind",
+        "C. Cloud",
+        "D. Sunshine",
+        "E. Dust"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 3 from the 1998 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1998_q39",
+      "questionText": "Power derived from rivers is called",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 39,
+      "options": [
+        "A. Thermal Power",
+        "B. Hydroelectric power",
+        "C. Solar power",
+        "D. Nuclear power",
+        "E. Gas power"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 39 from the 1998 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1998_q8",
+      "questionText": "The largest vegetation zone in West Africa is the",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 8,
+      "options": [
+        "A. tropical rain forest",
+        "B. sudan savanna",
+        "C. guinea savanna",
+        "D. mangrove swamp"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 8 from the 1998 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1999_q27",
+      "questionText": ". Desertification is caused by",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 27,
+      "options": [
+        "A. afforestation",
+        "B. excessive rainfall",
+        "C. overgrazing",
+        "D. irrigation",
+        "E. decrease in population"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 27 from the 1999 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1999_q35",
+      "questionText": "Bush fires occur very often during the",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 35,
+      "options": [
+        "A. rainy season",
+        "B. harvesting season",
+        "C. marketing days",
+        "D. harmattan season",
+        "E. cold season"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 35 from the 1999 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_1999_q6",
+      "questionText": "The difference between the highest and lowest temperature recorded of a place during the day is called the",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 6,
+      "options": [
+        "A. Daily Range of Temperature",
+        "B. Average Monthly Temperature",
+        "C. Daily Average Temperature",
+        "D. Mean Annual Temperature",
+        "E. Daily Mean Temperature"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 6 from the 1999 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2000_q12",
+      "questionText": "The main type of vegetation found in the south-western part of Ghana is the",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 12,
+      "options": [
+        "A. Coastal scrub and grassland",
+        "B. Mangrove forest",
+        "C. Guinea savana",
+        "D. Sudan savana",
+        "E. Rain forest"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 12 from the 2000 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2000_q18",
+      "questionText": "Which of the following ethnic groups is found between the Pra and the Densu rivers ?",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 18,
+      "options": [
+        "A. The Fante",
+        "B. The Ga",
+        "C. The Akwamu",
+        "D. The Adangme",
+        "E. The Sefwi"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 18 from the 2000 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2000_q29",
+      "questionText": "The Drakensberg mountains are found in",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 29,
+      "options": [
+        "A. South Africa",
+        "B. West Africa",
+        "C. East Africa",
+        "D. Central Africa",
+        "E. North Africa"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 29 from the 2000 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2000_q6",
+      "questionText": "The revolution of the earth round the sun causes",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 6,
+      "options": [
+        "A. day and night",
+        "B. high tides",
+        "C. four seasons",
+        "D. earthquakes",
+        "E. line squalls"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 6 from the 2000 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2000_q8",
+      "questionText": "Which of the following towns enjoys a cool climate throughout the year?",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 8,
+      "options": [
+        "A. Accra",
+        "B. Aburi",
+        "C. Nkawkaw",
+        "D. Tema",
+        "E. Koforidua"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 8 from the 2000 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2000_q9",
+      "questionText": "Thick dark clouds, thunder and lightning are associated with",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 9,
+      "options": [
+        "A. convectional rainfall",
+        "B. relief rainfall",
+        "C. evaporation",
+        "D. transpiration",
+        "E. condensation"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 9 from the 2000 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2001_q10",
+      "questionText": "Which of the following rocks are formed from magma?",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 10,
+      "options": [
+        "A. Basalt",
+        "B. Shale",
+        "C. Sandstone",
+        "D. Clay",
+        "E. Coal"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 10 from the 2001 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2001_q23",
+      "questionText": "Which of the following rivers flows along part of the western boundary of Ghana ?",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 23,
+      "options": [
+        "A. Oti",
+        "B. White Volta",
+        "C. Red Volta",
+        "D. Ankobra",
+        "E. Black Volta"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 23 from the 2001 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2001_q31",
+      "questionText": "Which of the following rivers flows into the Atlantic Ocean ?",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 31,
+      "options": [
+        "A. Orange",
+        "B. Limpopo",
+        "C. Nile",
+        "D. Zambezi",
+        "E. Ruvuma"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 31 from the 2001 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2001_q38",
+      "questionText": "The swollen shoot disease affects",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 38,
+      "options": [
+        "A. cotton",
+        "B. coconut",
+        "C. cocoa",
+        "D. coffee",
+        "E. cassava"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 38 from the 2001 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2002_q23",
+      "questionText": "The insect responsible for spreading sleeping sickness disease is",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 23,
+      "options": [
+        "A. locust",
+        "B. housefly",
+        "C. mosquito",
+        "D. tsetse fly"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 23 from the 2002 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2002_q26",
+      "questionText": "Which of the following rivers does not flow into the sea?",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 26,
+      "options": [
+        "A. River Volta",
+        "B. River Afram",
+        "C. River Densu",
+        "D. River Tano"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 26 from the 2002 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2002_q8",
+      "questionText": "Rocks which are formed in layers are known as",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 8,
+      "options": [
+        "A. porous rocks",
+        "B. igneous rocks",
+        "C. metamorphic rocks",
+        "D. sedimentary rocks"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 8 from the 2002 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2003_q26",
+      "questionText": "The Aborigines‟ Rights Protection Society was formed in the Gold Coast to protect",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 26,
+      "options": [
+        "A. political interest of the chiefs",
+        "B. lands and minerals",
+        "C. traditional religious practices",
+        "D. the golden stool from the British"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 26 from the 2003 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2003_q3",
+      "questionText": "The revolution of the earth results in",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 3,
+      "options": [
+        "A. high and low tides",
+        "B. day and night",
+        "C. the four seasons",
+        "D. wind directions"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 3 from the 2003 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2003_q38",
+      "questionText": "Which of the following minerals is non-metallic?",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 38,
+      "options": [
+        "A. Copper",
+        "B. Bauxite",
+        "C. Diamond",
+        "D. Manganese"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 38 from the 2003 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2003_q8",
+      "questionText": "The following are instruments used in measuring the elements of the weather and climate except",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 8,
+      "options": [
+        "A. barometer",
+        "B. thermometer",
+        "C. clinometers",
+        "D. anemometer"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 8 from the 2003 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2004_q26",
+      "questionText": "Which of the following minerals can be used to improve upon the fertility of the soil?",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 26,
+      "options": [
+        "A. Bauxite",
+        "B. Iron",
+        "C. Phosphate",
+        "D. Diamond"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 26 from the 2004 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2005_q27",
+      "questionText": "The high boundary line which divides the flow of rivers in opposite directions is called",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 27,
+      "options": [
+        "A. gentle slope",
+        "B. watershed",
+        "C. steep slope",
+        "D. gap"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 27 from the 2005 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2005_q30",
+      "questionText": "Which of the following types of vegetation is not found in Ghana?",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 30,
+      "options": [
+        "A. Sudan Savanna",
+        "B. Guinea Savanna",
+        "C. Tropical Savanna",
+        "D. Sahel Savanna"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 30 from the 2005 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2005_q35",
+      "questionText": "Which of the following vegetation zones is most suitable for the cultivation of maize?",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 35,
+      "options": [
+        "A. Moist semi-deciduous forest",
+        "B. Sudan savanna",
+        "C. Guinea savanna",
+        "D. Tropical rain forest"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 35 from the 2005 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2006_q13",
+      "questionText": "Which of the following festivals has helped to conserve wildlife?",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 13,
+      "options": [
+        "A. Damba",
+        "B. Hogbetsotso",
+        "C. Homowo",
+        "D. Aboakyer"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 13 from the 2006 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2006_q14",
+      "questionText": "One of the causes of desertification is",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 14,
+      "options": [
+        "A. excessive rainfall",
+        "B. afforestation",
+        "C. decrease in population",
+        "D. overgrazing"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 14 from the 2006 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2006_q17",
+      "questionText": "The guinea worm disease affecting the rural areas can be prevented through the provision of",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 17,
+      "options": [
+        "A. herbal medicine",
+        "B. potable water",
+        "C. qualified doctors",
+        "D. prescribed drugs"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 17 from the 2006 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2006_q26",
+      "questionText": "In which vegetation zone is an oasis found",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 26,
+      "options": [
+        "A. Desert",
+        "B. Tropical Forest",
+        "C. Mediterranean",
+        "D. Guinea Savanna"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 26 from the 2006 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2006_q32",
+      "questionText": "Which of the following factors least affects vegetation in Ghana?",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 32,
+      "options": [
+        "A. Relief",
+        "B. Soil",
+        "C. Climate",
+        "D. Human activities"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 32 from the 2006 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2006_q38",
+      "questionText": "The rotation of the earth on its axis causes",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 38,
+      "options": [
+        "A. eclipse of the moon",
+        "B. eclipse of the sun",
+        "C. day and night",
+        "D. seasonal changes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 38 from the 2006 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2007_q17",
+      "questionText": "The type of rainfall which is mostly experienced in mountainous areas is",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 17,
+      "options": [
+        "A. frontal rainfall",
+        "B. relief rainfall",
+        "C. cyclonic rainfall",
+        "D. conventional rainfall"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 17 from the 2007 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2007_q19",
+      "questionText": "Which of the following minerals is not mined in Ghana?",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 19,
+      "options": [
+        "A. Diamond",
+        "B. Gold",
+        "C. Potassium",
+        "D. Bauxite"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 19 from the 2007 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2007_q26",
+      "questionText": "The vegetation found in the northern part of Ghana is called",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 26,
+      "options": [
+        "A. savanna",
+        "B. rain forest",
+        "C. coastal scrub",
+        "D. mangrove swamp"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 26 from the 2007 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2007_q34",
+      "questionText": "Which of the following Ghanaian rivers does not flow into the sea?",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 34,
+      "options": [
+        "A. Afram",
+        "B. Ankobra",
+        "C. Densu",
+        "D. Pra"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 34 from the 2007 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2007_q37",
+      "questionText": "When the wet bulb and the dry bulb thermometers at the weather station record the same reading it means the air is",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 37,
+      "options": [
+        "A. saturated",
+        "B. dry",
+        "C. condensed",
+        "D. warm"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 37 from the 2007 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2007_q38",
+      "questionText": "The revolution of the earth results in",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 38,
+      "options": [
+        "A. day and night",
+        "B. eclipse of the moon",
+        "C. eclipse of the sun",
+        "D. the four seasons"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 38 from the 2007 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2008_q12",
+      "questionText": "Which of the following cities does not experience the Mediterranean type of climate",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 12,
+      "options": [
+        "A. Accra",
+        "B. Tunis",
+        "C. Tripoli",
+        "D. Cape Town"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 12 from the 2008 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2008_q18",
+      "questionText": "Rocks which are formed in layers are called",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 18,
+      "options": [
+        "A. gneiss",
+        "B. sedimentary",
+        "C. igneous",
+        "D. metamorphic"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 18 from the 2008 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2008_q19",
+      "questionText": "Barometer is an instrument for measuring",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 19,
+      "options": [
+        "A. atmospheric pressure",
+        "B. temperature",
+        "C. wind speed",
+        "D. wind direction"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 19 from the 2008 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2008_q22",
+      "questionText": "Which of the following types of rocks is suitable for road construction?",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 22,
+      "options": [
+        "A. Slate",
+        "B. Marble",
+        "C. Granite",
+        "D. Quartzite"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 22 from the 2008 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2008_q25",
+      "questionText": "What type of vegetation is associated with cold deserts?",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 25,
+      "options": [
+        "A. Steppe",
+        "B. Tundra",
+        "C. Prairie",
+        "D. Coniferous"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 25 from the 2008 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2008_q39",
+      "questionText": "The area with the highest amount of rainfall in Ghana is",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 39,
+      "options": [
+        "A. Cape Coast",
+        "B. Koforidua",
+        "C. Kumasi",
+        "D. Axim"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 39 from the 2008 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2008_q5",
+      "questionText": "The meeting of warm air mass and cold air mass causes",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 5,
+      "options": [
+        "A. cyclonic rainfall",
+        "B. relief rainfall",
+        "C. torrential rainfall",
+        "D. convectional rainfall"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 5 from the 2008 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2009_q3",
+      "questionText": "Cape Town in South Africa falls within the",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 3,
+      "options": [
+        "A. Warm Temperate Climate",
+        "B. Cool Temperate Climate",
+        "C. Tundra Climate",
+        "D. Tropical Climate"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 3 from the 2009 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2009_q30",
+      "questionText": "Rocks that have their original features changed through very high temperature and pressure are called",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 30,
+      "options": [
+        "A. metamorphic",
+        "B. sedimentary",
+        "C. volcanic",
+        "D. igneous"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 30 from the 2009 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2010_q11",
+      "questionText": "The use of orthodox and traditional medicine for the treatment of the same disease is an example of",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 11,
+      "options": [
+        "A. outmoded culture",
+        "B. cultural lag",
+        "C. parallel culture",
+        "D. cultural change"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 11 from the 2010 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2010_q26",
+      "questionText": "Relief rainfall is also known as",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 26,
+      "options": [
+        "A. convectional rainfall",
+        "B. frontal rainfall",
+        "C. orographic rainfall",
+        "D. cyclonic rainfall"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 26 from the 2010 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2010_q8",
+      "questionText": "The outermost part of the earth is called the",
+      "type": "multipleChoice",
+      "year": "2010",
+      "questionNumber": 8,
+      "options": [
+        "A. core",
+        "B. mantle",
+        "C. atmosphere",
+        "D. crust"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 8 from the 2010 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2010"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2011_q10",
+      "questionText": "Which of the following oceans lies between Africa and America?",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 10,
+      "options": [
+        "A. Arctic",
+        "B. Atlantic",
+        "C. Pacific",
+        "D. Indian"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 10 from the 2011 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2011_q24",
+      "questionText": "Which of the following vegetation types experiences high temperature and heavy rainfall throughout the year?",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 24,
+      "options": [
+        "A. Mangrove forest",
+        "B. Tropical vegetation forest",
+        "C. Semi deciduous forest",
+        "D. Woodland savanna"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 24 from the 2011 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2011_q31",
+      "questionText": "The Djebobo and Torogbani mountains are located in the",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 31,
+      "options": [
+        "A. Gambaga escarpment",
+        "B. Atiwa-Atwredu ranges",
+        "C. Akwapim-Togo ranges",
+        "D. Kwahu plateau"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 31 from the 2011 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2011_q5",
+      "questionText": "In which vegetational belt is Ghana‟s cocoa mostly grown?",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 5,
+      "options": [
+        "A. Mangrove swamp",
+        "B. Sudan savanna",
+        "C. Semi-deciduous forest",
+        "D. Guinea savanna"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 5 from the 2011 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2012_q10",
+      "questionText": "On a relief map, the colour brown usually represents",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 10,
+      "options": [
+        "A. plains.",
+        "B. mountains.",
+        "C. water bodies.",
+        "D. lowlands."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 10 from the 2012 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2012_q12",
+      "questionText": "Which of the following vegetation types is not found in Ghana?",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 12,
+      "options": [
+        "A. Sahel woodland",
+        "B. Guinea savanna",
+        "C. Mangrove forest",
+        "D. Tropical rain forest"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 12 from the 2012 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2012_q13",
+      "questionText": "The main type of vegetation found in the south-western part of Ghana is the",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 13,
+      "options": [
+        "A. rain forest.",
+        "B. coastal grassland.",
+        "C. guinea savanna.",
+        "D. mangrove forest."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 13 from the 2012 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2012_q15",
+      "questionText": "The type of rainfall formed by the meeting of two air masses of different temperatures is",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 15,
+      "options": [
+        "A. relief.",
+        "B. frontal.",
+        "C. convectional.",
+        "D. orographic."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 15 from the 2012 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2012_q5",
+      "questionText": "Which of the following diseases is caused by pollution of water bodies?",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 5,
+      "options": [
+        "A. River blindness",
+        "B. Asthma",
+        "C. Cholera",
+        "D. Hepatitis B"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 5 from the 2012 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2013_q1",
+      "questionText": "The environment can best be described as",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 1,
+      "options": [
+        "A. man and his surrounding.",
+        "B. animals and non-living things.",
+        "C. vegetation and non-living things.",
+        "D. man and the vegetation around him."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 1 from the 2013 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2013_q2",
+      "questionText": "The social environment includes",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 2,
+      "options": [
+        "A. settlements, churches and rivers.",
+        "B. settlements, festivals and political parties.",
+        "C. festivals, political parties and religious groups.",
+        "D. festivals, churches and tourist sites."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 2 from the 2013 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2013_q3",
+      "questionText": "Which of the following statements is true? The",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 3,
+      "options": [
+        "A. social and physical environments are inter-dependent.",
+        "B. physical environment is independent of the social environment.",
+        "C. physical environment is never affected by the social environment.",
+        "D. social environment is more important than the physical environment."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 3 from the 2013 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2013_q33",
+      "questionText": "The rotation of the earth causes",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 33,
+      "options": [
+        "A. the seasons.",
+        "B. day and night.",
+        "C. eclipse of the moon.",
+        "D. changes in vegetation."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 33 from the 2013 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2013_q35",
+      "questionText": "When two air masses of different temperatures meet, it results in",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 35,
+      "options": [
+        "A. the formation of relief rainfall.",
+        "B. the formation of cyclonic rainfall.",
+        "C. thunder and lightning.",
+        "D. rain shadow zone."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 35 from the 2013 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2014_q37",
+      "questionText": "Which of the following features forms part of our social environment?",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 37,
+      "options": [
+        "A. Atmosphere",
+        "B. Buildings",
+        "C. Land",
+        "D. Religion"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 37 from the 2014 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2014_q38",
+      "questionText": "Habitats of endangered species of animals can be protected through the creation of",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 38,
+      "options": [
+        "A. forest reserves.",
+        "B. land guards.",
+        "C. tourist centres.",
+        "D. veterinary clinics."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 38 from the 2014 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2014_q6",
+      "questionText": "The physical environment of Ghana can be protected through",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 6,
+      "options": [
+        "A. drying industrial waste",
+        "B. practicing traditional farming",
+        "C. redirecting river channels",
+        "D. recycling of waste materials"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 6 from the 2014 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2015_q1",
+      "questionText": "Which of the following features is not part of the physical environment?",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 1,
+      "options": [
+        "A. Air",
+        "B. Building",
+        "C. Music",
+        "D. Rivers"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 1 from the 2015 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2015_q11",
+      "questionText": "The mangrove swamps in Ghana are found mainly in the",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 11,
+      "options": [
+        "A. Afram plains",
+        "B. coastal areas",
+        "C. highland areas",
+        "D. Oti basin"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 11 from the 2015 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2015_q15",
+      "questionText": "Relief rainfall is experienced in",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 15,
+      "options": [
+        "A. equatorial forest areas",
+        "B. guinea savanna areas",
+        "C. highland areas",
+        "D. lowland areas"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 15 from the 2015 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2016_q12",
+      "questionText": "The outermost part of the earth is called the",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 12,
+      "options": [
+        "A. atmosphere",
+        "B. core",
+        "C. mantle",
+        "D. crust"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 12 from the 2016 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2016_q14",
+      "questionText": "When two air masses of different temperatures meet, the condition results in the formation of",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 14,
+      "options": [
+        "A. rain shadow.",
+        "B. cyclonic rainfall.",
+        "C. relief rainfall.",
+        "D. thunder and lighting."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 14 from the 2016 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2016_q31",
+      "questionText": "Which of the following factors least affects vegetation in Ghana?",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 31,
+      "options": [
+        "A. Climate",
+        "B. Human activities",
+        "C. Relief",
+        "D. Soil"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 31 from the 2016 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2016_q33",
+      "questionText": "The life span of waterbodies are naturally prolonged through",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 33,
+      "options": [
+        "A. adequate rainfall",
+        "B. building of dams",
+        "C. water sanitation",
+        "D. irrigation systems"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 33 from the 2016 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2016_q37",
+      "questionText": "When the wet bulb and the dry bulb thermometer at a weather station record the same reading, it means the air is",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 37,
+      "options": [
+        "A. condensed",
+        "B. dry",
+        "C. saturated",
+        "D. warm"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 37 from the 2016 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2016_q4",
+      "questionText": "Which of the following human activities destroys habitats of animals?",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 4,
+      "options": [
+        "A. Bush burning",
+        "B. Bush fallowing",
+        "C. Inter-cropping",
+        "D. Mixed farming"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 4 from the 2016 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2016_q5",
+      "questionText": "The environment can best be described as",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 5,
+      "options": [
+        "A. animals and non-living things",
+        "B. man and his surroundings",
+        "C. man and vegetation around him",
+        "D. vegetation and non-living things"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 5 from the 2016 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2017_q13",
+      "questionText": "Which of the following is the main reason for the protection of the physical environment?",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 13,
+      "options": [
+        "A. Survival of living things",
+        "B. Ensuring adequate rainfall",
+        "C. Improved standard of living",
+        "D. Ensuring environmental sanitation"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 13 from the 2017 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2017_q29",
+      "questionText": "Relief rainfall is mostly experienced in areas of",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 29,
+      "options": [
+        "A. highlands.",
+        "B. savannahs.",
+        "C. forests.",
+        "D. lowlands"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 29 from the 2017 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2017_q31",
+      "questionText": "Habitats of endangered species of animals can be protected through the creation of",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 31,
+      "options": [
+        "A. land guards.",
+        "B. forest reserves.",
+        "C. tourist centres.",
+        "D. veterinary clinics"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 31 from the 2017 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2017_q9",
+      "questionText": "On which of the following maps of Ghana can a Geographer easily identify the course of the River Volta?",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 9,
+      "options": [
+        "A. Political",
+        "B. Physical",
+        "C. Vegetation",
+        "D. Climatic"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 9 from the 2017 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2018_q25",
+      "questionText": "When a person uses an orthodox and traditional medicine together for the treatment of disease, he is said to be practicing",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 25,
+      "options": [
+        "A. outmoded culture.",
+        "B. cultural lag.",
+        "C. cultural change.",
+        "D. parallel culture."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 25 from the 2018 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2018_q3",
+      "questionText": "The physical environment of Ghana be protected through",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 3,
+      "options": [
+        "A. recycling of waste materials.",
+        "B. re-directing river channels.",
+        "C. practicing traditional farming.",
+        "D. burning of traditional waste."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 3 from the 2018 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2018_q4",
+      "questionText": "When two air masses of different temperature meet, the result is",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 4,
+      "options": [
+        "A. thunder and lightning.",
+        "B. . rain shadow zone.",
+        "C. cyclonic rainfall.",
+        "D. relief rainfall."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 4 from the 2018 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2018_q40",
+      "questionText": "Bush fires occur very often during the",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 40,
+      "options": [
+        "A. rainy season.",
+        "B. cold season.",
+        "C. planting season.",
+        "D. dry season."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 40 from the 2018 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2018_q7",
+      "questionText": "The social environment includes",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 7,
+      "options": [
+        "A. festivals,political parties and religious groups",
+        "B. festivals, churches and tourist sites.",
+        "C. . settlements, churches and rivers.",
+        "D. settlements, festivals and political parties."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 7 from the 2018 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2019_q10",
+      "questionText": "The dry season in southern Ghana starts from the month of November and ends in",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 10,
+      "options": [
+        "A. February.",
+        "B. May.",
+        "C. June.",
+        "D. April."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 10 from the 2019 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2019_q14",
+      "questionText": "The revolution of the earth causes",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 14,
+      "options": [
+        "A. day and night.",
+        "B. differences in length of day and night. C",
+        "C. differences in time between two places.",
+        "D. rise and fall of oceans tides."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 14 from the 2019 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2019_q19",
+      "questionText": "Which instrument is used to measure rainfall amounts?",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 19,
+      "options": [
+        "A. Wind vane",
+        "B. Barometer",
+        "C. Thermometer",
+        "D. Rain gauge"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 19 from the 2019 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2019_q2",
+      "questionText": "Respiratory diseases can be caused by",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 2,
+      "options": [
+        "A. water pollution.",
+        "B. land pollution.",
+        "C. air pollution.",
+        "D. deforestation."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 2 from the 2019 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2019_q27",
+      "questionText": "Which of the following features is not associated with rivers?",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 27,
+      "options": [
+        "A. Waves",
+        "B. Delta",
+        "C. Meander",
+        "D. Valley"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 27 from the 2019 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2019_q39",
+      "questionText": "The physical environment can best be protected through",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 39,
+      "options": [
+        "A. building of dams.",
+        "B. burning of refuse.",
+        "C. recycling of waste.",
+        "D. underground mining."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 39 from the 2019 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2020_q10",
+      "questionText": "A layout in which the houses are not orderly arranged is likely to",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 10,
+      "options": [
+        "A. produce rainfall disasters.",
+        "B. provide water facility easily.",
+        "C. prevent development of slums.",
+        "D. prevent the spread of disasters."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 10 from the 2020 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2020_q34",
+      "questionText": "Which of the following oceans lies between Africa and America?",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 34,
+      "options": [
+        "A. Artic",
+        "B. Atlantic",
+        "C. Pacific",
+        "D. India"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 34 from the 2020 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2020_q4",
+      "questionText": "One way of improving the economy which Ghana inherited from colonization is",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 4,
+      "options": [
+        "A. forming consumer cooperative societies.",
+        "B. increasing demands of foreign aid.",
+        "C. promoting intensive industrialization.",
+        "D. refusing to send students overseas."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 4 from the 2020 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2021_q21",
+      "questionText": "Which of the following tourist attractions is mostly associated with Kintampo in the Bone East region",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 21,
+      "options": [
+        "A. Monkey sanctuary",
+        "B. Bird viewing",
+        "C. Savanna Vegetation",
+        "D. Waterfalls"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 21 from the 2021 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2021_q31",
+      "questionText": "Rivers meander in their lower course because, the",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 31,
+      "options": [
+        "A. valley is almost flat.",
+        "B. valley is very steep.",
+        "C. valley is very steep.",
+        "D. deposition is very low."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 31 from the 2021 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2021_q37",
+      "questionText": "Latitudes and Longitudes can be used to",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 37,
+      "options": [
+        "A. show contour lines on maps.",
+        "B. locate objects on the maps.",
+        "C. show the direction of a stream.",
+        "D. show heights of mountains."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 37 from the 2021 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2021_q4",
+      "questionText": "One benefit Ghana derives from her co-operation with other countries is the",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 4,
+      "options": [
+        "A. prevention of dumping of expired goods.",
+        "B. introduction of foreign culture.",
+        "C. prevention of the spread of communicable diseases.",
+        "D. country's ability to access international funds."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 4 from the 2021 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2022_q10",
+      "questionText": "The revolution of the earth around the sun causes",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 10,
+      "options": [
+        "A. day and night.",
+        "B. deflection of winds and ocean currents.",
+        "C. the four seasons.",
+        "D. the rise and fall of the tides."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 10 from the 2022 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2022_q13",
+      "questionText": "Which of the following is not an element of the weather?",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 13,
+      "options": [
+        "A. Wind",
+        "B. Humidity",
+        "C. Tide",
+        "D. Thermometer"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 13 from the 2022 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2022_q21",
+      "questionText": "The savanna vegetation zones produce cattle because of the",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 21,
+      "options": [
+        "A. Fulani herdsmen",
+        "B. extensive grassland",
+        "C. hot climate",
+        "D. abundant rainfall"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 21 from the 2022 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2022_q24",
+      "questionText": "The colour blue is used on topographical map to indicate",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 24,
+      "options": [
+        "A. buildings and construction",
+        "B. rivers and lakes",
+        "C. mountains and hills",
+        "D. rocks and stones"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 24 from the 2022 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2022_q37",
+      "questionText": "Which of the following accounts for the presence of the equatorial forest in south western Ghana?",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 37,
+      "options": [
+        "A. Lumbering",
+        "B. Afforestation",
+        "C. Cloud cover",
+        "D. Rainfall"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 37 from the 2022 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2022_q39",
+      "questionText": "Which of the following measures can increase tomato yield in Ghana",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 39,
+      "options": [
+        "A. Improved marketing strategies",
+        "B. Availability of credit to farmers",
+        "C. Reliance on rainfall agriculture",
+        "D. Establishment of relating processing factories"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 39 from the 2022 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2023_q15",
+      "questionText": "Which of the following rivers flow into Lake Volta?",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 15,
+      "options": [
+        "A. Afram",
+        "B. Pra",
+        "C. Densu",
+        "D. Tano"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 15 from the 2023 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2023_q18",
+      "questionText": "Which of the following areas in Ghana is most likely to experience relief rainfall?",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 18,
+      "options": [
+        "A. Volta lowlands",
+        "B. Accra plains",
+        "C. Northern lowlands",
+        "D. Kwahu scarp"
+      ],
+      "correctAnswer": null,
+      "explanation": "This is question 18 from the 2023 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2023_q19",
+      "questionText": "Lake Bosomtwe, which is one of the natural lakes in the world is located in the",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 19,
+      "options": [
+        "A. Ashanti Region.",
+        "B. Brong-Ahafo Region.",
+        "C. Central Region.",
+        "D. Eastern Region."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 19 from the 2023 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2023_q34",
+      "questionText": "The southeast Monsoon winds, more often than not bring rainfall to the southern parts of Ghana between",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 34,
+      "options": [
+        "A. December and March.",
+        "B. January and April.",
+        "C. February and June.",
+        "D. April and October."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 34 from the 2023 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2024_q11",
+      "questionText": "Which type of map will be most suitable for determining the elevation of a mountain range?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 11,
+      "options": [
+        "A. Topographical map",
+        "B. Road map",
+        "C. Political map",
+        "D. Weather map"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 11 from the 2024 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2024_q14",
+      "questionText": "There is an ongoing illegal mining activity in a community. The miners are using earth moving machines, cyanide and mercury. Sixty acres of vegetation cover is pulled down every hour. Which of the following options best describes the long term effect of their activities on the land?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 14,
+      "options": [
+        "A. Degradation",
+        "B. Depletion",
+        "C. Erosion",
+        "D. Percolation"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 14 from the 2024 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2024_q19",
+      "questionText": "What type of climate, typically found near the equator is characterized by very high temperatures and very low rainfall?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 19,
+      "options": [
+        "A. Temperature climate",
+        "B. Polar climate",
+        "C. Desert climate",
+        "D. Tropical climate"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 19 from the 2024 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2024_q31",
+      "questionText": "A farmer is preparing to plant crops next week. Why is it important for the farmer to check the weather forecast? To",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 31,
+      "options": [
+        "A. plan a harvest festival.",
+        "B. determine the ideal time for planting.",
+        "C. prepare for a storm.",
+        "D. predict the best time for irrigation."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 31 from the 2024 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2024_q38",
+      "questionText": "A region experiences a significant decrease in temperature and rainfall over a few decades. What factor could be the most likely cause of this?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 38,
+      "options": [
+        "A. Rise in global temperature",
+        "B. Increase in ocean current",
+        "C. Deforestation",
+        "D. Shift in wind pattern"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 38 from the 2024 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2024_q6",
+      "questionText": "Which of the following agricultural practices helps to prevent soil erosion?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 6,
+      "options": [
+        "A. Mono-culture",
+        "B. Crop rotation",
+        "C. Cover cropping",
+        "D. Shifting cultivation"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 6 from the 2024 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2025_q13",
+      "questionText": "In which continent are the Appalachian mountains located?",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 13,
+      "options": [
+        "A. Africa",
+        "B. North America",
+        "C. South America",
+        "D. Australia"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 13 from the 2025 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2025_q29",
+      "questionText": "Which of the following options is the most destructive of volcanic eruption on the environment?",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 29,
+      "options": [
+        "A. Gas emission",
+        "B. Water pollution",
+        "C. Lava flows on vegetation",
+        "D. Loss of lives and property"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 29 from the 2025 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2025_q4",
+      "questionText": "Your school is embarking on an excursion in Asia to see famous mountains. Which of the following mountains are they likely to see?",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 4,
+      "options": [
+        "A. Andes mountains",
+        "B. Atlas mountains",
+        "C. The Rocky mountains",
+        "D. Himalayas mountains"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 4 from the 2025 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2025_q40",
+      "questionText": "Most Ghanaian communities experience flooding during the raining season due to",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 40,
+      "options": [
+        "A. nature having its way.",
+        "B. poor hygienic conditions.",
+        "C. long period of dry season.",
+        "D. siting of buildings on water ways."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 40 from the 2025 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "social_studies_2025_q5",
+      "questionText": "Contours on a map indicate what phenomenon?",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 5,
+      "options": [
+        "A. Elevation changes",
+        "B. Temperate changes",
+        "C. Pressure changes",
+        "D. Changes in rainfall"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 5 from the 2025 BECE Social Studies exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Social Studies",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_1990_q5",
+      "questionText": "What four major benefits do West Africans derive from their rivers? Give specific examples where necessary.",
+      "type": "essay",
+      "year": "1990",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1990 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_1991_q2",
+      "questionText": "The figures below represent the amount of rainfall recorded in a village from 1st to 7th September 1989\n\nSeptember\n\n1st\n\n2nd\n\n3rd\n\n4th\n\n5th\n\n6th\n\n7th\n\nAmount of rainfall (mm)",
+      "type": "essay",
+      "year": "1991",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1991 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_1991_q82",
+      "questionText": "a)\n\n \n\nUsing a graph paper and a suitable scale draw a bar graph to illustrate the figures.\n\nb)\n\n \n\nOn which day was the highest amount of rainfall recorded?\n\nc)\n\n \n\nWhat was the lowest amount of rainfall recorded?\n\nd)\n\n \n\nName the instrument used for recording rainfall.\n\n Show Solution\n\nPART II\n\nNATIONAL COMMUNITY",
+      "type": "essay",
+      "year": "1991",
+      "questionNumber": 82,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1991 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_1993_q2",
+      "questionText": "a)\n\n \n\nName three types of rainfall\n\nb)\n\n \n\nWith the help of a diagram describe how any one type of rainfall is formed.\n\n \n\nPART II\n\nNATIONAL COMMUNITY",
+      "type": "essay",
+      "year": "1993",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1993 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_1994_q3",
+      "questionText": "(a)\n\n \n\nMention four minerals in Ghana.\n\n(b)\n\n \n\nName one important town associated with each mineral mentioned in Ghana.\n\n(c)\n\n \n\nMention the method of extraction of any three of the minerals.\n\n(d)\n\n \n\nGive one use each of any three minerals mentioned.",
+      "type": "essay",
+      "year": "1994",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1994 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_1995_q2",
+      "questionText": "(a)\n\n \n\nName the three (3) types of rainfall.\n\n(b)\n\n \n\nWith the aid of a diagram, describe how any one type of rainfall is formed.\n\n \n\nPART II\n\nNATIONAL COMMUNITY",
+      "type": "essay",
+      "year": "1995",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1995 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_1996_q26",
+      "questionText": "Rainfall (mm)",
+      "type": "essay",
+      "year": "1996",
+      "questionNumber": 26,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1996 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_1996_q3",
+      "questionText": "Explain the importance of rivers in Ghana",
+      "type": "essay",
+      "year": "1996",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1996 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_1996_q30",
+      "questionText": "a)\n\n \n\nCalculate the mean monthly temperature for the first half of the year\n\nb)\n\n \n\nWhat is the annual temperature range?\n\nc)\n\n \n\nFind the total annual rainfall\n\nd)\n\n \n\nDescribe the pattern of rainfall distribution.",
+      "type": "essay",
+      "year": "1996",
+      "questionNumber": 30,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1996 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_1997_q1",
+      "questionText": "a)\n\n \n\nOn the outline map of West Africa provided, insert the following features:\n\ni)\n\n \n\nAccra\n\nii)\n\n \n\nLagos\n\niii)\n\n \n\nRiver Senegal\n\niv)\n\n \n\nRiver Volta\n\nv)\n\n \n\nRiver Niger\n\nvi)\n\n \n\nJos Plateau\n\nb)\n\n \n\nMention any two reasons why most rivers in West Africa are not navigable.\n\n Show Solution",
+      "type": "essay",
+      "year": "1997",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1997 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_1997_q2",
+      "questionText": "a)\n\n \n\nHow are the following features shown on topographical maps?\n\ni)\n\n \n\nRailway\n\nii)\n\n \n\nMarshy area\n\niii)\n\n \n\nCourt House\n\niv)\n\n \n\nMosque\n\nv)\n\n \n\nMarket\n\nvi)\n\n \n\nFarm\n\nb)\n\n \n\nMention two elements of the weather and the instrument used to measure each of them.\n\n \n\nPART II\n\nNATIONAL COMMUNITY",
+      "type": "essay",
+      "year": "1997",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1997 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_1997_q4",
+      "questionText": "a)\n\n \n\nMention five types of timber found in the forests of Ghana.\n\nb)\n\n \n\nGive five reasons that make the timber industry important in Ghana.\n\n \n\nPART III\n\nWEST AFRICA, AFRICA AND THE WORLD",
+      "type": "essay",
+      "year": "1997",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1997 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_1999_q4",
+      "questionText": "a)\n\n \n\nName the four main vegetation types in Ghana.\n\nb)\n\n \n\nState four ways by which the vegetation is being destroyed.\n\nc)\n\n \n\nMention two ways by which the vegetation can be protected.\n\n \n\nPART III\n\nWEST AFRICA, AFRICA AND THE WORLD",
+      "type": "essay",
+      "year": "1999",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1999 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2000_q4",
+      "questionText": "a)\n\n \n\nList four minerals mined in Ghana\n\nb)\n\n \n\nName one important town associated with each of the minerals listed in (a) above\n\nc)\n\n \n\nExplain any four benefits of mining to Ghana\n\n \n\nPART III\n\nWEST AFRICA, AFRICA AND THE WORLD",
+      "type": "essay",
+      "year": "2000",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2001_q1",
+      "questionText": "a)\n\n \n\nDescribe each of the following landforms:\n\ni)\n\n \n\na ridge\n\nii)\n\n \n\na plateau\n\niii)\n\n \n\na conical hill\n\niv)\n\n \n\nan escarpment\n\nb)\n\n \n\nDraw simple labeled contours to represent the landforms mentioned in (a) above using a vertical interval of 50 metres.",
+      "type": "essay",
+      "year": "2001",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2001 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2001_q2",
+      "questionText": "a)\n\n \n\nState the difference between weather and climate.\n\nb)\n\n \n\nMention four elements of the weather and name the instrument used to measure each of them.\n\nc)\n\n \n\nIn what four ways is rainfall important to man?\n\n \n\nPART II\n\nNATIONAL COMMUNITY",
+      "type": "essay",
+      "year": "2001",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2001 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2002_q1",
+      "questionText": "Use the rainfall graph below to answer the questions that follow:\n\nThe graph below shows the rainfall distribution of Station A\n\n\n\na)\n\n \n\nCalculate the average rainfall for the first half of the year.\n\nb)\n\n \n\nFind the total rainfall from July to the end of the year.\n\nc)\n\n \n\nWhich two months of the year have equal amounts of rainfall?\n\nd)\n\n \n\nDescribe the pattern of the rainfall distribution.",
+      "type": "essay",
+      "year": "2002",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2002 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2003_q2",
+      "questionText": "a)\n\n \n\nName three types of rainfall\n\nb)\n\n \n\nWith the help of a diagram describe how any one type of rainfall is formed.\n\n \n\nPART II\n\nNATIONAL COMMUNITY",
+      "type": "essay",
+      "year": "2003",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2003 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2005_q3",
+      "questionText": "a)\n\n \n\nDescribe the formation of relief rainfall.\n\nb)\n\n \n\nMention two areas in Ghana which experiences relief rainfall\n\nc)\n\n \n\nList two benefits of rainfall.",
+      "type": "essay",
+      "year": "2005",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2005 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2006_q3",
+      "questionText": "(a)\n\n \n\nIn what four ways is the forest vegetation important to the Ghanaian?\n\n(b)\n\n \n\nState three ways by which the forest can be preserved.",
+      "type": "essay",
+      "year": "2006",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2006 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2007_q3",
+      "questionText": "a)\n\n \n\nName three types of rainfall experienced in Ghana\n\nb)\n\n \n\nDescribe how any one of the rainfall types is formed",
+      "type": "essay",
+      "year": "2007",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2007 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2009_q3",
+      "questionText": "a)\n\n \n\nDescribe the following terms:\n\ni)\n\n \n\nsource\n\nii)\n\n \n\nconfluence\n\niii)\n\n \n\ntributary\n\niv)\n\n \n\nmouth\n\nb)\n\n \n\nIn what four ways are rivers important in Ghana?\n\nc)\n\n \n\nState two ways by which our water bodies can be protected.",
+      "type": "essay",
+      "year": "2009",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2009 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2011_q1",
+      "questionText": "Study the vegetation map of Ghana below and use it to answer the questions that follow:\n\n\n\n(a)\n\n \n\nIdentify the vegetation types numbered on the map as follows: I, II, III, IV and V.\n\n(b)\n\n \n\nHighlight five benefits of water bodies in Ghana.",
+      "type": "essay",
+      "year": "2011",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2011 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2013_q1",
+      "questionText": "a)\n\n \n\nStudy the map of Ghana shown on below and identify the administrative regions marked I, II, III, IV, V.\n\n\n\nb)\n\n \n\nOutline five ways in which mountains and highlands are important.",
+      "type": "essay",
+      "year": "2013",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2013 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2014_q1",
+      "questionText": "a)\n\n \n\nDifferentiate between a map and a sketch.\n\nb)\n\n \n\nList the four main cardinal points that are used in showing direction.\n\nc)\n\n \n\nState the two main seasons and the periods in which they occur in Ghana.\n\nd)\n\n \n\nDescribe how a cyclonic rainfall occurs.",
+      "type": "essay",
+      "year": "2014",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2014 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2014_q2",
+      "questionText": "a)\n\n \n\nList any two major relief features in Ghana.\n\nb)\n\n \n\nList four oceans of the world.\n\nc)\n\n \n\nOutline four ways by which the forest vegetation in Ghana can be preserved.\n\n \n\nSECTION II\n\nGOVERNMANCE, POLITICS AND STABILITY",
+      "type": "essay",
+      "year": "2014",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2014 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2015_q5",
+      "questionText": "a)\n\n \n\nList four minerals mined in Ghana and indicate where they are mined.\n\nb)\n\n \n\nDescribe four ways in which minerals are important to the economy of Ghana.",
+      "type": "essay",
+      "year": "2015",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2018_q1",
+      "questionText": "a)\n\n \n\nList five examples of natural disasters.\n\nb)\n\n \n\nOutline five ways by which the physical environment can be protected from degradation.",
+      "type": "essay",
+      "year": "2018",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2018 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2023_q1",
+      "questionText": "a)\n\n \n\nList four features of a good map.\n\nb)\n\n \n\nCalculate the time at town 'A' on longitude 45o E if the time at town 'B' on longitude 0o is 9 a.m.\n\nc)\n\n \n\nIn what five ways are rocks useful to the human being?",
+      "type": "essay",
+      "year": "2023",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2023 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_social_studies_2023_q5",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nWhat is a settlement?\n\nii)\n\n \n\nExplain four reasons for which bad layouts of settlements are prevented.\n\nb)\n\n \n\nHighlight four ways in which the forest vegetations of Ghana can be preserved.",
+      "type": "essay",
+      "year": "2023",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2023 Social Studies",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Our Physical Environment"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

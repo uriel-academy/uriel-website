@@ -1,0 +1,1326 @@
+{
+  "topic": "Mixtures",
+  "totalQuestions": 45,
+  "questions": [
+    {
+      "id": "integrated_science_1990_q3",
+      "questionText": "Which of the following processes could be used to obtain water from a salt solution?",
+      "type": "multipleChoice",
+      "year": "1990",
+      "questionNumber": 3,
+      "options": [
+        "A. Filtration",
+        "B. Decantation",
+        "C. Evaporation",
+        "D. Distillation",
+        "E. Sedimentation"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 3 from the 1990 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1990"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1991_q23",
+      "questionText": "When a substance is made up of the same kind of atoms it is called",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 23,
+      "options": [
+        "A. a mixture",
+        "B. a compound",
+        "C. an element",
+        "D. a solution",
+        "E. a solvent"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 23 from the 1991 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1991_q35",
+      "questionText": "A uniform mixture of two or more metals is called",
+      "type": "multipleChoice",
+      "year": "1991",
+      "questionNumber": 35,
+      "options": [
+        "A. a solute",
+        "B. a colloid",
+        "C. a compound",
+        "D. a suspension",
+        "E. an alloy"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 35 from the 1991 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1991"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1992_q21",
+      "questionText": "The process by which a hot saturated solution is cooled to obtain some of the solute is called",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 21,
+      "options": [
+        "A. condensation",
+        "B. evaporation",
+        "C. crystallization",
+        "D. distillation",
+        "E. sedimentation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 21 from the 1992 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1992_q3",
+      "questionText": "Which of the following methods will be most suitable for separating a mixture of iron filings and sulphur powder?",
+      "type": "multipleChoice",
+      "year": "1992",
+      "questionNumber": 3,
+      "options": [
+        "A. Winnowing",
+        "B. Decanting",
+        "C. Magnetization",
+        "D. Evaporation",
+        "E. Distillation"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 3 from the 1992 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1992"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1993_q12",
+      "questionText": "Which of the following mixtures can be separated by filtration?",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 12,
+      "options": [
+        "A. Salt in water",
+        "B. Sugar in water",
+        "C. Sand in water",
+        "D. Oil in water",
+        "E. Omo in water"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 12 from the 1993 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1993_q20",
+      "questionText": "Kerosene and petrol are obtained from crude oil by",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 20,
+      "options": [
+        "A. distillation",
+        "B. condensation",
+        "C. filtration",
+        "D. evaporation",
+        "E. decantation"
+      ],
+      "correctAnswer": "E",
+      "explanation": "This is question 20 from the 1993 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1993_q28",
+      "questionText": "A mixture of raw starch and water is best separated by",
+      "type": "multipleChoice",
+      "year": "1993",
+      "questionNumber": 28,
+      "options": [
+        "A. boiling",
+        "B. distillation",
+        "C. decantation",
+        "D. winnowing",
+        "E. crystallization"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 28 from the 1993 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1993"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1995_q6",
+      "questionText": "A mixture of sugar and water can be separated by",
+      "type": "multipleChoice",
+      "year": "1995",
+      "questionNumber": 6,
+      "options": [
+        "A. Filtration",
+        "B. Evaporation",
+        "C. Decantation",
+        "D. Distillation",
+        "E. Condensation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 6 from the 1995 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1995"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1998_q27",
+      "questionText": "Which of the following processes should be carried out first when separating a mixture of sand and common salt?",
+      "type": "multipleChoice",
+      "year": "1998",
+      "questionNumber": 27,
+      "options": [
+        "A. crystallization of the salt",
+        "B. dissolution of the salt",
+        "C. distillation of the solvent",
+        "D. filtration of the mixture",
+        "E. sublimation of the solute"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 27 from the 1998 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1998"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_1999_q1",
+      "questionText": "1.\n\n \n\nA mixture of sand and common salt could be separated by",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 1,
+      "options": [
+        "A. filtration and distillation",
+        "B. dissolution and evaporation",
+        "C. dissolution, sedimentation and evaporation",
+        "D. dissolution, filtration and evaporation",
+        "E. sedimentation and filtration"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 1 from the 1999 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2000_q20",
+      "questionText": "The method of separation used in the treatment of water at the water works is",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 20,
+      "options": [
+        "A. decantation.",
+        "B. distillation.",
+        "C. evaporation.",
+        "D. magnetization.",
+        "E. precipitation."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 20 from the 2000 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2000_q37",
+      "questionText": "Addition of more solvent to a solution makes the solution more",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 37,
+      "options": [
+        "A. dense.",
+        "B. dilute.",
+        "C. concentrated.",
+        "D. saturated.",
+        "E. super saturated."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 37 from the 2000 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2001_q33",
+      "questionText": "A solution in which no more solute will dissolve at a particular temperature is said to be",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 33,
+      "options": [
+        "A. concentrated.",
+        "B. dilute.",
+        "C. saturated.",
+        "D. insoluble.",
+        "E. unsaturated."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 33 from the 2001 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2001_q35",
+      "questionText": "When oil and water are shaken together they form a mixture called",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 35,
+      "options": [
+        "A. a solution.",
+        "B. an emulsion.",
+        "C. a solute.",
+        "D. a solvent.",
+        "E. a suspension."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 35 from the 2001 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2003_q1",
+      "questionText": "1.\n\n \n\nThe method used to separate an insoluble solid from a liquid is",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 1,
+      "options": [
+        "A. crystallization.",
+        "B. distillation.",
+        "C. filtration.",
+        "D. sublimation."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 1 from the 2003 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2005_q18",
+      "questionText": "Chlorine gas is passed through water during filtration to",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 18,
+      "options": [
+        "A. kill germs.",
+        "B. cause suspended particles to settle.",
+        "C. soften the water.",
+        "D. give taste to the water."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 18 from the 2005 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2005_q20",
+      "questionText": "A solution in which no more solute will dissolve at a given temperature is said to be",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 20,
+      "options": [
+        "A. concentrated.",
+        "B. dilute.",
+        "C. homogeneous.",
+        "D. saturated."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 20 from the 2005 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2006_q23",
+      "questionText": "Which of the following solvents can be used to remove grease from the hand?",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 23,
+      "options": [
+        "A. Alcohol.",
+        "B. Palm kernel oil.",
+        "C. Turpentine.",
+        "D. Water."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 23 from the 2006 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2007_q21",
+      "questionText": "The process whereby a hot saturated solution is cooled to obtain the solute is called",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 21,
+      "options": [
+        "A. condensation.",
+        "B. crystallization.",
+        "C. distillation.",
+        "D. evaporation."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 21 from the 2007 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2008_q22",
+      "questionText": "A uniform mixture of two or more metals is called",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 22,
+      "options": [
+        "A. an alloy.",
+        "B. a compound.",
+        "C. a solvent.",
+        "D. a suspension."
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is question 22 from the 2008 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2009_q19",
+      "questionText": "The method of purification of water containing very little impurities is",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 19,
+      "options": [
+        "A. boiling",
+        "B. chlorination",
+        "C. distillation",
+        "D. filtration"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 19 from the 2009 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2013_q21",
+      "questionText": "Which of the following methods of treating water makes it soft?",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 21,
+      "options": [
+        "A. Addition of alum",
+        "B. Addition of sodium carbonate",
+        "C. Chlorination",
+        "D. Filtration"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 21 from the 2013 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2014_q27",
+      "questionText": "Which of the following statements about the properties of water are correct? ItI. is colourless and tastelessII. is neutral to litmus paperIII. turns red litmus paper blueIV. is a universal solvent",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 27,
+      "options": [
+        "A. I and II only",
+        "B. I and III only",
+        "C. I, II and IV only",
+        "D. I, III and IV only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 27 from the 2014 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2015_q9",
+      "questionText": "The solvent which is most effective in washing bitumen from the hand is",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 9,
+      "options": [
+        "A. acid.",
+        "B. alcohol.",
+        "C. kerosene.",
+        "D. water."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 9 from the 2015 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2016_q26",
+      "questionText": "A mixture of sugar and water could be separated by",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 26,
+      "options": [
+        "A. decantation.",
+        "B. evaporation.",
+        "C. filtration.",
+        "D. sublimation."
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 26 from the 2016 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2017_q11",
+      "questionText": "Which of the following apparatus is not required in the process of distillation in the laboratory?",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 11,
+      "options": [
+        "A. Condenser",
+        "B. Evaporating dish",
+        "C. Bunsen burner",
+        "D. Round bottom flask"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 11 from the 2017 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2017_q19",
+      "questionText": "An example of mixtures that can be separated by the method of filtration is",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 19,
+      "options": [
+        "A. sugar in water.",
+        "B. sand in water.",
+        "C. oil in water.",
+        "D. ink in water."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 19 from the 2017 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2020_q36",
+      "questionText": "A liquid-liquid mixture can be seperated by",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 36,
+      "options": [
+        "A. filtration",
+        "B. evaporation",
+        "C. sublimation",
+        "D. distillation"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 36 from the 2020 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2020_q37",
+      "questionText": "When an unknown solution reacted with magnesium, a gas was produced. Which of the following solutions could be the unknown solution",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 37,
+      "options": [
+        "A. Sodium chloride solution",
+        "B. Sodium hydroxide solution",
+        "C. Hydrochloric acid",
+        "D. Calcium nitrate solution"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 37 from the 2020 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2022_q28",
+      "questionText": "A mixture of alcohol and water can best be separated by",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 28,
+      "options": [
+        "A. filtration.",
+        "B. condensation.",
+        "C. distillation.",
+        "D. evaporation."
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 28 from the 2022 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2022_q7",
+      "questionText": "The solid component found on the filter paper and the liquid component that flows into a container during filtration are respectively called",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 7,
+      "options": [
+        "A. filtrate and residue.",
+        "B. condensate and residue.",
+        "C. residue and filtrate.",
+        "D. residue and condensate"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is question 7 from the 2022 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2023_q37",
+      "questionText": "The use of separating funnel is most appropriate for separating which of the following mixtures?",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 37,
+      "options": [
+        "A. Sulphur and water",
+        "B. Water and sodium chloride",
+        "C. Vegetable oil and kerosene",
+        "D. Water and vegetable oil"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is question 37 from the 2023 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2024_q10",
+      "questionText": "Two unknown solutions labelled A and B were brought to a JHS 3 class. It was observed that in solution A, red litmus paper changed colour to blue, whiles in solution B, red litmus paper retained its colour. What could be the content of solution A?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 10,
+      "options": [
+        "A. Car battery fluid",
+        "B. Salt solution",
+        "C. Baking soda",
+        "D. Orange juice"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 10 from the 2024 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "integrated_science_2024_q13",
+      "questionText": "The portion of air which acts as a solvent is",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 13,
+      "options": [
+        "A. oxygen.",
+        "B. carbon (IV) oxide.",
+        "C. nitrogen.",
+        "D. an inert gas."
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is question 13 from the 2024 BECE Integrated Science exam.",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Integrated Science",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_1990_q1",
+      "questionText": "(a)\n\n \n\nDefine the following terms and give one example of each:\n\n(i)\n\n \n\nCompound\n\n(ii)\n\n \n\nMixture\n\n(iii)\n\n \n\nElement\n\n(iv)\n\n \n\nSolute\n\n(b)\n\n \n\nWhat energy changes take place in the following processes?\n\n(i)\n\n \n\nA mango drops from a tree.\n\n(ii)\n\n \n\nA carpenter hits a nail with a hammer.\n\n(iii)\n\n \n\nA torch is switched on.\n\n(c)\n\n \n\n(i)\n\n \n\nDraw a well labeled diagram of a flower\n\n(ii)\n\n \n\nOf what importance is the flower to the plant?\n\n(d)\n\n \n\nName the sense organs and state one function of each.",
+      "type": "essay",
+      "year": "1990",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1990 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_1996_q2",
+      "questionText": "(a)\n\n \n\nDraw and label a diagram to show how the eclipse of the sun is formed.\n\n(b)\n\n \n\n(i)\n\n \n\nWhat is a lever?\n\n(ii)\n\n \n\nClassify the following as first class lever, second class lever or third class lever by copying and completing the table below:\n\nBeam balance, crowbar, wheel barrow, a pair of scissors, claw hammer, sugar tong, human fore-arm and bottle opener\n\nFirst class lever\n\nSecond class lever\n\nThird class lever\n\n\n\n\n\n\n\n(c)\n\n \n\n(i)\n\n \n\nWhat is pollination?\n\n(ii)\n\n \n\nGive two agents of pollination.\n\n(d)\n\n \n\nName three excretory organs and the products they excrete.\n\n(e)\n\n \n\n(i)\n\n \n\nWhat is an alloy?\n\n(ii)\n\n \n\nWhat are the compositions of each of the following alloys?\n\nBronze, Brass, Steel and Duralumin\n\n(f)\n\n \n\nSodium chloride is prepared by the reaction between dilute hydrochloric acid and sodium hydroxide solution. Write down the equation for this reaction.",
+      "type": "essay",
+      "year": "1996",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1996 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2011_q3",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nWhat is a mixture?\n\nii)\n\n \n\nExplain why some mixtures are thoroughly stirred before they are used.\n\nb)\n\n \n\ni)\n\n \n\nWhat is reflection of light?\n\nii)\n\n \n\nState two characteristics of the images formed by plane mirrors.\n\nc)\n\n \n\ni)\n\n \n\nWhat is a fertilizer?\n\nii)\n\n \n\nGive one example of an inorganic fertilizer.\n\nd)\n\n \n\ni)\n\n \n\nWhat is indiscriminate sex?\n\nii)\n\n \n\nState two dangers of indiscriminate sex on humans.",
+      "type": "essay",
+      "year": "2011",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2011 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2011_q6",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nDefine each of the following terms:\n\nα)\n\n \n\nsolvent;\n\nβ)\n\n \n\nsolute.\n\nii)\n\n \n\nName one common solvent used in the home.\n\nb)\n\n \n\nExplain the following terms as used in animal production:\n\ni)\n\n \n\nration;\n\nii)\n\n \n\ndehorning.\n\nc)\n\n \n\ni)\n\n \n\nWhat is an element?\n\nii)\n\n \n\nWrite down the symbol of each of the following chemical substances:\n\nα)\n\n \n\nPotassium;\n\nβ)\n\n \n\nSulphur.\n\nd)\n\n \n\nExplain each of the following terms:\n\ni)\n\n \n\nMixed farming;\n\nii)\n\n \n\nMixed cropping.",
+      "type": "essay",
+      "year": "2011",
+      "questionNumber": 6,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2011 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2012_q4",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nWhat is a transistor?\n\nii)\n\n \n\nGive two uses of a transistor.\n\nb)\n\n \n\nMention the suitable solvent for each of the following solutes:\n\ni)\n\n \n\ngrease;\n\nii)\n\n \n\nink stain;\n\niii)\n\n \n\nstarch;\n\niv)\n\n \n\ncube sugar;\n\nv)\n\n \n\noil paint;\n\nvi)\n\n \n\niodine.\n\nc)\n\n \n\ni)\n\n \n\nWhat is a respiratory organ?\n\nii)\n\n \n\nName two structures of the respiratory system of humans.\n\nd)\n\n \n\ni)\n\n \n\nWhat is agricultural chain?\n\nii)\n\n \n\nName two types of agricultural chain.",
+      "type": "essay",
+      "year": "2012",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2012 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2016_q4",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nWhat is a satellite?\n\nii)\n\n \n\nGive three uses of artificial satellites.\n\nb)\n\n \n\nState the composition of each of the following alloys:\n\ni)\n\n \n\nBrass\n\nii)\n\n \n\nSteel\n\niii)\n\n \n\nBronze\n\nc)\n\n \n\nName three cultural practices used in vegetable production.\n\nd)\n\n \n\nList four parts of the respiratory system in humans.",
+      "type": "essay",
+      "year": "2016",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2016 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2018_q1",
+      "questionText": "a)\n\n \n\nThe diagram below is an illustration of a fish.\n\nStudy the diagram carefully and answer the questions that follow.\n\n\n\ni)\n\n \n\nIdentify the fish.\n\nii)\n\n \n\nName each of the parts labeled I, II, III, V.\n\niii)\n\n \n\nName that habitat of the fish.\n\niv)\n\n \n\nExplain how each of the parts labelled III and VI enables the fish adapt to its habitat.\n\nb)\n\n \n\nThe diagram below is an illustration of a section through the soil.\n\nStudy the diagram carefully and answer the questions that follow.\n\n\n\ni)\n\n \n\nWhat does the diagram represent?\n\nii)\n\n \n\nName each of the parts labelled I, II, III, IV.\n\niii)\n\n \n\nWhich part of the diagram:\n\nα)\n\n \n\nis the richest in humus?\n\nβ)\n\n \n\nis the habitat for soil organisms?\n\nγ)\n\n \n\nundergoes weathering?\n\niv)\n\n \n\nWhat is the effect of heavy rainfall on the part labelled I?\n\nc)\n\n \n\nThe diagram below is an illustration of an electrical circuit.\n\nStudy the diagram carefully and answer the questions that follow.\n\n\n\ni)\n\n \n\nName each of the parts labelled I, II, IV, VI.\n\nii)\n\n \n\nState the energy transformation that takes place in:\n\nα)\n\n \n\nI\n\nβ)\n\n \n\nIV\n\niii)\n\n \n\nState the S.I units of the quantity measured by each of the parts labelled:\n\nα)\n\n \n\nIII\n\nβ)\n\n \n\nV\n\niv)\n\n \n\nState the function of the part labelled VI.\n\nd)\n\n \n\nIn an experiment, equal volumes and equal concentrations of dilute hydrochloric acid and dilute sodium hydroxide solutions were each placed in different test tubes.\n\nRead the following statements carefully.\n\nI. Both red and blue litmus papers were dipped into each of the solutions in turns.\n\nII. Equal volumes of the solutions were mixed to obtain a third solution.\n\nIII. Both red and blue litmus papers were dipped into the third solution.\n\nUse the information provided to answer the following questions.\n\ni)\n\n \n\nExplain briefly how you can identify each of the solutions\n\nα)\n\n \n\nHydrochloric acid\n\nβ)\n\n \n\nSodium hydroxide\n\nii)\n\n \n\nState the types of reaction that occurred when the two solutions were mixed.\n\niii)\n\n \n\nWhat type of solution was formed when the reaction stated in (ii) occurred?\n\niv)\n\n \n\nState what would be observed when both red and blue litmus papers were dipped into the third solution.\n\nv)\n\n \n\nExplain how the solid portion of the solution named in (iii) could be obtained.",
+      "type": "essay",
+      "year": "2018",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2018 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2021_q1",
+      "questionText": "(a)\n\n \n\nThe diagrams below are illustrations of a set-up used to study the conditions for seed germination. The flasks are kept at 25 oC during the experiment. Study the diagrams carefully and answer the questions that follow.\n\n\n\n(i)\n\n \n\nWhat conclusion can be drawn from the results of flask 1 and flask 2?\n\n(ii)\n\n \n\nWhat conclusion can be drawn from the results of flask 2 and flask 3?\n\n(iii)\n\n \n\nThe seedings in flask 2 died after two weeks. What can be the reasons for this occurrence?\n\n(iv)\n\n \n\nA candidate concluded that light was an important factor for the germination. Did the candidate make a correct conclusion?\n\n(v)\n\n \n\nGive a reason for the answer stated in (iv) and state which of the flasks in the experiment could be used to support your answer.\n\n(b)\n\n \n\nThe diagram below are illustrations of an experimental set-up. Study the diagrams carefully and answer the questions that follow.\n\n\n\n(i)\n\n \n\nName the measuring instrument that is in:\n\n(α)\n\n \n\nparallel;\n\n(β)\n\n \n\nseries;\n\nWith the resistor R\n\n(ii)\n\n \n\nWhat quantity does each of the named instruments in (i) measure?\n\n(iii)\n\n \n\nRead and record the values as indicated on:\n\n(α)\n\n \n\nA in amperes;\n\n(β)\n\n \n\nV in volts.\n\n(iv)\n\n \n\nUse the values read in (iii) to calculate the value of R.\n\n(v)\n\n \n\nState one precaution to be taken in performing this experiment.\n\n(c)\n\n \n\nThe diagrams below are illustrations of soil.Study the illustrations carefully and answer the questions that follow.\n\n\n\n(i)\n\n \n\nIdentify each of the soil types labelled A, B and C\n\n(ii)\n\n \n\nDescribe each of the soils under the following properties:\n\n(α)\n\n \n\nParticle size\n\n(β)\n\n \n\nAir space\n\n(iii)\n\n \n\nState two ways of improving soil type B for vegetable cultivation.\n\n(d)\n\n \n\nThe diagrams below is a set-up for preparation of common salt in the laboratory. Study the diagrams carefully and answer the questions that follow.\n\n\n\n(i)\n\n \n\nName each of the parts labelled IV, V and VI.\n\n(ii)\n\n \n\nName two possible solutions that can react to product salt.\n\n(iii)\n\n \n\nName the process that takes place when the two solution named in (ii) react.\n\n(iv)\n\n \n\nName the process that takes place in the set-up B.\n\n(v)\n\n \n\nWrite a balanced chemical equation for the reaction between the two solutions named in (ii).\n\n Show Solution",
+      "type": "essay",
+      "year": "2021",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2021 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2022_q1",
+      "questionText": "(a)\n\n \n\nThe diagrams below are illustrations of an experimental set-up.\n\nStudy the diagrams carefully and answer the questions that follow.\n\n\n\n(i)\n\n \n\nIdentify each of the parts labelled I, II and III.\n\n(ii)\n\n \n\nName the method of separation in each of the set-up:\n\nΑ\n\n \n\nA;\n\nΒ\n\n \n\nB.\n\n(iii)\n\n \n\nState the class of mixtures that the experimental set-up A could be used for.\n\n(iv)\n\n \n\nGive a reason for the answer stated in (iii).\n\n(v)\n\n \n\nName one possible component of the mixture in set-up B.\n\n(vi)\n\n \n\nState the function of the part labelled IV.\n\n(b)\n\n \n\nThe diagram below is an illustration of a part of a system in human.\n\nStudy the diagram carefully and answer the questions that follow.\n\n\n\n(i)\n\n \n\nName the system illustrated\n\n(ii)\n\n \n\nName each of the parts labelled, I,II,III, and IV.\n\n(iii)\n\n \n\nWhat is the role of the part labelled I.\n\n(iv)\n\n \n\nName three diseases that affects the system illustrated.\n\n(c)\n\n \n\nThe diagram below is an illustration of an experimental set-up used to measure an ecological factor.\n\nStudy the diagram carefully and answer the questions that follow.\n\n\n\n(i)\n\n \n\nIdentify the apparatus illustrated.\n\n(ii)\n\n \n\nName each of the parts labelled I,II and III.\n\n(iii)\n\n \n\nGive one use each of the parts labelled I and II.\n\n(iv)\n\n \n\nWhat ecological factor was measured?\n\n(v)\n\n \n\nState three ways in which the ecological factor measured in (iv) is important in agricultural soils.\n\n(vi)\n\n \n\nName one farm tool that aids the ecological factor measured in (iv) to perform its function in agricultural soils.\n\n(vii)\n\n \n\nDescribe how the farm soil tool named in (vi) is used to aid the factor measured in the experiment.\n\n(d)\n\n \n\nThe diagrams below are illustrations of electrical circuits.\n\nStudy the diagram carefully and answer the questions that follow.\n\n\n\n(i)\n\n \n\nIdentify each of the components labelled I, II and III.\n\n(ii)\n\n \n\nState the type of arrangement of resistors (R) in B.\n\n(iii)\n\n \n\nState the effect of the arrangement of resistors in each of the diagrams A and B on III.\n\n(iv)\n\n \n\nGive a reason for each of the answers stated in (iii).",
+      "type": "essay",
+      "year": "2022",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2022 Integrated Science",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_integrated_science_2025_q3",
+      "questionText": "(a)\n\n \n\nName two:\n\n(i)\n\n \n\nanimal products used in preparing protein-rich feed for poultry;\n\n(ii)\n\n \n\nplant produces used in preparing carbohydrate-rich feed for poultry.\n\n[4 marks]\n\n(b)\n\n \n\nDescribe briefly the water cycle.\n\n[6 marks]\n\n(c)\n\n \n\nConsider the following mixtures:\n\nAir, vinegar.\n\nAir is essential to life.\n\nVinegar is a common household substance.\n\n(i)\n\n \n\nName the two major components of each mixture.\n\n(ii)\n\n \n\nWhich of the components named in (i) acts as the solvent in each of the mixtures?\n\n[6 marks]\n\n(d)\n\n \n\n(i)\n\n \n\nState two reasons why there is no life on the planet Jupiter.\n\n(ii)\n\n \n\nList two other outer planets without life.\n\n[4 marks]",
+      "type": "essay",
+      "year": "2025",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2025 Integrated Science",
+      "marks": 4,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Mixtures"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

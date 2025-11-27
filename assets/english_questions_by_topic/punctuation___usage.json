@@ -1,0 +1,41 @@
+{
+  "topic": "Punctuation & Usage",
+  "questions": [
+    {
+      "id": "theory_english_2015_q4",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "english",
+      "subjectDisplay": "English",
+      "examType": "bece",
+      "year": "2015",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 English",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2015",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148616,
+        "_nanoseconds": 950000000
+      },
+      "paperInstructions": "",
+      "questionText": "Read the following passage carefully and answer all the questions which follow.\n\n \n\nThe dry season was very long. The people waited anxiously for the rains to plant their seeds. The rain clouds that appeared occasionally were deceptive. To while away the time, they wove baskets and kente; others carved stools or sat under trees, playing games and drinking palm wine.\n\n \n\nSentu and his family were on the verge of starvation. They had just one cassava farm left to feed on. The maize in the barn was all gone. In fact, they had started eating the seed maize. Sentu kept wondering how he would get seeds to plant when the rainy season eventually started. He went to inspect the traps he had set for the rodent that had been feasting on the cassava. If the traps caught any animals, it would be a double blessing; he would get meat and reduce the population of 'his enemies', the pests. While inspecting his traps, h saw some smoke. He dashed towards it. He tried to put out the fire but could not. He shouted for help. In a twinkling of an eye, the whole farm had been destroy. Sentu wept uncontrollably.\n\n \n\nWhen he raeched the village, his neighbours rushed to his house to console him. They gave him foodstuff and promised to help him get back on his feet. Tutu, the palm-wine tapper, visited Sentu that evening. He was accompanied by two elderly and highly respected men in the village. Their mission was simple. Tutu had asked them to apologize to Sentu on his behalf. It was the fire from Tutu's torch that had caused the havoc and brought such agony to Sentu's family. What could Sentu do or say?\n\n \n\n(a)I. What was the main occupation of the people?\n\n(a)II. State two other things they did that could earn them an income.\n\n \n\n(b)I. What does 'pests' refer to?\n\n(b)II. Why did the writer refer to the pests as 'his enemies'?\n\n \n\n(c)I. How did Sentu feel when his farm was burnt?\n\n(c)II. Why did he feel that way?\n\n \n\n(d) For what two reasons did Tutu choose the elderly and highly respected men to accompany him to visit Sentu?\n\n \n\n(e) Explain the following expressions in your own words.\n\nI. a double blessing;\n\nII. wept uncontrollably;\n\nIII. get back on his feet.\n\n \n\n(f) For each of the following words, give another word or phrase that means the same and can fit into the passage;\n\nI. anxiously;\n\nII. deceptive;\n\nIII. dashed;\n\nIV. mission;\n\nV. agony.",
+      "partHeader": "PART B - READING"
+    }
+  ],
+  "questionCount": 1
+}

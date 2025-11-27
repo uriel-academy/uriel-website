@@ -1,0 +1,39 @@
+{
+  "topic": "Sculpture & Modelling",
+  "questions": [
+    {
+      "id": "theory_creative_arts_2025_q3",
+      "questionText": "(a)\n\n \n\nAku has been tasked to produce a vase with clay for the upcoming interschool art competition.\n\n(i)\n\n \n\nList two tests that can be done on the clay for its suitability.\n\n[2 marks]\n\n(ii)\n\n \n\nDescribe in three steps how to prepare the clay for the task.\n\n[3 marks]\n\n(iii)\n\n \n\nIdentify one technique that can be used to decorate the vase.\n\n[1 mark]\n\n(b)\n\n \n\nThe creative arts learners displayed their works for appreciation. As part of the class, explain three benefits that you will derive from this activity.\n\n(i)\n\n \n\n(ii)\n\n \n\n(iii)\n\n \n\n[9 marks]",
+      "questionNumber": 3,
+      "marks": 2,
+      "type": "essay",
+      "subject": "creativeArts",
+      "subjectDisplay": "Creative Arts",
+      "examType": "bece",
+      "year": "2025",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2025 Creative Arts",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2025",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148615,
+        "_nanoseconds": 891000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148615,
+        "_nanoseconds": 891000000
+      }
+    }
+  ],
+  "questionCount": 1
+}

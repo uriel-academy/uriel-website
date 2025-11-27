@@ -1,0 +1,85 @@
+{
+  "topic": "Geometric Constructions",
+  "questions": [
+    {
+      "id": "Lq7U8pBcp8BTiYRZuKfD",
+      "year": "2007",
+      "subject": "mathematics",
+      "questionNumber": 26,
+      "questionText": "In which of the following constructions is P equidistant from the points A and B?",
+      "options": [
+        "A. ",
+        "B. ",
+        "C. ",
+        "D. "
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763480223,
+        "_nanoseconds": 394000000
+      },
+      "difficulty": "medium",
+      "createdBy": "system_import",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "2007"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "updatedAt": {
+        "_seconds": 1763487090,
+        "_nanoseconds": 958000000
+      }
+    },
+    {
+      "id": "o9hJ8u5Uprw1o6kEm2Cx",
+      "year": "1991",
+      "subject": "mathematics",
+      "questionNumber": 40,
+      "questionText": "Which of these best describes the given construction?",
+      "explanation": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null,
+      "createdAt": {
+        "_seconds": 1763479575,
+        "_nanoseconds": 882000000
+      },
+      "difficulty": "medium",
+      "topics": [
+        "Mathematics",
+        "BECE",
+        "1991"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "marks": 1,
+      "isActive": true,
+      "type": "multipleChoice",
+      "createdBy": "system_import_v2",
+      "options": [
+        "A. Bisecting a line",
+        "B. Constructing the bisector of a line segment",
+        "C. Constructing the perpendicular to a line",
+        "D. Constructing a perpendicular to a given line from a point outside the line",
+        "E. Constructing a perpendicular to a given line through a point on the line"
+      ],
+      "correctAnswer": "D",
+      "updatedAt": {
+        "_seconds": 1763487077,
+        "_nanoseconds": 776000000
+      }
+    }
+  ],
+  "questionCount": 2
+}

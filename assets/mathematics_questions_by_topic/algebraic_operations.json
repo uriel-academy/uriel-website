@@ -1,0 +1,171 @@
+{
+  "topic": "Algebraic Operations",
+  "questions": [
+    {
+      "id": "theory_mathematics_1996_q4",
+      "questionText": "Using a ruler and a pair of compasses only,\n\n(a)\n\n \n\nConstruct triangle ABC such that |AB| = 6 cm, |AC| = 10cm and |BC| = 8 cm. Measure angle ABC.\n\n(b)\n\n \n\nConstruct the perpendicular bisectors (mediators) of |AB| and |BC|. Let the bisectors meet at O.\n\n(c)\n\n \n\nConstruct a circle with centre O and radius OA. Measure the radius of the circle.",
+      "questionNumber": 4,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1996",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1996 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1996",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1997_q2",
+      "questionText": "Using a ruler and a pair of compasses only,\n\n(a)\n\n \n\n(i)\n\n \n\nconstruct a triangle ABC such that |AB| = 8 cm, angle ABC = 60° and |BC| = 8 cm.\n\n(ii)\n\n \n\nWhat type of triangle is triangle ABC?\n\n(b)\n\n \n\nconstruct the bisector of angle BAC to meet |BC| at D. Measure |AD|.\n\n(c)\n\n \n\nconstruct the perpendicular bisector of |BA| to meet |AD| at O.\n\n(d)\n\n \n\nUsing O as centre and radius OD, draw a circle to touch the three sides of the triangle.",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1997",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1997 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1997",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_1998_q2",
+      "questionText": "(a)\n\n \n\nUsing a ruler and a pair of compasses only,\n\n(i)\n\n \n\nconstruct a triangle PQR such that |PQ| = 8 cm, angle RPQ = 90° and angle PQR = 30°. Measure |RQ|\n\n(ii)\n\n \n\nconstruct the perpendicular bisector (mediator) of RQ. Let it meet RQ at O.\n\n(b)\n\n \n\nWith O as centre and radius OP, draw a circle. Measure |OP|.\n\n(c)\n\n \n\nWhat is the special name for the chord RQ?",
+      "questionNumber": 2,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "1998",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1998 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 1998",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2003_q5",
+      "questionText": "(a)\n\n \n\nUsing a pair of compasses and ruler only,\n\n(i)\n\n \n\nConstruct the triangle ABC with |AB| = 8 cm, |BC| = 8cm and |AC| = 7cm.\n\n(ii)\n\n \n\nBisect angle ABC and let the bisector meet AC at D. Produce |BD| to P such that |BD| = |DP|. Join AP and CP.\n\n(b)\n\n \n\nMeasure\n\n(i)\n\n \n\nangle ADB;\n\n(ii)\n\n \n\n|AP|.\n\n(c)\n\n \n\nWhat kind of quadrilateral is ABCP?",
+      "questionNumber": 5,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2003",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2003 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2003",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    },
+    {
+      "id": "theory_mathematics_2012_q16",
+      "questionText": "in ascending order of magnitude.\n\n(b)\n\n \n\nUsing a ruler and a pair of compass only,\n\n(i)\n\n \n\nconstruct a triangle PQR with length PQ = 10 cm, angles QPR = 45o and PQR = 60o.\n\n(ii)\n\n \n\nConstruct the perpendicular bisectors of PR and RQ to meet at T.\n\n(iii)\n\n \n\nMeasure the length of TP.",
+      "questionNumber": 16,
+      "marks": 5,
+      "type": "essay",
+      "subject": "mathematics",
+      "subjectDisplay": "Mathematics",
+      "examType": "bece",
+      "year": "2012",
+      "difficulty": "medium",
+      "topics": [],
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2012 Mathematics",
+      "createdBy": "system_import",
+      "isActive": true,
+      "metadata": {
+        "source": "BECE 2012",
+        "importDate": "2025-11-26T09:16:51.869Z",
+        "verified": true,
+        "timestamp": 1764148611869,
+        "isTheoryQuestion": true
+      },
+      "createdAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      },
+      "updatedAt": {
+        "_seconds": 1764148622,
+        "_nanoseconds": 646000000
+      }
+    }
+  ],
+  "questionCount": 5
+}
