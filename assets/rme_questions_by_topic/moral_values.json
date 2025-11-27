@@ -1,0 +1,5626 @@
+{
+  "topic": "Moral Values",
+  "totalQuestions": 182,
+  "questions": [
+    {
+      "id": "rme_1999_q15",
+      "questionText": "The act of going round the Ka'ba seven times during the Hajj teaches",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 15,
+      "options": [
+        "A. bravery",
+        "B. cleanliness",
+        "C. humility",
+        "D. endurance",
+        "E. honesty"
+      ],
+      "correctAnswer": "D. endurance",
+      "explanation": "BECE 1999 RME Question 15",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_1999_q24",
+      "questionText": "The water and wine or gin given to the child during naming ceremony signifies",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 24,
+      "options": [
+        "A. loyalty",
+        "B. faithfulness",
+        "C. truthfulness",
+        "D. respect",
+        "E. obedience"
+      ],
+      "correctAnswer": "C. truthfulness",
+      "explanation": "BECE 1999 RME Question 24",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_1999_q32",
+      "questionText": "The traditional saying that \"one finger cannot pick a stone\" means",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 32,
+      "options": [
+        "A. it is easier for people to work together",
+        "B. a crab cannot give birth to a bird",
+        "C. patience is good but hard to practice",
+        "D. poor people have no friends",
+        "E. one should take care of the environment"
+      ],
+      "correctAnswer": "A. it is easier for people to work together",
+      "explanation": "BECE 1999 RME Question 32",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_1999_q36",
+      "questionText": "Cleanliness is next to",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 36,
+      "options": [
+        "A. obedience",
+        "B. service",
+        "C. godliness",
+        "D. neatness",
+        "E. faithfulness"
+      ],
+      "correctAnswer": "C. godliness",
+      "explanation": "BECE 1999 RME Question 36",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_1999_q38",
+      "questionText": "To show regret for a behaviour means",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 38,
+      "options": [
+        "A. faithfulness",
+        "B. obedience",
+        "C. repentance",
+        "D. sincerity",
+        "E. honesty"
+      ],
+      "correctAnswer": "C. repentance",
+      "explanation": "BECE 1999 RME Question 38",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_1999_q39",
+      "questionText": "A courteous child...",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 39,
+      "options": [
+        "A. does not speak to elders with hands in pocket",
+        "B. is the one who does not respect the teacher",
+        "C. always goes to school late",
+        "D. does not do his homework",
+        "E. is the one who does not obey his parents"
+      ],
+      "correctAnswer": "A. does not speak to elders with hands in pocket",
+      "explanation": "BECE 1999 RME Question 39",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_1999_q8",
+      "questionText": "Muslim's last respect to the dead is by",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 8,
+      "options": [
+        "A. offering Janazah",
+        "B. burial with a coffin",
+        "C. dressing the corpse in suit",
+        "D. sacrificing a ram",
+        "E. keeping the corpse in the mortuary"
+      ],
+      "correctAnswer": "A. offering Janazah",
+      "explanation": "BECE 1999 RME Question 8",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2000_q19",
+      "questionText": "Uthman B. Affan standardized the Qur'an in order to",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 19,
+      "options": [
+        "A. bring it into one volume",
+        "B. avoid the omission of some verses",
+        "C. give the Qur'an the same reading",
+        "D. stop the fighting among Muslims",
+        "E. encourage Muslims to love one another"
+      ],
+      "correctAnswer": "A. bring it into one volume",
+      "explanation": "BECE 2000 RME Question 19",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2000_q3",
+      "questionText": "Which of the following attributes of God shows that He has the whole world in His hands?",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 3,
+      "options": [
+        "A. Omnipotence",
+        "B. Omnipresence",
+        "C. Faithfulness",
+        "D. Kindness",
+        "E. Love"
+      ],
+      "correctAnswer": "A. Omnipotence",
+      "explanation": "BECE 2000 RME Question 3",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2000_q32",
+      "questionText": "Which of the following behaviours can be described as comportment?",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 32,
+      "options": [
+        "A. respect for oneself",
+        "B. control of one's enemies",
+        "C. apologizing for mistakes done",
+        "D. respect for one's father",
+        "E. love for one's enemy"
+      ],
+      "correctAnswer": "B. control of one's enemies",
+      "explanation": "BECE 2000 RME Question 32",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2001_q21",
+      "questionText": "One can promote relationship and peaceful living by being",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 21,
+      "options": [
+        "A. violent and respectful",
+        "B. respectful and obedient",
+        "C. helpful to relatives",
+        "D. tactful and aggressive",
+        "E. kind and vocal"
+      ],
+      "correctAnswer": "B. respectful and obedient",
+      "explanation": "BECE 2001 RME Question 21",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2001_q40",
+      "questionText": "One of the benefits of working hard is",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 40,
+      "options": [
+        "A. Putting up a good house",
+        "B. Having leisure",
+        "C. Becoming financially self-reliant",
+        "D. Becoming popular and respectful",
+        "E. Becoming rich and authoritative"
+      ],
+      "correctAnswer": "C. Becoming financially self-reliant",
+      "explanation": "BECE 2001 RME Question 40",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2001_q6",
+      "questionText": "One of the characteristics of the African Traditional Religion is that it",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 6,
+      "options": [
+        "A. originated from the Far East",
+        "B. regards God and Jesus as the center of worship",
+        "C. was established by a powerful African",
+        "D. has common beliefs and practices",
+        "E. has no written document"
+      ],
+      "correctAnswer": "E. has no written document",
+      "explanation": "BECE 2001 RME Question 6",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2001_q7",
+      "questionText": "Traditional religion is practiced in order to",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 7,
+      "options": [
+        "A. instill discipline",
+        "B. worship idols",
+        "C. preserve African culture",
+        "D. disregard other religions",
+        "E. seek help from magicians"
+      ],
+      "correctAnswer": "C. preserve African culture",
+      "explanation": "BECE 2001 RME Question 7",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2002_a_q25",
+      "questionText": "In order to live in harmony with family members, we must be",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 25,
+      "options": [
+        "A. respectful",
+        "B. brave",
+        "C. courageous",
+        "D. faithful"
+      ],
+      "correctAnswer": "A. respectful",
+      "explanation": "BECE 2002 RME Question 25",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2002_a_q31",
+      "questionText": "A happy and prosperous life depends on",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 31,
+      "options": [
+        "A. obedience",
+        "B. respect",
+        "C. courage",
+        "D. hard work"
+      ],
+      "correctAnswer": "C. courage",
+      "explanation": "BECE 2002 RME Question 31",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2002_a_q32",
+      "questionText": "Which of the following behaviours does not show courtesy?",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 32,
+      "options": [
+        "A. respect for age group",
+        "B. apologizing for mistakes",
+        "C. helping the aged",
+        "D. being aggressive"
+      ],
+      "correctAnswer": "A. respect for age group",
+      "explanation": "BECE 2002 RME Question 32",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2003_q17",
+      "questionText": "The rite of going round the Ka'ba seven times during Hajj signifies",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 17,
+      "options": [
+        "A. honesty",
+        "B. bravery",
+        "C. endurance",
+        "D. obedience"
+      ],
+      "correctAnswer": "D. obedience",
+      "explanation": "BECE 2003 RME Question 17",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2003_q21",
+      "questionText": "The purpose of school rules and regulations is to",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 21,
+      "options": [
+        "A. get pupils punished",
+        "B. encourage pupils to become good pastors",
+        "C. promote good conditions for work",
+        "D. reward obedient pupils"
+      ],
+      "correctAnswer": "C. promote good conditions for work",
+      "explanation": "BECE 2003 RME Question 21",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2003_q24",
+      "questionText": "In the traditional society giving birth to a child is considered as a",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 24,
+      "options": [
+        "A. privilege",
+        "B. responsibility",
+        "C. right",
+        "D. virtue"
+      ],
+      "correctAnswer": "B. responsibility",
+      "explanation": "BECE 2003 RME Question 24",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2003_q36",
+      "questionText": "Good deeds are rewarded to",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 36,
+      "options": [
+        "A. encourage people",
+        "B. make people courteous",
+        "C. instil bravery in people",
+        "D. promote peace"
+      ],
+      "correctAnswer": "A. encourage people",
+      "explanation": "BECE 2003 RME Question 36",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2003_q5",
+      "questionText": "The Caliph Abu Bakr was referred to as Siddiq by Mohammed due to his",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 5,
+      "options": [
+        "A. courage",
+        "B. tolerance",
+        "C. truthfulness",
+        "D. generosity"
+      ],
+      "correctAnswer": "C. truthfulness",
+      "explanation": "BECE 2003 RME Question 5",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2003_q6",
+      "questionText": "All those who took custody of Prophet Mohammed were happy with him because he",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 6,
+      "options": [
+        "A. had a unique character",
+        "B. was a hardworking young man",
+        "C. was an orphan at a tender age",
+        "D. was prayerful"
+      ],
+      "correctAnswer": "A. had a unique character",
+      "explanation": "BECE 2003 RME Question 6",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2003_q8",
+      "questionText": "Which of the following best sums up the Ten Commandments?",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 8,
+      "options": [
+        "A. Respect",
+        "B. Hospitality",
+        "C. Sincerity",
+        "D. Love"
+      ],
+      "correctAnswer": "D. Love",
+      "explanation": "BECE 2003 RME Question 8",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2004_q2",
+      "questionText": "Joseph was hated by his brothers because",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 2,
+      "options": [
+        "A. Jacob promised him of inheritance",
+        "B. he loved his father very much",
+        "C. he had prophetic dreams",
+        "D. He was gentle and handsome"
+      ],
+      "correctAnswer": "C. he had prophetic dreams",
+      "explanation": "BECE 2004 RME Question 2",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2004_q33",
+      "questionText": "Giving a good testimonial to somebody for his good deed is a",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 33,
+      "options": [
+        "A. reward",
+        "B. sacrifice",
+        "C. respect",
+        "D. protection"
+      ],
+      "correctAnswer": "A. reward",
+      "explanation": "BECE 2004 RME Question 33",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2004_q34",
+      "questionText": "To live a life of obedience means being",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 34,
+      "options": [
+        "A. gentle, loving and generous",
+        "B. respectful to parents and elders",
+        "C. a religious person",
+        "D. honest and generous"
+      ],
+      "correctAnswer": "B. respectful to parents and elders",
+      "explanation": "BECE 2004 RME Question 34",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2005_q13",
+      "questionText": "The Bible teaches that people in authority must be",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 13,
+      "options": [
+        "A. praised",
+        "B. served",
+        "C. respected",
+        "D. proud"
+      ],
+      "correctAnswer": "C. respected",
+      "explanation": "BECE 2005 RME Question 13",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2005_q26",
+      "questionText": "In Ghana people are said to lead decent life when they",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 26,
+      "options": [
+        "A. shout in public for their rights",
+        "B. make people respect them",
+        "C. weed around the compound",
+        "D. have leisure with friends"
+      ],
+      "correctAnswer": "B. make people respect them",
+      "explanation": "BECE 2005 RME Question 26",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2005_q27",
+      "questionText": "Repentance leads to",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 27,
+      "options": [
+        "A. denial and forgiveness",
+        "B. forgiveness and reconciliation",
+        "C. punishment and forgiveness",
+        "D. reconciliation and denial"
+      ],
+      "correctAnswer": "B. forgiveness and reconciliation",
+      "explanation": "BECE 2005 RME Question 27",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2005_q36",
+      "questionText": "Waiting and allowing things to happen at the right time shows",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 36,
+      "options": [
+        "A. honesty",
+        "B. patience",
+        "C. commitment",
+        "D. obedience"
+      ],
+      "correctAnswer": "B. patience",
+      "explanation": "BECE 2005 RME Question 36",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2005_q37",
+      "questionText": "When we regret for a bad deed, we are showing",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 37,
+      "options": [
+        "A. courage",
+        "B. forgiveness",
+        "C. repentance",
+        "D. reconciliation"
+      ],
+      "correctAnswer": "C. repentance",
+      "explanation": "BECE 2005 RME Question 37",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2006_q16",
+      "questionText": "One of the moral values revealed in the parable of the Good Samaritan is",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 16,
+      "options": [
+        "A. patience",
+        "B. justice",
+        "C. faithfulness",
+        "D. mercy"
+      ],
+      "correctAnswer": "D. mercy",
+      "explanation": "BECE 2006 RME Question 16",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2006_q25",
+      "questionText": "The most important requirement for a happy and prosperous life is",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 25,
+      "options": [
+        "A. loyalty",
+        "B. respect",
+        "C. courage",
+        "D. hard work"
+      ],
+      "correctAnswer": "D. hard work",
+      "explanation": "BECE 2006 RME Question 25",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2006_q33",
+      "questionText": "Repentance begins with",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 33,
+      "options": [
+        "A. acceptance of one's guilt",
+        "B. a regret for doing wrong",
+        "C. a request for forgiveness",
+        "D. a vow to do good always"
+      ],
+      "correctAnswer": "A. acceptance of one's guilt",
+      "explanation": "BECE 2006 RME Question 33",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2007_q14",
+      "questionText": "Constant prayers are offered among Muslims to enable them to",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 14,
+      "options": [
+        "A. be tolerant and clean",
+        "B. become upright in life",
+        "C. have humour and love",
+        "D. become steadfast and patriotic"
+      ],
+      "correctAnswer": "B. become upright in life",
+      "explanation": "BECE 2007 RME Question 14",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2007_q21",
+      "questionText": "Good working habits include all the following except",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 21,
+      "options": [
+        "A. honesty",
+        "B. reliability",
+        "C. commitment",
+        "D. faith"
+      ],
+      "correctAnswer": "D. faith",
+      "explanation": "BECE 2007 RME Question 21",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2007_q24",
+      "questionText": "Hard work is most often crowned with",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 24,
+      "options": [
+        "A. favours",
+        "B. success",
+        "C. popularity",
+        "D. obedience"
+      ],
+      "correctAnswer": "B. success",
+      "explanation": "BECE 2007 RME Question 24",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2007_q31",
+      "questionText": "One who loves his/her country",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 31,
+      "options": [
+        "A. helps the needy always",
+        "B. practises personal hygiene",
+        "C. defends the nation",
+        "D. worships God always"
+      ],
+      "correctAnswer": "C. defends the nation",
+      "explanation": "BECE 2007 RME Question 31",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2007_q34",
+      "questionText": "The basic quality expected in any youth organisation is",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 34,
+      "options": [
+        "A. the spirit of voluntarism",
+        "B. love for one's parents",
+        "C. disregard for non-members of the group",
+        "D. contestant prayers"
+      ],
+      "correctAnswer": "A. the spirit of voluntarism",
+      "explanation": "BECE 2007 RME Question 34",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2007_q36",
+      "questionText": "Which of the following is not a reason for living a decent life?",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 36,
+      "options": [
+        "A. To earn the respect of people",
+        "B. To gain the trust of others",
+        "C. To receive praises from others",
+        "D. To have a good name"
+      ],
+      "correctAnswer": "C. To receive praises from others",
+      "explanation": "BECE 2007 RME Question 36",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2008_q15",
+      "questionText": "The moral lesson from the life of Tweneboa Kodua is that one should cultivate the habit of",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 15,
+      "options": [
+        "A. faithfulness",
+        "B. punctuality",
+        "C. truthfulness",
+        "D. sacrifice"
+      ],
+      "correctAnswer": "D. sacrifice",
+      "explanation": "BECE 2008 RME Question 15",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2008_q20",
+      "questionText": "Jesus' washing of the feet of His disciples teaches a lesson in",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 20,
+      "options": [
+        "A. respect for the elderly",
+        "B. expressing love to others",
+        "C. rendering service to others",
+        "D. being helpful to others"
+      ],
+      "correctAnswer": "C. rendering service to others",
+      "explanation": "BECE 2008 RME Question 20",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2008_q34",
+      "questionText": "The most important moral value in Christianity is",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 34,
+      "options": [
+        "A. justice",
+        "B. obedience",
+        "C. love",
+        "D. humanity"
+      ],
+      "correctAnswer": "C. love",
+      "explanation": "BECE 2008 RME Question 34",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2008_q35",
+      "questionText": "Filial responsibility refers to one's duty as a",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 35,
+      "options": [
+        "A. father or mother",
+        "B. member of a society",
+        "C. son or a daughter",
+        "D. member of the church"
+      ],
+      "correctAnswer": "C. son or a daughter",
+      "explanation": "BECE 2008 RME Question 35",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2008_q38",
+      "questionText": "Smoking is discouraged because it",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 38,
+      "options": [
+        "A. results in respiratory problems",
+        "B. attracts the HIV virus",
+        "C. leads to sexual promiscuity",
+        "D. destroys the blood group of people"
+      ],
+      "correctAnswer": "A. results in respiratory problems",
+      "explanation": "BECE 2008 RME Question 38",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2008_q39",
+      "questionText": "Controlling one's temper when provoked is a sign of",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 39,
+      "options": [
+        "A. anxiety",
+        "B. obedience",
+        "C. comportment",
+        "D. selflessness"
+      ],
+      "correctAnswer": "C. comportment",
+      "explanation": "BECE 2008 RME Question 39",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2009_q14",
+      "questionText": "The moral significance of most Akan naming ceremonies is",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 14,
+      "options": [
+        "A. bravery",
+        "B. patience",
+        "C. truthfulness",
+        "D. obedience"
+      ],
+      "correctAnswer": "C. truthfulness",
+      "explanation": "BECE 2009 RME Question 14",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2009_q21",
+      "questionText": "To respect the views of others, one has to be",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 21,
+      "options": [
+        "A. honest",
+        "B. calm",
+        "C. tolerant",
+        "D. patriotic"
+      ],
+      "correctAnswer": "C. tolerant",
+      "explanation": "BECE 2009 RME Question 21",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2009_q22",
+      "questionText": "Greetings portray an individual as being",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 22,
+      "options": [
+        "A. gentle and obedient",
+        "B. God-fearing and friendly",
+        "C. lovely and sincere",
+        "D. respectful and polite"
+      ],
+      "correctAnswer": "D. respectful and polite",
+      "explanation": "BECE 2009 RME Question 22",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2009_q25",
+      "questionText": "Good behaviour pattern approved by society is known as",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 25,
+      "options": [
+        "A. loyalty",
+        "B. moral value",
+        "C. patriotism",
+        "D. truthfulness"
+      ],
+      "correctAnswer": "B. moral value",
+      "explanation": "BECE 2009 RME Question 25",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2009_q29",
+      "questionText": "According to Jesus, the summary of the ten commandments is",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 29,
+      "options": [
+        "A. love for God and one's neighbour",
+        "B. obedience to parents and the elderly",
+        "C. observing the Sabbath and keeping it holy",
+        "D. worshipping only God and not gods"
+      ],
+      "correctAnswer": "A. love for God and one's neighbour",
+      "explanation": "BECE 2009 RME Question 29",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2009_q33",
+      "questionText": "Which of the following can be noticed in those who use drugs?",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 33,
+      "options": [
+        "A. Quick response to questions in class",
+        "B. Disrespect for authority",
+        "C. Poor relationship with friends",
+        "D. Involvement in communal activities"
+      ],
+      "correctAnswer": "B. Disrespect for authority",
+      "explanation": "BECE 2009 RME Question 33",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2009_q34",
+      "questionText": "One civic responsibility of a citizen is to",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 34,
+      "options": [
+        "A. expose wrongdoers in the community",
+        "B. be willing to accept correction",
+        "C. respect the traditions of the community",
+        "D. look after the poor in the community"
+      ],
+      "correctAnswer": "D. look after the poor in the community",
+      "explanation": "BECE 2009 RME Question 34",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2009_q4",
+      "questionText": "A lesson from the fall of man is that we should",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 4,
+      "options": [
+        "A. continue to do good",
+        "B. take instructions from people",
+        "C. be obedient to our leaders",
+        "D. love all equally"
+      ],
+      "correctAnswer": "A. continue to do good",
+      "explanation": "BECE 2009 RME Question 4",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2009_q40",
+      "questionText": "A pupil who is committed to his school will always",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 40,
+      "options": [
+        "A. be obedient to his parents and learn hard",
+        "B. love his teachers and wash their clothes",
+        "C. buy gifts for his school when leaving",
+        "D. be punctual and do his prep"
+      ],
+      "correctAnswer": "D. be punctual and do his prep",
+      "explanation": "BECE 2009 RME Question 40",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2011_q25",
+      "questionText": "Which of the following is responsible for morality in traditional society?",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 25,
+      "options": [
+        "A. Linguist",
+        "B. Gong gong beater",
+        "C. Chief priest",
+        "D. Fortune teller"
+      ],
+      "correctAnswer": "C. Chief priest",
+      "explanation": "BECE 2011 RME Question 25",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2011_q26",
+      "questionText": "A father shows commitment to the family by",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 26,
+      "options": [
+        "A. being punctual at work and helping others",
+        "B. travelling with wife outside the country",
+        "C. being steadfast at prayer and sacrificing",
+        "D. treating all dependants with patience and tolerance"
+      ],
+      "correctAnswer": "D. treating all dependants with patience and tolerance",
+      "explanation": "BECE 2011 RME Question 26",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2011_q27",
+      "questionText": "Which of the following is an effect of drug abuse?",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 27,
+      "options": [
+        "A. Obedience",
+        "B. Truancy",
+        "C. Politeness",
+        "D. Truthfulness"
+      ],
+      "correctAnswer": "C. Politeness",
+      "explanation": "BECE 2011 RME Question 27",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2011_q34",
+      "questionText": "To live a chaste life, one must",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 34,
+      "options": [
+        "A. speak the truth",
+        "B. be humble",
+        "C. avoid casual sex",
+        "D. be courageous"
+      ],
+      "correctAnswer": "B. be humble",
+      "explanation": "BECE 2011 RME Question 34",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2011_q39",
+      "questionText": "A happy and prosperous life depends on",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 39,
+      "options": [
+        "A. obedience",
+        "B. hard work",
+        "C. respect",
+        "D. courage"
+      ],
+      "correctAnswer": "D. courage",
+      "explanation": "BECE 2011 RME Question 39",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2012_q12",
+      "questionText": "The main lesson that can be learnt from the story of Noah and the flood is",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 12,
+      "options": [
+        "A. tolerance.",
+        "B. truthfulness.",
+        "C. sincerity.",
+        "D. obedience."
+      ],
+      "correctAnswer": "D. obedience.",
+      "explanation": "BECE 2012 RME Question 12",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2012_q15",
+      "questionText": "Which Christian virtue did Joseph exhibit in his life?",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 15,
+      "options": [
+        "A. Humility",
+        "B. Forgiveness",
+        "C. Repentance",
+        "D. Tolerance"
+      ],
+      "correctAnswer": "D. Tolerance",
+      "explanation": "BECE 2012 RME Question 15",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2012_q22",
+      "questionText": "Greetings are important because they",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 22,
+      "options": [
+        "A. open up conversation.",
+        "B. portray one's intelligence.",
+        "C. expose disrespectful behaviour.",
+        "D. show a good leader."
+      ],
+      "correctAnswer": "D. show a good leader.",
+      "explanation": "BECE 2012 RME Question 22",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2012_q23",
+      "questionText": "Asking for forgiveness is an indication that a bad deed will be",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 23,
+      "options": [
+        "A. exposed.",
+        "B. forgotten.",
+        "C. pardoned.",
+        "D. repeated."
+      ],
+      "correctAnswer": "D. repeated.",
+      "explanation": "BECE 2012 RME Question 23",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2012_q29",
+      "questionText": "Which of the following behaviours can best be described as comportment?",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 29,
+      "options": [
+        "A. Respect for one's parents",
+        "B. Love for one's enemy",
+        "C. Respect for oneself",
+        "D. Control of one's temper"
+      ],
+      "correctAnswer": "A. Respect for one's parents",
+      "explanation": "BECE 2012 RME Question 29",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2012_q30",
+      "questionText": "Removing one's hat when greeting an elder constitutes",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 30,
+      "options": [
+        "A. good manners.",
+        "B. comportment.",
+        "C. tolerance.",
+        "D. fear of God."
+      ],
+      "correctAnswer": "B. comportment.",
+      "explanation": "BECE 2012 RME Question 30",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2012_q32",
+      "questionText": "The main aim of the Girl's Brigade is to",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 32,
+      "options": [
+        "A. assist girls to attend school.",
+        "B. encourage girls to work hard.",
+        "C. help establish more girls' schools.",
+        "D. produce good Christian womanhood."
+      ],
+      "correctAnswer": "D. produce good Christian womanhood.",
+      "explanation": "BECE 2012 RME Question 32",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2012_q38",
+      "questionText": "Using one's position to amass wealth at the expense of the public is",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 38,
+      "options": [
+        "A. bribery.",
+        "B. corruption.",
+        "C. greed.",
+        "D. unfaithfulness."
+      ],
+      "correctAnswer": "D. unfaithfulness.",
+      "explanation": "BECE 2012 RME Question 38",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2012_q40",
+      "questionText": "In order to live in harmony with family members, we must be",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 40,
+      "options": [
+        "A. brave.",
+        "B. courageous.",
+        "C. faithful.",
+        "D. respectful."
+      ],
+      "correctAnswer": "C. faithful.",
+      "explanation": "BECE 2012 RME Question 40",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2013_q26",
+      "questionText": "Which of the following is not a positive attitude to work?",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 26,
+      "options": [
+        "A. Hardworking",
+        "B. Lateness",
+        "C. Punctuality",
+        "D. Truthfulness"
+      ],
+      "correctAnswer": "B. Lateness",
+      "explanation": "BECE 2013 RME Question 26",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2013_q28",
+      "questionText": "Good deeds are rewarded to",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 28,
+      "options": [
+        "A. encourage people.",
+        "B. make people courteous.",
+        "C. instil kindness in people.",
+        "D. promote peace."
+      ],
+      "correctAnswer": "A. encourage people.",
+      "explanation": "BECE 2013 RME Question 28",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2013_q36",
+      "questionText": "Looking simple and decent is a sign of",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 36,
+      "options": [
+        "A. comportment.",
+        "B. faithfulness.",
+        "C. repentance.",
+        "D. tolerance."
+      ],
+      "correctAnswer": "B. faithfulness.",
+      "explanation": "BECE 2013 RME Question 36",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2013_q37",
+      "questionText": "Respectful children are always",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 37,
+      "options": [
+        "A. good in sports.",
+        "B. intelligent in school.",
+        "C. decently dressed.",
+        "D. accepted by society."
+      ],
+      "correctAnswer": "D. accepted by society.",
+      "explanation": "BECE 2013 RME Question 37",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2013_q38",
+      "questionText": "Which of the following is a way of establishing cordial relationship?",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 38,
+      "options": [
+        "A. Faith",
+        "B. Intelligence",
+        "C. Joy",
+        "D. Tolerance"
+      ],
+      "correctAnswer": "D. Tolerance",
+      "explanation": "BECE 2013 RME Question 38",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2013_q39",
+      "questionText": "The growth of pubic hair is a sign of",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 39,
+      "options": [
+        "A. motherhood.",
+        "B. pregnancy.",
+        "C. puberty.",
+        "D. respect."
+      ],
+      "correctAnswer": "D. respect.",
+      "explanation": "BECE 2013 RME Question 39",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2013_q40",
+      "questionText": "People demonstrate good manners in order to",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 40,
+      "options": [
+        "A. have their sins forgiven.",
+        "B. win God's favour.",
+        "C. earn trust and respect.",
+        "D. be born again Christians."
+      ],
+      "correctAnswer": "C. earn trust and respect.",
+      "explanation": "BECE 2013 RME Question 40",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q26",
+      "questionText": "Honesty in the society promotes",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 26,
+      "options": [
+        "A. wealth",
+        "B. trust",
+        "C. fame",
+        "D. power"
+      ],
+      "correctAnswer": "B. trust",
+      "explanation": "BECE 2014 RME Question 26",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q27",
+      "questionText": "One way of showing respect to the elderly is by",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 27,
+      "options": [
+        "A. shouting at them",
+        "B. greeting them",
+        "C. ignoring them",
+        "D. running away from them"
+      ],
+      "correctAnswer": "B. greeting them",
+      "explanation": "BECE 2014 RME Question 27",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q30",
+      "questionText": "Courage means",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 30,
+      "options": [
+        "A. being fearful",
+        "B. being timid",
+        "C. being brave",
+        "D. being weak"
+      ],
+      "correctAnswer": "C. being brave",
+      "explanation": "BECE 2014 RME Question 30",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q34",
+      "questionText": "Patriotism means",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 34,
+      "options": [
+        "A. love for one's country",
+        "B. hatred for one's country",
+        "C. travelling abroad",
+        "D. criticizing one's country"
+      ],
+      "correctAnswer": "A. love for one's country",
+      "explanation": "BECE 2014 RME Question 34",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q36",
+      "questionText": "Religious tolerance means",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 36,
+      "options": [
+        "A. respecting other religions",
+        "B. fighting other religions",
+        "C. converting others by force",
+        "D. discriminating against other religions"
+      ],
+      "correctAnswer": "A. respecting other religions",
+      "explanation": "BECE 2014 RME Question 36",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q39",
+      "questionText": "Humility is a sign of",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 39,
+      "options": [
+        "A. weakness",
+        "B. foolishness",
+        "C. good character",
+        "D. poverty"
+      ],
+      "correctAnswer": "C. good character",
+      "explanation": "BECE 2014 RME Question 39",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2015_q21",
+      "questionText": "People cherish the spirit of obedience because it",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 21,
+      "options": [
+        "A. Enhances tolerance",
+        "B. Promotes peace",
+        "C. Creates wealth",
+        "D. Promotes security"
+      ],
+      "correctAnswer": "B. Promotes peace",
+      "explanation": "BECE 2015 RME Question 21",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2015_q25",
+      "questionText": "A student must dress decently because it",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 25,
+      "options": [
+        "A. Is a mark of intelligence",
+        "B. Shows respect and politeness",
+        "C. Enables one to gain favour from others",
+        "D. Helps one to obey school rules"
+      ],
+      "correctAnswer": "B. Shows respect and politeness",
+      "explanation": "BECE 2015 RME Question 25",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2015_q26",
+      "questionText": "Someone who is respectful and polite is said to be",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 26,
+      "options": [
+        "A. Courteous",
+        "B. Kind",
+        "C. Chaste",
+        "D. Moral"
+      ],
+      "correctAnswer": "A. Courteous",
+      "explanation": "BECE 2015 RME Question 26",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2015_q28",
+      "questionText": "Which of the following is a moral value cherished in Ghanaian society?",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 28,
+      "options": [
+        "A. Service",
+        "B. Honesty",
+        "C. Tolerance",
+        "D. Pride"
+      ],
+      "correctAnswer": "B. Honesty",
+      "explanation": "BECE 2015 RME Question 28",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2015_q33",
+      "questionText": "Showing respect and obedience to school authority ensures",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 33,
+      "options": [
+        "A. Repentance and forgiveness",
+        "B. Peaceful co-existence",
+        "C. Success in examination",
+        "D. Humility and hard work"
+      ],
+      "correctAnswer": "B. Peaceful co-existence",
+      "explanation": "BECE 2015 RME Question 33",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2015_q36",
+      "questionText": "The ant is usually used as a symbol of",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 36,
+      "options": [
+        "A. Love",
+        "B. Commitment",
+        "C. Hard work",
+        "D. Unity"
+      ],
+      "correctAnswer": "C. Hard work",
+      "explanation": "BECE 2015 RME Question 36",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2015_q7",
+      "questionText": "Puberty rites should be encouraged because it",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 7,
+      "options": [
+        "A. Links the youth to adulthood",
+        "B. Helps the youth to become rich",
+        "C. Promotes chastity among the youth",
+        "D. Makes the youth look more attractive"
+      ],
+      "correctAnswer": "C. Promotes chastity among the youth",
+      "explanation": "BECE 2015 RME Question 7",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2016_q17",
+      "questionText": "The exchange of rings in Christian marriage signifies",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 17,
+      "options": [
+        "A. blessing from God.",
+        "B. faithfulness to God.",
+        "C. faithfulness to one another.",
+        "D. love for the family."
+      ],
+      "correctAnswer": "C. faithfulness to one another.",
+      "explanation": "BECE 2016 RME Question 17",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2016_q18",
+      "questionText": "Looking simple and decent is a sign of",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 18,
+      "options": [
+        "A. comportment.",
+        "B. faithfulness.",
+        "C. tolerance.",
+        "D. repentance."
+      ],
+      "correctAnswer": "A. comportment.",
+      "explanation": "BECE 2016 RME Question 18",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2016_q19",
+      "questionText": "Which of the following factors is not a reason why we greet?",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 19,
+      "options": [
+        "A. Disloyalty",
+        "B. Friendship",
+        "C. Humility",
+        "D. Politeness"
+      ],
+      "correctAnswer": "A. Disloyalty",
+      "explanation": "BECE 2016 RME Question 19",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2016_q21",
+      "questionText": "To live a chaste life, one must",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 21,
+      "options": [
+        "A. avoid sexual intimacy.",
+        "B. participate in communal labour.",
+        "C. perform his or her responsibilities.",
+        "D. respect and obey school rules."
+      ],
+      "correctAnswer": "A. avoid sexual intimacy.",
+      "explanation": "BECE 2016 RME Question 21",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2016_q24",
+      "questionText": "By respecting other people's religion, we are",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 24,
+      "options": [
+        "A. practising religious obedience.",
+        "B. showing commitment to God.",
+        "C. showing commitment to those religions.",
+        "D. showing religious tolerance."
+      ],
+      "correctAnswer": "D. showing religious tolerance.",
+      "explanation": "BECE 2016 RME Question 24",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2016_q25",
+      "questionText": "Good deeds are rewarded to",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 25,
+      "options": [
+        "A. encourage people.",
+        "B. make people courteous.",
+        "C. instil kindness in people.",
+        "D. promote peaceful co-existence."
+      ],
+      "correctAnswer": "A. encourage people.",
+      "explanation": "BECE 2016 RME Question 25",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2016_q26",
+      "questionText": "Repentance begins with",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 26,
+      "options": [
+        "A. acceptance of one's guilt.",
+        "B. regret for doing wrong.",
+        "C. request for forgiveness.",
+        "D. vowing to do good."
+      ],
+      "correctAnswer": "A. acceptance of one's guilt.",
+      "explanation": "BECE 2016 RME Question 26",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2016_q31",
+      "questionText": "An attitude which must not be encouraged at the workplace is",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 31,
+      "options": [
+        "A. diligence.",
+        "B. loyalty.",
+        "C. grumbling.",
+        "D. tolerance."
+      ],
+      "correctAnswer": "C. grumbling.",
+      "explanation": "BECE 2016 RME Question 31",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2016_q37",
+      "questionText": "The most important requirement for a happy and responsible life is",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 37,
+      "options": [
+        "A. courage.",
+        "B. hardwork.",
+        "C. loyalty.",
+        "D. respect."
+      ],
+      "correctAnswer": "B. hardwork.",
+      "explanation": "BECE 2016 RME Question 37",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2017_q11",
+      "questionText": "Puberty rites should be encouraged because it",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 11,
+      "options": [
+        "A. helps the youth to become rich.",
+        "B. links the youth to adulthood.",
+        "C. makes the youth look more attractive.",
+        "D. promotes chastity among the youth."
+      ],
+      "correctAnswer": "D. promotes chastity among the youth.",
+      "explanation": "BECE 2017 RME Question 11",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2017_q14",
+      "questionText": "The exchange of rings in Christian marriage signifies",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 14,
+      "options": [
+        "A. blessing from God.",
+        "B. faithfulness to God.",
+        "C. faithfulness to one another.",
+        "D. love for the family."
+      ],
+      "correctAnswer": "C. faithfulness to one another.",
+      "explanation": "BECE 2017 RME Question 14",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2017_q18",
+      "questionText": "Looking simple and decent is a sign of",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 18,
+      "options": [
+        "A. comportment.",
+        "B. faithfulness.",
+        "C. tolerance.",
+        "D. repentance."
+      ],
+      "correctAnswer": "A. comportment.",
+      "explanation": "BECE 2017 RME Question 18",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2017_q19",
+      "questionText": "Which of the following factors is not a reason why we greet?",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 19,
+      "options": [
+        "A. Disloyalty",
+        "B. Friendship",
+        "C. Humility",
+        "D. Politeness"
+      ],
+      "correctAnswer": "A. Disloyalty",
+      "explanation": "BECE 2017 RME Question 19",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2017_q21",
+      "questionText": "To live a chaste life, one must",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 21,
+      "options": [
+        "A. avoid sexual intimacy.",
+        "B. participate in communal labour.",
+        "C. perform his or her responsibilities.",
+        "D. respect and obey school rules."
+      ],
+      "correctAnswer": "A. avoid sexual intimacy.",
+      "explanation": "BECE 2017 RME Question 21",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2017_q24",
+      "questionText": "By respecting other people's religion, we are",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 24,
+      "options": [
+        "A. practising religious obedience.",
+        "B. showing commitment to God.",
+        "C. showing commitment to those religions.",
+        "D. showing religious tolerance."
+      ],
+      "correctAnswer": "D. showing religious tolerance.",
+      "explanation": "BECE 2017 RME Question 24",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2017_q25",
+      "questionText": "Good deeds are rewarded to",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 25,
+      "options": [
+        "A. encourage people.",
+        "B. make people courteous.",
+        "C. instil kindness in people.",
+        "D. promote peaceful co-existence."
+      ],
+      "correctAnswer": "A. encourage people.",
+      "explanation": "BECE 2017 RME Question 25",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2017_q26",
+      "questionText": "Repentance begins with",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 26,
+      "options": [
+        "A. acceptance of one's guilt.",
+        "B. regret for doing wrong.",
+        "C. request for forgiveness.",
+        "D. vowing to do good."
+      ],
+      "correctAnswer": "A. acceptance of one's guilt.",
+      "explanation": "BECE 2017 RME Question 26",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2017_q31",
+      "questionText": "An attitude which must not be encouraged at the workplace is",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 31,
+      "options": [
+        "A. diligence.",
+        "B. loyalty.",
+        "C. grumbling.",
+        "D. tolerance."
+      ],
+      "correctAnswer": "C. grumbling.",
+      "explanation": "BECE 2017 RME Question 31",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2017_q37",
+      "questionText": "The most important requirement for a happy and responsible life is",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 37,
+      "options": [
+        "A. courage.",
+        "B. hardwork.",
+        "C. loyalty.",
+        "D. respect."
+      ],
+      "correctAnswer": "B. hardwork.",
+      "explanation": "BECE 2017 RME Question 37",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2018_q14",
+      "questionText": "The growth of hairs in the armpit is a sign of",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 14,
+      "options": [
+        "A. motherhood.",
+        "B. pregnancy.",
+        "C. puberty.",
+        "D. respect."
+      ],
+      "correctAnswer": "C. puberty.",
+      "explanation": "BECE 2018 RME Question 14",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2018_q18",
+      "questionText": "The act of going round the Ka'bah seven times during Hajj teaches",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 18,
+      "options": [
+        "A. bravery.",
+        "B. endurance.",
+        "C. fairness.",
+        "D. tolerance."
+      ],
+      "correctAnswer": "D. tolerance.",
+      "explanation": "BECE 2018 RME Question 18",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2018_q20",
+      "questionText": "An individual who is respectful and polite is said to be",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 20,
+      "options": [
+        "A. chaste.",
+        "B. courteous.",
+        "C. kind.",
+        "D. moral."
+      ],
+      "correctAnswer": "B. courteous.",
+      "explanation": "BECE 2018 RME Question 20",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2018_q24",
+      "questionText": "The main teaching of the Ten Commandments is",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 24,
+      "options": [
+        "A. courtesy.",
+        "B. kindness.",
+        "C. love.",
+        "D. patience."
+      ],
+      "correctAnswer": "C. love.",
+      "explanation": "BECE 2018 RME Question 24",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2018_q26",
+      "questionText": "Repentance is an act that",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 26,
+      "options": [
+        "A. delivers us from enemies.",
+        "B. drives us away from peers.",
+        "C. purifies our character.",
+        "D. satisfies God's demands."
+      ],
+      "correctAnswer": "C. purifies our character.",
+      "explanation": "BECE 2018 RME Question 26",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2018_q27",
+      "questionText": "When a person repents from bad deeds he or she always receives",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 27,
+      "options": [
+        "A. forgiveness.",
+        "B. freedom.",
+        "C. promotion.",
+        "D. punishment."
+      ],
+      "correctAnswer": "A. forgiveness.",
+      "explanation": "BECE 2018 RME Question 27",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2018_q32",
+      "questionText": "Tidying the school compound is the child's",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 32,
+      "options": [
+        "A. commitment.",
+        "B. behaviour.",
+        "C. loyalty.",
+        "D. role."
+      ],
+      "correctAnswer": "D. role.",
+      "explanation": "BECE 2018 RME Question 32",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2018_q33",
+      "questionText": "Refusal to follow medical prescription may lead to",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 33,
+      "options": [
+        "A. disrespect to authority.",
+        "B. failure in life.",
+        "C. reduction in wealth.",
+        "D. substance abuse."
+      ],
+      "correctAnswer": "B. failure in life.",
+      "explanation": "BECE 2018 RME Question 33",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2018_q4",
+      "questionText": "Sadique in Islam means",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 4,
+      "options": [
+        "A. courageous.",
+        "B. patience.",
+        "C. righteous.",
+        "D. truthful."
+      ],
+      "correctAnswer": "D. truthful.",
+      "explanation": "BECE 2018 RME Question 4",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2019_q11",
+      "questionText": "The moral virtue revealed in the Islamic festival of Eid-ul-Adha is",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 11,
+      "options": [
+        "A. honesty.",
+        "B. love.",
+        "C. obedience.",
+        "D. steadfastness."
+      ],
+      "correctAnswer": "C. obedience.",
+      "explanation": "BECE 2019 RME Question 11",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2019_q22",
+      "questionText": "A chaste life can be attained through",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 22,
+      "options": [
+        "A. intensive book reading.",
+        "B. regular church attendance.",
+        "C. the practice of self-discipline.",
+        "D. eating a vegetarian diet."
+      ],
+      "correctAnswer": "C. the practice of self-discipline.",
+      "explanation": "BECE 2019 RME Question 22",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2019_q23",
+      "questionText": "Which of the following situations is an effect of immorality?",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 23,
+      "options": [
+        "A. Focus in life.",
+        "B. Humble life.",
+        "C. Peer influence.",
+        "D. Teenage pregnancy."
+      ],
+      "correctAnswer": "D. Teenage pregnancy.",
+      "explanation": "BECE 2019 RME Question 23",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2019_q28",
+      "questionText": "Commitment to God involves the show of",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 28,
+      "options": [
+        "A. courage and love.",
+        "B. faith and obedience.",
+        "C. humility and hope.",
+        "D. respect and compassion."
+      ],
+      "correctAnswer": "B. faith and obedience.",
+      "explanation": "BECE 2019 RME Question 28",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2019_q30",
+      "questionText": "The main aim of a reward is to",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 30,
+      "options": [
+        "A. accept our duties and responsibilities.",
+        "B. encourage people to speak good English.",
+        "C. help the poor out of their problems.",
+        "D. reinforce the habit of repeating good deeds."
+      ],
+      "correctAnswer": "D. reinforce the habit of repeating good deeds.",
+      "explanation": "BECE 2019 RME Question 30",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2019_q31",
+      "questionText": "Which of the following conditions is not a fruit of repentance?",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 31,
+      "options": [
+        "A. Love.",
+        "B. Forgiveness.",
+        "C. Peace.",
+        "D. Prosperity."
+      ],
+      "correctAnswer": "D. Prosperity.",
+      "explanation": "BECE 2019 RME Question 31",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2019_q32",
+      "questionText": "A father shows commitment to the family by",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 32,
+      "options": [
+        "A. treating dependants with patience and tolerance.",
+        "B. being punctual at work and helping others.",
+        "C. travelling with his wife outside the country.",
+        "D. being steadfast at prayer and sacrificing."
+      ],
+      "correctAnswer": "A. treating dependants with patience and tolerance.",
+      "explanation": "BECE 2019 RME Question 32",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2020_q10",
+      "questionText": "Students are encouraged to participate in religious festivals in order to",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 10,
+      "options": [
+        "A. give thanks to God",
+        "B. learn their culture",
+        "C. live a chaste life",
+        "D. seek forgiveness"
+      ],
+      "correctAnswer": "B. learn their culture",
+      "explanation": "BECE 2020 RME Question 10",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2020_q20",
+      "questionText": "Removing one's hat when greeting an elderly person constitutes",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 20,
+      "options": [
+        "A. fear of God",
+        "B. tolerance",
+        "C. comportment",
+        "D. good manners"
+      ],
+      "correctAnswer": "D. good manners",
+      "explanation": "BECE 2020 RME Question 20",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2020_q21",
+      "questionText": "Students need to dress decently in order to",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 21,
+      "options": [
+        "A. attract others",
+        "B. be smart",
+        "C. earn respect",
+        "D. be favoured"
+      ],
+      "correctAnswer": "C. earn respect",
+      "explanation": "BECE 2020 RME Question 21",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2020_q22",
+      "questionText": "Which of these virtues are applicable during greetings?",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 22,
+      "options": [
+        "A. Courtesy and tolerance",
+        "B. Humility and respectfulness",
+        "C. Love and politeness",
+        "D. Politeness and sincerity"
+      ],
+      "correctAnswer": "B. Humility and respectfulness",
+      "explanation": "BECE 2020 RME Question 22",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2020_q25",
+      "questionText": "Apostle James wrote his epistle to show",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 25,
+      "options": [
+        "A. how leaders should comport themselves",
+        "B. how to win converts",
+        "C. obedience to the state",
+        "D. true and practical religion"
+      ],
+      "correctAnswer": "D. true and practical religion",
+      "explanation": "BECE 2020 RME Question 25",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2020_q29",
+      "questionText": "\"You shall have no other God apart from Me.\" This commandment calls for",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 29,
+      "options": [
+        "A. carving of God's images only",
+        "B. living a righteous life",
+        "C. respect for God's name",
+        "D. the worship of one God"
+      ],
+      "correctAnswer": "D. the worship of one God",
+      "explanation": "BECE 2020 RME Question 29",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2020_q30",
+      "questionText": "Promotion as a means of reward in schools helps students to",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 30,
+      "options": [
+        "A. be law-abiding",
+        "B. be respectful",
+        "C. join study groups",
+        "D. work hard"
+      ],
+      "correctAnswer": "D. work hard",
+      "explanation": "BECE 2020 RME Question 30",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2020_q31",
+      "questionText": "An intelligent student may become swollen-headed when he or she",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 31,
+      "options": [
+        "A. is committed to his work",
+        "B. is rebuked by school authorities",
+        "C. receives many rewards at school",
+        "D. respects peers and elders"
+      ],
+      "correctAnswer": "C. receives many rewards at school",
+      "explanation": "BECE 2020 RME Question 31",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2020_q35",
+      "questionText": "Rules and regulations are meant to ensure",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 35,
+      "options": [
+        "A. discipline",
+        "B. patriotism",
+        "C. success",
+        "D. victory"
+      ],
+      "correctAnswer": "A. discipline",
+      "explanation": "BECE 2020 RME Question 35",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2020_q7",
+      "questionText": "Toha Zie was nicknamed \"the red hunter\" because of his",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 7,
+      "options": [
+        "A. character",
+        "B. complexion",
+        "C. kindness",
+        "D. wisdom"
+      ],
+      "correctAnswer": "D. wisdom",
+      "explanation": "BECE 2020 RME Question 7",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2021_q1",
+      "questionText": "Ghanaians can live together peacefully if they",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 1,
+      "options": [
+        "A. avoid inter-ethnic marriages.",
+        "B. practise religious tolerance.",
+        "C. pray very often.",
+        "D. speak the truth."
+      ],
+      "correctAnswer": "B. practise religious tolerance.",
+      "explanation": "BECE 2021 RME Question 1",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2021_q10",
+      "questionText": "To avoid drug abuse, the student must",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 10,
+      "options": [
+        "A. exercise the body frequently.",
+        "B. keep off bad friends.",
+        "C. respect teachers and friends.",
+        "D. attend worship meetings regularly."
+      ],
+      "correctAnswer": "A. exercise the body frequently.",
+      "explanation": "BECE 2021 RME Question 10",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2021_q20",
+      "questionText": "One way of showing commitment to God is by",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 20,
+      "options": [
+        "A. being tolerant to others.",
+        "B. dying for the nation.",
+        "C. respect to your spouse.",
+        "D. trust between spouses."
+      ],
+      "correctAnswer": "D. trust between spouses.",
+      "explanation": "BECE 2021 RME Question 20",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2021_q21",
+      "questionText": "The Gye Nyame symbol represents God's",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 21,
+      "options": [
+        "A. kindness.",
+        "B. love.",
+        "C. omnipotence.",
+        "D. omniscience."
+      ],
+      "correctAnswer": "C. omnipotence.",
+      "explanation": "BECE 2021 RME Question 21",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2021_q23",
+      "questionText": "Living a decent life can earn you",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 23,
+      "options": [
+        "A. promotion.",
+        "B. respect.",
+        "C. success.",
+        "D. wealth."
+      ],
+      "correctAnswer": "B. respect.",
+      "explanation": "BECE 2021 RME Question 23",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2021_q24",
+      "questionText": "The ban on noise making that is observed before the celebration of Homowo is to ensure that",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 24,
+      "options": [
+        "A. people abstain from sex.",
+        "B. there is peaceful period for reflection.",
+        "C. people respect the authority of the gods.",
+        "D. the chief priest communicates with the gods."
+      ],
+      "correctAnswer": "A. people abstain from sex.",
+      "explanation": "BECE 2021 RME Question 24",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2021_q25",
+      "questionText": "Students obey the commandments of God to portray His",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 25,
+      "options": [
+        "A. faithfulness.",
+        "B. patience.",
+        "C. love.",
+        "D. mercy."
+      ],
+      "correctAnswer": "A. faithfulness.",
+      "explanation": "BECE 2021 RME Question 25",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2021_q28",
+      "questionText": "Girls who undergo puberty rites often get good husbands because responsible men",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 28,
+      "options": [
+        "A. appreciate pretty and wealthy girls.",
+        "B. like morally sound girls.",
+        "C. love attractive religious girls.",
+        "D. love well educated girls."
+      ],
+      "correctAnswer": "B. like morally sound girls.",
+      "explanation": "BECE 2021 RME Question 28",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2021_q30",
+      "questionText": "Greeting one another is good because it",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 30,
+      "options": [
+        "A. leads to love for all.",
+        "B. leads to spiritual purity.",
+        "C. opens up conversations.",
+        "D. shows one's religion."
+      ],
+      "correctAnswer": "C. opens up conversations.",
+      "explanation": "BECE 2021 RME Question 30",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2021_q36",
+      "questionText": "Good deeds are rewarded to",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 36,
+      "options": [
+        "A. promote peace in the society.",
+        "B. instil kindness in people.",
+        "C. make people courteous.",
+        "D. encourage people to behave well."
+      ],
+      "correctAnswer": "D. encourage people to behave well.",
+      "explanation": "BECE 2021 RME Question 36",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2021_q5",
+      "questionText": "One virtue that can be emulated from the lives of Egya Ahor and Tweneboah Kodua is",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 5,
+      "options": [
+        "A. justice.",
+        "B. love.",
+        "C. hard work.",
+        "D. respect."
+      ],
+      "correctAnswer": "B. love.",
+      "explanation": "BECE 2021 RME Question 5",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2022_q1",
+      "questionText": "Courtesy is a polite and acceptable way of",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 1,
+      "options": [
+        "A. speaking.",
+        "B. obedience.",
+        "C. behaviour.",
+        "D. commitment."
+      ],
+      "correctAnswer": "C. behaviour.",
+      "explanation": "BECE 2022 RME Question 1",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2022_q13",
+      "questionText": "Ablution in Islam signifies",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 13,
+      "options": [
+        "A. truthfulness.",
+        "B. cleanliness.",
+        "C. justice.",
+        "D. hard work."
+      ],
+      "correctAnswer": "B. cleanliness.",
+      "explanation": "BECE 2022 RME Question 13",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2022_q15",
+      "questionText": "A sign of respect and humility is demonstrated during libation when the celebrant",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 15,
+      "options": [
+        "A. squats and mentions the attributes of God.",
+        "B. invokes the gods with appellations.",
+        "C. removes his sandals and keeps his chest bare.",
+        "D. slaughters animals as a sacrifice."
+      ],
+      "correctAnswer": "C. removes his sandals and keeps his chest bare.",
+      "explanation": "BECE 2022 RME Question 15",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2022_q18",
+      "questionText": "One social importance of festivals is",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 18,
+      "options": [
+        "A. raising funds for projects.",
+        "B. showing respect for authority.",
+        "C. making new friends.",
+        "D. venerating the gods and ancestors."
+      ],
+      "correctAnswer": "A. raising funds for projects.",
+      "explanation": "BECE 2022 RME Question 18",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2022_q2",
+      "questionText": "Donations at funerals are meant to",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 2,
+      "options": [
+        "A. offer transportation to the dead.",
+        "B. show love and support to the family.",
+        "C. refresh the mourners.",
+        "D. offer the family a means of livelihood."
+      ],
+      "correctAnswer": "B. show love and support to the family.",
+      "explanation": "BECE 2022 RME Question 2",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2022_q21",
+      "questionText": "The parable of Jesus Christ that teaches love and mercy is the parable of the",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 21,
+      "options": [
+        "A. Ten Virgins.",
+        "B. Lost Coin.",
+        "C. Good Samaritan.",
+        "D. Mustard Seed."
+      ],
+      "correctAnswer": "C. Good Samaritan.",
+      "explanation": "BECE 2022 RME Question 21",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2022_q23",
+      "questionText": "Which of the following is not a reason for living a chaste life?",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 23,
+      "options": [
+        "A. Having a good name.",
+        "B. Earning the respect of people.",
+        "C. Earning a decent income.",
+        "D. Gaining trust in marriage."
+      ],
+      "correctAnswer": "C. Earning a decent income.",
+      "explanation": "BECE 2022 RME Question 23",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2022_q24",
+      "questionText": "Greetings portray an individual as being",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 24,
+      "options": [
+        "A. respectful and polite.",
+        "B. lovely and sincere.",
+        "C. God-fearing and friendly.",
+        "D. gentle and obedient."
+      ],
+      "correctAnswer": "A. respectful and polite.",
+      "explanation": "BECE 2022 RME Question 24",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2022_q29",
+      "questionText": "God sent Joseph to Egypt in order to",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 29,
+      "options": [
+        "A. save the Israelites from death.",
+        "B. reveal his love for humanity.",
+        "C. punish the Egyptians for disobedience.",
+        "D. fulfil the dreams of Joseph."
+      ],
+      "correctAnswer": "A. save the Israelites from death.",
+      "explanation": "BECE 2022 RME Question 29",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2022_q34",
+      "questionText": "Which of the following behaviour can best be described as comportment?",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 34,
+      "options": [
+        "A. Respect for oneself.",
+        "B. Love for one's enemy.",
+        "C. Control of one's temper.",
+        "D. Respect for one's parent."
+      ],
+      "correctAnswer": "C. Control of one's temper.",
+      "explanation": "BECE 2022 RME Question 34",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2022_q35",
+      "questionText": "A unique moral quality required of a Muslim is",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 35,
+      "options": [
+        "A. hardworking.",
+        "B. patience.",
+        "C. gratitude.",
+        "D. selflessness."
+      ],
+      "correctAnswer": "D. selflessness.",
+      "explanation": "BECE 2022 RME Question 35",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2023_q26",
+      "questionText": "",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 26,
+      "options": [
+        "A. respects only the elders.",
+        "B. plays around with is or her peers.",
+        "C. obeys instructions willingly.",
+        "D. is smart and cunning."
+      ],
+      "correctAnswer": "D. is smart and cunning.",
+      "explanation": "BECE 2023 RME Question 26",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2023_q27",
+      "questionText": "Obedience is expected of all humankind because it is God's",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 27,
+      "options": [
+        "A. desire.",
+        "B. favourite.",
+        "C. command.",
+        "D. hope."
+      ],
+      "correctAnswer": "D. hope.",
+      "explanation": "BECE 2023 RME Question 27",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2023_q28",
+      "questionText": "The wearing of wedding rings by couples after marriage is a sign of",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 28,
+      "options": [
+        "A. commitment and trust.",
+        "B. faithfulness and humility.",
+        "C. honesty and tolerance.",
+        "D. responsibility and sincerity."
+      ],
+      "correctAnswer": "D. responsibility and sincerity.",
+      "explanation": "BECE 2023 RME Question 28",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2023_q33",
+      "questionText": "Being polite in speech or action is a sign of",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 33,
+      "options": [
+        "A. courtesy.",
+        "B. tolerance.",
+        "C. faithfulness.",
+        "D. comportment."
+      ],
+      "correctAnswer": "A. courtesy.",
+      "explanation": "BECE 2023 RME Question 33",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2023_q36",
+      "questionText": "Which of following virtues can be learnt from the life stories of Joseph?",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 36,
+      "options": [
+        "A. Repentance",
+        "B. Reconciliation",
+        "C. Reformation",
+        "D. Retribution"
+      ],
+      "correctAnswer": "C. Reformation",
+      "explanation": "BECE 2023 RME Question 36",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2023_q38",
+      "questionText": "In Islam, the Omnipotence of Allah describes His",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 38,
+      "options": [
+        "A. power.",
+        "B. patience.",
+        "C. wisdom.",
+        "D. justice."
+      ],
+      "correctAnswer": "B. patience.",
+      "explanation": "BECE 2023 RME Question 38",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2023_q39",
+      "questionText": "The main aim of a reward is to",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 39,
+      "options": [
+        "A. reinforce the habit of repeating good deeds.",
+        "B. accept our duties and responsibilities.",
+        "C. encourage people to make more friends.",
+        "D. help the poor and the needy to perform good deeds."
+      ],
+      "correctAnswer": "C. encourage people to make more friends.",
+      "explanation": "BECE 2023 RME Question 39",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2023_q5",
+      "questionText": "Removing one's hat when greeting an elderly person constitutes",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 5,
+      "options": [
+        "A. fear of God.",
+        "B. tolerance.",
+        "C. comportment.",
+        "D. good manners."
+      ],
+      "correctAnswer": "D. good manners.",
+      "explanation": "BECE 2023 RME Question 5",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2023_q6",
+      "questionText": "Which of the following attributes is possessed by one who respects the view of others?",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 6,
+      "options": [
+        "A. Patriotism",
+        "B. Honesty",
+        "C. Calmness",
+        "D. Tolerance"
+      ],
+      "correctAnswer": "C. Calmness",
+      "explanation": "BECE 2023 RME Question 6",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2023_q8",
+      "questionText": "The burial of the dead without a coffin teaches the Muslim to",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 8,
+      "options": [
+        "A. avoid acquiring much wealth.",
+        "B. be more generous.",
+        "C. live a simple life.",
+        "D. love one another."
+      ],
+      "correctAnswer": "C. live a simple life.",
+      "explanation": "BECE 2023 RME Question 8",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2024_q20",
+      "questionText": "Two family members who recently lost heir jobs are going through significant anxiety over their lack of employment. Concerned loved ones are consoling them to have hope and trust that things will work out in time. What attribute are these persons expected to demonstrate in order to overcome their anxiety?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 20,
+      "options": [
+        "A. Compassion",
+        "B. Patience",
+        "C. Mercy",
+        "D. Forgiveness"
+      ],
+      "correctAnswer": "B. Patience",
+      "explanation": "BECE 2024 RME Question 20",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2024_q24",
+      "questionText": "Which of the following moral teachings are common to the three major religions in Ghana? I. Compassion and charity towards the needy II. Honesty and truthfulness in all dealings III. Protection of the environment and natural resources IV. Respect for human life and dignity",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 24,
+      "options": [
+        "A. I, II and III",
+        "B. I, II, III and IV",
+        "C. I, III and IV",
+        "D. I, II and IV"
+      ],
+      "correctAnswer": "B. I, II, III and IV",
+      "explanation": "BECE 2024 RME Question 24",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2024_q32",
+      "questionText": "Which of the following statement is true regarding cultural belief systems and their role in protecting the environment?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 32,
+      "options": [
+        "A. Most cultural belief systems prioritize economic growth over environmental protection",
+        "B. Cultural diversity has no impact on global environmental challenges",
+        "C. Indigenous belief system often emphasize respect for nature and sustainable living.",
+        "D. Cultural practices have no influence on sustainable resource use."
+      ],
+      "correctAnswer": "C. Indigenous belief system often emphasize respect for nature and sustainable living.",
+      "explanation": "BECE 2024 RME Question 32",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2024_q35",
+      "questionText": "In a religious class, the teacher emphasized one of the attributes of Prophet Muhammad (SAW) as Al-Amin. The class was tasked to identify the significance of this attribute and its relevance to the Prophet's character and leadership. Which of the following will be the best response from the students? His",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 35,
+      "options": [
+        "A. bravery in battle",
+        "B. knowledge of Islamic scripture",
+        "C. honesty and trustworthiness",
+        "D. exceptional wealth"
+      ],
+      "correctAnswer": "C. honesty and trustworthiness",
+      "explanation": "BECE 2024 RME Question 35",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2025_q1",
+      "questionText": "In what way do religious songs influence a person's spiritual growth? They",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 1,
+      "options": [
+        "A. help people memorize religious text.",
+        "B. serve as a form of entertainment.",
+        "C. encourage reflection and soberness.",
+        "D. are performed during important occasions."
+      ],
+      "correctAnswer": "C. encourage reflection and soberness.",
+      "explanation": "BECE 2025 RME Question 1",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2025_q14",
+      "questionText": "Evans used to prefer playing with boys when he was younger, but now as an adolescent, he finds himself more comfortable spending time with girls. If you were a counselor, how would you address this change in behaviour?",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 14,
+      "options": [
+        "A. Suggest the adolescent avoid interacting with the opposite sex",
+        "B. Recommend the adolescent only form friends with his family",
+        "C. Encourage the adolescent to suppress the feeling",
+        "D. Encourage the adolescent to explore their emotional changes and how it affects their behaviour"
+      ],
+      "correctAnswer": "C. Encourage the adolescent to suppress the feeling",
+      "explanation": "BECE 2025 RME Question 14",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2025_q16",
+      "questionText": "In what way does society benefit when people from different religious background interact? It",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 16,
+      "options": [
+        "A. leads to more arguments between the groups.",
+        "B. forces people to change their religious beliefs.",
+        "C. reduces misunderstanding and encourages mutual respect.",
+        "D. results in people abandoning their tradition."
+      ],
+      "correctAnswer": "C. reduces misunderstanding and encourages mutual respect.",
+      "explanation": "BECE 2025 RME Question 16",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2025_q24",
+      "questionText": "Which of the following would be the best way to design a project that encourages people to tolerate and respect different opinions in a community?",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 24,
+      "options": [
+        "A. Organizing a debate where each side argues for their own opinion",
+        "B. Hosting a meeting where only one group shares their opinion",
+        "C. Designing an art exhibition that shows only one perspective on important social issues",
+        "D. Creating a social media campaign that highlights the benefits of listening to others view point"
+      ],
+      "correctAnswer": "D. Creating a social media campaign that highlights the benefits of listening to others view point",
+      "explanation": "BECE 2025 RME Question 24",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2025_q32",
+      "questionText": "Which of the following explains why leisure is important for a person's well-being? It",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 32,
+      "options": [
+        "A. establishes social connections only.",
+        "B. reduces stress and allied health conditions.",
+        "C. supports only the sick.",
+        "D. encourages people to spend on entertainment."
+      ],
+      "correctAnswer": "B. reduces stress and allied health conditions.",
+      "explanation": "BECE 2025 RME Question 32",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2025_q9",
+      "questionText": "When analyzing the character of Egya Ahor, which pairs of virtues mostly explains his ability as a leader?",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 9,
+      "options": [
+        "A. Wisdom and patience",
+        "B. Kindness and humility",
+        "C. Generosity and strength",
+        "D. Courage and patriotism"
+      ],
+      "correctAnswer": "D. Courage and patriotism",
+      "explanation": "BECE 2025 RME Question 9",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2015_q3",
+      "questionText": "a)\n\n \n\nNarrate the traditional myth which explains the separation between man and God.\n\nb)\n\n \n\nGive four examples of the character of humankind from the story in (a) above.\n\n  \n\nSECTION B\n\nMORAL LIFE\n\nAnswer one question only from this section.",
+      "type": "essay",
+      "year": "2015",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2021_q7",
+      "questionText": "a)\n\n \n\nIdentify four rules that are expected to be obeyed in your school.\n\nb)\n\n \n\nExplain four reasons for which hard work must be encouraged among people.",
+      "type": "essay",
+      "year": "2021",
+      "questionNumber": 7,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2021 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "HpzEQD84ZrzRNguBavzM",
+      "year": 2014,
+      "questionNumber": 39,
+      "options": [
+        "A. weakness",
+        "B. foolishness",
+        "C. good character",
+        "D. poverty"
+      ],
+      "correctAnswer": "C",
+      "explanation": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "BECE",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "VmeJuP6DjNbeMxmwxvfQ",
+      "year": 2014,
+      "questionNumber": 36,
+      "options": [
+        "A. respecting other religions",
+        "B. fighting other religions",
+        "C. converting others by force",
+        "D. discriminating against other religions"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "BECE",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "eH9782bF9TAD9NbK6fNk",
+      "year": 2014,
+      "questionNumber": 34,
+      "options": [
+        "A. love for one's country",
+        "B. hatred for one's country",
+        "C. travelling abroad",
+        "D. criticizing one's country"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Moral Values"
+      ],
+      "examType": "BECE",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

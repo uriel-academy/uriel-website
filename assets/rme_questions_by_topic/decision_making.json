@@ -1,0 +1,130 @@
+{
+  "topic": "Decision Making",
+  "totalQuestions": 4,
+  "questions": [
+    {
+      "id": "rme_2007_q35",
+      "questionText": "To promote peaceful living in the home,",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 35,
+      "options": [
+        "A. the father should take decisions alone",
+        "B. the mother should take decisions alone",
+        "C. only the father and mother should take decisions",
+        "D. father, mother and children should take decisions"
+      ],
+      "correctAnswer": "D. father, mother and children should take decisions",
+      "explanation": "BECE 2007 RME Question 35",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Decision Making"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2012_q37",
+      "questionText": "Social conflicts can best be resolved by",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 37,
+      "options": [
+        "A. obeying the scriptures.",
+        "B. being principled and humble.",
+        "C. being authoritative and principled.",
+        "D. tolerating and forgiving."
+      ],
+      "correctAnswer": "D. tolerating and forgiving.",
+      "explanation": "BECE 2012 RME Question 37",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Decision Making"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2025_q22",
+      "questionText": "Which of the following explains a common occurrence in decision making in the extended family?",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 22,
+      "options": [
+        "A. Everyone always agrees",
+        "B. Many opinions can cause delay and conflict",
+        "C. Decisions are always made quickly",
+        "D. Only one person makes the decision"
+      ],
+      "correctAnswer": "B. Many opinions can cause delay and conflict",
+      "explanation": "BECE 2025 RME Question 22",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Decision Making"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2025_q23",
+      "questionText": "In which of the following parables does Jesus illustrate the idea that good and bad people live together and that judgment should be left to God?",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 23,
+      "options": [
+        "A. Good Samaritan",
+        "B. Mustard seed",
+        "C. Dishonest servant",
+        "D. Wheat and tares"
+      ],
+      "correctAnswer": "D. Wheat and tares",
+      "explanation": "BECE 2025 RME Question 23",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Decision Making"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

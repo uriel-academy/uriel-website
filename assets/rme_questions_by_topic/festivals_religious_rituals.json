@@ -1,0 +1,830 @@
+{
+  "topic": "Festivals & Religious Rituals",
+  "totalQuestions": 28,
+  "questions": [
+    {
+      "id": "rme_2000_q13",
+      "questionText": "The festival celebrated by Christians in memory of the resurrection of Jesus is called",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 13,
+      "options": [
+        "A. Christmas",
+        "B. Easter",
+        "C. Pentecost",
+        "D. Passover",
+        "E. Ash Wednesday"
+      ],
+      "correctAnswer": "B. Easter",
+      "explanation": "BECE 2000 RME Question 13",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Festivals & Religious Rituals"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2001_q11",
+      "questionText": "Akwasidae according to the Akan calendar is",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 11,
+      "options": [
+        "A. a day that marks the beginning of the month",
+        "B. the first Sunday that marks the beginning of the month",
+        "C. the Sunday that marks the 42nd day of the month",
+        "D. a day on which the Golden Stool descended",
+        "E. a day when rituals are not performed"
+      ],
+      "correctAnswer": "C. the Sunday that marks the 42nd day of the month",
+      "explanation": "BECE 2001 RME Question 11",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Festivals & Religious Rituals"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2001_q17",
+      "questionText": "The Dentsi Asafo Company is associated with the festival of",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 17,
+      "options": [
+        "A. Homowo",
+        "B. Aboakyer",
+        "C. Odwira",
+        "D. Akwambo",
+        "E. Damba"
+      ],
+      "correctAnswer": "C. Odwira",
+      "explanation": "BECE 2001 RME Question 17",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Festivals & Religious Rituals"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2001_q18",
+      "questionText": "Which of the following festivals helps to develop the strength and vitality of the youth?",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 18,
+      "options": [
+        "A. Hogbetsotso",
+        "B. Odwira",
+        "C. Fetu",
+        "D. Damba",
+        "E. Aboakyer"
+      ],
+      "correctAnswer": "E. Aboakyer",
+      "explanation": "BECE 2001 RME Question 18",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Festivals & Religious Rituals"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2005_q39",
+      "questionText": "Which of the following is a festival of purification for the year?",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 39,
+      "options": [
+        "A. Addae",
+        "B. Odwira",
+        "C. Homowo",
+        "D. Damba"
+      ],
+      "correctAnswer": "B. Odwira",
+      "explanation": "BECE 2005 RME Question 39",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Festivals & Religious Rituals"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2006_q5",
+      "questionText": "Which of the following is a harvest festival?",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 5,
+      "options": [
+        "A. Adae",
+        "B. Hogbetsotso",
+        "C. Homowo",
+        "D. Aboakyer"
+      ],
+      "correctAnswer": "C. Homowo",
+      "explanation": "BECE 2006 RME Question 5",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Festivals & Religious Rituals"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2007_q3",
+      "questionText": "Which of the following celebrations signifies the salvation of all Christians?",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 3,
+      "options": [
+        "A. Christmas",
+        "B. Palm Sunday",
+        "C. Good Friday",
+        "D. Easter"
+      ],
+      "correctAnswer": "D. Easter",
+      "explanation": "BECE 2007 RME Question 3",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Festivals & Religious Rituals"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2009_q9",
+      "questionText": "Which of the following traditional festivals is used for cleaning and purification of society?",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 9,
+      "options": [
+        "A. Adae Kese",
+        "B. Akwasidae",
+        "C. Kundum",
+        "D. Odwira"
+      ],
+      "correctAnswer": "D. Odwira",
+      "explanation": "BECE 2009 RME Question 9",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Festivals & Religious Rituals"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2011_q13",
+      "questionText": "An important religious value of traditional festivals is to",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 13,
+      "options": [
+        "A. acknowledge the presence of the ancestors",
+        "B. settle disputes among families",
+        "C. contract marriages",
+        "D. bring citizens together to sacrifice"
+      ],
+      "correctAnswer": "C. contract marriages",
+      "explanation": "BECE 2011 RME Question 13",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Festivals & Religious Rituals"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2012_q18",
+      "questionText": "The festival celebrated by Christians to mark the resurrection of Jesus is known as",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 18,
+      "options": [
+        "A. Christmas.",
+        "B. Easter.",
+        "C. Pentecost.",
+        "D. Passover."
+      ],
+      "correctAnswer": "D. Passover.",
+      "explanation": "BECE 2012 RME Question 18",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Festivals & Religious Rituals"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2013_q20",
+      "questionText": "The last festival celebrated by the Israelites before they left Egypt was the",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 20,
+      "options": [
+        "A. Booths.",
+        "B. Passover.",
+        "C. Feast of Tabernacles.",
+        "D. Feast of Weeks."
+      ],
+      "correctAnswer": "A. Booths.",
+      "explanation": "BECE 2013 RME Question 20",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Festivals & Religious Rituals"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q14",
+      "questionText": "The traditional festival celebrated by the people of Dagbon is",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 14,
+      "options": [
+        "A. Homowo",
+        "B. Damba",
+        "C. Odwira",
+        "D. Aboakyir"
+      ],
+      "correctAnswer": "B. Damba",
+      "explanation": "BECE 2014 RME Question 14",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Festivals & Religious Rituals"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2016_q7",
+      "questionText": "Which of the following is a harvest festival?",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 7,
+      "options": [
+        "A. Aboakyir",
+        "B. Adae",
+        "C. Homowo",
+        "D. Hogbetsotso"
+      ],
+      "correctAnswer": "C. Homowo",
+      "explanation": "BECE 2016 RME Question 7",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Festivals & Religious Rituals"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2017_q10",
+      "questionText": "The festival celebrated by the people of Winneba is",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 10,
+      "options": [
+        "A. Aboakyir.",
+        "B. Damba.",
+        "C. Homowo.",
+        "D. Ogun."
+      ],
+      "correctAnswer": "A. Aboakyir.",
+      "explanation": "BECE 2017 RME Question 10",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Festivals & Religious Rituals"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2017_q9",
+      "questionText": "Which of the following people in Ghana celebrate the Odwira festival?",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 9,
+      "options": [
+        "A. Akwapim",
+        "B. Fante",
+        "C. Ewe",
+        "D. Gonja"
+      ],
+      "correctAnswer": "A. Akwapim",
+      "explanation": "BECE 2017 RME Question 9",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Festivals & Religious Rituals"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2018_q10",
+      "questionText": "Which of the following celebrations signifies the salvation of all Christians?",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 10,
+      "options": [
+        "A. Christmas",
+        "B. Easter",
+        "C. Palm Sunday",
+        "D. Pentecost"
+      ],
+      "correctAnswer": "B. Easter",
+      "explanation": "BECE 2018 RME Question 10",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Festivals & Religious Rituals"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2019_q14",
+      "questionText": "Which of the following traditional practices can dehumanize the individual?",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 14,
+      "options": [
+        "A. Festival rituals.",
+        "B. Funeral rites.",
+        "C. Libation prayers.",
+        "D. Widowhood rites."
+      ],
+      "correctAnswer": "D. Widowhood rites.",
+      "explanation": "BECE 2019 RME Question 14",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Festivals & Religious Rituals"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2019_q24",
+      "questionText": "Jesus advised mankind in the parable of the Good Samaritan not to",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 24,
+      "options": [
+        "A. beat up enemies.",
+        "B. discriminate against people.",
+        "C. neglect the sick.",
+        "D. violently rob people."
+      ],
+      "correctAnswer": "B. discriminate against people.",
+      "explanation": "BECE 2019 RME Question 24",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Festivals & Religious Rituals"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2019_q39",
+      "questionText": "Visits to tourist centres help students to",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 39,
+      "options": [
+        "A. become more adventurous.",
+        "B. make more friends.",
+        "C. overcome stress and boredom.",
+        "D. pass their examinations."
+      ],
+      "correctAnswer": "C. overcome stress and boredom.",
+      "explanation": "BECE 2019 RME Question 39",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Festivals & Religious Rituals"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2019_q40",
+      "questionText": "The Tufo and the Dentsifo Asafo Companies are associated with the",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 40,
+      "options": [
+        "A. Aboakyir festival.",
+        "B. Akwambo festival.",
+        "C. Homowo festival.",
+        "D. Odwira festival."
+      ],
+      "correctAnswer": "A. Aboakyir festival.",
+      "explanation": "BECE 2019 RME Question 40",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Festivals & Religious Rituals"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2019_q9",
+      "questionText": "The day Jesus rose from the dead is celebrated by Christians as",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 9,
+      "options": [
+        "A. Ascension Day.",
+        "B. Good Friday.",
+        "C. Easter Sunday.",
+        "D. Pentecost Day."
+      ],
+      "correctAnswer": "C. Easter Sunday.",
+      "explanation": "BECE 2019 RME Question 9",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Festivals & Religious Rituals"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2025_q19",
+      "questionText": "In what way does the act of sprinkling Kpokpoi by the Gas during the Homowo festivals demonstrate their cultural values?",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 19,
+      "options": [
+        "A. marks the start of the harvest season.",
+        "B. is a way to honour their ancestors and ask for blessing.",
+        "C. shows the end of the festival with celebrations.",
+        "D. shows the creation of wealth in the community."
+      ],
+      "correctAnswer": "B. is a way to honour their ancestors and ask for blessing.",
+      "explanation": "BECE 2025 RME Question 19",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Festivals & Religious Rituals"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2012_q2",
+      "questionText": "a)\n\n \n\nList five traditional festivals in Ghana.\n\nb)\n\n \n\nExplain five reasons why festivals are celebrated.",
+      "type": "essay",
+      "year": "2012",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2012 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Festivals & Religious Rituals"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2017_q2",
+      "questionText": "a)\n\n \n\nExplain the term puberty.\n\nb)\n\n \n\nState three emotional changes that are associated with puberty.\n\nc)\n\n \n\nExplain four reasons why puberty rites are performed.",
+      "type": "essay",
+      "year": "2017",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2017 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Festivals & Religious Rituals"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2022_q2",
+      "questionText": "a)\n\n \n\nNarrate the story of Hogbetsotso festival.\n\nb)\n\n \n\nState three reasons for which festivals are celebrated.",
+      "type": "essay",
+      "year": "2022",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2022 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Festivals & Religious Rituals"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2025_q3",
+      "questionText": "Abu was excited as the month of Ramadan had just come to an end and it was time to celebrate Idul Fitr. Soon after, Abu's family began preparing for the celebration of Idul Ad-ha. Abu became curios, asked his father how different Idul Fitr is from Idul Ad-ha and what these festivals meant to Muslims. As someone who has studied religious festivals:\n\n(a)\n\n \n\nOutline four differences Abu's father is likely to tell him about the two festivals;\n\n[12 marks]\n\n(b)\n\n \n\nExplain to Abu four reasons why both festivals are important to Muslims.\n\n[8 marks]",
+      "type": "essay",
+      "year": "2025",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2025 RME",
+      "marks": 12,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Festivals & Religious Rituals"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "9R8aL9aOnmurcwOuqeLm",
+      "year": 2014,
+      "questionNumber": 14,
+      "options": [
+        "A. Homowo",
+        "B. Damba",
+        "C. Odwira",
+        "D. Aboakyir"
+      ],
+      "correctAnswer": "B",
+      "explanation": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Festivals & Religious Rituals"
+      ],
+      "examType": "BECE",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "DRLatpNAOrem189lI7ii",
+      "year": 2014,
+      "questionNumber": 25,
+      "options": [
+        "A. Muharram",
+        "B. Ramadan",
+        "C. Rajab",
+        "D. Shawwal"
+      ],
+      "correctAnswer": "B",
+      "explanation": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Festivals & Religious Rituals"
+      ],
+      "examType": "BECE",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

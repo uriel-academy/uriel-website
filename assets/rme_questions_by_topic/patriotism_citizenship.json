@@ -1,0 +1,131 @@
+{
+  "topic": "Patriotism & Citizenship",
+  "totalQuestions": 4,
+  "questions": [
+    {
+      "id": "rme_2000_q27",
+      "questionText": "Human rights include all the following except",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 27,
+      "options": [
+        "A. the right to live",
+        "B. freedom of association",
+        "C. freedom of worship",
+        "D. administering instant justice",
+        "E. the right to vote"
+      ],
+      "correctAnswer": "D. administering instant justice",
+      "explanation": "BECE 2000 RME Question 27",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Patriotism & Citizenship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2007_q38",
+      "questionText": "At what age does one qualify to vote?",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 38,
+      "options": [
+        "A. 15 years",
+        "B. 17 years",
+        "C. 18 years",
+        "D. 21 years"
+      ],
+      "correctAnswer": "C. 18 years",
+      "explanation": "BECE 2007 RME Question 38",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Patriotism & Citizenship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2007_q39",
+      "questionText": "Human rights include all the following except",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 39,
+      "options": [
+        "A. the right to vote",
+        "B. administering instant justice",
+        "C. the right to live",
+        "D. freedom of worship"
+      ],
+      "correctAnswer": "B. administering instant justice",
+      "explanation": "BECE 2007 RME Question 39",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Patriotism & Citizenship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2013_q31",
+      "questionText": "Putting one's interest above that of others results in",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 31,
+      "options": [
+        "A. conflict.",
+        "B. patriotism.",
+        "C. selflessness.",
+        "D. tolerance."
+      ],
+      "correctAnswer": "C. selflessness.",
+      "explanation": "BECE 2013 RME Question 31",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Patriotism & Citizenship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

@@ -1,0 +1,3103 @@
+{
+  "topic": "Islam",
+  "totalQuestions": 105,
+  "questions": [
+    {
+      "id": "rme_1999_q14",
+      "questionText": "Which of the following months is also a special occasion on the Islamic Calendar?",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 14,
+      "options": [
+        "A. Rajab",
+        "B. Ramadan",
+        "C. Sha'ban",
+        "D. Shawal",
+        "E. Safar"
+      ],
+      "correctAnswer": "B. Ramadan",
+      "explanation": "BECE 1999 RME Question 14",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_1999_q18",
+      "questionText": "Eid-Ul-Fitr celebration teaches Muslims to",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 18,
+      "options": [
+        "A. submit to Allah",
+        "B. give alms",
+        "C. sacrifice themselves to God",
+        "D. endure hardship",
+        "E. appreciate God's mercy"
+      ],
+      "correctAnswer": "E. appreciate God's mercy",
+      "explanation": "BECE 1999 RME Question 18",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_1999_q20",
+      "questionText": "The essence of the Muslim fast of Ramadan is to",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 20,
+      "options": [
+        "A. keep the body fit",
+        "B. save food",
+        "C. make one become used to hunger",
+        "D. guard against evil",
+        "E. honour the poor and needy"
+      ],
+      "correctAnswer": "D. guard against evil",
+      "explanation": "BECE 1999 RME Question 20",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_1999_q6",
+      "questionText": "The Islamic practice where wealthy Muslims cater for the needs of the poor and needy is",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 6,
+      "options": [
+        "A. Hajj",
+        "B. Zakat",
+        "C. Ibrahr",
+        "D. Mahr",
+        "E. Talaq"
+      ],
+      "correctAnswer": "B. Zakat",
+      "explanation": "BECE 1999 RME Question 6",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2000_q15",
+      "questionText": "A religious leader in Islam is called",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 15,
+      "options": [
+        "A. Khalifah",
+        "B. Imam",
+        "C. Alhaji",
+        "D. Mallam",
+        "E. Sheikh"
+      ],
+      "correctAnswer": "A. Khalifah",
+      "explanation": "BECE 2000 RME Question 15",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2000_q9",
+      "questionText": "The pillar of faith in Islam which expresses charity is",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 9,
+      "options": [
+        "A. Salat",
+        "B. Sawn",
+        "C. Zakat",
+        "D. Kalimat",
+        "E. Hajj"
+      ],
+      "correctAnswer": "B. Sawn",
+      "explanation": "BECE 2000 RME Question 9",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2001_q10",
+      "questionText": "Salat is to prayer as charity is to",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 10,
+      "options": [
+        "A. Zakat",
+        "B. Shahadah",
+        "C. Sawn",
+        "D. Hajj",
+        "E. Sunnah"
+      ],
+      "correctAnswer": "A. Zakat",
+      "explanation": "BECE 2001 RME Question 10",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2001_q15",
+      "questionText": "The main role of angels in Islam is to",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 15,
+      "options": [
+        "A. reveal Allah's orders and messages to His Prophets",
+        "B. help Allah's Prophets to understand the Qur'an",
+        "C. explain dreams to the people",
+        "D. give spiritual power for the writing of the Qur'an",
+        "E. give spiritual power to those who perform sacrifice to Allah"
+      ],
+      "correctAnswer": "A. reveal Allah's orders and messages to His Prophets",
+      "explanation": "BECE 2001 RME Question 15",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2001_q16",
+      "questionText": "How many times do Muslims go round the Ka'ba during Hajj?",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 16,
+      "options": [
+        "A. 1",
+        "B. 3",
+        "C. 5",
+        "D. 7",
+        "E. 10"
+      ],
+      "correctAnswer": "D. 7",
+      "explanation": "BECE 2001 RME Question 16",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2001_q5",
+      "questionText": "The Muslim festival of sacrifice is",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 5,
+      "options": [
+        "A. Eid-ul-Fitr",
+        "B. Bilabi Nabi",
+        "C. Ramadan",
+        "D. Eid-ul-Khalimat",
+        "E. Eid-ul-Adha"
+      ],
+      "correctAnswer": "E. Eid-ul-Adha",
+      "explanation": "BECE 2001 RME Question 5",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2002_a_q12",
+      "questionText": "Id-ul-Fitr in Islam is the feast of",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 12,
+      "options": [
+        "A. sacrifice on 10th of Zul-Hijjah",
+        "B. breaking the fast of Ramadan",
+        "C. Ramadan in which the Quran was revealed",
+        "D. the prophet's birthday on 12th of Rabii Al-Awwal"
+      ],
+      "correctAnswer": "B. breaking the fast of Ramadan",
+      "explanation": "BECE 2002 RME Question 12",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2002_a_q14",
+      "questionText": "For the Muslim to gain salvation, he must",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 14,
+      "options": [
+        "A. confess very often",
+        "B. observe the teachings of Islam",
+        "C. marry not more than five women",
+        "D. help his neighbour to go on a Hajj"
+      ],
+      "correctAnswer": "A. confess very often",
+      "explanation": "BECE 2002 RME Question 14",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2002_a_q18",
+      "questionText": "The Islamic practice by which wealthy Muslims show concern for the poor and the needy is",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 18,
+      "options": [
+        "A. Tawaf",
+        "B. Zakat",
+        "C. Hajj",
+        "D. Salat"
+      ],
+      "correctAnswer": "B. Zakat",
+      "explanation": "BECE 2002 RME Question 18",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2002_a_q20",
+      "questionText": "A Muslim performs Tayammum when he",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 20,
+      "options": [
+        "A. is late to the mosque",
+        "B. vitiates his wudu",
+        "C. cannot find water",
+        "D. meets the Imam in the mosque"
+      ],
+      "correctAnswer": "C. cannot find water",
+      "explanation": "BECE 2002 RME Question 20",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2002_a_q5",
+      "questionText": "The most important rite of our Islamic marriage is the",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 5,
+      "options": [
+        "A. presentation of household utensils to the bride",
+        "B. delivering of wedding sermon during the feast",
+        "C. payment of the dowry",
+        "D. celebration of the marriage feast"
+      ],
+      "correctAnswer": "D. celebration of the marriage feast",
+      "explanation": "BECE 2002 RME Question 5",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2002_a_q6",
+      "questionText": "In Islam a Muslim must offer prayers",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 6,
+      "options": [
+        "A. six times daily",
+        "B. five times daily",
+        "C. four times daily",
+        "D. three times daily"
+      ],
+      "correctAnswer": "C. four times daily",
+      "explanation": "BECE 2002 RME Question 6",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2003_q12",
+      "questionText": "The importance of fasting in Islam is to",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 12,
+      "options": [
+        "A. honour the poor and needy",
+        "B. guard against evil",
+        "C. keep the body fit",
+        "D. store food for future use"
+      ],
+      "correctAnswer": "B. guard against evil",
+      "explanation": "BECE 2003 RME Question 12",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2003_q14",
+      "questionText": "The Hadith of the Muslim signifies the",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 14,
+      "options": [
+        "A. revelations of the Junnah",
+        "B. revelations of Abu Bakr",
+        "C. sayings of the Holy Prophet",
+        "D. writings of the Holy Prophet"
+      ],
+      "correctAnswer": "C. sayings of the Holy Prophet",
+      "explanation": "BECE 2003 RME Question 14",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2004_q13",
+      "questionText": "'There is no god but God, and Mohammed is the Apostle of God' this is known as the",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 13,
+      "options": [
+        "A. Shahadah",
+        "B. Iqamath",
+        "C. Adhan",
+        "D. Sunnah"
+      ],
+      "correctAnswer": "A. Shahadah",
+      "explanation": "BECE 2004 RME Question 13",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2004_q5",
+      "questionText": "The Holy Quran describes angels as creatures who",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 5,
+      "options": [
+        "A. anoint prophets and messengers of Allah",
+        "B. punish evil doers on the judgment day",
+        "C. act on the order of Allah",
+        "D. lead the faithful to observe the Hajj"
+      ],
+      "correctAnswer": "C. act on the order of Allah",
+      "explanation": "BECE 2004 RME Question 5",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2004_q6",
+      "questionText": "Which of the following acts in Islam promotes good neighbourliness, love and brotherhood",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 6,
+      "options": [
+        "A. Hajj",
+        "B. Asr",
+        "C. Salat",
+        "D. Ramadan"
+      ],
+      "correctAnswer": "D. Ramadan",
+      "explanation": "BECE 2004 RME Question 6",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2005_q16",
+      "questionText": "The purpose of Salat is to enable a Muslim to",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 16,
+      "options": [
+        "A. travel to Mecca",
+        "B. have a pure heart",
+        "C. become an Imam",
+        "D. prepare for the Ramadan fast"
+      ],
+      "correctAnswer": "B. have a pure heart",
+      "explanation": "BECE 2005 RME Question 16",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2005_q5",
+      "questionText": "The Damba festival is celebrated to mark",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 5,
+      "options": [
+        "A. the end of the agricultural year",
+        "B. birthday of Prophet Muhammad",
+        "C. founding of the Mole-Dagbani",
+        "D. enskinment of the Yaa Naa I"
+      ],
+      "correctAnswer": "B. birthday of Prophet Muhammad",
+      "explanation": "BECE 2005 RME Question 5",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2005_q7",
+      "questionText": "Muslims throw stones during hajj to",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 7,
+      "options": [
+        "A. keep Satan away from their lives",
+        "B. commemorate Hagar's departure",
+        "C. help them celebrate the Id al Adha",
+        "D. remember Abraham's temptation"
+      ],
+      "correctAnswer": "A. keep Satan away from their lives",
+      "explanation": "BECE 2005 RME Question 7",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2005_q8",
+      "questionText": "Prophet Muhammad's marriage with Khadijah enabled him to",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 8,
+      "options": [
+        "A. free many Muslim slaves",
+        "B. devote more time for worship",
+        "C. migrate to Medina",
+        "D. preach publicly in Mecca"
+      ],
+      "correctAnswer": "B. devote more time for worship",
+      "explanation": "BECE 2005 RME Question 8",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2005_q9",
+      "questionText": "The traditions of the Prophet Muhammad which form part of the Quran are the",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 9,
+      "options": [
+        "A. Injil and Zabur",
+        "B. Hadith and Sunnah",
+        "C. Sunna and Injil",
+        "D. Ru'ya and Hadith"
+      ],
+      "correctAnswer": "B. Hadith and Sunnah",
+      "explanation": "BECE 2005 RME Question 9",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2006_q12",
+      "questionText": "The teachings of Muhammad are found in the",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 12,
+      "options": [
+        "A. Kalima",
+        "B. Qur'an",
+        "C. Hadith",
+        "D. Sura"
+      ],
+      "correctAnswer": "C. Hadith",
+      "explanation": "BECE 2006 RME Question 12",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2006_q15",
+      "questionText": "After the Isha prayer in the month of Ramadan, Muslims perform",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 15,
+      "options": [
+        "A. Tahajjud",
+        "B. Fajr",
+        "C. Tarawih",
+        "D. Istisquah"
+      ],
+      "correctAnswer": "C. Tarawih",
+      "explanation": "BECE 2006 RME Question 15",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2006_q8",
+      "questionText": "Zakat is the practice by which Muslims",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 8,
+      "options": [
+        "A. pray five times a day",
+        "B. show concern for the poor",
+        "C. offer sacrifice to Allah",
+        "D. travel to Mecca every year"
+      ],
+      "correctAnswer": "B. show concern for the poor",
+      "explanation": "BECE 2006 RME Question 8",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2006_q9",
+      "questionText": "The second Caliph of Islam was",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 9,
+      "options": [
+        "A. Ali",
+        "B. Abubakar",
+        "C. Umar",
+        "D. Uthman"
+      ],
+      "correctAnswer": "C. Umar",
+      "explanation": "BECE 2006 RME Question 9",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2007_q11",
+      "questionText": "The belief in the oneness of Allah is known as",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 11,
+      "options": [
+        "A. Salat",
+        "B. Tawhid",
+        "C. Tawaf",
+        "D. Zakat"
+      ],
+      "correctAnswer": "B. Tawhid",
+      "explanation": "BECE 2007 RME Question 11",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2007_q12",
+      "questionText": "Muslims fast in the month of Ramadan in order to",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 12,
+      "options": [
+        "A. save food",
+        "B. guard against evil",
+        "C. keep the body fit",
+        "D. honour the poor and needy"
+      ],
+      "correctAnswer": "B. guard against evil",
+      "explanation": "BECE 2007 RME Question 12",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2007_q5",
+      "questionText": "The most important source of morality in Islam is",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 5,
+      "options": [
+        "A. Hadith",
+        "B. Sunnah",
+        "C. Qur'an",
+        "D. Tawrah"
+      ],
+      "correctAnswer": "C. Qur'an",
+      "explanation": "BECE 2007 RME Question 5",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2007_q7",
+      "questionText": "The practice whereby a Muslim gives a certain percentage of his wealth to the needy is called",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 7,
+      "options": [
+        "A. Sadaqah",
+        "B. Zakat",
+        "C. Hajj",
+        "D. sawn"
+      ],
+      "correctAnswer": "B. Zakat",
+      "explanation": "BECE 2007 RME Question 7",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2007_q9",
+      "questionText": "Caliph Abu Bakr is remembered for",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 9,
+      "options": [
+        "A. going on pilgrimage with the prophet",
+        "B. marrying the prophet's daughter",
+        "C. compiling the Qur'an into a book",
+        "D. defending the prophet in Mecca"
+      ],
+      "correctAnswer": "C. compiling the Qur'an into a book",
+      "explanation": "BECE 2007 RME Question 9",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2008_q11",
+      "questionText": "A chapter of the Qur'an is called",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 11,
+      "options": [
+        "A. Ayah",
+        "B. Surah",
+        "C. Hadith",
+        "D. Sunnah"
+      ],
+      "correctAnswer": "C. Hadith",
+      "explanation": "BECE 2008 RME Question 11",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2008_q16",
+      "questionText": "Caliph Abubakar led prayers in the lifetime of Prophet Muhammad because the Prophet",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 16,
+      "options": [
+        "A. was tired",
+        "B. was sick",
+        "C. wanted to test him",
+        "D. had travelled"
+      ],
+      "correctAnswer": "B. was sick",
+      "explanation": "BECE 2008 RME Question 16",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2008_q19",
+      "questionText": "The essence of Zakat is to",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 19,
+      "options": [
+        "A. cater for the needy",
+        "B. offer sacrifice to Allah",
+        "C. spread the religion of Islam",
+        "D. celebrate the Id festival"
+      ],
+      "correctAnswer": "A. cater for the needy",
+      "explanation": "BECE 2008 RME Question 19",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2008_q6",
+      "questionText": "Aminah is popular among Muslims because she",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 6,
+      "options": [
+        "A. married Muhammad",
+        "B. gave birth to Muhammad",
+        "C. supported Muhammad in the jihads",
+        "D. was Muhammad's sister"
+      ],
+      "correctAnswer": "B. gave birth to Muhammad",
+      "explanation": "BECE 2008 RME Question 6",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2009_q13",
+      "questionText": "The immediate cause of Muhammad's departure to Madina was",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 13,
+      "options": [
+        "A. invitation from Yathrib",
+        "B. harsh conditions in Mecca",
+        "C. plan to kill him",
+        "D. desire to spread Islam"
+      ],
+      "correctAnswer": "C. plan to kill him",
+      "explanation": "BECE 2009 RME Question 13",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2009_q32",
+      "questionText": "The spirit of patriotism is best shown by the youth of",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 32,
+      "options": [
+        "A. Young People's Guild",
+        "B. Pentecost Youth Ministry",
+        "C. Asafo Company",
+        "D. Ahmadiyya Muslim Youth"
+      ],
+      "correctAnswer": "C. Asafo Company",
+      "explanation": "BECE 2009 RME Question 32",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2009_q5",
+      "questionText": "The Oneness of Allah is known as",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 5,
+      "options": [
+        "A. Tawhid",
+        "B. Shahadah",
+        "C. Shirk",
+        "D. Tawaf"
+      ],
+      "correctAnswer": "A. Tawhid",
+      "explanation": "BECE 2009 RME Question 5",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2011_q17",
+      "questionText": "The Islamic institution for reducing poverty is",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 17,
+      "options": [
+        "A. Zakat",
+        "B. Salat",
+        "C. Sawn",
+        "D. Hajj"
+      ],
+      "correctAnswer": "C. Sawn",
+      "explanation": "BECE 2011 RME Question 17",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2011_q20",
+      "questionText": "The use of sand in the absence of water by a Muslim for purification is",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 20,
+      "options": [
+        "A. Taharah",
+        "B. Tashahhud",
+        "C. Tayammum",
+        "D. Takbir"
+      ],
+      "correctAnswer": "C. Tayammum",
+      "explanation": "BECE 2011 RME Question 20",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2011_q5",
+      "questionText": "Islam shows concern for the poor and needy by practising",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 5,
+      "options": [
+        "A. Zawn",
+        "B. Zakat",
+        "C. Salat",
+        "D. Kalimat"
+      ],
+      "correctAnswer": "B. Zakat",
+      "explanation": "BECE 2011 RME Question 5",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2012_q17",
+      "questionText": "A Muslim is a person who",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 17,
+      "options": [
+        "A. comes from Arabia.",
+        "B. visits Mecca annually.",
+        "C. submits to the will of Allah.",
+        "D. recites the Qur'an."
+      ],
+      "correctAnswer": "C. submits to the will of Allah.",
+      "explanation": "BECE 2012 RME Question 17",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2012_q9",
+      "questionText": "Ramadan is the",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 9,
+      "options": [
+        "A. feast of sacrifice.",
+        "B. month of fasting.",
+        "C. feast of breaking fast.",
+        "D. month of Hijra."
+      ],
+      "correctAnswer": "B. month of fasting.",
+      "explanation": "BECE 2012 RME Question 9",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2013_q13",
+      "questionText": "Zakat is important in Islam because it",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 13,
+      "options": [
+        "A. is mentioned in the Qur'an.",
+        "B. is paid by the wealthy.",
+        "C. is a religious form of taxation.",
+        "D. reduces the suffering of the poor."
+      ],
+      "correctAnswer": "C. is a religious form of taxation.",
+      "explanation": "BECE 2013 RME Question 13",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2013_q9",
+      "questionText": "The teachings of Prophet Muhammad are found in the",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 9,
+      "options": [
+        "A. Hadith.",
+        "B. Ijma.",
+        "C. Kalima.",
+        "D. Sura."
+      ],
+      "correctAnswer": "A. Hadith.",
+      "explanation": "BECE 2013 RME Question 9",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q11",
+      "questionText": "The Islamic method of slaughtering animals is called",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 11,
+      "options": [
+        "A. Halal",
+        "B. Haram",
+        "C. Zabihah",
+        "D. Qurbani"
+      ],
+      "correctAnswer": "C. Zabihah",
+      "explanation": "BECE 2014 RME Question 11",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q13",
+      "questionText": "Salat in Islam means",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 13,
+      "options": [
+        "A. fasting",
+        "B. pilgrimage",
+        "C. prayer",
+        "D. almsgiving"
+      ],
+      "correctAnswer": "C. prayer",
+      "explanation": "BECE 2014 RME Question 13",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q19",
+      "questionText": "The Islamic pilgrimage to Makkah is called",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 19,
+      "options": [
+        "A. Salat",
+        "B. Sawm",
+        "C. Hajj",
+        "D. Jihad"
+      ],
+      "correctAnswer": "C. Hajj",
+      "explanation": "BECE 2014 RME Question 19",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q2",
+      "questionText": "In Islam, Tawhid means",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 2,
+      "options": [
+        "A. oneness of Allah",
+        "B. belief in the prophets",
+        "C. belief in destiny",
+        "D. belief in holy books"
+      ],
+      "correctAnswer": "A. oneness of Allah",
+      "explanation": "BECE 2014 RME Question 2",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q22",
+      "questionText": "The Islamic declaration of faith is called",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 22,
+      "options": [
+        "A. Iman",
+        "B. Shahada",
+        "C. Tawhid",
+        "D. Ihsan"
+      ],
+      "correctAnswer": "B. Shahada",
+      "explanation": "BECE 2014 RME Question 22",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q25",
+      "questionText": "The Islamic month of fasting is",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 25,
+      "options": [
+        "A. Muharram",
+        "B. Ramadan",
+        "C. Rajab",
+        "D. Shawwal"
+      ],
+      "correctAnswer": "B. Ramadan",
+      "explanation": "BECE 2014 RME Question 25",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q6",
+      "questionText": "The holy book of Islam is called",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 6,
+      "options": [
+        "A. Hadith",
+        "B. Sunnah",
+        "C. Qur'an",
+        "D. Injil"
+      ],
+      "correctAnswer": "C. Qur'an",
+      "explanation": "BECE 2014 RME Question 6",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q8",
+      "questionText": "Prophet Muhammad (S.A.W.) was born in",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 8,
+      "options": [
+        "A. Makkah",
+        "B. Madinah",
+        "C. Jerusalem",
+        "D. Damascus"
+      ],
+      "correctAnswer": "A. Makkah",
+      "explanation": "BECE 2014 RME Question 8",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2015_q11",
+      "questionText": "Going round the Ka'bah is an Islamic religious activity done during",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 11,
+      "options": [
+        "A. Eid-ul-Adha",
+        "B. Eid-ul-Fitr",
+        "C. Hajj",
+        "D. Ramadan"
+      ],
+      "correctAnswer": "C. Hajj",
+      "explanation": "BECE 2015 RME Question 11",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2015_q19",
+      "questionText": "Eid-ul-Adha is celebrated by Muslims to",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 19,
+      "options": [
+        "A. Mark Abraham's sacrifice to Allah",
+        "B. Remember the death of Muhammad",
+        "C. Mark the end of Ramadan",
+        "D. Remember the birth of Muhammad"
+      ],
+      "correctAnswer": "A. Mark Abraham's sacrifice to Allah",
+      "explanation": "BECE 2015 RME Question 19",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2015_q22",
+      "questionText": "Muslims show their commitment to Allah by",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 22,
+      "options": [
+        "A. Dressing modestly",
+        "B. Visiting the mosque every day",
+        "C. Marrying four women",
+        "D. Observing all prescribed rituals"
+      ],
+      "correctAnswer": "D. Observing all prescribed rituals",
+      "explanation": "BECE 2015 RME Question 22",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2015_q3",
+      "questionText": "What is the second pillar of Islam?",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 3,
+      "options": [
+        "A. Salat",
+        "B. Sawm",
+        "C. Zakat",
+        "D. Hajj"
+      ],
+      "correctAnswer": "A. Salat",
+      "explanation": "BECE 2015 RME Question 3",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2016_q2",
+      "questionText": "Going round the Ka'bah is an Islamic religious activity done during",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 2,
+      "options": [
+        "A. Eid-ul-Adha",
+        "B. Eid-ul-Fitr",
+        "C. Hajj",
+        "D. Ramadan"
+      ],
+      "correctAnswer": "C. Hajj",
+      "explanation": "BECE 2016 RME Question 2",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2016_q3",
+      "questionText": "What is the second pillar of Islam?",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 3,
+      "options": [
+        "A. Hajj",
+        "B. Salat",
+        "C. Sawm",
+        "D. Zakat"
+      ],
+      "correctAnswer": "B. Salat",
+      "explanation": "BECE 2016 RME Question 3",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2016_q5",
+      "questionText": "The teachings of Prophet Mohammed are found in the",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 5,
+      "options": [
+        "A. Kalima",
+        "B. Hadith",
+        "C. Ijma'",
+        "D. Sura"
+      ],
+      "correctAnswer": "B. Hadith",
+      "explanation": "BECE 2016 RME Question 5",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2016_q8",
+      "questionText": "Eid-ul-Adha is celebrated by Muslims to",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 8,
+      "options": [
+        "A. mark Abraham's sacrifice to Allah.",
+        "B. remember the birth of Mohammed.",
+        "C. mark the end of Ramadan.",
+        "D. remember the death of Mohammed."
+      ],
+      "correctAnswer": "A. mark Abraham's sacrifice to Allah.",
+      "explanation": "BECE 2016 RME Question 8",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2017_q15",
+      "questionText": "The first Muezzin in Islam was",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 15,
+      "options": [
+        "A. Abu Talib.",
+        "B. Bilal.",
+        "C. Salman.",
+        "D. Zayd."
+      ],
+      "correctAnswer": "B. Bilal.",
+      "explanation": "BECE 2017 RME Question 15",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2018_q5",
+      "questionText": "The holy pilgrimage to Makkah by Muslims is known as",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 5,
+      "options": [
+        "A. Hajj.",
+        "B. Ijma.",
+        "C. Ru'ya.",
+        "D. Salat."
+      ],
+      "correctAnswer": "A. Hajj.",
+      "explanation": "BECE 2018 RME Question 5",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2019_q15",
+      "questionText": "Islamic practice of worship (Ibada) is based on the",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 15,
+      "options": [
+        "A. five pillars of Islam.",
+        "B. nine rackets of salat.",
+        "C. seven events of hajj.",
+        "D. six teachings of Uthman."
+      ],
+      "correctAnswer": "A. five pillars of Islam.",
+      "explanation": "BECE 2019 RME Question 15",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2019_q18",
+      "questionText": "The practice of throwing stones during hajj is to",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 18,
+      "options": [
+        "A. protect Muslims from death.",
+        "B. achieve goals for the pilgrimage.",
+        "C. keep the devil away.",
+        "D. open the way to prosperity."
+      ],
+      "correctAnswer": "C. keep the devil away.",
+      "explanation": "BECE 2019 RME Question 18",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2019_q36",
+      "questionText": "Which of the following objects can be found in an Islamic religious home?",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 36,
+      "options": [
+        "A. Amulet.",
+        "B. Cross.",
+        "C. Rosary.",
+        "D. Tasba."
+      ],
+      "correctAnswer": "D. Tasba.",
+      "explanation": "BECE 2019 RME Question 36",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2019_q6",
+      "questionText": "The spiritual leader who was also a successor of Prophet Mohammed (SAW) was",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 6,
+      "options": [
+        "A. Caliph.",
+        "B. Hafiz.",
+        "C. Imam.",
+        "D. Shierk."
+      ],
+      "correctAnswer": "A. Caliph.",
+      "explanation": "BECE 2019 RME Question 6",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2020_q15",
+      "questionText": "Which of the following refers to a Muslim's declaration of commitment?",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 15,
+      "options": [
+        "A. Adhan",
+        "B. Hadith",
+        "C. Sunnah",
+        "D. Shahāda"
+      ],
+      "correctAnswer": "D. Shahāda",
+      "explanation": "BECE 2020 RME Question 15",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2021_q26",
+      "questionText": "Muslims believe that God's messages to his prophets were declared through His",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 26,
+      "options": [
+        "A. angels.",
+        "B. Caliphs.",
+        "C. divinities.",
+        "D. Imams."
+      ],
+      "correctAnswer": "A. angels.",
+      "explanation": "BECE 2021 RME Question 26",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2021_q33",
+      "questionText": "Muslims are to make pilgrimage to Mecca at least",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 33,
+      "options": [
+        "A. once a year.",
+        "B. once in a life time.",
+        "C. twice in five years.",
+        "D. twice in a life time."
+      ],
+      "correctAnswer": "B. once in a life time.",
+      "explanation": "BECE 2021 RME Question 33",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2021_q4",
+      "questionText": "At Eidul-Fitr, Muslims thank God for",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 4,
+      "options": [
+        "A. a peaceful hajj celebration.",
+        "B. a successful Ramadan fast.",
+        "C. promoting unity and brotherliness.",
+        "D. travelling mercies during the year."
+      ],
+      "correctAnswer": "B. a successful Ramadan fast.",
+      "explanation": "BECE 2021 RME Question 4",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2023_q10",
+      "questionText": "Which of the following persons is not mentioned in the Qur'an as the recipient of Zakat? The",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 10,
+      "options": [
+        "A. poor",
+        "B. Imam",
+        "C. needy",
+        "D. traveller"
+      ],
+      "correctAnswer": "C. needy",
+      "explanation": "BECE 2023 RME Question 10",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2023_q21",
+      "questionText": "The declaration of faith (Kalimatus Shahadah) is important in Islam because it",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 21,
+      "options": [
+        "A. enhances performance of Salat in the mosque.",
+        "B. helps in the praying of Tasbah.",
+        "C. teaches the worship of one God.",
+        "D. protects the worshipper from demonic attacks."
+      ],
+      "correctAnswer": "D. protects the worshipper from demonic attacks.",
+      "explanation": "BECE 2023 RME Question 21",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2024_q1",
+      "questionText": "Which of he following events made the 12th birthday of Prophet Muhammad (SAW) memorable? The",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 1,
+      "options": [
+        "A. battle of Badr.",
+        "B. revelation of the Quran to Prophet Muhammad (SAW).",
+        "C. migration of the Prophet Muhammad (SAW) from Madinah to Mecca.",
+        "D. construction of Kaaba in Mecca."
+      ],
+      "correctAnswer": "B. revelation of the Quran to Prophet Muhammad (SAW).",
+      "explanation": "BECE 2024 RME Question 1",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2024_q27",
+      "questionText": "The declaration of faith in Islam does not include one of the following as a central tenet?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 27,
+      "options": [
+        "A. Belief in one God (Allah) and Prophet Muhammad (SAW) His messenger",
+        "B. Submission to the will of God (Allah)",
+        "C. Performance of the five pillars of Islam",
+        "D. Obligation to wage Jihad"
+      ],
+      "correctAnswer": "D. Obligation to wage Jihad",
+      "explanation": "BECE 2024 RME Question 27",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2024_q9",
+      "questionText": "Ali and Fatima, devoted Muslims, are preparing for their marriage ceremony. As they plan for the event, they reflected on the significance of various Islamic rites and traditions associated with marriage. Which rite holds the most significance to the would-be couple in Islamic marriage?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 9,
+      "options": [
+        "A. Aqd",
+        "B. Walima",
+        "C. Nikah",
+        "D. Istikhara"
+      ],
+      "correctAnswer": "C. Nikah",
+      "explanation": "BECE 2024 RME Question 9",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2025_q18",
+      "questionText": "How does the statement there is no god but Allah in the Shahada helps Muslims shape their beliefs and actions? It",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 18,
+      "options": [
+        "A. reminds Muslims to fast during Ramadan",
+        "B. teaches Muslims to believe in one God.",
+        "C. tells Muslims they must go on a pilgrimage.",
+        "D. tells Muslims to pray five times daily."
+      ],
+      "correctAnswer": "B. teaches Muslims to believe in one God.",
+      "explanation": "BECE 2025 RME Question 18",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2025_q25",
+      "questionText": "In Islam, which practice encourages those with wealth to show concern for the poor and needy in the society?",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 25,
+      "options": [
+        "A. Hajj",
+        "B. Salat",
+        "C. Sawn",
+        "D. Zakat"
+      ],
+      "correctAnswer": "D. Zakat",
+      "explanation": "BECE 2025 RME Question 25",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2025_q26",
+      "questionText": "Under which condition was Umar's conversion into Islam made possible?",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 26,
+      "options": [
+        "A. His attempt to kill Ali",
+        "B. His sister's earlier acceptance of Islam",
+        "C. The impact of the Prophet's teachings",
+        "D. The effect of the wicked deeds of the people"
+      ],
+      "correctAnswer": "B. His sister's earlier acceptance of Islam",
+      "explanation": "BECE 2025 RME Question 26",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2025_q40",
+      "questionText": "",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 40,
+      "options": [
+        "A. Both parties must undergo a medical check-up.",
+        "B. Both parties must submit a formal declaration.",
+        "C. The marriage must be witnessed by at least two Muslim witnesses.",
+        "D. They must have a pre-marriage counseling."
+      ],
+      "correctAnswer": "C. The marriage must be witnessed by at least two Muslim witnesses.",
+      "explanation": "BECE 2025 RME Question 40",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2025_q7",
+      "questionText": "Idul Fitr is best explained in one of the following: It",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 7,
+      "options": [
+        "A. marks the beginning of the Islamic new year.",
+        "B. marks the end of Ramadan and a time for thanksgiving.",
+        "C. is obeyed only by those who fast for 40 days.",
+        "D. is a holiday exclusively celebrated in Muslim communities. Mark"
+      ],
+      "correctAnswer": "B. marks the end of Ramadan and a time for thanksgiving.",
+      "explanation": "BECE 2025 RME Question 7",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2001_q2",
+      "questionText": "a)\n\n \n\nDescribe how ablution (wudu) in Islam is performed.\n\nb)\n\n \n\nWhat is its importance?",
+      "type": "essay",
+      "year": "2001",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2001 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2002_q3",
+      "questionText": "a)\n\n \n\nWhat is revelation in Islam?\n\nb)\n\n \n\nIdentify the importance of revelation to the Muslim.\n\n \n\nSECTION B\n\nMORAL LIFE\n\nAnswer one question only from this section.",
+      "type": "essay",
+      "year": "2002",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2002 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2003_q2",
+      "questionText": "a)\n\n \n\nWhat is Eid-ul-Adha?\n\nb)\n\n \n\nExplain how it is observed in Muslim communities.",
+      "type": "essay",
+      "year": "2003",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2003 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2004_q3",
+      "questionText": "a)\n\n \n\nGive five contributions of Caliph Abubakar to Islam.\n\nb)\n\n \n\nWhat three lessons can be learnt from the contributions of Caliph Abubakar?\n\n \n\nSECTION B\n\nMORAL LIFE\n\nAnswer one question only from this section.",
+      "type": "essay",
+      "year": "2004",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2004 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2005_q3",
+      "questionText": "a)\n\n \n\nDescribe how Wudu (ablution) is performed in Islam.\n\nb)\n\n \n\nGive three reasons why Wudu is important.\n\n  \n\nSECTION B\n\nMORAL LIFE\n\nAnswer one question only from this section.",
+      "type": "essay",
+      "year": "2005",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2005 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2007_q2",
+      "questionText": "a)\n\n \n\nDescribe how marriage ceremony is performed in Islam.\n\nb)\n\n \n\nState three things which make marriage successful.",
+      "type": "essay",
+      "year": "2007",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2007 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2009_q3",
+      "questionText": "a)\n\n \n\nDescribe how fasting is performed during Ramadan.\n\nb)\n\n \n\nState four benefits of fasting in Ramadan.\n\n \n\nSECTION B\n\nMORAL LIFE\n\nAnswer one question only from this section.",
+      "type": "essay",
+      "year": "2009",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2009 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2013_q2",
+      "questionText": "a)\n\n \n\nOutline five contributions of Caliph Abu Bakr to Islam.\n\nb)\n\n \n\nState two lessons that can be learnt from the life of Caliph Abu Bakr.",
+      "type": "essay",
+      "year": "2013",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2013 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2014_q2",
+      "questionText": "a)\n\n \n\nExplain the following types of prayer in Islam:\n\ni)\n\n \n\nJumu’ah;\n\nii)\n\n \n\nTarawih;\n\niii)\n\n \n\nTahajjud;\n\niv)\n\n \n\nJanazah.\n\nb)\n\n \n\nState four things that spoil Wudu.",
+      "type": "essay",
+      "year": "2014",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2014 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2015_q2",
+      "questionText": "a)\n\n \n\nOutline five contributions of Caliph Abu Bakr to Islam.\n\nb)\n\n \n\nState two lessons that can be learnt from the life of Caliph Abu Bakr.",
+      "type": "essay",
+      "year": "2015",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2016_q3",
+      "questionText": "a)\n\n \n\nOutline any four activities involved in Islamic worship.\n\nb)\n\n \n\nExplain any four advantages of worship to the Muslim.\n\n  \n\nSECTION B\n\nMORAL LIFE\n\nAnswer one question only from this section.",
+      "type": "essay",
+      "year": "2016",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2016 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2017_q1",
+      "questionText": "a)\n\n \n\nOutline five contributions of Caliph Abu Bakr to Islam.\n\nb)\n\n \n\nWhat two lessons can be learnt from the contribution of Caliph Abu Bakr?",
+      "type": "essay",
+      "year": "2017",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2017 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2018_q5",
+      "questionText": "a)\n\n \n\nExplain four ways of showing commitment to Allah.\n\nb)\n\n \n\nState four benefits of showing commitment to Allah.",
+      "type": "essay",
+      "year": "2018",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2018 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2019_q2",
+      "questionText": "a)\n\n \n\nDescribe how marriage rites are performed in Islam.\n\nb)\n\n \n\nIn what four ways are marriage rites important?",
+      "type": "essay",
+      "year": "2019",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2019 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2021_q5",
+      "questionText": "a)\n\n \n\nOutline four benefits which Muslims can derive from their commitment to Allah.\n\nb)\n\n \n\nExplain four ways of demonstrating commitment in life.",
+      "type": "essay",
+      "year": "2021",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2021 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2023_q2",
+      "questionText": "a)\n\n \n\nIdentify four steps involved in contracting Islamic marriage.\n\nb)\n\n \n\nState four ways of ensuring success in marriage.",
+      "type": "essay",
+      "year": "2023",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2023 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "8Akj4UqTFJseGqGKBHZ9",
+      "year": 2014,
+      "questionNumber": 22,
+      "options": [
+        "A. Iman",
+        "B. Shahada",
+        "C. Tawhid",
+        "D. Ihsan"
+      ],
+      "correctAnswer": "B",
+      "explanation": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "BECE",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "Q5bVdJ6x6RrkEN3KUAeY",
+      "year": 2014,
+      "questionNumber": 19,
+      "options": [
+        "A. Salat",
+        "B. Sawm",
+        "C. Hajj",
+        "D. Jihad"
+      ],
+      "correctAnswer": "C",
+      "explanation": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "BECE",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "yYrSZV8vJp79KUn47qo4",
+      "year": 2014,
+      "questionNumber": 11,
+      "options": [
+        "A. Halal",
+        "B. Haram",
+        "C. Zabihah",
+        "D. Qurbani"
+      ],
+      "correctAnswer": "C",
+      "explanation": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "BECE",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "zLwYVP8u7m3UxWOkqSvO",
+      "year": 2014,
+      "questionNumber": 6,
+      "options": [
+        "A. Hadith",
+        "B. Sunnah",
+        "C. Qur'an",
+        "D. Injil"
+      ],
+      "correctAnswer": "C",
+      "explanation": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Islam"
+      ],
+      "examType": "BECE",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

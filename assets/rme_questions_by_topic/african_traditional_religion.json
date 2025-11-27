@@ -1,0 +1,1094 @@
+{
+  "topic": "African Traditional Religion",
+  "totalQuestions": 36,
+  "questions": [
+    {
+      "id": "rme_1999_q29",
+      "questionText": "Hard work is most often crowned with",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 29,
+      "options": [
+        "A. success",
+        "B. jealousy",
+        "C. hatred",
+        "D. failure",
+        "E. favour"
+      ],
+      "correctAnswer": "A. success",
+      "explanation": "BECE 1999 RME Question 29",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2000_q12",
+      "questionText": "Which of the following is not a patriarch?",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 12,
+      "options": [
+        "A. Abraham",
+        "B. Isaac",
+        "C. Jacob",
+        "D. Noah",
+        "E. Joseph"
+      ],
+      "correctAnswer": "D. Noah",
+      "explanation": "BECE 2000 RME Question 12",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2000_q36",
+      "questionText": "To be patriotic means",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 36,
+      "options": [
+        "A. going to school regularly",
+        "B. practicing personal hygiene",
+        "C. defending the nation at all times",
+        "D. engaging in sporting activities",
+        "E. participating in cultural activities"
+      ],
+      "correctAnswer": "C. defending the nation at all times",
+      "explanation": "BECE 2000 RME Question 36",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2000_q40",
+      "questionText": "Giving out money or gift to somebody to seek a favour shows that one is",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 40,
+      "options": [
+        "A. unpatriotic",
+        "B. corrupt",
+        "C. deceitful",
+        "D. Untruthful",
+        "E. insincere"
+      ],
+      "correctAnswer": "B. corrupt",
+      "explanation": "BECE 2000 RME Question 40",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2001_q23",
+      "questionText": "Kofi's father is an Ewe and the mother is Fante. Which of the following statements about Kofi is true?",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 23,
+      "options": [
+        "A. He belongs to the father's clan only",
+        "B. He belongs to the mother's clan only",
+        "C. He belongs to both the father's and the mother's clan",
+        "D. He cannot become a chief in the mother's town",
+        "E. He cannot inherit his father or mother"
+      ],
+      "correctAnswer": "C. He belongs to both the father's and the mother's clan",
+      "explanation": "BECE 2001 RME Question 23",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2002_a_q27",
+      "questionText": "In a matrilineal home, the head of the family is the",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 27,
+      "options": [
+        "A. father",
+        "B. aunt",
+        "C. uncle",
+        "D. mother"
+      ],
+      "correctAnswer": "C. uncle",
+      "explanation": "BECE 2002 RME Question 27",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2004_q15",
+      "questionText": "During naming ceremonies the baby is given drops of water and wine to signify that he should be",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 15,
+      "options": [
+        "A. truthful",
+        "B. patient",
+        "C. brave",
+        "D. obedient"
+      ],
+      "correctAnswer": "A. truthful",
+      "explanation": "BECE 2004 RME Question 15",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2004_q35",
+      "questionText": "The most important reason for celebrating the Homowo festival is to",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 35,
+      "options": [
+        "A. outdooring twins",
+        "B. hoot at hunger",
+        "C. visit various shrines",
+        "D. sprinkle spiritual food"
+      ],
+      "correctAnswer": "B. hoot at hunger",
+      "explanation": "BECE 2004 RME Question 35",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2005_q19",
+      "questionText": "The tribes of Israel derived their names from the sons of",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 19,
+      "options": [
+        "A. Abraham",
+        "B. Joseph",
+        "C. Jacob",
+        "D. Isaac"
+      ],
+      "correctAnswer": "C. Jacob",
+      "explanation": "BECE 2005 RME Question 19",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2006_q4",
+      "questionText": "Trial by ordeal is a traditional practice whereby a person is",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 4,
+      "options": [
+        "A. summoned to the chief's palace",
+        "B. proved innocent through painful test",
+        "C. brought before a traditional priest",
+        "D. accused of breaking state taboos"
+      ],
+      "correctAnswer": "B. proved innocent through painful test",
+      "explanation": "BECE 2006 RME Question 4",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2007_q10",
+      "questionText": "The sprinkling of kpokpoi during Homowo signifies",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 10,
+      "options": [
+        "A. abundance of food",
+        "B. driving away of evil spirits",
+        "C. feeding the ancestors",
+        "D. showing togetherness"
+      ],
+      "correctAnswer": "C. feeding the ancestors",
+      "explanation": "BECE 2007 RME Question 10",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2008_q37",
+      "questionText": "All the following are functions of Asafo groups except",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 37,
+      "options": [
+        "A. weeding the surroundings and cleaning choked gutters",
+        "B. ensuring that traditional norms are followed",
+        "C. assisting chiefs in punishing wrongdoers in the village",
+        "D. the supervision of marriage ceremonies in the village"
+      ],
+      "correctAnswer": "D. the supervision of marriage ceremonies in the village",
+      "explanation": "BECE 2008 RME Question 37",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2008_q5",
+      "questionText": "The Odwira festival is important because it is",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 5,
+      "options": [
+        "A. a feast of thanksgiving",
+        "B. a feast of purification",
+        "C. to honour the ancestors",
+        "D. to hoot at hunger"
+      ],
+      "correctAnswer": "B. a feast of purification",
+      "explanation": "BECE 2008 RME Question 5",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2011_q22",
+      "questionText": "Behaviour patterns of individuals approved by society are known as",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 22,
+      "options": [
+        "A. rituals",
+        "B. moral values",
+        "C. taboos",
+        "D. sacrament"
+      ],
+      "correctAnswer": "A. rituals",
+      "explanation": "BECE 2011 RME Question 22",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2011_q23",
+      "questionText": "School rules are meant to ensure",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 23,
+      "options": [
+        "A. punishment for school children",
+        "B. patriotism among children",
+        "C. competition among children",
+        "D. good behaviour of children"
+      ],
+      "correctAnswer": "C. competition among children",
+      "explanation": "BECE 2011 RME Question 23",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2012_q10",
+      "questionText": "The main reason for celebrating the Homowo Festival is to",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 10,
+      "options": [
+        "A. outdoor twins.",
+        "B. hoot at hunger.",
+        "C. visit the shrines.",
+        "D. sprinkle spiritual food."
+      ],
+      "correctAnswer": "B. hoot at hunger.",
+      "explanation": "BECE 2012 RME Question 10",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2012_q13",
+      "questionText": "Some tribes forbid marriage with close relatives because",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 13,
+      "options": [
+        "A. the couple may die early.",
+        "B. it leads to barrenness.",
+        "C. it is seen as incest.",
+        "D. it leads to quarrels."
+      ],
+      "correctAnswer": "D. it leads to quarrels.",
+      "explanation": "BECE 2012 RME Question 13",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2013_q34",
+      "questionText": "In traditional societies, rules used to control the behaviour of members are known as",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 34,
+      "options": [
+        "A. ancestral rites.",
+        "B. puberty rites.",
+        "C. taboos.",
+        "D. totems."
+      ],
+      "correctAnswer": "C. taboos.",
+      "explanation": "BECE 2013 RME Question 34",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2013_q7",
+      "questionText": "Bragoro is an Akan",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 7,
+      "options": [
+        "A. marriage rite.",
+        "B. burial ceremony.",
+        "C. puberty rite.",
+        "D. naming ceremony."
+      ],
+      "correctAnswer": "C. puberty rite.",
+      "explanation": "BECE 2013 RME Question 7",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q10",
+      "questionText": "In traditional religion, libation is poured to",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 10,
+      "options": [
+        "A. honour guests",
+        "B. communicate with ancestors",
+        "C. celebrate festivals",
+        "D. perform marriages"
+      ],
+      "correctAnswer": "B. communicate with ancestors",
+      "explanation": "BECE 2014 RME Question 10",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q17",
+      "questionText": "In traditional religion, a priest is also known as",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 17,
+      "options": [
+        "A. fetish",
+        "B. witch doctor",
+        "C. spiritualist",
+        "D. Okomfo"
+      ],
+      "correctAnswer": "D. Okomfo",
+      "explanation": "BECE 2014 RME Question 17",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q24",
+      "questionText": "In traditional religion, the lesser gods are called",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 24,
+      "options": [
+        "A. ancestors",
+        "B. spirits",
+        "C. abosom",
+        "D. fetish"
+      ],
+      "correctAnswer": "C. abosom",
+      "explanation": "BECE 2014 RME Question 24",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2015_q14",
+      "questionText": "In African Traditional Religion, the living dead are referred to as",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 14,
+      "options": [
+        "A. Bad spirits",
+        "B. Witch doctors",
+        "C. Ancestors",
+        "D. Mediums"
+      ],
+      "correctAnswer": "C. Ancestors",
+      "explanation": "BECE 2015 RME Question 14",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2015_q20",
+      "questionText": "Which of the following is considered when choosing a name for a new born child?",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 20,
+      "options": [
+        "A. The weight of the child",
+        "B. Tribe of the parents",
+        "C. Age of the mother",
+        "D. The baby's place of birth"
+      ],
+      "correctAnswer": "B. Tribe of the parents",
+      "explanation": "BECE 2015 RME Question 20",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2018_q25",
+      "questionText": "In traditional societies, rules used to control the behaviour of members are known as",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 25,
+      "options": [
+        "A. ancestral rites.",
+        "B. puberty rites.",
+        "C. taboos.",
+        "D. abominations."
+      ],
+      "correctAnswer": "C. taboos.",
+      "explanation": "BECE 2018 RME Question 25",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2018_q37",
+      "questionText": "Carrying out assigned duties is necessary because it",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 37,
+      "options": [
+        "A. attracts hatred from enemies.",
+        "B. leads to fulfilment of promises.",
+        "C. leads to pacification of the gods.",
+        "D. pleases God and human kind."
+      ],
+      "correctAnswer": "C. leads to pacification of the gods.",
+      "explanation": "BECE 2018 RME Question 37",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2019_q35",
+      "questionText": "The Akans believe that their sacred stool is the abode of the",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 35,
+      "options": [
+        "A. lesser gods.",
+        "B. ancestors.",
+        "C. dwarfs.",
+        "D. Supreme Being."
+      ],
+      "correctAnswer": "B. ancestors.",
+      "explanation": "BECE 2019 RME Question 35",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2022_q10",
+      "questionText": "Practitioners of African Traditional Religion honour ancestors so as to",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 10,
+      "options": [
+        "A. receive protection and blessings.",
+        "B. have their faith increased.",
+        "C. behave well in society.",
+        "D. become blameless and powerful."
+      ],
+      "correctAnswer": "A. receive protection and blessings.",
+      "explanation": "BECE 2022 RME Question 10",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2023_q17",
+      "questionText": "Rites of passage refer to the ceremonies performed to",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 17,
+      "options": [
+        "A. babies' development into adulthood.",
+        "B. growth stages from adolescent to death.",
+        "C. growth stages in life.",
+        "D. man's birth and death."
+      ],
+      "correctAnswer": "D. man's birth and death.",
+      "explanation": "BECE 2023 RME Question 17",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2023_q24",
+      "questionText": "Traditional worshippers believe that the world was created by",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 24,
+      "options": [
+        "A. ancestors.",
+        "B. angels.",
+        "C. lesser gods.",
+        "D. Supreme Being."
+      ],
+      "correctAnswer": "B. angels.",
+      "explanation": "BECE 2023 RME Question 24",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2025_q11",
+      "questionText": "Walking backwards by the Ewes to escape from King Agokoli was an act of",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 11,
+      "options": [
+        "A. betrayal.",
+        "B. indifference.",
+        "C. patriotism.",
+        "D. intelligence."
+      ],
+      "correctAnswer": "D. intelligence.",
+      "explanation": "BECE 2025 RME Question 11",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2016_q4",
+      "questionText": "a)\n\n \n\nOutline any four moral teachings in African Traditional Religion.\n\nb)\n\n \n\nExplain any two ways by which you would apply any two of the moral lessons in (a) above in your daily life.",
+      "type": "essay",
+      "year": "2016",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2016 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "9Shccb7aGHCe68fAAGYb",
+      "year": 2014,
+      "questionNumber": 24,
+      "options": [
+        "A. ancestors",
+        "B. spirits",
+        "C. abosom",
+        "D. fetish"
+      ],
+      "correctAnswer": "C",
+      "explanation": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "BECE",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "FbewATAB1uFNkTwlneP3",
+      "year": 2014,
+      "questionNumber": 17,
+      "options": [
+        "A. fetish",
+        "B. witch doctor",
+        "C. spiritualist",
+        "D. Okomfo"
+      ],
+      "correctAnswer": "D",
+      "explanation": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "BECE",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "UklB1yqpxfFfL11OkP5T",
+      "year": 2014,
+      "questionNumber": 10,
+      "options": [
+        "A. honour guests",
+        "B. communicate with ancestors",
+        "C. celebrate festivals",
+        "D. perform marriages"
+      ],
+      "correctAnswer": "B",
+      "explanation": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "BECE",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "toFgkHuXOiAXs9ALDgke",
+      "year": 2014,
+      "questionNumber": 1,
+      "options": [
+        "A. Proverbs",
+        "B. Folktales",
+        "C. Television",
+        "D. Myths"
+      ],
+      "correctAnswer": "C",
+      "explanation": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "African Traditional Religion"
+      ],
+      "examType": "BECE",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-// ...existing imports...
 import '../models/question_model.dart';
 import '../services/question_service.dart';
 import '../services/storage_service.dart';
@@ -690,23 +689,6 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
             ['All Types', 'MCQ', 'Theory'],
             (value) => setState(() => _selectedQuestionType = value!),
             Icons.quiz,
-          ),
-        ),
-        const SizedBox(width: 16),
-        Expanded(
-          child: _buildSortChip(),
-        ),
-      ],
-    );
-  }
-        const SizedBox(width: 16),
-        Expanded(
-          child: _buildFilterChip(
-            'Year',
-            _selectedYear,
-            ['All Years', '2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017', '2016', '2015', '2014', '2013', '2012', '2011', '2010', '2009', '2008', '2007', '2006', '2005', '2004', '2003', '2002', '2001', '2000', '1999', '1998', '1997', '1996', '1995', '1994', '1993', '1992', '1991', '1990'],
-            (value) => setState(() => _selectedYear = value!),
-            Icons.calendar_today,
           ),
         ),
         const SizedBox(width: 16),

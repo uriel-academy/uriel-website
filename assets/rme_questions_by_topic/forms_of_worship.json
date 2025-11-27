@@ -1,0 +1,636 @@
+{
+  "topic": "Forms of Worship",
+  "totalQuestions": 21,
+  "questions": [
+    {
+      "id": "rme_2000_q18",
+      "questionText": "The system by which a drink is poured to the gods and the Supreme beings is known as",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 18,
+      "options": [
+        "A. sacrifice",
+        "B. thankfulness",
+        "C. worship",
+        "D. libation",
+        "E. protection"
+      ],
+      "correctAnswer": "D. libation",
+      "explanation": "BECE 2000 RME Question 18",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Forms of Worship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2001_q20",
+      "questionText": "Dipo is a traditional",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 20,
+      "options": [
+        "A. festival",
+        "B. naming ceremony",
+        "C. puberty rite",
+        "D. death rite",
+        "E. worship"
+      ],
+      "correctAnswer": "C. puberty rite",
+      "explanation": "BECE 2001 RME Question 20",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Forms of Worship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2001_q33",
+      "questionText": "We contribute to church dues and offerings to",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 33,
+      "options": [
+        "A. enable the church develop spiritually",
+        "B. promote deliverance services",
+        "C. help pastors preach well",
+        "D. help evangelize and care for the poor",
+        "E. help the church members to be anointed"
+      ],
+      "correctAnswer": "D. help evangelize and care for the poor",
+      "explanation": "BECE 2001 RME Question 33",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Forms of Worship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2005_q12",
+      "questionText": "The chief who offered himself to be sacrificed during the Ashanti-Denkyira war was",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 12,
+      "options": [
+        "A. Opoku Ware",
+        "B. Yaa Ahor",
+        "C. Ntim Gyakari",
+        "D. Tweneboa Kodua"
+      ],
+      "correctAnswer": "D. Tweneboa Kodua",
+      "explanation": "BECE 2005 RME Question 12",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Forms of Worship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2006_q7",
+      "questionText": "Togbe Tsali is remembered for",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 7,
+      "options": [
+        "A. his cruelty to the Anlos",
+        "B. freeing his people from oppression",
+        "C. selling his people into slavery",
+        "D. allowing missionaries to preach to his people"
+      ],
+      "correctAnswer": "B. freeing his people from oppression",
+      "explanation": "BECE 2006 RME Question 7",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Forms of Worship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2008_q18",
+      "questionText": "Dipo is a traditional",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 18,
+      "options": [
+        "A. form of worship",
+        "B. naming ceremony",
+        "C. puberty rite",
+        "D. marriage rite"
+      ],
+      "correctAnswer": "B. naming ceremony",
+      "explanation": "BECE 2008 RME Question 18",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Forms of Worship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2009_q15",
+      "questionText": "In traditional religion, burying the dead with personal belongings signifies that",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 15,
+      "options": [
+        "A. there is life after death",
+        "B. items are sent to the spiritual world",
+        "C. the dead pay their journey",
+        "D. there is hunger in the spiritual world"
+      ],
+      "correctAnswer": "A. there is life after death",
+      "explanation": "BECE 2009 RME Question 15",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Forms of Worship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2009_q17",
+      "questionText": "Which of the following religious practices is observed by the three major religions in Ghana?",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 17,
+      "options": [
+        "A. Ancestral worship",
+        "B. Animal sacrifice",
+        "C. Charity",
+        "D. Fasting"
+      ],
+      "correctAnswer": "C. Charity",
+      "explanation": "BECE 2009 RME Question 17",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Forms of Worship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2011_q18",
+      "questionText": "The following practices apply to Traditional Religion except",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 18,
+      "options": [
+        "A. libation",
+        "B. fasting",
+        "C. prayers",
+        "D. sacrifices"
+      ],
+      "correctAnswer": "B. fasting",
+      "explanation": "BECE 2011 RME Question 18",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Forms of Worship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2013_q35",
+      "questionText": "Behaviour patterns of individuals approved by society are known as",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 35,
+      "options": [
+        "A. sacraments.",
+        "B. taboos.",
+        "C. ritual values.",
+        "D. moral values."
+      ],
+      "correctAnswer": "B. taboos.",
+      "explanation": "BECE 2013 RME Question 35",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Forms of Worship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q38",
+      "questionText": "One benefit of belonging to a religious group is",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 38,
+      "options": [
+        "A. spiritual growth",
+        "B. causing trouble",
+        "C. discrimination",
+        "D. fighting"
+      ],
+      "correctAnswer": "A. spiritual growth",
+      "explanation": "BECE 2014 RME Question 38",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Forms of Worship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2016_q23",
+      "questionText": "Behaviour patterns of individuals approved by society are known as",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 23,
+      "options": [
+        "A. moral values.",
+        "B. ritual values.",
+        "C. sacraments.",
+        "D. taboos."
+      ],
+      "correctAnswer": "A. moral values.",
+      "explanation": "BECE 2016 RME Question 23",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Forms of Worship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2017_q23",
+      "questionText": "Behaviour patterns of individuals approved by society are known as",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 23,
+      "options": [
+        "A. moral values.",
+        "B. ritual values.",
+        "C. sacraments.",
+        "D. taboos."
+      ],
+      "correctAnswer": "A. moral values.",
+      "explanation": "BECE 2017 RME Question 23",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Forms of Worship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2020_q28",
+      "questionText": "The Holy Qur'an teaches that humankind was created to",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 28,
+      "options": [
+        "A. control God's creation",
+        "B. control spiritual forces",
+        "C. protect God's creation",
+        "D. worship and glorify God"
+      ],
+      "correctAnswer": "D. worship and glorify God",
+      "explanation": "BECE 2020 RME Question 28",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Forms of Worship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2020_q37",
+      "questionText": "To work means using",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 37,
+      "options": [
+        "A. mental and moral power",
+        "B. mental and physical efforts",
+        "C. physical and moral efforts",
+        "D. spiritual and will power"
+      ],
+      "correctAnswer": "B. mental and physical efforts",
+      "explanation": "BECE 2020 RME Question 37",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Forms of Worship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2023_q11",
+      "questionText": "Which of the following life patterns is expected of Christians?",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 11,
+      "options": [
+        "A. Animal sacrifice, confession and scripture study",
+        "B. Fasting, alms giving and libation",
+        "C. Worship, evangelism and divination",
+        "D. Worship, scripture study and evangelism"
+      ],
+      "correctAnswer": "C. Worship, evangelism and divination",
+      "explanation": "BECE 2023 RME Question 11",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Forms of Worship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2024_q21",
+      "questionText": "Which of the following characteristics is least typical of religious songs?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 21,
+      "options": [
+        "A. Devotional lyrics",
+        "B. Reflective moods",
+        "C. Spiritual themes",
+        "D. Melodic complexity"
+      ],
+      "correctAnswer": "D. Melodic complexity",
+      "explanation": "BECE 2024 RME Question 21",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Forms of Worship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2025_q3",
+      "questionText": "Which of the following is an effect of substance abuse on the individual?",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 3,
+      "options": [
+        "A. High academic performance",
+        "B. Spiritual growth",
+        "C. Good health",
+        "D. Ill-health"
+      ],
+      "correctAnswer": "D. Ill-health",
+      "explanation": "BECE 2025 RME Question 3",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Forms of Worship"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2008_q3",
+      "questionText": "a)\n\n \n\nList five types of sacrifices in the Ghanaian traditional society.\n\nb)\n\n \n\nGive five advantages of sacrifices to the worshipper.\n\n \n\nSECTION B\n\nMORAL LIFE\n\nAnswer one question only from this section.",
+      "type": "essay",
+      "year": "2008",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2008 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Forms of Worship"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2025_q2",
+      "questionText": "Kofi was raised by his grandmother who was the spiritual leader of the village. She was always fond of teaching Kofi about the importance of their tradition including sacrifice. According to her, sacrifices are made on special occasions. On one of the occasions, Kofi accompanied her to perform the sacrifice. As a student of Religious and Moral Education:\n\n(a)\n\n \n\nList four items Kofi and his grandmother were likely to carry with them for the sacrifice;\n\n[4 marks]\n\n(b)\n\n \n\nState four of those special occasions that required sacrifice by the teachings of Kofi's grandmother.\n\n[4 marks]\n\n(c)\n\n \n\nHighlight four importance of sacrifices Kofi might have learnt from his grandmother.\n\n[12 marks]",
+      "type": "essay",
+      "year": "2025",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2025 RME",
+      "marks": 4,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Forms of Worship"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "JqHv4hlXVEsucTEkCqhH",
+      "year": 2014,
+      "questionNumber": 38,
+      "options": [
+        "A. spiritual growth",
+        "B. causing trouble",
+        "C. discrimination",
+        "D. fighting"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Forms of Worship"
+      ],
+      "examType": "BECE",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

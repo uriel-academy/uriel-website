@@ -1,0 +1,37 @@
+{
+  "topic": "National Symbols",
+  "totalQuestions": 1,
+  "questions": [
+    {
+      "id": "rme_2008_q27",
+      "questionText": "Which of the following is not true about money? It is",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 27,
+      "options": [
+        "A. owned by the state",
+        "B. the accepted means of exchange",
+        "C. the official currency of a country",
+        "D. the exchange of goods for goods"
+      ],
+      "correctAnswer": "D. the exchange of goods for goods",
+      "explanation": "BECE 2008 RME Question 27",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "National Symbols"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

@@ -1,0 +1,915 @@
+{
+  "topic": "Humanity in God's Plan",
+  "totalQuestions": 31,
+  "questions": [
+    {
+      "id": "rme_2000_q21",
+      "questionText": "The payment of school fees and other bills is mainly the responsibility of the",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 21,
+      "options": [
+        "A. grandfather",
+        "B. mother",
+        "C. uncle",
+        "D. aunt",
+        "E. father"
+      ],
+      "correctAnswer": "E. father",
+      "explanation": "BECE 2000 RME Question 21",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2001_q38",
+      "questionText": "Which of the following does not constitute a moral responsibility of the child?",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 38,
+      "options": [
+        "A. Sweeping the classroom",
+        "B. Working on his plot",
+        "C. Worshipping God",
+        "D. Being punctual at school",
+        "E. Payment of school fees"
+      ],
+      "correctAnswer": "E. Payment of school fees",
+      "explanation": "BECE 2001 RME Question 38",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2002_a_q36",
+      "questionText": "Commitment can best be explained as an act of",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 36,
+      "options": [
+        "A. devoting oneself to something worthwhile",
+        "B. accepting one's faults publicly",
+        "C. fighting for one's basic rights",
+        "D. showing forgiveness"
+      ],
+      "correctAnswer": "A. devoting oneself to something worthwhile",
+      "explanation": "BECE 2002 RME Question 36",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2003_q22",
+      "questionText": "It is the responsibility of the child to",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 22,
+      "options": [
+        "A. do his household chores",
+        "B. invite his friends to his house",
+        "C. request his parents to organize a party",
+        "D. wake his parents up from bed"
+      ],
+      "correctAnswer": "A. do his household chores",
+      "explanation": "BECE 2003 RME Question 22",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2003_q40",
+      "questionText": "Anyone who accepts responsibility for wrongdoing and is prepared to correct it is",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 40,
+      "options": [
+        "A. God-fearing",
+        "B. obedient",
+        "C. repentant",
+        "D. sincere"
+      ],
+      "correctAnswer": "C. repentant",
+      "explanation": "BECE 2003 RME Question 40",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2003_q9",
+      "questionText": "God made a covenant with",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 9,
+      "options": [
+        "A. Isaac",
+        "B. Abraham",
+        "C. Jacob",
+        "D. Joshua"
+      ],
+      "correctAnswer": "B. Abraham",
+      "explanation": "BECE 2003 RME Question 9",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2005_q11",
+      "questionText": "According to the Qur'an, a proud person always",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 11,
+      "options": [
+        "A. thinks he is better than others",
+        "B. respects the opinions of others",
+        "C. values the experiences of other people",
+        "D. likes to tell other people what to do"
+      ],
+      "correctAnswer": "A. thinks he is better than others",
+      "explanation": "BECE 2005 RME Question 11",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2009_q38",
+      "questionText": "Privileges can be earned by showing that one is",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 38,
+      "options": [
+        "A. intelligent",
+        "B. trustworthy",
+        "C. decent",
+        "D. hospitable"
+      ],
+      "correctAnswer": "B. trustworthy",
+      "explanation": "BECE 2009 RME Question 38",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2009_q6",
+      "questionText": "The two dreams of Joseph focused on",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 6,
+      "options": [
+        "A. apprenticeship",
+        "B. kinship",
+        "C. leadership",
+        "D. stewardship"
+      ],
+      "correctAnswer": "C. leadership",
+      "explanation": "BECE 2009 RME Question 6",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2011_q15",
+      "questionText": "The rainbow is important in the story of Noah because it",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 15,
+      "options": [
+        "A. normally appears after rainfall",
+        "B. is a symbol of God's covenant",
+        "C. appears in the horizon in colours",
+        "D. marked the beginning of the flood"
+      ],
+      "correctAnswer": "B. is a symbol of God's covenant",
+      "explanation": "BECE 2011 RME Question 15",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2012_q1",
+      "questionText": "The biblical commandment which has a promise of blessing is",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 1,
+      "options": [
+        "A. remember the sabbath day.",
+        "B. honour your father and mother.",
+        "C. not to commit adultery.",
+        "D. not to make for yourself graven images."
+      ],
+      "correctAnswer": "B. honour your father and mother.",
+      "explanation": "BECE 2012 RME Question 1",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2012_q11",
+      "questionText": "The patriarchal covenant was made between God and",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 11,
+      "options": [
+        "A. Abraham.",
+        "B. Aaron.",
+        "C. Moses.",
+        "D. Noah."
+      ],
+      "correctAnswer": "A. Abraham.",
+      "explanation": "BECE 2012 RME Question 11",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2012_q35",
+      "questionText": "In a traditional society, the provision of shelter is the responsibility of the",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 35,
+      "options": [
+        "A. father.",
+        "B. grandfather.",
+        "C. mother.",
+        "D. uncle."
+      ],
+      "correctAnswer": "D. uncle.",
+      "explanation": "BECE 2012 RME Question 35",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2013_q12",
+      "questionText": "God's covenant with the patriarchs is associated with",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 12,
+      "options": [
+        "A. Abraham.",
+        "B. Joseph.",
+        "C. Joshua.",
+        "D. Moses."
+      ],
+      "correctAnswer": "B. Joseph.",
+      "explanation": "BECE 2013 RME Question 12",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2013_q15",
+      "questionText": "Praying regularly is important because it is a",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 15,
+      "options": [
+        "A. moral responsibility.",
+        "B. social responsibility.",
+        "C. political responsibility.",
+        "D. spiritual responsibility."
+      ],
+      "correctAnswer": "A. moral responsibility.",
+      "explanation": "BECE 2013 RME Question 15",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2013_q22",
+      "questionText": "Which of the following is not a responsibility of a family head?",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 22,
+      "options": [
+        "A. Oversight of the general well-being of the family",
+        "B. Taking care of all family property",
+        "C. Settling disputes",
+        "D. Granting loans"
+      ],
+      "correctAnswer": "B. Taking care of all family property",
+      "explanation": "BECE 2013 RME Question 22",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2016_q9",
+      "questionText": "One reason for the institution of marriage is",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 9,
+      "options": [
+        "A. companionship.",
+        "B. joy.",
+        "C. responsibility.",
+        "D. security."
+      ],
+      "correctAnswer": "A. companionship.",
+      "explanation": "BECE 2016 RME Question 9",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2017_q17",
+      "questionText": "Praying regularly is important because it is a",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 17,
+      "options": [
+        "A. moral responsibility.",
+        "B. political responsibility.",
+        "C. social responsibility.",
+        "D. spiritual responsibility."
+      ],
+      "correctAnswer": "D. spiritual responsibility.",
+      "explanation": "BECE 2017 RME Question 17",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2017_q2",
+      "questionText": "God's covenant with the patriarchs is associated with",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 2,
+      "options": [
+        "A. Abraham.",
+        "B. Joshua.",
+        "C. Joseph.",
+        "D. Moses."
+      ],
+      "correctAnswer": "A. Abraham.",
+      "explanation": "BECE 2017 RME Question 2",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2018_q30",
+      "questionText": "Which of the following activities is not a responsibility of a family head",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 30,
+      "options": [
+        "A. Giving loans to people.",
+        "B. Settling disputes among people.",
+        "C. Ensuring the wellbeing of the people.",
+        "D. Taking the custody of family property."
+      ],
+      "correctAnswer": "A. Giving loans to people.",
+      "explanation": "BECE 2018 RME Question 30",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2020_q19",
+      "questionText": "Non-religious songs are mostly centred on",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 19,
+      "options": [
+        "A. divinities",
+        "B. moral values",
+        "C. pleasure",
+        "D. spiritual satisfaction"
+      ],
+      "correctAnswer": "C. pleasure",
+      "explanation": "BECE 2020 RME Question 19",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2021_q12",
+      "questionText": "The Patriarch who took his brother's birth right and blessings was",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 12,
+      "options": [
+        "A. Essau.",
+        "B. Joseph.",
+        "C. Jacob.",
+        "D. Isaac."
+      ],
+      "correctAnswer": "C. Jacob.",
+      "explanation": "BECE 2021 RME Question 12",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2022_q11",
+      "questionText": "Devoting oneself to something that is worthwhile is termed",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 11,
+      "options": [
+        "A. hard work.",
+        "B. delegation.",
+        "C. commitment.",
+        "D. comportment."
+      ],
+      "correctAnswer": "C. commitment.",
+      "explanation": "BECE 2022 RME Question 11",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2024_q22",
+      "questionText": "Which of these is the best representation of a positive attitude towards work?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 22,
+      "options": [
+        "A. Avoidance of responsibility",
+        "B. Eagerness to learn",
+        "C. Desire for recognition",
+        "D. Desire for autonomy"
+      ],
+      "correctAnswer": "B. Eagerness to learn",
+      "explanation": "BECE 2024 RME Question 22",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2024_q38",
+      "questionText": "What moral value is Yaa Asantewaa's leadership and actions most likely to inspire in others?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 38,
+      "options": [
+        "A. Accountability and transparency",
+        "B. Women leadership and courage",
+        "C. Generosity and human relations",
+        "D. Diplomacy and international relations"
+      ],
+      "correctAnswer": "B. Women leadership and courage",
+      "explanation": "BECE 2024 RME Question 38",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2000_q2",
+      "questionText": "a)\n\n \n\nDescribe how salat is performed.\n\nb)\n\n \n\nState any three values in salat.",
+      "type": "essay",
+      "year": "2000",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2001_q4",
+      "questionText": "a)\n\n \n\nState any four moral values in your society.\n\nb)\n\n \n\nOn what occasions would you show these values?",
+      "type": "essay",
+      "year": "2001",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2001 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2009_q1",
+      "questionText": "a)\n\n \n\nNarrate the covenant God made with Abraham.\n\nb)\n\n \n\nWhat three lessons can be learnt from God's covenant with Abraham?",
+      "type": "essay",
+      "year": "2009",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2009 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2017_q6",
+      "questionText": "a)\n\n \n\nDescribe four deeds that are punishable in the society.\n\nb)\n\n \n\nOutline four ways of accepting responsibility for one's bad deeds.\n\n \n\nSECTION C\n\nSOCIAL LIFE\n\nAnswer one question only from this section.",
+      "type": "essay",
+      "year": "2017",
+      "questionNumber": 6,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2017 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2018_q2",
+      "questionText": "a)\n\n \n\nNarrate the covenant God made with Abraham.\n\nb)\n\n \n\nWhat three lessons can be learnt from God's covenant with Abraham?",
+      "type": "essay",
+      "year": "2018",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2018 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2022_q1",
+      "questionText": "a)\n\n \n\nNarrate the covenant God made with Abraham.\n\nb)\n\n \n\nState three lessons that can be learnt from the covenant.",
+      "type": "essay",
+      "year": "2022",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2022 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Humanity in God's Plan"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

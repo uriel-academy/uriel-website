@@ -149,7 +149,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
             String title = collData['name'] ?? 'Unnamed Collection';
             // If it starts with 'ICT:', replace with 'BECE ICT'
             if (title.startsWith('ICT: ')) {
-              title = 'BECE ICT ' + title.substring(5);
+              title = 'BECE ICT ${title.substring(5)}';
             }
             
             final collection = QuestionCollection(
@@ -497,7 +497,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
     
     final topicSet = <String>{};
     
-    // Add collection-level topics (from saved collections like ICT topics)
+    // Add collection-level topics (from saved collections like ICT/RME topics)
     for (final collection in relevantCollections) {
       if (collection.description != null && collection.description!.isNotEmpty) {
         // Skip generic descriptions, only add actual topic names

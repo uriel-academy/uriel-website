@@ -1,0 +1,83 @@
+{
+  "generatedAt": "2025-11-27T19:07:52.253Z",
+  "totalQuestions": 1282,
+  "categorizedQuestions": 1029,
+  "unclassifiedQuestions": 253,
+  "topics": [
+    {
+      "name": "Nature of God",
+      "questionCount": 56,
+      "filename": "nature_of_god.json"
+    },
+    {
+      "name": "God's Creation",
+      "questionCount": 206,
+      "filename": "gods_creation.json"
+    },
+    {
+      "name": "Humanity in God's Plan",
+      "questionCount": 31,
+      "filename": "humanity_in_gods_plan.json"
+    },
+    {
+      "name": "Moral Values",
+      "questionCount": 182,
+      "filename": "moral_values.json"
+    },
+    {
+      "name": "Decision Making",
+      "questionCount": 4,
+      "filename": "decision_making.json"
+    },
+    {
+      "name": "Social Responsibilities",
+      "questionCount": 156,
+      "filename": "social_responsibilities.json"
+    },
+    {
+      "name": "Christianity",
+      "questionCount": 121,
+      "filename": "christianity.json"
+    },
+    {
+      "name": "Islam",
+      "questionCount": 105,
+      "filename": "islam.json"
+    },
+    {
+      "name": "African Traditional Religion",
+      "questionCount": 36,
+      "filename": "african_traditional_religion.json"
+    },
+    {
+      "name": "Family Values",
+      "questionCount": 75,
+      "filename": "family_values.json"
+    },
+    {
+      "name": "National Symbols",
+      "questionCount": 1,
+      "filename": "national_symbols.json"
+    },
+    {
+      "name": "Patriotism & Citizenship",
+      "questionCount": 4,
+      "filename": "patriotism_citizenship.json"
+    },
+    {
+      "name": "Forms of Worship",
+      "questionCount": 21,
+      "filename": "forms_of_worship.json"
+    },
+    {
+      "name": "Prayer & Devotion",
+      "questionCount": 3,
+      "filename": "prayer_devotion.json"
+    },
+    {
+      "name": "Festivals & Religious Rituals",
+      "questionCount": 28,
+      "filename": "festivals_religious_rituals.json"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "topic": "Prayer & Devotion",
+  "totalQuestions": 3,
+  "questions": [
+    {
+      "id": "rme_2018_q16",
+      "questionText": "Which traditional prayer is offered when a vow or a pledge is fulfilled?",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 16,
+      "options": [
+        "A. Intercessory",
+        "B. Supplication",
+        "C. Thanksgiving",
+        "D. Votive"
+      ],
+      "correctAnswer": "D. Votive",
+      "explanation": "BECE 2018 RME Question 16",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Prayer & Devotion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2021_q13",
+      "questionText": "To communicate to the object of worship on behalf of someone, one has to offer a prayer of",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 13,
+      "options": [
+        "A. confession.",
+        "B. intercession.",
+        "C. thanksgiving.",
+        "D. adoration."
+      ],
+      "correctAnswer": "B. intercession.",
+      "explanation": "BECE 2021 RME Question 13",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Prayer & Devotion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2024_q23",
+      "questionText": "When Christians pray, give us this day our daily bread, the specific type of prayer being offered in this context is",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 23,
+      "options": [
+        "A. confessional.",
+        "B. thanksgiving.",
+        "C. supplicatory.",
+        "D. intercessory."
+      ],
+      "correctAnswer": "C. supplicatory.",
+      "explanation": "BECE 2024 RME Question 23",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Prayer & Devotion"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

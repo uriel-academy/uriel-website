@@ -1,0 +1,2180 @@
+{
+  "topic": "Family Values",
+  "totalQuestions": 75,
+  "questions": [
+    {
+      "id": "rme_1999_q27",
+      "questionText": "Youth camps are organized purposely for the youth to",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 27,
+      "options": [
+        "A. fend for themselves",
+        "B. find their parents",
+        "C. learn to socialize",
+        "D. run away from household chores",
+        "E. form study groups"
+      ],
+      "correctAnswer": "C. learn to socialize",
+      "explanation": "BECE 1999 RME Question 27",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_1999_q7",
+      "questionText": "Prophet Muhammed's twelfth birthday is important because",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 7,
+      "options": [
+        "A. there was Prophecy about his future",
+        "B. Halimah returned him to his parents",
+        "C. Amina passed away",
+        "D. his father died",
+        "E. Abdul Mutalib died"
+      ],
+      "correctAnswer": "A. there was Prophecy about his future",
+      "explanation": "BECE 1999 RME Question 7",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2000_q22",
+      "questionText": "One of the advantages of the extended family system is that",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 22,
+      "options": [
+        "A. the uncle inherits the father's property",
+        "B. the children are cared for by the members of the family",
+        "C. the old people are sent to old people's home",
+        "D. girls become maidservants of their aunties",
+        "E. boys are sent out to work on family lands"
+      ],
+      "correctAnswer": "B. the children are cared for by the members of the family",
+      "explanation": "BECE 2000 RME Question 22",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2000_q28",
+      "questionText": "The rules and regulations in school are there to ensure",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 28,
+      "options": [
+        "A. that children attend school regularly",
+        "B. good behaviour",
+        "C. proper maintenance of school property",
+        "D. that children do their assignment",
+        "E. that children should be punished"
+      ],
+      "correctAnswer": "B. good behaviour",
+      "explanation": "BECE 2000 RME Question 28",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2001_q27",
+      "questionText": "To die intestate means",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 27,
+      "options": [
+        "A. dying with a will made",
+        "B. dying with so much property and wealth",
+        "C. having no one inheriting you after death",
+        "D. being inherited by your own children",
+        "E. dying without making a will"
+      ],
+      "correctAnswer": "E. dying without making a will",
+      "explanation": "BECE 2001 RME Question 27",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2002_a_q16",
+      "questionText": "A person cannot qualify to be an ancestor if he",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 16,
+      "options": [
+        "A. had many wives",
+        "B. had many children",
+        "C. was very unpopular",
+        "D. committed suicide"
+      ],
+      "correctAnswer": "C. was very unpopular",
+      "explanation": "BECE 2002 RME Question 16",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2002_a_q21",
+      "questionText": "The extended family meets often to",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 21,
+      "options": [
+        "A. name a new-born baby",
+        "B. share family property",
+        "C. select a new chief",
+        "D. elect the head of the family"
+      ],
+      "correctAnswer": "B. share family property",
+      "explanation": "BECE 2002 RME Question 21",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2003_q23",
+      "questionText": "The basic role of the father is to",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 23,
+      "options": [
+        "A. cook for the family",
+        "B. make sure the children work",
+        "C. make sure there is water in the house",
+        "D. provide shelter for the family"
+      ],
+      "correctAnswer": "D. provide shelter for the family",
+      "explanation": "BECE 2003 RME Question 23",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2004_q10",
+      "questionText": "The most important activity during the Odwira festival on the Akwapim is",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 10,
+      "options": [
+        "A. merry making and dancing",
+        "B. purification and cleansing",
+        "C. feasting and meditation",
+        "D. family meetings and dancing"
+      ],
+      "correctAnswer": "B. purification and cleansing",
+      "explanation": "BECE 2004 RME Question 10",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2004_q21",
+      "questionText": "The nuclear family consists of",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 21,
+      "options": [
+        "A. parents and grandchildren",
+        "B. children and parents",
+        "C. parents, children and other relations",
+        "D. grandchildren and children"
+      ],
+      "correctAnswer": "B. children and parents",
+      "explanation": "BECE 2004 RME Question 21",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2004_q30",
+      "questionText": "The most important prayer request during marriage rites is for",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 30,
+      "options": [
+        "A. prosperity and wealth",
+        "B. protection and long life",
+        "C. good health and protection",
+        "D. long life and children"
+      ],
+      "correctAnswer": "D. long life and children",
+      "explanation": "BECE 2004 RME Question 30",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2004_q32",
+      "questionText": "Which of the following is a responsibility of children?",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 32,
+      "options": [
+        "A. paying their own school fees",
+        "B. providing their friends with their needs",
+        "C. making sure parents are always at home",
+        "D. helping their parents at home"
+      ],
+      "correctAnswer": "D. helping their parents at home",
+      "explanation": "BECE 2004 RME Question 32",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2005_q21",
+      "questionText": "When one refuses to play with bad friends on the advice of parents, one is described as being",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 21,
+      "options": [
+        "A. God-fearing",
+        "B. sincere",
+        "C. obedient",
+        "D. polite"
+      ],
+      "correctAnswer": "C. obedient",
+      "explanation": "BECE 2005 RME Question 21",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2005_q23",
+      "questionText": "One disadvantage of the nuclear family system is that",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 23,
+      "options": [
+        "A. too many people give orders",
+        "B. there is difficulty in identifying kinsmen",
+        "C. there are conflicts in sharing property",
+        "D. parents feel lonely at old age"
+      ],
+      "correctAnswer": "D. parents feel lonely at old age",
+      "explanation": "BECE 2005 RME Question 23",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2005_q32",
+      "questionText": "Sex education in school is important because it",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 32,
+      "options": [
+        "A. makes children sexually active",
+        "B. could lead to early marriage",
+        "C. arouses curiosity among children",
+        "D. exposes the dangers of pre-marital sex"
+      ],
+      "correctAnswer": "D. exposes the dangers of pre-marital sex",
+      "explanation": "BECE 2005 RME Question 32",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2006_q17",
+      "questionText": "Marriage has a good chance of succeeding if",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 17,
+      "options": [
+        "A. couple are from the same town",
+        "B. man has a lot of money",
+        "C. couple understand each other",
+        "D. woman is beautiful"
+      ],
+      "correctAnswer": "C. couple understand each other",
+      "explanation": "BECE 2006 RME Question 17",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2006_q32",
+      "questionText": "One of the advantages of the extended family system is that",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 32,
+      "options": [
+        "A. parents can give sufficient attention to their children",
+        "B. an uncle inherits a father's property",
+        "C. the extended family sustains society",
+        "D. parents are capable of providing the needs of the family"
+      ],
+      "correctAnswer": "C. the extended family sustains society",
+      "explanation": "BECE 2006 RME Question 32",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2007_q15",
+      "questionText": "Unhappiness in marriage occurs when couples",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 15,
+      "options": [
+        "A. come from the same background",
+        "B. pursue personal interests",
+        "C. share similar values and ideas",
+        "D. accept each other's family"
+      ],
+      "correctAnswer": "B. pursue personal interests",
+      "explanation": "BECE 2007 RME Question 15",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2007_q26",
+      "questionText": "Which of the following factors best helps in promoting good family relationships?",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 26,
+      "options": [
+        "A. Boys going to schools instead of girls",
+        "B. Staying with other relatives",
+        "C. Parents coming closer to children",
+        "D. Children being sent on errands"
+      ],
+      "correctAnswer": "C. Parents coming closer to children",
+      "explanation": "BECE 2007 RME Question 26",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2007_q27",
+      "questionText": "When things go wrong with our lives, we must blame",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 27,
+      "options": [
+        "A. our teachers",
+        "B. our peers",
+        "C. ourselves",
+        "D. our parents"
+      ],
+      "correctAnswer": "C. ourselves",
+      "explanation": "BECE 2007 RME Question 27",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2007_q29",
+      "questionText": "Household chores are done mainly by the",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 29,
+      "options": [
+        "A. grandmother",
+        "B. mother",
+        "C. father",
+        "D. children"
+      ],
+      "correctAnswer": "D. children",
+      "explanation": "BECE 2007 RME Question 29",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2007_q40",
+      "questionText": "Folktales are important because they",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 40,
+      "options": [
+        "A. teach about other people",
+        "B. teach moral lessons",
+        "C. make children happy",
+        "D. are loved by grandparents"
+      ],
+      "correctAnswer": "B. teach moral lessons",
+      "explanation": "BECE 2007 RME Question 40",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2009_q36",
+      "questionText": "In the family system, an aunt is",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 36,
+      "options": [
+        "A. a brother's sister",
+        "B. an uncle's daughter",
+        "C. a grandparent's sister",
+        "D. a father's or mother's sister"
+      ],
+      "correctAnswer": "D. a father's or mother's sister",
+      "explanation": "BECE 2009 RME Question 36",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2011_q38",
+      "questionText": "All the following are teacher's responsibilities towards their pupils except",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 38,
+      "options": [
+        "A. ensuring discipline",
+        "B. making themselves approachable",
+        "C. inviting parents of troublesome children",
+        "D. feeding hungry pupils at school"
+      ],
+      "correctAnswer": "B. making themselves approachable",
+      "explanation": "BECE 2011 RME Question 38",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2011_q6",
+      "questionText": "Marriages have a good chance to succeed if the",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 6,
+      "options": [
+        "A. man has much money to cater for the wife",
+        "B. woman is very beautiful",
+        "C. couple understand each other",
+        "D. couple are from the same town"
+      ],
+      "correctAnswer": "C. couple understand each other",
+      "explanation": "BECE 2011 RME Question 6",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2013_q19",
+      "questionText": "Egya Ahor is remembered for sacrificing his life to",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 19,
+      "options": [
+        "A. ensure victory at war.",
+        "B. free his people from slavery.",
+        "C. save children from hunger.",
+        "D. ward off an epidemic."
+      ],
+      "correctAnswer": "A. ensure victory at war.",
+      "explanation": "BECE 2013 RME Question 19",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2013_q32",
+      "questionText": "Folktales are important because they",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 32,
+      "options": [
+        "A. teach about other people.",
+        "B. are loved by grandparents.",
+        "C. make children happy.",
+        "D. teach moral lessons."
+      ],
+      "correctAnswer": "A. teach about other people.",
+      "explanation": "BECE 2013 RME Question 32",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q32",
+      "questionText": "The practice of marrying more than one wife is called",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 32,
+      "options": [
+        "A. monogamy",
+        "B. polygamy",
+        "C. celibacy",
+        "D. courtship"
+      ],
+      "correctAnswer": "B. polygamy",
+      "explanation": "BECE 2014 RME Question 32",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q33",
+      "questionText": "Children have the right to",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 33,
+      "options": [
+        "A. be maltreated",
+        "B. be educated",
+        "C. be enslaved",
+        "D. be neglected"
+      ],
+      "correctAnswer": "B. be educated",
+      "explanation": "BECE 2014 RME Question 33",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q37",
+      "questionText": "The nuclear family consists of",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 37,
+      "options": [
+        "A. parents and children",
+        "B. grandparents, parents and children",
+        "C. uncles, aunts and cousins",
+        "D. all relatives"
+      ],
+      "correctAnswer": "A. parents and children",
+      "explanation": "BECE 2014 RME Question 37",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2015_q34",
+      "questionText": "A nuclear family begins when",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 34,
+      "options": [
+        "A. Parents live with siblings",
+        "B. Parents ignore their relations",
+        "C. Couples get legally married",
+        "D. Couples have many siblings"
+      ],
+      "correctAnswer": "C. Couples get legally married",
+      "explanation": "BECE 2015 RME Question 34",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2016_q16",
+      "questionText": "The period of courtship in marriage is meant for",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 16,
+      "options": [
+        "A. convincing parents of both parties.",
+        "B. presentation of gifts to friends.",
+        "C. the couple to study each other.",
+        "D. the payment of the knocking fee."
+      ],
+      "correctAnswer": "C. the couple to study each other.",
+      "explanation": "BECE 2016 RME Question 16",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2016_q29",
+      "questionText": "One advantage the extended family has over the nuclear family is",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 29,
+      "options": [
+        "A. having little privacy for its members.",
+        "B. opportunity to associate with more people.",
+        "C. over-reliance on a few rich people.",
+        "D. persistent quarrelling in the family."
+      ],
+      "correctAnswer": "B. opportunity to associate with more people.",
+      "explanation": "BECE 2016 RME Question 29",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2016_q30",
+      "questionText": "The maintenance of law and order in the nuclear family is the responsibility of the",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 30,
+      "options": [
+        "A. aunts.",
+        "B. parents.",
+        "C. grandparents.",
+        "D. children."
+      ],
+      "correctAnswer": "B. parents.",
+      "explanation": "BECE 2016 RME Question 30",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2017_q13",
+      "questionText": "The period of courtship in marriage is meant for",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 13,
+      "options": [
+        "A. convincing parents of both parties.",
+        "B. presentation of gifts to friends.",
+        "C. the couple to study each other.",
+        "D. the payment of the knocking fee."
+      ],
+      "correctAnswer": "C. the couple to study each other.",
+      "explanation": "BECE 2017 RME Question 13",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2017_q29",
+      "questionText": "One advantage the extended family has over the nuclear family is",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 29,
+      "options": [
+        "A. having little privacy for its members.",
+        "B. opportunity to associate with more people.",
+        "C. over-reliance on a few rich people.",
+        "D. persistent quarrelling in the family."
+      ],
+      "correctAnswer": "B. opportunity to associate with more people.",
+      "explanation": "BECE 2017 RME Question 29",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2017_q30",
+      "questionText": "The maintenance of law and order in the nuclear family is the responsibility of the",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 30,
+      "options": [
+        "A. aunts.",
+        "B. parents.",
+        "C. grandparents.",
+        "D. children."
+      ],
+      "correctAnswer": "B. parents.",
+      "explanation": "BECE 2017 RME Question 30",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2017_q6",
+      "questionText": "Egya Ahor is remembered for sacrificing his life to",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 6,
+      "options": [
+        "A. ensure victory at war.",
+        "B. free his people from slavery.",
+        "C. save children from being kidnapped.",
+        "D. ward off an epidemic."
+      ],
+      "correctAnswer": "D. ward off an epidemic.",
+      "explanation": "BECE 2017 RME Question 6",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2019_q33",
+      "questionText": "The nuclear family system consists of",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 33,
+      "options": [
+        "A. grandparents and children.",
+        "B. parents and cousins.",
+        "C. parents and children.",
+        "D. siblings and cousins."
+      ],
+      "correctAnswer": "C. parents and children.",
+      "explanation": "BECE 2019 RME Question 33",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2019_q34",
+      "questionText": "Which of the following statements is not true about the extended family system?",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 34,
+      "options": [
+        "A. Parents, children and uncles are members.",
+        "B. Grandparents, nephews and children are members.",
+        "C. Nuclear family members and aged uncles are members.",
+        "D. All members come from the same mother."
+      ],
+      "correctAnswer": "D. All members come from the same mother.",
+      "explanation": "BECE 2019 RME Question 34",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2020_q13",
+      "questionText": "Payments made to fulfil a marriage contract are termed",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 13,
+      "options": [
+        "A. dowry",
+        "B. gift",
+        "C. sacrifice",
+        "D. reward"
+      ],
+      "correctAnswer": "A. dowry",
+      "explanation": "BECE 2020 RME Question 13",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2020_q23",
+      "questionText": "A chaste girl is likely to",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 23,
+      "options": [
+        "A. be teased by peers",
+        "B. become beautiful",
+        "C. get a good husband",
+        "D. marry early"
+      ],
+      "correctAnswer": "A. be teased by peers",
+      "explanation": "BECE 2020 RME Question 23",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2020_q34",
+      "questionText": "At home, the child is responsible for",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 34,
+      "options": [
+        "A. cleaning the house",
+        "B. payment of bills",
+        "C. upkeep of the house",
+        "D. punishing siblings"
+      ],
+      "correctAnswer": "A. cleaning the house",
+      "explanation": "BECE 2020 RME Question 34",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2021_q16",
+      "questionText": "To cut down on funeral expenses, the family must",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 16,
+      "options": [
+        "A. bury the corpse as early as possible.",
+        "B. preserve the corpse in the house.",
+        "C. serve the mourners with only one type of drink.",
+        "D. use local music to entertain the mourners."
+      ],
+      "correctAnswer": "A. bury the corpse as early as possible.",
+      "explanation": "BECE 2021 RME Question 16",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2021_q32",
+      "questionText": "The rite which ushers the individual into adulthood is",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 32,
+      "options": [
+        "A. engagement.",
+        "B. marriage.",
+        "C. outdooring.",
+        "D. puberty."
+      ],
+      "correctAnswer": "D. puberty.",
+      "explanation": "BECE 2021 RME Question 32",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2021_q34",
+      "questionText": "Chastity before marriage ensures",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 34,
+      "options": [
+        "A. birth to healthy children.",
+        "B. good family planning.",
+        "C. respect to your spouse.",
+        "D. trust between spouses."
+      ],
+      "correctAnswer": "C. respect to your spouse.",
+      "explanation": "BECE 2021 RME Question 34",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2022_q14",
+      "questionText": "The best way of showing commitment to the family is to",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 14,
+      "options": [
+        "A. bear the family name.",
+        "B. know the family history.",
+        "C. perform one's duties.",
+        "D. pay regular visits."
+      ],
+      "correctAnswer": "C. perform one's duties.",
+      "explanation": "BECE 2022 RME Question 14",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2022_q22",
+      "questionText": "In a Ghanaian family set up, the role of the father is to",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 22,
+      "options": [
+        "A. provide shelter, food and clothing.",
+        "B. make members run errands.",
+        "C. confront his children.",
+        "D. help in the preparation of meals."
+      ],
+      "correctAnswer": "A. provide shelter, food and clothing.",
+      "explanation": "BECE 2022 RME Question 22",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2022_q37",
+      "questionText": "To make marriage successful, couples need to always",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 37,
+      "options": [
+        "A. communicate with each other.",
+        "B. look neat and attractive.",
+        "C. compare themselves with each other.",
+        "D. work hard for wealth."
+      ],
+      "correctAnswer": "A. communicate with each other.",
+      "explanation": "BECE 2022 RME Question 37",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2022_q38",
+      "questionText": "The first stage in marriage starts when",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 38,
+      "options": [
+        "A. the man pays the bride wealth.",
+        "B. the engagement ceremony is performed.",
+        "C. parents of both parties agree.",
+        "D. a woman accepts a man's proposal."
+      ],
+      "correctAnswer": "D. a woman accepts a man's proposal.",
+      "explanation": "BECE 2022 RME Question 38",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2022_q39",
+      "questionText": "Which of the following statements is not true about African Traditional marriage?",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 39,
+      "options": [
+        "A. The marriage involves extended family.",
+        "B. Observation of certain taboos by men promote polygamy.",
+        "C. Scripture readings are taken before libation.",
+        "D. Dowries paid stabilizes the marriage."
+      ],
+      "correctAnswer": "C. Scripture readings are taken before libation.",
+      "explanation": "BECE 2022 RME Question 39",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2023_q13",
+      "questionText": "The following activities are marriage procedures in Islam except",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 13,
+      "options": [
+        "A. guardian to the marriage is chosen.",
+        "B. couples exchange vows to endorse the marriage.",
+        "C. parents select spouses for the men.",
+        "D. the bride's relatives perform the knocking."
+      ],
+      "correctAnswer": "A. guardian to the marriage is chosen.",
+      "explanation": "BECE 2023 RME Question 13",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2023_q31",
+      "questionText": "Immoral life style must be avoided because they lead to the following situations except",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 31,
+      "options": [
+        "A. dropping out of school.",
+        "B. premature parenting.",
+        "C. poverty.",
+        "D. high self-esteem."
+      ],
+      "correctAnswer": "D. high self-esteem.",
+      "explanation": "BECE 2023 RME Question 31",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2023_q35",
+      "questionText": "Polygamy is allowed in Islam on the condition that the man",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 35,
+      "options": [
+        "A. can treat all the women fairly.",
+        "B. is rich and can feed the extended family.",
+        "C. will be faithful to his religion.",
+        "D. will be sympathetic towards widows."
+      ],
+      "correctAnswer": "C. will be faithful to his religion.",
+      "explanation": "BECE 2023 RME Question 35",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2023_q40",
+      "questionText": "Folktales are important because they",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 40,
+      "options": [
+        "A. teach about other people.",
+        "B. are loved by grandparents.",
+        "C. make children happy.",
+        "D. teach moral lessons."
+      ],
+      "correctAnswer": "D. teach moral lessons.",
+      "explanation": "BECE 2023 RME Question 40",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2024_q25",
+      "questionText": "The Owusu family resides in a household where grandparents, parents and children live together and have common arrangements for food and shelter. They also share responsibilities and experiences. What will be an advantage of this situation to the Owusu family?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 25,
+      "options": [
+        "A. Decrease family cohesion",
+        "B. Limited interaction",
+        "C. Greater independence",
+        "D. Effective socialization"
+      ],
+      "correctAnswer": "D. Effective socialization",
+      "explanation": "BECE 2024 RME Question 25",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2025_q37",
+      "questionText": "Which of the following preparations towards marriage helps remove fear and build trust among the would-be couple?",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 37,
+      "options": [
+        "A. Discussing each partner's career goals",
+        "B. Conducting a thorough background check on each other",
+        "C. Ignoring each other's past life",
+        "D. Keeping future plans vague to avoid disagreement"
+      ],
+      "correctAnswer": "B. Conducting a thorough background check on each other",
+      "explanation": "BECE 2025 RME Question 37",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_1999_q7",
+      "questionText": "a)\n\n \n\nExplain the nuclear family system.\n\nb)\n\n \n\nState the obligations of each member of the family.",
+      "type": "essay",
+      "year": "1999",
+      "questionNumber": 7,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 1999 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2000_q8",
+      "questionText": "a)\n\n \n\nDescribe the extended family system.\n\nb)\n\n \n\nMention any three advantages and three disadvantages of the extended family system.",
+      "type": "essay",
+      "year": "2000",
+      "questionNumber": 8,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2000 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2001_q5",
+      "questionText": "a)\n\n \n\nMention any three types of punishment.\n\nb)\n\n \n\nGive five reasons why children are punished in your school.",
+      "type": "essay",
+      "year": "2001",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2001 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2003_q5",
+      "questionText": "a)\n\n \n\nState three reasons each why children should be obedient to:\n\ni)\n\n \n\nParents;\n\nii)\n\n \n\nTeachers.\n\nb)\n\n \n\nMention any four rules that are expected to be obeyed in your school.",
+      "type": "essay",
+      "year": "2003",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2003 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2003_q8",
+      "questionText": "a)\n\n \n\nExplain five disadvantages of belonging to the extended family.\n\nb)\n\n \n\nWhat four advantages can be derived from such a family?",
+      "type": "essay",
+      "year": "2003",
+      "questionNumber": 8,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2003 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2004_q8",
+      "questionText": "a)\n\n \n\nExplain five moral responsibilities of parents.\n\nb)\n\n \n\nWhat four duties is a pupil expected to perform in school?",
+      "type": "essay",
+      "year": "2004",
+      "questionNumber": 8,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2004 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2006_q4",
+      "questionText": "a)\n\n \n\nExplain four ways by which people show their commitment to God.\n\nb)\n\n \n\nGive three reasons why commitment to one's family is necessary.",
+      "type": "essay",
+      "year": "2006",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2006 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2007_q8",
+      "questionText": "a)\n\n \n\nExplain the two main family systems in Ghana.\n\nb)\n\n \n\nGive four advantages of belonging to a nuclear family.",
+      "type": "essay",
+      "year": "2007",
+      "questionNumber": 8,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2007 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2008_q7",
+      "questionText": "a)\n\n \n\nState four responsibilities of a child to the parents.\n\nb)\n\n \n\nGive four reasons why people avoid responsibilities.",
+      "type": "essay",
+      "year": "2008",
+      "questionNumber": 7,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2008 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2011_q7",
+      "questionText": "a)\n\n \n\nDescribe the nuclear family system.\n\nb)\n\n \n\nMention three advantages and three disadvantages of the nuclear family system.",
+      "type": "essay",
+      "year": "2011",
+      "questionNumber": 7,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2011 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2013_q4",
+      "questionText": "a)\n\n \n\nIdentify four ways by which people show their commitment to God.\n\nb)\n\n \n\nState four reasons why commitment to one's family is necessary.",
+      "type": "essay",
+      "year": "2013",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2013 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2014_q7",
+      "questionText": "a)\n\n \n\nList four factors that promote good family relationship.\n\nb)\n\n \n\nExplain four benefits of healthy relationship among family members.",
+      "type": "essay",
+      "year": "2014",
+      "questionNumber": 7,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2014 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2016_q7",
+      "questionText": "a)\n\n \n\nState any four duties a child must perform in the family.\n\nb)\n\n \n\nExplain any four reasons why an individual needs to constantly examine himself or herself.",
+      "type": "essay",
+      "year": "2016",
+      "questionNumber": 7,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2016 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2017_q7",
+      "questionText": "a)\n\n \n\nOutline four ways of promoting good relationship among family members.\n\nb)\n\n \n\nState three reasons each for being obedient to:\n\ni)\n\n \n\nparents;\n\nii)\n\n \n\nteachers.",
+      "type": "essay",
+      "year": "2017",
+      "questionNumber": 7,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2017 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2018_q7",
+      "questionText": "a)\n\n \n\nDescribe four problems that may arise if parents and children refuse to perform their duties.\n\nb)\n\n \n\nState four consequences of anger in the society.",
+      "type": "essay",
+      "year": "2018",
+      "questionNumber": 7,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2018 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2019_q7",
+      "questionText": "a)\n\n \n\nList four factors that promote good family relationship.\n\nb)\n\n \n\nExplain four benefits of healthy relationships among family members.",
+      "type": "essay",
+      "year": "2019",
+      "questionNumber": 7,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2019 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "NKXFOQG027l5q4fwkJL8",
+      "year": 2014,
+      "questionNumber": 21,
+      "options": [
+        "A. prepare the youth for marriage",
+        "B. make them wealthy",
+        "C. make them popular",
+        "D. prepare them for chieftaincy"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "BECE",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "jnqQM0PMV34oLzAm5dks",
+      "year": 2014,
+      "questionNumber": 37,
+      "options": [
+        "A. parents and children",
+        "B. grandparents, parents and children",
+        "C. uncles, aunts and cousins",
+        "D. all relatives"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Family Values"
+      ],
+      "examType": "BECE",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

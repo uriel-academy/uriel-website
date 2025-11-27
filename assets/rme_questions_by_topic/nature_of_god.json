@@ -1,0 +1,1701 @@
+{
+  "topic": "Nature of God",
+  "totalQuestions": 56,
+  "questions": [
+    {
+      "id": "rme_1999_q17",
+      "questionText": "Blessed are the merciful for they shall",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 17,
+      "options": [
+        "A. see God",
+        "B. obtain mercy",
+        "C. inherit the earth",
+        "D. be called the children of God",
+        "E. be comforted"
+      ],
+      "correctAnswer": "B. obtain mercy",
+      "explanation": "BECE 1999 RME Question 17",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_1999_q19",
+      "questionText": "The rite of throwing stones at the pillars during the Hajj signifies",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 19,
+      "options": [
+        "A. exercising of the body",
+        "B. victory over the devil",
+        "C. preparing to fight the enemies",
+        "D. security of the holy place",
+        "E. beginning of the pilgrimage"
+      ],
+      "correctAnswer": "B. victory over the devil",
+      "explanation": "BECE 1999 RME Question 19",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_1999_q22",
+      "questionText": "People normally save money in order to",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 22,
+      "options": [
+        "A. use their income wisely",
+        "B. help the government to generate more revenue",
+        "C. be generous to people",
+        "D. prepare for the future",
+        "E. avoid envious friends"
+      ],
+      "correctAnswer": "D. prepare for the future",
+      "explanation": "BECE 1999 RME Question 22",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_1999_q37",
+      "questionText": "\"Train the child the way he should go and when he grows he will...\"",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 37,
+      "options": [
+        "A. \"be as wise as serpent\"",
+        "B. \"not depart from it\"",
+        "C. \"fear the Lord\"",
+        "D. \"be a great person\"",
+        "E. \"be a dedicated citizen\""
+      ],
+      "correctAnswer": "B. \"not depart from it\"",
+      "explanation": "BECE 1999 RME Question 37",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2000_q14",
+      "questionText": "Which of these commandments carries with it a promise?",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 14,
+      "options": [
+        "A. Refraining from murder",
+        "B. Not committing adultery",
+        "C. Loving one's neighbour",
+        "D. Not bearing false witness",
+        "E. Honouring one's parents"
+      ],
+      "correctAnswer": "E. Honouring one's parents",
+      "explanation": "BECE 2000 RME Question 14",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2000_q38",
+      "questionText": "We show good manners when we",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 38,
+      "options": [
+        "A. give instant justice to a thief",
+        "B. talk to people with both hands",
+        "C. smile to people",
+        "D. wink our eyes at people",
+        "E. eat very fast at table when we are hungry"
+      ],
+      "correctAnswer": "C. smile to people",
+      "explanation": "BECE 2000 RME Question 38",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2001_q26",
+      "questionText": "Which organization in Ghana deals with human rights issues?",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 26,
+      "options": [
+        "A. National Commission on Children",
+        "B. National Council for Women and Development",
+        "C. Commission on Human Rights and Administrative Justice",
+        "D. National Commission for Civic Education",
+        "E. United Nations Commission on Human Rights"
+      ],
+      "correctAnswer": "C. Commission on Human Rights and Administrative Justice",
+      "explanation": "BECE 2001 RME Question 26",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2001_q28",
+      "questionText": "Which of the following pairs of games can best make the child wise and strong?",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 28,
+      "options": [
+        "A. Riddles and Oware",
+        "B. Ampe and Quizzes",
+        "C. Tug-of-war and Wrestling",
+        "D. Oware and Quizzes",
+        "E. Ampe and Wrestling"
+      ],
+      "correctAnswer": "D. Tug-of-war and Wrestling",
+      "explanation": "BECE 2001 RME Question 28",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2001_q31",
+      "questionText": "Obedience to the laws of the state can make us",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 31,
+      "options": [
+        "A. fearful and honest citizens",
+        "B. gentle and loving citizens",
+        "C. simple and God-fearing citizens",
+        "D. patriotic and good citizens",
+        "E. tolerant and good citizens"
+      ],
+      "correctAnswer": "D. patriotic and good citizens",
+      "explanation": "BECE 2001 RME Question 31",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2001_q8",
+      "questionText": "God is omnipresent. This means that God",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 8,
+      "options": [
+        "A. is all-powerful",
+        "B. knows everything",
+        "C. is everywhere",
+        "D. is all forgiving",
+        "E. is very gracious"
+      ],
+      "correctAnswer": "C. is everywhere",
+      "explanation": "BECE 2001 RME Question 8",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2002_a_q11",
+      "questionText": "Palm Sunday is celebrated to mark the",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 11,
+      "options": [
+        "A. birth of Christ",
+        "B. outpouring of the Holy Spirit",
+        "C. joyful journey of Jesus into Jerusalem",
+        "D. resurrection of Jesus from the dead"
+      ],
+      "correctAnswer": "C. joyful journey of Jesus into Jerusalem",
+      "explanation": "BECE 2002 RME Question 11",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2004_q8",
+      "questionText": "'If you want to talk to God, you must talk to the wind'. This traditional proverb means that God is",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 8,
+      "options": [
+        "A. omnipotent",
+        "B. everywhere",
+        "C. the creator",
+        "D. the listener"
+      ],
+      "correctAnswer": "B. everywhere",
+      "explanation": "BECE 2004 RME Question 8",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2005_q3",
+      "questionText": "The three main religions in Ghana believe in",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 3,
+      "options": [
+        "A. ancestors and witches",
+        "B. holy scriptures",
+        "C. angels and smaller gods",
+        "D. a supreme being"
+      ],
+      "correctAnswer": "D. a supreme being",
+      "explanation": "BECE 2005 RME Question 3",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2005_q40",
+      "questionText": "A patriotic citizen is a person who",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 40,
+      "options": [
+        "A. helps the family always",
+        "B. practices personal hygiene",
+        "C. defends his nation always",
+        "D. worships his Creator regularly"
+      ],
+      "correctAnswer": "C. defends his nation always",
+      "explanation": "BECE 2005 RME Question 40",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2006_q14",
+      "questionText": "The burning bush that Moses saw attracted him because",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 14,
+      "options": [
+        "A. God spoke to him from it",
+        "B. the place was a holy ground",
+        "C. the fire was not consuming the bush",
+        "D. God wanted to save Israel through him"
+      ],
+      "correctAnswer": "C. the fire was not consuming the bush",
+      "explanation": "BECE 2006 RME Question 14",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2007_q16",
+      "questionText": "Which of the following attributes of God shows that He has the whole world under His view?",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 16,
+      "options": [
+        "A. Omnipotence",
+        "B. Creator",
+        "C. Omnipresence",
+        "D. Omniscience"
+      ],
+      "correctAnswer": "C. Omnipresence",
+      "explanation": "BECE 2007 RME Question 16",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2007_q22",
+      "questionText": "In advising the youth, the elderly usually ends with the proverb,",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 22,
+      "options": [
+        "A. patience moves mountains",
+        "B. a rolling stone gathers no moss",
+        "C. a child crocks snails and not tortoise",
+        "D. a word to the wise is enough"
+      ],
+      "correctAnswer": "D. a word to the wise is enough",
+      "explanation": "BECE 2007 RME Question 22",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2007_q37",
+      "questionText": "A proverb is wise saying meant to",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 37,
+      "options": [
+        "A. test people's endurance",
+        "B. enrich one's language",
+        "C. make people proud",
+        "D. sing praises of men"
+      ],
+      "correctAnswer": "B. enrich one's language",
+      "explanation": "BECE 2007 RME Question 37",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2007_q4",
+      "questionText": "Which of the Ten Commandments carries a promise?",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 4,
+      "options": [
+        "A. You shall honour your father and mother",
+        "B. You shall not tell lies about somebody",
+        "C. You shall not swear falsely",
+        "D. You shall keep the Sabbath day holy"
+      ],
+      "correctAnswer": "A. You shall honour your father and mother",
+      "explanation": "BECE 2007 RME Question 4",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2008_q3",
+      "questionText": "The Akans call God Tweduampom because He is",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 3,
+      "options": [
+        "A. everlasting",
+        "B. dependable",
+        "C. omnipotent",
+        "D. forgiving"
+      ],
+      "correctAnswer": "B. dependable",
+      "explanation": "BECE 2008 RME Question 3",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2009_q2",
+      "questionText": "The Gye Nyame symbol of Akans signifies that God is",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 2,
+      "options": [
+        "A. everywhere",
+        "B. all-powerful",
+        "C. all-seeing",
+        "D. all-loving"
+      ],
+      "correctAnswer": "B. all-powerful",
+      "explanation": "BECE 2009 RME Question 2",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2011_q1",
+      "questionText": "The belief that God sees the secret deeds of all and punishes those who do evil implies that He is",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 1,
+      "options": [
+        "A. Omniscient",
+        "B. Omnipotent",
+        "C. Omnipresent",
+        "D. Sovereign"
+      ],
+      "correctAnswer": "A. Omniscient",
+      "explanation": "BECE 2011 RME Question 1",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2012_q7",
+      "questionText": "A summary of the ten commandments is",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 7,
+      "options": [
+        "A. obedience to parents and the elderly.",
+        "B. love for God and one's neighbour.",
+        "C. observing the sabbath and keeping it holy.",
+        "D. worshipping the Almighty God only."
+      ],
+      "correctAnswer": "C. observing the sabbath and keeping it holy.",
+      "explanation": "BECE 2012 RME Question 7",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2013_q11",
+      "questionText": "Jesus came into the world so that people may",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 11,
+      "options": [
+        "A. forgive their enemies.",
+        "B. have eternal life.",
+        "C. overcome problems.",
+        "D. become wealthy."
+      ],
+      "correctAnswer": "C. overcome problems.",
+      "explanation": "BECE 2013 RME Question 11",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2013_q6",
+      "questionText": "The attributes of God refer to His",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 6,
+      "options": [
+        "A. names and titles.",
+        "B. wonderful creation.",
+        "C. order of creation.",
+        "D. relationship with people."
+      ],
+      "correctAnswer": "A. names and titles.",
+      "explanation": "BECE 2013 RME Question 6",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q5",
+      "questionText": "In traditional religion, the Supreme Being is known by the Ga as",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 5,
+      "options": [
+        "A. Mawu",
+        "B. Nyame",
+        "C. Ataa-Naa Nyonmo",
+        "D. Chineke"
+      ],
+      "correctAnswer": "C. Ataa-Naa Nyonmo",
+      "explanation": "BECE 2014 RME Question 5",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2015_q10",
+      "questionText": "Christians who are persecuted for the sake of righteousness are blessed because",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 10,
+      "options": [
+        "A. God will be merciful to them.",
+        "B. God's kingdom belongs to them.",
+        "C. They shall be comforted.",
+        "D. They shall see God."
+      ],
+      "correctAnswer": "B. God's kingdom belongs to them.",
+      "explanation": "BECE 2015 RME Question 10",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2015_q17",
+      "questionText": "God is called Nyame among the Akans because He is the",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 17,
+      "options": [
+        "A. Creator",
+        "B. Dependable",
+        "C. Ever-living",
+        "D. Supreme Being"
+      ],
+      "correctAnswer": "D. Supreme Being",
+      "explanation": "BECE 2015 RME Question 17",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2015_q32",
+      "questionText": "Money is used wisely when",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 32,
+      "options": [
+        "A. Things are bought on credit",
+        "B. It is spent on expensive things",
+        "C. It is spent on things budgeted for",
+        "D. It is spent on poor people"
+      ],
+      "correctAnswer": "C. It is spent on things budgeted for",
+      "explanation": "BECE 2015 RME Question 32",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2015_q9",
+      "questionText": "Which of the following parables of Jesus teaches forgiveness?",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 9,
+      "options": [
+        "A. Unjust steward",
+        "B. Rich fool",
+        "C. Good Samaritan",
+        "D. Prodigal son"
+      ],
+      "correctAnswer": "D. Prodigal son",
+      "explanation": "BECE 2015 RME Question 9",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2017_q1",
+      "questionText": "The Gye Nyame symbol of the Akan signifies that God is",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 1,
+      "options": [
+        "A. all-loving.",
+        "B. all-merciful.",
+        "C. all-powerful.",
+        "D. all-seeing."
+      ],
+      "correctAnswer": "C. all-powerful.",
+      "explanation": "BECE 2017 RME Question 1",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2017_q4",
+      "questionText": "The belief that God sees the secret deeds of all and punishes those who do evil implies that He is",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 4,
+      "options": [
+        "A. omnipotent.",
+        "B. omnipresent.",
+        "C. omniscient.",
+        "D. sovereign."
+      ],
+      "correctAnswer": "B. omnipresent.",
+      "explanation": "BECE 2017 RME Question 4",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2017_q5",
+      "questionText": "Christians who are persecuted for the sake of righteousness are blessed because",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 5,
+      "options": [
+        "A. God will be merciful to them.",
+        "B. God's kingdom belongs to them.",
+        "C. they shall be comforted.",
+        "D. they shall see God."
+      ],
+      "correctAnswer": "B. God's kingdom belongs to them.",
+      "explanation": "BECE 2017 RME Question 5",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2018_q1",
+      "questionText": "The power of God is seen in His",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 1,
+      "options": [
+        "A. omniscience.",
+        "B. omnipotent.",
+        "C. omnipresence.",
+        "D. omnivorous."
+      ],
+      "correctAnswer": "B. omnipotent.",
+      "explanation": "BECE 2018 RME Question 1",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2018_q9",
+      "questionText": "The parable of Jesus that teaches forgiveness is the",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 9,
+      "options": [
+        "A. unjust steward.",
+        "B. rich fool.",
+        "C. Good Samaritan.",
+        "D. Prodigal son."
+      ],
+      "correctAnswer": "A. unjust steward.",
+      "explanation": "BECE 2018 RME Question 9",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2019_q1",
+      "questionText": "Traditional worshippers believe that the world was created by",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 1,
+      "options": [
+        "A. an ancestor.",
+        "B. an angel.",
+        "C. a lesser god.",
+        "D. a Supreme Being."
+      ],
+      "correctAnswer": "D. a Supreme Being.",
+      "explanation": "BECE 2019 RME Question 1",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2019_q26",
+      "questionText": "A person is said to be righteous when he or she",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 26,
+      "options": [
+        "A. accepts different viewpoints.",
+        "B. attends religious meetings.",
+        "C. lives a morally good life.",
+        "D. tries to be loving and holy."
+      ],
+      "correctAnswer": "C. lives a morally good life.",
+      "explanation": "BECE 2019 RME Question 26",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2019_q3",
+      "questionText": "Muslims describe Allah as al-Raheem because He is",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 3,
+      "options": [
+        "A. all-knowing.",
+        "B. just.",
+        "C. merciful.",
+        "D. the restorer."
+      ],
+      "correctAnswer": "C. merciful.",
+      "explanation": "BECE 2019 RME Question 3",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2019_q4",
+      "questionText": "The attribute Alpha and Omega reveals that God is",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 4,
+      "options": [
+        "A. everywhere all the time.",
+        "B. gracious and merciful.",
+        "C. holy and immortal.",
+        "D. the beginning and the end."
+      ],
+      "correctAnswer": "D. the beginning and the end.",
+      "explanation": "BECE 2019 RME Question 4",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2020_q1",
+      "questionText": "Which of the following attributes of God shows that He rules the world?",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 1,
+      "options": [
+        "A. Eternal",
+        "B. Creator",
+        "C. Omniscience",
+        "D. Omnipotent"
+      ],
+      "correctAnswer": "D. Omnipotent",
+      "explanation": "BECE 2020 RME Question 1",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2021_q22",
+      "questionText": "The saying that money flies implies, money",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 22,
+      "options": [
+        "A. can be spent easily.",
+        "B. can take you anywhere.",
+        "C. is controlled by the devil.",
+        "D. should be used wisely."
+      ],
+      "correctAnswer": "D. should be used wisely.",
+      "explanation": "BECE 2021 RME Question 22",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2021_q37",
+      "questionText": "In traditional societies, anything that is forbidden is regarded as",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 37,
+      "options": [
+        "A. holy.",
+        "B. spiritual.",
+        "C. taboo.",
+        "D. totem."
+      ],
+      "correctAnswer": "C. taboo.",
+      "explanation": "BECE 2021 RME Question 37",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2022_q20",
+      "questionText": "One similarity between religious and non-religious songs is that both",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 20,
+      "options": [
+        "A. can help people to hope for eternal life.",
+        "B. centre on people's object of worship.",
+        "C. deal with achievements of heroes in the society.",
+        "D. can help to control social behaviour."
+      ],
+      "correctAnswer": "D. can help to control social behaviour.",
+      "explanation": "BECE 2022 RME Question 20",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2022_q3",
+      "questionText": "The second most important commandment taught by Jesus Christ is the love for",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 3,
+      "options": [
+        "A. God.",
+        "B. neighbours.",
+        "C. religious leaders.",
+        "D. Holy Spirit."
+      ],
+      "correctAnswer": "B. neighbours.",
+      "explanation": "BECE 2022 RME Question 3",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2022_q30",
+      "questionText": "As a result of God's ability to do all things, He is referred to as",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 30,
+      "options": [
+        "A. Omnipresent.",
+        "B. Omniscient.",
+        "C. Omnipotent.",
+        "D. Omnivorous."
+      ],
+      "correctAnswer": "C. Omnipotent.",
+      "explanation": "BECE 2022 RME Question 30",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2023_q7",
+      "questionText": "The purpose of libation in Traditional Religion is to",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 7,
+      "options": [
+        "A. make a person holy.",
+        "B. make sorcerers holy.",
+        "C. have enemies killed.",
+        "D. revere the gods"
+      ],
+      "correctAnswer": "C. have enemies killed.",
+      "explanation": "BECE 2023 RME Question 7",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2024_q33",
+      "questionText": "The nature of God is expressed through His attributes. Identify which of these attributes of God cannot be demonstrated by humankind.",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 33,
+      "options": [
+        "A. All-knowing",
+        "B. Patience",
+        "C. Mercy",
+        "D. Kindness"
+      ],
+      "correctAnswer": "A. All-knowing",
+      "explanation": "BECE 2024 RME Question 33",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2025_q10",
+      "questionText": "You are coaching a small business owner who just experienced a setback in product development. What attitude would be most beneficial for them to adopt in order to turn the situation around?",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 10,
+      "options": [
+        "A. Give up on the current product and start a new one.",
+        "B. Blame external factors and wait for things to improve on their own.",
+        "C. Focus solely on reducing cost without considering consumer feedback.",
+        "D. Accept the failure, learn from experience and stay resilient."
+      ],
+      "correctAnswer": "D. Accept the failure, learn from experience and stay resilient.",
+      "explanation": "BECE 2025 RME Question 10",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2025_q31",
+      "questionText": "Which of the following options can best check bribery and corruption in society?",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 31,
+      "options": [
+        "A. Payment of good salaries",
+        "B. Advocacy for a just and equitable society",
+        "C. Easy access to loans and credit facilities",
+        "D. Availability of jobs"
+      ],
+      "correctAnswer": "B. Advocacy for a just and equitable society",
+      "explanation": "BECE 2025 RME Question 31",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2025_q38",
+      "questionText": "What does it mean when we say God is Omniscient? God knows",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 38,
+      "options": [
+        "A. only what happens in the future.",
+        "B. everything that happens at all times.",
+        "C. only what happens in the present.",
+        "D. only about the actions of humans."
+      ],
+      "correctAnswer": "B. everything that happens at all times.",
+      "explanation": "BECE 2025 RME Question 38",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2001_q1",
+      "questionText": "a)\n\n \n\nNarrate the story of creation in the Bible.\n\nb)\n\n \n\nMention three attributes of God that can be learnt from the story.",
+      "type": "essay",
+      "year": "2001",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2001 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2006_q1",
+      "questionText": "a)\n\n \n\nExplain five attributes of God from the Christian point of view.\n\nb)\n\n \n\nState two moral implications of the attributes of God mentioned in (a)",
+      "type": "essay",
+      "year": "2006",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2006 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2018_q1",
+      "questionText": "a)\n\n \n\nNarrate the Dagomba traditional story of creation.\n\nb)\n\n \n\nState three attributes of God according to the Akan.",
+      "type": "essay",
+      "year": "2018",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2018 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2023_q5",
+      "questionText": "a)\n\n \n\nExplain the following moral teachings in the Holy Qu'ran:\n\ni)\n\n \n\ncleanliness;\n\nii)\n\n \n\nhumility.\n\nb)\n\n \n\nExplain four reasons for which moral teachings are important to the society.",
+      "type": "essay",
+      "year": "2023",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2023 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2024_q3",
+      "questionText": "Remember the Sabbath day and keep it holy\n\n(a)\n\n \n\nIn what four ways will you fulfil the above commandment?\n\n(b)\n\n \n\nExplain four benefits one derives from observing the above commandment.",
+      "type": "essay",
+      "year": "2024",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2024 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "VMda5T2hqgM7jnDeilKT",
+      "year": 2014,
+      "questionNumber": 2,
+      "options": [
+        "A. oneness of Allah",
+        "B. belief in the prophets",
+        "C. belief in destiny",
+        "D. belief in holy books"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Nature of God"
+      ],
+      "examType": "BECE",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

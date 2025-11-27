@@ -1,0 +1,3629 @@
+{
+  "topic": "Christianity",
+  "totalQuestions": 121,
+  "questions": [
+    {
+      "id": "rme_1999_q2",
+      "questionText": "Palm Sunday is observed by Christians to remember the",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 2,
+      "options": [
+        "A. birth and baptism of Christ",
+        "B. resurrection and appearance of Christ",
+        "C. joyful journey of Christ into Jerusalem",
+        "D. baptism of the Holy Spirit",
+        "E. last supper and sacrifice of Christ"
+      ],
+      "correctAnswer": "D. baptism of the Holy Spirit",
+      "explanation": "BECE 1999 RME Question 2",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_1999_q3",
+      "questionText": "God gave Noah and his people the rainbow to remember",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 3,
+      "options": [
+        "A. the floods which destroyed the world",
+        "B. the disobedience of the idol worshippers",
+        "C. that God would not destroy the world with water again",
+        "D. the building of the ark",
+        "E. the usefulness of the heavenly bodies"
+      ],
+      "correctAnswer": "E. the usefulness of the heavenly bodies",
+      "explanation": "BECE 1999 RME Question 3",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_1999_q31",
+      "questionText": "Which of the following is not the reason for contributing money in the church?",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 31,
+      "options": [
+        "A. provide school building",
+        "B. building of hospitals",
+        "C. paying the priest",
+        "D. making the elders rich",
+        "E. helping the poor and the needy"
+      ],
+      "correctAnswer": "D. making the elders rich",
+      "explanation": "BECE 1999 RME Question 31",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_1999_q4",
+      "questionText": "All the religions in Ghana believe in",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 4,
+      "options": [
+        "A. Jesus Christ",
+        "B. the Bible",
+        "C. the Prophet Muhammed",
+        "D. the Rain god",
+        "E. the Supreme God"
+      ],
+      "correctAnswer": "E. the Supreme God",
+      "explanation": "BECE 1999 RME Question 4",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_1999_q5",
+      "questionText": "The Muslim prayers observed between Asr and Isha is",
+      "type": "multipleChoice",
+      "year": "1999",
+      "questionNumber": 5,
+      "options": [
+        "A. Zuhr",
+        "B. Jumu'ah",
+        "C. Idd",
+        "D. Subhi",
+        "E. Maghrib"
+      ],
+      "correctAnswer": "E. Maghrib",
+      "explanation": "BECE 1999 RME Question 5",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "1999"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2000_q1",
+      "questionText": "Christians, Muslims and Traditional worshippers believe that the world was created by",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 1,
+      "options": [
+        "A. Man",
+        "B. an angel",
+        "C. the Holy Spirit",
+        "D. God",
+        "E. a prophet"
+      ],
+      "correctAnswer": "D. God",
+      "explanation": "BECE 2000 RME Question 1",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2000_q16",
+      "questionText": "Which of the following rites is performed to usher the individual into adulthood?",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 16,
+      "options": [
+        "A. Baptism",
+        "B. Puberty",
+        "C. Naming",
+        "D. Marriage",
+        "E. Installation"
+      ],
+      "correctAnswer": "B. Puberty",
+      "explanation": "BECE 2000 RME Question 16",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2000_q4",
+      "questionText": "The third Islamic daily prayer is...",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 4,
+      "options": [
+        "A. Asr",
+        "B. Zuhr",
+        "C. Fajr",
+        "D. Maghrib",
+        "E. Ishai"
+      ],
+      "correctAnswer": "A. Asr",
+      "explanation": "BECE 2000 RME Question 4",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2000_q6",
+      "questionText": "To become a Christian one must first",
+      "type": "multipleChoice",
+      "year": "2000",
+      "questionNumber": 6,
+      "options": [
+        "A. say the Lord's Prayer",
+        "B. recite the Apostle's Creed",
+        "C. be confirmed",
+        "D. be baptized",
+        "E. marry the Christian way"
+      ],
+      "correctAnswer": "D. be baptized",
+      "explanation": "BECE 2000 RME Question 6",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2000"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2001_q13",
+      "questionText": "Jesus Christ was born in",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 13,
+      "options": [
+        "A. Jerusalem",
+        "B. Bethlehem",
+        "C. Bethsaida",
+        "D. Galilee",
+        "E. Nazareth"
+      ],
+      "correctAnswer": "B. Bethlehem",
+      "explanation": "BECE 2001 RME Question 13",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2001_q2",
+      "questionText": "Jesus Christ began his ministry at the age of",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 2,
+      "options": [
+        "A. 12",
+        "B. 25",
+        "C. 30",
+        "D. 35",
+        "E. 45"
+      ],
+      "correctAnswer": "C. 30",
+      "explanation": "BECE 2001 RME Question 2",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2001_q30",
+      "questionText": "Leisure time is described as a time for",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 30,
+      "options": [
+        "A. scrubbing the toilet and kitchen",
+        "B. going to church to worship God",
+        "C. attending the funeral of a relative",
+        "D. attending school and doing homework",
+        "E. playing indoor and outdoor games"
+      ],
+      "correctAnswer": "E. playing indoor and outdoor games",
+      "explanation": "BECE 2001 RME Question 30",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2001_q34",
+      "questionText": "To live a chaste life one must",
+      "type": "multipleChoice",
+      "year": "2001",
+      "questionNumber": 34,
+      "options": [
+        "A. avoid bad friends and casual sex",
+        "B. work and speak the truth",
+        "C. be obedient to parents and elders",
+        "D. become a born-again Christian",
+        "E. avoid teenage pregnancy"
+      ],
+      "correctAnswer": "A. avoid bad friends and casual sex",
+      "explanation": "BECE 2001 RME Question 34",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2001"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2002_a_q13",
+      "questionText": "The traditionalist believes that his destiny can be changed if he",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 13,
+      "options": [
+        "A. is born again into Christianity",
+        "B. could consult the gods",
+        "C. becomes a wizard",
+        "D. is well educated"
+      ],
+      "correctAnswer": "B. could consult the gods",
+      "explanation": "BECE 2002 RME Question 13",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2002_a_q15",
+      "questionText": "The importance of performing funeral rites is that it",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 15,
+      "options": [
+        "A. helps the dead to join the ancestors",
+        "B. avoids more deaths in the family",
+        "C. opens the way for the dead to go to heaven",
+        "D. enables the dead to resurrect on the last day"
+      ],
+      "correctAnswer": "D. enables the dead to resurrect on the last day",
+      "explanation": "BECE 2002 RME Question 15",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2002_a_q22",
+      "questionText": "As a child of the state, you have the right to",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 22,
+      "options": [
+        "A. vote",
+        "B. education",
+        "C. work",
+        "D. worship"
+      ],
+      "correctAnswer": "B. education",
+      "explanation": "BECE 2002 RME Question 22",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2002_a_q23",
+      "questionText": "As pupils, we should use our leisure time to",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 23,
+      "options": [
+        "A. play games",
+        "B. do our homework",
+        "C. do household chores",
+        "D. go to church"
+      ],
+      "correctAnswer": "D. go to church",
+      "explanation": "BECE 2002 RME Question 23",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2002_a_q4",
+      "questionText": "One of the main reasons why Christians pray is to ask God to",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 4,
+      "options": [
+        "A. let them fight their enemies",
+        "B. forgive them their sins",
+        "C. draw them closer to their friends",
+        "D. give them more wealth"
+      ],
+      "correctAnswer": "D. give them more wealth",
+      "explanation": "BECE 2002 RME Question 4",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2002_a_q8",
+      "questionText": "Christians believe in Jesus Christ because He",
+      "type": "multipleChoice",
+      "year": "2002",
+      "questionNumber": 8,
+      "options": [
+        "A. had a virgin birth",
+        "B. came to save humankind from their sins",
+        "C. overcame death on the holy cross",
+        "D. could perform many miracles"
+      ],
+      "correctAnswer": "A. had a virgin birth",
+      "explanation": "BECE 2002 RME Question 8",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2002"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2003_q15",
+      "questionText": "Which of the following serve as intermediary to God during traditional prayers?",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 15,
+      "options": [
+        "A. lesser gods",
+        "B. diviners",
+        "C. dwarfs",
+        "D. herbalists"
+      ],
+      "correctAnswer": "A. lesser gods",
+      "explanation": "BECE 2003 RME Question 15",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2003_q26",
+      "questionText": "When Fatimah and Mensah are committed to each other in friendship, they are prepared to",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 26,
+      "options": [
+        "A. worship God sincerely",
+        "B. run away from evil",
+        "C. write an examination together",
+        "D. share their wealth and poverty together"
+      ],
+      "correctAnswer": "D. share their wealth and poverty together",
+      "explanation": "BECE 2003 RME Question 26",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2003_q3",
+      "questionText": "A teaching common to both Christianity and Islam on salvation is that salvation is",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 3,
+      "options": [
+        "A. a gift of God for all people",
+        "B. the result of our good deeds",
+        "C. for those who would go to heaven",
+        "D. for those who would observe the ten commandments"
+      ],
+      "correctAnswer": "A. a gift of God for all people",
+      "explanation": "BECE 2003 RME Question 3",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2003_q31",
+      "questionText": "The best way to become a committed Christian is to",
+      "type": "multipleChoice",
+      "year": "2003",
+      "questionNumber": 31,
+      "options": [
+        "A. repent and accept Christ as saviour",
+        "B. attend all church activities",
+        "C. co-operate with our believers",
+        "D. take the holy communion regularly"
+      ],
+      "correctAnswer": "A. repent and accept Christ as saviour",
+      "explanation": "BECE 2003 RME Question 31",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2003"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2004_q18",
+      "questionText": "God has no human face in",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 18,
+      "options": [
+        "A. Islam and Christianity",
+        "B. Islam and Traditional religion",
+        "C. Traditional religion and Christianity",
+        "D. Islam, traditional Religion and Christianity"
+      ],
+      "correctAnswer": "D. Islam, traditional Religion and Christianity",
+      "explanation": "BECE 2004 RME Question 18",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2004_q28",
+      "questionText": "Leisure time is used for",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 28,
+      "options": [
+        "A. playing games",
+        "B. congregational worship",
+        "C. doing house chores",
+        "D. weeding the house"
+      ],
+      "correctAnswer": "A. playing games",
+      "explanation": "BECE 2004 RME Question 28",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2004_q3",
+      "questionText": "The patriarch described as a 'great man of faith' was",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 3,
+      "options": [
+        "A. Jacob",
+        "B. David",
+        "C. Moses",
+        "D. Abraham"
+      ],
+      "correctAnswer": "D. Abraham",
+      "explanation": "BECE 2004 RME Question 3",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2004_q31",
+      "questionText": "One joins a religious youth movement in order to",
+      "type": "multipleChoice",
+      "year": "2004",
+      "questionNumber": 31,
+      "options": [
+        "A. go to heaven",
+        "B. help develop the religion",
+        "C. organize crusades",
+        "D. have prayers answered"
+      ],
+      "correctAnswer": "B. help develop the religion",
+      "explanation": "BECE 2004 RME Question 31",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2004"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2005_q14",
+      "questionText": "The Janazah prayer is performed",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 14,
+      "options": [
+        "A. during Friday worship",
+        "B. when a Muslim dies",
+        "C. when a Muslim is traveling",
+        "D. after the Ramadan fast"
+      ],
+      "correctAnswer": "B. when a Muslim dies",
+      "explanation": "BECE 2005 RME Question 14",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2005_q15",
+      "questionText": "The Young People's Guild is an organization in the",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 15,
+      "options": [
+        "A. Methodist church",
+        "B. Anglican church",
+        "C. Presbyterian church",
+        "D. Pentecost church"
+      ],
+      "correctAnswer": "C. Presbyterian church",
+      "explanation": "BECE 2005 RME Question 15",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2005_q18",
+      "questionText": "Abraham was known for his great faith because he",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 18,
+      "options": [
+        "A. refused the idols of Canaan",
+        "B. was willing to sacrifice his son to God",
+        "C. built an altar to worship God",
+        "D. agreed to separate from Lot"
+      ],
+      "correctAnswer": "B. was willing to sacrifice his son to God",
+      "explanation": "BECE 2005 RME Question 18",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2005_q29",
+      "questionText": "When people are committed to themselves in friendship they",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 29,
+      "options": [
+        "A. work at the same place",
+        "B. worship together in a church",
+        "C. show loyalty to each other",
+        "D. run away from evil"
+      ],
+      "correctAnswer": "C. show loyalty to each other",
+      "explanation": "BECE 2005 RME Question 29",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2005_q35",
+      "questionText": "A child is described as courteous when he or she",
+      "type": "multipleChoice",
+      "year": "2005",
+      "questionNumber": 35,
+      "options": [
+        "A. assists the elderly",
+        "B. dresses well to church",
+        "C. gives gift to friends",
+        "D. learns at school"
+      ],
+      "correctAnswer": "A. assists the elderly",
+      "explanation": "BECE 2005 RME Question 35",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2005"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2006_q20",
+      "questionText": "A common feature of traditional prayer is that",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 20,
+      "options": [
+        "A. gods are always praised",
+        "B. people pray for others",
+        "C. enemies are often cursed",
+        "D. people confess their sins to gods"
+      ],
+      "correctAnswer": "C. enemies are often cursed",
+      "explanation": "BECE 2006 RME Question 20",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2006_q3",
+      "questionText": "The ninety-nine names of God can be found only in",
+      "type": "multipleChoice",
+      "year": "2006",
+      "questionNumber": 3,
+      "options": [
+        "A. Christianity and Islam",
+        "B. Christianity",
+        "C. Islam",
+        "D. African Traditional Religion"
+      ],
+      "correctAnswer": "C. Islam",
+      "explanation": "BECE 2006 RME Question 3",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2006"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2007_q18",
+      "questionText": "The Holy Communion reminds Christians of Jesus'",
+      "type": "multipleChoice",
+      "year": "2007",
+      "questionNumber": 18,
+      "options": [
+        "A. resurrection",
+        "B. last supper",
+        "C. crucifixion",
+        "D. birth"
+      ],
+      "correctAnswer": "B. last supper",
+      "explanation": "BECE 2007 RME Question 18",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2007"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2008_q12",
+      "questionText": "The death of Jesus teaches us how we must",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 12,
+      "options": [
+        "A. be committed to our children",
+        "B. love one another in all things",
+        "C. faithfully serve our nation",
+        "D. sacrifice for the church"
+      ],
+      "correctAnswer": "B. love one another in all things",
+      "explanation": "BECE 2008 RME Question 12",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2008_q13",
+      "questionText": "Mount Calvary was the place where Jesus",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 13,
+      "options": [
+        "A. ascended to heaven",
+        "B. was crucified",
+        "C. was transfigured",
+        "D. preached his last sermon"
+      ],
+      "correctAnswer": "B. was crucified",
+      "explanation": "BECE 2008 RME Question 13",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2008_q40",
+      "questionText": "As a sign of repentance, a sinner should",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 40,
+      "options": [
+        "A. punish himself/herself",
+        "B. show regret for his actions",
+        "C. share his property with the poor",
+        "D. confess to the church"
+      ],
+      "correctAnswer": "B. show regret for his actions",
+      "explanation": "BECE 2008 RME Question 40",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2008_q9",
+      "questionText": "The main reason why Christians pray is to",
+      "type": "multipleChoice",
+      "year": "2008",
+      "questionNumber": 9,
+      "options": [
+        "A. receive daily needs from God",
+        "B. have God's protection",
+        "C. overcome temptation",
+        "D. have fellowship with God"
+      ],
+      "correctAnswer": "D. have fellowship with God",
+      "explanation": "BECE 2008 RME Question 9",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2008"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2009_q11",
+      "questionText": "Christians call the Friday on which Jesus was crucified Good Friday because it",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 11,
+      "options": [
+        "A. marks the beginning of the Easter festivities",
+        "B. is a day on which they fast",
+        "C. marks their redemption from sin",
+        "D. shows the end of Jesus' ministry on earth"
+      ],
+      "correctAnswer": "C. marks their redemption from sin",
+      "explanation": "BECE 2009 RME Question 11",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2009_q12",
+      "questionText": "A traditional chief may be destooled if he",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 12,
+      "options": [
+        "A. becomes a born-again Christian",
+        "B. takes many wives",
+        "C. does not give birth to children",
+        "D. misuses stool property"
+      ],
+      "correctAnswer": "D. misuses stool property",
+      "explanation": "BECE 2009 RME Question 12",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2009_q19",
+      "questionText": "The washing of feet, hands and face by Muslims before prayers is known as",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 19,
+      "options": [
+        "A. janabah",
+        "B. nifas",
+        "C. wudu",
+        "D. janazah"
+      ],
+      "correctAnswer": "C. wudu",
+      "explanation": "BECE 2009 RME Question 19",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2009_q20",
+      "questionText": "Which of the following were not among the twelve disciples?",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 20,
+      "options": [
+        "A. Matthew and James",
+        "B. Simon and Andrews",
+        "C. Peter and John",
+        "D. Paul and Barnabas"
+      ],
+      "correctAnswer": "D. Paul and Barnabas",
+      "explanation": "BECE 2009 RME Question 20",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2009_q8",
+      "questionText": "Togbe Tsal gave his jaws to his people as a",
+      "type": "multipleChoice",
+      "year": "2009",
+      "questionNumber": 8,
+      "options": [
+        "A. totem to be worshipped",
+        "B. powerful instrument of divination",
+        "C. foundation stone for shrines",
+        "D. present to the king after him"
+      ],
+      "correctAnswer": "C. foundation stone for shrines",
+      "explanation": "BECE 2009 RME Question 8",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2009"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2011_q11",
+      "questionText": "Christians share a common belief that the Holy Spirit works with fire because",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 11,
+      "options": [
+        "A. fire that Jesus Christ brings eternal life",
+        "B. one should pray to God directly",
+        "C. one who suffers in life will go to heaven",
+        "D. the Holy Spirit works with fire"
+      ],
+      "correctAnswer": "A. fire that Jesus Christ brings eternal life",
+      "explanation": "BECE 2011 RME Question 11",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2011_q12",
+      "questionText": "The parable of the prodigal son teaches that one",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 12,
+      "options": [
+        "A. needs repentance for forgiveness",
+        "B. needs to be watchful and loving",
+        "C. must be faithful and prayerful",
+        "D. must be committed and hardworking"
+      ],
+      "correctAnswer": "D. must be committed and hardworking",
+      "explanation": "BECE 2011 RME Question 12",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2011_q19",
+      "questionText": "Which of the following disciples of Jesus were brothers?",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 19,
+      "options": [
+        "A. John and James",
+        "B. Joseph and John",
+        "C. Peter and Mathew",
+        "D. Judas and Thomas"
+      ],
+      "correctAnswer": "C. Peter and Mathew",
+      "explanation": "BECE 2011 RME Question 19",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2011_q2",
+      "questionText": "The outpouring of the Holy Spirit on Christians is marked by the",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 2,
+      "options": [
+        "A. Ascension",
+        "B. Resurrection",
+        "C. Pentecost",
+        "D. Passover"
+      ],
+      "correctAnswer": "C. Pentecost",
+      "explanation": "BECE 2011 RME Question 2",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2011_q3",
+      "questionText": "The congregational prayers observed by Muslims on Friday is",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 3,
+      "options": [
+        "A. Eid",
+        "B. Jumūah",
+        "C. Janazah",
+        "D. Zuhr"
+      ],
+      "correctAnswer": "B. Jumuah",
+      "explanation": "BECE 2011 RME Question 3",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2012_q16",
+      "questionText": "In a prayer of confession, Christians",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 16,
+      "options": [
+        "A. adore God who created them.",
+        "B. say sorry to God for their sins.",
+        "C. ask for help in times of trouble.",
+        "D. give thanks for all the gifts they received."
+      ],
+      "correctAnswer": "C. ask for help in times of trouble.",
+      "explanation": "BECE 2012 RME Question 16",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2012_q19",
+      "questionText": "The combination of the Fajr and Asr prayers makes",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 19,
+      "options": [
+        "A. two rakats.",
+        "B. five rakats.",
+        "C. six rakats.",
+        "D. eight rakats."
+      ],
+      "correctAnswer": "D. eight rakats.",
+      "explanation": "BECE 2012 RME Question 19",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2012_q27",
+      "questionText": "To show that a person is patient, he/she must",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 27,
+      "options": [
+        "A. worship at appointed times.",
+        "B. preach to people often.",
+        "C. visit the sick regularly.",
+        "D. wait for the right time."
+      ],
+      "correctAnswer": "D. wait for the right time.",
+      "explanation": "BECE 2012 RME Question 27",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2012_q8",
+      "questionText": "The Holy Communion reminds Christians of Jesus'",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 8,
+      "options": [
+        "A. birth.",
+        "B. crucifixion.",
+        "C. last supper.",
+        "D. resurrection."
+      ],
+      "correctAnswer": "D. resurrection.",
+      "explanation": "BECE 2012 RME Question 8",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2013_q16",
+      "questionText": "The congregational prayer observed by Muslims on Fridays is the",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 16,
+      "options": [
+        "A. Eid",
+        "B. Jumu'ah",
+        "C. Janazah",
+        "D. Zuhr"
+      ],
+      "correctAnswer": "C. Janazah",
+      "explanation": "BECE 2013 RME Question 16",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2013_q4",
+      "questionText": "The Janazah prayer is performed",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 4,
+      "options": [
+        "A. when a Muslim is travelling.",
+        "B. during Friday worship.",
+        "C. after a Ramadan worship.",
+        "D. when a Muslim dies."
+      ],
+      "correctAnswer": "D. when a Muslim dies.",
+      "explanation": "BECE 2013 RME Question 4",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2013_q5",
+      "questionText": "The outpouring of the Holy Spirit on Christians occurred during the",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 5,
+      "options": [
+        "A. Ascension.",
+        "B. Passover.",
+        "C. Pentecost.",
+        "D. Resurrection."
+      ],
+      "correctAnswer": "C. Pentecost.",
+      "explanation": "BECE 2013 RME Question 5",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q12",
+      "questionText": "The sacrament that marks the beginning of Christian life is",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 12,
+      "options": [
+        "A. Confirmation",
+        "B. Baptism",
+        "C. Holy Communion",
+        "D. Penance"
+      ],
+      "correctAnswer": "B. Baptism",
+      "explanation": "BECE 2014 RME Question 12",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q15",
+      "questionText": "The mother of Jesus Christ was",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 15,
+      "options": [
+        "A. Elizabeth",
+        "B. Mary",
+        "C. Martha",
+        "D. Ruth"
+      ],
+      "correctAnswer": "B. Mary",
+      "explanation": "BECE 2014 RME Question 15",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q16",
+      "questionText": "In Islam, Zakāt means",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 16,
+      "options": [
+        "A. almsgiving",
+        "B. fasting",
+        "C. prayer",
+        "D. faith"
+      ],
+      "correctAnswer": "A. almsgiving",
+      "explanation": "BECE 2014 RME Question 16",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q18",
+      "questionText": "The Christians' holy book is the",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 18,
+      "options": [
+        "A. Torah",
+        "B. Bible",
+        "C. Qur'an",
+        "D. Talmud"
+      ],
+      "correctAnswer": "B. Bible",
+      "explanation": "BECE 2014 RME Question 18",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q23",
+      "questionText": "Easter is celebrated by Christians to commemorate",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 23,
+      "options": [
+        "A. the birth of Jesus",
+        "B. the death of Jesus",
+        "C. the resurrection of Jesus",
+        "D. the ascension of Jesus"
+      ],
+      "correctAnswer": "C. the resurrection of Jesus",
+      "explanation": "BECE 2014 RME Question 23",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q28",
+      "questionText": "Hard work leads to",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 28,
+      "options": [
+        "A. poverty",
+        "B. laziness",
+        "C. prosperity",
+        "D. disgrace"
+      ],
+      "correctAnswer": "C. prosperity",
+      "explanation": "BECE 2014 RME Question 28",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2014_q9",
+      "questionText": "The first five books of the Bible are called",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 9,
+      "options": [
+        "A. Gospels",
+        "B. Pentateuch",
+        "C. Epistles",
+        "D. Psalms"
+      ],
+      "correctAnswer": "B. Pentateuch",
+      "explanation": "BECE 2014 RME Question 9",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2015_q16",
+      "questionText": "The most important rite in Christian sacramental worship is the",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 16,
+      "options": [
+        "A. Taking of the Holy Communion",
+        "B. Reading of the Old Testament",
+        "C. Reading of the New Testament",
+        "D. Collection of offertory and tithe"
+      ],
+      "correctAnswer": "A. Taking of the Holy Communion",
+      "explanation": "BECE 2015 RME Question 16",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2015_q18",
+      "questionText": "Egya Ahor is fondly remembered by the Fante for",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 18,
+      "options": [
+        "A. His miraculous powers",
+        "B. Commanding the golden stool",
+        "C. His resurrection from death",
+        "D. Saving his people"
+      ],
+      "correctAnswer": "D. Saving his people",
+      "explanation": "BECE 2015 RME Question 18",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2015_q31",
+      "questionText": "Good behaviour is exhibited by",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 31,
+      "options": [
+        "A. Staring at elders",
+        "B. Doing what is right",
+        "C. Always studying the scriptures",
+        "D. Praying and fasting"
+      ],
+      "correctAnswer": "B. Doing what is right",
+      "explanation": "BECE 2015 RME Question 31",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2015_q4",
+      "questionText": "On what occasion do Muslims perform the Janazah prayer?",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 4,
+      "options": [
+        "A. Before a Muslim travels",
+        "B. After observing a fast",
+        "C. During Friday worship",
+        "D. When a Muslim dies"
+      ],
+      "correctAnswer": "D. When a Muslim dies",
+      "explanation": "BECE 2015 RME Question 4",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2015_q8",
+      "questionText": "Which of the Ten Commandments instructs Christians to be content with what they have?",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 8,
+      "options": [
+        "A. First",
+        "B. Fourth",
+        "C. Eighth",
+        "D. Tenth"
+      ],
+      "correctAnswer": "D. Tenth",
+      "explanation": "BECE 2015 RME Question 8",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2016_q1",
+      "questionText": "Which of the following people was not among the twelve disciples of Jesus?",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 1,
+      "options": [
+        "A. James",
+        "B. Matthew",
+        "C. Paul",
+        "D. Peter"
+      ],
+      "correctAnswer": "C. Paul",
+      "explanation": "BECE 2016 RME Question 1",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2016_q32",
+      "questionText": "To earn a living, one needs to be",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 32,
+      "options": [
+        "A. healthy.",
+        "B. hardworking.",
+        "C. prayerful.",
+        "D. responsible."
+      ],
+      "correctAnswer": "B. hardworking.",
+      "explanation": "BECE 2016 RME Question 32",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2016_q33",
+      "questionText": "Jesus Christ taught his disciples that, \"Blessed are the peacemakers, for they shall\"",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 33,
+      "options": [
+        "A. be comforted.",
+        "B. be called sons of God.",
+        "C. see God.",
+        "D. inherit the kingdom of God."
+      ],
+      "correctAnswer": "B. be called sons of God.",
+      "explanation": "BECE 2016 RME Question 33",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2017_q32",
+      "questionText": "To earn a living, one needs to be",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 32,
+      "options": [
+        "A. healthy.",
+        "B. hardworking.",
+        "C. prayerful.",
+        "D. responsible."
+      ],
+      "correctAnswer": "A. healthy.",
+      "explanation": "BECE 2017 RME Question 32",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2017_q33",
+      "questionText": "Jesus Christ taught his disciples that, \"Blessed are the peacemakers, for they shall\"",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 33,
+      "options": [
+        "A. be comforted.",
+        "B. be called sons of God.",
+        "C. see God.",
+        "D. inherit the kingdom of God."
+      ],
+      "correctAnswer": "B. be called sons of God.",
+      "explanation": "BECE 2017 RME Question 33",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2018_q13",
+      "questionText": "Both Islamic and Traditional religions accept",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 13,
+      "options": [
+        "A. polyandry.",
+        "B. polygamy.",
+        "C. the use of incense.",
+        "D. the five daily prayers."
+      ],
+      "correctAnswer": "B. polygamy.",
+      "explanation": "BECE 2018 RME Question 13",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2018_q15",
+      "questionText": "On what occasion do Muslims perform the Janazah prayer?",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 15,
+      "options": [
+        "A. After observing fast",
+        "B. Before a Muslim travels",
+        "C. During Friday worship",
+        "D. When a Muslim dies"
+      ],
+      "correctAnswer": "D. When a Muslim dies",
+      "explanation": "BECE 2018 RME Question 15",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2018_q19",
+      "questionText": "The Eucharist in Christian worship refers to",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 19,
+      "options": [
+        "A. prayer of thanksgiving.",
+        "B. preaching of sermon.",
+        "C. payment of tithe.",
+        "D. the Holy Communion."
+      ],
+      "correctAnswer": "D. the Holy Communion.",
+      "explanation": "BECE 2018 RME Question 19",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2018_q21",
+      "questionText": "To live a chaste life, one must",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 21,
+      "options": [
+        "A. attend church regularly.",
+        "B. avoid casual sex.",
+        "C. be obedient to teachers.",
+        "D. work hard to become rich."
+      ],
+      "correctAnswer": "B. avoid casual sex.",
+      "explanation": "BECE 2018 RME Question 21",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2018_q31",
+      "questionText": "A child who refuses to play with bad friends is said to be",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 31,
+      "options": [
+        "A. faithful.",
+        "B. obedient.",
+        "C. polite.",
+        "D. sincere."
+      ],
+      "correctAnswer": "D. sincere.",
+      "explanation": "BECE 2018 RME Question 31",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2018_q35",
+      "questionText": "A home where members learn their religion through oral sources is known as",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 35,
+      "options": [
+        "A. Christian.",
+        "B. Islamic.",
+        "C. Traditional.",
+        "D. Jewish."
+      ],
+      "correctAnswer": "C. Traditional.",
+      "explanation": "BECE 2018 RME Question 35",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2018_q39",
+      "questionText": "C.Y.O. as a religious youth group stands for",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 39,
+      "options": [
+        "A. Catechists Youth Organization.",
+        "B. Catholic Youngmen Organization.",
+        "C. Christian Youngmen Organization.",
+        "D. Catholic Youth Organization."
+      ],
+      "correctAnswer": "D. Catholic Youth Organization.",
+      "explanation": "BECE 2018 RME Question 39",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2018_q8",
+      "questionText": "EgyaAhor is fondly remembered by the Fante for",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 8,
+      "options": [
+        "A. commanding the Golden stool.",
+        "B. his miraculous powers.",
+        "C. his resurrection from death.",
+        "D. saving his people."
+      ],
+      "correctAnswer": "D. saving his people.",
+      "explanation": "BECE 2018 RME Question 8",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2019_q16",
+      "questionText": "The word \"Amen\" is useful in Christian and Islamic prayers because it",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 16,
+      "options": [
+        "A. attracts blessing to the people.",
+        "B. reveals God's promises.",
+        "C. enforces the request.",
+        "D. ensures confidence in the prayer."
+      ],
+      "correctAnswer": "D. ensures confidence in the prayer.",
+      "explanation": "BECE 2019 RME Question 16",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2019_q17",
+      "questionText": "Which group of believers usually conclude their prayers with a curse?",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 17,
+      "options": [
+        "A. Christians.",
+        "B. Muslims.",
+        "C. Traditionalists.",
+        "D. Buddhists."
+      ],
+      "correctAnswer": "D. Buddhists.",
+      "explanation": "BECE 2019 RME Question 17",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2019_q37",
+      "questionText": "To succeed in academic work, the individual needs to engage in serious",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 37,
+      "options": [
+        "A. farming.",
+        "B. learning.",
+        "C. prayers.",
+        "D. discussions."
+      ],
+      "correctAnswer": "B. learning.",
+      "explanation": "BECE 2019 RME Question 37",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2019_q5",
+      "questionText": "Abraham built an altar for the Lord at the Oak of Moreh because",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 5,
+      "options": [
+        "A. God asked him to do so.",
+        "B. God had appeared to him there.",
+        "C. he wanted to worship God there.",
+        "D. it was a Canaanite worship centre."
+      ],
+      "correctAnswer": "B. God had appeared to him there.",
+      "explanation": "BECE 2019 RME Question 5",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2020_q14",
+      "questionText": "The purity and uprightness of a Muslim depends on his or her",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 14,
+      "options": [
+        "A. celebration of Eid festival",
+        "B. constant prayers",
+        "C. Qur'anic studies",
+        "D. pilgrimage to Mecca"
+      ],
+      "correctAnswer": "B. constant prayers",
+      "explanation": "BECE 2020 RME Question 14",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2020_q16",
+      "questionText": "The last prayer recited at the cemetery during an Islamic burial is",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 16,
+      "options": [
+        "A. Janāzah",
+        "B. Jum'ah",
+        "C. Asr",
+        "D. Tarāwīḥ"
+      ],
+      "correctAnswer": "A. Janāzah",
+      "explanation": "BECE 2020 RME Question 16",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2020_q17",
+      "questionText": "The Ka'bah in Mecca is important in Islamic worship because",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 17,
+      "options": [
+        "A. it is the centre of God's revelation",
+        "B. its direction is always faced at prayers",
+        "C. prayers said there are promptly answered",
+        "D. the place is filled with angels"
+      ],
+      "correctAnswer": "B. its direction is always faced at prayers",
+      "explanation": "BECE 2020 RME Question 17",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2020_q18",
+      "questionText": "Libation is offered mainly to",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 18,
+      "options": [
+        "A. curse all enemies",
+        "B. make worship successful",
+        "C. seek the favour of divinities",
+        "D. quench the thirst of the gods"
+      ],
+      "correctAnswer": "C. seek the favour of divinities",
+      "explanation": "BECE 2020 RME Question 18",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2020_q9",
+      "questionText": "The name \"Abraham\" means",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 9,
+      "options": [
+        "A. exalted father",
+        "B. faithful father",
+        "C. favoured father",
+        "D. nation's father"
+      ],
+      "correctAnswer": "D. nation's father",
+      "explanation": "BECE 2020 RME Question 9",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2021_q6",
+      "questionText": "A practice that is common to the three major religions in Ghana is",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 6,
+      "options": [
+        "A. animal sacrifice.",
+        "B. regular prayers.",
+        "C. respect for taboos.",
+        "D. scripture studies."
+      ],
+      "correctAnswer": "C. respect for taboos.",
+      "explanation": "BECE 2021 RME Question 6",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2022_q31",
+      "questionText": "Which of the Ten Commandments helps Christians to avoid lies and deception?",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 31,
+      "options": [
+        "A. Ninth.",
+        "B. Fourth.",
+        "C. Fifth.",
+        "D. Seventh."
+      ],
+      "correctAnswer": "A. Ninth.",
+      "explanation": "BECE 2022 RME Question 31",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2023_q12",
+      "questionText": "The Bible contains words of inspiration from",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 12,
+      "options": [
+        "A. God.",
+        "B. Jesus.",
+        "C. the prophets.",
+        "D. the spirit."
+      ],
+      "correctAnswer": "B. Jesus.",
+      "explanation": "BECE 2023 RME Question 12",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2023_q15",
+      "questionText": "In Christian Religion, the Eucharist stands for",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 15,
+      "options": [
+        "A. Initiation rite.",
+        "B. Holy Communion.",
+        "C. Reconciliation.",
+        "D. Confirmation."
+      ],
+      "correctAnswer": "D. Confirmation.",
+      "explanation": "BECE 2023 RME Question 15",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2023_q18",
+      "questionText": "To lead a chaste life means one has to",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 18,
+      "options": [
+        "A. be regular in church.",
+        "B. avoid good company.",
+        "C. obey all rules and regulations.",
+        "D. avoid all forms of sexual activities."
+      ],
+      "correctAnswer": "D. avoid all forms of sexual activities.",
+      "explanation": "BECE 2023 RME Question 18",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2023_q23",
+      "questionText": "The main form of prayer in Tradition Religion is through",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 23,
+      "options": [
+        "A. chanting.",
+        "B. sacrifice.",
+        "C. libation.",
+        "D. divination."
+      ],
+      "correctAnswer": "C. libation.",
+      "explanation": "BECE 2023 RME Question 23",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2023_q29",
+      "questionText": "The gospels in the Bible describe the",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 29,
+      "options": [
+        "A. deeds of the prophets.",
+        "B. life and works of Jesus Christ.",
+        "C. Life and works of the apostles.",
+        "D. spread of Christianity."
+      ],
+      "correctAnswer": "D. spread of Christianity.",
+      "explanation": "BECE 2023 RME Question 29",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2023_q30",
+      "questionText": "Which of the Ten Commandments preserves the life of human beings? The",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 30,
+      "options": [
+        "A. fourth",
+        "B. six",
+        "C. ninth",
+        "D. tenth"
+      ],
+      "correctAnswer": "D. tenth",
+      "explanation": "BECE 2023 RME Question 30",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2023_q4",
+      "questionText": "Golgotha was the place where Jesus Christ",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 4,
+      "options": [
+        "A. fasted for forty days.",
+        "B. fed the five thousand men.",
+        "C. prayed in the night.",
+        "D. was crucified."
+      ],
+      "correctAnswer": "C. prayed in the night.",
+      "explanation": "BECE 2023 RME Question 4",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2024_q2",
+      "questionText": "Which of the following is a common characteristic of the early life of many indigenous traditional leaders in Ghana? They were",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 2,
+      "options": [
+        "A. born into wealthy families and received formal education.",
+        "B. trained from a young age in traditional practices and leadership roles.",
+        "C. orphans and had to fend for themselves at a young age.",
+        "D. converted to Christianity and Islam at a young age."
+      ],
+      "correctAnswer": "B. trained from a young age in traditional practices and leadership roles.",
+      "explanation": "BECE 2024 RME Question 2",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2024_q34",
+      "questionText": "Nancy was excited when her grandmother told her she would undergo a ceremony that will mark her transition to adulthood. Which of the following ceremonies is Nancy expected to undergo?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 34,
+      "options": [
+        "A. Baptism",
+        "B. Puberty",
+        "C. Marriage",
+        "D. Confirmation"
+      ],
+      "correctAnswer": "B. Puberty",
+      "explanation": "BECE 2024 RME Question 34",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2025_q34",
+      "questionText": "Halima is remembered in Islamic history because she",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 34,
+      "options": [
+        "A. played a key role in spreading Islam.",
+        "B. was Muhammad's wet nurse.",
+        "C. was the mother of an Islamic scholar.",
+        "D. was the mother of the faithfuls"
+      ],
+      "correctAnswer": "B. was Muhammad's wet nurse.",
+      "explanation": "BECE 2025 RME Question 34",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "rme_2025_q8",
+      "questionText": "What is the purpose of prayer of supplication in Christianity? To",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 8,
+      "options": [
+        "A. sing praises to God",
+        "B. thank God for the gift of life",
+        "C. ask God for assistance",
+        "D. intercede for others"
+      ],
+      "correctAnswer": "C. ask God for assistance",
+      "explanation": "BECE 2025 RME Question 8",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Religious And Moral Education",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2002_q1",
+      "questionText": "a)\n\n \n\nState any five of the Ten Commandments.\n\nb)\n\n \n\nExplain why these commandments are important.",
+      "type": "essay",
+      "year": "2002",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2002 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2004_q2",
+      "questionText": "a)\n\n \n\nWhat is prayer?\n\nb)\n\n \n\nState the importance of prayer to the traditional worshipper.",
+      "type": "essay",
+      "year": "2004",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2004 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2006_q3",
+      "questionText": "a)\n\n \n\nDescribe the mode of prayer in either Islam or African Traditional Religion.\n\nb)\n\n \n\nMention three reasons why people take part in worship.\n\n  \n\nSECTION B\n\nMORAL LIFE\n\nAnswer one question only from this section.",
+      "type": "essay",
+      "year": "2006",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2006 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2008_q2",
+      "questionText": "a)\n\n \n\nExplain three types of Christian prayer.\n\nb)\n\n \n\nGive five reasons why Christians pray.",
+      "type": "essay",
+      "year": "2008",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2008 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2009_q2",
+      "questionText": "a)\n\n \n\nWrite on libation as a traditional means of worship.\n\nb)\n\n \n\nMention three purposes of traditional worship.",
+      "type": "essay",
+      "year": "2009",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2009 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2011_q2",
+      "questionText": "a)\n\n \n\nIdentify the five daily prayers offered by Muslims.\n\nb)\n\n \n\nState four reasons why prayer is important to the Muslim.",
+      "type": "essay",
+      "year": "2011",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2011 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2012_q3",
+      "questionText": "a)\n\n \n\nDescribe how Muslim prayer (Salat) is performed.\n\nb)\n\n \n\nState three benefits of ablution.\n\n  \n\nSECTION B\n\nMORAL LIFE\n\nAnswer one question only from this section.",
+      "type": "essay",
+      "year": "2012",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2012 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2016_q2",
+      "questionText": "a)\n\n \n\nOutline four rites Christians perform during the death of a member.\n\nb)\n\n \n\nExplain four reasons why Christians perform death rites.",
+      "type": "essay",
+      "year": "2016",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2016 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2017_q3",
+      "questionText": "a)\n\n \n\nDescribe four types of Christian prayers.\n\nb)\n\n \n\nOutline four reasons why Christians pray.\n\n \n\nSECTION B\n\nMORAL LIFE\n\nAnswer one question only from this section.",
+      "type": "essay",
+      "year": "2017",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2017 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2018_q3",
+      "questionText": "a)\n\n \n\nDescribe how Christians celebrate Easter.\n\nb)\n\n \n\nState four reasons for which Easter feast is important to the Christian.\n\n \n\nSECTION B\n\nMORAL LIFE\n\nAnswer one question only from this section.",
+      "type": "essay",
+      "year": "2018",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2018 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_rme_2023_q1",
+      "questionText": "a)\n\n \n\nNarrate the story of the death of Jesus Christ.\n\nb)\n\n \n\nWhat three lessons can be learnt from the story in (a) above?",
+      "type": "essay",
+      "year": "2023",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2023 RME",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "0rHw1xOnxOP67StYaGxE",
+      "year": 2014,
+      "questionNumber": 28,
+      "options": [
+        "A. poverty",
+        "B. laziness",
+        "C. prosperity",
+        "D. disgrace"
+      ],
+      "correctAnswer": "C",
+      "explanation": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "BECE",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "5sznYldHlHkzRikKoqT3",
+      "year": 2014,
+      "questionNumber": 16,
+      "options": [
+        "A. almsgiving",
+        "B. fasting",
+        "C. prayer",
+        "D. faith"
+      ],
+      "correctAnswer": "A",
+      "explanation": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "BECE",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "66M8CkpetV0vldPJmJDm",
+      "year": 2014,
+      "questionNumber": 23,
+      "options": [
+        "A. the birth of Jesus",
+        "B. the death of Jesus",
+        "C. the resurrection of Jesus",
+        "D. the ascension of Jesus"
+      ],
+      "correctAnswer": "C",
+      "explanation": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "BECE",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "7oF6KABWHcWq1BJH9Qx1",
+      "year": 2014,
+      "questionNumber": 18,
+      "options": [
+        "A. Torah",
+        "B. Bible",
+        "C. Qur'an",
+        "D. Talmud"
+      ],
+      "correctAnswer": "B",
+      "explanation": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "BECE",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "DX7jOp2GPmTOo7epyQ9c",
+      "year": 2014,
+      "questionNumber": 12,
+      "options": [
+        "A. Confirmation",
+        "B. Baptism",
+        "C. Holy Communion",
+        "D. Penance"
+      ],
+      "correctAnswer": "B",
+      "explanation": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "BECE",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ZoZRSZPmKaCdoT68SICP",
+      "year": 2014,
+      "questionNumber": 9,
+      "options": [
+        "A. Gospels",
+        "B. Pentateuch",
+        "C. Epistles",
+        "D. Psalms"
+      ],
+      "correctAnswer": "B",
+      "explanation": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "BECE",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "s6vQsWqhDScp631CRRQQ",
+      "year": 2014,
+      "questionNumber": 13,
+      "options": [
+        "A. fasting",
+        "B. pilgrimage",
+        "C. prayer",
+        "D. almsgiving"
+      ],
+      "correctAnswer": "C",
+      "explanation": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Christianity"
+      ],
+      "examType": "BECE",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}
