@@ -270,6 +270,141 @@ function parseStandardQuestions(text) {
     return questions;
 }
 
+// Parse inline format questions (years 2012-2016, 2024-2025)
+function parseInlineQuestions(text) {
+    const questions = [];
+    const lines = text.split('\n');
+    
+    for (const line of lines) {
+        const trimmed = line.trim();
+        if (!trimmed) continue;
+        
+        // Match: "NUMBER. question text...A. optionB. optionC. optionD. option"
+        // More flexible regex to handle various inline formats
+        const match = trimmed.match(/^(\d+)\.\s+(.+?)([A-D]\.\s*.+?[A-D]\.\s*.+?[A-D]\.\s*.+?[A-D]\.\s*.+?)$/);
+        
+        if (match) {
+            const questionNumber = parseInt(match[1]);
+            const questionText = match[2].trim();
+            const optionsText = match[3];
+            
+            // Extract options from inline format: A. textB. textC. textD. text
+            const options = [];
+            let currentOption = '';
+            let currentLetter = '';
+            
+            for (let i = 0; i < optionsText.length; i++) {
+                const char = optionsText[i];
+                const nextChar = optionsText[i + 1];
+                
+                // Check if this is a new option marker (A., B., C., or D.)
+                if (/[A-D]/.test(char) && nextChar === '.') {
+                    // Save previous option if exists
+                    if (currentLetter && currentOption) {
+                        options.push(`${currentLetter}. ${currentOption.trim()}`);
+                    }
+                    currentLetter = char;
+                    currentOption = '';
+                    i++; // Skip the dot
+                    continue;
+                }
+                
+                currentOption += char;
+            }
+            
+            // Add last option
+            if (currentLetter && currentOption) {
+                options.push(`${currentLetter}. ${currentOption.trim()}`);
+            }
+            
+            if (options.length === 4) {
+                questions.push({
+                    questionNumber,
+                    question: questionText,
+                    options
+                });
+            }
+        }
+    }
+    
+    return questions;
+}
+
+// Parse inline table format (Q11-Q20, Q31-Q40 in 2012-style files)
+function parseInlineTable(text) {
+    const questions = [];
+    
+    // Find question texts for Q11-Q20 (appear before the table)
+    const questionTexts = {};
+    const part2Match = text.match(/PART II.+?(?=A\s+B\s+C\s+D)/s);
+    if (part2Match) {
+        const part2Text = part2Match[0];
+        // Match: "11. Text...12. Text..." without proper spacing
+        const matches = part2Text.matchAll(/(\d+)\.\s+([^.]+?\.{3,})/g);
+        for (const match of matches) {
+            const qNum = parseInt(match[1]);
+            questionTexts[qNum] = match[2].trim();
+        }
+    }
+    
+    // Find PART IV cloze questions (Q31-Q40)
+    const part4Match = text.match(/PART IV(.+?)(?=\n\d+\.\s+|$)/s);
+    if (part4Match) {
+        const part4Text = part4Match[1];
+        // Extract numbered blanks from passage: "– 31 –", "– 32 –", etc.
+        const blankMatches = part4Text.matchAll(/–\s*(\d+)\s*–/g);
+        for (const match of blankMatches) {
+            const qNum = parseInt(match[1]);
+            // Find context around the blank
+            const contextMatch = part4Text.match(new RegExp(`([^.]+)–\\s*${qNum}\\s*–([^.]+)`, 's'));
+            if (contextMatch) {
+                questionTexts[qNum] = `${contextMatch[1].trim().slice(-30)} _____ ${contextMatch[2].trim().slice(0, 30)}`;
+            }
+        }
+    }
+    
+    // Find tables with inline format
+    // Pattern: "A B C D" followed by "11. option option option option12. option..."
+    const tableRegex = /A\s+B\s+C\s+D\s*\n\s*(.+?)(?=PART|Read the passage|$)/gs;
+    const tableMatches = text.matchAll(tableRegex);
+    
+    for (const tableMatch of tableMatches) {
+        const tableText = tableMatch[1];
+        
+        // Extract question numbers and options
+        // Format: "11. opt1 opt2 opt3 opt412. opt1 opt2 opt3 opt4"
+        const questionRegex = /(\d+)\.\s*([^\d]+?)(?=\d+\.|$)/g;
+        const questionMatches = tableText.matchAll(questionRegex);
+        
+        for (const qMatch of questionMatches) {
+            const qNum = parseInt(qMatch[1]);
+            const optionsText = qMatch[2].trim();
+            
+            // Split options - they're space-separated
+            const parts = optionsText.split(/\s+/).filter(p => p && p.length > 0);
+            
+            if (parts.length >= 4) {
+                const options = [
+                    `A. ${parts[0]}`,
+                    `B. ${parts[1]}`,
+                    `C. ${parts[2]}`,
+                    `D. ${parts[3]}`
+                ];
+                
+                const questionText = questionTexts[qNum] || `Complete the blank in question ${qNum}`;
+                
+                questions.push({
+                    questionNumber: qNum,
+                    question: questionText,
+                    options
+                });
+            }
+        }
+    }
+    
+    return questions;
+}
+
 // Main parser
 async function parseFrenchQuestions(year, filePath) {
     const result = await mammoth.extractRawText({ path: filePath });
@@ -278,8 +413,16 @@ async function parseFrenchQuestions(year, filePath) {
     const clozeQuestions = parseClozekQuestions(text);
     const fillInBlankQuestions = parseFillInBlankQuestions(text);
     const standardQuestions = parseStandardQuestions(text);
+    const inlineQuestions = parseInlineQuestions(text);
+    const inlineTableQuestions = parseInlineTable(text);
     
-    const allQuestions = [...clozeQuestions, ...fillInBlankQuestions, ...standardQuestions];
+    const allQuestions = [
+        ...clozeQuestions, 
+        ...fillInBlankQuestions, 
+        ...standardQuestions, 
+        ...inlineQuestions,
+        ...inlineTableQuestions
+    ];
     
     // Deduplicate by question number (some files have duplicate tables)
     const uniqueQuestions = [];
