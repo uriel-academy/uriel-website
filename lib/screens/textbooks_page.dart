@@ -2320,7 +2320,7 @@ class _TextbooksPageState extends State<TextbooksPage>
               final progressPercent = totalSections > 0 ? (completedSections / totalSections * 100).toInt() : 0;
 
               // Determine book cover path
-              final coverPath = 'assets/english_jhs$yearNum.png';
+              final coverPath = 'assets/english_jhs$yearNum.webp';
               
               debugPrint('📖 Rendering textbook card: $textbookId');
               debugPrint('   Year: $yearString -> yearNum: $yearNum');

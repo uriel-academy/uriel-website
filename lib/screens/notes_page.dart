@@ -85,15 +85,15 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
   /// the note has no network image. Returns null if no matching asset.
   String? _getCoverAssetForSubject(String subject) {
     final s = subject.toLowerCase();
-    if (s.contains('math')) return 'assets/notes_cover/mathematics_note_cover.png';
-    if (s.contains('english')) return 'assets/notes_cover/english_note_cover.png';
-    if (s.contains('integrated')) return 'assets/notes_cover/integrated_science_note_cover.png';
-    if (s.contains('social')) return 'assets/notes_cover/social_studies_note_cover.png';
-    if (s.contains('relig') || s == 'rme' || s.contains('rme')) return 'assets/notes_cover/rmw_note_cover.png';
-    if (s.contains('ghanaian')) return 'assets/notes_cover/ghanaian_language_note_cover.png';
-    if (s.contains('french')) return 'assets/notes_cover/french_note_cover.png';
-    if (s.contains('ict')) return 'assets/notes_cover/ict_note_cover.png';
-    if (s.contains('creative')) return 'assets/notes_cover/creative_arts_note_cover.png';
+    if (s.contains('math')) return 'assets/notes_cover/mathematics_note_cover.webp';
+    if (s.contains('english')) return 'assets/notes_cover/english_note_cover.webp';
+    if (s.contains('integrated')) return 'assets/notes_cover/integrated_science_note_cover.webp';
+    if (s.contains('social')) return 'assets/notes_cover/social_studies_note_cover.webp';
+    if (s.contains('relig') || s == 'rme' || s.contains('rme')) return 'assets/notes_cover/rmw_note_cover.webp';
+    if (s.contains('ghanaian')) return 'assets/notes_cover/ghanaian_language_note_cover.webp';
+    if (s.contains('french')) return 'assets/notes_cover/french_note_cover.webp';
+    if (s.contains('ict')) return 'assets/notes_cover/ict_note_cover.webp';
+    if (s.contains('creative')) return 'assets/notes_cover/creative_arts_note_cover.webp';
     return null;
   }
 

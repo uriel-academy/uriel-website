@@ -52,25 +52,25 @@ flutter:
   uses-material-design: true
   assets:
     - assets/
-    - assets/english_jhs1.png
-    - assets/english_jhs2.png
-    - assets/english_jhs3.png
-    - assets/social-studies_jhs1.png
-    - assets/social-studies_jhs2.png
-    - assets/social-studies_jhs3.png
-    - assets/rme_jhs1.png
-    - assets/rme_jhs2.png
-    - assets/rme_jhs3.png
+    - assets/english_jhs1.webp
+    - assets/english_jhs2.webp
+    - assets/english_jhs3.webp
+    - assets/social-studies_jhs1.webp
+    - assets/social-studies_jhs2.webp
+    - assets/social-studies_jhs3.webp
+    - assets/rme_jhs1.webp
+    - assets/rme_jhs2.webp
+    - assets/rme_jhs3.webp
     - assets/textbooks/
-    - assets/notes_cover/creative_arts_note_cover.png
-    - assets/notes_cover/english_note_cover.png
-    - assets/notes_cover/french_note_cover.png
-    - assets/notes_cover/ghanaian_language_note_cover.png
-    - assets/notes_cover/ict_note_cover.png
-    - assets/notes_cover/integrated_science_note_cover.png
-    - assets/notes_cover/mathematics_note_cover.png
-    - assets/notes_cover/rmw_note_cover.png
-    - assets/notes_cover/social_studies_note_cover.png
+    - assets/notes_cover/creative_arts_note_cover.webp
+    - assets/notes_cover/english_note_cover.webp
+    - assets/notes_cover/french_note_cover.webp
+    - assets/notes_cover/ghanaian_language_note_cover.webp
+    - assets/notes_cover/ict_note_cover.webp
+    - assets/notes_cover/integrated_science_note_cover.webp
+    - assets/notes_cover/mathematics_note_cover.webp
+    - assets/notes_cover/rmw_note_cover.webp
+    - assets/notes_cover/social_studies_note_cover.webp
     - assets/leaderboards_rank/
     - assets/trivia/
   # Added flutter_svg to support rendering packaged SVG assets for question figures

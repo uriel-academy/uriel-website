@@ -619,7 +619,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                   ),
                   child: ClipOval(
                     child: Image.asset(
-                      'assets/uri.png',
+                      'assets/uri.webp',
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -683,7 +683,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(12),
                     child: Image.asset(
-                      'assets/uri.png',
+                      'assets/uri.webp',
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -880,7 +880,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
               ),
               child: ClipOval(
                 child: Image.asset(
-                  'assets/uri.png',
+                  'assets/uri.webp',
                   fit: BoxFit.cover,
                 ),
               ),

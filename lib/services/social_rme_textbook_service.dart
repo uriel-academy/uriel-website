@@ -23,10 +23,10 @@ class SocialRmeTextbookService {
   String getCoverImage(String subject, String year) {
     final yearNum = year.replaceAll('JHS ', '');
     if (subject.toLowerCase().contains('social')) {
-      return 'assets/social-studies_jhs$yearNum.png';
+      return 'assets/social-studies_jhs$yearNum.webp';
     } else if (subject.toLowerCase().contains('rme') || 
                subject.toLowerCase().contains('religious')) {
-      return 'assets/rme_jhs$yearNum.png';
+      return 'assets/rme_jhs$yearNum.webp';
     }
     return '';
   }

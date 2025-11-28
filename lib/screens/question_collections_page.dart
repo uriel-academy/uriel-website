@@ -253,19 +253,19 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
       'Mathematics': {
         'displayName': 'Mathematics',
         'description': 'Algebra, geometry, calculus, and mathematical problem-solving',
-        'icon': Icons.calculate_outlined, // Calculator
+        'icon': Icons.calculate, // Calculator
         'color': const Color(0xFF2196F3),
       },
       'English': {
         'displayName': 'English Language',
         'description': 'Grammar, comprehension, literature, and language skills',
-        'icon': Icons.menu_book_outlined, // Book
+        'icon': Icons.article, // Document/paper
         'color': const Color(0xFF4CAF50),
       },
       'Integrated Science': {
         'displayName': 'Integrated Science',
         'description': 'Physics, chemistry, biology, and earth science',
-        'icon': Icons.science_outlined, // Atom/Science
+        'icon': Icons.science, // Atom/Science
         'color': const Color(0xFFFF9800),
       },
       'Social Studies': {
@@ -277,7 +277,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
       'Religious and Moral Education': {
         'displayName': 'RME',
         'description': 'Religious studies, ethics, and moral education',
-        'icon': Icons.auto_stories_outlined, // Book (menorah not available)
+        'icon': Icons.auto_stories, // Book
         'color': const Color(0xFF795548),
       },
       'Ga': {
@@ -295,7 +295,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
       'French': {
         'displayName': 'French',
         'description': 'French language, grammar, and literature',
-        'icon': Icons.translate_outlined, // Speech bubble with translation (closest to FR)
+        'icon': Icons.translate, // Translation
         'color': const Color(0xFF3F51B5),
       },
       'ICT': {
@@ -307,13 +307,13 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
       'Creative Arts': {
         'displayName': 'Creative Arts',
         'description': 'Visual arts, music, dance, and creative expression',
-        'icon': Icons.palette_outlined, // Paint palette
+        'icon': Icons.palette, // Paint palette
         'color': const Color(0xFFE91E63),
       },
       'Career Technology': {
         'displayName': 'Career Technology',
         'description': 'Technical skills and vocational training',
-        'icon': Icons.construction_outlined, // Construction helmet
+        'icon': Icons.construction, // Construction helmet
         'color': const Color(0xFFFFC107),
       },
     };

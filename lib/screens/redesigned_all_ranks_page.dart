@@ -250,7 +250,7 @@ class _RedesignedAllRanksPageState extends State<RedesignedAllRanksPage> {
                 ),
                 child: ClipOval(
                   child: Image.asset(
-                    'assets/leaderboards_rank/rank_${_userCurrentRank!.rank}.${_userCurrentRank!.rank == 19 ? "jpg" : "png"}',
+                    'assets/leaderboards_rank/rank_${_userCurrentRank!.rank}.webp',
                     fit: BoxFit.cover,
                     errorBuilder: (context, error, stackTrace) {
                       return Container(
@@ -436,7 +436,7 @@ class _RedesignedAllRanksPageState extends State<RedesignedAllRanksPage> {
                     ),
                     child: ClipOval(
                       child: Image.asset(
-                        'assets/leaderboards_rank/rank_${rank.rank}.${rank.rank == 19 ? "jpg" : "png"}',
+                        'assets/leaderboards_rank/rank_${rank.rank}.webp',
                         fit: BoxFit.cover,
                         errorBuilder: (context, error, stackTrace) {
                           return Container(
@@ -726,7 +726,7 @@ class _RankDetailsSheet extends StatelessWidget {
               ),
               child: ClipOval(
                 child: Image.asset(
-                  'assets/leaderboards_rank/rank_${rank.rank}.${rank.rank == 19 ? "jpg" : "png"}',
+                  'assets/leaderboards_rank/rank_${rank.rank}.webp',
                   fit: BoxFit.cover,
                   errorBuilder: (context, error, stackTrace) {
                     return Container(

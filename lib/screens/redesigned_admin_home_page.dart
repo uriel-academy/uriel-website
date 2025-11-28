@@ -404,7 +404,7 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
             child: Row(
               children: [
                 Image.asset(
-                  'assets/uri.png',
+                  'assets/uri.webp',
                   width: 40,
                   height: 40,
                 ),
@@ -553,7 +553,7 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
           children: [
             if (isMobile) ...[
               Image.asset(
-                'assets/uri.png',
+                'assets/uri.webp',
                 width: 40,
                 height: 40,
               ),

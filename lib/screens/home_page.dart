@@ -2640,7 +2640,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             ),
             child: ClipOval(
               child: Image.asset(
-                'assets/uri.png',
+                'assets/uri.webp',
                 fit: BoxFit.cover,
               ),
             ),
@@ -2698,7 +2698,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                       ),
                       child: ClipOval(
                         child: Image.asset(
-                          'assets/uri.png',
+                          'assets/uri.webp',
                           fit: BoxFit.cover,
                         ),
                       ),
