@@ -1,0 +1,121 @@
+{
+  "totalImages": 19,
+  "outputDirectory": "assets/science_images",
+  "files": [
+    {
+      "originalName": "word/media/image2.png",
+      "newName": "science_2002_img1.png",
+      "path": "assets\\science_images\\science_2002_img1.png",
+      "year": "2002"
+    },
+    {
+      "originalName": "word/media/image5.png",
+      "newName": "science_2002_img2.png",
+      "path": "assets\\science_images\\science_2002_img2.png",
+      "year": "2002"
+    },
+    {
+      "originalName": "word/media/image4.png",
+      "newName": "science_2002_img3.png",
+      "path": "assets\\science_images\\science_2002_img3.png",
+      "year": "2002"
+    },
+    {
+      "originalName": "word/media/image1.png",
+      "newName": "science_2003_img1.png",
+      "path": "assets\\science_images\\science_2003_img1.png",
+      "year": "2003"
+    },
+    {
+      "originalName": "word/media/image2.png",
+      "newName": "science_2004_img1.png",
+      "path": "assets\\science_images\\science_2004_img1.png",
+      "year": "2004"
+    },
+    {
+      "originalName": "word/media/image3.png",
+      "newName": "science_2004_img2.png",
+      "path": "assets\\science_images\\science_2004_img2.png",
+      "year": "2004"
+    },
+    {
+      "originalName": "word/media/image2.png",
+      "newName": "science_2005_img1.png",
+      "path": "assets\\science_images\\science_2005_img1.png",
+      "year": "2005"
+    },
+    {
+      "originalName": "word/media/image3.png",
+      "newName": "science_2005_img2.png",
+      "path": "assets\\science_images\\science_2005_img2.png",
+      "year": "2005"
+    },
+    {
+      "originalName": "word/media/image1.png",
+      "newName": "science_2005_img3.png",
+      "path": "assets\\science_images\\science_2005_img3.png",
+      "year": "2005"
+    },
+    {
+      "originalName": "word/media/image4.png",
+      "newName": "science_2005_img4.png",
+      "path": "assets\\science_images\\science_2005_img4.png",
+      "year": "2005"
+    },
+    {
+      "originalName": "word/media/image6.png",
+      "newName": "science_2005_img5.png",
+      "path": "assets\\science_images\\science_2005_img5.png",
+      "year": "2005"
+    },
+    {
+      "originalName": "word/media/image2.png",
+      "newName": "science_2009_img1.png",
+      "path": "assets\\science_images\\science_2009_img1.png",
+      "year": "2009"
+    },
+    {
+      "originalName": "word/media/image1.png",
+      "newName": "science_2009_img2.png",
+      "path": "assets\\science_images\\science_2009_img2.png",
+      "year": "2009"
+    },
+    {
+      "originalName": "word/media/image3.png",
+      "newName": "science_2010_img1.png",
+      "path": "assets\\science_images\\science_2010_img1.png",
+      "year": "2010"
+    },
+    {
+      "originalName": "word/media/image1.png",
+      "newName": "science_2010_img2.png",
+      "path": "assets\\science_images\\science_2010_img2.png",
+      "year": "2010"
+    },
+    {
+      "originalName": "word/media/image5.png",
+      "newName": "science_2010_img3.png",
+      "path": "assets\\science_images\\science_2010_img3.png",
+      "year": "2010"
+    },
+    {
+      "originalName": "word/media/image4.png",
+      "newName": "science_2010_img4.png",
+      "path": "assets\\science_images\\science_2010_img4.png",
+      "year": "2010"
+    },
+    {
+      "originalName": "word/media/image6.png",
+      "newName": "science_2010_img5.png",
+      "path": "assets\\science_images\\science_2010_img5.png",
+      "year": "2010"
+    },
+    {
+      "originalName": "word/media/image1.jpg",
+      "newName": "science_2022_img1.jpg",
+      "path": "assets\\science_images\\science_2022_img1.jpg",
+      "year": "2022"
+    }
+  ],
+  "extractedAt": "2025-11-28T18:02:40.033Z"
+}

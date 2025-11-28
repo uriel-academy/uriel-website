@@ -1,0 +1,3098 @@
+{
+  "2002": [
+    {
+      "id": "integrated_science_2002_q1",
+      "questionNumber": 1,
+      "options": [
+        "A. Iron",
+        "B. Salt",
+        "C. Steel",
+        "D. Water"
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2002_q2",
+      "questionNumber": 2,
+      "options": [
+        "A. colder than water.",
+        "B. denser than water.",
+        "C. has a greater mass for the same volume of water.",
+        "D. has a greater volume for the same mass of water."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2002_q3",
+      "questionNumber": 3,
+      "options": [
+        "A. Molecules in a solid are disorderly arranged.",
+        "B. Solids are highly compressible.",
+        "C. Liquids have definite form and volume.",
+        "D. Molecules in a gas move faster than those in a liquid."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2002_q4",
+      "questionNumber": 4,
+      "options": [
+        "A. neutrons and shells.",
+        "B. ions and neutrons.",
+        "C. neutrons and nucleus.",
+        "D. nucleus and neutrons"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2002_q5",
+      "questionNumber": 5,
+      "options": [
+        "A. friction.",
+        "B. gravity.",
+        "C. tension.",
+        "D. weight."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2002_q6",
+      "questionNumber": 6,
+      "options": [
+        "A. kinetic energy to potential energy.",
+        "B. potential energy to kinetic energy.",
+        "C. potential energy to heat energy.",
+        "D. kinetic energy to heat energy."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2002_q7",
+      "questionNumber": 7,
+      "options": [
+        "A. 300 J",
+        "B. 56 J",
+        "C. 44 J",
+        "D. 30 J"
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2002_q8",
+      "questionNumber": 8,
+      "options": [
+        "A. Walking with a load on the head in an upright position",
+        "B. Getting up from a chair",
+        "C. Pushing against a wall which does not move",
+        "D. Sitting still behind a desk"
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2002_q9",
+      "questionNumber": 9,
+      "options": [
+        "A. an electrostatic energy.",
+        "B. a chemical energy.",
+        "C. a solar energy.",
+        "D. a thermal energy."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2002_q10",
+      "questionNumber": 10,
+      "options": [
+        "A. 100%",
+        "B. 90%",
+        "C. 55%",
+        "D. 10%"
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2002_q11",
+      "questionNumber": 11,
+      "options": [
+        "A. IV",
+        "B. III",
+        "C. II",
+        "D. I"
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2002_q12",
+      "questionNumber": 12,
+      "options": [
+        "A. ammeter.",
+        "B. battery.",
+        "C. lamp.",
+        "D. voltmeter."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2002_q13",
+      "questionNumber": 13,
+      "options": [
+        "A. supply energy to the circuit.",
+        "B. measure the voltage of the battery.",
+        "C. prevent too much current from flowing.",
+        "D. close the circuit."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2002_q14",
+      "questionNumber": 14,
+      "options": [
+        "A. Blindness",
+        "B. Cholera",
+        "C. Dysentery",
+        "D. Elephantiasis"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2002_q15",
+      "questionNumber": 15,
+      "options": [
+        "A. man.",
+        "B. mosquito.",
+        "C. tsetse fly",
+        "D. water snail"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2002_q16",
+      "questionNumber": 16,
+      "options": [
+        "A. sink in water.",
+        "B. absorb oxygen from the water.",
+        "C. protect itself from attack.",
+        "D. detect smell in water."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2002_q17",
+      "questionNumber": 17,
+      "options": [
+        "A. balancing.",
+        "B. steering.",
+        "C. surfacing.",
+        "D. paddling."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2002_q18",
+      "questionNumber": 18,
+      "options": [
+        "A. Grass → Grasshopper → Toad → Snake → Crow",
+        "B. Grasshopper → Grass → Goad → Lion → Man",
+        "C. Crow → Snake → Toad → Grasshopper → Grass",
+        "D. Grass → Goat → Lion → Man → Snake"
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2002_q19",
+      "questionNumber": 19,
+      "options": [
+        "A. guinea worm.",
+        "B. hook worm",
+        "C. thread worm.",
+        "D. tape worm."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2002_q20",
+      "questionNumber": 20,
+      "options": [
+        "A. I and II only",
+        "B. I and III only",
+        "C. I, II and III only",
+        "D. I, II and IV only"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2002_q21",
+      "questionNumber": 21,
+      "options": [
+        "A. corm.",
+        "B. leaf.",
+        "C. stem.",
+        "D. sucker."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2002_q22",
+      "questionNumber": 22,
+      "options": [
+        "A. amino acid.",
+        "B. fatty acid.",
+        "C. glycogen.",
+        "D. glucose."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2002_q23",
+      "questionNumber": 23,
+      "options": [
+        "A. kidneys.",
+        "B. lungs.",
+        "C. mouth.",
+        "D. skin."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2002_q24",
+      "questionNumber": 24,
+      "options": [
+        "A. amino acid.",
+        "B. glycerol.",
+        "C. glycogen.",
+        "D. peptide."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2002_q25",
+      "questionNumber": 25,
+      "options": [
+        "A. cytoplasm.",
+        "B. haemoglobin.",
+        "C. plasma.",
+        "D. platelets."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2002_q26",
+      "questionNumber": 26,
+      "options": [
+        "A. kidneys.",
+        "B. liver.",
+        "C. stomach.",
+        "D. ileum."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2002_q27",
+      "questionNumber": 27,
+      "options": [
+        "A. ear drum.",
+        "B. ear lobe.",
+        "C. ear canal.",
+        "D. semi circular canal"
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2002_q28",
+      "questionNumber": 28,
+      "options": [
+        "A. egestion.",
+        "B. excretion.",
+        "C. perspiration.",
+        "D. respiration."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2002_q29",
+      "questionNumber": 29,
+      "options": [
+        "A. eggs fertilized inside the body.",
+        "B. eggs fertilized outside the body.",
+        "C. self fertilized eggs.",
+        "D. only female sex cells."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2002_q30",
+      "questionNumber": 30,
+      "options": [
+        "A. Carbon dioxide",
+        "B. Carbon monoxide",
+        "C. Nitrogen",
+        "D. Oxygen"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2002_q31",
+      "questionNumber": 31,
+      "options": [
+        "A. clay.",
+        "B. humus.",
+        "C. loam.",
+        "D. sand."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2002_q32",
+      "questionNumber": 32,
+      "options": [
+        "A. earthworms.",
+        "B. insects.",
+        "C. rats.",
+        "D. wind."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2002_q33",
+      "questionNumber": 33,
+      "options": [
+        "A. dust.",
+        "B. human waste.",
+        "C. acid disposal.",
+        "D. smoke."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2002_q34",
+      "questionNumber": 34,
+      "options": [
+        "A. bacteria.",
+        "B. fungi.",
+        "C. insects.",
+        "D. worm."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2002_q35",
+      "questionNumber": 35,
+      "options": [
+        "A. I and II only",
+        "B. II and III only",
+        "C. III only",
+        "D. I, II and IV only"
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2002_q36",
+      "questionNumber": 36,
+      "options": [
+        "A. salt in the soup is too small.",
+        "B. water in the soup do not all evaporate.",
+        "C. heat in the soup is not enough to kill all bacteria.",
+        "D. water condenses back into the soup."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2002_q37",
+      "questionNumber": 37,
+      "options": [
+        "A. cloud.",
+        "B. dew.",
+        "C. humidity.",
+        "D. temperature."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2002_q38",
+      "questionNumber": 38,
+      "options": [
+        "A. Earth",
+        "B. Moon",
+        "C. Sun",
+        "D. Milky way"
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2002_q39",
+      "questionNumber": 39,
+      "options": [
+        "A. Jupiter.",
+        "B. Mars.",
+        "C. Pluto.",
+        "D. Venus."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2002_q40",
+      "questionNumber": 40,
+      "options": [
+        "A. Jupiter.",
+        "B. Mars.",
+        "C. Pluto.",
+        "D. Venus."
+      ],
+      "correctAnswer": "C"
+    }
+  ],
+  "2003": [
+    {
+      "id": "integrated_science_2003_q1",
+      "questionNumber": 1,
+      "options": [
+        "A. crystallization.",
+        "B. distillation.",
+        "C. filtration.",
+        "D. sublimation."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2003_q2",
+      "questionNumber": 2,
+      "options": [
+        "A. conduction.",
+        "B. diffusion.",
+        "C. osmosis.",
+        "D. radiation."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2003_q3",
+      "questionNumber": 3,
+      "options": [
+        "A. Rusting of iron.",
+        "B. Burning of wood.",
+        "C. Formation of water from hydrogen and oxygen.",
+        "D. Solidification of water into ice."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2003_q4",
+      "questionNumber": 4,
+      "options": [
+        "A. I and II only",
+        "B. II and III only",
+        "C. I and II only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2003_q5",
+      "questionNumber": 5,
+      "options": [
+        "A. joule.",
+        "B. kelvin.",
+        "C. newton.",
+        "D. watt."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2003_q6",
+      "questionNumber": 6,
+      "options": [
+        "A. Potential energy → kinetic energy → electrical energy",
+        "B. Potential energy → sound energy → electrical energy",
+        "C. Kinetic energy → sound energy → electrical energy",
+        "D. Electrical energy → light energy → heat energy"
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2003_q7",
+      "questionNumber": 7,
+      "options": [
+        "A. source of the field.",
+        "B. type of magnet.",
+        "C. strength of the field.",
+        "D. length of the magnet."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2003_q8",
+      "questionNumber": 8,
+      "options": [
+        "A. bottle is porous.",
+        "B. bottle is full of water.",
+        "C. water in the surrounding atmosphere is colder than the water in the bottle.",
+        "D. water in the surrounding atmosphere is warmer than the water in the bottle"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2003_q9",
+      "questionNumber": 9,
+      "options": [
+        "A. 1.0 g cm-3",
+        "B. 1.6 g cm-3",
+        "C. 1.8 g cm-3",
+        "D. 2.3 g cm-3"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2003_q10",
+      "questionNumber": 10,
+      "options": [
+        "A. boy was not wearing shoes.",
+        "B. ground was too hard.",
+        "C. banana peel reduced the friction on the ground.",
+        "D. banana peel increasethe friction on the ground."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2003_q11",
+      "questionNumber": 11,
+      "options": [
+        "A. The load is between the effort and pivot",
+        "B. The pivot is between the effort and the load",
+        "C. The effort is between the pivot and the load",
+        "D. The load arm is equal to the effort arm"
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2003_q12",
+      "questionNumber": 12,
+      "options": [
+        "A. 0.67 m",
+        "B. 1.50 m",
+        "C. 25.00 m",
+        "D. 125.00 m"
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2003_q13",
+      "questionNumber": 13,
+      "options": [
+        "A. flesh.",
+        "B. grass.",
+        "C. fruits.",
+        "D. uncooked food."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2003_q14",
+      "questionNumber": 14,
+      "options": [
+        "A. gill.",
+        "B. air sac.",
+        "C. operculum.",
+        "D. mouth."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2003_q15",
+      "questionNumber": 15,
+      "options": [
+        "A. breathing.",
+        "B. protection.",
+        "C. absorbing water from the air.",
+        "D. resisting bush fires."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2003_q16",
+      "questionNumber": 16,
+      "options": [
+        "A. bring forth young ones.",
+        "B. excrete.",
+        "C. grow.",
+        "D. move from place to place."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2003_q17",
+      "questionNumber": 17,
+      "options": [
+        "A. Aphid",
+        "B. Plasmodium",
+        "C. Tick",
+        "D. Tapeworm"
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2003_q18",
+      "questionNumber": 18,
+      "options": [
+        "A. becoming too cold.",
+        "B. becoming too hot.",
+        "C. losing water through evaporation.",
+        "D. gaining too much water through absorption."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2003_q19",
+      "questionNumber": 19,
+      "options": [
+        "A. female anopheles mosquito.",
+        "B. housefly.",
+        "C. male anopheles mosquito",
+        "D. tsetse fly."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2003_q20",
+      "questionNumber": 20,
+      "options": [
+        "A. Charcoal",
+        "B. Humus",
+        "C. Lime",
+        "D. Manure"
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2003_q21",
+      "questionNumber": 21,
+      "options": [
+        "A. M",
+        "B. N",
+        "C. O",
+        "D. P"
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2003_q22",
+      "questionNumber": 22,
+      "options": [
+        "A. N",
+        "B. O",
+        "C. P",
+        "D. Q"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2003_q23",
+      "questionNumber": 23,
+      "options": [
+        "A. Excretion of waste materials",
+        "B. Response to stimuli",
+        "C. Ability to manufacture food from simple substances",
+        "D. Ability to respire"
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2003_q24",
+      "questionNumber": 24,
+      "options": [
+        "A. glucose and oxygen.",
+        "B. carbon dioxide and water.",
+        "C. carbon dioxide and heat.",
+        "D. oxygen and water."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2003_q25",
+      "questionNumber": 25,
+      "options": [
+        "A. maintain a constant amount of water in the body.",
+        "B. absorb oxygen from the blood.",
+        "C. absorb carbon dioxide from the blood.",
+        "D. maintain the temperature of the body constant."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2003_q26",
+      "questionNumber": 26,
+      "options": [
+        "A. II only",
+        "B. I and II only",
+        "C. I and III only",
+        "D. III only"
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2003_q27",
+      "questionNumber": 27,
+      "options": [
+        "A. digestion.",
+        "B. fertilization.",
+        "C. photosynthesis.",
+        "D. respiration."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2003_q28",
+      "questionNumber": 28,
+      "options": [
+        "A. carbohydrate.",
+        "B. oil.",
+        "C. protein.",
+        "D. vitamin."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2003_q29",
+      "questionNumber": 29,
+      "options": [
+        "A. amino acids and glucose.",
+        "B. amino acids and glycerol.",
+        "C. fatty acids and glycerol.",
+        "D. fatty acids and amino acids."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2003_q30",
+      "questionNumber": 30,
+      "options": [
+        "A. I and II only",
+        "B. I and III only",
+        "C. II and III only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2003_q31",
+      "questionNumber": 31,
+      "options": [
+        "A. calyx.",
+        "B. pistil.",
+        "C. petal.",
+        "D. stamen."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2003_q32",
+      "questionNumber": 32,
+      "options": [
+        "A. Bile",
+        "B. Gastric juice",
+        "C. Pancreatic juice",
+        "D. Saliva"
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2003_q33",
+      "questionNumber": 33,
+      "options": [
+        "A. bilharzia.",
+        "B. cholera.",
+        "C. gonorrhoe.",
+        "D. typhoid"
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2003_q34",
+      "questionNumber": 34,
+      "options": [
+        "A. sleeping at least 6 hours a day.",
+        "B. washing one's body at least twice a day.",
+        "C. eating fatty foods.",
+        "D. eating foods containing fibre."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2003_q35",
+      "questionNumber": 35,
+      "options": [
+        "A. AIDS",
+        "B. Measles",
+        "C. Typhoid",
+        "D. Yaws"
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2003_q36",
+      "questionNumber": 36,
+      "options": [
+        "A. 7 days",
+        "B. 14 days",
+        "C. 21 days",
+        "D. 28 days"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2003_q37",
+      "questionNumber": 37,
+      "options": [
+        "A. 1 day.",
+        "B. 28 days.",
+        "C. 30 days.",
+        "D. 365 days."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2003_q38",
+      "questionNumber": 38,
+      "options": [
+        "A. comet.",
+        "B. meteor.",
+        "C. moon.",
+        "D. sun."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2003_q39",
+      "questionNumber": 39,
+      "options": [
+        "A. Aphid",
+        "B. Dobber",
+        "C. Flea",
+        "D. Jigger"
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2003_q40",
+      "questionNumber": 40,
+      "options": [
+        "A. Carbohydrate",
+        "B. Protein",
+        "C. Table salt",
+        "D. Vitamins"
+      ],
+      "correctAnswer": "C"
+    }
+  ],
+  "2004": [
+    {
+      "id": "integrated_science_2004_q1",
+      "questionNumber": 1,
+      "options": [
+        "A. Solid →\n\nheat\n\n gas →\n\nheat\n\n liquid",
+        "B. Solid →\n\ncool\n\n liquid →\n\ncool\n\n gas",
+        "C. Gas →\n\nheat\n\n liquid →\n\nheat\n\n solid",
+        "D. Gas →\n\ncool\n\n liquid →\n\ncool\n\n solid"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2004_q2",
+      "questionNumber": 2,
+      "options": [
+        "A. chemical and electrical energy.",
+        "B. heat and sound energy.",
+        "C. heat and light energy.",
+        "D. electrical and light energy."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2004_q3",
+      "questionNumber": 3,
+      "options": [
+        "A. density.",
+        "B. mass.",
+        "C. volume.",
+        "D. weight."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2004_q4",
+      "questionNumber": 4,
+      "options": [
+        "A. conduction and convection.",
+        "B. conduction and radiation.",
+        "C. convection and radiation.",
+        "D. conduction, convection and radiation."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2004_q5",
+      "questionNumber": 5,
+      "options": [
+        "A. Dry cell",
+        "B. Electric bulb",
+        "C. Loudspeaker",
+        "D. Microphone"
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2004_q6",
+      "questionNumber": 6,
+      "options": [
+        "A. X are in series and the key is open.",
+        "B. X are in parallel and the key is open.",
+        "C. Y are in series and the key is closed.",
+        "D. Y are in parallel and the key is closed."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2004_q7",
+      "questionNumber": 7,
+      "options": [
+        "A. 4.50 V.",
+        "B. 3.00 V.",
+        "C. 1.50 V",
+        "D. 0.75 V."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2004_q8",
+      "questionNumber": 8,
+      "options": [
+        "A. effort distance is shorter than the load distance.",
+        "B. effort distance is longer than the load distance.",
+        "C. effort distance is equal to the load distance.",
+        "D. effort is equal to the load."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2004_q9",
+      "questionNumber": 9,
+      "options": [
+        "A. first class lever.",
+        "B. second class lever.",
+        "C. third class lever.",
+        "D. combination of first and second class levers."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2004_q10",
+      "questionNumber": 10,
+      "options": [
+        "A. right proportions of protein, carbohydrates and oil.",
+        "B. equal amounts of protein, carbohydrates and oil.",
+        "C. enough water and iodated salt.",
+        "D. vegetables, fruits and water."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2004_q11",
+      "questionNumber": 11,
+      "options": [
+        "A. glucose.",
+        "B. oil.",
+        "C. protein.",
+        "D. vitamin"
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2004_q12",
+      "questionNumber": 12,
+      "options": [
+        "A. carbohydrate.",
+        "B. fat.",
+        "C. protein.",
+        "D. vitamin."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2004_q13",
+      "questionNumber": 13,
+      "options": [
+        "A. grow.",
+        "B. move about.",
+        "C. respire.",
+        "D. respond to stimuli."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2004_q14",
+      "questionNumber": 14,
+      "options": [
+        "A. fruit.",
+        "B. leaves.",
+        "C. seeds.",
+        "D. stem."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2004_q15",
+      "questionNumber": 15,
+      "options": [
+        "A. bulbs.",
+        "B. corms.",
+        "C. suckers.",
+        "D. rhizomes."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2004_q16",
+      "questionNumber": 16,
+      "options": [
+        "A. blood.",
+        "B. lymph.",
+        "C. sperms.",
+        "D. urine."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2004_q17",
+      "questionNumber": 17,
+      "options": [
+        "A. Caecum",
+        "B. Kidney",
+        "C. Larynx",
+        "D. Pancreas"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2004_q18",
+      "questionNumber": 18,
+      "options": [
+        "A. HIV/AIDS",
+        "B. Anther",
+        "C. Tuberculosis",
+        "D. Goitre"
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2004_q19",
+      "questionNumber": 19,
+      "options": [
+        "A. an atom.",
+        "B. an element.",
+        "C. a compound.",
+        "D. a molecule."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2004_q20",
+      "questionNumber": 20,
+      "options": [
+        "A. ammonia.",
+        "B. hydrogen.",
+        "C. carbon dioxide.",
+        "D. nitrogen."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2004_q21",
+      "questionNumber": 21,
+      "options": [
+        "A. iron (I) sulphide.",
+        "B. iron (II) sulphide.",
+        "C. iron (III) sulphide.",
+        "D. iron (IV) sulphide"
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2004_q22",
+      "questionNumber": 22,
+      "options": [
+        "A. Carbon.",
+        "B. Mercury.",
+        "C. Silver.",
+        "D. Sulphur."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2004_q23",
+      "questionNumber": 23,
+      "options": [
+        "A. cumulus.",
+        "B. cirrus.",
+        "C. nimbus.",
+        "D. stratus."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2004_q24",
+      "questionNumber": 24,
+      "options": [
+        "A. sand particles are rougher.",
+        "B. sand contains more air spaces.",
+        "C. clay particles are smoother.",
+        "D. clay particles are bigger."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2004_q25",
+      "questionNumber": 25,
+      "options": [
+        "A. Tick",
+        "B. Tapeworm",
+        "C. Plasmodium",
+        "D. Weevil"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2004_q26",
+      "questionNumber": 26,
+      "options": [
+        "A. cholera.",
+        "B. malaria.",
+        "C. measles.",
+        "D. tuberculosis"
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2004_q27",
+      "questionNumber": 27,
+      "options": [
+        "A. cover cropping.",
+        "B. mixed cropping.",
+        "C. contour ploughing.",
+        "D. mulching."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2004_q28",
+      "questionNumber": 28,
+      "options": [
+        "A. produce heat.",
+        "B. compete with human beings for oxygen.",
+        "C. absorb water vapour.",
+        "D. produce carbon dioxide."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2004_q29",
+      "questionNumber": 29,
+      "options": [
+        "A. composting.",
+        "B. erosion.",
+        "C. leaching.",
+        "D. weathering."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2004_q30",
+      "questionNumber": 30,
+      "options": [
+        "A. diffusion.",
+        "B. suction pressure.",
+        "C. capillary action.",
+        "D. osmosis."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2004_q31",
+      "questionNumber": 31,
+      "options": [
+        "A. adhesion.",
+        "B. cohesion.",
+        "C. friction.",
+        "D. tension."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2004_q32",
+      "questionNumber": 32,
+      "options": [
+        "A. 8640 N",
+        "B. 732 N",
+        "C. 708 N",
+        "D. 60 N"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2004_q33",
+      "questionNumber": 33,
+      "options": [
+        "A. cambium.",
+        "B. epidermis.",
+        "C. phloem.",
+        "D. xylem."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2004_q34",
+      "questionNumber": 34,
+      "options": [
+        "A. II and III only",
+        "B. I, II and IV only",
+        "C. I and III only",
+        "D. I, III and IV only"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2004_q35",
+      "questionNumber": 35,
+      "options": [
+        "A. an alloy.",
+        "B. a coiled.",
+        "C. an aerosol.",
+        "D. a compound"
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2004_q36",
+      "questionNumber": 36,
+      "options": [
+        "A. precious.",
+        "B. expensive.",
+        "C. less reactive with air.",
+        "D. a good conductor of heat."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2004_q37",
+      "questionNumber": 37,
+      "options": [
+        "A. Diamond",
+        "B. Mercury",
+        "C. Sodium",
+        "D. Steel"
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2004_q38",
+      "questionNumber": 38,
+      "options": [
+        "A. kill germs.",
+        "B. help suspended particles to settle.",
+        "C. make the water colourless.",
+        "D. give taste to the water."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2004_q39",
+      "questionNumber": 39,
+      "options": [
+        "A. Rain water",
+        "B. Stream water",
+        "C. Borehole water",
+        "D. Pipe borne water"
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2004_q40",
+      "questionNumber": 40,
+      "options": [
+        "A. deprived of the air needed for growth.",
+        "B. deprived of the water needed for growth.",
+        "C. destroyed at high temperatures.",
+        "D. destroyed at low temperatures."
+      ],
+      "correctAnswer": "B"
+    }
+  ],
+  "2005": [
+    {
+      "id": "integrated_science_2005_q1",
+      "questionNumber": 1,
+      "options": [
+        "A. two molecules of hydrogen.",
+        "B. two atoms of hydrogen.",
+        "C. two elements of hydrogen.",
+        "D. two ions of hydrogen."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2005_q2",
+      "questionNumber": 2,
+      "options": [
+        "A. an increase in heat energy.",
+        "B. an increase in number of electrons.",
+        "C. a decrease in potential energy.",
+        "D. a decrease in distance between atoms."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2005_q3",
+      "questionNumber": 3,
+      "options": [
+        "A. earth wire.",
+        "B. lightning conductor.",
+        "C. fuse.",
+        "D. switch."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2005_q4",
+      "questionNumber": 4,
+      "options": [
+        "A. 20 cm.",
+        "B. 40 cm.",
+        "C. 60 cm.",
+        "D. 80 cm."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2005_q5",
+      "questionNumber": 5,
+      "options": [
+        "A. clouds.",
+        "B. earthquakes.",
+        "C. tides.",
+        "D. sunlight."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2005_q6",
+      "questionNumber": 6,
+      "options": [
+        "A. sound energy.",
+        "B. heat energy.",
+        "C. kinetic energy.",
+        "D. chemical energy."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2005_q7",
+      "questionNumber": 7,
+      "options": [
+        "A. energy.",
+        "B. force.",
+        "C. generator.",
+        "D. machine."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2005_q8",
+      "questionNumber": 8,
+      "options": [
+        "A. 5 J",
+        "B. 8 J",
+        "C. 12 J",
+        "D. 20 J"
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2005_q9",
+      "questionNumber": 9,
+      "options": [
+        "A. effort distance.",
+        "B. load distance.",
+        "C. fulcrum.",
+        "D. lever arm."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2005_q10",
+      "questionNumber": 10,
+      "options": [
+        "A. distance Y is equal to X.",
+        "B. distance Y is greater than X.",
+        "C. distance Y is less than X.",
+        "D. stone is at the pivot."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2005_q11",
+      "questionNumber": 11,
+      "options": [
+        "A. raw food.",
+        "B. fresh foods.",
+        "C. cooked foods.",
+        "D. all kinds of food."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2005_q12",
+      "questionNumber": 12,
+      "options": [
+        "A. delicious.",
+        "B. balanced.",
+        "C. well-cooked.",
+        "D. rich in fibre."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2005_q13",
+      "questionNumber": 13,
+      "options": [
+        "A. goitre.",
+        "B. kwashiorkor.",
+        "C. rickets.",
+        "D. scurvy."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2005_q14",
+      "questionNumber": 14,
+      "options": [
+        "A. blue.",
+        "B. purple.",
+        "C. blue-black.",
+        "D. brick-red."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2005_q15",
+      "questionNumber": 15,
+      "options": [
+        "A. chlorophyll.",
+        "B. chloroplast.",
+        "C. phloem.",
+        "D. xylem."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2005_q16",
+      "questionNumber": 16,
+      "options": [
+        "A. bladder.",
+        "B. duodenum.",
+        "C. kidney.",
+        "D. liver."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2005_q17",
+      "questionNumber": 17,
+      "options": [
+        "A. Digestion",
+        "B. Excretion",
+        "C. Photosynthesis",
+        "D. Respiration"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2005_q18",
+      "questionNumber": 18,
+      "options": [
+        "A. kill germs.",
+        "B. cause suspended particles to settle.",
+        "C. soften the water.",
+        "D. give taste to the water."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2005_q19",
+      "questionNumber": 19,
+      "options": [
+        "A. I, II, IV, III",
+        "B. II, III, I, IV",
+        "C. I, IV, III, II",
+        "D. III, II, IV, I"
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2005_q20",
+      "questionNumber": 20,
+      "options": [
+        "A. concentrated.",
+        "B. dilute.",
+        "C. homogeneous.",
+        "D. saturated."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2005_q21",
+      "questionNumber": 21,
+      "options": [
+        "A. Some solid sugar was seen to have formed out of the solution after the cooling. This shows that sugar",
+        "B. does not dissolve in cold water.",
+        "C. does not dissolve in hot water.",
+        "D. dissolves more in hot water than in cold water.",
+        "E. dissolves more in cold water than in hot water."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2005_q22",
+      "questionNumber": 22,
+      "options": [
+        "A. is the purest liquid on earth.",
+        "B. is the commonest liquid on earth.",
+        "C. is found in all living cells.",
+        "D. dissolves most substances."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2005_q23",
+      "questionNumber": 23,
+      "options": [
+        "A. -2",
+        "B. +2",
+        "C. -4",
+        "D. +4"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2005_q24",
+      "questionNumber": 24,
+      "options": [
+        "A. dissolves in water.",
+        "B. retains less water.",
+        "C. contains the humus.",
+        "D. is closer to the roots."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2005_q25",
+      "questionNumber": 25,
+      "options": [
+        "A. air spaces are too big to hold water.",
+        "B. air spaces are too small for the roots.",
+        "C. particles cannot absorb air.",
+        "D. particles cannot contain nutrients."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2005_q26",
+      "questionNumber": 26,
+      "options": [
+        "A. Louse",
+        "B. Plasmodium",
+        "C. Tapeworm",
+        "D. Tick"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2005_q27",
+      "questionNumber": 27,
+      "options": [
+        "A. black fly.",
+        "B. tsetse fly.",
+        "C. female anopheles mosquito.",
+        "D. male anopheles mosquito."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2005_q28",
+      "questionNumber": 28,
+      "options": [
+        "A. Clearing bushes around homes",
+        "B. Ensuring that rivers flow rapidly",
+        "C. Protecting one's feet before stepping into rivers",
+        "D. Protecting one's self against mosquito bites"
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2005_q29",
+      "questionNumber": 29,
+      "options": [
+        "A. an anemometer.",
+        "B. a barometer.",
+        "C. a hygrometer.",
+        "D. a hydrometer."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2005_q30",
+      "questionNumber": 30,
+      "options": [
+        "A. 1 day",
+        "B. 28 days",
+        "C. 30 days",
+        "D. 365 days"
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2005_q31",
+      "questionNumber": 31,
+      "options": [
+        "A. solid in solid mixture.",
+        "B. solid in liquid mixture.",
+        "C. gas in solid mixture.",
+        "D. liquid in liquid mixture."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2005_q32",
+      "questionNumber": 32,
+      "options": [
+        "A. Carbon",
+        "B. Nitrogen",
+        "C. Sulphur",
+        "D. Sodium"
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2005_q33",
+      "questionNumber": 33,
+      "options": [
+        "A. conductivity.",
+        "B. ductility.",
+        "C. malleability.",
+        "D. reactivity."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2005_q34",
+      "questionNumber": 34,
+      "options": [
+        "A. canning.",
+        "B. drying.",
+        "C. pickling.",
+        "D. refrigeration."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2005_q35",
+      "questionNumber": 35,
+      "options": [
+        "A. carry carbon dioxide.",
+        "B. fight against diseases.",
+        "C. help in clotting.",
+        "D. help maintain constant body temperature."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2005_q36",
+      "questionNumber": 36,
+      "options": [
+        "A. fins.",
+        "B. gills.",
+        "C. a streamlined body.",
+        "D. the ability to make use of a limited oxygen supply."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2005_q37",
+      "questionNumber": 37,
+      "options": [
+        "A. pull of the earth's gravitational force.",
+        "B. pull of the earth's magnetic force.",
+        "C. resistance of the earth's atmosphere to the upward motion.",
+        "D. pressure of the earth's atmosphere on the person."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2005_q38",
+      "questionNumber": 38,
+      "options": [
+        "A. 7.0 g cm-3",
+        "B. 30.0 g cm-3",
+        "C. 40.0 g cm-3",
+        "D. 175.0 g cm-3"
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2005_q39",
+      "questionNumber": 39,
+      "options": [
+        "A. capillarity.",
+        "B. diffusion.",
+        "C. osmosis.",
+        "D. suction."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2005_q40",
+      "questionNumber": 40,
+      "options": [
+        "A. capillarity.",
+        "B. diffusion.",
+        "C. osmosis.",
+        "D. suction."
+      ],
+      "correctAnswer": "B"
+    }
+  ],
+  "2009": [
+    {
+      "id": "integrated_science_2009_q1",
+      "questionNumber": 1,
+      "options": [
+        "A. have protoplasm",
+        "B. have chlorophyll",
+        "C. are able to respire",
+        "D. are able to reproduce sexually"
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2009_q2",
+      "questionNumber": 2,
+      "options": [
+        "A. The circuit should be closed",
+        "B. A battery must be present",
+        "C. There must be connecting wires",
+        "D. A bulb must be connected in the circuit"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2009_q3",
+      "questionNumber": 3,
+      "options": [
+        "A. Electricity",
+        "B. Heat",
+        "C. Light",
+        "D. Wood"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2009_q4",
+      "questionNumber": 4,
+      "options": [
+        "A. conduction",
+        "B. convection",
+        "C. radiation",
+        "D. conduction and radiation"
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2009_q5",
+      "questionNumber": 5,
+      "options": [
+        "A. solids expand on heating and contract on cooling.",
+        "B. liquids expand on heating and contract on cooling.",
+        "C. gases expand on heating and contract on cooling.",
+        "D. liquids evaporate when heated to a certain temperature."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2009_q6",
+      "questionNumber": 6,
+      "options": [
+        "A. Q",
+        "B. R",
+        "C. S",
+        "D. T"
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2009_q7",
+      "questionNumber": 7,
+      "options": [
+        "A. electromagnets",
+        "B. heat",
+        "C. light",
+        "D. sound"
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2009_q8",
+      "questionNumber": 8,
+      "options": [
+        "A. pivot is between the load and effort",
+        "B. pivot is absent",
+        "C. load is between the effort and pivot",
+        "D. effort is between the load and pivot"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2009_q9",
+      "questionNumber": 9,
+      "options": [
+        "A. P",
+        "B. Q",
+        "C. R",
+        "D. S"
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2009_q10",
+      "questionNumber": 10,
+      "options": [
+        "A. Bottle opener",
+        "B. Wheelbarrow",
+        "C. See-saw",
+        "D. Screw"
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2009_q11",
+      "questionNumber": 11,
+      "options": [
+        "A. ability to do work.",
+        "B. force to move an object.",
+        "C. rate of doing work.",
+        "D. ability to replace energy used."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2009_q12",
+      "questionNumber": 12,
+      "options": [
+        "A. Amino acids",
+        "B. Fatty acids",
+        "C. Glucose",
+        "D. Vitamins"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2009_q13",
+      "questionNumber": 13,
+      "options": [
+        "A. Fish",
+        "B. Grass",
+        "C. Locust",
+        "D. Mosquito"
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2009_q14",
+      "questionNumber": 14,
+      "options": [
+        "A. penis",
+        "B. scrotum",
+        "C. sperm",
+        "D. testis"
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2009_q15",
+      "questionNumber": 15,
+      "options": [
+        "A. assimilation.",
+        "B. circulation.",
+        "C. exhalation.",
+        "D. excretion."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2009_q16",
+      "questionNumber": 16,
+      "options": [
+        "A. spinal cord and spine.",
+        "B. brain and the nerves.",
+        "C. brain and the spinal cord.",
+        "D. skeletal system and skull."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2009_q17",
+      "questionNumber": 17,
+      "options": [
+        "A. Excretion",
+        "B. Photosynthesis",
+        "C. Reproduction",
+        "D. Respiration"
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2009_q18",
+      "questionNumber": 18,
+      "options": [
+        "A. heart.",
+        "B. kidneys.",
+        "C. lungs.",
+        "D. liver."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2009_q19",
+      "questionNumber": 19,
+      "options": [
+        "A. boiling",
+        "B. chlorination",
+        "C. distillation",
+        "D. filtration"
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2009_q20",
+      "questionNumber": 20,
+      "options": [
+        "A. kill germs.",
+        "B. help suspended particles to settle.",
+        "C. remove suspended particles.",
+        "D. remove hardness of the water."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2009_q21",
+      "questionNumber": 21,
+      "options": [
+        "A. calcium.",
+        "B. chlorine.",
+        "C. carbon.",
+        "D. sodium."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2009_q22",
+      "questionNumber": 22,
+      "options": [
+        "A. a compound.",
+        "B. a mixture.",
+        "C. an element.",
+        "D. an ion."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2009_q23",
+      "questionNumber": 23,
+      "options": [
+        "A. Heating camphor",
+        "B. Cooling water to form ice",
+        "C. Adding saliva to cooked yam",
+        "D. Mixing iron dust and sand together"
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2009_q24",
+      "questionNumber": 24,
+      "options": [
+        "A. constituents can be separated by a physical process.",
+        "B. volume of the compound is the sum of the volumes of the constituents.",
+        "C. reaction does not involve a heat change.",
+        "D. reaction can be represented by a chemical formula."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2009_q25",
+      "questionNumber": 25,
+      "options": [
+        "A. Fish",
+        "B. Tadpole",
+        "C. Mosquito larva",
+        "D. Water lily"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2009_q26",
+      "questionNumber": 26,
+      "options": [
+        "A. Bilharzia",
+        "B. Dodder",
+        "C. Lice",
+        "D. Tapeworm"
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2009_q27",
+      "questionNumber": 27,
+      "options": [
+        "A. clay.",
+        "B. humus.",
+        "C. sand.",
+        "D. silt."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2009_q28",
+      "questionNumber": 28,
+      "options": [
+        "A. Chicken pox",
+        "B. Cholera",
+        "C. Small pox",
+        "D. Tetanus"
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2009_q29",
+      "questionNumber": 29,
+      "options": [
+        "A. suck blood.",
+        "B. bite and cause pain.",
+        "C. settle on food.",
+        "D. spread diseases."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2009_q30",
+      "questionNumber": 30,
+      "options": [
+        "A. Cerebro Spinal Meningitis (CSM)",
+        "B. Poliomyelitis",
+        "C. Measles",
+        "D. Yellow Fever"
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2009_q31",
+      "questionNumber": 31,
+      "options": [
+        "A. moves round the sun.",
+        "B. moves from east to west.",
+        "C. moves round the moon.",
+        "D. rotates on its axis."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2009_q32",
+      "questionNumber": 32,
+      "options": [
+        "A. iron and carbon.",
+        "B. zinc and copper.",
+        "C. iron and zinc.",
+        "D. copper and tin."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2009_q33",
+      "questionNumber": 33,
+      "options": [
+        "A. Carbon dioxide",
+        "B. Water vapour",
+        "C. Sulphur dioxide",
+        "D. cement dust"
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2009_q34",
+      "questionNumber": 34,
+      "options": [
+        "A. Carbon dioxide",
+        "B. Hydrogen",
+        "C. Oxygen",
+        "D. Nitrogen"
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2009_q35",
+      "questionNumber": 35,
+      "options": [
+        "A. adhesion.",
+        "B. cohesion.",
+        "C. tension.",
+        "D. viscosity."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2009_q36",
+      "questionNumber": 36,
+      "options": [
+        "A. 0.01 m3",
+        "B. 0.10 m3",
+        "C. 1.00 m3",
+        "D. 10.00 m3"
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2009_q37",
+      "questionNumber": 37,
+      "options": [
+        "A. chlorophyll.",
+        "B. phloem.",
+        "C. stomata.",
+        "D. Xylem."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2009_q38",
+      "questionNumber": 38,
+      "options": [
+        "A. they are lighter than water.",
+        "B. their skins cannot be penetrated by water.",
+        "C. the surface of the water acts like an elastic skin.",
+        "D. the surface of water is curved."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2009_q39",
+      "questionNumber": 39,
+      "options": [
+        "A. plasma.",
+        "B. platelets.",
+        "C. white blood cells.",
+        "D. red blood cells."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2009_q40",
+      "questionNumber": 40,
+      "options": [
+        "A. frictional force.",
+        "B. electrostatic force.",
+        "C. gravitational force.",
+        "D. rotational force."
+      ],
+      "correctAnswer": "C"
+    }
+  ],
+  "2010": [
+    {
+      "id": "integrated_science_2010_q1",
+      "questionNumber": 1,
+      "options": [
+        "A. clean.",
+        "B. hard.",
+        "C. soapy.",
+        "D. soft."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2010_q2",
+      "questionNumber": 2,
+      "options": [
+        "A. I and II only",
+        "B. I and III only",
+        "C. II and III only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2010_q3",
+      "questionNumber": 3,
+      "options": [
+        "A. beam balance.",
+        "B. metre fule.",
+        "C. surveyor's tape.",
+        "D. vernier callipers."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2010_q4",
+      "questionNumber": 4,
+      "options": [
+        "A. soil consistency.",
+        "B. soil fertility.",
+        "C. soil structure.",
+        "D. soil texture."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2010_q5",
+      "questionNumber": 5,
+      "options": [
+        "A. adding alum.",
+        "B. boiling.",
+        "C. chlorination.",
+        "D. filtering."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2010_q6",
+      "questionNumber": 6,
+      "options": [
+        "A. aeration.",
+        "B. infiltration.",
+        "C. leaching.",
+        "D. percolation."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2010_q7",
+      "questionNumber": 7,
+      "options": [
+        "A. I only",
+        "B. II only",
+        "C. III only",
+        "D. I and III only"
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2010_q8",
+      "questionNumber": 8,
+      "options": [
+        "A. cucumber.",
+        "B. lettuce.",
+        "C. okro.",
+        "D. onion."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2010_q9",
+      "questionNumber": 9,
+      "options": [
+        "A. alveolus.",
+        "B. bronchus.",
+        "C. nostril.",
+        "D. trachea."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2010_q10",
+      "questionNumber": 10,
+      "options": [
+        "A. carbon (II) oxide.",
+        "B. Carbon (IV) oxide.",
+        "C. hydrogen.",
+        "D. nitrogen."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2010_q11",
+      "questionNumber": 11,
+      "options": [
+        "A. fowl.",
+        "B. goat.",
+        "C. pig.",
+        "D. sheep."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2010_q12",
+      "questionNumber": 12,
+      "options": [
+        "A. promotion of photosynthesis in green plants.",
+        "B. pollination in flowering plants.",
+        "C. leaching in soils.",
+        "D. erosion in soils."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2010_q13",
+      "questionNumber": 13,
+      "options": [
+        "A. Benedict's solution.",
+        "B. Fehling's solution.",
+        "C. Iodine solution.",
+        "D. Millon's reagent."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2010_q14",
+      "questionNumber": 14,
+      "options": [
+        "A. I only",
+        "B. II only",
+        "C. II and III only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2010_q15",
+      "questionNumber": 15,
+      "options": [
+        "A. cover cropping.",
+        "B. mulching.",
+        "C. strip cropping.",
+        "D. terracing."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2010_q16",
+      "questionNumber": 16,
+      "options": [
+        "A. Animal Husbandry Department",
+        "B. Extension Services Department",
+        "C. Information Services Department",
+        "D. Meteorological Services Department"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2010_q17",
+      "questionNumber": 17,
+      "options": [
+        "A. mixed cropping.",
+        "B. mixed farming.",
+        "C. monocropping.",
+        "D. monoculture."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2010_q18",
+      "questionNumber": 18,
+      "options": [
+        "A. Jupiter.",
+        "B. Mars.",
+        "C. Neptune.",
+        "D. Venus."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2010_q19",
+      "questionNumber": 19,
+      "options": [
+        "A. fertilization.",
+        "B. menstruation.",
+        "C. ovulation.",
+        "D. reproduction."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2010_q20",
+      "questionNumber": 20,
+      "options": [
+        "A. absorption.",
+        "B. diffusion.",
+        "C. osmosis.",
+        "D. transpiration."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2010_q21",
+      "questionNumber": 21,
+      "options": [
+        "A. deep litter system.",
+        "B. fold unit system.",
+        "C. free range system.",
+        "D. free-running system."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2010_q22",
+      "questionNumber": 22,
+      "options": [
+        "A. a light emitting diode.",
+        "B. n-p-n transistor.",
+        "C. light dependent resistor.",
+        "D. p-n-p transistor."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2010_q23",
+      "questionNumber": 23,
+      "options": [
+        "A. more electrons than holes.",
+        "B. no holes.",
+        "C. more holes than electrons.",
+        "D. the same number of holes as electrons."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2010_q24",
+      "questionNumber": 24,
+      "options": [
+        "A. glucose.",
+        "B. oil.",
+        "C. protein.",
+        "D. starch."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2010_q25",
+      "questionNumber": 25,
+      "options": [
+        "A. Sun",
+        "B. Waves",
+        "C. Wind",
+        "D. Wood"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2010_q26",
+      "questionNumber": 26,
+      "options": [
+        "A. I only",
+        "B. III only",
+        "C. I and II only",
+        "D. II and III only"
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2010_q27",
+      "questionNumber": 27,
+      "options": [
+        "A. Aorta",
+        "B. Pulmonary artery",
+        "C. Pulmonary vein",
+        "D. Renal artery"
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2010_q28",
+      "questionNumber": 28,
+      "options": [
+        "A. electrical energy → chemical energy → light energy",
+        "B. chemical energy → light energy → electrical energy",
+        "C. chemical energy → electrical energy → light energy",
+        "D. electrical energy → light energy → chemical energy"
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2010_q29",
+      "questionNumber": 29,
+      "options": [
+        "A. alcohol.",
+        "B. mercury.",
+        "C. turpentine.",
+        "D. water."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2010_q30",
+      "questionNumber": 30,
+      "options": [
+        "A. carbohydrates.",
+        "B. fats.",
+        "C. oils.",
+        "D. proteins."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2010_q31",
+      "questionNumber": 31,
+      "options": [
+        "A. canine.",
+        "B. incisor.",
+        "C. molar.",
+        "D. premolar."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2010_q32",
+      "questionNumber": 32,
+      "options": [
+        "A. anchovies.",
+        "B. fingerlings.",
+        "C. fish eggs.",
+        "D. frys."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2010_q33",
+      "questionNumber": 33,
+      "options": [
+        "A. I only",
+        "B. I and II only",
+        "C. II and III only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2010_q34",
+      "questionNumber": 34,
+      "options": [
+        "A. biological control method.",
+        "B. chemical control method.",
+        "C. cultural control method.",
+        "D. physical control method."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2010_q35",
+      "questionNumber": 35,
+      "options": [
+        "A. 5 J",
+        "B. 10 J",
+        "C. 20 J",
+        "D. 50 J"
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2010_q36",
+      "questionNumber": 36,
+      "options": [
+        "A. Mineral salts",
+        "B. Phagocytes",
+        "C. Platelets",
+        "D. Red blood cells"
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2010_q37",
+      "questionNumber": 37,
+      "options": [
+        "A. How many neutrons are in the nucleus of the carbon atom?",
+        "B. 2",
+        "C. 4",
+        "D. 6",
+        "E. 12"
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2010_q38",
+      "questionNumber": 38,
+      "options": [
+        "A. production chain.",
+        "B. processing chain.",
+        "C. supply chain.",
+        "D. value chain."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2010_q39",
+      "questionNumber": 39,
+      "options": [
+        "A. scrotum and uterus.",
+        "B. testis and ovary.",
+        "C. penis and vagina.",
+        "D. scrotum and ovary."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2010_q40",
+      "questionNumber": 40,
+      "options": [
+        "A. scrotum and uterus.",
+        "B. testis and ovary.",
+        "C. penis and vagina.",
+        "D. scrotum and ovary."
+      ],
+      "correctAnswer": "B"
+    }
+  ],
+  "2022": [
+    {
+      "id": "integrated_science_2022_q1",
+      "questionNumber": 1,
+      "options": [
+        "A. light to chemical.",
+        "B. light to electrical.",
+        "C. electrical to heat.",
+        "D. electrical to light."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2022_q2",
+      "questionNumber": 2,
+      "options": [
+        "A. seed formation.",
+        "B. seed development.",
+        "C. seed dispersal.",
+        "D. seed germination."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2022_q3",
+      "questionNumber": 3,
+      "options": [
+        "A. amount of water soil can hold.",
+        "B. arrangement of soil particles in a given soil.",
+        "C. properties of soil, silt and clay in a sample of soil.",
+        "D. mixture of all soil particles."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2022_q4",
+      "questionNumber": 4,
+      "options": [
+        "A. stamen.",
+        "B. pistil.",
+        "C. fruit.",
+        "D. stem."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2022_q5",
+      "questionNumber": 5,
+      "options": [
+        "A. Fermentation of food",
+        "B. Respiration",
+        "C. Magnetization of iron",
+        "D. Lighting a match"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2022_q6",
+      "questionNumber": 6,
+      "options": [
+        "A. yam beetle.",
+        "B. capsid.",
+        "C. army worm.",
+        "D. weevil."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2022_q7",
+      "questionNumber": 7,
+      "options": [
+        "A. filtrate and residue.",
+        "B. condensate and residue.",
+        "C. residue and filtrate.",
+        "D. residue and condensate"
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2022_q8",
+      "questionNumber": 8,
+      "options": [
+        "A. comes on and stays on.",
+        "B. flashes and goes off.",
+        "C. does not come on.",
+        "D. flashes and stays on."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2022_q9",
+      "questionNumber": 9,
+      "options": [
+        "A. CO32-.",
+        "B. Mg2+.",
+        "C. Na+.",
+        "D. OH-."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2022_q10",
+      "questionNumber": 10,
+      "options": [
+        "A. I and II only",
+        "B. I and III only",
+        "C. II and III only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2022_q11",
+      "questionNumber": 11,
+      "options": [
+        "A. bigger fruit development.",
+        "B. air circulation on the farm.",
+        "C. upright growth of the plant.",
+        "D. that fruits do not get rotten."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2022_q12",
+      "questionNumber": 12,
+      "options": [
+        "A. swells when dry and shrinks when wet.",
+        "B. has high water retention.",
+        "C. is difficult to plough when dry",
+        "D. is compact when dry."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2022_q13",
+      "questionNumber": 13,
+      "options": [
+        "A. are not efficient.",
+        "B. are dangerous.",
+        "C. produce sparks.",
+        "D. waste energy."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2022_q14",
+      "questionNumber": 14,
+      "options": [
+        "A. Venus and Mars",
+        "B. Venus and Mercury",
+        "C. Mercury and Mars",
+        "D. Venus and Saturn"
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2022_q15",
+      "questionNumber": 15,
+      "options": [
+        "A. I only",
+        "B. II only",
+        "C. I and III only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2022_q16",
+      "questionNumber": 16,
+      "options": [
+        "A. erosion.",
+        "B. afforestation.",
+        "C. leaching.",
+        "D. illegal mining."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2022_q17",
+      "questionNumber": 17,
+      "options": [
+        "A. Force of tension",
+        "B. Magnetic force",
+        "C. Electrostatic force",
+        "D. Gravitational force"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2022_q18",
+      "questionNumber": 18,
+      "options": [
+        "A. phosphorus in the soil.",
+        "B. calcium in the soil.",
+        "C. sodium in the soil.",
+        "D. nitrogen in the soil."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2022_q19",
+      "questionNumber": 19,
+      "options": [
+        "A. I and II only",
+        "B. I and III only",
+        "C. II and III only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2022_q20",
+      "questionNumber": 20,
+      "options": [
+        "A. mass.",
+        "B. temperature.",
+        "C. weight.",
+        "D. work."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2022_q21",
+      "questionNumber": 21,
+      "options": [
+        "A. I and II only",
+        "B. I and III only",
+        "C. II and III only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2022_q22",
+      "questionNumber": 22,
+      "options": [
+        "A. I only",
+        "B. II and III only",
+        "C. I and III only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2022_q23",
+      "questionNumber": 23,
+      "options": [
+        "A. 35 m2",
+        "B. 200 m2",
+        "C. 250 m2",
+        "D. 300 m2"
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2022_q24",
+      "questionNumber": 24,
+      "options": [
+        "A. low pressure.",
+        "B. strong wind.",
+        "C. cold wind.",
+        "D. low humidity."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2022_q25",
+      "questionNumber": 25,
+      "options": [
+        "A. bottle opener.",
+        "B. crow bar.",
+        "C. wheel barrow.",
+        "D. fishing rod."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2022_q26",
+      "questionNumber": 26,
+      "options": [
+        "A. producers.",
+        "B. parasites.",
+        "C. consumers.",
+        "D. decomposers."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2022_q27",
+      "questionNumber": 27,
+      "options": [
+        "A. atomic number.",
+        "B. mass number.",
+        "C. nucleon number.",
+        "D. neutron number."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2022_q28",
+      "questionNumber": 28,
+      "options": [
+        "A. filtration.",
+        "B. condensation.",
+        "C. distillation.",
+        "D. evaporation."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2022_q29",
+      "questionNumber": 29,
+      "options": [
+        "A. -1",
+        "B. -2",
+        "C. +1",
+        "D. +2"
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2022_q30",
+      "questionNumber": 30,
+      "options": [
+        "A. root.",
+        "B. dentine.",
+        "C. cement.",
+        "D. enamel."
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2022_q31",
+      "questionNumber": 31,
+      "options": [
+        "A. geologists.",
+        "B. astronauts.",
+        "C. space shuttlers.",
+        "D. astronomist."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2022_q32",
+      "questionNumber": 32,
+      "options": [
+        "A. mixed farming.",
+        "B. mixed cropping.",
+        "C. land rotation.",
+        "D. crop rotation."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2022_q33",
+      "questionNumber": 33,
+      "options": [
+        "A. moon is between the earth and the sun.",
+        "B. sun is between the earth and the moon.",
+        "C. earth is between the sun and the moon.",
+        "D. moon is positioned far away from the earth."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2022_q34",
+      "questionNumber": 34,
+      "options": [
+        "A. A metre-rule",
+        "B. A thermometer",
+        "C. An ammeter",
+        "D. A string"
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "id": "integrated_science_2022_q35",
+      "questionNumber": 35,
+      "options": [
+        "A. melt.",
+        "B. sublime.",
+        "C. decrease in volume.",
+        "D. decrease in intermolecular forces"
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2022_q36",
+      "questionNumber": 36,
+      "options": [
+        "A. radicle.",
+        "B. plumule.",
+        "C. cotyledon.",
+        "D. endosperm."
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "id": "integrated_science_2022_q37",
+      "questionNumber": 37,
+      "options": [
+        "A. electron movement.",
+        "B. hole movement.",
+        "C. electron and hole movement.",
+        "D. negative charge movement."
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2022_q38",
+      "questionNumber": 38,
+      "options": [
+        "A. large intestine.",
+        "B. small intestine.",
+        "C. appendix.",
+        "D. caecum."
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "id": "integrated_science_2022_q39",
+      "questionNumber": 39,
+      "options": [
+        "A. Copper",
+        "B. Diamond",
+        "C. Sucrose",
+        "D. Sulphur"
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "id": "integrated_science_2022_q40",
+      "questionNumber": 40,
+      "options": [
+        "A. Copper",
+        "B. Diamond",
+        "C. Sucrose",
+        "D. Sulphur"
+      ],
+      "correctAnswer": "C"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "totalImages": 26,
+  "converted": 25,
+  "uploaded": 25,
+  "linked": 25,
+  "errors": [
+    {
+      "filename": "q39_optionBscience_2010_img2.png",
+      "error": "Could not parse filename"
+    }
+  ],
+  "processedAt": "2025-11-28T18:36:08.819Z"
+}
