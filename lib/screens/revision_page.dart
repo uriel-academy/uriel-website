@@ -19,9 +19,97 @@ class _RevisionPageState extends State<RevisionPage> {
   Subject? _selectedSubject;
   int _selectedQuestionCount = 20;
   String _selectedQuizDifficulty = 'medium';
+  String _selectedQuestionType = 'MCQ'; // MCQ or Theory
+  String? _selectedAITopic; // Topic for AI questions
   final TextEditingController _topicController = TextEditingController();
   final TextEditingController _flipCardTopicController = TextEditingController();
   final QuestionService _questionService = QuestionService();
+  
+  // NACCA/GES Curriculum Topics by Subject
+  final Map<Subject, List<String>> _curriculumTopics = {
+    Subject.mathematics: [
+      'Number and Numeration',
+      'Algebra',
+      'Geometry and Measurement',
+      'Statistics and Probability',
+      'Relations and Functions',
+      'Sets',
+      'Consumer Arithmetic',
+    ],
+    Subject.english: [
+      'Reading and Comprehension',
+      'Grammar and Usage',
+      'Writing and Composition',
+      'Literature and Poetry',
+      'Oral Skills and Communication',
+      'Vocabulary Development',
+    ],
+    Subject.integratedScience: [
+      'Living and Non-living Things',
+      'Energy and Its Forms',
+      'Matter and Materials',
+      'The Human Body Systems',
+      'Ecosystems and Environment',
+      'Forces and Motion',
+      'Electricity and Electronics',
+      'Chemical Reactions',
+    ],
+    Subject.socialStudies: [
+      'Our Community and Culture',
+      'Government and Governance',
+      'Economic Activities',
+      'Ghana History and Independence',
+      'Maps and Environment',
+      'Family and Social Values',
+      'Rights and Responsibilities',
+    ],
+    Subject.religiousMoralEducation: [
+      'Religious Beliefs and Practices',
+      'Moral Values and Ethics',
+      'Religious Festivals',
+      'Sacred Texts and Teachings',
+      'Family and Community Life',
+      'Worship and Prayer',
+    ],
+    Subject.ga: [
+      'Kasahorow (Vocabulary)',
+      'Nↄↄla (Grammar)',
+      'Kaneɛ (Reading)',
+      'Ŋmaali (Writing)',
+      'Ga Literature and Culture',
+    ],
+    Subject.asanteTwi: [
+      'Kasahorow (Vocabulary)',
+      'Nkyerɛaseɛ (Grammar)',
+      'Akenkan (Reading)',
+      'Nwoma Nkrataa (Writing)',
+      'Twi Literature and Culture',
+    ],
+    Subject.french: [
+      'Vocabulaire (Vocabulary)',
+      'Grammaire (Grammar)',
+      'Lecture (Reading)',
+      'Écriture (Writing)',
+      'Culture Française (French Culture)',
+    ],
+    Subject.ict: [
+      'Computer Systems',
+      'Software Applications',
+      'Internet and Networks',
+      'Programming Basics',
+      'Digital Literacy',
+      'ICT in Society',
+    ],
+    Subject.creativeArts: [
+      'Visual Arts',
+      'Performing Arts',
+      'Music and Dance',
+      'Drama and Theatre',
+      'Arts Appreciation',
+    ],
+  };
+  
+  String? _selectedFlipCardTopic;
 
   // Available options
   final List<ExamType> _availableExamTypes = [ExamType.bece, ExamType.wassce];
@@ -153,7 +241,8 @@ class _RevisionPageState extends State<RevisionPage> {
         'examType': _selectedExamType!.name.toUpperCase(),
         'numQuestions': _selectedQuestionCount,
         'difficultyLevel': _selectedQuizDifficulty,
-        'customTopic': _topicController.text.trim().isNotEmpty ? _topicController.text.trim() : null,
+        'questionType': _selectedQuestionType,
+        'customTopic': _selectedAITopic,
       });
 
       final data = result.data;
@@ -231,8 +320,8 @@ class _RevisionPageState extends State<RevisionPage> {
             preloadedQuestions: aiQuestions,
             questionCount: _selectedQuestionCount,
             randomizeQuestions: false,
-            customTitle: _topicController.text.trim().isNotEmpty 
-                ? '${_getSubjectDisplayName(_selectedSubject!)} - ${_topicController.text.trim()}'
+            customTitle: _selectedAITopic != null
+                ? '${_getSubjectDisplayName(_selectedSubject!)} - $_selectedAITopic'
                 : '${_getSubjectDisplayName(_selectedSubject!)} AI Practice',
             isRevisionQuiz: true,
           ),
@@ -270,7 +359,7 @@ class _RevisionPageState extends State<RevisionPage> {
     setState(() => _isGeneratingFlipCards = true);
 
     try {
-      final customTopic = _flipCardTopicController.text.trim();
+      final customTopic = _selectedFlipCardTopic;
       debugPrint('📝 Calling generateAIFlipCards with params: subject=${_selectedSubject!.name}, examType=${_selectedExamType!.name}, count=$_selectedCardCount, difficulty=$_selectedFlipCardDifficulty, classLevel=$_selectedFlipCardClassLevel, topic=$customTopic');
       
       final callable = FirebaseFunctions.instance.httpsCallable('generateAIFlipCards');
@@ -280,7 +369,7 @@ class _RevisionPageState extends State<RevisionPage> {
         'numCards': _selectedCardCount,
         'difficultyLevel': _selectedFlipCardDifficulty,
         'classLevel': _selectedFlipCardClassLevel,
-        'customTopic': customTopic.isNotEmpty ? customTopic : null,
+        'customTopic': customTopic,
       });
 
       final data = result.data;
@@ -311,7 +400,7 @@ class _RevisionPageState extends State<RevisionPage> {
           explanation: card['explanation'],
           marks: 1,
           difficulty: card['difficulty'] ?? _selectedFlipCardDifficulty,
-          topics: [card['topic'] ?? (customTopic.isNotEmpty ? customTopic : 'General')],
+          topics: [card['topic'] ?? customTopic ?? 'General'],
           createdAt: DateTime.now(),
           createdBy: 'ai',
           isActive: true,
@@ -568,7 +657,7 @@ class _RevisionPageState extends State<RevisionPage> {
                             onPressed: _generateMockExam,
                             icon: const Icon(Icons.library_books, size: 20),
                             label: Text(
-                              'Generate from Database',
+                              'Generate from Database (MCQ Only)',
                               style: GoogleFonts.montserrat(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600,
@@ -635,29 +724,50 @@ class _RevisionPageState extends State<RevisionPage> {
                           ),
                           const SizedBox(height: 16),
                           
+                          // Question Type selector
+                          _buildFilterDropdown('Question Type', _selectedQuestionType, ['MCQ', 'Theory'], (value) {
+                            setState(() => _selectedQuestionType = value!);
+                          }),
+                          const SizedBox(height: 12),
+                          
                           // Difficulty and Topic fields
                           if (isSmallScreen) ...[
                             _buildFilterDropdown('Difficulty', _selectedQuizDifficulty, _difficultyLevels, (value) {
                               setState(() => _selectedQuizDifficulty = value!);
                             }),
                             const SizedBox(height: 12),
-                            TextField(
-                              controller: _topicController,
-                              decoration: InputDecoration(
-                                labelText: 'Topic (Optional)',
-                                hintText: 'e.g., Algebra, Grammar, Electricity',
-                                labelStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
-                                hintStyle: GoogleFonts.montserrat(color: Colors.grey[400]),
-                                filled: true,
-                                fillColor: Colors.white,
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(12),
-                                  borderSide: BorderSide.none,
+                            // NACCA/GES Topic selector
+                            if (_selectedSubject != null && _curriculumTopics.containsKey(_selectedSubject!))
+                              _buildFilterDropdown(
+                                'NACCA/GES Topic',
+                                _selectedAITopic ?? 'Select Topic',
+                                ['Select Topic', ..._curriculumTopics[_selectedSubject!]!],
+                                (v) => setState(() => _selectedAITopic = v == 'Select Topic' ? null : v),
+                              )
+                            else
+                              Container(
+                                padding: const EdgeInsets.all(12),
+                                decoration: BoxDecoration(
+                                  color: Colors.orange[50],
+                                  borderRadius: BorderRadius.circular(8),
+                                  border: Border.all(color: Colors.orange[200]!),
                                 ),
-                                contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.info_outline, size: 16, color: Colors.orange[700]),
+                                    const SizedBox(width: 8),
+                                    Expanded(
+                                      child: Text(
+                                        'Select a subject to see curriculum topics',
+                                        style: GoogleFonts.montserrat(
+                                          fontSize: 11,
+                                          color: Colors.orange[900],
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
-                              style: GoogleFonts.montserrat(color: const Color(0xFF1A1E3F)),
-                            ),
                           ] else
                             Row(
                               children: [
@@ -670,23 +780,36 @@ class _RevisionPageState extends State<RevisionPage> {
                                 const SizedBox(width: 12),
                                 Expanded(
                                   flex: 3,
-                                  child: TextField(
-                                    controller: _topicController,
-                                    decoration: InputDecoration(
-                                      labelText: 'Topic (Optional)',
-                                      hintText: 'e.g., Algebra, Grammar, Electricity',
-                                      labelStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
-                                      hintStyle: GoogleFonts.montserrat(color: Colors.grey[400]),
-                                      filled: true,
-                                      fillColor: Colors.white,
-                                      border: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(12),
-                                        borderSide: BorderSide.none,
-                                      ),
-                                      contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-                                    ),
-                                    style: GoogleFonts.montserrat(color: const Color(0xFF1A1E3F)),
-                                  ),
+                                  child: _selectedSubject != null && _curriculumTopics.containsKey(_selectedSubject!)
+                                      ? _buildFilterDropdown(
+                                          'NACCA/GES Topic',
+                                          _selectedAITopic ?? 'Select Topic',
+                                          ['Select Topic', ..._curriculumTopics[_selectedSubject!]!],
+                                          (v) => setState(() => _selectedAITopic = v == 'Select Topic' ? null : v),
+                                        )
+                                      : Container(
+                                          padding: const EdgeInsets.all(12),
+                                          decoration: BoxDecoration(
+                                            color: Colors.orange[50],
+                                            borderRadius: BorderRadius.circular(8),
+                                            border: Border.all(color: Colors.orange[200]!),
+                                          ),
+                                          child: Row(
+                                            children: [
+                                              Icon(Icons.info_outline, size: 16, color: Colors.orange[700]),
+                                              const SizedBox(width: 8),
+                                              Expanded(
+                                                child: Text(
+                                                  'Select a subject to see curriculum topics',
+                                                  style: GoogleFonts.montserrat(
+                                                    fontSize: 11,
+                                                    color: Colors.orange[900],
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
                                 ),
                               ],
                             ),
@@ -910,7 +1033,11 @@ class _RevisionPageState extends State<RevisionPage> {
               const SizedBox(height: 12),
               _buildFilterDropdown('Subject', _selectedSubject != null ? _getSubjectDisplayName(_selectedSubject!) : 'Select Subject', _getSubjectOptions(), (value) {
                 final subject = value == 'Select Subject' ? null : _availableSubjects.firstWhere((s) => _getSubjectDisplayName(s) == value);
-                setState(() => _selectedSubject = subject);
+                setState(() {
+                  _selectedSubject = subject;
+                  _selectedFlipCardTopic = null; // Reset topic when subject changes
+                  _selectedAITopic = null; // Reset AI topic when subject changes
+                });
               }),
               const SizedBox(height: 12),
               _buildFilterDropdown('Question Count', _selectedQuestionCount.toString(), ['10', '20', '40'], (value) {
@@ -931,7 +1058,11 @@ class _RevisionPageState extends State<RevisionPage> {
               Expanded(
                 child: _buildFilterDropdown('Subject', _selectedSubject != null ? _getSubjectDisplayName(_selectedSubject!) : 'Select Subject', _getSubjectOptions(), (value) {
                   final subject = value == 'Select Subject' ? null : _availableSubjects.firstWhere((s) => _getSubjectDisplayName(s) == value);
-                  setState(() => _selectedSubject = subject);
+                  setState(() {
+                    _selectedSubject = subject;
+                    _selectedFlipCardTopic = null; // Reset topic when subject changes
+                    _selectedAITopic = null; // Reset AI topic when subject changes
+                  });
                 }),
               ),
               const SizedBox(width: 12),
@@ -1027,24 +1158,38 @@ class _RevisionPageState extends State<RevisionPage> {
           ),
         const SizedBox(height: 12),
         
-        // Topic input field
-        TextField(
-          controller: _flipCardTopicController,
-          decoration: InputDecoration(
-            labelText: 'Topic (Optional)',
-            hintText: 'e.g., Photosynthesis, Fractions, Ghana History',
-            labelStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
-            hintStyle: GoogleFonts.montserrat(color: Colors.grey[400]),
-            filled: true,
-            fillColor: const Color(0xFFF8FAFE),
-            border: OutlineInputBorder(
+        // NACCA/GES Topic selector
+        if (_selectedSubject != null && _curriculumTopics.containsKey(_selectedSubject!))
+          _buildFilterDropdown(
+            'NACCA/GES Topic',
+            _selectedFlipCardTopic ?? 'Select Topic',
+            ['Select Topic', ..._curriculumTopics[_selectedSubject!]!],
+            (v) => setState(() => _selectedFlipCardTopic = v == 'Select Topic' ? null : v),
+          )
+        else
+          Container(
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              color: Colors.orange[50],
               borderRadius: BorderRadius.circular(12),
-              borderSide: BorderSide.none,
+              border: Border.all(color: Colors.orange[200]!),
             ),
-            contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+            child: Row(
+              children: [
+                Icon(Icons.info_outline, size: 20, color: Colors.orange[700]),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Text(
+                    'Please select a subject to see NACCA/GES curriculum topics',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 12,
+                      color: Colors.orange[900],
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
-          style: GoogleFonts.montserrat(color: const Color(0xFF1A1E3F)),
-        ),
       ],
     );
   }
