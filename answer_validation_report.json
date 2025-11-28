@@ -1,0 +1,18 @@
+[
+  {
+    "subject": "RME",
+    "year": "1999",
+    "questionNum": 30,
+    "docId": "rme_1999_q30",
+    "expected": "A",
+    "actual": "C",
+    "questionText": "One of the child's responsibilities in the home is to...",
+    "options": [
+      "A. sweep the compound",
+      "B. provide his clothing",
+      "C. pay the school fees",
+      "D. pay the hospital fees",
+      "E. provide his food"
+    ]
+  }
+]

@@ -49,5 +49,8 @@
   "bugs": {
     "url": "https://github.com/uriel-academy/uriel-website/issues"
   },
-  "homepage": "https://github.com/uriel-academy/uriel-website#readme"
+  "homepage": "https://github.com/uriel-academy/uriel-website#readme",
+  "devDependencies": {
+    "sharp": "^0.34.5"
+  }
 }

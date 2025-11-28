@@ -1,0 +1,146 @@
+{
+  "totalChecked": 1559,
+  "matchCount": 1549,
+  "mismatches": [
+    {
+      "docId": "KnhvBPKMKO9TSWKHkjdh",
+      "subject": "Mathematics",
+      "year": "2010",
+      "questionNumber": 33,
+      "got": "A",
+      "questionText": "The point (4, 5) is translated to the point (3, 1). What is the translation vector?",
+      "options": [
+        "A. ( -1 4 )",
+        "B. ( 1 4 )",
+        "C. ( 1 -4 )",
+        "D. ( -1 -4 )"
+      ]
+    },
+    {
+      "docId": "Oi3M5Rz0A75CyD6cFo1u",
+      "subject": "Mathematics",
+      "year": "2010",
+      "questionNumber": 19,
+      "got": "A",
+      "questionText": "Eighteen cards are numbered from 11 to 29. If one card is chosen at random, what is the probability ",
+      "options": [
+        "A. 3 9",
+        "B. 7 18",
+        "C. 5 9",
+        "D. 11 19"
+      ]
+    },
+    {
+      "docId": "OvcFaKbUS5nRSeJw63J5",
+      "subject": "Mathematics",
+      "year": "2010",
+      "questionNumber": 38,
+      "got": "A",
+      "questionText": "Given that vector a = ( -5 12 ) and b = ( 10x 12 ) Find the value of x if a = b.",
+      "options": [
+        "A. -2",
+        "B. - 1 2",
+        "C. 1 2",
+        "D. 2"
+      ]
+    },
+    {
+      "docId": "QAgl0c2TW7cnxAzBQe99",
+      "subject": "Mathematics",
+      "year": "2010",
+      "questionNumber": 34,
+      "got": "A",
+      "questionText": "In the diagram below, triangle QRT is the enlargement of QST. Which side of triangle QRT corresponds",
+      "options": [
+        "A. TS",
+        "B. TR",
+        "C. QR",
+        "D. SR"
+      ]
+    },
+    {
+      "docId": "ZYOWkbTRLqVMfceNDwqb",
+      "subject": "Mathematics",
+      "year": "2010",
+      "questionNumber": 36,
+      "got": "A",
+      "questionText": "Express 4037 in standard form.",
+      "options": [
+        "A. 4.037 x 10-4",
+        "B. 4.037 x 10-3",
+        "C. 4.037 x 103",
+        "D. 4.037 x 104"
+      ]
+    },
+    {
+      "docId": "c62K61NQHGJhsIXCnhA0",
+      "subject": "Mathematics",
+      "year": "2010",
+      "questionNumber": 35,
+      "got": "A",
+      "questionText": "In the diagrams above Fig. I is an enlargement of Fig. II. Find the side EF of Fig. II.",
+      "options": [
+        "A. 20 cm",
+        "B. 5 cm",
+        "C. 4 cm",
+        "D. 3 cm"
+      ]
+    },
+    {
+      "docId": "p2WiydzwC0tQ0HBALddc",
+      "subject": "Mathematics",
+      "year": "2010",
+      "questionNumber": 40,
+      "got": "A",
+      "questionText": "Ama is 9 years older than Kwame. If Kwame is 18 years old, find the ratio of the age of Kwame to tha",
+      "options": [
+        "A. 3 : 2",
+        "B. 1 : 3",
+        "C. 2 : 3",
+        "D. 2 : 1"
+      ]
+    },
+    {
+      "docId": "tszML9mMRlNqm89sEjWU",
+      "subject": "Mathematics",
+      "year": "2010",
+      "questionNumber": 39,
+      "got": "A",
+      "questionText": "In the diagram above, the bearing of point B from A is",
+      "options": [
+        "A. 340o",
+        "B. 220o",
+        "C. 140o",
+        "D. 50o"
+      ]
+    },
+    {
+      "docId": "xnYAL76cyNjZ4bUJoiPW",
+      "subject": "Mathematics",
+      "year": "2010",
+      "questionNumber": 37,
+      "got": "A",
+      "questionText": "Which of the following angles can be constructed by using the arcs at point C in the diagram below?",
+      "options": [
+        "A. 30o",
+        "B. 45o",
+        "C. 60o",
+        "D. 75o"
+      ]
+    },
+    {
+      "docId": "4rYUp8SHICEjb571PsRq",
+      "subject": "Mathematics",
+      "year": "2025",
+      "questionNumber": 125,
+      "got": "A",
+      "questionText": "4. A farmer feeds 20 goats with 500 kg of cassava. How many goats can be fed with 200 kg of cassava?",
+      "options": [
+        "A. 2",
+        "B. 5",
+        "C. 8",
+        "D. 10"
+      ]
+    }
+  ]
+}
