@@ -424,6 +424,90 @@ class QuestionService {
     }
   }
 
+  /// Get question metadata grouped by subject, year, and type (for auto-generating collections)
+  /// Returns a list of maps with: subject, year, questionType, questionIds, count
+  Future<List<Map<String, dynamic>>> getQuestionMetadataGrouped({
+    bool activeOnly = true,
+  }) async {
+    try {
+      debugPrint('🔍 Fetching question metadata for auto-collections...');
+      
+      // Fetch from main questions collection with timeout
+      final snapshot = await _questionsCollection.get().timeout(
+        const Duration(seconds: 30),
+        onTimeout: () {
+          debugPrint('⏰ Timeout fetching main questions');
+          throw Exception('Timeout fetching questions');
+        },
+      );
+      debugPrint('📊 Found ${snapshot.docs.length} questions in main collection');
+      
+      // Also fetch French questions with timeout
+      QuerySnapshot frenchSnapshot;
+      try {
+        frenchSnapshot = await _firestore.collection('french_questions').get().timeout(
+          const Duration(seconds: 15),
+          onTimeout: () {
+            debugPrint('⏰ Timeout fetching French questions');
+            throw Exception('Timeout fetching French questions');
+          },
+        );
+        debugPrint('📊 Found ${frenchSnapshot.docs.length} French questions');
+      } catch (e) {
+        debugPrint('⚠️ Could not fetch French questions: $e');
+        frenchSnapshot = await Future.value(_firestore.collection('french_questions').limit(0).get());
+      }
+      
+      // Combine all docs
+      final allDocs = [...snapshot.docs, ...frenchSnapshot.docs];
+      
+      // Group by subject + year + type
+      final Map<String, Map<String, dynamic>> grouped = {};
+      
+      for (final doc in allDocs) {
+        try {
+          final data = doc.data() as Map<String, dynamic>?;
+          if (data == null) continue;
+          
+          // Client-side filter for active questions
+          if (activeOnly) {
+            final isActive = data['isActive'];
+            if (isActive != true) continue;
+          }
+          
+          final subject = data['subject']?.toString() ?? 'unknown';
+          final year = data['year']?.toString() ?? 'unknown';
+          final type = data['type']?.toString() ?? 'multipleChoice';
+          final examType = data['examType']?.toString() ?? 'bece';
+          
+          final key = '${subject}_${year}_${type}_$examType';
+          
+          if (!grouped.containsKey(key)) {
+            grouped[key] = {
+              'subject': subject,
+              'year': year,
+              'questionType': type,
+              'examType': examType,
+              'questionIds': <String>[],
+              'count': 0,
+            };
+          }
+          
+          (grouped[key]!['questionIds'] as List<String>).add(doc.id);
+          grouped[key]!['count'] = (grouped[key]!['count'] as int) + 1;
+        } catch (e) {
+          debugPrint('⚠️ Error processing question ${doc.id}: $e');
+        }
+      }
+      
+      debugPrint('📦 Created ${grouped.length} auto-collection groups');
+      return grouped.values.toList();
+    } catch (e) {
+      debugPrint('❌ Error fetching question metadata: $e');
+      return [];
+    }
+  }
+
   /// Parse questions from text (for admin use)
   Future<List<Question>> parseQuestionsFromText(String text) async {
     List<Question> questions = [];
@@ -456,31 +540,29 @@ class QuestionService {
     try {
       debugPrint('🔍 Fetching question collections from Firestore...');
       
-      Query query = _firestore.collection('questionCollections');
+      // Fetch all collections first, then filter client-side to avoid index issues
+      final snapshot = await _firestore.collection('questionCollections').get();
       
-      if (subject != null) {
-        query = query.where('subject', isEqualTo: subject);
-      }
+      debugPrint('📦 Found ${snapshot.docs.length} total collections');
       
-      if (topic != null) {
-        query = query.where('topic', isEqualTo: topic);
-      }
+      final results = <Map<String, dynamic>>[];
       
-      if (activeOnly) {
-        query = query.where('isActive', isEqualTo: true);
-      }
-      
-      final snapshot = await query.get();
-      
-      debugPrint('📦 Found ${snapshot.docs.length} collections');
-      
-      return snapshot.docs.map((doc) {
-        final data = doc.data() as Map<String, dynamic>;
-        return {
+      for (final doc in snapshot.docs) {
+        final data = doc.data();
+        
+        // Client-side filtering
+        if (activeOnly && data['isActive'] != true) continue;
+        if (subject != null && data['subject'] != subject) continue;
+        if (topic != null && data['topic'] != topic) continue;
+        
+        results.add({
           'id': doc.id,
           ...data,
-        };
-      }).toList();
+        });
+      }
+      
+      debugPrint('📦 Returning ${results.length} filtered collections');
+      return results;
     } catch (e) {
       debugPrint('❌ Error fetching question collections: $e');
       return [];

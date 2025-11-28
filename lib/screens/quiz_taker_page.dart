@@ -15,6 +15,7 @@ class QuizTakerPage extends StatefulWidget {
   final String examType;
   final String level;
   final List<Question>? preloadedQuestions;
+  final List<String>? questionIds; // New parameter for loading questions by IDs
   final int? questionCount;
   final String? triviaCategory;
   final bool randomizeQuestions;
@@ -27,6 +28,7 @@ class QuizTakerPage extends StatefulWidget {
     required this.examType,
     required this.level,
     this.preloadedQuestions,
+    this.questionIds, // New parameter
     this.questionCount,
     this.triviaCategory,
     this.randomizeQuestions = false,
@@ -99,6 +101,11 @@ class _QuizTakerPageState extends State<QuizTakerPage>
       
       if (widget.preloadedQuestions != null) {
         questions = List<Question>.from(widget.preloadedQuestions!);
+      } else if (widget.questionIds != null) {
+        // Load questions by IDs in batches to avoid slow loading
+        debugPrint('🔍 Fetching ${widget.questionIds!.length} questions by IDs...');
+        questions = await _questionService.getQuestionsByIds(widget.questionIds!);
+        debugPrint('✅ Successfully fetched ${questions.length} of ${widget.questionIds!.length} questions');
       } else {
         // Map display name to Firestore field name
         final subjectEnum = _mapStringToSubject(widget.subject);

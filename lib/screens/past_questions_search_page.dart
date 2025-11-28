@@ -5,6 +5,35 @@ import '../services/question_service.dart';
 import '../services/storage_service.dart';
 import 'quiz_setup_page.dart';
 import 'question_detail_page.dart';
+import 'question_collections_page.dart';
+
+// ⚠️ LEGACY PAGE - DO NOT MODIFY
+// This page is not actively maintained. All past questions functionality
+// has been moved to the main questions system. Use question_collections_page.dart
+// for the primary questions experience.
+//
+// This file is kept for backward compatibility only.
+
+// Model class for subject cards
+class SubjectCard {
+  final String name;
+  final String displayName;
+  final String description;
+  final IconData icon;
+  final Color color;
+  final List<Color> gradient;
+  final int collectionCount;
+
+  SubjectCard({
+    required this.name,
+    required this.displayName,
+    required this.description,
+    required this.icon,
+    required this.color,
+    required this.gradient,
+    required this.collectionCount,
+  });
+}
 
 class PastQuestionsSearchPage extends StatefulWidget {
   /// Optional initial subject display name (e.g. 'RME' or 'Religious And Moral Education')
@@ -38,6 +67,11 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
   String _sortBy = 'Most Recent';
   int _currentPage = 1;
   final int _questionsPerPage = 20;
+  bool _hasLoadedQuestions = false; // Track if we've loaded questions yet
+
+  // Subject Cards
+  List<SubjectCard> _subjectCards = [];
+  bool _isLoadingSubjects = false;
 
   @override
   void initState() {
@@ -56,50 +90,31 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
   Future<void> _loadInitialData() async {
     setState(() => _isLoading = true);
     try {
-      debugPrint('🚀 Loading questions from database...');
-      
-      // Load database questions with timeout
-      final questionsTask = _questionService.getQuestions().timeout(
-        const Duration(seconds: 5),
+      debugPrint('🚀 Loading initial data (subjects only for fast loading)...');
+
+      // Load a small sample of questions to get subject information for cards
+      final sampleQuestionsTask = _questionService.getQuestions(
+        limit: 100, // Just load 100 questions to get subject distribution
+      ).timeout(
+        const Duration(seconds: 3),
         onTimeout: () => <Question>[],
       );
-      
-      // Load RME questions specifically for debugging
-      final rmeQuestionsTask = _questionService.getRMEQuestions().timeout(
-        const Duration(seconds: 5),
-        onTimeout: () => <Question>[],
-      );
-      
-      // Load storage questions (RME and others) with timeout  
+
+      // Load storage questions sample
       final storageQuestionsTask = StorageService.getAllPastQuestions().timeout(
-        const Duration(seconds: 5),
+        const Duration(seconds: 3),
         onTimeout: () => <PastQuestion>[],
       );
-      
-      final questions = await questionsTask;
-      final rmeQuestions = await rmeQuestionsTask;
+
+      final sampleQuestions = await sampleQuestionsTask;
       final storageQuestions = await storageQuestionsTask;
-      
-      debugPrint('📊 Loaded ${questions.length} total questions from database');
-      debugPrint('📚 Loaded ${rmeQuestions.length} RME questions specifically');
-      debugPrint('📁 Loaded ${storageQuestions.length} storage questions');
-      
-      // Merge database questions with RME questions and storage questions so searches can find all
-      final mergedQuestions = <Question>[];
 
-      // Add database questions
-      mergedQuestions.addAll(questions);
+      debugPrint('📊 Loaded ${sampleQuestions.length} sample questions and ${storageQuestions.length} storage questions');
 
-      // Add RME questions from Firestore (avoid duplicates)
-      for (final q in rmeQuestions) {
-        if (!mergedQuestions.any((existing) => existing.id == q.id)) {
-          mergedQuestions.add(q);
-        }
-      }
+      // Convert storage questions to get subject info
+      final sampleQuestionsWithStorage = <Question>[...sampleQuestions];
 
-      // Convert storage PastQuestion entries into Question-lite objects for display/search
-      for (final p in storageQuestions) {
-        // Convert storage PastQuestion to an in-memory Question for search/display
+      for (final p in storageQuestions.take(50)) { // Limit storage questions too
         final storageAsQuestion = Question(
           id: 'storage_${p.id}',
           questionText: p.title,
@@ -119,40 +134,174 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
           createdBy: 'storage',
           isActive: true,
         );
-
-        if (!mergedQuestions.any((existing) => existing.id == storageAsQuestion.id)) {
-          mergedQuestions.add(storageAsQuestion);
-        }
+        sampleQuestionsWithStorage.add(storageAsQuestion);
       }
 
-      // Filter to show only BECE and WASSCE questions (exclude trivia, mock, practice)
-      final beceWasscceQuestions = mergedQuestions
-          .where((q) => 
-            q.examType == ExamType.bece || 
-            q.examType == ExamType.wassce
-          )
-          .toList();
+      // Store sample questions temporarily
+      _questions = sampleQuestionsWithStorage;
+      _filteredQuestions = sampleQuestionsWithStorage;
 
-      setState(() {
-        _questions = beceWasscceQuestions;
-        _filteredQuestions = beceWasscceQuestions;
-        _isLoading = false;
-      });
+      // Load subject cards immediately for fast UI
+      await _loadSubjectCards();
+
+      setState(() => _isLoading = false);
+
       // If the widget was constructed with an initial subject, apply it
       if (widget.initialSubject != null && widget.initialSubject!.isNotEmpty) {
         setState(() {
           _selectedSubject = widget.initialSubject!;
         });
-        _applyFilters();
+        // Don't apply filters yet since we haven't loaded all questions
       }
+
     } catch (e) {
-      // Silent fallback - don't show error to user
-      debugPrint('❌ Questions loading error (handled gracefully): $e');
+      debugPrint('❌ Initial data loading error: $e');
+      setState(() => _isLoading = false);
+    }
+  }
+
+  Future<void> _loadSubjectCards() async {
+    setState(() => _isLoadingSubjects = true);
+    try {
+      // Get subjects that have questions
+      final subjectsWithQuestions = <String, int>{};
+      
+      for (final question in _questions) {
+        final subjectName = _getDisplayNameFromSubject(question.subject);
+        if (subjectName != null) {
+          subjectsWithQuestions[subjectName] = (subjectsWithQuestions[subjectName] ?? 0) + 1;
+        }
+      }
+      
+      // Create subject cards
+      final subjectCards = <SubjectCard>[];
+      
+      for (final entry in subjectsWithQuestions.entries) {
+        final card = _createSubjectCard(entry.key, entry.value);
+        if (card != null) {
+          subjectCards.add(card);
+        }
+      }
+      
+      // Sort by question count (most questions first)
+      subjectCards.sort((a, b) => b.collectionCount.compareTo(a.collectionCount));
+      
       setState(() {
-        _questions = [];
-        _filteredQuestions = [];
-        _isLoading = false;
+        _subjectCards = subjectCards;
+        _isLoadingSubjects = false;
       });
+    } catch (e) {
+      debugPrint('❌ Error loading subject cards: $e');
+      setState(() => _isLoadingSubjects = false);
+    }
+  }
+
+  SubjectCard? _createSubjectCard(String subjectName, int questionCount) {
+    final config = _getSubjectCardConfig(subjectName);
+    if (config == null) return null;
+    
+    return SubjectCard(
+      name: subjectName,
+      displayName: config['displayName'] as String,
+      description: config['description'] as String,
+      icon: config['icon'] as IconData,
+      color: config['color'] as Color,
+      gradient: [config['color'] as Color, (config['color'] as Color)],
+      collectionCount: questionCount,
+    );
+  }
+
+  Map<String, dynamic>? _getSubjectCardConfig(String subjectName) {
+    final configs = {
+      'Mathematics': {
+        'displayName': 'Mathematics',
+        'description': 'Algebra, geometry, calculus, and mathematical problem-solving',
+        'icon': Icons.calculate,
+        'color': const Color(0xFF2196F3),
+      },
+      'English': {
+        'displayName': 'English Language',
+        'description': 'Grammar, comprehension, literature, and language skills',
+        'icon': Icons.menu_book,
+        'color': const Color(0xFF4CAF50),
+      },
+      'Integrated Science': {
+        'displayName': 'Integrated Science',
+        'description': 'Physics, chemistry, biology, and earth science',
+        'icon': Icons.science,
+        'color': const Color(0xFFFF9800),
+      },
+      'Social Studies': {
+        'displayName': 'Social Studies',
+        'description': 'History, geography, citizenship, and social sciences',
+        'icon': Icons.public,
+        'color': const Color(0xFF9C27B0),
+      },
+      'Religious and Moral Education': {
+        'displayName': 'RME',
+        'description': 'Religious studies, ethics, and moral education',
+        'icon': Icons.church,
+        'color': const Color(0xFF795548),
+      },
+      'Ga': {
+        'displayName': 'Ga Language',
+        'description': 'Ga language, literature, and cultural studies',
+        'icon': Icons.language,
+        'color': const Color(0xFF607D8B),
+      },
+      'Asante Twi': {
+        'displayName': 'Asante Twi',
+        'description': 'Twi language, literature, and cultural studies',
+        'icon': Icons.record_voice_over,
+        'color': const Color(0xFF5D4037),
+      },
+      'French': {
+        'displayName': 'French',
+        'description': 'French language, grammar, and literature',
+        'icon': Icons.translate,
+        'color': const Color(0xFF3F51B5),
+      },
+      'ICT': {
+        'displayName': 'Information Technology',
+        'description': 'Computer science, programming, and digital skills',
+        'icon': Icons.computer,
+        'color': const Color(0xFF009688),
+      },
+      'Creative Arts': {
+        'displayName': 'Creative Arts',
+        'description': 'Visual arts, music, dance, and creative expression',
+        'icon': Icons.palette,
+        'color': const Color(0xFFE91E63),
+      },
+    };
+    
+    return configs[subjectName];
+  }
+
+  String? _getDisplayNameFromSubject(Subject subject) {
+    switch (subject) {
+      case Subject.mathematics:
+        return 'Mathematics';
+      case Subject.english:
+        return 'English';
+      case Subject.integratedScience:
+        return 'Integrated Science';
+      case Subject.socialStudies:
+        return 'Social Studies';
+      case Subject.religiousMoralEducation:
+        return 'Religious and Moral Education';
+      case Subject.ga:
+        return 'Ga';
+      case Subject.asanteTwi:
+        return 'Asante Twi';
+      case Subject.french:
+        return 'French';
+      case Subject.ict:
+        return 'ICT';
+      case Subject.creativeArts:
+        return 'Creative Arts';
+      default:
+        return null;
     }
   }
 
@@ -270,6 +419,185 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
     }
   }
 
+  Widget _buildSubjectCards(bool isSmallScreen) {
+    if (_isLoadingSubjects || _subjectCards.isEmpty) {
+      return const SizedBox.shrink();
+    }
+
+    final screenWidth = MediaQuery.of(context).size.width;
+
+    return Container(
+      margin: EdgeInsets.all(isSmallScreen ? 16 : 24),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: EdgeInsets.only(bottom: isSmallScreen ? 12 : 16),
+            child: Text(
+              'Browse by Subject',
+              style: GoogleFonts.playfairDisplay(
+                fontSize: isSmallScreen ? 18 : 20,
+                fontWeight: FontWeight.bold,
+                color: const Color(0xFF1A1E3F),
+              ),
+            ),
+          ),
+          GridView.builder(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: isSmallScreen ? 1 : (screenWidth < 1024 ? 2 : 3),
+              crossAxisSpacing: isSmallScreen ? 0 : 16,
+              mainAxisSpacing: 16,
+              childAspectRatio: isSmallScreen ? 1.3 : 1.1,
+            ),
+            itemCount: _subjectCards.length,
+            itemBuilder: (context, index) {
+              return _buildSubjectCard(_subjectCards[index], isSmallScreen);
+            },
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildSubjectCard(SubjectCard subjectCard, bool isSmallScreen) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.05),
+            blurRadius: 10,
+            offset: const Offset(0, 2),
+          ),
+        ],
+      ),
+      child: InkWell(
+        onTap: () => _onSubjectCardTap(subjectCard),
+        borderRadius: BorderRadius.circular(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Gradient Header
+            Container(
+              height: 80,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: subjectCard.gradient,
+                ),
+                borderRadius: const BorderRadius.vertical(
+                  top: Radius.circular(16),
+                ),
+              ),
+              child: Center(
+                child: Icon(
+                  subjectCard.icon,
+                  size: 48,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+
+            // Content
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Subject Name
+                    Text(
+                      subjectCard.displayName,
+                      style: GoogleFonts.playfairDisplay(
+                        color: const Color(0xFF1A1E3F),
+                        fontSize: isSmallScreen ? 18 : 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    const SizedBox(height: 8),
+
+                    // Description
+                    Expanded(
+                      child: Text(
+                        subjectCard.description,
+                        style: GoogleFonts.montserrat(
+                          color: Colors.grey[600],
+                          fontSize: 13,
+                          height: 1.4,
+                        ),
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+
+                    // Question Count
+                    Row(
+                      children: [
+                        Icon(Icons.quiz, size: 16, color: Colors.grey[600]),
+                        const SizedBox(width: 4),
+                        Text(
+                          '${subjectCard.collectionCount} Questions',
+                          style: GoogleFonts.montserrat(
+                            color: Colors.grey[600],
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 16),
+
+                    // View Collections Button
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton.icon(
+                        onPressed: () => _onSubjectCardTap(subjectCard),
+                        icon: const Icon(Icons.collections_bookmark, size: 20),
+                        label: Text(
+                          'View Collections',
+                          style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFF2ECC71),
+                          foregroundColor: Colors.white,
+                          disabledBackgroundColor: Colors.grey[300],
+                          disabledForegroundColor: Colors.grey[600],
+                          padding: const EdgeInsets.symmetric(vertical: 14),
+                          elevation: 0,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  void _onSubjectCardTap(SubjectCard subjectCard) {
+    // Navigate to question collections page with the selected subject
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => QuestionCollectionsPage(
+          initialSubject: subjectCard.name,
+        ),
+      ),
+    );
+  }
+
   void _resetFilters() {
     setState(() {
       _selectedExamType = 'BECE';
@@ -333,6 +661,11 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
                   ),
                 ),
               ),
+            ),
+            
+            // Subject Cards
+            SliverToBoxAdapter(
+              child: _buildSubjectCards(isSmallScreen),
             ),
             
             // Search and Filters

@@ -13,6 +13,7 @@ class QuestionCollection {
   final String? description;
   final String? imageUrl;
   final List<Question> questions; // The actual questions in this collection
+  final List<String>? questionIds; // IDs of questions (for lazy loading)
 
   QuestionCollection({
     required this.id,
@@ -25,6 +26,7 @@ class QuestionCollection {
     this.description,
     this.imageUrl,
     required this.questions,
+    this.questionIds,
   });
 
   /// Helper method to format display name
@@ -105,6 +107,7 @@ class QuestionCollection {
     return grouped.entries.map((entry) {
       final questions = entry.value;
       final firstQuestion = questions.first;
+      final questionIds = questions.map((q) => q.id).toList();
       
       final collection = QuestionCollection(
         id: entry.key,
@@ -114,7 +117,8 @@ class QuestionCollection {
         year: firstQuestion.year,
         questionType: firstQuestion.type,
         questionCount: questions.length,
-        questions: questions,
+        questions: questions, // Keep full questions for now (could be optimized later)
+        questionIds: questionIds, // Store IDs for lazy loading
       );
 
       return collection;
