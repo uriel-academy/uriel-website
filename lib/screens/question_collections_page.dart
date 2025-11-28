@@ -64,6 +64,14 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
   // Subject Cards
   List<SubjectCard> _subjectCards = [];
   bool _isLoadingSubjects = false;
+  
+  // View state - whether showing subject cards or collection view
+  bool _isViewingCollections = false;
+  String _viewingSubjectName = '';
+  
+  // Pagination for collection view
+  int _collectionPage = 0;
+  final int _collectionsPerPage = 12;
 
   @override
   void initState() {
@@ -338,6 +346,10 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
     // Filter collections by the selected subject and group by collection type
     setState(() {
       _selectedSubject = subjectCard.name;
+      _viewingSubjectName = subjectCard.displayName;
+      _isViewingCollections = true;
+      _collectionPage = 0;
+      
       // Only show collections for selected subject
       final subjectCollections = _loadedCollections.where((collection) {
         return _formatSubjectName(collection.subject) == _selectedSubject;
@@ -346,6 +358,15 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
       // Group collections by type: MCQ (multipleChoice year collections), Theory (essay year collections), Topic (topic collections)
       _filteredCollections = subjectCollections;
       _currentPage = 0;
+    });
+  }
+  
+  void _closeCollectionView() {
+    setState(() {
+      _isViewingCollections = false;
+      _selectedSubject = 'All Subjects';
+      _filteredCollections = [];
+      _collectionPage = 0;
     });
   }
 
@@ -619,23 +640,69 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
       backgroundColor: const Color(0xFFF8FAFE),
       body: _isLoading
           ? const Center(child: CircularProgressIndicator(color: Color(0xFFD62828)))
-          : CustomScrollView(
-              slivers: [
-                // Search & Filter at top
-                SliverToBoxAdapter(
-                  child: _buildFilters(isSmallScreen),
+          : _isViewingCollections
+              ? _buildCollectionView(isSmallScreen)
+              : CustomScrollView(
+                  slivers: [
+                    // Search & Filter at top
+                    SliverToBoxAdapter(
+                      child: _buildFilters(isSmallScreen),
+                    ),
+                    // Subject Cards
+                    SliverToBoxAdapter(
+                      child: _buildSubjectCards(isSmallScreen),
+                    ),
+                  ],
                 ),
-                // Subject Cards
-                SliverToBoxAdapter(
-                  child: _buildSubjectCards(isSmallScreen),
-                ),
-                SliverToBoxAdapter(
-                  child: _filteredCollections.isEmpty
-                      ? _buildEmptyState()
-                      : _buildCollectionsList(isSmallScreen),
+    );
+  }
+  
+  Widget _buildCollectionView(bool isSmallScreen) {
+    return CustomScrollView(
+      slivers: [
+        // Header with back button
+        SliverToBoxAdapter(
+          child: Container(
+            margin: EdgeInsets.all(isSmallScreen ? 16 : 24),
+            padding: EdgeInsets.all(isSmallScreen ? 16 : 20),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(16),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: 0.05),
+                  blurRadius: 10,
+                  offset: const Offset(0, 2),
                 ),
               ],
             ),
+            child: Row(
+              children: [
+                IconButton(
+                  onPressed: _closeCollectionView,
+                  icon: const Icon(Icons.arrow_back),
+                  color: const Color(0xFF1A1E3F),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Text(
+                    _viewingSubjectName,
+                    style: GoogleFonts.playfairDisplay(
+                      fontSize: isSmallScreen ? 20 : 24,
+                      fontWeight: FontWeight.bold,
+                      color: const Color(0xFF1A1E3F),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        // Collections grouped by type
+        SliverToBoxAdapter(
+          child: _buildGroupedCollections(isSmallScreen),
+        ),
+      ],
     );
   }
 
@@ -1017,24 +1084,6 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Back button
-          Padding(
-            padding: const EdgeInsets.only(bottom: 16),
-            child: TextButton.icon(
-              onPressed: () {
-                setState(() {
-                  _selectedSubject = 'All Subjects';
-                  _filteredCollections = [];
-                });
-              },
-              icon: const Icon(Icons.arrow_back),
-              label: Text('Back to Subjects', style: GoogleFonts.montserrat()),
-              style: TextButton.styleFrom(
-                foregroundColor: const Color(0xFF1A1E3F),
-              ),
-            ),
-          ),
-          
           // MCQ Section
           if (mcqCollections.isNotEmpty) ...[
             _buildCollectionSection(
@@ -1081,6 +1130,12 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
     IconData icon,
     Color color,
   ) {
+    // Pagination: 12 items per page
+    final totalPages = (collections.length / _collectionsPerPage).ceil();
+    final startIndex = _collectionPage * _collectionsPerPage;
+    final endIndex = (startIndex + _collectionsPerPage).clamp(0, collections.length);
+    final paginatedCollections = collections.sublist(startIndex, endIndex);
+    
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -1124,10 +1179,10 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
         ),
         const SizedBox(height: 16),
         
-        // Collections
+        // Collections Grid
         isSmallScreen
             ? Column(
-                children: collections.map((collection) {
+                children: paginatedCollections.map((collection) {
                   return _buildCollectionCard(collection, isSmallScreen);
                 }).toList(),
               )
@@ -1140,11 +1195,46 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                   mainAxisSpacing: 16,
                   childAspectRatio: 2.1,
                 ),
-                itemCount: collections.length,
+                itemCount: paginatedCollections.length,
                 itemBuilder: (context, index) {
-                  return _buildCollectionCard(collections[index], isSmallScreen);
+                  return _buildCollectionCard(paginatedCollections[index], isSmallScreen);
                 },
               ),
+        
+        // Pagination Controls
+        if (totalPages > 1) ...[
+          const SizedBox(height: 24),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              IconButton(
+                onPressed: _collectionPage > 0
+                    ? () => setState(() => _collectionPage--)
+                    : null,
+                icon: const Icon(Icons.chevron_left),
+                color: const Color(0xFF1A1E3F),
+                disabledColor: Colors.grey[300],
+              ),
+              const SizedBox(width: 16),
+              Text(
+                'Page ${_collectionPage + 1} of $totalPages',
+                style: GoogleFonts.montserrat(
+                  color: const Color(0xFF1A1E3F),
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              const SizedBox(width: 16),
+              IconButton(
+                onPressed: _collectionPage < totalPages - 1
+                    ? () => setState(() => _collectionPage++)
+                    : null,
+                icon: const Icon(Icons.chevron_right),
+                color: const Color(0xFF1A1E3F),
+                disabledColor: Colors.grey[300],
+              ),
+            ],
+          ),
+        ],
       ],
     );
   }
