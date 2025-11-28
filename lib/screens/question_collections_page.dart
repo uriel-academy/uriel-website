@@ -253,61 +253,61 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
       'Mathematics': {
         'displayName': 'Mathematics',
         'description': 'Algebra, geometry, calculus, and mathematical problem-solving',
-        'icon': Icons.calculate,
+        'icon': Icons.dialpad, // Retro calculator keypad
         'color': const Color(0xFF2196F3),
       },
       'English': {
         'displayName': 'English Language',
         'description': 'Grammar, comprehension, literature, and language skills',
-        'icon': Icons.menu_book,
+        'icon': Icons.article, // Classic document/paper icon
         'color': const Color(0xFF4CAF50),
       },
       'Integrated Science': {
         'displayName': 'Integrated Science',
         'description': 'Physics, chemistry, biology, and earth science',
-        'icon': Icons.science,
+        'icon': Icons.biotech, // Classic microscope/lab equipment
         'color': const Color(0xFFFF9800),
       },
       'Social Studies': {
         'displayName': 'Social Studies',
         'description': 'History, geography, citizenship, and social sciences',
-        'icon': Icons.public,
+        'icon': Icons.account_balance, // Classic government building
         'color': const Color(0xFF9C27B0),
       },
       'Religious and Moral Education': {
         'displayName': 'RME',
         'description': 'Religious studies, ethics, and moral education',
-        'icon': Icons.church,
+        'icon': Icons.auto_stories, // Open book - classic religious study icon
         'color': const Color(0xFF795548),
       },
       'Ga': {
         'displayName': 'Ga Language',
         'description': 'Ga language, literature, and cultural studies',
-        'icon': Icons.language,
+        'icon': Icons.speaker_notes, // Speech/communication icon
         'color': const Color(0xFF607D8B),
       },
       'Asante Twi': {
         'displayName': 'Asante Twi',
         'description': 'Twi language, literature, and cultural studies',
-        'icon': Icons.record_voice_over,
+        'icon': Icons.chat_bubble_outline, // Classic chat/speech bubble
         'color': const Color(0xFF5D4037),
       },
       'French': {
         'displayName': 'French',
         'description': 'French language, grammar, and literature',
-        'icon': Icons.translate,
+        'icon': Icons.import_contacts, // Classic textbook icon
         'color': const Color(0xFF3F51B5),
       },
       'ICT': {
         'displayName': 'Information Technology',
         'description': 'Computer science, programming, and digital skills',
-        'icon': Icons.computer,
+        'icon': Icons.desktop_windows, // Retro desktop computer
         'color': const Color(0xFF009688),
       },
       'Creative Arts': {
         'displayName': 'Creative Arts',
         'description': 'Visual arts, music, dance, and creative expression',
-        'icon': Icons.palette,
+        'icon': Icons.brush, // Classic paintbrush
         'color': const Color(0xFFE91E63),
       },
     };
@@ -379,18 +379,18 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
 
     return Container(
       margin: EdgeInsets.symmetric(
-        horizontal: isSmallScreen ? 20 : 48,
-        vertical: isSmallScreen ? 24 : 40,
+        horizontal: isSmallScreen ? 16 : 48,
+        vertical: isSmallScreen ? 20 : 40,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsets.only(bottom: isSmallScreen ? 20 : 28),
+            padding: EdgeInsets.only(bottom: isSmallScreen ? 16 : 28),
             child: Text(
               'Browse by Subject',
               style: GoogleFonts.inter(
-                fontSize: isSmallScreen ? 24 : 32,
+                fontSize: isSmallScreen ? 22 : 32,
                 fontWeight: FontWeight.w700,
                 color: const Color(0xFF1D1D1F),
                 letterSpacing: -0.5,
@@ -420,7 +420,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(isSmallScreen ? 16 : 20),
         border: Border.all(
           color: Colors.grey.withValues(alpha: 0.12),
           width: 1,
@@ -428,7 +428,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
         boxShadow: [
           BoxShadow(
             color: Colors.black.withValues(alpha: 0.03),
-            blurRadius: 20,
+            blurRadius: isSmallScreen ? 12 : 20,
             offset: const Offset(0, 4),
           ),
         ],
@@ -437,62 +437,63 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
         color: Colors.transparent,
         child: InkWell(
           onTap: () => _onSubjectCardTap(subjectCard),
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(isSmallScreen ? 16 : 20),
           child: Padding(
-            padding: EdgeInsets.all(isSmallScreen ? 20 : 28),
+            padding: EdgeInsets.all(isSmallScreen ? 16 : 28),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 // Icon with subtle background
                 Container(
-                  width: isSmallScreen ? 64 : 72,
-                  height: isSmallScreen ? 64 : 72,
+                  width: isSmallScreen ? 56 : 72,
+                  height: isSmallScreen ? 56 : 72,
                   decoration: BoxDecoration(
                     color: subjectCard.color.withValues(alpha: 0.08),
-                    borderRadius: BorderRadius.circular(18),
+                    borderRadius: BorderRadius.circular(isSmallScreen ? 14 : 18),
                   ),
                   child: Icon(
                     subjectCard.icon,
-                    size: isSmallScreen ? 32 : 36,
+                    size: isSmallScreen ? 28 : 36,
                     color: subjectCard.color,
                   ),
                 ),
                 
-                const SizedBox(height: 20),
+                SizedBox(height: isSmallScreen ? 12 : 20),
                 
                 // Subject Name
                 Text(
                   subjectCard.displayName,
                   style: GoogleFonts.inter(
-                    fontSize: isSmallScreen ? 17 : 19,
+                    fontSize: isSmallScreen ? 15 : 19,
                     fontWeight: FontWeight.w600,
                     color: const Color(0xFF1D1D1F),
                     letterSpacing: -0.3,
+                    height: 1.2,
                   ),
                   textAlign: TextAlign.center,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                 ),
                 
-                const SizedBox(height: 8),
+                SizedBox(height: isSmallScreen ? 6 : 8),
                 
                 // Collection count with minimal styling
                 Text(
                   '${subjectCard.collectionCount} collections',
                   style: GoogleFonts.inter(
-                    fontSize: 13,
+                    fontSize: isSmallScreen ? 12 : 13,
                     fontWeight: FontWeight.w400,
                     color: const Color(0xFF86868B),
                     letterSpacing: -0.1,
                   ),
                 ),
                 
-                const SizedBox(height: 16),
+                SizedBox(height: isSmallScreen ? 12 : 16),
                 
                 // Minimalist arrow icon
                 Icon(
                   Icons.arrow_forward_ios,
-                  size: 14,
+                  size: isSmallScreen ? 12 : 14,
                   color: subjectCard.color.withValues(alpha: 0.5),
                 ),
               ],
@@ -627,10 +628,13 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
         SliverToBoxAdapter(
           child: Container(
             margin: EdgeInsets.all(isSmallScreen ? 16 : 24),
-            padding: EdgeInsets.all(isSmallScreen ? 16 : 20),
+            padding: EdgeInsets.symmetric(
+              horizontal: isSmallScreen ? 12 : 20,
+              vertical: isSmallScreen ? 12 : 16,
+            ),
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.circular(isSmallScreen ? 12 : 16),
               boxShadow: [
                 BoxShadow(
                   color: Colors.black.withValues(alpha: 0.05),
@@ -645,13 +649,18 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                   onPressed: _closeCollectionView,
                   icon: const Icon(Icons.arrow_back),
                   color: const Color(0xFF1A1E3F),
+                  padding: EdgeInsets.all(isSmallScreen ? 8 : 12),
+                  constraints: BoxConstraints(
+                    minWidth: isSmallScreen ? 40 : 48,
+                    minHeight: isSmallScreen ? 40 : 48,
+                  ),
                 ),
-                const SizedBox(width: 12),
+                const SizedBox(width: 8),
                 Expanded(
                   child: Text(
                     _viewingSubjectName,
                     style: GoogleFonts.playfairDisplay(
-                      fontSize: isSmallScreen ? 20 : 24,
+                      fontSize: isSmallScreen ? 18 : 24,
                       fontWeight: FontWeight.bold,
                       color: const Color(0xFF1A1E3F),
                     ),
@@ -1051,7 +1060,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
     return Container(
       padding: EdgeInsets.symmetric(
         horizontal: isSmallScreen ? 16 : 24,
-        vertical: 8,
+        vertical: isSmallScreen ? 8 : 12,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1080,7 +1089,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
           
           // Pagination Controls
           if (totalPages > 1) ...[
-            const SizedBox(height: 24),
+            SizedBox(height: isSmallScreen ? 20 : 24),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -1091,16 +1100,19 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                   icon: const Icon(Icons.chevron_left),
                   color: const Color(0xFF1A1E3F),
                   disabledColor: Colors.grey[300],
+                  iconSize: isSmallScreen ? 20 : 24,
+                  padding: EdgeInsets.all(isSmallScreen ? 8 : 12),
                 ),
-                const SizedBox(width: 16),
+                SizedBox(width: isSmallScreen ? 12 : 16),
                 Text(
                   'Page ${_collectionPage + 1} of $totalPages',
                   style: GoogleFonts.montserrat(
                     color: const Color(0xFF1A1E3F),
                     fontWeight: FontWeight.w600,
+                    fontSize: isSmallScreen ? 13 : 14,
                   ),
                 ),
-                const SizedBox(width: 16),
+                SizedBox(width: isSmallScreen ? 12 : 16),
                 IconButton(
                   onPressed: _collectionPage < totalPages - 1
                       ? () => setState(() => _collectionPage++)
@@ -1108,6 +1120,8 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                   icon: const Icon(Icons.chevron_right),
                   color: const Color(0xFF1A1E3F),
                   disabledColor: Colors.grey[300],
+                  iconSize: isSmallScreen ? 20 : 24,
+                  padding: EdgeInsets.all(isSmallScreen ? 8 : 12),
                 ),
               ],
             ),
@@ -1301,10 +1315,10 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
 
   Widget _buildCollectionCard(QuestionCollection collection, bool isSmallScreen) {
     return Container(
-      margin: isSmallScreen ? const EdgeInsets.only(bottom: 16) : EdgeInsets.zero,
+      margin: isSmallScreen ? const EdgeInsets.only(bottom: 12) : EdgeInsets.zero,
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(isSmallScreen ? 12 : 16),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withValues(alpha: 0.05),
@@ -1314,23 +1328,26 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
         ],
       ),
       child: Padding(
-        padding: EdgeInsets.all(isSmallScreen ? 16 : 20),
+        padding: EdgeInsets.all(isSmallScreen ? 14 : 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               children: [
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: isSmallScreen ? 10 : 12,
+                    vertical: isSmallScreen ? 5 : 6,
+                  ),
                   decoration: BoxDecoration(
                     color: const Color(0xFFD62828),
-                    borderRadius: BorderRadius.circular(8),
+                    borderRadius: BorderRadius.circular(isSmallScreen ? 6 : 8),
                   ),
                   child: Text(
                     collection.examType.name.toUpperCase(),
                     style: GoogleFonts.montserrat(
                       color: Colors.white,
-                      fontSize: 12,
+                      fontSize: isSmallScreen ? 10 : 12,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
