@@ -577,6 +577,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
   void _applyFilters() {
     setState(() {
       _currentPage = 0; // reset to first page when filters change
+      _collectionPage = 0; // reset collection view page too
       // Only show collections if a subject is selected
       if (_selectedSubject != 'All Subjects') {
         _filteredCollections = _loadedCollections.where((collection) {
@@ -698,9 +699,13 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
             ),
           ),
         ),
-        // Collections grouped by type
+        // Search & Filter card
         SliverToBoxAdapter(
-          child: _buildGroupedCollections(isSmallScreen),
+          child: _buildFilters(isSmallScreen),
+        ),
+        // Collections (combined list)
+        SliverToBoxAdapter(
+          child: _buildUnifiedCollections(isSmallScreen),
         ),
       ],
     );
@@ -1057,6 +1062,99 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
     );
   }
 
+  Widget _buildUnifiedCollections(bool isSmallScreen) {
+    // Sort collections: MCQ first, then Theory, then Topics
+    final sortedCollections = List<QuestionCollection>.from(_filteredCollections);
+    sortedCollections.sort((a, b) {
+      // Priority order: MCQ (multipleChoice) -> Theory (essay) -> Topics (All Years)
+      int getTypeOrder(QuestionCollection c) {
+        if (c.questionType == QuestionType.multipleChoice && c.year != 'All Years') return 0; // MCQ
+        if (c.questionType == QuestionType.essay && c.year != 'All Years') return 1; // Theory
+        return 2; // Topics
+      }
+      
+      final typeCompare = getTypeOrder(a).compareTo(getTypeOrder(b));
+      if (typeCompare != 0) return typeCompare;
+      
+      // Within same type, sort by year (most recent first)
+      return b.year.compareTo(a.year);
+    });
+    
+    // Pagination: 12 items per page
+    final totalPages = (sortedCollections.length / _collectionsPerPage).ceil();
+    final startIndex = _collectionPage * _collectionsPerPage;
+    final endIndex = (startIndex + _collectionsPerPage).clamp(0, sortedCollections.length);
+    final paginatedCollections = sortedCollections.sublist(startIndex, endIndex);
+    
+    return Container(
+      padding: EdgeInsets.symmetric(
+        horizontal: isSmallScreen ? 16 : 24,
+        vertical: 8,
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Collections Grid
+          isSmallScreen
+              ? Column(
+                  children: paginatedCollections.map((collection) {
+                    return _buildCollectionCard(collection, isSmallScreen);
+                  }).toList(),
+                )
+              : GridView.builder(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 16,
+                    mainAxisSpacing: 16,
+                    childAspectRatio: 2.1,
+                  ),
+                  itemCount: paginatedCollections.length,
+                  itemBuilder: (context, index) {
+                    return _buildCollectionCard(paginatedCollections[index], isSmallScreen);
+                  },
+                ),
+          
+          // Pagination Controls
+          if (totalPages > 1) ...[
+            const SizedBox(height: 24),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(
+                  onPressed: _collectionPage > 0
+                      ? () => setState(() => _collectionPage--)
+                      : null,
+                  icon: const Icon(Icons.chevron_left),
+                  color: const Color(0xFF1A1E3F),
+                  disabledColor: Colors.grey[300],
+                ),
+                const SizedBox(width: 16),
+                Text(
+                  'Page ${_collectionPage + 1} of $totalPages',
+                  style: GoogleFonts.montserrat(
+                    color: const Color(0xFF1A1E3F),
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                const SizedBox(width: 16),
+                IconButton(
+                  onPressed: _collectionPage < totalPages - 1
+                      ? () => setState(() => _collectionPage++)
+                      : null,
+                  icon: const Icon(Icons.chevron_right),
+                  color: const Color(0xFF1A1E3F),
+                  disabledColor: Colors.grey[300],
+                ),
+              ],
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+  
   Widget _buildGroupedCollections(bool isSmallScreen) {
     // Separate collections into MCQ, Theory, and Topic
     final mcqCollections = _filteredCollections.where((c) {
