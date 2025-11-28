@@ -35,8 +35,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
     {'id': 'overall', 'name': 'Overall', 'emoji': '🏆'},
     {'id': 'trivia', 'name': 'Trivia', 'emoji': '🎯'},
     {'id': 'bece', 'name': 'BECE', 'emoji': '📝'},
-    {'id': 'wassce', 'name': 'WASSCE', 'emoji': '📚'},
-    {'id': 'courses', 'name': 'Courses', 'emoji': '📖'},
+    {'id': 'courses', 'name': 'Textbooks', 'emoji': '📖'},
   ];
   
   final List<String> _periods = ['Today', 'This Week', 'This Month', 'School', 'All Time'];
@@ -999,12 +998,10 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
         ),
         child: Column(
           children: [
-            Icon(icon, size: 20, color: color),
-            const SizedBox(height: 6),
             Text(
               value,
               style: GoogleFonts.inter(
-                fontSize: 18,
+                fontSize: 28, // Enlarged from 18
                 fontWeight: FontWeight.w700,
                 color: const Color(0xFF1C1C1E),
               ),
@@ -1361,12 +1358,10 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
         ),
         child: Column(
           children: [
-            Icon(icon, size: 20, color: const Color(0xFFD2B48C)),
-            const SizedBox(height: 8),
             Text(
               value,
               style: GoogleFonts.inter(
-                fontSize: 16,
+                fontSize: 24, // Enlarged from 16
                 fontWeight: FontWeight.w700,
                 color: const Color(0xFF1C1C1E),
               ),

@@ -618,20 +618,20 @@ class LandingPage extends StatelessWidget {
                 children: [
                   _buildTestimonialCard(
                     name: 'Akosua Mensah',
-                    school: 'Achimota School',
-                    quote: 'Uriel Academy helped me improve my WASSCE grades by 2 points. The past questions are exactly what came in the real exams!',
+                    school: 'Ave Maria School',
+                    quote: 'Uriel Academy helped me prepare for my BECE exams. The past questions and practice tests really boosted my confidence!',
                     width: isDesktop ? (constraints.maxWidth - 40) / 3 : constraints.maxWidth,
                   ),
                   _buildTestimonialCard(
                     name: 'Kwame Asante',
-                    school: 'Presbyterian Boys\' Senior High',
-                    quote: 'The AI study plans are incredible. I never knew I was weak in certain topics until Uriel showed me.',
+                    school: 'Morning Star International School',
+                    quote: 'The AI study plans are incredible. I never knew I was weak in certain topics until Uriel showed me where to improve.',
                     width: isDesktop ? (constraints.maxWidth - 40) / 3 : constraints.maxWidth,
                   ),
                   _buildTestimonialCard(
                     name: 'Ama Osei',
-                    school: 'Wesley Girls\' High School',
-                    quote: 'Best educational app for Ghanaian students. The textbooks are exactly what we use in school.',
+                    school: 'SAPS School',
+                    quote: 'Best app for JHS students! The textbooks and notes are exactly what we need for BECE preparation.',
                     width: isDesktop ? (constraints.maxWidth - 40) / 3 : constraints.maxWidth,
                   ),
                 ],

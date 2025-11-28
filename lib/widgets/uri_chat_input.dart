@@ -23,6 +23,7 @@ class _UriChatInputState extends State<UriChatInput> {
   bool _loading = false;
   String? _error;
   late ChatService _chatService;
+  StreamSubscription? _chatSubscription;
 
   @override
   void initState() {
@@ -30,7 +31,7 @@ class _UriChatInputState extends State<UriChatInput> {
     _chatService = ChatService(Uri.parse(
       "https://us-central1-uriel-academy-41fb0.cloudfunctions.net/aiChatHttp",
     ));
-    _chatService.stream.listen((chunk) {
+    _chatSubscription = _chatService.stream.listen((chunk) {
       debugPrint('Received chunk: ${chunk.delta != null ? 'text' : chunk.done ? 'done' : chunk.error != null ? 'error' : 'unknown'}');
       if (chunk.error != null) {
         debugPrint('Stream error: ${chunk.error}');
@@ -59,6 +60,7 @@ class _UriChatInputState extends State<UriChatInput> {
 
   @override
   void dispose() {
+    _chatSubscription?.cancel();
     _chatService.dispose();
     _input.dispose();
     super.dispose();

@@ -67,7 +67,7 @@ class CommonFooter extends StatelessWidget {
           ],
           
           Text(
-            '© 2025 Uriel Academy. Built with ❤️ for Ghanaian students.',
+            '© 2025 Uriel Academy.',
             style: GoogleFonts.montserrat(
               fontSize: isSmallScreen ? 12 : 14,
               color: Colors.white.withValues(alpha: 0.7),

@@ -12,11 +12,12 @@ import '../services/auth_service.dart';
 import '../services/notification_service.dart';
 import '../services/leaderboard_rank_service.dart';
 import '../services/telemetry_service.dart';
+import '../services/resilience_service.dart';
 import '../widgets/uri_chat_input.dart';
 import '../services/xp_service.dart';
 import '../widgets/rank_badge_widget.dart';
 import '../services/streak_service.dart';
-import 'redesigned_all_ranks_page.dart';
+import '../screens/redesigned_all_ranks_page.dart';
 import 'question_collections_page.dart';
 import 'revision_page.dart';
 import 'generate_quiz_page.dart';
@@ -182,22 +183,28 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           .collection('users')
           .doc(user.uid)
           .snapshots()
-          .listen((snapshot) {
-            if (snapshot.exists && mounted) {
-              final data = snapshot.data() as Map<String, dynamic>;
-              debugPrint('🔄 User data updated from Firestore:');
-              debugPrint('  presetAvatar: ${data['presetAvatar']}');
-              debugPrint('  profileImageUrl: ${data['profileImageUrl']}');
-              setState(() {
-                userName = data['firstName'] ?? user.displayName?.split(' ').first ?? _getNameFromEmail(user.email);
-                final rawClass = data['class'] ?? 'JHS FORM 3';
-                final isTeacher = widget.isTeacher || data['role'] == 'teacher';
-                userClass = isTeacher ? '$rawClass TEACHER' : rawClass;
-                userPhotoUrl = data['profileImageUrl'] ?? user.photoURL;
-                userPresetAvatar = data['presetAvatar'];
-              });
-            }
-          });
+          .listen(
+            (snapshot) {
+              if (snapshot.exists && mounted) {
+                final data = snapshot.data() as Map<String, dynamic>;
+                debugPrint('🔄 User data updated from Firestore:');
+                debugPrint('  presetAvatar: ${data['presetAvatar']}');
+                debugPrint('  profileImageUrl: ${data['profileImageUrl']}');
+                setState(() {
+                  userName = data['firstName'] ?? user.displayName?.split(' ').first ?? _getNameFromEmail(user.email);
+                  final rawClass = data['class'] ?? 'JHS FORM 3';
+                  final isTeacher = widget.isTeacher || data['role'] == 'teacher';
+                  userClass = isTeacher ? '$rawClass TEACHER' : rawClass;
+                  userPhotoUrl = data['profileImageUrl'] ?? user.photoURL;
+                  userPresetAvatar = data['presetAvatar'];
+                });
+              }
+            },
+            onError: (error) {
+              debugPrint('⚠️ User stream error (non-critical): $error');
+              // Don't crash the app, just log the error
+            },
+          );
     } else {
       // Cancel subscription if user is null
       _userStreamSubscription?.cancel();
@@ -310,19 +317,28 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         TelemetryService().markStart('dashboard_quick_${user.uid}');
         TelemetryService().recordEvent('dashboard_load_start', properties: {'phase': 'quick'});
       } catch (_) {}
-      final quickSnapshot = await FirebaseFirestore.instance
-          .collection('quizzes')
-          .where('userId', isEqualTo: user.uid)
-          .orderBy('timestamp', descending: true)
-          .limit(20)
-          .get()
-          .timeout(const Duration(seconds: 6));
+      
+      // Use resilient query with circuit breaker and retry logic
+      final quickSnapshot = await ResilienceService().executeQuery(
+        queryKey: 'dashboard_quick_${user.uid}',
+        queryFn: () => FirebaseFirestore.instance
+            .collection('quizzes')
+            .where('userId', isEqualTo: user.uid)
+            .orderBy('timestamp', descending: true)
+            .limit(20)
+            .get(),
+        maxRetries: 2,
+        retryDelay: const Duration(milliseconds: 500),
+      );
 
+      if (quickSnapshot != null) {
         await _processQuizSnapshot(quickSnapshot.docs, quick: true);
+      }
 
       // Telemetry: quick load completed (duration measured if start exists)
       try {
-        await TelemetryService().markEnd('dashboard_quick_${user.uid}', 'dashboard_quick_loaded', properties: {'count': quickSnapshot.docs.length});
+        await TelemetryService().markEnd('dashboard_quick_${user.uid}', 'dashboard_quick_loaded', 
+          properties: {'count': quickSnapshot?.docs.length ?? 0});
       } catch (_) {}
     } catch (e) {
       debugPrint('Quick stats load failed: $e');
@@ -601,8 +617,14 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       int totalQuestions = 0;
       final collection = FirebaseFirestore.instance.collection('quizzes');
       Query query = collection.where('userId', isEqualTo: userId).orderBy('timestamp', descending: true).limit(500);
-      QuerySnapshot snap = await query.get();
-      while (true) {
+      QuerySnapshot snap = await query.get().timeout(const Duration(seconds: 10));
+      
+      // Safety limits to prevent infinite loops
+      const int maxPages = 50; // Max 25k quizzes (50 * 500)
+      int pageCount = 0;
+      
+      while (pageCount < maxPages) {
+        pageCount++;
         if (snap.docs.isEmpty) break;
         for (final d in snap.docs) {
           try {
@@ -611,8 +633,24 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           } catch (_) {}
         }
         if (snap.docs.length < 500) break;
-        final last = snap.docs.last;
-        snap = await collection.where('userId', isEqualTo: userId).orderBy('timestamp', descending: true).startAfterDocument(last).limit(500).get();
+        
+        try {
+          final last = snap.docs.last;
+          snap = await collection
+              .where('userId', isEqualTo: userId)
+              .orderBy('timestamp', descending: true)
+              .startAfterDocument(last)
+              .limit(500)
+              .get()
+              .timeout(const Duration(seconds: 10));
+        } catch (e) {
+          debugPrint('Pagination failed at page $pageCount: $e');
+          break; // Exit loop on error
+        }
+      }
+      
+      if (pageCount >= maxPages) {
+        debugPrint('⚠️ Reached max pagination limit ($maxPages pages)');
       }
 
       final hours = (totalQuestions * 2 / 60).round();
@@ -2357,13 +2395,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                     child: Divider(),
                   ),
                   
-                  _buildNavItem(-1, 'Pricing'),
                   _buildNavItem(-7, 'Payment'),
-                  _buildNavItem(-2, 'About Us'),
-                  _buildNavItem(-3, 'Contact'),
-                  _buildNavItem(-4, 'Privacy Policy'),
-                  _buildNavItem(-5, 'Terms of Service'),
-                  _buildNavItem(-6, 'FAQ'),
                   _buildNavItem(-8, 'All Ranks'),
                 ],
               ),
@@ -2621,40 +2653,43 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
 
   // Build floating Uri chatbot button
   Widget _buildUriFloatingButton() {
-    return FloatingActionButton.extended(
-      onPressed: () {
-        setState(() {
-          _showUriChat = !_showUriChat;
-        });
-      },
-      backgroundColor: const Color(0xFF001F3F), // Navy blue
-      icon: _showUriChat 
-        ? const Icon(Icons.close, color: Colors.white)
-        : Container(
-            width: 40,
-            height: 40,
-            padding: const EdgeInsets.all(1), // Minimal white border showing
-            decoration: const BoxDecoration(
-              color: Colors.white,
-              shape: BoxShape.circle,
-            ),
-            child: ClipOval(
-              child: Image.asset(
-                'assets/uri.webp',
-                fit: BoxFit.cover,
+    return Opacity(
+      opacity: 0.85, // Add transparency
+      child: FloatingActionButton.extended(
+        onPressed: () {
+          setState(() {
+            _showUriChat = !_showUriChat;
+          });
+        },
+        backgroundColor: const Color(0xFF001F3F), // Navy blue
+        icon: _showUriChat 
+          ? const Icon(Icons.close, color: Colors.white)
+          : Container(
+              width: 40,
+              height: 40,
+              padding: const EdgeInsets.all(1), // Minimal white border showing
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                shape: BoxShape.circle,
+              ),
+              child: ClipOval(
+                child: Image.asset(
+                  'assets/uri.webp',
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
+        label: Text(
+          _showUriChat ? 'Close Uri' : 'Ask Uri',
+          style: GoogleFonts.montserrat(
+            color: Colors.white,
+            fontWeight: FontWeight.w600,
           ),
-      label: Text(
-        _showUriChat ? 'Close Uri' : 'Ask Uri',
-        style: GoogleFonts.montserrat(
-          color: Colors.white,
-          fontWeight: FontWeight.w600,
         ),
-      ),
-      elevation: 6,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(30),
+        elevation: 6,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30),
+        ),
       ),
     );
   }
@@ -2959,15 +2994,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       SizedBox(height: isSmallScreen ? 16 : 24),
       
       // Messages & Notifications Card
-      _buildMessagesNotificationsCard(),          SizedBox(height: isSmallScreen ? 16 : 24),
-          
-          // AI Recommendations
-          _buildAIRecommendations(),
-          
-          SizedBox(height: isSmallScreen ? 16 : 24),
-          
-          // Smart Insights (ML-powered personalization)
-          _buildSmartInsights(),
+      _buildMessagesNotificationsCard(),
+      
+      SizedBox(height: isSmallScreen ? 16 : 24),
           
           // Add extra bottom padding for mobile to account for bottom navigation
           if (isSmallScreen) const SizedBox(height: 80),
@@ -3186,7 +3215,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                               'Average XP',
                               avgXP.toStringAsFixed(0),
                               Icons.stars_rounded,
-                              const Color(0xFFD62828),
+                              const Color(0xFF1A1E3F),
                             ),
                           ),
                           SizedBox(
@@ -4114,15 +4143,6 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            padding: const EdgeInsets.all(10),
-            decoration: BoxDecoration(
-              color: color.withValues(alpha: 0.1),
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: Icon(icon, color: color, size: 24),
-          ),
-          const SizedBox(height: 16),
           Text(
             title,
             style: GoogleFonts.montserrat(
@@ -4154,11 +4174,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     return Container(
       padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
       decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [Color(0xFF1A1E3F), Color(0xFF2D3561)],
-        ),
+        color: const Color(0xFF1A1E3F), // Uriel navy blue
         borderRadius: BorderRadius.circular(isSmallScreen ? 16 : 20),
         boxShadow: [
           BoxShadow(
@@ -4461,45 +4477,27 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Enhanced Header with Icon and Action
+          // Enhanced Header without Icon
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
-                    padding: const EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [
-                          const Color(0xFF1A1E3F),
-                          const Color(0xFF1A1E3F).withValues(alpha: 0.8),
-                        ],
-                      ),
-                      borderRadius: BorderRadius.circular(10),
+                  Text(
+                    'Subject Mastery',
+                    style: GoogleFonts.playfairDisplay(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: const Color(0xFF1A1E3F),
                     ),
-                    child: const Icon(Icons.school, color: Colors.white, size: 18),
                   ),
-                  const SizedBox(width: 12),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Subject Mastery',
-                        style: GoogleFonts.playfairDisplay(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: const Color(0xFF1A1E3F),
-                        ),
-                      ),
-                      Text(
-                        'Track your progress across subjects',
-                        style: GoogleFonts.montserrat(
-                          fontSize: 12,
-                          color: Colors.grey[600],
-                        ),
-                      ),
-                    ],
+                  Text(
+                    'Track your progress across subjects',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 12,
+                      color: Colors.grey[600],
+                    ),
                   ),
                 ],
               ),
@@ -4906,15 +4904,6 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       padding: const EdgeInsets.only(bottom: 12),
       child: Row(
         children: [
-          Container(
-            padding: const EdgeInsets.all(8),
-            decoration: BoxDecoration(
-              color: color.withValues(alpha: 0.1),
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child: Icon(icon, size: 16, color: color),
-          ),
-          const SizedBox(width: 12),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -5011,8 +5000,6 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       padding: const EdgeInsets.only(bottom: 12),
       child: Row(
         children: [
-          Icon(icon, size: 16, color: const Color(0xFFD62828)),
-          const SizedBox(width: 8),
           Expanded(
             child: Text(
               label,
@@ -5062,20 +5049,6 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           // Enhanced Header with Progress Indicator
           Row(
             children: [
-              Container(
-                padding: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [
-                      const Color(0xFF1A1E3F),
-                      const Color(0xFF1A1E3F).withValues(alpha: 0.8),
-                    ],
-                  ),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: const Icon(Icons.history_edu, color: Colors.white, size: 20),
-              ),
-              const SizedBox(width: 12),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -5419,19 +5392,13 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            children: [
-              const Icon(Icons.analytics, color: Color(0xFF1A1E3F), size: 20),
-              const SizedBox(width: 8),
-              Text(
-                'Performance Analytics',
-                style: GoogleFonts.playfairDisplay(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: const Color(0xFF1A1E3F),
-                ),
-              ),
-            ],
+          Text(
+            'Performance Analytics',
+            style: GoogleFonts.playfairDisplay(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: const Color(0xFF1A1E3F),
+            ),
           ),
           const SizedBox(height: 16),
           
@@ -6394,11 +6361,11 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           const SizedBox(height: 16),
           _buildQuickActionButton('Continue Study', Icons.play_arrow, () => setState(() => _selectedIndex = 1)),
           const SizedBox(height: 8),
-          _buildQuickActionButton('Take Quiz', Icons.quiz, () => setState(() => _selectedIndex = 1)),
+          _buildQuickActionButton('Take Quiz', Icons.quiz, () => setState(() => _selectedIndex = 3)),
           const SizedBox(height: 8),
           _buildQuickActionButton('Read Books', Icons.menu_book, () => setState(() => _selectedIndex = 2)),
           const SizedBox(height: 8),
-          _buildQuickActionButton('View your Rank', Icons.emoji_events, _showRankDialog),
+          _buildQuickActionButton('View your Rank', Icons.emoji_events, () => setState(() => _selectedIndex = 4)),
         ],
       ),
     );
@@ -6934,19 +6901,13 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            children: [
-              const Icon(Icons.psychology, color: Colors.white, size: 24),
-              const SizedBox(width: 12),
-              Text(
-                'Study Recommendations',
-                style: GoogleFonts.playfairDisplay(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-            ],
+          Text(
+            'Study Recommendations',
+            style: GoogleFonts.playfairDisplay(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
           ),
           const SizedBox(height: 16),
           Text(
@@ -7029,19 +6990,13 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            children: [
-              const Icon(Icons.psychology, color: Colors.white, size: 24),
-              const SizedBox(width: 12),
-              Text(
-                'Smart Insights',
-                style: GoogleFonts.playfairDisplay(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-            ],
+          Text(
+            'Smart Insights',
+            style: GoogleFonts.playfairDisplay(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
           ),
           const SizedBox(height: 16),
           Text(
@@ -7424,40 +7379,9 @@ Widget _buildFeedbackPage() {
                         const Divider(height: 1),
                         
                         // Footer Pages Section
-                        _buildProfileMenuItem(Icons.attach_money_outlined, 'Pricing', () {
-                          Navigator.pop(context);
-                          Navigator.pushNamed(context, '/pricing');
-                        }),
-                        _buildProfileMenuItem(Icons.chat_bubble_outline, 'Uri AI', () {
-                          Navigator.pop(context);
-                          setState(() {
-                            _showingProfile = false;
-                            _selectedIndex = 7;
-                          });
-                        }),
                         _buildProfileMenuItem(Icons.payment, 'Payment', () {
                           Navigator.pop(context);
                           Navigator.pushNamed(context, '/payment');
-                        }),
-                        _buildProfileMenuItem(Icons.info_outline, 'About Us', () {
-                          Navigator.pop(context);
-                          Navigator.pushNamed(context, '/about');
-                        }),
-                        _buildProfileMenuItem(Icons.phone_outlined, 'Contact', () {
-                          Navigator.pop(context);
-                          Navigator.pushNamed(context, '/contact');
-                        }),
-                        _buildProfileMenuItem(Icons.help_outline, 'FAQ', () {
-                          Navigator.pop(context);
-                          Navigator.pushNamed(context, '/faq');
-                        }),
-                        _buildProfileMenuItem(Icons.privacy_tip_outlined, 'Privacy Policy', () {
-                          Navigator.pop(context);
-                          Navigator.pushNamed(context, '/privacy');
-                        }),
-                        _buildProfileMenuItem(Icons.gavel_outlined, 'Terms of Service', () {
-                          Navigator.pop(context);
-                          Navigator.pushNamed(context, '/terms');
                         }),
                         
                         const Divider(height: 1),

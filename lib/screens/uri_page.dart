@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../services/chat_service.dart';
+import '../services/image_compression_service.dart';
 import 'dart:math' as math;
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_math_fork/flutter_math.dart';
@@ -118,15 +119,53 @@ class _UriPageState extends State<UriPage> {
               return;
             }
             
+            // Show processing indicator
+            if (mounted) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text('Processing image...', style: GoogleFonts.montserrat()),
+                  duration: const Duration(seconds: 2),
+                ),
+              );
+            }
+            
             final reader = html.FileReader();
             
             reader.readAsArrayBuffer(file);
-            reader.onLoadEnd.listen((e) {
+            reader.onLoadEnd.listen((e) async {
               final bytes = reader.result as Uint8List;
               
-              setState(() {
-                _selectedImageBytes = bytes;
-              });
+              // Validate and compress image
+              final compressed = await ImageCompressionService().processImage(
+                bytes,
+                fileName: fileName,
+                onError: (error) {
+                  if (mounted) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text(error, style: GoogleFonts.montserrat()),
+                        backgroundColor: Colors.red,
+                        duration: const Duration(seconds: 4),
+                      ),
+                    );
+                  }
+                },
+              );
+              
+              if (compressed != null && mounted) {
+                setState(() {
+                  _selectedImageBytes = compressed;
+                });
+                
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('Image ready! Size optimized for upload.', 
+                      style: GoogleFonts.montserrat()),
+                    backgroundColor: Colors.green,
+                    duration: const Duration(seconds: 2),
+                  ),
+                );
+              }
             });
           }
         });
@@ -136,11 +175,49 @@ class _UriPageState extends State<UriPage> {
         final XFile? image = await picker.pickImage(source: ImageSource.gallery);
         
         if (image != null) {
+          // Show processing indicator
+          if (mounted) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content: Text('Processing image...', style: GoogleFonts.montserrat()),
+                duration: const Duration(seconds: 2),
+              ),
+            );
+          }
+          
           final bytes = await image.readAsBytes();
           
-          setState(() {
-            _selectedImageBytes = bytes;
-          });
+          // Validate and compress image
+          final compressed = await ImageCompressionService().processImage(
+            bytes,
+            fileName: image.name,
+            onError: (error) {
+              if (mounted) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text(error, style: GoogleFonts.montserrat()),
+                    backgroundColor: Colors.red,
+                    duration: const Duration(seconds: 4),
+                  ),
+                );
+              }
+            },
+          );
+          
+          if (compressed != null && mounted) {
+            setState(() {
+              _selectedImageBytes = compressed;
+            });
+            
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content: Text('Image ready! Size optimized for upload.', 
+                  style: GoogleFonts.montserrat()),
+                backgroundColor: Colors.green,
+                duration: const Duration(seconds: 2),
+              ),
+            );
+          }
         }
       }
     } catch (e) {

@@ -58,16 +58,16 @@ void main() async {
   FirebaseAnalyticsObserver observer = FirebaseAnalyticsObserver(analytics: analytics);
 
   // Enable local persistence so note text is immediately available offline
-  // Use limited cache on web to prevent internal state errors (Firebase SDK 11.x)
+  // Production settings optimized for high concurrency (10k+ users)
   if (kIsWeb) {
     FirebaseFirestore.instance.settings = const Settings(
       persistenceEnabled: true,
-      cacheSizeBytes: 100 * 1024 * 1024, // 100MB cache limit for web
+      cacheSizeBytes: 50 * 1024 * 1024, // 50MB cache (reduced for memory efficiency)
     );
   } else {
     FirebaseFirestore.instance.settings = const Settings(
       persistenceEnabled: true,
-      cacheSizeBytes: Settings.CACHE_SIZE_UNLIMITED,
+      cacheSizeBytes: 100 * 1024 * 1024, // 100MB on mobile
     );
   }
 

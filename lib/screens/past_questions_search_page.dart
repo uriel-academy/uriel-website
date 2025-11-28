@@ -67,7 +67,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
   String _sortBy = 'Most Recent';
   int _currentPage = 1;
   final int _questionsPerPage = 20;
-  bool _hasLoadedQuestions = false; // Track if we've loaded questions yet
+  final bool _hasLoadedQuestions = false; // Track if we've loaded questions yet
 
   // Subject Cards
   List<SubjectCard> _subjectCards = [];
@@ -258,7 +258,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
       'French': {
         'displayName': 'French',
         'description': 'French language, grammar, and literature',
-        'icon': Icons.translate,
+        'icon': Icons.flag,
         'color': const Color(0xFF3F51B5),
       },
       'ICT': {

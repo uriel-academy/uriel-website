@@ -747,7 +747,10 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
         gradient: const LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
-          colors: [Color(0xFF9B59B6), Color(0xFF8E44AD)],
+          colors: [
+            Color(0xFF9B59B6),
+            Color(0xFF8E44AD),
+          ],
         ),
         borderRadius: BorderRadius.circular(16),
         boxShadow: [

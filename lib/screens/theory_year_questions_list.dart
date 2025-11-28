@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'dart:async';
 import '../services/chat_service.dart';
 
 class TheoryYearQuestionsList extends StatefulWidget {
@@ -23,6 +24,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
   final List<Map<String, String>> _messages = [];
   bool _isLoading = false;
   late ChatService _chatService;
+  StreamSubscription? _chatSubscription;
 
   @override
   void initState() {
@@ -31,7 +33,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
         'https://uriel-backend-api-836591016471.us-central1.run.app/api/chat/stream'));
     
     // Listen to chat service stream
-    _chatService.stream.listen(
+    _chatSubscription = _chatService.stream.listen(
       (chunk) {
         if (chunk.delta != null) {
           setState(() {
@@ -72,8 +74,10 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
 
   @override
   void dispose() {
+    _chatSubscription?.cancel();
     _chatController.dispose();
     _chatScrollController.dispose();
+    _chatService.dispose();
     super.dispose();
   }
 
