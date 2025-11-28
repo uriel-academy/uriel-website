@@ -365,7 +365,8 @@ function parseInlineTable(text) {
     
     // Find tables with inline format
     // Pattern: "A B C D" followed by "11. option option option option12. option..."
-    const tableRegex = /A\s+B\s+C\s+D\s*\n\s*(.+?)(?=PART|Read the passage|$)/gs;
+    // Handle both "\n31." and "31." (with or without newline after header)
+    const tableRegex = /A\s+B\s+C\s+D\s*\n?\s*(\d+\.[\s\S]+?)(?=\n\n\n|$)/gs;
     const tableMatches = text.matchAll(tableRegex);
     
     for (const tableMatch of tableMatches) {
@@ -380,17 +381,57 @@ function parseInlineTable(text) {
             const qNum = parseInt(qMatch[1]);
             const optionsText = qMatch[2].trim();
             
-            // Split options - they're space-separated
-            const parts = optionsText.split(/\s+/).filter(p => p && p.length > 0);
+            // Try to extract exactly 4 options
+            // For most questions, options are single words separated by spaces
+            // For some, options are multi-word phrases (e.g., "la bibliothèque")
+            const words = optionsText.split(/\s+/).filter(p => p && p.length > 0);
             
-            if (parts.length >= 4) {
-                const options = [
-                    `A. ${parts[0]}`,
-                    `B. ${parts[1]}`,
-                    `C. ${parts[2]}`,
-                    `D. ${parts[3]}`
-                ];
+            let options = [];
+            
+            // If we have exactly 4 words, it's simple
+            if (words.length === 4) {
+                options = words.map((w, i) => `${String.fromCharCode(65 + i)}. ${w}`);
+            }
+            // If more than 4, we need to group them intelligently
+            else if (words.length > 4) {
+                // Strategy: Look for French articles (la, le, l', les, un, une, des, etc.)
+                // that typically start a new option
+                const articleMarkers = ['la', 'le', 'les', 'un', 'une', 'des', 'du', 'de', 'au', 'aux'];
+                const optionGroups = [];
+                let currentOption = [];
                 
+                for (let i = 0; i < words.length; i++) {
+                    const word = words[i];
+                    const isArticle = articleMarkers.includes(word.toLowerCase()) || word.toLowerCase().startsWith("l'");
+                    
+                    // Start a new option if we hit an article and already have words
+                    if (isArticle && currentOption.length > 0 && optionGroups.length < 3) {
+                        optionGroups.push(currentOption.join(' '));
+                        currentOption = [word];
+                    } else {
+                        currentOption.push(word);
+                    }
+                }
+                
+                // Add final option
+                if (currentOption.length > 0) {
+                    optionGroups.push(currentOption.join(' '));
+                }
+                
+                // If we got exactly 4 groups, use them
+                if (optionGroups.length === 4) {
+                    options = optionGroups.map((opt, i) => `${String.fromCharCode(65 + i)}. ${opt}`);
+                } else {
+                    // Fallback: just take first 4 words
+                    options = words.slice(0, 4).map((w, i) => `${String.fromCharCode(65 + i)}. ${w}`);
+                }
+            }
+            else if (words.length > 0 && words.length < 4) {
+                // Less than 4 words - just use what we have
+                options = words.map((w, i) => `${String.fromCharCode(65 + i)}. ${w}`);
+            }
+            
+            if (options.length === 4) {
                 const questionText = questionTexts[qNum] || `Complete the blank in question ${qNum}`;
                 
                 questions.push({
@@ -505,7 +546,7 @@ async function importFrenchMCQ() {
             }
             
             const docId = `french_${year}_q${q.questionNumber}`;
-            const docRef = db.collection('questions').doc(docId);
+            const docRef = db.collection('bece_mcq').doc(docId);
             
             batch.set(docRef, {
                 id: docId,
