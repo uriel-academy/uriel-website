@@ -378,18 +378,22 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
     final screenWidth = MediaQuery.of(context).size.width;
 
     return Container(
-      margin: EdgeInsets.all(isSmallScreen ? 16 : 24),
+      margin: EdgeInsets.symmetric(
+        horizontal: isSmallScreen ? 20 : 48,
+        vertical: isSmallScreen ? 24 : 40,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsets.only(bottom: isSmallScreen ? 12 : 16),
+            padding: EdgeInsets.only(bottom: isSmallScreen ? 20 : 28),
             child: Text(
               'Browse by Subject',
-              style: GoogleFonts.playfairDisplay(
-                fontSize: isSmallScreen ? 18 : 20,
-                fontWeight: FontWeight.bold,
-                color: const Color(0xFF1A1E3F),
+              style: GoogleFonts.inter(
+                fontSize: isSmallScreen ? 24 : 32,
+                fontWeight: FontWeight.w700,
+                color: const Color(0xFF1D1D1F),
+                letterSpacing: -0.5,
               ),
             ),
           ),
@@ -397,10 +401,10 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: isSmallScreen ? 1 : (screenWidth < 1024 ? 2 : 3),
-              crossAxisSpacing: isSmallScreen ? 0 : 16,
-              mainAxisSpacing: 16,
-              childAspectRatio: isSmallScreen ? 1.3 : 1.1,
+              crossAxisCount: isSmallScreen ? 2 : (screenWidth < 1024 ? 3 : 4),
+              crossAxisSpacing: isSmallScreen ? 12 : 20,
+              mainAxisSpacing: isSmallScreen ? 12 : 20,
+              childAspectRatio: isSmallScreen ? 0.95 : 1.0,
             ),
             itemCount: _subjectCards.length,
             itemBuilder: (context, index) {
@@ -416,122 +420,84 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(
+          color: Colors.grey.withValues(alpha: 0.12),
+          width: 1,
+        ),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.05),
-            blurRadius: 10,
-            offset: const Offset(0, 2),
+            color: Colors.black.withValues(alpha: 0.03),
+            blurRadius: 20,
+            offset: const Offset(0, 4),
           ),
         ],
       ),
-      child: InkWell(
-        onTap: () => _onSubjectCardTap(subjectCard),
-        borderRadius: BorderRadius.circular(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Gradient Header
-            Container(
-              height: 80,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  colors: subjectCard.gradient,
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: () => _onSubjectCardTap(subjectCard),
+          borderRadius: BorderRadius.circular(20),
+          child: Padding(
+            padding: EdgeInsets.all(isSmallScreen ? 20 : 28),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                // Icon with subtle background
+                Container(
+                  width: isSmallScreen ? 64 : 72,
+                  height: isSmallScreen ? 64 : 72,
+                  decoration: BoxDecoration(
+                    color: subjectCard.color.withValues(alpha: 0.08),
+                    borderRadius: BorderRadius.circular(18),
+                  ),
+                  child: Icon(
+                    subjectCard.icon,
+                    size: isSmallScreen ? 32 : 36,
+                    color: subjectCard.color,
+                  ),
                 ),
-                borderRadius: const BorderRadius.vertical(
-                  top: Radius.circular(16),
+                
+                const SizedBox(height: 20),
+                
+                // Subject Name
+                Text(
+                  subjectCard.displayName,
+                  style: GoogleFonts.inter(
+                    fontSize: isSmallScreen ? 17 : 19,
+                    fontWeight: FontWeight.w600,
+                    color: const Color(0xFF1D1D1F),
+                    letterSpacing: -0.3,
+                  ),
+                  textAlign: TextAlign.center,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
                 ),
-              ),
-              child: Center(
-                child: Icon(
-                  subjectCard.icon,
-                  size: 48,
-                  color: Colors.white,
+                
+                const SizedBox(height: 8),
+                
+                // Collection count with minimal styling
+                Text(
+                  '${subjectCard.collectionCount} collections',
+                  style: GoogleFonts.inter(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w400,
+                    color: const Color(0xFF86868B),
+                    letterSpacing: -0.1,
+                  ),
                 ),
-              ),
+                
+                const SizedBox(height: 16),
+                
+                // Minimalist arrow icon
+                Icon(
+                  Icons.arrow_forward_ios,
+                  size: 14,
+                  color: subjectCard.color.withValues(alpha: 0.5),
+                ),
+              ],
             ),
-
-            // Content
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    // Subject Name
-                    Text(
-                      subjectCard.displayName,
-                      style: GoogleFonts.playfairDisplay(
-                        color: const Color(0xFF1A1E3F),
-                        fontSize: isSmallScreen ? 18 : 20,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                    const SizedBox(height: 8),
-
-                    // Description
-                    Expanded(
-                      child: Text(
-                        subjectCard.description,
-                        style: GoogleFonts.montserrat(
-                          color: Colors.grey[600],
-                          fontSize: 13,
-                          height: 1.4,
-                        ),
-                        maxLines: 3,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ),
-                    const SizedBox(height: 12),
-
-                    // Collection Count
-                    Row(
-                      children: [
-                        Icon(Icons.collections_bookmark, size: 16, color: Colors.grey[600]),
-                        const SizedBox(width: 4),
-                        Text(
-                          '${subjectCard.collectionCount} Collections',
-                          style: GoogleFonts.montserrat(
-                            color: Colors.grey[600],
-                            fontSize: 12,
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 16),
-
-                    // View Collections Button
-                    SizedBox(
-                      width: double.infinity,
-                      child: ElevatedButton.icon(
-                        onPressed: () => _onSubjectCardTap(subjectCard),
-                        icon: const Icon(Icons.view_list, size: 20),
-                        label: Text(
-                          'View Collections',
-                          style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
-                        ),
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFF2ECC71),
-                          foregroundColor: Colors.white,
-                          disabledBackgroundColor: Colors.grey[300],
-                          disabledForegroundColor: Colors.grey[600],
-                          padding: const EdgeInsets.symmetric(vertical: 14),
-                          elevation: 0,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     );
@@ -638,18 +604,14 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
     final isSmallScreen = MediaQuery.of(context).size.width < 768;
     
     return Scaffold(
-      backgroundColor: const Color(0xFFF8FAFE),
+      backgroundColor: const Color(0xFFF5F5F7),
       body: _isLoading
           ? const Center(child: CircularProgressIndicator(color: Color(0xFFD62828)))
           : _isViewingCollections
               ? _buildCollectionView(isSmallScreen)
               : CustomScrollView(
                   slivers: [
-                    // Search & Filter at top
-                    SliverToBoxAdapter(
-                      child: _buildFilters(isSmallScreen),
-                    ),
-                    // Subject Cards
+                    // Subject Cards only
                     SliverToBoxAdapter(
                       child: _buildSubjectCards(isSmallScreen),
                     ),
