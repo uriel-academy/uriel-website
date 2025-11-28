@@ -253,62 +253,68 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
       'Mathematics': {
         'displayName': 'Mathematics',
         'description': 'Algebra, geometry, calculus, and mathematical problem-solving',
-        'icon': Icons.dialpad, // Retro calculator keypad
+        'icon': Icons.calculate_outlined, // Calculator
         'color': const Color(0xFF2196F3),
       },
       'English': {
         'displayName': 'English Language',
         'description': 'Grammar, comprehension, literature, and language skills',
-        'icon': Icons.article, // Classic document/paper icon
+        'icon': Icons.menu_book_outlined, // Book
         'color': const Color(0xFF4CAF50),
       },
       'Integrated Science': {
         'displayName': 'Integrated Science',
         'description': 'Physics, chemistry, biology, and earth science',
-        'icon': Icons.biotech, // Classic microscope/lab equipment
+        'icon': Icons.science_outlined, // Atom/Science
         'color': const Color(0xFFFF9800),
       },
       'Social Studies': {
         'displayName': 'Social Studies',
         'description': 'History, geography, citizenship, and social sciences',
-        'icon': Icons.account_balance, // Classic government building
+        'icon': Icons.public, // Globe
         'color': const Color(0xFF9C27B0),
       },
       'Religious and Moral Education': {
         'displayName': 'RME',
         'description': 'Religious studies, ethics, and moral education',
-        'icon': Icons.auto_stories, // Open book - classic religious study icon
+        'icon': Icons.auto_stories_outlined, // Book (menorah not available)
         'color': const Color(0xFF795548),
       },
       'Ga': {
         'displayName': 'Ga Language',
         'description': 'Ga language, literature, and cultural studies',
-        'icon': Icons.speaker_notes, // Speech/communication icon
+        'icon': Icons.chat_bubble_outline, // Speech bubble
         'color': const Color(0xFF607D8B),
       },
       'Asante Twi': {
         'displayName': 'Asante Twi',
         'description': 'Twi language, literature, and cultural studies',
-        'icon': Icons.chat_bubble_outline, // Classic chat/speech bubble
+        'icon': Icons.chat_bubble_outline, // Speech bubble
         'color': const Color(0xFF5D4037),
       },
       'French': {
         'displayName': 'French',
         'description': 'French language, grammar, and literature',
-        'icon': Icons.import_contacts, // Classic textbook icon
+        'icon': Icons.translate_outlined, // Speech bubble with translation (closest to FR)
         'color': const Color(0xFF3F51B5),
       },
       'ICT': {
         'displayName': 'Information Technology',
         'description': 'Computer science, programming, and digital skills',
-        'icon': Icons.desktop_windows, // Retro desktop computer
+        'icon': Icons.computer, // Computer monitor
         'color': const Color(0xFF009688),
       },
       'Creative Arts': {
         'displayName': 'Creative Arts',
         'description': 'Visual arts, music, dance, and creative expression',
-        'icon': Icons.brush, // Classic paintbrush
+        'icon': Icons.palette_outlined, // Paint palette
         'color': const Color(0xFFE91E63),
+      },
+      'Career Technology': {
+        'displayName': 'Career Technology',
+        'description': 'Technical skills and vocational training',
+        'icon': Icons.construction_outlined, // Construction helmet
+        'color': const Color(0xFFFFC107),
       },
     };
 
