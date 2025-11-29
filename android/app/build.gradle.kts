@@ -33,15 +33,31 @@ android {
         versionName = flutter.versionName
     }
 
+
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.getByName("debug")
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            ndk {
+                debugSymbolLevel = "FULL"
+            }
+        }
+    }
+
+    packagingOptions {
+        resources {
+            excludes += setOf("META-INF/DEPENDENCIES")
         }
     }
 }
 
 flutter {
     source = "../.."
+}
+
+dependencies {
+    implementation("com.google.android.play:app-update:2.1.0")
+    implementation("com.google.android.play:app-update-ktx:2.1.0")
 }

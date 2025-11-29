@@ -1,0 +1,11 @@
+# Android Release Signing Configuration
+# TO GENERATE KEYSTORE (requires Java JDK):
+# keytool -genkey -v -keystore C:\Users\YOUR_USERNAME\uriel-release-key.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias uriel
+#
+# Then uncomment and fill in:
+# storePassword=YOUR_PASSWORD
+# keyPassword=YOUR_PASSWORD
+# keyAlias=uriel
+# storeFile=C:/Users/YOUR_USERNAME/uriel-release-key.jks
+#
+# For now, app will use debug signing which is fine for testing
