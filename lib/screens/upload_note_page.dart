@@ -8,6 +8,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:http/http.dart' as http;
 import '../widgets/uri_chat.dart';
 import '../services/note_service.dart';
+import '../services/image_compression_service.dart';
 
 class UploadNotePage extends StatefulWidget {
   const UploadNotePage({super.key});
@@ -45,14 +46,81 @@ class _UploadNotePageState extends State<UploadNotePage> {
 
   Future<void> _pickImage() async {
     final picker = ImagePicker();
-    final picked = await picker.pickImage(source: ImageSource.gallery, maxWidth: 1600);
+    final picked = await picker.pickImage(
+      source: ImageSource.gallery,
+      maxWidth: 1920, // Limit resolution
+    );
+    
     if (picked != null) {
-      final bytes = await picked.readAsBytes();
       if (!mounted) return;
-      setState(() {
-        _pickedImage = picked;
-        _pickedBytes = bytes;
-      });
+      
+      // Show processing indicator
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            'Processing image...',
+            style: GoogleFonts.montserrat(),
+          ),
+          duration: const Duration(seconds: 2),
+        ),
+      );
+      
+      try {
+        final bytes = await picked.readAsBytes();
+        
+        // Validate and compress image to prevent crashes from large files
+        final compressed = await ImageCompressionService().processImage(
+          bytes,
+          fileName: picked.name,
+          onError: (error) {
+            if (mounted) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text(error, style: GoogleFonts.montserrat()),
+                  backgroundColor: Colors.red,
+                  duration: const Duration(seconds: 4),
+                ),
+              );
+            }
+          },
+        );
+        
+        if (compressed == null) {
+          // Error already shown via onError callback
+          return;
+        }
+        
+        if (!mounted) return;
+        
+        setState(() {
+          _pickedImage = picked;
+          _pickedBytes = compressed; // Use compressed bytes
+        });
+        
+        // Show success message
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              'Image ready to upload!',
+              style: GoogleFonts.montserrat(),
+            ),
+            backgroundColor: const Color(0xFF2ECC71),
+            duration: const Duration(seconds: 2),
+          ),
+        );
+      } catch (e) {
+        if (!mounted) return;
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              'Failed to process image: $e',
+              style: GoogleFonts.montserrat(),
+            ),
+            backgroundColor: Colors.red,
+            duration: const Duration(seconds: 3),
+          ),
+        );
+      }
     }
   }
 
@@ -92,10 +160,9 @@ class _UploadNotePageState extends State<UploadNotePage> {
       final uri = Uri.parse('https://us-central1-uriel-academy-41fb0.cloudfunctions.net/uploadNote');
       String? imageBase64;
       String fileName = '';
-      if (_pickedImage != null) {
-        final bytes = await _pickedImage!.readAsBytes();
-        _pickedBytes = bytes;
-        imageBase64 = base64Encode(bytes);
+      if (_pickedImage != null && _pickedBytes != null) {
+        // Use already compressed bytes from _pickImage()
+        imageBase64 = base64Encode(_pickedBytes!);
         fileName = _pickedImage!.name;
       }
 

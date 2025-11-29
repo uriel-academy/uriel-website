@@ -55,6 +55,7 @@ class _TextbooksPageState extends State<TextbooksPage>
   
   bool isLoading = true;
   bool isLoadingEnglish = true;
+  bool isLoadingStorybooks = true;
   
   // Pagination state
   int _currentEnglishPage = 0;
@@ -112,12 +113,23 @@ class _TextbooksPageState extends State<TextbooksPage>
   }
 
   Future<void> _loadStorybooks() async {
+    setState(() => isLoadingStorybooks = true);
     try {
+      debugPrint('📚 Loading storybooks from Firestore...');
       allStorybooks = await _storybookService.getStorybooks();
+      debugPrint('📚 Loaded ${allStorybooks.length} storybooks');
+      
       authors = await _storybookService.getAuthors();
-      _applyStoryFilter();
+      debugPrint('📚 Found ${authors.length} unique authors');
+      
+      setState(() {
+        _applyStoryFilter();
+        isLoadingStorybooks = false;
+      });
+      debugPrint('📚 Storybooks loaded successfully. Filtered: ${filteredStorybooks.length}');
     } catch (e) {
-      debugPrint('Error loading storybooks: $e');
+      debugPrint('❌ Error loading storybooks: $e');
+      setState(() => isLoadingStorybooks = false);
     }
   }
 
@@ -462,7 +474,22 @@ class _TextbooksPageState extends State<TextbooksPage>
               ),
             ] else if (_tabController.index == 2) ...[
               // Storybooks tab content
-              if (filteredStorybooks.isEmpty) ...[
+              if (isLoadingStorybooks) ...[
+                const SizedBox(height: 32),
+                const Center(
+                  child: CircularProgressIndicator(strokeWidth: 2),
+                ),
+                const SizedBox(height: 16),
+                Center(
+                  child: Text(
+                    'Loading storybooks...',
+                    style: TextStyle(
+                      color: Colors.grey[600],
+                      fontSize: 14,
+                    ),
+                  ),
+                ),
+              ] else if (filteredStorybooks.isEmpty) ...[
                 SliverFillRemaining(
                   child: _buildEmptyState(),
                 ),
@@ -2088,6 +2115,10 @@ class _TextbooksPageState extends State<TextbooksPage>
   }
 
   Widget _buildEmptyState() {
+    // Determine what type of content we're looking for based on active tab
+    final contentType = _tabController.index == 2 ? 'storybooks' : 'textbooks';
+    final iconData = _tabController.index == 2 ? Icons.auto_stories : Icons.menu_book_outlined;
+    
     return Center(
       child: Padding(
         padding: const EdgeInsets.all(32),
@@ -2101,14 +2132,14 @@ class _TextbooksPageState extends State<TextbooksPage>
                 shape: BoxShape.circle,
               ),
               child: Icon(
-                Icons.menu_book_outlined,
+                iconData,
                 size: 64,
                 color: Colors.grey[400],
               ),
             ),
             const SizedBox(height: 24),
             Text(
-              'No textbooks found',
+              'No $contentType found',
               style: GoogleFonts.playfairDisplay(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -2118,8 +2149,8 @@ class _TextbooksPageState extends State<TextbooksPage>
             const SizedBox(height: 8),
             Text(
               searchQuery.isNotEmpty
-                  ? 'No textbooks match your search criteria.\nTry adjusting your filters or search terms.'
-                  : 'No textbooks available for the selected filters.\nTry selecting different options.',
+                  ? 'No $contentType match your search criteria.\nTry adjusting your filters or search terms.'
+                  : 'No $contentType available for the selected filters.\nTry selecting different options.',
               textAlign: TextAlign.center,
               style: GoogleFonts.montserrat(
                 color: Colors.grey[600],
@@ -2797,37 +2828,73 @@ class _TextbooksPageState extends State<TextbooksPage>
                                 top: Radius.circular(12),
                               ),
                               child: coverImage.isNotEmpty
-                                  ? Image.asset(
-                                      coverImage,
-                                      fit: BoxFit.cover,
-                                      alignment: Alignment.topCenter,
-                                      errorBuilder: (context, error, stackTrace) {
-                                        return Container(
-                                          color: subjectColor.withOpacity(0.1),
-                                          child: Column(
-                                            mainAxisAlignment: MainAxisAlignment.center,
-                                            children: [
-                                              Icon(
-                                                subject.toLowerCase().contains('social')
-                                                    ? Icons.public
-                                                    : Icons.church,
-                                                size: 48,
-                                                color: subjectColor.withOpacity(0.5),
+                                  ? (coverImage.startsWith('http')
+                                      ? Image.network(
+                                          coverImage,
+                                          fit: BoxFit.cover,
+                                          alignment: Alignment.topCenter,
+                                          errorBuilder: (context, error, stackTrace) {
+                                            debugPrint('Error loading cover image: $coverImage');
+                                            return Container(
+                                              color: subjectColor.withOpacity(0.1),
+                                              child: Column(
+                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                children: [
+                                                  Icon(
+                                                    subject.toLowerCase().contains('social')
+                                                        ? Icons.public
+                                                        : Icons.church,
+                                                    size: isMobile ? 40 : 48,
+                                                    color: subjectColor.withOpacity(0.5),
+                                                  ),
+                                                  const SizedBox(height: 8),
+                                                  Text(
+                                                    yearString,
+                                                    style: GoogleFonts.montserrat(
+                                                      fontSize: isMobile ? 14 : 16,
+                                                      fontWeight: FontWeight.bold,
+                                                      color: subjectColor,
+                                                    ),
+                                                    textAlign: TextAlign.center,
+                                                  ),
+                                                ],
                                               ),
-                                              const SizedBox(height: 8),
-                                              Text(
-                                                yearString,
-                                                style: GoogleFonts.montserrat(
-                                                  fontSize: 16,
-                                                  fontWeight: FontWeight.bold,
-                                                  color: subjectColor,
-                                                ),
+                                            );
+                                          },
+                                        )
+                                      : Image.asset(
+                                          coverImage,
+                                          fit: BoxFit.cover,
+                                          alignment: Alignment.topCenter,
+                                          errorBuilder: (context, error, stackTrace) {
+                                            debugPrint('Error loading asset image: $coverImage');
+                                            return Container(
+                                              color: subjectColor.withOpacity(0.1),
+                                              child: Column(
+                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                children: [
+                                                  Icon(
+                                                    subject.toLowerCase().contains('social')
+                                                        ? Icons.public
+                                                        : Icons.church,
+                                                    size: isMobile ? 40 : 48,
+                                                    color: subjectColor.withOpacity(0.5),
+                                                  ),
+                                                  const SizedBox(height: 8),
+                                                  Text(
+                                                    yearString,
+                                                    style: GoogleFonts.montserrat(
+                                                      fontSize: isMobile ? 14 : 16,
+                                                      fontWeight: FontWeight.bold,
+                                                      color: subjectColor,
+                                                    ),
+                                                    textAlign: TextAlign.center,
+                                                  ),
+                                                ],
                                               ),
-                                            ],
-                                          ),
-                                        );
-                                      },
-                                    )
+                                            );
+                                          },
+                                        ))
                                   : Container(
                                       color: subjectColor.withOpacity(0.1),
                                       child: Column(
@@ -2837,17 +2904,18 @@ class _TextbooksPageState extends State<TextbooksPage>
                                             subject.toLowerCase().contains('social')
                                                 ? Icons.public
                                                 : Icons.church,
-                                            size: 48,
+                                            size: isMobile ? 40 : 48,
                                             color: subjectColor.withOpacity(0.5),
                                           ),
                                           const SizedBox(height: 8),
                                           Text(
                                             yearString,
                                             style: GoogleFonts.montserrat(
-                                              fontSize: 16,
+                                              fontSize: isMobile ? 14 : 16,
                                               fontWeight: FontWeight.bold,
                                               color: subjectColor,
                                             ),
+                                            textAlign: TextAlign.center,
                                           ),
                                         ],
                                       ),

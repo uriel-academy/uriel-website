@@ -512,14 +512,26 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
         children: [
           Padding(
             padding: EdgeInsets.only(bottom: isSmallScreen ? 16 : 28),
-            child: Text(
-              'Browse by Subject',
-              style: GoogleFonts.inter(
-                fontSize: isSmallScreen ? 22 : 32,
-                fontWeight: FontWeight.w700,
-                color: const Color(0xFF1D1D1F),
-                letterSpacing: -0.5,
-              ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Browse by Subject',
+                  style: GoogleFonts.playfairDisplay(
+                    fontSize: isSmallScreen ? 28 : 32,
+                    fontWeight: FontWeight.bold,
+                    color: const Color(0xFF1A1E3F),
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  'Choose a subject to view past questions and practice tests',
+                  style: GoogleFonts.montserrat(
+                    fontSize: 16,
+                    color: Colors.grey[600],
+                  ),
+                ),
+              ],
             ),
           ),
           GridView.builder(
@@ -789,7 +801,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
     final isSmallScreen = MediaQuery.of(context).size.width < 768;
     
     return Scaffold(
-      backgroundColor: const Color(0xFFF5F5F7),
+      backgroundColor: const Color(0xFFF8FAFE),
       body: _isLoading
           ? const Center(child: CircularProgressIndicator(color: Color(0xFFD62828)))
           : _hasError

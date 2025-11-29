@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cloud_functions/cloud_functions.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter_math_fork/flutter_math.dart';
 import 'dart:async';
 import '../constants/app_styles.dart';
 import '../services/connection_service.dart';
@@ -14,6 +13,8 @@ import '../services/leaderboard_rank_service.dart';
 import '../services/telemetry_service.dart';
 import '../services/resilience_service.dart';
 import '../widgets/uri_chat_input.dart';
+import '../widgets/uri_chat_interface.dart';
+import '../models/subject_progress_model.dart';
 import '../services/xp_service.dart';
 import '../widgets/rank_badge_widget.dart';
 import '../services/streak_service.dart';
@@ -66,6 +67,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   int questionsAnswered = 0; // Total questions from quizzes
   int beceCountdownDays = 0; // Live countdown to BECE 2026
   StreamSubscription<DocumentSnapshot>? _userStreamSubscription;
+  Timer? _userPollingTimer; // SCALABILITY: Polling instead of real-time
   bool _loadingFullStats = false;
   
   // Past Questions tracking
@@ -175,43 +177,52 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   void _setupUserStream() {
     final user = FirebaseAuth.instance.currentUser;
     if (user != null) {
-      // Cancel any existing subscription
+      // SCALABILITY FIX: Replace real-time listener with polling
+      // Reduces active connections from 1 per user to periodic fetches
       _userStreamSubscription?.cancel();
+      _userStreamSubscription = null;
       
-      // Create new stream and store the subscription
-      _userStreamSubscription = FirebaseFirestore.instance
-          .collection('users')
-          .doc(user.uid)
-          .snapshots()
-          .listen(
-            (snapshot) {
-              if (snapshot.exists && mounted) {
-                final data = snapshot.data() as Map<String, dynamic>;
-                debugPrint('🔄 User data updated from Firestore:');
-                debugPrint('  presetAvatar: ${data['presetAvatar']}');
-                debugPrint('  profileImageUrl: ${data['profileImageUrl']}');
-                setState(() {
-                  userName = data['firstName'] ?? user.displayName?.split(' ').first ?? _getNameFromEmail(user.email);
-                  final rawClass = data['class'] ?? 'JHS FORM 3';
-                  final isTeacher = widget.isTeacher || data['role'] == 'teacher';
-                  userClass = isTeacher ? '$rawClass TEACHER' : rawClass;
-                  userPhotoUrl = data['profileImageUrl'] ?? user.photoURL;
-                  userPresetAvatar = data['presetAvatar'];
-                });
-              }
-            },
-            onError: (error) {
-              debugPrint('⚠️ User stream error (non-critical): $error');
-              // Don't crash the app, just log the error
-            },
-          );
+      // Initial load
+      _fetchUserDataPolling(user.uid);
+      
+      // Poll every 30 seconds instead of real-time listener
+      _userPollingTimer = Timer.periodic(const Duration(seconds: 30), (timer) {
+        if (mounted) {
+          _fetchUserDataPolling(user.uid);
+        }
+      });
     } else {
       // Cancel subscription if user is null
       _userStreamSubscription?.cancel();
       _userStreamSubscription = null;
+      _userPollingTimer?.cancel();
+      _userPollingTimer = null;
     }
   }
   
+  Future<void> _fetchUserDataPolling(String userId) async {
+    try {
+      // SCALABILITY: Use GetOptions to avoid cache listeners that cause INTERNAL ASSERTION errors
+      final snapshot = await FirebaseFirestore.instance
+          .collection('users')
+          .doc(userId)
+          .get(const GetOptions(source: Source.server));
+      
+      if (snapshot.exists && mounted) {
+        final data = snapshot.data() as Map<String, dynamic>;
+        setState(() {
+          userName = data['firstName'] ?? FirebaseAuth.instance.currentUser?.displayName?.split(' ').first ?? _getNameFromEmail(FirebaseAuth.instance.currentUser?.email);
+          final rawClass = data['class'] ?? 'JHS FORM 3';
+          final isTeacher = widget.isTeacher || data['role'] == 'teacher';
+          userClass = isTeacher ? '$rawClass TEACHER' : rawClass;
+          userPhotoUrl = data['profileImageUrl'] ?? FirebaseAuth.instance.currentUser?.photoURL;
+          userPresetAvatar = data['presetAvatar'];
+        });
+      }
+    } catch (error) {
+      debugPrint('⚠️ User polling error (non-critical): $error');
+    }
+  }
   ImageProvider? _getAvatarImage() {
     if (userPresetAvatar != null) {
       return AssetImage(userPresetAvatar!);
@@ -253,6 +264,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     _mainTabController.dispose();
     _animationController.dispose();
     _userStreamSubscription?.cancel(); // Cancel the user stream subscription to prevent memory leaks and assertion errors
+    _userPollingTimer?.cancel(); // Cancel polling timer
     super.dispose();
   }
 
@@ -325,7 +337,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             .collection('quizzes')
             .where('userId', isEqualTo: user.uid)
             .orderBy('timestamp', descending: true)
-            .limit(20)
+            .limit(50) // SCALABILITY: Increased from 20 to 50
             .get(),
         maxRetries: 2,
         retryDelay: const Duration(milliseconds: 500),
@@ -362,7 +374,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   .collection('quizzes')
                   .where('userId', isEqualTo: user.uid)
                   .orderBy('timestamp', descending: true)
-                  .limit(100)
+                  .limit(200) // SCALABILITY: Increased from 100 to 200
                   .get()
                   .timeout(const Duration(seconds: 12));
 
@@ -7459,423 +7471,4 @@ Widget _buildFeedbackPage() {
       }
     }
   }
-}
-
-// Uri Chat Interface - Full Page Chat Experience
-class UriChatInterface extends StatefulWidget {
-  final String? userName;
-  final String? currentSubject;
-
-  const UriChatInterface({
-    Key? key,
-    this.userName,
-    this.currentSubject,
-  }) : super(key: key);
-
-  @override
-  State<UriChatInterface> createState() => _UriChatInterfaceState();
-}
-
-class _UriChatInterfaceState extends State<UriChatInterface> with TickerProviderStateMixin {
-  final List<Map<String, dynamic>> _messages = [];
-  final TextEditingController _textController = TextEditingController();
-  final ScrollController _scrollController = ScrollController();
-  final FocusNode _focusNode = FocusNode();
-  bool _isLoading = false;
-
-  // Animation controllers
-  late AnimationController _fadeController;
-  late Animation<double> _fadeAnimation;
-
-  final Uuid _uuid = const Uuid();
-
-  @override
-  void initState() {
-    super.initState();
-    _fadeController = AnimationController(
-      duration: const Duration(milliseconds: 300),
-      vsync: this,
-    );
-    _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
-      CurvedAnimation(parent: _fadeController, curve: Curves.easeIn),
-    );
-    _fadeController.forward();
-
-    // Initialize user-specific chat
-    _initializeChat();
-  }
-
-  Future<void> _initializeChat() async {
-    final user = FirebaseAuth.instance.currentUser;
-    if (user == null) {
-      // User not authenticated - redirect to login or show error
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Please log in to use the chat feature'),
-            backgroundColor: Color(0xFFD62828),
-          ),
-        );
-        // Navigate back to home or login
-        Navigator.of(context).pop();
-      }
-      return;
-    }
-
-    // Add welcome message
-    _addWelcomeMessage();
-  }
-
-  @override
-  void dispose() {
-    _textController.dispose();
-    _scrollController.dispose();
-    _focusNode.dispose();
-    _fadeController.dispose();
-    super.dispose();
-  }
-
-  void _addWelcomeMessage() {
-    _messages.add({
-      'role': 'assistant',
-      'content': 'Hello! I\'m Uri, your AI study companion. I can help you with math, science, English, and all your BECE subjects. What would you like to learn today?',
-      'timestamp': DateTime.now(),
-      'id': 'welcome_${_uuid.v4()}',
-    });
-  }
-
-  void _scrollToBottom() {
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (_scrollController.hasClients) {
-        _scrollController.animateTo(
-          0.0, // Since reverse: true, position 0 is the bottom (newest messages)
-          duration: const Duration(milliseconds: 300),
-          curve: Curves.easeOut,
-        );
-      }
-    });
-  }
-
-  String normalizeLatex(String s) {
-    return s
-        .replaceAll(r'\\[', r'$$')
-        .replaceAll(r'\\]', r'$$')
-        .replaceAll(r'\\(', r'$')
-        .replaceAll(r'\\)', r'$')
-        .replaceAll(r'\[', r'$$')
-        .replaceAll(r'\]', r'$$')
-        .replaceAll(r'\(', r'$')
-        .replaceAll(r'\)', r'$');
-  }
-
-  Widget _buildRenderedMessage(String text, bool isUser) {
-    if (isUser) return Text(text, style: const TextStyle(fontSize: 15, height: 1.5));
-
-    final normalized = normalizeLatex(text);
-
-    // helper to parse inline $...$
-    List<InlineSpan> parseInline(String segment) {
-      final spans = <InlineSpan>[];
-      final reg = RegExp(r'\$(?!\$)(.+?)\$');
-      var last = 0;
-      for (final m in reg.allMatches(segment)) {
-        if (m.start > last) spans.add(TextSpan(text: segment.substring(last, m.start)));
-        final expr = m.group(1) ?? '';
-        spans.add(WidgetSpan(child: Math.tex(expr, textStyle: const TextStyle(fontSize: 14))));
-        last = m.end;
-      }
-      if (last < segment.length) spans.add(TextSpan(text: segment.substring(last)));
-      return spans;
-    }
-
-    final blockReg = RegExp(r'\$\$(.+?)\$\$', dotAll: true);
-    var lastBlock = 0;
-    final children = <InlineSpan>[];
-    for (final m in blockReg.allMatches(normalized)) {
-      if (m.start > lastBlock) {
-        final before = normalized.substring(lastBlock, m.start);
-        children.addAll(parseInline(before));
-      }
-      final expr = m.group(1) ?? '';
-      children.add(WidgetSpan(child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 6),
-        child: Math.tex(expr, textStyle: const TextStyle(fontSize: 16)),
-      )));
-      lastBlock = m.end;
-    }
-    if (lastBlock < normalized.length) {
-      final tail = normalized.substring(lastBlock);
-      children.addAll(parseInline(tail));
-    }
-
-    return RichText(
-      text: TextSpan(
-        style: const TextStyle(color: Color(0xFF1A1E3F), fontSize: 15, height: 1.5),
-        children: children,
-      ),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final isMobile = MediaQuery.of(context).size.width < 768;
-    final keyboardHeight = MediaQuery.of(context).viewInsets.bottom;
-
-    return FadeTransition(
-      opacity: _fadeAnimation,
-      child: Column(
-        children: [
-          // Messages area
-          Expanded(
-            child: Container(
-              color: const Color(0xFFF8FAFE),
-              child: ListView.builder(
-                controller: _scrollController,
-                reverse: true,
-                padding: EdgeInsets.fromLTRB(
-                  isMobile ? 16 : 24,
-                  16,
-                  isMobile ? 16 : 24,
-                  keyboardHeight > 0 ? 16 : 80,
-                ),
-                itemCount: _messages.length + (_isLoading ? 1 : 0),
-                itemBuilder: (context, index) {
-                  if (_isLoading && index == _messages.length) {
-                    return _buildTypingIndicator();
-                  }
-
-                  final message = _messages[_messages.length - 1 - index];
-                  final isUser = message['role'] == 'user';
-
-                  return Padding(
-                    padding: const EdgeInsets.only(bottom: 16),
-                    child: Row(
-                      mainAxisAlignment: isUser ? MainAxisAlignment.end : MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Flexible(
-                          child: Container(
-                            constraints: BoxConstraints(
-                              maxWidth: isMobile ? MediaQuery.of(context).size.width * 0.8 : 600,
-                            ),
-                            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                            decoration: BoxDecoration(
-                              color: isUser
-                                  ? const Color(0xFFD62828)
-                                  : Colors.white,
-                              borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(isUser ? 18 : 4),
-                                topRight: Radius.circular(isUser ? 4 : 18),
-                                bottomLeft: const Radius.circular(18),
-                                bottomRight: const Radius.circular(18),
-                              ),
-                              border: !isUser ? Border.all(
-                                color: const Color(0xFFF0F0F0),
-                                width: 1,
-                              ) : null,
-                              boxShadow: isUser ? [
-                                BoxShadow(
-                                  color: const Color(0xFFD62828).withValues(alpha: 0.2),
-                                  blurRadius: 8,
-                                  offset: const Offset(0, 2),
-                                ),
-                              ] : null,
-                            ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                _buildRenderedMessage(message['content'] ?? '', isUser),
-                                // Display attachments
-                                if (message['attachments'] != null)
-                                  for (final attachment in message['attachments'] as List<dynamic>)
-                                    if (attachment['type'] == 'image')
-                                      Padding(
-                                        padding: const EdgeInsets.only(top: 8.0),
-                                        child: ClipRRect(
-                                          borderRadius: BorderRadius.circular(12),
-                                          child: GestureDetector(
-                                            onTap: () => showDialog(
-                                              context: context,
-                                              builder: (_) => Dialog(
-                                                child: InteractiveViewer(
-                                                  child: Image.network(attachment['url'] ?? ''),
-                                                ),
-                                              ),
-                                            ),
-                                            child: Image.network(
-                                              attachment['url'] ?? '',
-                                              height: 160,
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                // Timestamps intentionally hidden in chat UI per product request
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  );
-                },
-              ),
-            ),
-          ),
-
-          // Input area - Mobile messaging app style
-          Container(
-            color: Colors.white,
-            padding: EdgeInsets.only(
-              left: isMobile ? 12 : 24,
-              right: isMobile ? 12 : 24,
-              top: 12,
-              bottom: keyboardHeight > 0 ? keyboardHeight + (isMobile ? 8 : 16) : (isMobile ? 8 : 16),
-            ),
-            child: SafeArea(
-              top: false,
-              child: Center(
-                child: Container(
-                  width: !isMobile ? MediaQuery.of(context).size.width * 0.5 : null, // 50% width on desktop
-                  constraints: BoxConstraints(
-                    maxHeight: isMobile ? 120 : 200, // Limit height on mobile
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(isMobile ? 20 : 24),
-                    border: Border.all(
-                      color: const Color(0xFFE9ECEF),
-                      width: 1,
-                    ),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withValues(alpha: 0.05),
-                        blurRadius: 8,
-                        offset: const Offset(0, 2),
-                      ),
-                    ],
-                  ),
-                  child: UriChatInput(
-                    history: _messages.map((m) => {'role': m['role'] as String? ?? 'user', 'content': m['content'] as String? ?? ''}).toList(),
-                    onMessage: (role, content, {attachments}) {
-                      setState(() {
-                        // We keep the list in reverse order (newest first) for the ListView with reverse: true
-                        if (role == 'assistant') {
-                          // If first message is an assistant bubble, replace its text (stream update)
-                          if (_messages.isNotEmpty && _messages.first['role'] == 'assistant') {
-                            _messages.first['content'] = content;
-                          } else {
-                            _messages.insert(0, {
-                              'role': role,
-                              'content': content,
-                              'timestamp': DateTime.now(),
-                              'id': '${role}_${_uuid.v4()}',
-                              'attachments': attachments
-                            });
-                          }
-                        } else {
-                          // User messages also go at the front (newest first)
-                          _messages.insert(0, {
-                            'role': role,
-                            'content': content,
-                            'timestamp': DateTime.now(),
-                            'id': '${role}_${_uuid.v4()}',
-                            'attachments': attachments
-                          });
-                        }
-                      });
-                      _scrollToBottom();
-                    },
-                    onStreamStart: (cancelHandle) {
-                      setState(() => _isLoading = true);
-                    },
-                    onStreamEnd: () {
-                      setState(() => _isLoading = false);
-                    },
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildTypingIndicator() {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 16),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Flexible(
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(4),
-                  topRight: Radius.circular(18),
-                  bottomLeft: Radius.circular(18),
-                  bottomRight: Radius.circular(18),
-                ),
-                border: Border.all(
-                  color: const Color(0xFFF0F0F0),
-                  width: 1,
-                ),
-              ),
-              child: Row(
-                children: [
-                  Text(
-                    'Uri is typing',
-                    style: GoogleFonts.montserrat(
-                      fontSize: 14,
-                      color: const Color(0xFF1A1E3F),
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                  const SizedBox(width: 8),
-                  SizedBox(
-                    width: 24,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: List.generate(3, (index) {
-                        return AnimatedBuilder(
-                          animation: _fadeController,
-                          builder: (context, child) {
-                            return Opacity(
-                              opacity: (index * 0.3 + (_fadeController.value * 2) % 1.0) % 1.0,
-                              child: Container(
-                                width: 4,
-                                height: 4,
-                                decoration: const BoxDecoration(
-                                  color: Color(0xFFD62828),
-                                  shape: BoxShape.circle,
-                                ),
-                              ),
-                            );
-                          },
-                        );
-                      }),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-
-}
-
-// Data model for subject progress
-class SubjectProgress {
-  final String name;
-  final double progress;
-  final Color color;
-
-  SubjectProgress(this.name, this.progress, this.color);
 }

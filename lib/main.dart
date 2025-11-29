@@ -58,12 +58,13 @@ void main() async {
   FirebaseAnalytics analytics = FirebaseAnalytics.instance;
   FirebaseAnalyticsObserver observer = FirebaseAnalyticsObserver(analytics: analytics);
 
-  // Enable local persistence so note text is immediately available offline
-  // Production settings optimized for high concurrency (10k+ users)
+  // SCALABILITY: Disable persistence on web to prevent snapshot listener conflicts
+  // With polling strategy (30s intervals), persistence causes INTERNAL ASSERTION errors
+  // Mobile keeps persistence for offline support
   if (kIsWeb) {
     FirebaseFirestore.instance.settings = const Settings(
-      persistenceEnabled: true,
-      cacheSizeBytes: 50 * 1024 * 1024, // 50MB cache (reduced for memory efficiency)
+      persistenceEnabled: false, // Disabled for web to avoid listener conflicts
+      cacheSizeBytes: Settings.CACHE_SIZE_UNLIMITED,
     );
   } else {
     FirebaseFirestore.instance.settings = const Settings(

@@ -1,6 +1,3 @@
-/// Image compression and validation service
-/// Prevents memory crashes from large image uploads
-import 'dart:typed_data';
 import 'package:flutter/foundation.dart';
 import 'package:image/image.dart' as img;
 

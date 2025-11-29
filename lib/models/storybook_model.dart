@@ -42,13 +42,17 @@ class Storybook {
   factory Storybook.fromFirestore(DocumentSnapshot doc) {
     final data = doc.data() as Map<String, dynamic>;
     
+    // Handle both old assetPath and new storageUrl/fileUrl fields
+    final storageUrl = data['storageUrl'] ?? data['fileUrl'];
+    final assetPath = data['assetPath'] ?? storageUrl ?? '';
+    
     return Storybook(
       id: doc.id,
       title: data['title'] ?? '',
       author: data['author'] ?? 'Unknown',
       fileName: data['fileName'] ?? '',
-      assetPath: data['assetPath'] ?? '',
-      storageUrl: data['storageUrl'],
+      assetPath: assetPath,
+      storageUrl: storageUrl,
       fileSize: data['fileSize'] ?? 0,
       format: data['format'] ?? 'epub',
       category: data['category'] ?? 'classic-literature',
@@ -56,8 +60,12 @@ class Storybook {
       isActive: data['isActive'] ?? true,
       isFree: data['isFree'] ?? true,
       readCount: data['readCount'] ?? 0,
-      coverImageUrl: data['coverImageUrl'],
-      createdAt: (data['createdAt'] as Timestamp?)?.toDate(),
+      coverImageUrl: data['coverImageUrl'] ?? data['coverImageStorageUrl'],
+      createdAt: data['createdAt'] != null 
+          ? (data['createdAt'] as Timestamp).toDate()
+          : (data['uploadedAt'] != null 
+              ? (data['uploadedAt'] as Timestamp).toDate()
+              : null),
       description: data['description'],
       pageCount: data['pageCount'],
     );

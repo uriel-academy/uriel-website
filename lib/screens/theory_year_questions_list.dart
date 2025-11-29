@@ -132,8 +132,8 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
         backgroundColor: Colors.transparent,
         surfaceTintColor: Colors.transparent,
       ),
-      body: StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
-        stream: _buildQuery().snapshots(),
+      body: FutureBuilder<QuerySnapshot<Map<String, dynamic>>>(
+        future: _buildQuery().get(),
         builder: (context, snapshot) {
           if (snapshot.hasError) {
             return Center(

@@ -1,7 +1,6 @@
 /// Production-grade resilience service for handling 10k+ concurrent users
 /// Implements circuit breaker, retry logic, and graceful degradation
 import 'package:flutter/foundation.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 class ResilienceService {
   static final ResilienceService _instance = ResilienceService._internal();
