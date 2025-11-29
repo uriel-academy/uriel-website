@@ -10,20 +10,26 @@ import 'theory_year_questions_list.dart';
 class SubjectCard {
   final String name;
   final String displayName;
+  final String mobileDisplayName;
+  final String desktopDisplayName;
   final String description;
   final IconData icon;
   final Color color;
   final List<Color> gradient;
   final int collectionCount;
+  final int completedCollections;
 
   SubjectCard({
     required this.name,
     required this.displayName,
+    required this.mobileDisplayName,
+    required this.desktopDisplayName,
     required this.description,
     required this.icon,
     required this.color,
     required this.gradient,
     required this.collectionCount,
+    this.completedCollections = 0,
   });
 }
 
@@ -237,14 +243,21 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
     final config = _getSubjectCardConfig(subjectName);
     if (config == null) return null;
 
+    // TODO: Load actual completed collections count from user progress
+    // For now, using 0 as placeholder
+    final completedCollections = 0;
+
     return SubjectCard(
       name: subjectName,
       displayName: config['displayName'] as String,
+      mobileDisplayName: config['mobileDisplayName'] as String,
+      desktopDisplayName: config['desktopDisplayName'] as String,
       description: config['description'] as String,
       icon: config['icon'] as IconData,
       color: config['color'] as Color,
       gradient: [config['color'] as Color, (config['color'] as Color)],
       collectionCount: collectionCount,
+      completedCollections: completedCollections,
     );
   }
 
@@ -252,69 +265,91 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
     final configs = {
       'Mathematics': {
         'displayName': 'Mathematics',
+        'mobileDisplayName': 'Maths',
+        'desktopDisplayName': 'Mathematics',
         'description': 'Algebra, geometry, calculus, and mathematical problem-solving',
-        'icon': Icons.calculate, // Calculator
-        'color': const Color(0xFF2196F3),
+        'icon': Icons.calculate,
+        'color': const Color(0xFFC7D9FF), // Soft Blue
       },
       'English': {
         'displayName': 'English Language',
+        'mobileDisplayName': 'English',
+        'desktopDisplayName': 'English\nLanguage',
         'description': 'Grammar, comprehension, literature, and language skills',
-        'icon': Icons.article, // Document/paper
-        'color': const Color(0xFF4CAF50),
+        'icon': Icons.article,
+        'color': const Color(0xFFCDEFD1), // Soft Green
       },
       'Integrated Science': {
         'displayName': 'Integrated Science',
+        'mobileDisplayName': 'Int. Science',
+        'desktopDisplayName': 'Integrated\nScience',
         'description': 'Physics, chemistry, biology, and earth science',
-        'icon': Icons.science, // Atom/Science
-        'color': const Color(0xFFFF9800),
+        'icon': Icons.science,
+        'color': const Color(0xFFC4F3EC), // Pastel Teal
       },
       'Social Studies': {
         'displayName': 'Social Studies',
+        'mobileDisplayName': 'Social Studies',
+        'desktopDisplayName': 'Social\nStudies',
         'description': 'History, geography, citizenship, and social sciences',
-        'icon': Icons.public, // Globe
-        'color': const Color(0xFF9C27B0),
+        'icon': Icons.public,
+        'color': const Color(0xFFFFD9C7), // Peach
       },
       'Religious and Moral Education': {
         'displayName': 'RME',
+        'mobileDisplayName': 'RME',
+        'desktopDisplayName': 'RME',
         'description': 'Religious studies, ethics, and moral education',
-        'icon': Icons.auto_stories, // Book
-        'color': const Color(0xFF795548),
+        'icon': Icons.auto_stories,
+        'color': const Color(0xFFE3D1FF), // Lavender/Violet
       },
       'Ga': {
         'displayName': 'Ga Language',
+        'mobileDisplayName': 'Ga',
+        'desktopDisplayName': 'Ga\nLanguage',
         'description': 'Ga language, literature, and cultural studies',
-        'icon': Icons.chat_bubble_outline, // Speech bubble
-        'color': const Color(0xFF607D8B),
+        'icon': Icons.chat_bubble_outline,
+        'color': const Color(0xFFF6E3D0), // Warm Sand
       },
       'Asante Twi': {
         'displayName': 'Asante Twi',
+        'mobileDisplayName': 'Asante Twi',
+        'desktopDisplayName': 'Asante\nTwi',
         'description': 'Twi language, literature, and cultural studies',
-        'icon': Icons.chat_bubble_outline, // Speech bubble
-        'color': const Color(0xFF5D4037),
+        'icon': Icons.chat_bubble_outline,
+        'color': const Color(0xFFFFC9C9), // Coral
       },
       'French': {
         'displayName': 'French',
+        'mobileDisplayName': 'French',
+        'desktopDisplayName': 'French',
         'description': 'French language, grammar, and literature',
-        'icon': Icons.translate, // Translation
-        'color': const Color(0xFF3F51B5),
+        'icon': Icons.translate,
+        'color': const Color(0xFFF9CFE7), // Rose Pink
       },
       'ICT': {
         'displayName': 'Information Technology',
+        'mobileDisplayName': 'ICT',
+        'desktopDisplayName': 'Information\nTechnology',
         'description': 'Computer science, programming, and digital skills',
-        'icon': Icons.computer, // Computer monitor
-        'color': const Color(0xFF009688),
+        'icon': Icons.computer,
+        'color': const Color(0xFFC9F3FF), // Light Cyan
       },
       'Creative Arts': {
         'displayName': 'Creative Arts',
+        'mobileDisplayName': 'Creative Arts',
+        'desktopDisplayName': 'Creative\nArts',
         'description': 'Visual arts, music, dance, and creative expression',
-        'icon': Icons.palette, // Paint palette
-        'color': const Color(0xFFE91E63),
+        'icon': Icons.palette,
+        'color': const Color(0xFFECF8C8), // Lime Tint
       },
       'Career Technology': {
         'displayName': 'Career Technology',
+        'mobileDisplayName': 'Career Tech',
+        'desktopDisplayName': 'Career\nTechnology',
         'description': 'Technical skills and vocational training',
-        'icon': Icons.construction, // Construction helmet
-        'color': const Color(0xFFFFC107),
+        'icon': Icons.work_outline,
+        'color': const Color(0xFFFFF3C4), // Pale Yellow
       },
     };
 
@@ -343,6 +378,8 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
         return 'ICT';
       case Subject.creativeArts:
         return 'Creative Arts';
+      case Subject.careerTechnology:
+        return 'Career Technology';
       default:
         return null;
     }
@@ -381,8 +418,6 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
       return const SizedBox.shrink();
     }
 
-    final screenWidth = MediaQuery.of(context).size.width;
-
     return Container(
       margin: EdgeInsets.symmetric(
         horizontal: isSmallScreen ? 16 : 48,
@@ -407,10 +442,10 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: isSmallScreen ? 2 : (screenWidth < 1024 ? 3 : 4),
+              crossAxisCount: isSmallScreen ? 2 : 3,
               crossAxisSpacing: isSmallScreen ? 12 : 20,
               mainAxisSpacing: isSmallScreen ? 12 : 20,
-              childAspectRatio: isSmallScreen ? 0.95 : 1.0,
+              childAspectRatio: isSmallScreen ? 1.0 : 1.05,
             ),
             itemCount: _subjectCards.length,
             itemBuilder: (context, index) {
@@ -423,18 +458,18 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
   }
 
   Widget _buildSubjectCard(SubjectCard subjectCard, bool isSmallScreen) {
+    final progress = subjectCard.collectionCount > 0
+        ? subjectCard.completedCollections / subjectCard.collectionCount
+        : 0.0;
+
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(isSmallScreen ? 16 : 20),
-        border: Border.all(
-          color: Colors.grey.withValues(alpha: 0.12),
-          width: 1,
-        ),
+        borderRadius: BorderRadius.circular(24),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.03),
-            blurRadius: isSmallScreen ? 12 : 20,
+            color: Colors.black.withValues(alpha: 0.08),
+            blurRadius: 20,
             offset: const Offset(0, 4),
           ),
         ],
@@ -443,74 +478,116 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
         color: Colors.transparent,
         child: InkWell(
           onTap: () => _onSubjectCardTap(subjectCard),
-          borderRadius: BorderRadius.circular(isSmallScreen ? 16 : 20),
-          child: Padding(
-            padding: EdgeInsets.all(isSmallScreen ? 16 : 28),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                // Icon with subtle background
-                Container(
-                  width: isSmallScreen ? 56 : 72,
-                  height: isSmallScreen ? 56 : 72,
-                  decoration: BoxDecoration(
-                    color: subjectCard.color.withValues(alpha: 0.08),
-                    borderRadius: BorderRadius.circular(isSmallScreen ? 14 : 18),
-                  ),
-                  child: Icon(
-                    subjectCard.icon,
-                    size: isSmallScreen ? 28 : 36,
-                    color: subjectCard.color,
+          borderRadius: BorderRadius.circular(24),
+          child: Column(
+            children: [
+              // Top pastel section with title and collection count
+              Expanded(
+                flex: 75,
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
+                  child: Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.symmetric(
+                      vertical: isSmallScreen ? 20 : 32,
+                      horizontal: isSmallScreen ? 12 : 24,
+                    ),
+                    decoration: BoxDecoration(
+                      color: subjectCard.color,
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        topRight: Radius.circular(20),
+                      ),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          isSmallScreen
+                              ? subjectCard.mobileDisplayName
+                              : subjectCard.desktopDisplayName,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: isSmallScreen ? 16 : 24,
+                            fontWeight: FontWeight.w600,
+                            color: subjectCard.color.computeLuminance() > 0.5
+                                ? const Color(0xFF1D1D1F)
+                                : Colors.white,
+                            height: 1.2,
+                          ),
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        SizedBox(height: isSmallScreen ? 8 : 12),
+                        Text(
+                          '${subjectCard.collectionCount} collections',
+                          style: TextStyle(
+                            fontSize: isSmallScreen ? 11 : 14,
+                            fontWeight: FontWeight.w500,
+                            color: subjectCard.color.computeLuminance() > 0.5
+                                ? const Color(0xFF6E6E73)
+                                : Colors.white70,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-                
-                SizedBox(height: isSmallScreen ? 12 : 20),
-                
-                // Subject Name
-                Text(
-                  subjectCard.displayName,
-                  style: GoogleFonts.inter(
-                    fontSize: isSmallScreen ? 15 : 19,
-                    fontWeight: FontWeight.w600,
-                    color: const Color(0xFF1D1D1F),
-                    letterSpacing: -0.3,
-                    height: 1.2,
+              ),
+
+              // Bottom white section with arrow button and progress bar
+              Expanded(
+                flex: 25,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.arrow_forward,
+                        size: isSmallScreen ? 20 : 24,
+                        color: subjectCard.color,
+                      ),
+                      const SizedBox(height: 8),
+                      // Progress bar
+                      Container(
+                        height: 4,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          color: Colors.grey.withValues(alpha: 0.2),
+                          borderRadius: BorderRadius.circular(2),
+                        ),
+                        child: FractionallySizedBox(
+                          alignment: Alignment.centerLeft,
+                          widthFactor: progress,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: subjectCard.color,
+                              borderRadius: BorderRadius.circular(2),
+                            ),
+                          ),
+                        ),
+                      ),
+                      if (progress > 0) const SizedBox(height: 4),
+                      if (progress > 0)
+                        Text(
+                          '${(progress * 100).toInt()}% complete',
+                          style: TextStyle(
+                            fontSize: isSmallScreen ? 9 : 10,
+                            fontWeight: FontWeight.w500,
+                            color: const Color(0xFF6E6E73),
+                          ),
+                        ),
+                    ],
                   ),
-                  textAlign: TextAlign.center,
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
                 ),
-                
-                SizedBox(height: isSmallScreen ? 6 : 8),
-                
-                // Collection count with minimal styling
-                Text(
-                  '${subjectCard.collectionCount} collections',
-                  style: GoogleFonts.inter(
-                    fontSize: isSmallScreen ? 12 : 13,
-                    fontWeight: FontWeight.w400,
-                    color: const Color(0xFF86868B),
-                    letterSpacing: -0.1,
-                  ),
-                ),
-                
-                SizedBox(height: isSmallScreen ? 12 : 16),
-                
-                // Minimalist arrow icon
-                Icon(
-                  Icons.arrow_forward_ios,
-                  size: isSmallScreen ? 12 : 14,
-                  color: subjectCard.color.withValues(alpha: 0.5),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
     );
-  }
-
-  // Load more collections when user clicks "Load More" button
+  }  // Load more collections when user clicks "Load More" button
   Future<void> _loadMoreCollections() async {
     if (_isLoadingMore || !_hasMoreCollections) return;
 

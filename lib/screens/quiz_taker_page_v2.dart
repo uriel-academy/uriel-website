@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import '../models/question_model.dart';
 import '../models/quiz_model.dart';
 import '../services/question_service.dart';
@@ -618,13 +619,89 @@ class _QuizTakerPageV2State extends State<QuizTakerPageV2>
   }
 
   Widget _buildQuestionText(Question question) {
-    return Text(
-      question.questionText,
-      style: GoogleFonts.montserrat(
-        fontSize: 18,
-        fontWeight: FontWeight.w600,
-        color: const Color(0xFF1A1E3F),
-        height: 1.5,
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        // Image before question (e.g., diagram for context)
+        if (question.imageBeforeQuestion != null) ...[
+          _buildQuestionImage(question.imageBeforeQuestion!),
+          const SizedBox(height: 16),
+        ],
+        
+        // Question text
+        Text(
+          question.questionText,
+          style: GoogleFonts.montserrat(
+            fontSize: 18,
+            fontWeight: FontWeight.w600,
+            color: const Color(0xFF1A1E3F),
+            height: 1.5,
+          ),
+        ),
+        
+        // Image after question (e.g., figure to analyze)
+        if (question.imageAfterQuestion != null) ...[
+          const SizedBox(height: 16),
+          _buildQuestionImage(question.imageAfterQuestion!),
+        ],
+        
+        // Legacy imageUrl support
+        if (question.imageUrl != null && 
+            question.imageBeforeQuestion == null && 
+            question.imageAfterQuestion == null) ...[
+          const SizedBox(height: 16),
+          _buildQuestionImage(question.imageUrl!),
+        ],
+      ],
+    );
+  }
+  
+  Widget _buildQuestionImage(String imageUrl) {
+    return Container(
+      constraints: const BoxConstraints(
+        maxHeight: 300,
+      ),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: Colors.grey[300]!, width: 1),
+        color: Colors.white,
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(12),
+        child: CachedNetworkImage(
+          imageUrl: imageUrl,
+          fit: BoxFit.contain,
+          placeholder: (context, url) => Container(
+            height: 200,
+            color: Colors.grey[100],
+            child: const Center(
+              child: CircularProgressIndicator(
+                valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF8B5CF6)),
+              ),
+            ),
+          ),
+          errorWidget: (context, url, error) => Container(
+            height: 200,
+            color: Colors.grey[100],
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.image_not_supported, 
+                  size: 48, 
+                  color: Colors.grey[400],
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  'Image not available',
+                  style: GoogleFonts.montserrat(
+                    color: Colors.grey[600],
+                    fontSize: 12,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
@@ -713,12 +790,23 @@ class _QuizTakerPageV2State extends State<QuizTakerPageV2>
                   ),
                   const SizedBox(width: 16),
                   Expanded(
-                    child: Text(
-                      option.replaceFirst('$letter. ', ''),
-                      style: GoogleFonts.montserrat(
-                        color: textColor,
-                        fontWeight: FontWeight.w500,
-                      ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          option.replaceFirst('$letter. ', ''),
+                          style: GoogleFonts.montserrat(
+                            color: textColor,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        // Option image if available
+                        if (question.optionImages != null && 
+                            question.optionImages!.containsKey(letter)) ...[
+                          const SizedBox(height: 8),
+                          _buildOptionImage(question.optionImages![letter]!),
+                        ],
+                      ],
                     ),
                   ),
                   if (icon != null) ...[
@@ -731,6 +819,47 @@ class _QuizTakerPageV2State extends State<QuizTakerPageV2>
           ),
         );
       }).toList(),
+    );
+  }
+  
+  Widget _buildOptionImage(String imageUrl) {
+    return Container(
+      constraints: const BoxConstraints(
+        maxHeight: 150,
+      ),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(color: Colors.grey[300]!, width: 1),
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(8),
+        child: CachedNetworkImage(
+          imageUrl: imageUrl,
+          fit: BoxFit.contain,
+          placeholder: (context, url) => Container(
+            height: 100,
+            color: Colors.grey[50],
+            child: const Center(
+              child: SizedBox(
+                width: 20,
+                height: 20,
+                child: CircularProgressIndicator(
+                  strokeWidth: 2,
+                  valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF8B5CF6)),
+                ),
+              ),
+            ),
+          ),
+          errorWidget: (context, url, error) => Container(
+            height: 100,
+            color: Colors.grey[50],
+            child: Icon(Icons.image_not_supported, 
+              size: 32, 
+              color: Colors.grey[400],
+            ),
+          ),
+        ),
+      ),
     );
   }
 

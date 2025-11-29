@@ -10,7 +10,7 @@ const db = admin.firestore();
 async function verifyFrenchImport() {
     console.log('Verifying French MCQ import...\n');
     
-    const snapshot = await db.collection('questions')
+    const snapshot = await db.collection('bece_mcq')
         .where('subject', '==', 'french')
         .where('type', '==', 'multipleChoice')
         .get();

@@ -217,61 +217,67 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
         'displayName': 'Mathematics',
         'description': 'Algebra, geometry, calculus, and mathematical problem-solving',
         'icon': Icons.calculate,
-        'color': const Color(0xFF2196F3),
+        'color': const Color(0xFFB3D9FF), // Soft blue pastel
       },
       'English': {
         'displayName': 'English Language',
         'description': 'Grammar, comprehension, literature, and language skills',
         'icon': Icons.menu_book,
-        'color': const Color(0xFF4CAF50),
+        'color': const Color(0xFFC8E6C9), // Soft green pastel
       },
       'Integrated Science': {
         'displayName': 'Integrated Science',
         'description': 'Physics, chemistry, biology, and earth science',
         'icon': Icons.science,
-        'color': const Color(0xFFFF9800),
+        'color': const Color(0xFFB2DFDB), // Soft mint/teal pastel
       },
       'Social Studies': {
         'displayName': 'Social Studies',
         'description': 'History, geography, citizenship, and social sciences',
         'icon': Icons.public,
-        'color': const Color(0xFF9C27B0),
+        'color': const Color(0xFFE1BEE7), // Soft purple pastel
       },
       'Religious and Moral Education': {
         'displayName': 'RME',
         'description': 'Religious studies, ethics, and moral education',
         'icon': Icons.church,
-        'color': const Color(0xFF795548),
+        'color': const Color(0xFFD7CCC8), // Soft brown pastel
       },
       'Ga': {
         'displayName': 'Ga Language',
         'description': 'Ga language, literature, and cultural studies',
         'icon': Icons.language,
-        'color': const Color(0xFF607D8B),
+        'color': const Color(0xFFCFD8DC), // Soft blue-grey pastel
       },
       'Asante Twi': {
         'displayName': 'Asante Twi',
         'description': 'Twi language, literature, and cultural studies',
         'icon': Icons.record_voice_over,
-        'color': const Color(0xFF5D4037),
+        'color': const Color(0xFFBCAAA4), // Soft warm grey pastel
       },
       'French': {
         'displayName': 'French',
         'description': 'French language, grammar, and literature',
         'icon': Icons.flag,
-        'color': const Color(0xFF3F51B5),
+        'color': const Color(0xFFC5CAE9), // Soft indigo pastel
       },
       'ICT': {
         'displayName': 'Information Technology',
         'description': 'Computer science, programming, and digital skills',
         'icon': Icons.computer,
-        'color': const Color(0xFF009688),
+        'color': const Color(0xFFB2DFDB), // Soft cyan pastel
       },
       'Creative Arts': {
         'displayName': 'Creative Arts',
         'description': 'Visual arts, music, dance, and creative expression',
         'icon': Icons.palette,
-        'color': const Color(0xFFE91E63),
+        'color': const Color(0xFFFFB3D9), // Soft pink pastel
+      },
+      'Career Technology': {
+        'displayName': 'Career Technology',
+        'description': 'Technical skills, vocational training, and career development',
+        'icon': Icons.work_outline,
+        'color': const Color(0xFFB3E5FC), // Soft blue pastel
       },
     };
     
@@ -298,6 +304,10 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
         return 'French';
       case Subject.ict:
         return 'ICT';
+      case Subject.careerTechnology:
+        return 'Career Technology';
+      case Subject.creativeArts:
+        return 'Creative Arts';
       case Subject.creativeArts:
         return 'Creative Arts';
       default:
@@ -465,122 +475,99 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(14),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.05),
-            blurRadius: 10,
+            color: Colors.black.withValues(alpha: 0.04),
+            blurRadius: 8,
             offset: const Offset(0, 2),
+            spreadRadius: 0,
+          ),
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.02),
+            blurRadius: 16,
+            offset: const Offset(0, 4),
+            spreadRadius: 0,
           ),
         ],
       ),
-      child: InkWell(
-        onTap: () => _onSubjectCardTap(subjectCard),
-        borderRadius: BorderRadius.circular(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Gradient Header
-            Container(
-              height: 80,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  colors: subjectCard.gradient,
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: () => _onSubjectCardTap(subjectCard),
+          borderRadius: BorderRadius.circular(14),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(14),
+            child: Column(
+              children: [
+                // Top 55% - Pastel colored section with subject name
+                Expanded(
+                  flex: 55,
+                  child: Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: subjectCard.color,
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(10),
+                        topRight: Radius.circular(10),
+                      ),
+                    ),
+                    child: Center(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 16),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              subjectCard.displayName,
+                              style: const TextStyle(
+                                fontFamily: 'SF Pro Display',
+                                fontSize: 20,
+                                fontWeight: FontWeight.w700,
+                                color: Colors.black,
+                                letterSpacing: -0.3,
+                                height: 1.2,
+                              ),
+                              textAlign: TextAlign.center,
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                            const SizedBox(height: 6),
+                            Text(
+                              '${subjectCard.collectionCount} collections',
+                              style: TextStyle(
+                                fontFamily: 'SF Pro Text',
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.black.withValues(alpha: 0.5),
+                                letterSpacing: -0.2,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
-                borderRadius: const BorderRadius.vertical(
-                  top: Radius.circular(16),
+                
+                // Bottom 45% - White section with chevron arrow
+                Expanded(
+                  flex: 45,
+                  child: Container(
+                    width: double.infinity,
+                    color: Colors.white,
+                    child: Center(
+                      child: Icon(
+                        Icons.chevron_right_rounded,
+                        size: 32,
+                        color: subjectCard.color.withValues(alpha: 0.8),
+                      ),
+                    ),
+                  ),
                 ),
-              ),
-              child: Center(
-                child: Icon(
-                  subjectCard.icon,
-                  size: 48,
-                  color: Colors.white,
-                ),
-              ),
+              ],
             ),
-
-            // Content
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    // Subject Name
-                    Text(
-                      subjectCard.displayName,
-                      style: GoogleFonts.playfairDisplay(
-                        color: const Color(0xFF1A1E3F),
-                        fontSize: isSmallScreen ? 18 : 20,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                    const SizedBox(height: 8),
-
-                    // Description
-                    Expanded(
-                      child: Text(
-                        subjectCard.description,
-                        style: GoogleFonts.montserrat(
-                          color: Colors.grey[600],
-                          fontSize: 13,
-                          height: 1.4,
-                        ),
-                        maxLines: 3,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ),
-                    const SizedBox(height: 12),
-
-                    // Question Count
-                    Row(
-                      children: [
-                        Icon(Icons.quiz, size: 16, color: Colors.grey[600]),
-                        const SizedBox(width: 4),
-                        Text(
-                          '${subjectCard.collectionCount} Questions',
-                          style: GoogleFonts.montserrat(
-                            color: Colors.grey[600],
-                            fontSize: 12,
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 16),
-
-                    // View Collections Button
-                    SizedBox(
-                      width: double.infinity,
-                      child: ElevatedButton.icon(
-                        onPressed: () => _onSubjectCardTap(subjectCard),
-                        icon: const Icon(Icons.collections_bookmark, size: 20),
-                        label: Text(
-                          'View Collections',
-                          style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
-                        ),
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFF2ECC71),
-                          foregroundColor: Colors.white,
-                          disabledBackgroundColor: Colors.grey[300],
-                          disabledForegroundColor: Colors.grey[600],
-                          padding: const EdgeInsets.symmetric(vertical: 14),
-                          elevation: 0,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     );
