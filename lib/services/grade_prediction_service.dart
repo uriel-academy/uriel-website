@@ -1,11 +1,10 @@
 import 'dart:math';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/foundation.dart';
 import '../models/performance_data.dart';
-import 'question_difficulty_service.dart';
 
 class GradePredictionService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-  final QuestionDifficultyService _difficultyService = QuestionDifficultyService();
 
   // Model coefficients (can be tuned based on data analysis)
   static const double _alphaWeightedAvg = 0.50; // Weighted average accuracy
@@ -104,7 +103,7 @@ class GradePredictionService {
 
       return prediction;
     } catch (e) {
-      print('Error predicting grade: $e');
+      debugPrint('Error predicting grade: $e');
       return _getDefaultPrediction(subject);
     }
   }

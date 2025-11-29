@@ -54,7 +54,6 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
   
   // Step 3: Curriculum Navigation
   String _selectedTerm = 'Term 1';
-  final Map<String, dynamic> _subjectCurriculum = {};
   
   // Step 4: Class Setup
   final List<Map<String, dynamic>> _classes = [];
@@ -95,7 +94,6 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
   
   // Generated Lessons
   List<Map<String, dynamic>> _generatedLessons = [];
-  Map<String, dynamic>? _currentViewingLesson;
   
   @override
   void initState() {
@@ -265,7 +263,6 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
           'lessonPlan': lessonPlan,
           'metadata': metadata,
         });
-        _currentViewingLesson = _generatedLessons[0];
       });
       
       if (mounted) {
@@ -1309,9 +1306,6 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
                       ),
                       child: InkWell(
                         onTap: () {
-                          setState(() {
-                            _currentViewingLesson = lesson;
-                          });
                           _showLessonDetailsDialog(context, lesson);
                         },
                         borderRadius: BorderRadius.circular(16),
@@ -1996,7 +1990,7 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
       final bytes = utf8.encode(text);
       final blob = html.Blob([bytes]);
       final url = html.Url.createObjectUrlFromBlob(blob);
-      final anchor = html.AnchorElement(href: url)
+      html.AnchorElement(href: url)
         ..setAttribute('download', '$fileName.txt')
         ..click();
       html.Url.revokeObjectUrl(url);

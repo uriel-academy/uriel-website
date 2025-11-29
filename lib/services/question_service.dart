@@ -616,4 +616,34 @@ class QuestionService {
       return [];
     }
   }
+
+  /// Get count of collections completed by user for a specific subject
+  /// A collection is considered "completed" if user has taken a quiz for that subject
+  /// with a score >= 50% (passing grade)
+  Future<int> getUserCompletedCollectionsCount(String userId, String subject) async {
+    try {
+      if (userId.isEmpty) {
+        debugPrint('⚠️ Cannot fetch progress: userId is empty');
+        return 0;
+      }
+
+      debugPrint('📊 Fetching progress for user=$userId, subject=$subject');
+
+      // Query quizzes collection for this user and subject with passing score
+      final snapshot = await _firestore
+          .collection('quizzes')
+          .where('userId', isEqualTo: userId)
+          .where('subject', isEqualTo: subject)
+          .where('percentage', isGreaterThanOrEqualTo: 50.0) // Only passing scores
+          .get();
+
+      final completedCount = snapshot.docs.length;
+      debugPrint('✅ User has completed $completedCount quizzes for $subject with passing score');
+
+      return completedCount;
+    } catch (e) {
+      debugPrint('❌ Error fetching user progress: $e');
+      return 0;
+    }
+  }
 }

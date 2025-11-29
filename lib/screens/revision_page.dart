@@ -509,28 +509,6 @@ class _RevisionPageState extends State<RevisionPage> {
   //   }
   // }
 
-  List<Question> _selectRandomQuestions(List<Question> allQuestions, int count) {
-    if (allQuestions.length <= count) {
-      // Return all questions if we don't have enough
-      return List.from(allQuestions);
-    }
-
-    // Create a robust randomization algorithm
-    final selectedQuestions = <Question>[];
-
-    // Shuffle the questions using a seed based on current time and user selections
-    final shuffledQuestions = List<Question>.from(allQuestions);
-    shuffledQuestions.shuffle();
-
-    // Take the first 'count' questions from the shuffled list
-    selectedQuestions.addAll(shuffledQuestions.take(count));
-
-    // Sort by question number for consistent ordering within the quiz
-    selectedQuestions.sort((a, b) => a.questionNumber.compareTo(b.questionNumber));
-
-    return selectedQuestions;
-  }
-
   String _getSubjectDisplayName(Subject subject) {
     switch (subject) {
       case Subject.mathematics:

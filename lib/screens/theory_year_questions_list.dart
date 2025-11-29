@@ -113,24 +113,6 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
     return mapping[displayName] ?? displayName.toLowerCase().replaceAll(' ', '');
   }
 
-  String _formatSubject(String subjectValue) {
-    // Convert enum values to display names
-    final mapping = {
-      'mathematics': 'Mathematics',
-      'english': 'English',
-      'integratedScience': 'Integrated Science',
-      'socialStudies': 'Social Studies',
-      'ga': 'Ga',
-      'asanteTwi': 'Asante Twi',
-      'french': 'French',
-      'ict': 'ICT',
-      'religiousMoralEducation': 'Religious & Moral Education',
-      'creativeArts': 'Creative Arts',
-      'careerTechnology': 'Career Technology',
-    };
-    return mapping[subjectValue] ?? subjectValue;
-  }
-
   @override
   Widget build(BuildContext context) {
     final isDesktop = MediaQuery.of(context).size.width > 800;
@@ -163,7 +145,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                     Icon(
                       Icons.error_outline_rounded,
                       size: 64,
-                      color: Theme.of(context).colorScheme.error.withOpacity(0.5),
+                      color: Theme.of(context).colorScheme.error.withValues(alpha: 0.5),
                     ),
                     const SizedBox(height: 16),
                     Text(
@@ -947,11 +929,6 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
       ),
     );
   }
-
-  void _addSystemMessage(String questionText) {
-    // Initialize with system context but don't show to user
-    // This will be used in the API call
-  }
   
   String _buildSystemPrompt(String questionText) {
     return '''You are Uri, an expert AI tutor helping students with BECE (Basic Education Certificate Examination) theory questions for ${widget.subject ?? 'this subject'}.
@@ -1050,7 +1027,7 @@ Be supportive, patient, and encouraging. Help them learn following the official 
             borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.1),
+                color: Colors.black.withValues(alpha: 0.1),
                 blurRadius: 20,
                 offset: const Offset(0, -4),
               ),

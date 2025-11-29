@@ -67,7 +67,6 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
   String _sortBy = 'Most Recent';
   int _currentPage = 1;
   final int _questionsPerPage = 20;
-  final bool _hasLoadedQuestions = false; // Track if we've loaded questions yet
 
   // Subject Cards
   List<SubjectCard> _subjectCards = [];
@@ -93,7 +92,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
       debugPrint('🚀 Loading initial data (subjects only for fast loading)...');
 
       // Load a small sample of questions to get subject information for cards
-      final sampleQuestionsTask = _questionService.getQuestions(
+      final sampleQuestionsTask = _questionService.getQuestionsByFilters(
         limit: 100, // Just load 100 questions to get subject distribution
       ).timeout(
         const Duration(seconds: 3),
@@ -306,8 +305,6 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
         return 'ICT';
       case Subject.careerTechnology:
         return 'Career Technology';
-      case Subject.creativeArts:
-        return 'Creative Arts';
       case Subject.creativeArts:
         return 'Creative Arts';
       default:

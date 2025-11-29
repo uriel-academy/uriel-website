@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter_web_plugins/url_strategy.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -80,16 +81,11 @@ void main() async {
   // Initialize push notifications - commented out as service doesn't exist
   // await PushNotificationService().initialize();
 
-  runApp(MyApp(analytics: analytics, observer: observer));
-}
-
-// Helper function to load deferred library and show loading indicator
-Future<Widget> _loadDeferred(
-  Future<void> Function() loadLibrary,
-  Widget Function() builder,
-) async {
-  await loadLibrary();
-  return builder();
+  runApp(
+    ProviderScope(
+      child: MyApp(analytics: analytics, observer: observer),
+    ),
+  );
 }
 
 // Wrapper widget to show loading while deferred library loads

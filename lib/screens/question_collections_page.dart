@@ -1,5 +1,8 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import '../models/question_model.dart';
 import '../models/question_collection_model.dart';
 import '../services/question_service.dart';
@@ -49,16 +52,14 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
   
   List<QuestionCollection> _collections = [];
   List<QuestionCollection> _filteredCollections = [];
-  List<QuestionCollection> _loadedCollections = []; // For lazy loading
   bool _isLoading = false;
-  bool _isLoadingMore = false; // For pagination loading
-  bool _hasMoreCollections = true; // Track if more collections available
   bool _randomizeQuestions = false;
   // Map to track question count selection per collection
   final Map<String, int> _selectedQuestionCounts = {};
-  // Pagination
+  
+  // Pagination (unified)
   int _currentPage = 0;
-  final int _pageSize = 12; // 12 collections per page
+  final int _itemsPerPage = 12; // Collections per page
   
   // Filters
   String _selectedQuestionType = 'All Types'; // MCQ or Theory
@@ -75,13 +76,17 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
   bool _isViewingCollections = false;
   String _viewingSubjectName = '';
   
-  // Pagination for collection view
-  int _collectionPage = 0;
-  final int _collectionsPerPage = 12;
+  // Error handling
+  String? _errorMessage;
+  bool _hasError = false;
+  
+  // Debouncing for search
+  Timer? _searchDebounceTimer;
 
   @override
   void initState() {
     super.initState();
+    _loadSavedFilters();
     _loadCollections();
     // On initial load, do not show any collections
     WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -94,7 +99,40 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
   @override
   void dispose() {
     _searchController.dispose();
+    _searchDebounceTimer?.cancel();
     super.dispose();
+  }
+
+  // P2 Fix #7: Load saved filters from SharedPreferences
+  Future<void> _loadSavedFilters() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      setState(() {
+        _selectedQuestionType = prefs.getString('filter_questionType') ?? 'All Types';
+        _selectedSubject = prefs.getString('filter_subject') ?? 'All Subjects';
+        _selectedTopic = prefs.getString('filter_topic') ?? 'All Topics';
+        _selectedYear = prefs.getString('filter_year') ?? 'All Years';
+        _randomizeQuestions = prefs.getBool('randomize_questions') ?? false;
+      });
+      debugPrint('✅ Loaded saved filters: Type=$_selectedQuestionType, Subject=$_selectedSubject');
+    } catch (e) {
+      debugPrint('⚠️ Could not load saved filters: $e');
+    }
+  }
+
+  // P2 Fix #7: Save filters to SharedPreferences
+  Future<void> _saveFilters() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString('filter_questionType', _selectedQuestionType);
+      await prefs.setString('filter_subject', _selectedSubject);
+      await prefs.setString('filter_topic', _selectedTopic);
+      await prefs.setString('filter_year', _selectedYear);
+      await prefs.setBool('randomize_questions', _randomizeQuestions);
+      debugPrint('💾 Saved filters to preferences');
+    } catch (e) {
+      debugPrint('⚠️ Could not save filters: $e');
+    }
   }
 
   Future<void> _loadCollections() async {
@@ -182,13 +220,11 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
       debugPrint('📦 Total collections loaded: ${allCollections.length}');
       
       _collections = allCollections;
-      _loadedCollections = allCollections;
       
       setState(() {
         _filteredCollections = [];
         _currentPage = 0;
         _isLoading = false;
-        _hasMoreCollections = false;
       });
       
       _loadSubjectCards();
@@ -199,13 +235,34 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
       
     } catch (e) {
       debugPrint('❌ Error loading collections: $e');
-      setState(() => _isLoading = false);
+      setState(() {
+        _isLoading = false;
+        _hasError = true;
+        _errorMessage = 'Failed to load collections. Please check your connection and try again.';
+      });
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(_errorMessage!),
+            backgroundColor: Colors.red[700],
+            action: SnackBarAction(
+              label: 'Retry',
+              textColor: Colors.white,
+              onPressed: _retryLoadCollections,
+            ),
+            duration: const Duration(seconds: 5),
+          ),
+        );
+      }
     }
   }
 
   Future<void> _loadSubjectCards() async {
     setState(() => _isLoadingSubjects = true);
     try {
+      // Get current user for progress tracking
+      final user = FirebaseAuth.instance.currentUser;
+      
       // Get subjects that have collections
       final subjectCounts = <String, int>{};
 
@@ -216,11 +273,11 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
         }
       }
 
-      // Create subject cards
+      // Create subject cards with real progress
       final subjectCards = <SubjectCard>[];
 
       for (final entry in subjectCounts.entries) {
-        final card = _createSubjectCard(entry.key, entry.value);
+        final card = await _createSubjectCard(entry.key, entry.value, user?.uid);
         if (card != null) {
           subjectCards.add(card);
         }
@@ -235,17 +292,44 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
       });
     } catch (e) {
       debugPrint('❌ Error loading subject cards: $e');
-      setState(() => _isLoadingSubjects = false);
+      setState(() {
+        _isLoadingSubjects = false;
+        _hasError = true;
+        _errorMessage = 'Failed to load subjects. Please try again.';
+      });
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(_errorMessage!),
+            backgroundColor: Colors.red[700],
+            action: SnackBarAction(
+              label: 'Retry',
+              textColor: Colors.white,
+              onPressed: _retryLoadSubjects,
+            ),
+            duration: const Duration(seconds: 5),
+          ),
+        );
+      }
     }
   }
 
-  SubjectCard? _createSubjectCard(String subjectName, int collectionCount) {
+  Future<SubjectCard?> _createSubjectCard(String subjectName, int collectionCount, String? userId) async {
     final config = _getSubjectCardConfig(subjectName);
     if (config == null) return null;
 
-    // TODO: Load actual completed collections count from user progress
-    // For now, using 0 as placeholder
-    final completedCollections = 0;
+    // Load actual completed collections count from user progress
+    int completedCollections = 0;
+    if (userId != null && userId.isNotEmpty) {
+      try {
+        completedCollections = await _questionService.getUserCompletedCollectionsCount(userId, subjectName);
+        debugPrint('📊 Subject "$subjectName": $completedCollections completed collections');
+      } catch (e) {
+        debugPrint('⚠️ Could not load progress for $subjectName: $e');
+        // Fall back to 0 on error
+        completedCollections = 0;
+      }
+    }
 
     return SubjectCard(
       name: subjectName,
@@ -391,10 +475,10 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
       _selectedSubject = subjectCard.name;
       _viewingSubjectName = subjectCard.displayName;
       _isViewingCollections = true;
-      _collectionPage = 0;
+      _currentPage = 0;
       
       // Only show collections for selected subject
-      final subjectCollections = _loadedCollections.where((collection) {
+      final subjectCollections = _collections.where((collection) {
         return _formatSubjectName(collection.subject) == _selectedSubject;
       }).toList();
       
@@ -409,7 +493,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
       _isViewingCollections = false;
       _selectedSubject = 'All Subjects';
       _filteredCollections = [];
-      _collectionPage = 0;
+      _currentPage = 0;
     });
   }
 
@@ -602,31 +686,6 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
         ),
       ),
     );
-  }  // Load more collections when user clicks "Load More" button
-  Future<void> _loadMoreCollections() async {
-    if (_isLoadingMore || !_hasMoreCollections) return;
-
-    setState(() => _isLoadingMore = true);
-
-    // Simulate loading delay for smooth UX
-    await Future.delayed(const Duration(milliseconds: 500));
-
-    final nextPage = _currentPage + 1;
-    final startIndex = (_currentPage * _pageSize);
-    final endIndex = (nextPage * _pageSize);
-
-    final moreCollections = _collections.skip(startIndex).take(_pageSize).toList();
-
-    if (moreCollections.isNotEmpty) {
-      setState(() {
-        _loadedCollections.addAll(moreCollections);
-        _currentPage = nextPage;
-        _hasMoreCollections = endIndex < _collections.length;
-      });
-      debugPrint('📄 Loaded page $_currentPage: ${moreCollections.length} more collections');
-    }
-
-    setState(() => _isLoadingMore = false);
   }
 
   void _applyInitialSubjectFilter() {
@@ -639,13 +698,40 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
     }
   }
 
+  // Retry methods for error recovery
+  void _retryLoadCollections() {
+    setState(() {
+      _hasError = false;
+      _errorMessage = null;
+    });
+    _loadCollections();
+  }
+
+  void _retryLoadSubjects() {
+    setState(() {
+      _hasError = false;
+      _errorMessage = null;
+    });
+    _loadSubjectCards();
+  }
+
+  // P2 Fix #8: Debounced search to prevent excessive filtering
+  void _onSearchChanged(String query) {
+    // Cancel existing timer
+    _searchDebounceTimer?.cancel();
+    
+    // Start new timer (300ms delay)
+    _searchDebounceTimer = Timer(const Duration(milliseconds: 300), () {
+      _applyFilters();
+    });
+  }
+
   void _applyFilters() {
     setState(() {
       _currentPage = 0; // reset to first page when filters change
-      _collectionPage = 0; // reset collection view page too
       // Only show collections if a subject is selected
       if (_selectedSubject != 'All Subjects') {
-        _filteredCollections = _loadedCollections.where((collection) {
+        _filteredCollections = _collections.where((collection) {
           // Subject filter
           final subjectMatch = _formatSubjectName(collection.subject) == _selectedSubject;
           if (!subjectMatch) return false;
@@ -706,16 +792,74 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
       backgroundColor: const Color(0xFFF5F5F7),
       body: _isLoading
           ? const Center(child: CircularProgressIndicator(color: Color(0xFFD62828)))
-          : _isViewingCollections
-              ? _buildCollectionView(isSmallScreen)
-              : CustomScrollView(
-                  slivers: [
-                    // Subject Cards only
-                    SliverToBoxAdapter(
-                      child: _buildSubjectCards(isSmallScreen),
+          : _hasError
+              ? _buildErrorState(isSmallScreen)
+              : _isViewingCollections
+                  ? _buildCollectionView(isSmallScreen)
+                  : CustomScrollView(
+                      slivers: [
+                        // Subject Cards only
+                        SliverToBoxAdapter(
+                          child: _buildSubjectCards(isSmallScreen),
+                        ),
+                      ],
                     ),
-                  ],
+    );
+  }
+  
+  Widget _buildErrorState(bool isSmallScreen) {
+    return Center(
+      child: Padding(
+        padding: EdgeInsets.all(isSmallScreen ? 24 : 48),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.error_outline,
+              size: isSmallScreen ? 64 : 80,
+              color: Colors.red[300],
+            ),
+            const SizedBox(height: 24),
+            Text(
+              'Oops! Something went wrong',
+              style: GoogleFonts.inter(
+                fontSize: isSmallScreen ? 20 : 24,
+                fontWeight: FontWeight.w700,
+                color: const Color(0xFF1D1D1F),
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 12),
+            Text(
+              _errorMessage ?? 'An unexpected error occurred',
+              style: GoogleFonts.inter(
+                fontSize: isSmallScreen ? 14 : 16,
+                color: Colors.grey[600],
+                height: 1.5,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 32),
+            ElevatedButton.icon(
+              onPressed: _retryLoadCollections,
+              icon: const Icon(Icons.refresh),
+              label: const Text('Try Again'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFFD62828),
+                foregroundColor: Colors.white,
+                padding: EdgeInsets.symmetric(
+                  horizontal: isSmallScreen ? 24 : 32,
+                  vertical: isSmallScreen ? 12 : 16,
                 ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                elevation: 0,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
   
@@ -811,7 +955,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
           // Search bar
           TextField(
             controller: _searchController,
-            onChanged: (_) => _applyFilters(),
+            onChanged: _onSearchChanged,
             style: GoogleFonts.montserrat(color: const Color(0xFF1A1E3F)),
             decoration: InputDecoration(
               hintText: 'Search collections...',
@@ -833,6 +977,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
               children: [
                 _buildFilterDropdown('Question Type', _selectedQuestionType, ['All Types', 'MCQ', 'Theory'], (value) {
                   setState(() => _selectedQuestionType = value!);
+                  _saveFilters();
                   _applyFilters();
                 }),
                 const SizedBox(height: 8),
@@ -841,16 +986,19 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                     _selectedSubject = value!;
                     _selectedTopic = 'All Topics'; // Reset topic when subject changes
                   });
+                  _saveFilters();
                   _applyFilters();
                 }),
                 const SizedBox(height: 8),
                 _buildFilterDropdown('Topic', _selectedTopic, _getTopicOptions(), (value) {
                   setState(() => _selectedTopic = value!);
+                  _saveFilters();
                   _applyFilters();
                 }),
                 const SizedBox(height: 8),
                 _buildFilterDropdown('Year', _selectedYear, _getYearOptions(), (value) {
                   setState(() => _selectedYear = value!);
+                  _saveFilters();
                   _applyFilters();
                 }),
               ],
@@ -863,6 +1011,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                     Expanded(
                       child: _buildFilterDropdown('Question Type', _selectedQuestionType, ['All Types', 'MCQ', 'Theory'], (value) {
                         setState(() => _selectedQuestionType = value!);
+                        _saveFilters();
                         _applyFilters();
                       }),
                     ),
@@ -873,6 +1022,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                           _selectedSubject = value!;
                           _selectedTopic = 'All Topics'; // Reset topic when subject changes
                         });
+                        _saveFilters();
                         _applyFilters();
                       }),
                     ),
@@ -884,6 +1034,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                     Expanded(
                       child: _buildFilterDropdown('Topic', _selectedTopic, _getTopicOptions(), (value) {
                         setState(() => _selectedTopic = value!);
+                        _saveFilters();
                         _applyFilters();
                       }),
                     ),
@@ -891,6 +1042,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                     Expanded(
                       child: _buildFilterDropdown('Year', _selectedYear, _getYearOptions(), (value) {
                         setState(() => _selectedYear = value!);
+                        _saveFilters();
                         _applyFilters();
                       }),
                     ),
@@ -924,6 +1076,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                       _selectedTopic = 'All Topics';
                       _selectedYear = 'All Years';
                     });
+                    _saveFilters();
                     _applyFilters();
                   },
                   icon: const Icon(Icons.clear, size: 16),
@@ -1012,125 +1165,6 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
     return ['All Topics', ...topics];
   }
 
-  Widget _buildEmptyState() {
-    return Container(
-      padding: const EdgeInsets.all(48),
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(Icons.folder_open, size: 64, color: Colors.grey[300]),
-            const SizedBox(height: 16),
-            Text(
-              'No collections found',
-              style: GoogleFonts.playfairDisplay(
-                color: const Color(0xFF1A1E3F),
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              'Try adjusting your filters',
-              style: GoogleFonts.montserrat(color: Colors.grey[600], fontSize: 14),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildCollectionsList(bool isSmallScreen) {
-    // Group collections by type when a subject is selected
-    if (_selectedSubject != 'All Subjects') {
-      return _buildGroupedCollections(isSmallScreen);
-    }
-    
-    // Original list view when no subject selected
-    return Container(
-      padding: EdgeInsets.symmetric(
-        horizontal: isSmallScreen ? 16 : 24,
-        vertical: 8,
-      ),
-      child: Column(
-        children: [
-          // Collections grid / list
-          isSmallScreen
-              ? Column(
-                  children: _filteredCollections.map((collection) {
-                    return _buildCollectionCard(collection, isSmallScreen);
-                  }).toList(),
-                )
-              : GridView.builder(
-                  shrinkWrap: true,
-                  physics: const NeverScrollableScrollPhysics(),
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2, // 2 cards per line
-                    crossAxisSpacing: 16,
-                    mainAxisSpacing: 16,
-                    childAspectRatio: 2.1, // 15% height reduction (was 1.8)
-                  ),
-                  itemCount: _filteredCollections.length,
-                  itemBuilder: (context, index) {
-                    return _buildCollectionCard(_filteredCollections[index], isSmallScreen);
-                  },
-                ),
-
-          const SizedBox(height: 12),
-
-          // Load More Button (if more collections available)
-          if (_hasMoreCollections && !_isLoadingMore)
-            Padding(
-              padding: const EdgeInsets.all(16),
-              child: ElevatedButton(
-                onPressed: _loadMoreCollections,
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFD62828),
-                  foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
-                child: const Text('Load More Collections'),
-              ),
-            ),
-
-          // Loading indicator for background loading
-          if (_isLoadingMore)
-            const Padding(
-              padding: EdgeInsets.all(16),
-              child: CircularProgressIndicator(color: Color(0xFFD62828)),
-            ),
-
-          // Legacy pagination controls (for filtered results if needed)
-          if (_filteredCollections.length > _pageSize && !_hasMoreCollections)
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                TextButton.icon(
-                  onPressed: _currentPage > 0 ? () => setState(() => _currentPage--) : null,
-                  icon: const Icon(Icons.chevron_left),
-                  label: const Text('Previous'),
-                ),
-                const SizedBox(width: 12),
-                Text('Page ${_currentPage + 1} of ${(_filteredCollections.length / _pageSize).ceil()}',
-                     style: GoogleFonts.montserrat()),
-                const SizedBox(width: 12),
-                TextButton.icon(
-                  onPressed: _currentPage < (_filteredCollections.length / _pageSize).ceil() - 1
-                      ? () => setState(() => _currentPage++)
-                      : null,
-                  icon: const Icon(Icons.chevron_right),
-                  label: const Text('Next'),
-                ),
-              ],
-            ),
-        ],
-      ),
-    );
-  }
-
   Widget _buildUnifiedCollections(bool isSmallScreen) {
     // Sort collections: MCQ first, then Theory, then Topics
     final sortedCollections = List<QuestionCollection>.from(_filteredCollections);
@@ -1150,9 +1184,9 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
     });
     
     // Pagination: 12 items per page
-    final totalPages = (sortedCollections.length / _collectionsPerPage).ceil();
-    final startIndex = _collectionPage * _collectionsPerPage;
-    final endIndex = (startIndex + _collectionsPerPage).clamp(0, sortedCollections.length);
+    final totalPages = (sortedCollections.length / _itemsPerPage).ceil();
+    final startIndex = _currentPage * _itemsPerPage;
+    final endIndex = (startIndex + _itemsPerPage).clamp(0, sortedCollections.length);
     final paginatedCollections = sortedCollections.sublist(startIndex, endIndex);
     
     return Container(
@@ -1192,8 +1226,8 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 IconButton(
-                  onPressed: _collectionPage > 0
-                      ? () => setState(() => _collectionPage--)
+                  onPressed: _currentPage > 0
+                      ? () => setState(() => _currentPage--)
                       : null,
                   icon: const Icon(Icons.chevron_left),
                   color: const Color(0xFF1A1E3F),
@@ -1203,7 +1237,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                 ),
                 SizedBox(width: isSmallScreen ? 12 : 16),
                 Text(
-                  'Page ${_collectionPage + 1} of $totalPages',
+                  'Page ${_currentPage + 1} of $totalPages',
                   style: GoogleFonts.montserrat(
                     color: const Color(0xFF1A1E3F),
                     fontWeight: FontWeight.w600,
@@ -1212,8 +1246,8 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                 ),
                 SizedBox(width: isSmallScreen ? 12 : 16),
                 IconButton(
-                  onPressed: _collectionPage < totalPages - 1
-                      ? () => setState(() => _collectionPage++)
+                  onPressed: _currentPage < totalPages - 1
+                      ? () => setState(() => _currentPage++)
                       : null,
                   icon: const Icon(Icons.chevron_right),
                   color: const Color(0xFF1A1E3F),
@@ -1226,188 +1260,6 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
           ],
         ],
       ),
-    );
-  }
-  
-  Widget _buildGroupedCollections(bool isSmallScreen) {
-    // Separate collections into MCQ, Theory, and Topic
-    final mcqCollections = _filteredCollections.where((c) {
-      // Year collections with multipleChoice type
-      return c.questionType == QuestionType.multipleChoice && 
-             c.year != 'All Years';
-    }).toList();
-    
-    final theoryCollections = _filteredCollections.where((c) {
-      // Year collections with essay type
-      return c.questionType == QuestionType.essay && 
-             c.year != 'All Years';
-    }).toList();
-    
-    final topicCollections = _filteredCollections.where((c) {
-      // Topic collections (identified by year == 'All Years' or by having topic info)
-      return c.year == 'All Years';
-    }).toList();
-    
-    return Container(
-      padding: EdgeInsets.symmetric(
-        horizontal: isSmallScreen ? 16 : 24,
-        vertical: 8,
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // MCQ Section
-          if (mcqCollections.isNotEmpty) ...[
-            _buildCollectionSection(
-              'Multiple Choice Questions',
-              mcqCollections,
-              isSmallScreen,
-              Icons.check_circle_outline,
-              const Color(0xFF2ECC71),
-            ),
-            const SizedBox(height: 24),
-          ],
-          
-          // Theory Section
-          if (theoryCollections.isNotEmpty) ...[
-            _buildCollectionSection(
-              'Theory / Essay Questions',
-              theoryCollections,
-              isSmallScreen,
-              Icons.edit_note,
-              const Color(0xFFE67E22),
-            ),
-            const SizedBox(height: 24),
-          ],
-          
-          // Topic Section
-          if (topicCollections.isNotEmpty) ...[
-            _buildCollectionSection(
-              'Practice by Topic',
-              topicCollections,
-              isSmallScreen,
-              Icons.topic,
-              const Color(0xFF9B59B6),
-            ),
-          ],
-        ],
-      ),
-    );
-  }
-
-  Widget _buildCollectionSection(
-    String title,
-    List<QuestionCollection> collections,
-    bool isSmallScreen,
-    IconData icon,
-    Color color,
-  ) {
-    // Pagination: 12 items per page
-    final totalPages = (collections.length / _collectionsPerPage).ceil();
-    final startIndex = _collectionPage * _collectionsPerPage;
-    final endIndex = (startIndex + _collectionsPerPage).clamp(0, collections.length);
-    final paginatedCollections = collections.sublist(startIndex, endIndex);
-    
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        // Section Header
-        Row(
-          children: [
-            Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                color: color.withValues(alpha: 0.1),
-                borderRadius: BorderRadius.circular(8),
-              ),
-              child: Icon(icon, color: color, size: 20),
-            ),
-            const SizedBox(width: 12),
-            Text(
-              title,
-              style: GoogleFonts.playfairDisplay(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: const Color(0xFF1A1E3F),
-              ),
-            ),
-            const SizedBox(width: 8),
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-              decoration: BoxDecoration(
-                color: color.withValues(alpha: 0.1),
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Text(
-                '${collections.length}',
-                style: GoogleFonts.montserrat(
-                  color: color,
-                  fontSize: 12,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          ],
-        ),
-        const SizedBox(height: 16),
-        
-        // Collections Grid
-        isSmallScreen
-            ? Column(
-                children: paginatedCollections.map((collection) {
-                  return _buildCollectionCard(collection, isSmallScreen);
-                }).toList(),
-              )
-            : GridView.builder(
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 16,
-                  mainAxisSpacing: 16,
-                  childAspectRatio: 2.1,
-                ),
-                itemCount: paginatedCollections.length,
-                itemBuilder: (context, index) {
-                  return _buildCollectionCard(paginatedCollections[index], isSmallScreen);
-                },
-              ),
-        
-        // Pagination Controls
-        if (totalPages > 1) ...[
-          const SizedBox(height: 24),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              IconButton(
-                onPressed: _collectionPage > 0
-                    ? () => setState(() => _collectionPage--)
-                    : null,
-                icon: const Icon(Icons.chevron_left),
-                color: const Color(0xFF1A1E3F),
-                disabledColor: Colors.grey[300],
-              ),
-              const SizedBox(width: 16),
-              Text(
-                'Page ${_collectionPage + 1} of $totalPages',
-                style: GoogleFonts.montserrat(
-                  color: const Color(0xFF1A1E3F),
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              const SizedBox(width: 16),
-              IconButton(
-                onPressed: _collectionPage < totalPages - 1
-                    ? () => setState(() => _collectionPage++)
-                    : null,
-                icon: const Icon(Icons.chevron_right),
-                color: const Color(0xFF1A1E3F),
-                disabledColor: Colors.grey[300],
-              ),
-            ],
-          ),
-        ],
-      ],
     );
   }
 

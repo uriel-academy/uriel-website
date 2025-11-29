@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/foundation.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 /// Service to track student study plan progress across different features
@@ -55,7 +56,7 @@ class StudyPlanProgressService {
       });
     } catch (e) {
       // Silently fail - don't disrupt user experience
-      print('Error tracking progress: $e');
+      debugPrint('Error tracking progress: $e');
     }
   }
 
