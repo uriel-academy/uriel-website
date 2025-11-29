@@ -472,6 +472,11 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
             blurRadius: 20,
             offset: const Offset(0, 4),
           ),
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.04),
+            blurRadius: 12,
+            offset: const Offset(0, 2),
+          ),
         ],
       ),
       child: Material(
@@ -485,7 +490,12 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
               Expanded(
                 flex: 75,
                 child: Padding(
-                  padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
+                  padding: EdgeInsets.fromLTRB(
+                    isSmallScreen ? 8 : 12,
+                    isSmallScreen ? 8 : 12,
+                    isSmallScreen ? 8 : 12,
+                    isSmallScreen ? 4 : 6,
+                  ),
                   child: Container(
                     width: double.infinity,
                     padding: EdgeInsets.symmetric(
@@ -508,12 +518,13 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                               : subjectCard.desktopDisplayName,
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            fontSize: isSmallScreen ? 16 : 24,
-                            fontWeight: FontWeight.w600,
+                            fontSize: isSmallScreen ? 18 : 26,
+                            fontWeight: FontWeight.w700,
                             color: subjectCard.color.computeLuminance() > 0.5
                                 ? const Color(0xFF1D1D1F)
                                 : Colors.white,
                             height: 1.2,
+                            letterSpacing: -0.3,
                           ),
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
@@ -539,16 +550,20 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
               Expanded(
                 flex: 25,
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: isSmallScreen ? 4 : 8,
+                  ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(
-                        Icons.arrow_forward,
-                        size: isSmallScreen ? 20 : 24,
+                        Icons.arrow_forward_rounded,
+                        size: isSmallScreen ? 26 : 28,
                         color: subjectCard.color,
+                        weight: 700,
                       ),
-                      const SizedBox(height: 8),
+                      SizedBox(height: isSmallScreen ? 6 : 8),
                       // Progress bar
                       Container(
                         height: 4,
