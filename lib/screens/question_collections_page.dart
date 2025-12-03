@@ -642,6 +642,20 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                               : Colors.white70,
                         ),
                       ),
+                      SizedBox(height: isSmallScreen ? 4 : 6),
+                      Text(
+                        subjectCard.description,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: isSmallScreen ? 9 : 11,
+                          fontWeight: FontWeight.w400,
+                          color: subjectCard.color.computeLuminance() > 0.5
+                              ? const Color(0xFF8E8E93)
+                              : Colors.white60,
+                        ),
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                      ),
                     ],
                   ),
                 ),
