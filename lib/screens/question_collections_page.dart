@@ -579,6 +579,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
     return Card(
       elevation: 8,
       shadowColor: Colors.black.withValues(alpha: 0.12),
+      color: Colors.white,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(24),
       ),
