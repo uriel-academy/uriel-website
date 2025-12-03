@@ -59,9 +59,19 @@ class _PricingPageState extends State<PricingPage> {
               final homeRoute = await NavigationHelper.getUserHomeRoute();
               Navigator.pushReplacementNamed(context, homeRoute);
             },
-            child: Text(
-              'Uriel Academy',
-              style: AppStyles.brandNameLight(fontSize: isMobile ? 18 : 22),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  'Uriel',
+                  style: AppStyles.brandNameLight(fontSize: isMobile ? 18 : 22),
+                ),
+                Text(
+                  'Academy',
+                  style: AppStyles.brandNameLight(fontSize: isMobile ? 18 : 22),
+                ),
+              ],
             ),
           ),
           if (!isMobile)

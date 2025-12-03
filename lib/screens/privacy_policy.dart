@@ -92,9 +92,19 @@ class _PrivacyPolicyPageState extends State<PrivacyPolicyPage> with TickerProvid
               final homeRoute = await NavigationHelper.getUserHomeRoute();
               Navigator.pushReplacementNamed(context, homeRoute);
             },
-            child: Text(
-              'Uriel Academy',
-              style: AppStyles.brandNameLight(fontSize: isSmallScreen ? 18 : 22),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  'Uriel',
+                  style: AppStyles.brandNameLight(fontSize: isSmallScreen ? 18 : 22),
+                ),
+                Text(
+                  'Academy',
+                  style: AppStyles.brandNameLight(fontSize: isSmallScreen ? 18 : 22),
+                ),
+              ],
             ),
           ),
           
