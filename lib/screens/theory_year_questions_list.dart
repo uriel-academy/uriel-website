@@ -106,7 +106,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
       'Asante Twi': 'asanteTwi',
       'French': 'french',
       'ICT': 'ict',
-      'Religious & Moral Education': 'religiousMoralEducation',
+      'Religious and Moral Education': 'religiousMoralEducation',
       'Creative Arts': 'creativeArts',
       'Career Technology': 'careerTechnology',
     };
