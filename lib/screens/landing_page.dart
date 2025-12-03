@@ -26,7 +26,7 @@ class LandingPage extends StatelessWidget {
             CommonFooter(
               isSmallScreen: screenWidth < 768,
               showLinks: true,
-              showPricing: false,
+              showPricing: true,
             ),
           ],
         ),

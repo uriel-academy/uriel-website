@@ -262,7 +262,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
     try {
       // Get current user for progress tracking
       final user = FirebaseAuth.instance.currentUser;
-      
+
       // Get subjects that have collections
       final subjectCounts = <String, int>{};
 
@@ -273,13 +273,37 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
         }
       }
 
-      // Create subject cards with real progress
+      // Create subject cards with real progress - load all progress in parallel
       final subjectCards = <SubjectCard>[];
 
-      for (final entry in subjectCounts.entries) {
-        final card = await _createSubjectCard(entry.key, entry.value, user?.uid);
-        if (card != null) {
-          subjectCards.add(card);
+      if (user?.uid != null && user!.uid.isNotEmpty) {
+        // Load progress for all subjects in parallel
+        final progressFutures = <Future<int>>[];
+        final subjectNames = subjectCounts.keys.toList();
+
+        for (final subjectName in subjectNames) {
+          progressFutures.add(_questionService.getUserCompletedCollectionsCount(user.uid, subjectName));
+        }
+
+        final progressResults = await Future.wait(progressFutures);
+
+        for (int i = 0; i < subjectNames.length; i++) {
+          final subjectName = subjectNames[i];
+          final collectionCount = subjectCounts[subjectName]!;
+          final completedCollections = progressResults[i];
+
+          final card = _createSubjectCardSync(subjectName, collectionCount, completedCollections);
+          if (card != null) {
+            subjectCards.add(card);
+          }
+        }
+      } else {
+        // No user logged in, create cards with 0 progress
+        for (final entry in subjectCounts.entries) {
+          final card = _createSubjectCardSync(entry.key, entry.value, 0);
+          if (card != null) {
+            subjectCards.add(card);
+          }
         }
       }
 
@@ -314,22 +338,9 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
     }
   }
 
-  Future<SubjectCard?> _createSubjectCard(String subjectName, int collectionCount, String? userId) async {
+  SubjectCard? _createSubjectCardSync(String subjectName, int collectionCount, int completedCollections) {
     final config = _getSubjectCardConfig(subjectName);
     if (config == null) return null;
-
-    // Load actual completed collections count from user progress
-    int completedCollections = 0;
-    if (userId != null && userId.isNotEmpty) {
-      try {
-        completedCollections = await _questionService.getUserCompletedCollectionsCount(userId, subjectName);
-        debugPrint('📊 Subject "$subjectName": $completedCollections completed collections');
-      } catch (e) {
-        debugPrint('⚠️ Could not load progress for $subjectName: $e');
-        // Fall back to 0 on error
-        completedCollections = 0;
-      }
-    }
 
     return SubjectCard(
       name: subjectName,
@@ -502,6 +513,13 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
       return const SizedBox.shrink();
     }
 
+    // Determine grid layout based on screen size
+    final screenWidth = MediaQuery.of(context).size.width;
+    final crossAxisCount = screenWidth < 480 ? 1 : (isSmallScreen ? 2 : 3);
+    final crossAxisSpacing = isSmallScreen ? 12.0 : 20.0;
+    final mainAxisSpacing = isSmallScreen ? 12.0 : 20.0;
+    final childAspectRatio = isSmallScreen ? 1.1 : 1.05; // Slightly taller on mobile
+
     return Container(
       margin: EdgeInsets.symmetric(
         horizontal: isSmallScreen ? 16 : 48,
@@ -538,10 +556,10 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: isSmallScreen ? 2 : 3,
-              crossAxisSpacing: isSmallScreen ? 12 : 20,
-              mainAxisSpacing: isSmallScreen ? 12 : 20,
-              childAspectRatio: isSmallScreen ? 1.0 : 1.05,
+              crossAxisCount: crossAxisCount,
+              crossAxisSpacing: crossAxisSpacing,
+              mainAxisSpacing: mainAxisSpacing,
+              childAspectRatio: childAspectRatio,
             ),
             itemCount: _subjectCards.length,
             itemBuilder: (context, index) {
@@ -558,146 +576,126 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
         ? subjectCard.completedCollections / subjectCard.collectionCount
         : 0.0;
 
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
+    return Card(
+      elevation: 8,
+      shadowColor: Colors.black.withValues(alpha: 0.12),
+      shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(24),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.08),
-            blurRadius: 20,
-            offset: const Offset(0, 4),
-          ),
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.04),
-            blurRadius: 12,
-            offset: const Offset(0, 2),
-          ),
-        ],
       ),
-      child: Material(
-        color: Colors.transparent,
-        child: InkWell(
-          onTap: () => _onSubjectCardTap(subjectCard),
-          borderRadius: BorderRadius.circular(24),
-          child: Column(
-            children: [
-              // Top pastel section with title and collection count
-              Expanded(
-                flex: 75,
-                child: Padding(
-                  padding: EdgeInsets.fromLTRB(
-                    isSmallScreen ? 8 : 12,
-                    isSmallScreen ? 8 : 12,
-                    isSmallScreen ? 8 : 12,
-                    isSmallScreen ? 4 : 6,
-                  ),
-                  child: Container(
-                    width: double.infinity,
-                    padding: EdgeInsets.symmetric(
-                      vertical: isSmallScreen ? 20 : 32,
-                      horizontal: isSmallScreen ? 12 : 24,
-                    ),
-                    decoration: BoxDecoration(
-                      color: subjectCard.color,
-                      borderRadius: const BorderRadius.only(
-                        topLeft: Radius.circular(20),
-                        topRight: Radius.circular(20),
-                      ),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          isSmallScreen
-                              ? subjectCard.mobileDisplayName
-                              : subjectCard.desktopDisplayName,
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize: isSmallScreen ? 18 : 26,
-                            fontWeight: FontWeight.w700,
-                            color: subjectCard.color.computeLuminance() > 0.5
-                                ? const Color(0xFF1D1D1F)
-                                : Colors.white,
-                            height: 1.2,
-                            letterSpacing: -0.3,
-                          ),
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                        SizedBox(height: isSmallScreen ? 8 : 12),
-                        Text(
-                          '${subjectCard.collectionCount} collections',
-                          style: TextStyle(
-                            fontSize: isSmallScreen ? 11 : 14,
-                            fontWeight: FontWeight.w500,
-                            color: subjectCard.color.computeLuminance() > 0.5
-                                ? const Color(0xFF6E6E73)
-                                : Colors.white70,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: () => _onSubjectCardTap(subjectCard),
+        borderRadius: BorderRadius.circular(24),
+        child: Column(
+          children: [
+            // Top pastel section with title and collection count
+            Expanded(
+              flex: 70,
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(
+                  isSmallScreen ? 8 : 12,
+                  isSmallScreen ? 8 : 12,
+                  isSmallScreen ? 8 : 12,
+                  isSmallScreen ? 4 : 6,
                 ),
-              ),
-
-              // Bottom white section with arrow button and progress bar
-              Expanded(
-                flex: 25,
-                child: Padding(
+                child: Container(
+                  width: double.infinity,
                   padding: EdgeInsets.symmetric(
-                    horizontal: 20,
-                    vertical: isSmallScreen ? 2 : 8, // Reduced vertical padding by 2 for mobile
+                    vertical: isSmallScreen ? 20 : 32,
+                    horizontal: isSmallScreen ? 12 : 24,
+                  ),
+                  decoration: BoxDecoration(
+                    color: subjectCard.color,
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(20),
+                      topRight: Radius.circular(20),
+                    ),
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(
-                        Icons.arrow_forward_rounded,
-                        size: isSmallScreen ? 26 : 28,
-                        color: subjectCard.color,
-                        weight: 700,
+                      Text(
+                        isSmallScreen
+                            ? subjectCard.mobileDisplayName
+                            : subjectCard.desktopDisplayName,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: isSmallScreen ? 18 : 26,
+                          fontWeight: FontWeight.w700,
+                          color: subjectCard.color.computeLuminance() > 0.5
+                              ? const Color(0xFF1D1D1F)
+                              : Colors.white,
+                          height: 1.2,
+                          letterSpacing: -0.3,
+                        ),
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
                       ),
-                      SizedBox(height: isSmallScreen ? 6 : 8),
-                      // Progress bar with percentage above
-                      if (progress > 0)
-                        Align(
-                          alignment: Alignment.centerLeft,
-                          child: Text(
-                            '${(progress * 100).toInt()}% complete',
-                            style: TextStyle(
-                              fontSize: isSmallScreen ? 9 : 10,
-                              fontWeight: FontWeight.w500,
-                              color: const Color(0xFF6E6E73),
-                            ),
-                          ),
-                        ),
-                      if (progress > 0) SizedBox(height: isSmallScreen ? 2 : 4),
-                      Container(
-                        height: 4,
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          color: Colors.grey.withValues(alpha: 0.2),
-                          borderRadius: BorderRadius.circular(2),
-                        ),
-                        child: FractionallySizedBox(
-                          alignment: Alignment.centerLeft,
-                          widthFactor: progress,
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: subjectCard.color,
-                              borderRadius: BorderRadius.circular(2),
-                            ),
-                          ),
+                      SizedBox(height: isSmallScreen ? 8 : 12),
+                      Text(
+                        '${subjectCard.collectionCount} collections',
+                        style: TextStyle(
+                          fontSize: isSmallScreen ? 11 : 14,
+                          fontWeight: FontWeight.w500,
+                          color: subjectCard.color.computeLuminance() > 0.5
+                              ? const Color(0xFF6E6E73)
+                              : Colors.white70,
                         ),
                       ),
                     ],
                   ),
                 ),
               ),
-            ],
-          ),
+            ),
+
+            // Middle section with arrow button
+            Expanded(
+              flex: 15,
+              child: Center(
+                child: Icon(
+                  Icons.arrow_forward_rounded,
+                  size: isSmallScreen ? 26 : 28,
+                  color: subjectCard.color,
+                  weight: 700,
+                ),
+              ),
+            ),
+
+            // Bottom section with progress bar and percentage
+            Expanded(
+              flex: 15,
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: isSmallScreen ? 12 : 16,
+                  vertical: isSmallScreen ? 4 : 6,
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    // Progress bar
+                    Expanded(
+                      child: LinearProgressIndicator(
+                        value: progress,
+                        backgroundColor: Colors.grey.withValues(alpha: 0.2),
+                        valueColor: AlwaysStoppedAnimation<Color>(subjectCard.color),
+                        borderRadius: BorderRadius.circular(2),
+                      ),
+                    ),
+                    SizedBox(height: isSmallScreen ? 2 : 4),
+                    // Percentage text
+                    Text(
+                      '${(progress * 100).toInt()}% complete',
+                      style: TextStyle(
+                        fontSize: isSmallScreen ? 9 : 10,
+                        fontWeight: FontWeight.w500,
+                        color: const Color(0xFF6E6E73),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );

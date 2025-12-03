@@ -47,7 +47,6 @@ class CommonFooter extends StatelessWidget {
               alignment: WrapAlignment.center,
               children: [
                 if (showPricing) _buildFooterLink(context, 'Pricing', () => Navigator.pushNamed(context, '/pricing')),
-                _buildFooterLink(context, 'Payment', () => Navigator.pushNamed(context, '/payment')),
                 _buildFooterLink(context, 'About Us', () => Navigator.pushNamed(context, '/about')),
                 _buildFooterLink(context, 'Contact', () => Navigator.pushNamed(context, '/contact')),
                 _buildFooterLink(context, 'Privacy Policy', () => Navigator.pushNamed(context, '/privacy')),
