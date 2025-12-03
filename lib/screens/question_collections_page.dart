@@ -620,7 +620,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                             : subjectCard.desktopDisplayName,
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          fontSize: isSmallScreen ? 18 : 26,
+                          fontSize: isSmallScreen ? 23 : 26,
                           fontWeight: FontWeight.w700,
                           color: subjectCard.color.computeLuminance() > 0.5
                               ? const Color(0xFF1D1D1F)
@@ -633,7 +633,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                       ),
                       SizedBox(height: isSmallScreen ? 8 : 12),
                       Text(
-                        '${subjectCard.collectionCount} collections',
+                        '${subjectCard.collectionCount} quiz sets',
                         style: TextStyle(
                           fontSize: isSmallScreen ? 11 : 14,
                           fontWeight: FontWeight.w500,
@@ -1068,7 +1068,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Found ${_filteredCollections.length} collections',
+                'Found ${_filteredCollections.length} quiz sets',
                 style: GoogleFonts.montserrat(
                   color: Colors.grey[700],
                   fontSize: 14,
