@@ -515,7 +515,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
 
     // Determine grid layout based on screen size
     final screenWidth = MediaQuery.of(context).size.width;
-    final crossAxisCount = screenWidth < 480 ? 1 : (isSmallScreen ? 2 : 3);
+    final crossAxisCount = isSmallScreen ? 2 : 3;
     final crossAxisSpacing = isSmallScreen ? 12.0 : 20.0;
     final mainAxisSpacing = isSmallScreen ? 12.0 : 20.0;
     final childAspectRatio = isSmallScreen ? 1.1 : 1.05; // Slightly taller on mobile
@@ -641,20 +641,6 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                               ? const Color(0xFF6E6E73)
                               : Colors.white70,
                         ),
-                      ),
-                      SizedBox(height: isSmallScreen ? 4 : 6),
-                      Text(
-                        subjectCard.description,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: isSmallScreen ? 9 : 11,
-                          fontWeight: FontWeight.w400,
-                          color: subjectCard.color.computeLuminance() > 0.5
-                              ? const Color(0xFF8E8E93)
-                              : Colors.white60,
-                        ),
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
                       ),
                     ],
                   ),
