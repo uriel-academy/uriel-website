@@ -2658,6 +2658,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     // Hide on Study Planner page (index 5 for students)
     if (_selectedIndex == 5) return false;
     
+    // Hide on Questions page (index 1 for students)
+    if (_selectedIndex == 1) return false;
+    
     return !_showingProfile && 
            _selectedIndex != _uriIndex() && 
            _selectedIndex != _feedbackIndex();
