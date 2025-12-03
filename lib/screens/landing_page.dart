@@ -52,19 +52,9 @@ class LandingPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             // Logo
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(
-                  'Uriel',
-                  style: AppStyles.brandNameLight(fontSize: 22),
-                ),
-                Text(
-                  'Academy',
-                  style: AppStyles.brandNameLight(fontSize: 22),
-                ),
-              ],
+            Text(
+              'Uriel Academy',
+              style: AppStyles.brandNameLight(fontSize: 22),
             ),
             
             const Spacer(),

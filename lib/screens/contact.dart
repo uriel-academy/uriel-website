@@ -169,19 +169,9 @@ class _ContactPageState extends State<ContactPage> with TickerProviderStateMixin
               final homeRoute = await NavigationHelper.getUserHomeRoute();
               Navigator.pushReplacementNamed(context, homeRoute);
             },
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(
-                  'Uriel',
-                  style: AppStyles.brandNameLight(fontSize: isSmallScreen ? 18 : 22),
-                ),
-                Text(
-                  'Academy',
-                  style: AppStyles.brandNameLight(fontSize: isSmallScreen ? 18 : 22),
-                ),
-              ],
+            child: Text(
+              'Uriel Academy',
+              style: AppStyles.brandNameLight(fontSize: isSmallScreen ? 18 : 22),
             ),
           ),
           

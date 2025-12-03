@@ -2246,19 +2246,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       child: Row(
         children: [
           // Logo and Title
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                'Uriel',
-                style: AppStyles.brandNameLight(fontSize: 18),
-              ),
-              Text(
-                'Academy',
-                style: AppStyles.brandNameLight(fontSize: 18),
-              ),
-            ],
+          Text(
+            'Uriel Academy',
+            style: AppStyles.brandNameLight(fontSize: 18),
           ),
           
           const Spacer(),
@@ -2340,23 +2330,11 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           // Logo Section
           Container(
             padding: const EdgeInsets.all(24),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(
-                  'Uriel',
-                  style: AppStyles.brandNameStyle(
-                    fontSize: 20,
-                  ),
-                ),
-                Text(
-                  'Academy',
-                  style: AppStyles.brandNameStyle(
-                    fontSize: 20,
-                  ),
-                ),
-              ],
+            child: Text(
+              'Uriel Academy',
+              style: AppStyles.brandNameStyle(
+                fontSize: 20,
+              ),
             ),
           ),
           
