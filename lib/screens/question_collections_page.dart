@@ -1403,8 +1403,8 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                       const SizedBox(height: 12),
                       // Start Quiz Button (Mobile - full width)
                       _buildActionButton(
-                        icon: collection.questionType == QuestionType.essay ? Icons.edit_note : Icons.play_arrow,
-                        label: collection.questionType == QuestionType.essay ? 'Start' : 'Start Quiz',
+                        icon: (collection.questionType == QuestionType.essay && collection.subject != Subject.religiousMoralEducation) ? Icons.edit_note : Icons.play_arrow,
+                        label: (collection.questionType == QuestionType.essay && collection.subject != Subject.religiousMoralEducation) ? 'Start' : 'Start Quiz',
                         onPressed: () => _startQuiz(collection),
                         isPrimary: true,
                       ),
@@ -1457,8 +1457,8 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                             child: FractionallySizedBox(
                               widthFactor: 0.84, // 20% increase from 0.7
                               child: _buildActionButton(
-                                icon: collection.questionType == QuestionType.essay ? Icons.edit_note : Icons.play_arrow,
-                                label: collection.questionType == QuestionType.essay ? 'Start' : 'Start Quiz',
+                                icon: (collection.questionType == QuestionType.essay && collection.subject != Subject.religiousMoralEducation) ? Icons.edit_note : Icons.play_arrow,
+                                label: (collection.questionType == QuestionType.essay && collection.subject != Subject.religiousMoralEducation) ? 'Start' : 'Start Quiz',
                                 onPressed: () => _startQuiz(collection),
                                 isPrimary: true,
                               ),
@@ -1607,8 +1607,8 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
     final selectedCount = _selectedQuestionCounts[collection.id] ?? 
         ([10, 20, 40].where((c) => c <= collection.questionCount).firstOrNull ?? collection.questionCount);
     // Check if this is a theory/essay collection
-    if (collection.questionType == QuestionType.essay) {
-      // Route to theory questions list
+    if (collection.questionType == QuestionType.essay && collection.subject != Subject.religiousMoralEducation) {
+      // Route to theory questions list (but not for RME theory questions)
       Navigator.push(
         context,
         MaterialPageRoute(
