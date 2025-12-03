@@ -515,7 +515,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
 
     // Determine grid layout based on screen size
     final screenWidth = MediaQuery.of(context).size.width;
-    final crossAxisCount = isSmallScreen ? 2 : 3;
+    final crossAxisCount = screenWidth < 480 ? 1 : (isSmallScreen ? 2 : 3);
     final crossAxisSpacing = isSmallScreen ? 12.0 : 20.0;
     final mainAxisSpacing = isSmallScreen ? 12.0 : 20.0;
     final childAspectRatio = isSmallScreen ? 1.1 : 1.05; // Slightly taller on mobile
