@@ -648,7 +648,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                 child: Padding(
                   padding: EdgeInsets.symmetric(
                     horizontal: 20,
-                    vertical: isSmallScreen ? 4 : 8,
+                    vertical: isSmallScreen ? 2 : 8, // Reduced vertical padding by 2 for mobile
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -660,7 +660,20 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                         weight: 700,
                       ),
                       SizedBox(height: isSmallScreen ? 6 : 8),
-                      // Progress bar
+                      // Progress bar with percentage above
+                      if (progress > 0)
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            '${(progress * 100).toInt()}% complete',
+                            style: TextStyle(
+                              fontSize: isSmallScreen ? 9 : 10,
+                              fontWeight: FontWeight.w500,
+                              color: const Color(0xFF6E6E73),
+                            ),
+                          ),
+                        ),
+                      if (progress > 0) SizedBox(height: isSmallScreen ? 2 : 4),
                       Container(
                         height: 4,
                         width: double.infinity,
@@ -679,16 +692,6 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                           ),
                         ),
                       ),
-                      if (progress > 0) const SizedBox(height: 4),
-                      if (progress > 0)
-                        Text(
-                          '${(progress * 100).toInt()}% complete',
-                          style: TextStyle(
-                            fontSize: isSmallScreen ? 9 : 10,
-                            fontWeight: FontWeight.w500,
-                            color: const Color(0xFF6E6E73),
-                          ),
-                        ),
                     ],
                   ),
                 ),
