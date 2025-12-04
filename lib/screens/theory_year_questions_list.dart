@@ -588,30 +588,23 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
       }
     }
 
-    // Group questions by sections
+    // Group questions by sections based on question numbers
+    // Section I: Question 1
+    // Section II: Questions 2-3
+    // Section III: Questions 4-5
     for (int i = 0; i < questions.length; i++) {
       final data = questions[i].data();
-      final questionText = data['questionText'] as String? ?? '';
+      final questionNumber = data['questionNumber'] as int? ?? 1;
 
-      // Determine section based on question content
-      String section = 'SECTION I'; // Default to Section I
-
-      if (questionText.contains('SECTION II')) {
-        section = 'SECTION II';
-      } else if (questionText.contains('SECTION III')) {
-        section = 'SECTION III';
-      }
-
-      // Add section title based on content
-      String sectionTitle = section;
-      if (section == 'SECTION I' && questionText.contains('THE ENVIRONMENT')) {
+      String sectionTitle;
+      if (questionNumber == 1) {
         sectionTitle = 'SECTION I\nTHE ENVIRONMENT';
-      } else if (section == 'SECTION II' && questionText.contains('GOVERNMANCE, POLITICS AND STABILITY')) {
-        sectionTitle = 'SECTION II\nGOVERNANCE, POLITICS AND STABILITY';
-      } else if (section == 'SECTION II' && questionText.contains('LAW, ORDER AND NATION BUILDING')) {
+      } else if (questionNumber >= 2 && questionNumber <= 3) {
         sectionTitle = 'SECTION II\nLAW, ORDER AND NATION BUILDING';
-      } else if (section == 'SECTION III' && questionText.contains('SOCIAL AND ECONOMIC DEVELOPMENT')) {
+      } else if (questionNumber >= 4 && questionNumber <= 5) {
         sectionTitle = 'SECTION III\nSOCIAL AND ECONOMIC DEVELOPMENT';
+      } else {
+        sectionTitle = 'SECTION I\nTHE ENVIRONMENT'; // fallback
       }
 
       if (!sectionGroups.containsKey(sectionTitle)) {
