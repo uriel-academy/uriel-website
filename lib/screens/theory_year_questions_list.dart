@@ -549,6 +549,45 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                                     fontWeight: FontWeight.w400,
                                   ),
                                 ),
+                                // Add copy button for questions
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 8.0),
+                                  child: InkWell(
+                                    onTap: () {
+                                      Clipboard.setData(ClipboardData(text: questionText));
+                                      ScaffoldMessenger.of(context).showSnackBar(
+                                        const SnackBar(
+                                          content: Text('Question copied to clipboard'),
+                                          duration: Duration(seconds: 2),
+                                          behavior: SnackBarBehavior.floating,
+                                        ),
+                                      );
+                                    },
+                                    borderRadius: BorderRadius.circular(8),
+                                    child: Padding(
+                                      padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: [
+                                          Icon(
+                                            Icons.copy,
+                                            size: 14,
+                                            color: Colors.grey[600],
+                                          ),
+                                          const SizedBox(width: 4),
+                                          Text(
+                                            'Copy',
+                                            style: TextStyle(
+                                              fontSize: 12,
+                                              color: Colors.grey[600],
+                                              fontWeight: FontWeight.w500,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
                                 if (qIndex != questionsInPart.length - 1) ...[
                                   const SizedBox(height: 16),
                                   Divider(
@@ -903,6 +942,45 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                                     fontWeight: FontWeight.w400,
                                   ),
                                 ),
+                                // Add copy button for questions
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 8.0),
+                                  child: InkWell(
+                                    onTap: () {
+                                      Clipboard.setData(ClipboardData(text: questionText));
+                                      ScaffoldMessenger.of(context).showSnackBar(
+                                        const SnackBar(
+                                          content: Text('Question copied to clipboard'),
+                                          duration: Duration(seconds: 2),
+                                          behavior: SnackBarBehavior.floating,
+                                        ),
+                                      );
+                                    },
+                                    borderRadius: BorderRadius.circular(8),
+                                    child: Padding(
+                                      padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: [
+                                          Icon(
+                                            Icons.copy,
+                                            size: 14,
+                                            color: Colors.grey[600],
+                                          ),
+                                          const SizedBox(width: 4),
+                                          Text(
+                                            'Copy',
+                                            style: TextStyle(
+                                              fontSize: 12,
+                                              color: Colors.grey[600],
+                                              fontWeight: FontWeight.w500,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
                                 if (qIndex != questionsInSection.length - 1) ...[
                                   const SizedBox(height: 16),
                                   Divider(
@@ -956,8 +1034,14 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
     // Remove excessive line breaks around letters (a), (b), (c), etc.
     text = text.replaceAllMapped(RegExp(r'\n\s*\(([a-z])\)\s*\n'), (match) => ' (${match.group(1)}) ');
 
+    // Handle the specific pattern with multiple line breaks: \n\n \n\n(letter)\n\n \n\n
+    text = text.replaceAllMapped(RegExp(r'\n\n\s*\n\n\s*\(([a-z])\)\n\n\s*\n\n'), (match) => ' (${match.group(1)}) ');
+
     // Remove excessive line breaks around roman numerals (i), (ii), (iii), etc.
     text = text.replaceAllMapped(RegExp(r'\n\s*\(([ivx]+)\)\s*\n'), (match) => ' (${match.group(1)}) ');
+
+    // Handle the specific pattern for roman numerals: \n\n \n\n(i)\n\n \n\n
+    text = text.replaceAllMapped(RegExp(r'\n\n\s*\n\n\s*\(([ivx]+)\)\n\n\s*\n\n'), (match) => ' (${match.group(1)}) ');
 
     // Clean up multiple consecutive line breaks
     text = text.replaceAll(RegExp(r'\n{3,}'), '\n\n');
