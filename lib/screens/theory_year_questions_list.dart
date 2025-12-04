@@ -263,30 +263,35 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
   }
 
   Widget _buildQuestionsList(List<QueryDocumentSnapshot<Map<String, dynamic>>> questions) {
+    // Special handling for Social Studies theory questions
+    if (widget.subject == 'Social Studies') {
+      return _buildSocialStudiesSections(questions);
+    }
+
     // Parse questions and group by parts
     String? paperInstructions;
     final partGroups = <String, List<Map<String, dynamic>>>{}; // partHeader -> questions
-    
+
     for (int i = 0; i < questions.length; i++) {
       final data = questions[i].data();
-      
+
       // Extract paper instructions from first question
       if (i == 0 && data['paperInstructions'] != null && (data['paperInstructions'] as String).isNotEmpty) {
         paperInstructions = data['paperInstructions'] as String;
       }
-      
+
       final partHeader = data['partHeader'] as String? ?? 'Questions';
       if (!partGroups.containsKey(partHeader)) {
         partGroups[partHeader] = [];
       }
-      
+
       partGroups[partHeader]!.add({
         'index': i,
         'doc': questions[i],
         'data': data,
       });
     }
-    
+
     // Convert entries to list to avoid iterator issues
     final partGroupsList = partGroups.entries.toList();
     
@@ -565,16 +570,380 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
       ],
     );
   }
-  
+
+  Widget _buildSocialStudiesSections(List<QueryDocumentSnapshot<Map<String, dynamic>>> questions) {
+    // Parse Social Studies questions by sections
+    final sectionGroups = <String, List<Map<String, dynamic>>>{};
+    String? mainInstructions;
+
+    // Extract main exam instructions from the first question if available
+    if (questions.isNotEmpty) {
+      final firstData = questions[0].data();
+      if (firstData['paperInstructions'] != null && (firstData['paperInstructions'] as String).isNotEmpty) {
+        mainInstructions = firstData['paperInstructions'] as String;
+      } else {
+        // Default Social Studies main instructions
+        mainInstructions = 'THEORY QUESTIONS\nPAPER 2\nESSAY\n1 hour\n\nThis paper consists of three sections: I, II, and III.\nAnswer three questions only. One compulsory question from section I, and one question each from sections II and III.\nAll questions carry equal marks.';
+      }
+    }
+
+    // Group questions by sections
+    for (int i = 0; i < questions.length; i++) {
+      final data = questions[i].data();
+      final questionText = data['questionText'] as String? ?? '';
+
+      // Determine section based on question content
+      String section = 'SECTION I'; // Default to Section I
+
+      if (questionText.contains('SECTION II')) {
+        section = 'SECTION II';
+      } else if (questionText.contains('SECTION III')) {
+        section = 'SECTION III';
+      }
+
+      // Add section title based on content
+      String sectionTitle = section;
+      if (section == 'SECTION I' && questionText.contains('THE ENVIRONMENT')) {
+        sectionTitle = 'SECTION I\nTHE ENVIRONMENT';
+      } else if (section == 'SECTION II' && questionText.contains('GOVERNMANCE, POLITICS AND STABILITY')) {
+        sectionTitle = 'SECTION II\nGOVERNANCE, POLITICS AND STABILITY';
+      } else if (section == 'SECTION II' && questionText.contains('LAW, ORDER AND NATION BUILDING')) {
+        sectionTitle = 'SECTION II\nLAW, ORDER AND NATION BUILDING';
+      } else if (section == 'SECTION III' && questionText.contains('SOCIAL AND ECONOMIC DEVELOPMENT')) {
+        sectionTitle = 'SECTION III\nSOCIAL AND ECONOMIC DEVELOPMENT';
+      }
+
+      if (!sectionGroups.containsKey(sectionTitle)) {
+        sectionGroups[sectionTitle] = [];
+      }
+
+      sectionGroups[sectionTitle]!.add({
+        'index': i,
+        'doc': questions[i],
+        'data': data,
+      });
+    }
+
+    // Convert to list and sort by section order
+    final sectionGroupsList = sectionGroups.entries.toList()
+      ..sort((a, b) {
+        final aSection = a.key;
+        final bSection = b.key;
+
+        // Extract section number
+        final aMatch = RegExp(r'SECTION ([IVX]+)').firstMatch(aSection);
+        final bMatch = RegExp(r'SECTION ([IVX]+)').firstMatch(bSection);
+
+        if (aMatch != null && bMatch != null) {
+          final aNum = _romanToInt(aMatch.group(1)!);
+          final bNum = _romanToInt(bMatch.group(1)!);
+          return aNum.compareTo(bNum);
+        }
+        return aSection.compareTo(bSection);
+      });
+
+    return ListView(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      children: [
+        // Main exam instructions card (non-clickable)
+        Container(
+          margin: const EdgeInsets.only(bottom: 20),
+          padding: const EdgeInsets.all(24),
+          decoration: BoxDecoration(
+            color: Theme.of(context).colorScheme.surfaceContainerHighest.withOpacity(0.4),
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(
+              color: Theme.of(context).colorScheme.outline.withOpacity(0.1),
+              width: 1,
+            ),
+          ),
+          child: Text(
+            mainInstructions!,
+            textAlign: TextAlign.center,
+            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+              height: 1.7,
+              fontWeight: FontWeight.w500,
+              letterSpacing: 0.1,
+              color: Theme.of(context).colorScheme.onSurface.withOpacity(0.85),
+            ),
+          ),
+        ),
+
+        // Section cards
+        ...sectionGroupsList.asMap().entries.map((entry) {
+          final index = entry.key;
+          final sectionEntry = entry.value;
+          final sectionTitle = sectionEntry.key;
+          final questionsInSection = sectionEntry.value;
+
+          // Check if this section is selected
+          final isSectionSelected = questionsInSection.any((q) => q['index'] == _selectedQuestionIndex);
+
+          return Padding(
+            padding: EdgeInsets.only(
+              bottom: index == sectionGroupsList.length - 1 ? 80 : 12,
+            ),
+            child: Material(
+              color: Colors.transparent,
+              child: InkWell(
+                onTap: () async {
+                  // When section card is clicked, select the first question and prepare all questions for AI
+                  final firstQuestionIndex = questionsInSection.first['index'] as int;
+                  setState(() {
+                    _selectedQuestionIndex = firstQuestionIndex;
+                    _messages.clear();
+                  });
+
+                  // Combine all questions in this section
+                  final allQuestionsText = questionsInSection.map((q) {
+                    final data = q['data'] as Map<String, dynamic>;
+                    final qNum = data['questionNumber'];
+                    final qText = _cleanQuestionText(data['questionText'] as String? ?? '');
+                    return 'Question $qNum:\n$qText';
+                  }).join('\n\n---\n\n');
+
+                  // Auto-send to AI
+                  setState(() {
+                    _messages.add({
+                      'role': 'user',
+                      'content': 'Please help me understand and answer these questions:\n\n$allQuestionsText',
+                    });
+                    _isLoading = true;
+                  });
+
+                  // Scroll to bottom
+                  WidgetsBinding.instance.addPostFrameCallback((_) {
+                    if (_chatScrollController.hasClients) {
+                      _chatScrollController.animateTo(
+                        _chatScrollController.position.maxScrollExtent,
+                        duration: const Duration(milliseconds: 300),
+                        curve: Curves.easeOut,
+                      );
+                    }
+                  });
+
+                  // Send to AI
+                  try {
+                    final systemPrompt = _buildSystemPrompt(allQuestionsText);
+
+                    await _chatService.ask(
+                      message: 'Please help me understand and answer these questions:\n\n$allQuestionsText',
+                      system: systemPrompt,
+                      history: [],
+                    );
+                  } catch (e) {
+                    setState(() {
+                      _messages.add({
+                        'role': 'assistant',
+                        'content': 'Sorry, I encountered an error. Please try again.',
+                      });
+                      _isLoading = false;
+                    });
+                  }
+                },
+                borderRadius: BorderRadius.circular(20),
+                child: Ink(
+                  decoration: BoxDecoration(
+                    color: isSectionSelected
+                        ? Theme.of(context).colorScheme.primaryContainer.withOpacity(0.5)
+                        : Theme.of(context).colorScheme.surface,
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(
+                      color: isSectionSelected
+                          ? Theme.of(context).colorScheme.primary.withOpacity(0.3)
+                          : Theme.of(context).colorScheme.outline.withOpacity(0.15),
+                      width: 1.5,
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.03),
+                        blurRadius: 8,
+                        offset: const Offset(0, 2),
+                      ),
+                    ],
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        // Section header
+                        Row(
+                          children: [
+                            Expanded(
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                  vertical: 12,
+                                  horizontal: 16,
+                                ),
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    colors: isSectionSelected
+                                        ? [
+                                            Theme.of(context).colorScheme.primary,
+                                            Theme.of(context).colorScheme.primary.withOpacity(0.8),
+                                          ]
+                                        : [
+                                            Theme.of(context).colorScheme.primaryContainer,
+                                            Theme.of(context).colorScheme.primaryContainer.withOpacity(0.7),
+                                          ],
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomRight,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: Text(
+                                  sectionTitle,
+                                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                                    fontWeight: FontWeight.w700,
+                                    letterSpacing: -0.3,
+                                    color: isSectionSelected
+                                        ? Theme.of(context).colorScheme.onPrimary
+                                        : Theme.of(context).colorScheme.onPrimaryContainer,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            if (isSectionSelected) ...[
+                              const SizedBox(width: 12),
+                              Container(
+                                padding: const EdgeInsets.all(6),
+                                decoration: BoxDecoration(
+                                  color: Theme.of(context).colorScheme.primary,
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Icon(
+                                  Icons.check_rounded,
+                                  color: Theme.of(context).colorScheme.onPrimary,
+                                  size: 18,
+                                ),
+                              ),
+                            ],
+                          ],
+                        ),
+                        const SizedBox(height: 20),
+
+                        // All questions in this section
+                        ...questionsInSection.asMap().entries.map((qEntry) {
+                          final qIndex = qEntry.key;
+                          final questionMap = qEntry.value;
+                          final data = questionMap['data'] as Map<String, dynamic>;
+
+                          // Clean question text
+                          String questionText = data['questionText'] as String? ?? '';
+                          questionText = _cleanQuestionText(questionText);
+
+                          return Padding(
+                            padding: EdgeInsets.only(
+                              bottom: qIndex == questionsInSection.length - 1 ? 0 : 16,
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // Question number and marks
+                                Row(
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 12,
+                                        vertical: 6,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        color: Theme.of(context).colorScheme.secondaryContainer.withOpacity(0.6),
+                                        borderRadius: BorderRadius.circular(20),
+                                      ),
+                                      child: Text(
+                                        'Question ${data['questionNumber']}',
+                                        style: TextStyle(
+                                          color: Theme.of(context).colorScheme.onSecondaryContainer,
+                                          fontWeight: FontWeight.w700,
+                                          fontSize: 12,
+                                          letterSpacing: 0.3,
+                                        ),
+                                      ),
+                                    ),
+                                    const SizedBox(width: 10),
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 10,
+                                        vertical: 4,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        color: Theme.of(context).colorScheme.tertiaryContainer.withOpacity(0.5),
+                                        borderRadius: BorderRadius.circular(16),
+                                      ),
+                                      child: Text(
+                                        '${data['marks']} marks',
+                                        style: TextStyle(
+                                          color: Theme.of(context).colorScheme.onTertiaryContainer,
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 11,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(height: 12),
+                                // Question text
+                                Text(
+                                  questionText,
+                                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                                    height: 1.65,
+                                    letterSpacing: 0.15,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
+                                if (qIndex != questionsInSection.length - 1) ...[
+                                  const SizedBox(height: 16),
+                                  Divider(
+                                    color: Theme.of(context).dividerColor.withOpacity(0.2),
+                                    thickness: 1,
+                                  ),
+                                ],
+                              ],
+                            ),
+                          );
+                        }).toList(),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          );
+        }).toList(),
+      ],
+    );
+  }
+
+  int _romanToInt(String roman) {
+    final Map<String, int> romanValues = {
+      'I': 1,
+      'II': 2,
+      'III': 3,
+      'IV': 4,
+      'V': 5,
+      'VI': 6,
+      'VII': 7,
+      'VIII': 8,
+      'IX': 9,
+      'X': 10,
+    };
+    return romanValues[roman] ?? 1;
+  }
+
   String _cleanQuestionText(String text) {
     // Remove paper instructions
     text = text.replaceAll(RegExp(r'^THEORY QUESTIONS[\s\S]*?orderly presentation of material\.?\s*', multiLine: true), '');
-    
+
     // Remove part headers
     text = text.replaceAll(RegExp(r'^PART [A-C].*?\n.*?\n', multiLine: true), '');
-    
+
+    // Remove section headers for Social Studies
+    text = text.replaceAll(RegExp(r'^SECTION [IVX]+\s*\n.*?\n', multiLine: true), '');
+
     // Don't modify sub-question formatting - keep original line breaks
-    
+
     return text.trim();
   }
 
