@@ -1031,17 +1031,24 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
     text = text.replaceAll(RegExp(r'^SECTION [IVX]+\s*\n.*?\n', multiLine: true), '');
 
     // Clean up Social Studies question formatting
-    // Remove excessive line breaks around letters (a), (b), (c), etc.
-    text = text.replaceAllMapped(RegExp(r'\n\s*\(([a-z])\)\s*\n'), (match) => ' (${match.group(1)}) ');
+    // First, handle the marks - move them to the end of each question part
+    // Pattern: content\n\n[marks]\n\n(letter)\n\n \n\n -> content [marks]\n\n(letter)
+    text = text.replaceAllMapped(
+      RegExp(r'([^\n]+)\n\n\[([^\]]+)\]\n\n\s*\(([a-z])\)\n\n\s*\n\n'),
+      (match) => '${match.group(1)} [${match.group(2)}]\n\n(${match.group(3)}) ',
+    );
 
-    // Handle the specific pattern with multiple line breaks: \n\n \n\n(letter)\n\n \n\n
-    text = text.replaceAllMapped(RegExp(r'\n\n\s*\n\n\s*\(([a-z])\)\n\n\s*\n\n'), (match) => ' (${match.group(1)}) ');
+    // Handle roman numerals marks too
+    text = text.replaceAllMapped(
+      RegExp(r'([^\n]+)\n\n\[([^\]]+)\]\n\n\s*\(([ivx]+)\)\n\n\s*\n\n'),
+      (match) => '${match.group(1)} [${match.group(2)}]\n\n(${match.group(3)}) ',
+    );
+
+    // Remove excessive line breaks around letters (a), (b), (c), etc. that weren't handled above
+    text = text.replaceAllMapped(RegExp(r'\n\s*\(([a-z])\)\s*\n'), (match) => '\n(${match.group(1)}) ');
 
     // Remove excessive line breaks around roman numerals (i), (ii), (iii), etc.
-    text = text.replaceAllMapped(RegExp(r'\n\s*\(([ivx]+)\)\s*\n'), (match) => ' (${match.group(1)}) ');
-
-    // Handle the specific pattern for roman numerals: \n\n \n\n(i)\n\n \n\n
-    text = text.replaceAllMapped(RegExp(r'\n\n\s*\n\n\s*\(([ivx]+)\)\n\n\s*\n\n'), (match) => ' (${match.group(1)}) ');
+    text = text.replaceAllMapped(RegExp(r'\n\s*\(([ivx]+)\)\s*\n'), (match) => '\n(${match.group(1)}) ');
 
     // Clean up multiple consecutive line breaks
     text = text.replaceAll(RegExp(r'\n{3,}'), '\n\n');
