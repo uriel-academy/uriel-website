@@ -1030,7 +1030,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
     // Remove section headers for Social Studies
     text = text.replaceAll(RegExp(r'^SECTION [IVX]+\s*\n.*?\n', multiLine: true), '');
 
-    // Clean up Social Studies question formatting
+    // Clean up question formatting for all subjects
     // First, handle the marks - move them to the end of each question part
     // Pattern: content\n\n[marks]\n\n(letter)\n\n \n\n -> content [marks]\n\n(letter)
     text = text.replaceAllMapped(
@@ -1043,6 +1043,38 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
       RegExp(r'([^\n]+)\n\n\[([^\]]+)\]\n\n\s*\(([ivx]+)\)\n\n\s*\n\n'),
       (match) => '${match.group(1)} [${match.group(2)}]\n\n(${match.group(3)}) ',
     );
+
+    // Handle standalone roman numerals without parentheses
+    text = text.replaceAllMapped(
+      RegExp(r'\n\s*([ivx]+)\n\n\s*\n\n'),
+      (match) => '\n(${match.group(1)}) ',
+    );
+
+    // Format table-like structures
+    // Detect lines that look like table rows (containing numbers and separators)
+    final lines = text.split('\n');
+    final formattedLines = <String>[];
+
+    for (int i = 0; i < lines.length; i++) {
+      final line = lines[i].trim();
+      if (line.isNotEmpty) {
+        // Check if this looks like a table row (has numbers and might be separated by newlines)
+        if (RegExp(r'^\d+.*\d+$').hasMatch(line) ||
+            RegExp(r'^-\s*\d+.*\d+$').hasMatch(line) ||
+            line.contains('___') ||
+            (line.contains('+') && line.contains(RegExp(r'\d')))) {
+          // This might be a table row, format it nicely
+          formattedLines.add('| $line |');
+        } else {
+          formattedLines.add(line);
+        }
+      } else if (i > 0 && i < lines.length - 1) {
+        // Keep some empty lines but not excessive ones
+        formattedLines.add('');
+      }
+    }
+
+    text = formattedLines.join('\n');
 
     // Remove excessive line breaks around letters (a), (b), (c), etc. that weren't handled above
     text = text.replaceAllMapped(RegExp(r'\n\s*\(([a-z])\)\s*\n'), (match) => '\n(${match.group(1)}) ');
