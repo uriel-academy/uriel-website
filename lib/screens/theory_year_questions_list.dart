@@ -952,7 +952,21 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
     // Remove section headers for Social Studies
     text = text.replaceAll(RegExp(r'^SECTION [IVX]+\s*\n.*?\n', multiLine: true), '');
 
-    // Don't modify sub-question formatting - keep original line breaks
+    // Clean up Social Studies question formatting
+    // Remove excessive line breaks around letters (a), (b), (c), etc.
+    text = text.replaceAllMapped(RegExp(r'\n\s*\(([a-z])\)\s*\n'), (match) => ' (${match.group(1)}) ');
+
+    // Remove excessive line breaks around roman numerals (i), (ii), (iii), etc.
+    text = text.replaceAllMapped(RegExp(r'\n\s*\(([ivx]+)\)\s*\n'), (match) => ' (${match.group(1)}) ');
+
+    // Clean up multiple consecutive line breaks
+    text = text.replaceAll(RegExp(r'\n{3,}'), '\n\n');
+
+    // Remove leading/trailing whitespace from each line
+    text = text.split('\n').map((line) => line.trim()).join('\n');
+
+    // Remove empty lines at the beginning
+    text = text.replaceAll(RegExp(r'^\s*\n+'), '');
 
     return text.trim();
   }
