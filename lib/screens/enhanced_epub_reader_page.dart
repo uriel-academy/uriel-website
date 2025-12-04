@@ -487,7 +487,7 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
 
   void _shareBook() {
     Share.share(
-      'I\'m reading "${widget.bookTitle}" by ${widget.author} on Uriel Academy!\n\nhttps://uriel-academy-41fb0.web.app',
+      'I\'m reading "${widget.bookTitle}" by ${widget.author} on Uriel Academy!\n\nhttps://uriel.academy',
       subject: widget.bookTitle,
     );
   }
