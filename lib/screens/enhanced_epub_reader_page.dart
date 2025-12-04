@@ -588,7 +588,7 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
         };
       case 'cream':
         return {
-          'bg': const Color(0xFFFFFDF5),
+          'bg': Colors.white,
           'text': const Color(0xFF2C2416),
           'secondary': const Color(0xFF6B5D48),
           'accent': const Color(0xFFD62828),
