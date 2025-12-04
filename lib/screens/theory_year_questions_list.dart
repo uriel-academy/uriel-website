@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'dart:async';
+import 'package:flutter/services.dart';
 import '../services/chat_service.dart';
 
 class TheoryYearQuestionsList extends StatefulWidget {
@@ -642,6 +643,19 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
         return aSection.compareTo(bSection);
       });
 
+    // Calculate running question numbers across all sections
+    int runningQuestionNumber = 1;
+    final questionNumberMap = <int, int>{}; // original index -> running number
+
+    for (final sectionEntry in sectionGroupsList) {
+      final questionsInSection = sectionEntry.value;
+      for (final questionMap in questionsInSection) {
+        final originalIndex = questionMap['index'] as int;
+        questionNumberMap[originalIndex] = runningQuestionNumber;
+        runningQuestionNumber++;
+      }
+    }
+
     return ListView(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       children: [
@@ -697,9 +711,10 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                   // Combine all questions in this section
                   final allQuestionsText = questionsInSection.map((q) {
                     final data = q['data'] as Map<String, dynamic>;
-                    final qNum = data['questionNumber'];
+                    final originalIndex = q['index'] as int;
+                    final runningNum = questionNumberMap[originalIndex]!;
                     final qText = _cleanQuestionText(data['questionText'] as String? ?? '');
-                    return 'Question $qNum:\n$qText';
+                    return 'Question $runningNum:\n$qText';
                   }).join('\n\n---\n\n');
 
                   // Auto-send to AI
@@ -828,6 +843,8 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                           final qIndex = qEntry.key;
                           final questionMap = qEntry.value;
                           final data = questionMap['data'] as Map<String, dynamic>;
+                          final originalIndex = questionMap['index'] as int;
+                          final runningQuestionNumber = questionNumberMap[originalIndex]!;
 
                           // Clean question text
                           String questionText = data['questionText'] as String? ?? '';
@@ -853,7 +870,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                                         borderRadius: BorderRadius.circular(20),
                                       ),
                                       child: Text(
-                                        'Question ${data['questionNumber']}',
+                                        'Question $runningQuestionNumber',
                                         style: TextStyle(
                                           color: Theme.of(context).colorScheme.onSecondaryContainer,
                                           fontWeight: FontWeight.w700,
@@ -1243,40 +1260,85 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
             const SizedBox(width: 10),
           ],
           Flexible(
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
-              decoration: BoxDecoration(
-                gradient: isUser
-                    ? LinearGradient(
-                        colors: [
-                          Theme.of(context).colorScheme.primary,
-                          Theme.of(context).colorScheme.primary.withOpacity(0.85),
-                        ],
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                      )
-                    : null,
-                color: isUser ? null : Theme.of(context).colorScheme.surfaceContainerHighest.withOpacity(0.6),
-                borderRadius: BorderRadius.circular(20),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.04),
-                    blurRadius: 8,
-                    offset: const Offset(0, 2),
+            child: Column(
+              crossAxisAlignment: isUser ? CrossAxisAlignment.end : CrossAxisAlignment.start,
+              children: [
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
+                  decoration: BoxDecoration(
+                    gradient: isUser
+                        ? LinearGradient(
+                            colors: [
+                              Theme.of(context).colorScheme.primary,
+                              Theme.of(context).colorScheme.primary.withOpacity(0.85),
+                            ],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          )
+                        : null,
+                    color: isUser ? null : Theme.of(context).colorScheme.surfaceContainerHighest.withOpacity(0.6),
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.04),
+                        blurRadius: 8,
+                        offset: const Offset(0, 2),
+                      ),
+                    ],
                   ),
-                ],
-              ),
-              child: Text(
-                message,
-                style: TextStyle(
-                  color: isUser
-                      ? Theme.of(context).colorScheme.onPrimary
-                      : Theme.of(context).colorScheme.onSurface,
-                  fontSize: 15,
-                  height: 1.5,
-                  letterSpacing: 0.1,
+                  child: Text(
+                    message,
+                    style: TextStyle(
+                      color: isUser
+                          ? Theme.of(context).colorScheme.onPrimary
+                          : Theme.of(context).colorScheme.onSurface,
+                      fontSize: 15,
+                      height: 1.5,
+                      letterSpacing: 0.1,
+                    ),
+                  ),
                 ),
-              ),
+                // Add copy button for assistant messages
+                if (!isUser && message.isNotEmpty)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8.0),
+                    child: InkWell(
+                      onTap: () {
+                        Clipboard.setData(ClipboardData(text: message));
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text('Response copied to clipboard'),
+                            duration: Duration(seconds: 2),
+                            behavior: SnackBarBehavior.floating,
+                          ),
+                        );
+                      },
+                      borderRadius: BorderRadius.circular(8),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Icon(
+                              Icons.copy,
+                              size: 14,
+                              color: Colors.grey[600],
+                            ),
+                            const SizedBox(width: 4),
+                            Text(
+                              'Copy',
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: Colors.grey[600],
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+              ],
             ),
           ),
           if (isUser) ...[
