@@ -5,7 +5,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SchoolAdminStudentsPage extends StatefulWidget {
-  const SchoolAdminStudentsPage({Key? key}) : super(key: key);
+  final String? schoolName;
+  
+  const SchoolAdminStudentsPage({Key? key, this.schoolName}) : super(key: key);
 
   @override
   State<SchoolAdminStudentsPage> createState() => _SchoolAdminStudentsPageState();
@@ -14,6 +16,8 @@ class SchoolAdminStudentsPage extends StatefulWidget {
 class _SchoolAdminStudentsPageState extends State<SchoolAdminStudentsPage> {
   final TextEditingController _searchController = TextEditingController();
   String? _schoolName;
+  String? _selectedClassFilter;
+  final List<String> _availableClasses = ['JHS Form 1', 'JHS Form 2', 'JHS Form 3'];
 
   // Pagination & caching for server-side aggregates
   final Map<String, dynamic> _pageCache = {}; // key: cursorKey -> result map
@@ -30,6 +34,17 @@ class _SchoolAdminStudentsPageState extends State<SchoolAdminStudentsPage> {
   }
 
   Future<void> _loadSchoolContext() async {
+    // If schoolName provided via constructor, use it directly
+    if (widget.schoolName != null) {
+      setState(() {
+        _schoolName = widget.schoolName;
+      });
+      _pageFuture = _loadPage(null);
+      setState(() {});
+      return;
+    }
+    
+    // Otherwise load from current user
     final user = FirebaseAuth.instance.currentUser;
     if (user == null) return;
     try {
@@ -51,6 +66,22 @@ class _SchoolAdminStudentsPageState extends State<SchoolAdminStudentsPage> {
   void dispose() {
     _searchController.dispose();
     super.dispose();
+  }
+
+  String _normalizeClassName(String? className) {
+    if (className == null) return 'Unknown';
+    
+    final normalized = className.trim().toLowerCase();
+    
+    if (normalized.contains('1') || normalized.contains('one')) {
+      return 'JHS Form 1';
+    } else if (normalized.contains('2') || normalized.contains('two')) {
+      return 'JHS Form 2';
+    } else if (normalized.contains('3') || normalized.contains('three')) {
+      return 'JHS Form 3';
+    }
+    
+    return className;
   }
 
   Future<void> _loadPage(String? pageCursor) async {
@@ -80,8 +111,10 @@ class _SchoolAdminStudentsPageState extends State<SchoolAdminStudentsPage> {
         'school': _schoolName!,
       };
 
+      debugPrint('🔍 Calling getSchoolStudents with school: $_schoolName');
       final resp = await callable.call(callData);
       final data = resp.data as Map<String, dynamic>?;
+      debugPrint('✅ getSchoolStudents returned: ${data?['students']?.length ?? 0} students');
       if (data == null) return;
 
       _pageCache[key] = data;
@@ -190,6 +223,65 @@ class _SchoolAdminStudentsPageState extends State<SchoolAdminStudentsPage> {
                         ),
                       ),
                         const SizedBox(height: 12),
+                        
+                        // Class filter dropdown
+                        Row(
+                          children: [
+                            Text(
+                              'Class: ',
+                              style: GoogleFonts.montserrat(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            const SizedBox(width: 8),
+                            Expanded(
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFFF8FAFE),
+                                  borderRadius: BorderRadius.circular(8),
+                                  border: Border.all(color: Colors.grey.shade300),
+                                ),
+                                child: DropdownButtonHideUnderline(
+                                  child: DropdownButton<String?>(
+                                    value: _selectedClassFilter,
+                                    isExpanded: true,
+                                    hint: Text(
+                                      'All Classes',
+                                      style: GoogleFonts.montserrat(fontSize: 14),
+                                    ),
+                                    items: [
+                                      DropdownMenuItem<String?>(
+                                        value: null,
+                                        child: Text(
+                                          'All Classes',
+                                          style: GoogleFonts.montserrat(fontSize: 14),
+                                        ),
+                                      ),
+                                      ..._availableClasses.map((className) {
+                                        return DropdownMenuItem<String?>(
+                                          value: className,
+                                          child: Text(
+                                            className,
+                                            style: GoogleFonts.montserrat(fontSize: 14),
+                                          ),
+                                        );
+                                      }),
+                                    ],
+                                    onChanged: (value) {
+                                      setState(() {
+                                        _selectedClassFilter = value;
+                                      });
+                                    },
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        
+                        const SizedBox(height: 12),
                         // Show school and total students
                         Text('School: ${_schoolName ?? "Loading..."}', style: GoogleFonts.montserrat()),
                         const SizedBox(height: 8),
@@ -218,16 +310,30 @@ class _SchoolAdminStudentsPageState extends State<SchoolAdminStudentsPage> {
           final page = _pageCache[_currentCursorKey] as Map<String, dynamic>?;
           final allStudents = (page != null ? page['students'] as List<dynamic> : <dynamic>[]);
           
-          // Filter students based on search query
+          // Filter students based on search query and class
           final query = _searchController.text.toLowerCase().trim();
-          final students = query.isEmpty 
-            ? allStudents 
-            : allStudents.where((s) {
-                final data = s as Map<String, dynamic>;
-                final name = (data['displayName'] ?? '').toString().toLowerCase();
-                final email = (data['email'] ?? '').toString().toLowerCase();
-                return name.contains(query) || email.contains(query);
-              }).toList();
+          final students = allStudents.where((s) {
+            final data = s as Map<String, dynamic>;
+            
+            // Search filter
+            if (query.isNotEmpty) {
+              final name = (data['displayName'] ?? '').toString().toLowerCase();
+              final email = (data['email'] ?? '').toString().toLowerCase();
+              if (!name.contains(query) && !email.contains(query)) {
+                return false;
+              }
+            }
+            
+            // Class filter
+            if (_selectedClassFilter != null) {
+              final studentClass = _normalizeClassName(data['grade'] ?? data['class']);
+              if (studentClass != _selectedClassFilter) {
+                return false;
+              }
+            }
+            
+            return true;
+          }).toList();
 
           if (students.isEmpty) {
             return Center(
@@ -237,17 +343,21 @@ class _SchoolAdminStudentsPageState extends State<SchoolAdminStudentsPage> {
                   Icon(Icons.search_off, size: 64, color: Colors.grey[400]),
                   const SizedBox(height: 16),
                   Text(
-                    query.isEmpty ? 'No students found' : 'No students match "$query"',
+                    (query.isEmpty && _selectedClassFilter == null) 
+                      ? 'No students found' 
+                      : 'No students match your filters',
                     style: GoogleFonts.montserrat(color: Colors.grey[600], fontSize: 16),
                   ),
-                  if (query.isNotEmpty) ...[
+                  if (query.isNotEmpty || _selectedClassFilter != null) ...[
                     const SizedBox(height: 8),
                     TextButton(
                       onPressed: () {
-                        _searchController.clear();
-                        setState(() {});
+                        setState(() {
+                          _searchController.clear();
+                          _selectedClassFilter = null;
+                        });
                       },
-                      child: Text('Clear search', style: GoogleFonts.montserrat(color: const Color(0xFFD62828))),
+                      child: Text('Clear filters', style: GoogleFonts.montserrat(color: const Color(0xFFD62828))),
                     ),
                   ],
                 ],
@@ -257,6 +367,48 @@ class _SchoolAdminStudentsPageState extends State<SchoolAdminStudentsPage> {
 
           return LayoutBuilder(
             builder: (context, constraints) {
+              final isSmallScreen = constraints.maxWidth < 768;
+              
+              // Mobile: show cards
+              if (isSmallScreen) {
+                return Container(
+                  color: Colors.white,
+                  padding: const EdgeInsets.all(12),
+                  child: Column(
+                    children: [
+                      Expanded(
+                        child: ListView.separated(
+                          itemCount: students.length,
+                          separatorBuilder: (_, __) => const SizedBox(height: 10),
+                          itemBuilder: (context, index) {
+                            final s = students[index] as Map<String, dynamic>;
+                            return _buildStudentCardMobile(index, s);
+                          },
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          ElevatedButton(
+                            onPressed: _prevPage,
+                            style: ElevatedButton.styleFrom(backgroundColor: Colors.grey[300], foregroundColor: Colors.black),
+                            child: Text('Prev', style: GoogleFonts.montserrat()),
+                          ),
+                          const SizedBox(width: 8),
+                          ElevatedButton(
+                            onPressed: _nextPage,
+                            style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF00C853)),
+                            child: Text('Next', style: GoogleFonts.montserrat(color: Colors.white)),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                );
+              }
+              
+              // Desktop: show table
               return Container(
                 color: Colors.white,
                 padding: const EdgeInsets.all(12),
@@ -439,6 +591,101 @@ class _SchoolAdminStudentsPageState extends State<SchoolAdminStudentsPage> {
             }).toList(),
         const Divider(height: 1),
       ],
+    );
+  }
+
+  // Mobile card for a single student (compact)
+  Widget _buildStudentCardMobile(int index, Map<String, dynamic> data) {
+    final name = (data['displayName'] ?? '') as String;
+    final email = (data['email'] ?? '') as String;
+    final xp = data['totalXP'] ?? 0;
+    final questionsCount = data['questionsSolved'] ?? 0;
+    double? accuracy;
+    if (data['avgPercent'] != null) {
+      final avgPct = data['avgPercent'];
+      accuracy = (avgPct is num) ? avgPct.toDouble() : double.tryParse(avgPct.toString());
+    }
+    final subjectsCount = data['subjectsSolved'] ?? 0;
+    final rank = data['rank'] ?? '-';
+
+    return InkWell(
+      onTap: () => _showStudentDetailDialog(data),
+      child: Container(
+        padding: const EdgeInsets.all(12),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(color: Colors.grey.shade200),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                CircleAvatar(
+                  radius: 20,
+                  backgroundColor: const Color(0xFFD62828).withValues(alpha: 0.08),
+                  backgroundImage: (data['avatar'] as String?)?.isNotEmpty == true ? NetworkImage((data['avatar'] as String)) : null,
+                  child: (data['avatar'] as String?) == null
+                      ? Text((name.isNotEmpty ? name[0] : '?').toUpperCase(), style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, color: const Color(0xFFD62828)))
+                      : null,
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(name.isNotEmpty ? name : email, style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
+                      if (name.isNotEmpty) Text(email, style: GoogleFonts.montserrat(fontSize: 12, color: Colors.grey[600]), overflow: TextOverflow.ellipsis),
+                    ],
+                  ),
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text('XP', style: GoogleFonts.montserrat(fontSize: 11, color: Colors.grey[600])),
+                    const SizedBox(height: 4),
+                    Text(xp.toString(), style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, color: const Color(0xFFD62828))),
+                  ],
+                ),
+              ],
+            ),
+            const SizedBox(height: 8),
+            Row(
+              children: [
+                if (accuracy != null)
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                    margin: const EdgeInsets.only(right: 8),
+                    decoration: BoxDecoration(color: Colors.grey[100], borderRadius: BorderRadius.circular(8)),
+                    child: Text('${accuracy.toStringAsFixed(1)}% acc', style: GoogleFonts.montserrat(fontSize: 12)),
+                  ),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                  margin: const EdgeInsets.only(right: 8),
+                  decoration: BoxDecoration(color: Colors.grey[100], borderRadius: BorderRadius.circular(8)),
+                  child: Text('$questionsCount q', style: GoogleFonts.montserrat(fontSize: 12)),
+                ),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                  margin: const EdgeInsets.only(right: 8),
+                  decoration: BoxDecoration(color: Colors.grey[100], borderRadius: BorderRadius.circular(8)),
+                  child: Text('$subjectsCount sub', style: GoogleFonts.montserrat(fontSize: 12)),
+                ),
+                const Spacer(),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                  decoration: BoxDecoration(
+                    color: rank.toString() != '-' ? const Color(0xFFD62828).withValues(alpha: 0.08) : Colors.grey.withValues(alpha: 0.08),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: Text(rank.toString(), style: GoogleFonts.montserrat(fontSize: 12, fontWeight: FontWeight.w600)),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 

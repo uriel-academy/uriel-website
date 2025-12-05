@@ -3979,38 +3979,81 @@ export const getSchoolStudents = functions.https.onCall(async (data, context) =>
 
   const school = data.school as string;
   const className = data.className as string | undefined;
-  const pageSize = data.pageSize as number | undefined || 10;
-  const pageCursor = data.pageCursor as string | undefined;
-  const includeCount = data.includeCount as boolean | undefined;
 
   if (!school) {
     throw new functions.https.HttpsError('invalid-argument', 'school required');
   }
 
-  try {
-    // Get all students in the school (including orphaned students without teachers)
+    try {
+    // Get all students with role 'student' first, then filter by school name flexibly
+    // This allows case-insensitive and flexible school name matching
     let studentsQuery = db.collection('users')
       .where('role', '==', 'student')
-      .where('school', '==', school);
-    
-    // Add class filter if specified
-    if (className) {
-      studentsQuery = studentsQuery.where('class', '==', className);
-    }
-    
-    studentsQuery = studentsQuery
-      .orderBy('firstName')
-      .limit(pageSize);
-
-    if (pageCursor) {
-      const cursorDoc = await db.collection('users').doc(pageCursor).get();
-      if (cursorDoc.exists) {
-        studentsQuery = studentsQuery.startAfter(cursorDoc);
-      }
-    }
+      .limit(100);  // Get a large batch to filter from
 
     const studentsSnap = await studentsQuery.get();
-    const studentIds = studentsSnap.docs.map(d => d.id);
+    
+    // Helper function to normalize school names for flexible matching
+    const normalizeSchoolName = (schoolName: string | undefined): string => {
+      if (!schoolName) return '';
+      return schoolName
+        .trim()
+        .toLowerCase()
+        .replace(/\s+/g, ' ')  // normalize whitespace
+        .replace(/ school$/i, '')
+        .replace(/ academy$/i, '')
+        .replace(/ international$/i, '')
+        .trim();
+    };
+    
+    // Helper function to normalize class names
+    const normalizeClassName = (className: string | undefined): string => {
+      if (!className) return '';
+      const normalized = className.trim().toLowerCase();
+      
+      // Handle various formats
+      if (normalized.includes('jhs') && normalized.includes('1')) return 'JHS Form 1';
+      if (normalized.includes('jhs') && normalized.includes('2')) return 'JHS Form 2';
+      if (normalized.includes('jhs') && normalized.includes('3')) return 'JHS Form 3';
+      if (normalized.includes('form') && normalized.includes('1')) return 'JHS Form 1';
+      if (normalized.includes('form') && normalized.includes('2')) return 'JHS Form 2';
+      if (normalized.includes('form') && normalized.includes('3')) return 'JHS Form 3';
+      if (normalized === 'jhs 1' || normalized === '1') return 'JHS Form 1';
+      if (normalized === 'jhs 2' || normalized === '2') return 'JHS Form 2';
+      if (normalized === 'jhs 3' || normalized === '3') return 'JHS Form 3';
+      
+      return className;
+    };
+    
+    const normalizedSchool = normalizeSchoolName(school);
+    const normalizedClassName = className ? normalizeClassName(className) : null;
+    
+    // Filter by school and optionally class with flexible matching
+    const matchingDocs = studentsSnap.docs.filter(doc => {
+      const studentData = doc.data();
+      const studentSchool = normalizeSchoolName(studentData.school);
+      
+      // School must match
+      if (studentSchool !== normalizedSchool) return false;
+      
+      // If class filter specified, check it too
+      if (normalizedClassName) {
+        const studentClass = normalizeClassName(studentData.class || studentData.grade);
+        if (studentClass !== normalizedClassName) return false;
+      }
+      
+      return true;
+    });
+    
+    // Sort by firstName for consistent ordering
+    matchingDocs.sort((a, b) => {
+      const nameA = (a.data().firstName || '').toLowerCase();
+      const nameB = (b.data().firstName || '').toLowerCase();
+      return nameA.localeCompare(nameB);
+    });
+    
+    // Return all matching students (no pagination for simplicity)
+    const studentIds = matchingDocs.map(d => d.id);
 
     if (studentIds.length === 0) {
       return {
@@ -4018,9 +4061,7 @@ export const getSchoolStudents = functions.https.onCall(async (data, context) =>
         totalCount: 0,
         nextPageCursor: null,
       };
-    }
-
-    // Get student summaries in batches of 10
+    }    // Get student summaries in batches of 10
     const students: any[] = [];
     for (let i = 0; i < studentIds.length; i += 10) {
       const batch = studentIds.slice(i, i + 10);
@@ -4034,8 +4075,8 @@ export const getSchoolStudents = functions.https.onCall(async (data, context) =>
         summariesMap[doc.id] = doc.data();
       });
 
-      // Merge user data with summary data
-      studentsSnap.docs.slice(i, i + 10).forEach(doc => {
+      // Merge user data with summary data from matching documents
+      matchingDocs.slice(i, i + 10).forEach(doc => {
         const userData = doc.data();
         const summaryData = summariesMap[doc.id] || {};
         
@@ -4054,30 +4095,11 @@ export const getSchoolStudents = functions.https.onCall(async (data, context) =>
       });
     }
 
-    // Get total count if requested
-    let totalCount = students.length;
-    if (includeCount && !pageCursor) {
-      let countQuery = db.collection('users')
-        .where('role', '==', 'student')
-        .where('school', '==', school);
-      
-      if (className) {
-        countQuery = countQuery.where('class', '==', className);
-      }
-      
-      const countSnap = await countQuery.count().get();
-      totalCount = countSnap.data().count;
-    }
-
-    // Determine next page cursor
-    const nextPageCursor = studentsSnap.docs.length === pageSize 
-      ? studentsSnap.docs[studentsSnap.docs.length - 1].id 
-      : null;
-
+    // Return all students without pagination
     return {
       students,
-      totalCount,
-      nextPageCursor,
+      totalCount: students.length,
+      nextPageCursor: null,
     };
   } catch (error) {
     console.error('Error fetching school students:', error);
