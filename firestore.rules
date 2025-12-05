@@ -1,0 +1,365 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function hasRole(role) {
+      return request.auth.token.role == role;
+    }
+    
+    function isOwner(userId) {
+      return request.auth.uid == userId;
+    }
+    
+    function sameTenant(schoolId) {
+      return request.auth.token.schoolId == schoolId;
+    }
+    
+    function hasEntitlement(entitlements, required) {
+      return entitlements.hasAny(required);
+    }
+    
+    function isAdmin() {
+      return hasRole('super_admin') || hasRole('school_admin');
+    }
+    
+    // Users collection
+    match /users/{userId} {
+      // Allow reading any user document if authenticated (for leaderboards)
+      // Individual privacy is maintained by not exposing sensitive data in the UI
+      allow read: if isAuthenticated();
+      
+      allow write: if isAuthenticated() && (
+        (isOwner(userId) && 
+         !('role' in request.resource.data.diff(resource.data).affectedKeys()) &&
+         !('entitlements' in request.resource.data.diff(resource.data).affectedKeys()) &&
+         !('tenant' in request.resource.data.diff(resource.data).affectedKeys())
+        ) ||
+        hasRole('super_admin') ||
+        (hasRole('school_admin') && sameTenant(request.resource.data.tenant.schoolId))
+      );
+    }
+    
+    // Users collection-level queries (for leaderboard)
+    // Rate limiting: max 50 docs per query to prevent DoS
+    match /users {
+      allow list: if isAuthenticated() && 
+        (request.query.limit == null || request.query.limit <= 50);
+    }
+    
+    // Schools collection
+    match /schools/{schoolId} {
+      allow read: if isAuthenticated() && (
+        hasRole('super_admin') ||
+        sameTenant(schoolId) ||
+        hasRole('parent') // Parents can read school info
+      );
+      
+      allow write: if hasRole('super_admin') || 
+        (hasRole('school_admin') && sameTenant(schoolId));
+    }
+    
+    // Subjects collection (public read)
+    match /subjects/{subjectId} {
+      allow read: if isAuthenticated();
+      allow write: if hasRole('super_admin') || hasRole('school_admin');
+    }
+    
+    // Questions collection (for RME import and other questions)
+    match /questions/{questionId} {
+      // Allow all authenticated users to read questions
+      allow read: if isAuthenticated();
+      
+      allow write: if hasRole('super_admin') || hasRole('school_admin');
+    }
+    
+    // App metadata collection (for import tracking)
+    match /app_metadata/{docId} {
+      allow read: if isAuthenticated();
+      allow write: if hasRole('super_admin') || hasRole('school_admin');
+    }
+    
+    // Past Questions collection
+    match /pastQuestions/{questionId} {
+      // Allow all authenticated users to read past questions
+      allow read: if isAuthenticated();
+      
+      allow write: if hasRole('super_admin') || hasRole('school_admin');
+    }
+    
+    // Mock Exams collection
+    match /mockExams/{examId} {
+      allow read: if isAuthenticated();
+      allow write: if hasRole('super_admin') || hasRole('school_admin');
+    }
+    
+    // Attempts collection - server-side scoring only
+    match /attempts/{attemptId} {
+      allow read: if isAuthenticated() && (
+        isOwner(resource.data.userId) ||
+        isAdmin() ||
+        (hasRole('parent') && resource.data.userId in request.auth.token.linkedStudentIds) ||
+        (hasRole('teacher') && sameTenant(resource.data.tenant.schoolId))
+      );
+      
+      // Only allow creation through Cloud Functions
+      allow create, update, delete: if false;
+    }
+    
+    // Aggregates collection for performance
+    match /aggregates/user/{userId} {
+      allow read: if isAuthenticated() && (
+        isOwner(userId) ||
+        isAdmin() ||
+        (hasRole('parent') && userId in request.auth.token.linkedStudentIds)
+      );
+      
+      allow write: if false; // Server-side only
+    }
+    
+    // Reports collection
+    match /reports/{reportId} {
+      allow read: if isAuthenticated() && (
+        isOwner(resource.data.userId) ||
+        isAdmin() ||
+        (hasRole('parent') && resource.data.userId in request.auth.token.linkedStudentIds)
+      );
+      
+      allow write: if false; // Server-side only
+    }
+    
+    // Payments collection - server-side only
+    match /payments/{paymentId} {
+      allow read: if isAuthenticated() && (
+        isOwner(resource.data.userId) ||
+        hasRole('super_admin')
+      );
+      
+      allow write: if false; // Server-side only
+    }
+    
+    // Notifications collection
+    match /notifications/{notificationId} {
+      allow read, delete: if isAuthenticated() && isOwner(resource.data.userId);
+      allow create, update: if false; // Server-side only
+    }
+    
+    // AI Chats collection (for logging)
+    match /aiChats/{chatId} {
+      allow read: if isAuthenticated() && isOwner(resource.data.userId);
+      allow write: if false; // Server-side only
+    }
+    
+    // Admin Flags collection
+    match /adminFlags/{flagId} {
+      allow read: if hasRole('super_admin') || hasRole('school_admin');
+      allow create: if isAuthenticated(); // Anyone can flag
+      allow update: if hasRole('super_admin') || hasRole('school_admin');
+    }
+    
+    // Audits collection
+    match /audits/{auditId} {
+      allow read: if hasRole('super_admin');
+      allow write: if false; // Server-side only
+    }
+    
+    // Content collections (affirmations, etc.)
+    match /content/{type}/{docId} {
+      allow read: if isAuthenticated();
+      allow write: if hasRole('super_admin');
+    }
+    
+    // Textbooks collection
+    match /textbooks/{bookId} {
+      allow read: if isAuthenticated() && (
+        hasEntitlement(get(/databases/$(database)/documents/users/$(request.auth.uid)).data.entitlements, ['textbooks', 'both', 'premium']) ||
+        hasRole('super_admin') ||
+        hasRole('school_admin')
+      );
+      
+      allow write: if hasRole('super_admin') || hasRole('school_admin');
+    }
+    
+    // Storybooks collection
+    match /storybooks/{bookId} {
+      allow read: if isAuthenticated() && (
+        hasEntitlement(get(/databases/$(database)/documents/users/$(request.auth.uid)).data.entitlements, ['storybooks', 'both', 'premium']) ||
+        hasRole('super_admin') ||
+        hasRole('school_admin')
+      );
+      
+      allow write: if hasRole('super_admin') || hasRole('school_admin');
+    }
+    
+    // Quizzes collection - user's quiz results
+    match /quizzes/{quizId} {
+      allow read: if isAuthenticated() && (
+        isOwner(resource.data.userId) ||
+        isAdmin() ||
+        (hasRole('parent') && resource.data.userId in request.auth.token.linkedStudentIds) ||
+        hasRole('teacher') // Teachers can read all quizzes (filtered client-side by school/grade)
+      );
+      
+      // Only allow authenticated users to create their own quiz results
+      // Prevent data tampering by validating userId matches auth
+      allow create: if isAuthenticated() && 
+        request.resource.data.userId == request.auth.uid &&
+        request.resource.data.keys().hasAll(['userId', 'subject', 'examType', 'timestamp']) &&
+        request.resource.data.percentage >= 0 && 
+        request.resource.data.percentage <= 100 &&
+        request.resource.data.totalQuestions > 0 &&
+        request.resource.data.correctAnswers >= 0 &&
+        request.resource.data.correctAnswers <= request.resource.data.totalQuestions;
+      
+      // Prevent updates and deletes to maintain data integrity
+      allow update, delete: if false;
+    }
+    
+    // Trivia collection - trivia questions (read-only for users)
+    match /trivia/{triviaId} {
+      allow read: if isAuthenticated();
+      allow write: if hasRole('super_admin') || hasRole('school_admin');
+    }
+    
+    // Leaderboard Ranks collection - public read for rank information
+    match /leaderboardRanks/{rankId} {
+      allow read: if isAuthenticated();
+      allow write: if hasRole('super_admin') || hasRole('school_admin');
+    }
+    
+    // Leaderboard Metadata collection - public read for rank system info
+    match /leaderboardMetadata/{docId} {
+      allow read: if isAuthenticated();
+      allow write: if hasRole('super_admin') || hasRole('school_admin');
+    }
+
+    // Materialized class aggregates - read by admins or teachers of the class
+    match /classAggregates/{aggId} {
+      allow read: if isAuthenticated() && (
+        isAdmin() ||
+        (hasRole('teacher') && request.auth.token.schoolId == resource.data.schoolId && (
+          request.auth.token.teachingGrade == resource.data.grade || request.auth.token.grade == resource.data.grade
+        ))
+      );
+      // Only server-side functions should write aggregates
+      allow write: if false;
+    }
+
+    // Per-student materialized summaries - readable by owner, parents, admins, or the student's teacher
+    match /studentSummaries/{studentId} {
+      allow read: if isAuthenticated() && (
+        isOwner(studentId) ||
+        isAdmin() ||
+        (hasRole('parent') && studentId in request.auth.token.linkedStudentIds) ||
+        (hasRole('teacher') && (
+          // teacher explicitly assigned
+          resource.data.teacherId == request.auth.uid ||
+          // OR teacher belongs to same tenant and grade/class
+          (request.auth.token.schoolId == resource.data.schoolId && (request.auth.token.teachingGrade == resource.data.grade || request.auth.token.grade == resource.data.grade))
+        ))
+      );
+      // Writes are server-side only
+      allow write: if false;
+    }
+
+    // Notes collection - public to authenticated users. Likes are stored
+    // under notes/{noteId}/likes/{userId} so users can like/unlike.
+    match /notes/{noteId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      // Allow updates only for admin or when only likeCount is changed
+      allow update: if isAuthenticated() && (
+        isAdmin() ||
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly(['likeCount'])
+      );
+      allow delete: if isAdmin();
+
+      match /likes/{userId} {
+        // A user can create/delete their own like document
+        allow create: if request.auth != null && request.auth.uid == userId;
+        allow delete: if request.auth != null && request.auth.uid == userId;
+        allow read: if isAuthenticated();
+      }
+    }
+
+    // Per-user my_notes collection for saved/liked notes
+    match /users/{userId}/my_notes/{noteId} {
+      allow read: if isAuthenticated() && request.auth.uid == userId;
+      allow create: if request.auth != null && request.auth.uid == userId;
+      allow update: if request.auth != null && request.auth.uid == userId;
+      allow delete: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Question Difficulty collection - read-only for all authenticated users
+    // Writes are handled by Cloud Functions only
+    match /questionDifficulty/{questionId} {
+      allow read: if isAuthenticated();
+      allow write: if false; // Server-side only via Cloud Functions
+    }
+
+    // Question Attempts subcollection - for tracking user performance
+    match /users/{userId}/questionAttempts/{attemptId} {
+      allow read: if isAuthenticated() && (
+        isOwner(userId) ||
+        isAdmin() ||
+        (hasRole('parent') && userId in request.auth.token.linkedStudentIds)
+      );
+      
+      // Allow users to create their own attempts
+      allow create: if isAuthenticated() && request.auth.uid == userId &&
+        request.resource.data.keys().hasAll(['questionId', 'attemptedAt', 'isCorrect']);
+      
+      // Prevent updates and deletes to maintain data integrity
+      allow update, delete: if false;
+    }
+    
+    // Theory Questions collection - read-only for authenticated users
+    match /theoryQuestions/{questionId} {
+      allow read: if isAuthenticated();
+      allow write: if hasRole('super_admin') || hasRole('school_admin');
+    }
+    
+    // Theory Answers collection - student submissions for teacher review
+    match /theoryAnswers/{answerId} {
+      // Students can read their own submissions
+      // Teachers can read submissions from their students
+      // Admins can read all submissions
+      allow read: if isAuthenticated() && (
+        resource.data.studentId == request.auth.uid ||
+        isAdmin() ||
+        (hasRole('teacher') && sameTenant(resource.data.schoolId))
+      );
+      
+      // Students can create their own submissions
+      allow create: if isAuthenticated() && 
+        request.resource.data.studentId == request.auth.uid &&
+        request.resource.data.keys().hasAll(['studentId', 'questionId', 'studentAnswer', 'submittedAt']);
+      
+      // Only teachers and admins can update (for grading)
+      allow update: if isAuthenticated() && (
+        hasRole('teacher') ||
+        isAdmin()
+      );
+      
+      // Prevent deletes to maintain academic record integrity
+      allow delete: if false;
+    }
+    
+    // Question Collections - curated sets of questions (e.g., ICT by topic)
+    match /questionCollections/{collectionId} {
+      // All authenticated users can read question collections
+      allow read: if isAuthenticated();
+      
+      // Only admins can create/update collections
+      allow write: if hasRole('super_admin') || hasRole('school_admin');
+    }
+    
+    // Deny all other collections by default - prevents unauthorized data injection
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
