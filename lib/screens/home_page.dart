@@ -7090,56 +7090,91 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
   }
 
   Future<void> _loadSubjectMasteryData() async {
-    if (_school == null || _grade == null) return;
-
     try {
-      debugPrint('🔍 Loading subject mastery for school: $_school, grade: $_grade');
+      debugPrint('🔍 Loading subject mastery data');
+      debugPrint('   Teacher ID: $_teacherId');
+      debugPrint('   School: $_school');
+      debugPrint('   Grade: $_grade');
       
-      // Get all students in this school and grade
-      final studentsQuery = await FirebaseFirestore.instance
-          .collection('users')
-          .where('schoolName', isEqualTo: _school)
-          .where('grade', isEqualTo: _grade)
-          .where('role', isEqualTo: 'student')
-          .get();
+      List<String> studentIds = [];
+      
+      // First try: Get students from same school and grade
+      if (_school != null && _grade != null) {
+        debugPrint('🔍 Querying users collection for students...');
+        final usersQuery = await FirebaseFirestore.instance
+            .collection('users')
+            .where('role', isEqualTo: 'student')
+            .get();
 
-      if (studentsQuery.docs.isEmpty) {
+        debugPrint('📊 Total student users found: ${usersQuery.docs.length}');
+
+        // Filter by school and grade
+        for (var doc in usersQuery.docs) {
+          final data = doc.data();
+          final studentSchool = data['schoolName'] ?? data['school'];
+          final studentGrade = data['grade'] ?? data['class'] ?? data['teachingGrade'];
+          
+          debugPrint('   Student ${doc.id}: school=$studentSchool, grade=$studentGrade');
+          
+          if (studentSchool == _school && studentGrade == _grade) {
+            studentIds.add(doc.id);
+            debugPrint('   ✅ Match! Added student ${doc.id}');
+          }
+        }
+        
+        debugPrint('📊 Matched ${studentIds.length} students in school "$_school" grade "$_grade"');
+      }
+      
+      if (studentIds.isEmpty) {
         debugPrint('⚠️ No students found');
+        if (mounted) {
+          setState(() {
+            _subjectMastery = {};
+            _timeBySubject = {};
+          });
+        }
         return;
       }
-
-      final studentIds = studentsQuery.docs.map((doc) => doc.id).toList();
-      debugPrint('📊 Found ${studentIds.length} students');
 
       Map<String, List<double>> subjectScores = {};
       Map<String, double> timeSpent = {};
 
       // Load quizzes for all students
       for (String studentId in studentIds) {
+        debugPrint('Loading quizzes for student: $studentId');
         final quizzes = await FirebaseFirestore.instance
             .collection('quizzes')
             .where('userId', isEqualTo: studentId)
             .get();
 
+        debugPrint('  Found ${quizzes.docs.length} quizzes for student $studentId');
+
         for (var quiz in quizzes.docs) {
           final data = quiz.data();
-          String subject = _normalizeSubject(data['subject'] ?? '');
+          String rawSubject = data['subject'] ?? '';
+          String subject = _normalizeSubject(rawSubject);
           double score = (data['percentage'] as num?)?.toDouble() ?? 0.0;
           int questions = (data['totalQuestions'] as int?) ?? 0;
 
-          if (subject.isNotEmpty && score > 0) {
-            subjectScores.putIfAbsent(subject, () => []).add(score);
-            timeSpent[subject] = (timeSpent[subject] ?? 0) + (questions * 2.0);
+          debugPrint('  Quiz: $rawSubject -> $subject, Score: $score%, Questions: $questions');
+
+          if (subject.isNotEmpty) {
+            if (score > 0) {
+              subjectScores.putIfAbsent(subject, () => []).add(score);
+            }
+            if (questions > 0) {
+              timeSpent[subject] = (timeSpent[subject] ?? 0) + (questions * 2.0);
+            }
           }
         }
       }
 
-      // Calculate averages for 11 BECE subjects
+      // Calculate averages for subjects with MCQ questions in database
       Map<String, dynamic> mastery = {};
       final beceSubjects = [
         'English', 'Mathematics', 'Science', 'Social Studies',
-        'RME', 'French', 'ICT', 'BDT',
-        'Home Economics', 'Visual Arts', 'Ga', 'Asante Twi'
+        'RME', 'ICT', 'French', 'Ga', 'Asante Twi',
+        'Career Technology', 'Creative Arts'
       ];
 
       for (String subject in beceSubjects) {
@@ -7154,7 +7189,9 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
       }
 
       debugPrint('✅ Subject mastery data loaded: ${mastery.keys.length} subjects');
+      debugPrint('📊 Subjects with data: ${mastery.keys.join(", ")}');
       debugPrint('✅ Time spent data loaded: ${timeSpent.keys.length} subjects');
+      debugPrint('⏱️ Time by subject: ${timeSpent.keys.join(", ")}');
 
       if (mounted) {
         setState(() {
@@ -7164,6 +7201,7 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
       }
     } catch (e) {
       debugPrint('❌ Error loading subject mastery: $e');
+      debugPrint('Stack trace: ${StackTrace.current}');
     }
   }
 
@@ -7174,13 +7212,12 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
     if (s.contains('science')) return 'Science';
     if (s.contains('social')) return 'Social Studies';
     if (s.contains('rme') || s.contains('religious')) return 'RME';
-    if (s.contains('french')) return 'French';
     if (s.contains('ict') || s.contains('computer')) return 'ICT';
-    if (s.contains('bdt') || s.contains('design')) return 'BDT';
-    if (s.contains('home') || s.contains('economic')) return 'Home Economics';
-    if (s.contains('visual') || s.contains('art')) return 'Visual Arts';
+    if (s.contains('french')) return 'French';
     if (s == 'ga') return 'Ga';
     if (s.contains('twi') || s.contains('asante')) return 'Asante Twi';
+    if (s.contains('career') || s.contains('technology')) return 'Career Technology';
+    if (s.contains('creative') || s.contains('arts')) return 'Creative Arts';
     return subject;
   }
 
@@ -7366,9 +7403,9 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
               const SizedBox(height: 32),
             ],
 
-            // Subject Mastery (11 BECE Subjects)
+            // Subject Mastery (Subjects with MCQ Questions)
             Text(
-              'Subject Mastery (11 BECE Subjects)',
+              'Subject Mastery',
               style: GoogleFonts.playfairDisplay(
                 fontSize: isSmallScreen ? 20 : 24,
                 fontWeight: FontWeight.bold,
@@ -7388,18 +7425,6 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
             ),
             const SizedBox(height: 16),
             _buildTimeSpentCard(isSmallScreen),
-            const SizedBox(height: 32),
-
-            // Performance Analytics
-            Text(
-              'Performance Analytics',
-              style: GoogleFonts.playfairDisplay(
-                fontSize: isSmallScreen ? 20 : 24,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 16),
-            _buildPerformanceAnalytics(isSmallScreen),
             const SizedBox(height: 32),
 
             // Students at Risk
@@ -7514,8 +7539,8 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
   Widget _buildSubjectMasteryCard(bool isSmallScreen) {
     final beceSubjects = [
       'English', 'Mathematics', 'Science', 'Social Studies',
-      'RME', 'French', 'ICT', 'BDT',
-      'Home Economics', 'Visual Arts', 'Ga', 'Asante Twi'
+      'RME', 'ICT', 'French', 'Ga', 'Asante Twi',
+      'Career Technology', 'Creative Arts'
     ];
 
     return Container(

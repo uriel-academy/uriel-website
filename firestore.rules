@@ -200,7 +200,8 @@ service cloud.firestore {
         isOwner(resource.data.userId) ||
         isAdmin() ||
         (hasRole('parent') && resource.data.userId in request.auth.token.linkedStudentIds) ||
-        hasRole('teacher') // Teachers can read all quizzes (filtered client-side by school/grade)
+        hasRole('teacher') || // Teachers can read all quizzes (filtered client-side by school/grade)
+        hasRole('school_admin') // School admins can read all quizzes (filtered client-side by school)
       );
       
       // Only allow authenticated users to create their own quiz results
