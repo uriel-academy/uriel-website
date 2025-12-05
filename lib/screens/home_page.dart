@@ -137,7 +137,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     
     _calculateBeceCountdown();
     _loadUserData();
-  _loadUserStats();
+    if (!widget.isTeacher) {
+      _loadUserStats();
+    }
     _loadUserRank();
     _recordDailyActivity();
     _setupUserStream();
@@ -3022,503 +3024,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
 
   /// Teacher-facing dashboard: aggregates average data of students in teacher's class
   Widget _buildTeacherDashboard() {
-    final screenWidth = MediaQuery.of(context).size.width;
-    final isSmallScreen = screenWidth < 768;
-    final teacherId = FirebaseAuth.instance.currentUser?.uid;
-
-    return FutureBuilder<DocumentSnapshot>(
-      future: FirebaseFirestore.instance.collection('users').doc(teacherId).get(),
-      builder: (context, teacherSnap) {
-        if (teacherSnap.connectionState == ConnectionState.waiting) {
-          return const Center(child: CircularProgressIndicator());
-        }
-        final teacherData = teacherSnap.data?.data() as Map<String, dynamic>?;
-        final school = teacherData?['schoolName'] ?? teacherData?['school'];
-        final grade = teacherData?['teachingGrade'] ?? teacherData?['grade'] ?? teacherData?['class'];
-
-        if (school == null || grade == null) {
-          return Center(
-            child: Padding(
-              padding: const EdgeInsets.all(24),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.school_outlined, size: 64, color: Colors.grey[400]),
-                  const SizedBox(height: 16),
-                  Text(
-                    'Complete Your Profile',
-                    style: GoogleFonts.playfairDisplay(fontSize: 24, fontWeight: FontWeight.bold),
-                  ),
-                  const SizedBox(height: 8),
-                  Text(
-                    'Please add your school and class information to view your dashboard',
-                    style: GoogleFonts.montserrat(color: Colors.grey[600]),
-                    textAlign: TextAlign.center,
-                  ),
-                ],
-              ),
-            ),
-          );
-        }
-
-        // Fetch dynamic dashboard data using Cloud Function
-        return FutureBuilder<Map<String, dynamic>>(
-          future: (() async {
-            try {
-              // Call getClassAggregates to get students
-              final functions = FirebaseFunctions.instanceFor(region: 'us-central1');
-              final callable = functions.httpsCallable('getClassAggregates');
-              final resp = await callable.call({
-                'teacherId': teacherId,
-                'pageSize': 100,
-                'includeCount': true,
-              });
-              
-              final data = resp.data as Map<String, dynamic>?;
-              final students = (data?['students'] as List<dynamic>?) ?? [];
-              final totalCount = data?['totalCount'] as int? ?? students.length;
-              
-              // Calculate comprehensive metrics
-              int totalXP = 0;
-              int totalQuestions = 0;
-              int totalSubjects = 0;
-              double totalAccuracy = 0;
-              int studentsWithAccuracy = 0;
-              Map<String, Map<String, dynamic>> subjectPerformance = {};
-              List<String> studentIds = [];
-              
-              for (final s in students) {
-                final student = s as Map<String, dynamic>;
-                studentIds.add(student['uid'] as String);
-                totalXP += (student['totalXP'] as int?) ?? 0;
-                totalQuestions += (student['questionsSolved'] as int?) ?? 0;
-                totalSubjects += (student['subjectsSolved'] as int?) ?? 0;
-                
-                final acc = student['avgPercent'];
-                if (acc != null && acc > 0) {
-                  totalAccuracy += (acc is num) ? acc.toDouble() : 0;
-                  studentsWithAccuracy++;
-                }
-              }
-              
-              // Get subject breakdown from quizzes
-              if (studentIds.isNotEmpty) {
-                final quizzesSnap = await FirebaseFirestore.instance
-                    .collection('quizzes')
-                    .where('userId', whereIn: studentIds.take(10).toList())
-                    .get();
-                
-                for (final qDoc in quizzesSnap.docs) {
-                  final qData = qDoc.data();
-                  final subject = (qData['subject'] ?? qData['collectionName'] ?? 'Other').toString();
-                  final percentage = (qData['percentage'] as num?) ?? 0;
-                  
-                  if (!subjectPerformance.containsKey(subject)) {
-                    subjectPerformance[subject] = {
-                      'total': 0.0,
-                      'count': 0,
-                      'students': <String>{},
-                    };
-                  }
-                  subjectPerformance[subject]!['total'] = (subjectPerformance[subject]!['total'] as double) + percentage.toDouble();
-                  subjectPerformance[subject]!['count'] = (subjectPerformance[subject]!['count'] as int) + 1;
-                  (subjectPerformance[subject]!['students'] as Set<String>).add(qData['userId'] as String);
-                }
-              }
-              
-              return {
-                'students': students,
-                'totalCount': totalCount,
-                'totalXP': totalXP,
-                'totalQuestions': totalQuestions,
-                'totalSubjects': totalSubjects,
-                'totalAccuracy': totalAccuracy,
-                'studentsWithAccuracy': studentsWithAccuracy,
-                'subjectPerformance': subjectPerformance,
-              };
-            } catch (e) {
-              debugPrint('Error loading dashboard data: $e');
-              return <String, dynamic>{};
-            }
-          })(),
-          builder: (context, snap) {
-            if (snap.connectionState == ConnectionState.waiting) {
-              return const Center(child: CircularProgressIndicator());
-            }
-            
-            final dashboardData = snap.data ?? {};
-            final students = (dashboardData['students'] as List?) ?? [];
-            final totalStudents = (dashboardData['totalCount'] as int?) ?? 0;
-            
-            if (totalStudents == 0) {
-              return Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(24),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.people_outline, size: 64, color: Colors.grey[400]),
-                      const SizedBox(height: 16),
-                      Text(
-                        'No Students Yet',
-                        style: GoogleFonts.playfairDisplay(fontSize: 24, fontWeight: FontWeight.bold),
-                      ),
-                      const SizedBox(height: 8),
-                      Text(
-                        'Students will appear here once they join your class',
-                        style: GoogleFonts.montserrat(color: Colors.grey[600]),
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
-                  ),
-                ),
-              );
-            }
-            
-            final totalXP = (dashboardData['totalXP'] as int?) ?? 0;
-            final totalQuestions = (dashboardData['totalQuestions'] as int?) ?? 0;
-            final totalSubjects = (dashboardData['totalSubjects'] as int?) ?? 0;
-            final totalAccuracy = (dashboardData['totalAccuracy'] as double?) ?? 0;
-            final studentsWithAccuracy = (dashboardData['studentsWithAccuracy'] as int?) ?? 0;
-            final subjectPerformance = (dashboardData['subjectPerformance'] as Map<String, Map<String, dynamic>>?) ?? {};
-            
-            final avgXP = totalStudents > 0 ? (totalXP / totalStudents) : 0;
-            final avgAccuracy = studentsWithAccuracy > 0 ? (totalAccuracy / studentsWithAccuracy) : 0;
-            // Show totals for questions and subjects instead of averages
-            final totalQuestionsCount = totalQuestions;
-            final totalSubjectsCount = totalSubjects;
-
-            // Sort students by XP for top performers
-            final sortedStudents = List<Map<String, dynamic>>.from(students);
-            sortedStudents.sort((a, b) => ((b['totalXP'] as int?) ?? 0).compareTo((a['totalXP'] as int?) ?? 0));
-            final topStudents = sortedStudents.take(5).toList();
-            
-            return SingleChildScrollView(
-              padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  // Header Section
-                  Text(
-                    '$grade',
-                    style: GoogleFonts.playfairDisplay(
-                      fontSize: isSmallScreen ? 24 : 32,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  const SizedBox(height: 4),
-                  Text(
-                    '$school • ${totalStudents == 1 ? '1 student' : '$totalStudents students'}',
-                    style: GoogleFonts.montserrat(
-                      fontSize: isSmallScreen ? 14 : 16,
-                      color: Colors.grey[600],
-                    ),
-                  ),
-                  const SizedBox(height: 32),
-                  
-                  // Key Metrics Grid
-                  LayoutBuilder(
-                    builder: (context, constraints) {
-                      final cardWidth = isSmallScreen ? constraints.maxWidth : (constraints.maxWidth - 48) / 4;
-                      return Wrap(
-                        spacing: 16,
-                        runSpacing: 16,
-                        children: [
-                          SizedBox(
-                            width: cardWidth,
-                            child: _buildModernMetricCard(
-                              'Average XP',
-                              avgXP.toStringAsFixed(0),
-                              Icons.stars_rounded,
-                              const Color(0xFF1A1E3F),
-                            ),
-                          ),
-                          SizedBox(
-                            width: cardWidth,
-                            child: _buildModernMetricCard(
-                              'Total Questions',
-                              totalQuestionsCount.toString(),
-                              Icons.quiz_rounded,
-                              const Color(0xFF2196F3),
-                            ),
-                          ),
-                          SizedBox(
-                            width: cardWidth,
-                            child: _buildModernMetricCard(
-                              'Average Accuracy',
-                              avgAccuracy > 0 ? '${avgAccuracy.toStringAsFixed(1)}%' : 'N/A',
-                              Icons.trending_up_rounded,
-                              const Color(0xFF00C853),
-                            ),
-                          ),
-                          SizedBox(
-                            width: cardWidth,
-                            child: _buildModernMetricCard(
-                              'Total Subjects',
-                              totalSubjectsCount.toString(),
-                              Icons.library_books_rounded,
-                              const Color(0xFFFF9800),
-                            ),
-                          ),
-                        ],
-                      );
-                    },
-                  ),
-                  const SizedBox(height: 32),
-                  
-                  // Subject Performance Breakdown
-                  if (subjectPerformance.isNotEmpty) ...[
-                    Text(
-                      'Subject Performance',
-                      style: GoogleFonts.playfairDisplay(
-                        fontSize: isSmallScreen ? 20 : 24,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      'Individual subject mastery across your class',
-                      style: GoogleFonts.montserrat(fontSize: 14, color: Colors.grey[600]),
-                    ),
-                    const SizedBox(height: 16),
-                    ...subjectPerformance.entries.map((entry) {
-                      final subject = entry.key;
-                      final data = entry.value;
-                      final avgPerformance = (data['total'] as double) / (data['count'] as int);
-                      final studentCount = (data['students'] as Set<String>).length;
-                      final totalAttempts = data['count'] as int;
-                      
-                      return Container(
-                        margin: const EdgeInsets.only(bottom: 12),
-                        padding: const EdgeInsets.all(20),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(16),
-                          border: Border.all(color: Colors.grey[200]!),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withValues(alpha: 0.03),
-                              blurRadius: 10,
-                              offset: const Offset(0, 2),
-                            ),
-                          ],
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Expanded(
-                                  child: Text(
-                                    subject,
-                                    style: GoogleFonts.montserrat(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                                  decoration: BoxDecoration(
-                                    color: avgPerformance >= 70
-                                        ? const Color(0xFF00C853).withValues(alpha: 0.1)
-                                        : avgPerformance >= 50
-                                            ? const Color(0xFFFF9800).withValues(alpha: 0.1)
-                                            : const Color(0xFFD62828).withValues(alpha: 0.1),
-                                    borderRadius: BorderRadius.circular(8),
-                                  ),
-                                  child: Text(
-                                    '${avgPerformance.toStringAsFixed(1)}%',
-                                    style: GoogleFonts.montserrat(
-                                      fontWeight: FontWeight.bold,
-                                      color: avgPerformance >= 70
-                                          ? const Color(0xFF00C853)
-                                          : avgPerformance >= 50
-                                              ? const Color(0xFFFF9800)
-                                              : const Color(0xFFD62828),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(height: 12),
-                            Row(
-                              children: [
-                                Icon(Icons.people_outline, size: 16, color: Colors.grey[600]),
-                                const SizedBox(width: 4),
-                                Text(
-                                  '$studentCount ${studentCount == 1 ? 'student' : 'students'}',
-                                  style: GoogleFonts.montserrat(fontSize: 13, color: Colors.grey[600]),
-                                ),
-                                const SizedBox(width: 16),
-                                Icon(Icons.edit_note, size: 16, color: Colors.grey[600]),
-                                const SizedBox(width: 4),
-                                Text(
-                                  '$totalAttempts ${totalAttempts == 1 ? 'attempt' : 'attempts'}',
-                                  style: GoogleFonts.montserrat(fontSize: 13, color: Colors.grey[600]),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(height: 12),
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(4),
-                              child: LinearProgressIndicator(
-                                value: (avgPerformance / 100).clamp(0.0, 1.0),
-                                minHeight: 8,
-                                backgroundColor: Colors.grey[200],
-                                valueColor: AlwaysStoppedAnimation<Color>(
-                                  avgPerformance >= 70
-                                      ? const Color(0xFF00C853)
-                                      : avgPerformance >= 50
-                                          ? const Color(0xFFFF9800)
-                                          : const Color(0xFFD62828),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      );
-                    }).toList(),
-                    const SizedBox(height: 32),
-                  ],
-                  
-                  // Top Performers
-                  if (topStudents.isNotEmpty) ...[
-                    Text(
-                      'Top Performers',
-                      style: GoogleFonts.playfairDisplay(
-                        fontSize: isSmallScreen ? 20 : 24,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      'Students with the highest XP in your class',
-                      style: GoogleFonts.montserrat(fontSize: 14, color: Colors.grey[600]),
-                    ),
-                    const SizedBox(height: 16),
-                    ...topStudents.asMap().entries.map((entry) {
-                      final index = entry.key;
-                      final student = entry.value;
-                      final name = student['displayName'] ?? 'Student';
-                      final xp = student['totalXP'] ?? 0;
-                      final questions = student['questionsSolved'] ?? 0;
-                      final avatar = student['avatar'] as String?;
-                      
-                      return Container(
-                        margin: const EdgeInsets.only(bottom: 12),
-                        padding: const EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                          color: index == 0 ? const Color(0xFFD62828).withValues(alpha: 0.05) : Colors.white,
-                          borderRadius: BorderRadius.circular(12),
-                          border: Border.all(
-                            color: index == 0 ? const Color(0xFFD62828).withValues(alpha: 0.2) : Colors.grey[200]!,
-                          ),
-                        ),
-                        child: Row(
-                          children: [
-                            Container(
-                              width: 32,
-                              height: 32,
-                              alignment: Alignment.center,
-                              decoration: BoxDecoration(
-                                color: index == 0
-                                    ? const Color(0xFFD62828)
-                                    : Colors.grey[300],
-                                shape: BoxShape.circle,
-                              ),
-                              child: Text(
-                                '${index + 1}',
-                                style: GoogleFonts.montserrat(
-                                  color: index == 0 ? Colors.white : Colors.grey[700],
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                            const SizedBox(width: 12),
-                            if (avatar != null && avatar.isNotEmpty)
-                              CircleAvatar(
-                                radius: 20,
-                                backgroundImage: NetworkImage(avatar),
-                              )
-                            else
-                              CircleAvatar(
-                                radius: 20,
-                                backgroundColor: const Color(0xFFD62828).withValues(alpha: 0.1),
-                                child: Text(
-                                  name[0].toUpperCase(),
-                                  style: GoogleFonts.montserrat(
-                                    color: const Color(0xFFD62828),
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                            const SizedBox(width: 12),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    name,
-                                    style: GoogleFonts.montserrat(
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 14,
-                                    ),
-                                  ),
-                                  const SizedBox(height: 2),
-                                  Text(
-                                    '$questions questions answered',
-                                    style: GoogleFonts.montserrat(
-                                      fontSize: 12,
-                                      color: Colors.grey[600],
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Text(
-                              '$xp XP',
-                              style: GoogleFonts.montserrat(
-                                fontWeight: FontWeight.bold,
-                                color: const Color(0xFFD62828),
-                              ),
-                            ),
-                          ],
-                        ),
-                      );
-                    }).toList(),
-                  ],
-                  
-                  // NEW METRICS SECTIONS
-                  const SizedBox(height: 32),
-                  
-                  // Students at Risk Section
-                  _buildStudentsAtRiskSection(students),
-                  
-                  const SizedBox(height: 24),
-                  
-                  // Weekly Activity Trends
-                  _buildWeeklyActivitySection(students),
-                  
-                  const SizedBox(height: 24),
-                  
-                  // Student Engagement Overview
-                  _buildEngagementOverview(students),
-                  
-                  const SizedBox(height: 24),
-                  
-                  // Time-Based Progress
-                  _buildTimeBasedProgress(students),
-                ],
-              ),
-            );
-          },
-        );
-      },
-    );
+    return TeacherDashboardWidget();
   }
-  
+
   // NEW: Students at Risk Section
   Widget _buildStudentsAtRiskSection(List students) {
     final screenWidth = MediaQuery.of(context).size.width;
@@ -7472,6 +6980,1185 @@ Widget _buildFeedbackPage() {
           const SnackBar(content: Text('Error signing out. Please try again.')),
         );
       }
+    }
+  }
+}
+
+class TeacherDashboardWidget extends StatefulWidget {
+  const TeacherDashboardWidget({super.key});
+
+  @override
+  State<TeacherDashboardWidget> createState() => _TeacherDashboardWidgetState();
+}
+
+class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
+  Map<String, dynamic>? _dashboardData;
+  bool _isLoading = true;
+  String? _error;
+  String? _teacherId;
+  String? _school;
+  String? _grade;
+  Timer? _refreshTimer;
+  StreamSubscription? _studentsSubscription;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadInitialData();
+    _setupRealtimeUpdates();
+    // Keep periodic refresh as backup
+    _refreshTimer = Timer.periodic(const Duration(minutes: 5), (_) => _loadData());
+  }
+
+  @override
+  void dispose() {
+    _refreshTimer?.cancel();
+    _studentsSubscription?.cancel();
+    super.dispose();
+  }
+
+  Future<void> _loadInitialData() async {
+    setState(() {
+      _isLoading = true;
+      _error = null;
+    });
+
+    try {
+      // Get teacher info
+      final teacherSnap = await FirebaseFirestore.instance
+          .collection('users')
+          .doc(FirebaseAuth.instance.currentUser?.uid)
+          .get();
+
+      final teacherData = teacherSnap.data();
+      _teacherId = FirebaseAuth.instance.currentUser?.uid;
+      _school = teacherData?['schoolName'] ?? teacherData?['school'];
+      _grade = teacherData?['teachingGrade'] ?? teacherData?['grade'] ?? teacherData?['class'];
+
+      if (_school == null || _grade == null) {
+        setState(() {
+          _error = 'Complete your profile to view dashboard';
+          _isLoading = false;
+        });
+        return;
+      }
+
+      await _loadData();
+    } catch (e) {
+      debugPrint('❌ Teacher Dashboard Error: $e');
+      setState(() {
+        _error = 'Failed to load dashboard data';
+        _isLoading = false;
+      });
+    }
+  }
+
+  void _setupRealtimeUpdates() {
+    if (_teacherId == null) return;
+
+    // Listen for changes to student summaries for this teacher
+    _studentsSubscription = FirebaseFirestore.instance
+        .collection('studentSummaries')
+        .where('teacherId', isEqualTo: _teacherId)
+        .snapshots()
+        .listen((snapshot) {
+          debugPrint('🔄 Teacher Dashboard: Real-time update received');
+          _processStudentData(snapshot.docs);
+        }, onError: (error) {
+          debugPrint('❌ Teacher Dashboard: Real-time listener error: $error');
+        });
+  }
+
+  Future<void> _loadData() async {
+    if (_teacherId == null) return;
+
+    try {
+      final studentSummariesSnap = await FirebaseFirestore.instance
+          .collection('studentSummaries')
+          .where('teacherId', isEqualTo: _teacherId)
+          .get();
+
+      _processStudentData(studentSummariesSnap.docs);
+    } catch (e) {
+      debugPrint('❌ Teacher Dashboard Error loading data: $e');
+      // Don't set error state for background refreshes
+    }
+  }
+
+  void _processStudentData(List<QueryDocumentSnapshot> docs) {
+    final students = docs.map((doc) {
+      final data = doc.data() as Map<String, dynamic>;
+      return {
+        'uid': doc.id,
+        'displayName': data['displayName'] ?? 'Unknown Student',
+        'email': data['email'] ?? '',
+        'avatar': data['avatar'],
+        'totalXP': data['totalXP'] ?? 0,
+        'questionsSolved': data['totalQuestions'] ?? 0,
+        'avgPercent': data['avgPercent'] ?? 0,
+        'subjectsSolved': data['subjectsCount'] ?? 0,
+        'rank': data['rankName'] ?? 'Learner',
+      };
+    }).toList();
+
+    final totalCount = students.length;
+    debugPrint('🔍 Teacher Dashboard: Processed ${students.length} students');
+
+    final data = {
+      'students': students,
+      'totalCount': totalCount,
+    };
+
+    if (mounted) {
+      setState(() {
+        _dashboardData = data;
+        _isLoading = false;
+      });
+    }
+  }
+
+  void _showStudentDialog(Map<String, dynamic> studentData) {
+    showDialog(
+      context: context,
+      builder: (context) => StudentDetailDialog(
+        studentData: studentData,
+        teacherId: _teacherId!,
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isSmallScreen = screenWidth < 768;
+
+    if (_isLoading) {
+      return const Center(child: CircularProgressIndicator());
+    }
+
+    if (_error != null) {
+      return Center(
+        child: Padding(
+          padding: const EdgeInsets.all(24),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.error_outline, size: 64, color: Colors.red[400]),
+              const SizedBox(height: 16),
+              Text(
+                'Error Loading Dashboard',
+                style: GoogleFonts.playfairDisplay(fontSize: 24, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                _error!,
+                style: GoogleFonts.montserrat(color: Colors.grey[600]),
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 16),
+              ElevatedButton(
+                onPressed: _loadData,
+                child: const Text('Retry'),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    final students = (_dashboardData?['students'] as List?) ?? [];
+    final totalStudents = (_dashboardData?['totalCount'] as int?) ?? students.length;
+
+    // Calculate summary metrics
+    int totalXP = 0;
+    int totalQuestions = 0;
+    double totalAccuracy = 0;
+    int studentsWithAccuracy = 0;
+
+    for (final student in students) {
+      final data = student as Map<String, dynamic>;
+      totalXP += (data['totalXP'] as int?) ?? 0;
+      totalQuestions += (data['questionsSolved'] as int?) ?? 0;
+
+      final accuracy = (data['avgPercent'] as num?)?.toDouble() ?? 0;
+      if (accuracy > 0) {
+        totalAccuracy += accuracy;
+        studentsWithAccuracy++;
+      }
+    }
+
+    final avgXP = totalStudents > 0 ? (totalXP / totalStudents).round() : 0;
+    final avgAccuracy = studentsWithAccuracy > 0 ? (totalAccuracy / studentsWithAccuracy) : 0;
+
+    return RefreshIndicator(
+      onRefresh: _loadData,
+      child: SingleChildScrollView(
+        physics: const AlwaysScrollableScrollPhysics(),
+        padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Header Section
+            Text(
+              '$_grade',
+              style: GoogleFonts.playfairDisplay(
+                fontSize: isSmallScreen ? 24 : 32,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 4),
+            Text(
+              '$_school • ${totalStudents == 1 ? '1 student' : '$totalStudents students'}',
+              style: GoogleFonts.montserrat(
+                fontSize: isSmallScreen ? 14 : 16,
+                color: Colors.grey[600],
+              ),
+            ),
+            const SizedBox(height: 32),
+
+            // Summary Metrics
+            if (totalStudents > 0) ...[
+              Text(
+                'Class Overview',
+                style: GoogleFonts.playfairDisplay(
+                  fontSize: isSmallScreen ? 20 : 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 16),
+              LayoutBuilder(
+                builder: (context, constraints) {
+                  final cardWidth = isSmallScreen ? constraints.maxWidth : (constraints.maxWidth - 32) / 3;
+                  return Wrap(
+                    spacing: 16,
+                    runSpacing: 16,
+                    children: [
+                      SizedBox(
+                        width: cardWidth,
+                        child: _buildMetricCard(
+                          'Average XP',
+                          avgXP.toString(),
+                          Icons.stars_rounded,
+                          const Color(0xFF1A1E3F),
+                        ),
+                      ),
+                      SizedBox(
+                        width: cardWidth,
+                        child: _buildMetricCard(
+                          'Total Questions',
+                          totalQuestions.toString(),
+                          Icons.quiz_rounded,
+                          const Color(0xFF2196F3),
+                        ),
+                      ),
+                      SizedBox(
+                        width: cardWidth,
+                        child: _buildMetricCard(
+                          'Average Accuracy',
+                          avgAccuracy > 0 ? '${avgAccuracy.toStringAsFixed(1)}%' : 'N/A',
+                          Icons.trending_up_rounded,
+                          const Color(0xFF00C853),
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              ),
+              const SizedBox(height: 32),
+            ],
+
+            // Students Section
+            Text(
+              'Your Students',
+              style: GoogleFonts.playfairDisplay(
+                fontSize: isSmallScreen ? 20 : 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 16),
+
+            if (totalStudents == 0) ...[
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(24),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.people_outline, size: 64, color: Colors.grey[400]),
+                      const SizedBox(height: 16),
+                      Text(
+                        'No Students Yet',
+                        style: GoogleFonts.playfairDisplay(fontSize: 24, fontWeight: FontWeight.bold),
+                      ),
+                      const SizedBox(height: 8),
+                      Text(
+                        'Students will appear here once they join your class',
+                        style: GoogleFonts.montserrat(color: Colors.grey[600]),
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ] else ...[
+              ...students.map((student) {
+                final studentData = student as Map<String, dynamic>;
+                return GestureDetector(
+                  onTap: () => _showStudentDialog(studentData),
+                  child: Container(
+                    margin: const EdgeInsets.only(bottom: 12),
+                    padding: const EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(color: Colors.grey[200]!),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withValues(alpha: 0.03),
+                          blurRadius: 8,
+                          offset: const Offset(0, 2),
+                        ),
+                      ],
+                    ),
+                    child: Row(
+                      children: [
+                        CircleAvatar(
+                          radius: 24,
+                          backgroundImage: studentData['avatar'] != null
+                            ? NetworkImage(studentData['avatar'])
+                            : null,
+                          child: studentData['avatar'] == null
+                            ? Text(
+                                (() {
+                                  final name = studentData['displayName'] as String? ?? 'S';
+                                  return name.isNotEmpty ? name[0].toUpperCase() : 'S';
+                                })(),
+                                style: const TextStyle(fontWeight: FontWeight.bold),
+                              )
+                            : null,
+                        ),
+                        const SizedBox(width: 16),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                studentData['displayName'] ?? 'Unknown Student',
+                                style: GoogleFonts.montserrat(
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 16,
+                                ),
+                              ),
+                              Text(
+                                '${studentData['totalXP'] ?? 0} XP • ${studentData['questionsSolved'] ?? 0} questions',
+                                style: GoogleFonts.montserrat(
+                                  color: Colors.grey[600],
+                                  fontSize: 14,
+                                ),
+                              ),
+                              if (studentData['avgPercent'] != null && (studentData['avgPercent'] as num) > 0)
+                                Text(
+                                  'Avg: ${(studentData['avgPercent'] as num).toStringAsFixed(1)}%',
+                                  style: GoogleFonts.montserrat(
+                                    color: Colors.grey[600],
+                                    fontSize: 12,
+                                  ),
+                                ),
+                            ],
+                          ),
+                        ),
+                        Icon(
+                          Icons.chevron_right,
+                          color: Colors.grey[400],
+                        ),
+                      ],
+                    ),
+                  ),
+                );
+              }).toList(),
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildMetricCard(String title, String value, IconData icon, Color color) {
+    return Container(
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: Colors.grey[200]!),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.03),
+            blurRadius: 10,
+            offset: const Offset(0, 2),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            padding: const EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              color: color.withValues(alpha: 0.1),
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: Icon(icon, color: color, size: 20),
+          ),
+          const SizedBox(height: 12),
+          Text(
+            value,
+            style: GoogleFonts.montserrat(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+              color: color,
+            ),
+          ),
+          const SizedBox(height: 4),
+          Text(
+            title,
+            style: GoogleFonts.montserrat(
+              fontSize: 12,
+              color: Colors.grey[600],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class StudentDetailDialog extends StatefulWidget {
+  final Map<String, dynamic> studentData;
+  final String teacherId;
+
+  const StudentDetailDialog({
+    super.key,
+    required this.studentData,
+    required this.teacherId,
+  });
+
+  @override
+  State<StudentDetailDialog> createState() => _StudentDetailDialogState();
+}
+
+class _StudentDetailDialogState extends State<StudentDetailDialog> {
+  Map<String, dynamic>? _detailedData;
+  bool _isLoading = true;
+  StreamSubscription? _quizzesSubscription;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadDetailedData();
+    _setupRealtimeUpdates();
+  }
+
+  @override
+  void dispose() {
+    _quizzesSubscription?.cancel();
+    super.dispose();
+  }
+
+  void _setupRealtimeUpdates() {
+    // Listen for changes to the student's quizzes
+    _quizzesSubscription = FirebaseFirestore.instance
+        .collection('quizzes')
+        .where('userId', isEqualTo: widget.studentData['uid'])
+        .orderBy('createdAt', descending: true)
+        .limit(20) // Increased limit for better stats
+        .snapshots()
+        .listen((snapshot) {
+          debugPrint('🔄 Student Detail: Real-time quiz update received');
+          _processQuizData(snapshot.docs);
+        }, onError: (error) {
+          debugPrint('❌ Student Detail: Real-time listener error: $error');
+        });
+  }
+
+  Future<void> _loadDetailedData() async {
+    try {
+      // Load detailed student information including recent quizzes
+      final quizzesSnap = await FirebaseFirestore.instance
+          .collection('quizzes')
+          .where('userId', isEqualTo: widget.studentData['uid'])
+          .orderBy('createdAt', descending: true)
+          .limit(20)
+          .get();
+
+      _processQuizData(quizzesSnap.docs);
+    } catch (e) {
+      debugPrint('Error loading detailed student data: $e');
+      setState(() {
+        _isLoading = false;
+      });
+    }
+  }
+
+  void _processQuizData(List<QueryDocumentSnapshot> docs) {
+    final recentQuizzes = docs.map((doc) => doc.data() as Map<String, dynamic>).toList();
+    
+    // Calculate comprehensive stats
+    final stats = _calculateStudentStats(recentQuizzes);
+
+    // Load user profile data
+    FirebaseFirestore.instance
+        .collection('users')
+        .doc(widget.studentData['uid'])
+        .get()
+        .then((userSnap) {
+          final userData = userSnap.data() ?? {};
+
+          if (mounted) {
+            setState(() {
+              _detailedData = {
+                ...widget.studentData,
+                'recentQuizzes': recentQuizzes.take(10), // Show last 10 for display
+                'userProfile': userData,
+                'stats': stats,
+              };
+              _isLoading = false;
+            });
+          }
+        }).catchError((error) {
+          debugPrint('Error loading user profile: $error');
+          if (mounted) {
+            setState(() {
+              _detailedData = {
+                ...widget.studentData,
+                'recentQuizzes': recentQuizzes.take(10),
+                'userProfile': {},
+                'stats': stats,
+              };
+              _isLoading = false;
+            });
+          }
+        });
+  }
+
+  Map<String, dynamic> _calculateStudentStats(List<Map<String, dynamic>> quizzes) {
+    if (quizzes.isEmpty) {
+      return {
+        'overallPerformance': {'average': 0.0, 'totalQuestions': 0, 'totalCorrect': 0},
+        'subjectMastery': {},
+        'becePerformance': {'average': 0.0, 'totalQuestions': 0, 'totalCorrect': 0},
+        'triviaPerformance': {'average': 0.0, 'totalQuestions': 0, 'totalCorrect': 0},
+        'studyTimeBySubject': {},
+      };
+    }
+
+    // Overall performance
+    int totalQuestions = 0;
+    int totalCorrect = 0;
+    Map<String, List<double>> subjectScores = {};
+    Map<String, int> subjectQuestionCounts = {};
+    Map<String, int> subjectCorrectCounts = {};
+    
+    // BECE and Trivia specific
+    int beceQuestions = 0;
+    int beceCorrect = 0;
+    int triviaQuestions = 0;
+    int triviaCorrect = 0;
+
+    for (final quiz in quizzes) {
+      final questions = (quiz['totalQuestions'] as int?) ?? 0;
+      final correct = (quiz['correctAnswers'] as int?) ?? 0;
+      final subject = quiz['subject'] ?? 'Unknown';
+      final percentage = (quiz['percentage'] as num?)?.toDouble() ?? 0.0;
+      final quizType = quiz['quizType'] ?? '';
+
+      totalQuestions += questions;
+      totalCorrect += correct;
+
+      // Subject mastery
+      if (!subjectScores.containsKey(subject)) {
+        subjectScores[subject] = [];
+        subjectQuestionCounts[subject] = 0;
+        subjectCorrectCounts[subject] = 0;
+      }
+      subjectScores[subject]!.add(percentage);
+      subjectQuestionCounts[subject] = (subjectQuestionCounts[subject] ?? 0) + questions;
+      subjectCorrectCounts[subject] = (subjectCorrectCounts[subject] ?? 0) + correct;
+
+      // BECE performance
+      if (quizType.toLowerCase().contains('bece') ||
+          subject.toLowerCase().contains('bece') ||
+          quizType.toLowerCase().contains('past')) {
+        beceQuestions += questions;
+        beceCorrect += correct;
+      }
+
+      // Trivia performance
+      if (quizType.toLowerCase().contains('trivia') || subject.toLowerCase().contains('trivia')) {
+        triviaQuestions += questions;
+        triviaCorrect += correct;
+      }
+    }
+
+    // Calculate averages
+    final overallAverage = totalQuestions > 0 ? (totalCorrect / totalQuestions * 100) : 0.0;
+    final beceAverage = beceQuestions > 0 ? (beceCorrect / beceQuestions * 100) : 0.0;
+    final triviaAverage = triviaQuestions > 0 ? (triviaCorrect / triviaQuestions * 100) : 0.0;
+
+    // Subject mastery
+    Map<String, dynamic> subjectMastery = {};
+    subjectScores.forEach((subject, scores) {
+      final avgScore = scores.reduce((a, b) => a + b) / scores.length;
+      subjectMastery[subject] = {
+        'average': avgScore,
+        'totalQuestions': subjectQuestionCounts[subject] ?? 0,
+        'totalCorrect': subjectCorrectCounts[subject] ?? 0,
+        'quizCount': scores.length,
+      };
+    });
+
+    // Study time by subject (assume 2 minutes per question)
+    Map<String, double> studyTimeBySubject = {};
+    subjectQuestionCounts.forEach((subject, questions) {
+      studyTimeBySubject[subject] = questions * 2.0; // minutes
+    });
+
+    return {
+      'overallPerformance': {
+        'average': overallAverage,
+        'totalQuestions': totalQuestions,
+        'totalCorrect': totalCorrect,
+      },
+      'subjectMastery': subjectMastery,
+      'becePerformance': {
+        'average': beceAverage,
+        'totalQuestions': beceQuestions,
+        'totalCorrect': beceCorrect,
+      },
+      'triviaPerformance': {
+        'average': triviaAverage,
+        'totalQuestions': triviaQuestions,
+        'totalCorrect': triviaCorrect,
+      },
+      'studyTimeBySubject': studyTimeBySubject,
+    };
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isSmallScreen = screenWidth < 768;
+
+    return Dialog(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      child: Container(
+        width: isSmallScreen ? screenWidth * 0.9 : 500,
+        constraints: BoxConstraints(maxHeight: MediaQuery.of(context).size.height * 0.8),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            // Header
+            Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: const Color(0xFF1A1E3F),
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(16),
+                  topRight: Radius.circular(16),
+                ),
+              ),
+              child: Row(
+                children: [
+                  CircleAvatar(
+                    radius: 30,
+                    backgroundImage: widget.studentData['avatar'] != null
+                      ? NetworkImage(widget.studentData['avatar'])
+                      : null,
+                    child: widget.studentData['avatar'] == null
+                      ? Text(
+                          (() {
+                            final name = widget.studentData['displayName'] as String? ?? 'S';
+                            return name.isNotEmpty ? name[0].toUpperCase() : 'S';
+                          })(),
+                          style: const TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xFF1A1E3F),
+                          ),
+                        )
+                      : null,
+                  ),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          widget.studentData['displayName'] ?? 'Unknown Student',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Text(
+                          '${widget.studentData['totalXP'] ?? 0} XP',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 14,
+                            color: Colors.white.withValues(alpha: 0.8),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: () => Navigator.of(context).pop(),
+                    icon: const Icon(Icons.close, color: Colors.white),
+                  ),
+                ],
+              ),
+            ),
+
+            // Content
+            Flexible(
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.all(20),
+                child: _isLoading
+                  ? const Center(child: CircularProgressIndicator())
+                  : Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        // Overall Performance
+                        Text(
+                          'Overall Performance',
+                          style: GoogleFonts.playfairDisplay(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(height: 12),
+                        Container(
+                          padding: const EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            color: Colors.blue.withValues(alpha: 0.1),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Row(
+                            children: [
+                              Icon(Icons.assessment, color: Colors.blue[700]),
+                              const SizedBox(width: 12),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      '${_detailedData?['stats']?['overallPerformance']?['average']?.toStringAsFixed(1) ?? 'N/A'}%',
+                                      style: GoogleFonts.montserrat(
+                                        fontSize: 24,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.blue[700],
+                                      ),
+                                    ),
+                                    Text(
+                                      '${_detailedData?['stats']?['overallPerformance']?['totalCorrect'] ?? 0}/${_detailedData?['stats']?['overallPerformance']?['totalQuestions'] ?? 0} questions correct',
+                                      style: GoogleFonts.montserrat(
+                                        fontSize: 12,
+                                        color: Colors.blue[600],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+
+                        const SizedBox(height: 24),
+
+                        // Subject Mastery
+                        Text(
+                          'Subject Mastery',
+                          style: GoogleFonts.playfairDisplay(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(height: 12),
+                        ...(_detailedData?['stats']?['subjectMastery'] as Map<String, dynamic>? ?? {}).entries.map((entry) {
+                          final subject = entry.key;
+                          final data = entry.value as Map<String, dynamic>;
+                          final average = data['average'] as double? ?? 0.0;
+                          
+                          return Container(
+                            margin: const EdgeInsets.only(bottom: 8),
+                            padding: const EdgeInsets.all(12),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(8),
+                              border: Border.all(color: Colors.grey[200]!),
+                            ),
+                            child: Row(
+                              children: [
+                                Container(
+                                  padding: const EdgeInsets.all(8),
+                                  decoration: BoxDecoration(
+                                    color: average >= 70 ? Colors.green.withValues(alpha: 0.1) : 
+                                          average >= 50 ? Colors.orange.withValues(alpha: 0.1) : 
+                                          Colors.red.withValues(alpha: 0.1),
+                                    borderRadius: BorderRadius.circular(6),
+                                  ),
+                                  child: Icon(
+                                    Icons.subject,
+                                    size: 16,
+                                    color: average >= 70 ? Colors.green : 
+                                          average >= 50 ? Colors.orange : 
+                                          Colors.red,
+                                  ),
+                                ),
+                                const SizedBox(width: 12),
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        subject,
+                                        style: GoogleFonts.montserrat(
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 14,
+                                        ),
+                                      ),
+                                      Text(
+                                        '${average.toStringAsFixed(1)}% • ${data['totalCorrect']}/${data['totalQuestions']} questions',
+                                        style: GoogleFonts.montserrat(
+                                          fontSize: 12,
+                                          color: Colors.grey[600],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          );
+                        }).toList(),
+
+                        const SizedBox(height: 24),
+
+                        // BECE Performance
+                        Text(
+                          'BECE Performance',
+                          style: GoogleFonts.playfairDisplay(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(height: 12),
+                        Container(
+                          padding: const EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            color: Colors.purple.withValues(alpha: 0.1),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Row(
+                            children: [
+                              Icon(Icons.school, color: Colors.purple[700]),
+                              const SizedBox(width: 12),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      '${_detailedData?['stats']?['becePerformance']?['average']?.toStringAsFixed(1) ?? 'N/A'}%',
+                                      style: GoogleFonts.montserrat(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.purple[700],
+                                      ),
+                                    ),
+                                    Text(
+                                      '${_detailedData?['stats']?['becePerformance']?['totalCorrect'] ?? 0}/${_detailedData?['stats']?['becePerformance']?['totalQuestions'] ?? 0} BECE questions',
+                                      style: GoogleFonts.montserrat(
+                                        fontSize: 12,
+                                        color: Colors.purple[600],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+
+                        const SizedBox(height: 24),
+
+                        // Trivia Performance
+                        Text(
+                          'Trivia Performance',
+                          style: GoogleFonts.playfairDisplay(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(height: 12),
+                        Container(
+                          padding: const EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            color: Colors.orange.withValues(alpha: 0.1),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Row(
+                            children: [
+                              Icon(Icons.quiz, color: Colors.orange[700]),
+                              const SizedBox(width: 12),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      '${_detailedData?['stats']?['triviaPerformance']?['average']?.toStringAsFixed(1) ?? 'N/A'}%',
+                                      style: GoogleFonts.montserrat(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.orange[700],
+                                      ),
+                                    ),
+                                    Text(
+                                      '${_detailedData?['stats']?['triviaPerformance']?['totalCorrect'] ?? 0}/${_detailedData?['stats']?['triviaPerformance']?['totalQuestions'] ?? 0} trivia questions',
+                                      style: GoogleFonts.montserrat(
+                                        fontSize: 12,
+                                        color: Colors.orange[600],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+
+                        const SizedBox(height: 24),
+
+                        // Study Time by Subject
+                        Text(
+                          'Study Time by Subject',
+                          style: GoogleFonts.playfairDisplay(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(height: 12),
+                        ...(_detailedData?['stats']?['studyTimeBySubject'] as Map<String, dynamic>? ?? {}).entries.map((entry) {
+                          final subject = entry.key;
+                          final minutes = entry.value as double? ?? 0.0;
+                          final hours = (minutes / 60).floor();
+                          final remainingMinutes = (minutes % 60).round();
+                          
+                          return Container(
+                            margin: const EdgeInsets.only(bottom: 8),
+                            padding: const EdgeInsets.all(12),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(8),
+                              border: Border.all(color: Colors.grey[200]!),
+                            ),
+                            child: Row(
+                              children: [
+                                Container(
+                                  padding: const EdgeInsets.all(8),
+                                  decoration: BoxDecoration(
+                                    color: Colors.teal.withValues(alpha: 0.1),
+                                    borderRadius: BorderRadius.circular(6),
+                                  ),
+                                  child: Icon(
+                                    Icons.schedule,
+                                    size: 16,
+                                    color: Colors.teal[700],
+                                  ),
+                                ),
+                                const SizedBox(width: 12),
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        subject,
+                                        style: GoogleFonts.montserrat(
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 14,
+                                        ),
+                                      ),
+                                      Text(
+                                        hours > 0 
+                                          ? '${hours}h ${remainingMinutes}m'
+                                          : '${remainingMinutes}m',
+                                        style: GoogleFonts.montserrat(
+                                          fontSize: 12,
+                                          color: Colors.grey[600],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          );
+                        }).toList(),
+
+                        const SizedBox(height: 24),
+
+                        // Recent Activity
+                        Text(
+                          'Recent Quizzes',
+                          style: GoogleFonts.playfairDisplay(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(height: 12),
+
+                        if (_detailedData?['recentQuizzes']?.isEmpty ?? true) ...[
+                          Container(
+                            padding: const EdgeInsets.all(20),
+                            decoration: BoxDecoration(
+                              color: Colors.grey[50],
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: Row(
+                              children: [
+                                Icon(Icons.quiz_outlined, color: Colors.grey[400]),
+                                const SizedBox(width: 12),
+                                Text(
+                                  'No recent quizzes',
+                                  style: GoogleFonts.montserrat(color: Colors.grey[600]),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ] else ...[
+                          ...(_detailedData!['recentQuizzes'] as List).map((quiz) {
+                            final quizData = quiz as Map<String, dynamic>;
+                            final subject = quizData['subject'] ?? quizData['collectionName'] ?? 'Unknown';
+                            final percentage = (quizData['percentage'] as num?)?.toDouble() ?? 0;
+                            final createdAt = quizData['createdAt'] as Timestamp?;
+
+                            return Container(
+                              margin: const EdgeInsets.only(bottom: 8),
+                              padding: const EdgeInsets.all(12),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(8),
+                                border: Border.all(color: Colors.grey[200]!),
+                              ),
+                              child: Row(
+                                children: [
+                                  Container(
+                                    padding: const EdgeInsets.all(8),
+                                    decoration: BoxDecoration(
+                                      color: percentage >= 70
+                                        ? Colors.green.withValues(alpha: 0.1)
+                                        : percentage >= 50
+                                          ? Colors.orange.withValues(alpha: 0.1)
+                                          : Colors.red.withValues(alpha: 0.1),
+                                      borderRadius: BorderRadius.circular(6),
+                                    ),
+                                    child: Icon(
+                                      Icons.quiz,
+                                      size: 16,
+                                      color: percentage >= 70
+                                        ? Colors.green
+                                        : percentage >= 50
+                                          ? Colors.orange
+                                          : Colors.red,
+                                    ),
+                                  ),
+                                  const SizedBox(width: 12),
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          subject,
+                                          style: GoogleFonts.montserrat(
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 14,
+                                          ),
+                                        ),
+                                        Text(
+                                          '${percentage.toStringAsFixed(1)}%',
+                                          style: GoogleFonts.montserrat(
+                                            fontSize: 12,
+                                            color: Colors.grey[600],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  if (createdAt != null)
+                                    Text(
+                                      _formatDate(createdAt.toDate()),
+                                      style: GoogleFonts.montserrat(
+                                        fontSize: 12,
+                                        color: Colors.grey[500],
+                                      ),
+                                    ),
+                                ],
+                              ),
+                            );
+                          }).toList(),
+                        ],
+                      ],
+                    ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildDetailStat(String label, String value, IconData icon) {
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Colors.grey[50],
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Icon(icon, color: Colors.grey[600], size: 20),
+          const SizedBox(height: 8),
+          Text(
+            value,
+            style: GoogleFonts.montserrat(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(height: 2),
+          Text(
+            label,
+            style: GoogleFonts.montserrat(
+              fontSize: 12,
+              color: Colors.grey[600],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  String _formatDate(DateTime date) {
+    final now = DateTime.now();
+    final difference = now.difference(date);
+
+    if (difference.inDays == 0) {
+      return 'Today';
+    } else if (difference.inDays == 1) {
+      return 'Yesterday';
+    } else if (difference.inDays < 7) {
+      return '${difference.inDays} days ago';
+    } else {
+      return '${date.month}/${date.day}/${date.year}';
     }
   }
 }
