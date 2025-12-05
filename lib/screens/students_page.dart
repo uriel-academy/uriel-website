@@ -416,6 +416,7 @@ class _StudentsPageState extends State<StudentsPage> {
               Expanded(flex: 1, child: Text('Accuracy', style: GoogleFonts.montserrat(fontWeight: FontWeight.w700, fontSize: 13))),
               Expanded(flex: 1, child: Text('Subjects', style: GoogleFonts.montserrat(fontWeight: FontWeight.w700, fontSize: 13))),
               Expanded(flex: 1, child: Text('Rank', style: GoogleFonts.montserrat(fontWeight: FontWeight.w700, fontSize: 13))),
+              Expanded(flex: 1, child: Text('Last Seen', style: GoogleFonts.montserrat(fontWeight: FontWeight.w700, fontSize: 13))),
             ],
           ),
         ),
@@ -440,6 +441,17 @@ class _StudentsPageState extends State<StudentsPage> {
               
               final subjectsCount = data['subjectsSolved'] ?? 0;
               final questionsCount = data['questionsSolved'] ?? 0;
+              
+              // Parse lastSeen timestamp
+              final lastSeen = data['lastSeen'];
+              DateTime? lastSeenDate;
+              if (lastSeen != null) {
+                if (lastSeen is Timestamp) {
+                  lastSeenDate = lastSeen.toDate();
+                } else if (lastSeen is String) {
+                  lastSeenDate = DateTime.tryParse(lastSeen);
+                }
+              }
 
               return InkWell(
                 onTap: () => _showStudentDetailDialog(data),
@@ -538,6 +550,16 @@ class _StudentsPageState extends State<StudentsPage> {
                             )
                           ),
                         )
+                      ),
+                      Expanded(
+                        flex: 1,
+                        child: Text(
+                          _formatLastSeen(lastSeenDate),
+                          style: GoogleFonts.montserrat(
+                            fontSize: 12,
+                            color: Colors.grey[600],
+                          ),
+                        ),
                       ),
                     ],
                   ),
@@ -1682,6 +1704,27 @@ class _StudentsPageState extends State<StudentsPage> {
         ],
       ),
     );
+  }
+
+  String _formatLastSeen(DateTime? lastSeen) {
+    if (lastSeen == null) return 'Never';
+    
+    final now = DateTime.now();
+    final difference = now.difference(lastSeen);
+    
+    if (difference.inDays == 0) {
+      if (difference.inHours == 0) {
+        if (difference.inMinutes == 0) return 'Just now';
+        return '${difference.inMinutes}m ago';
+      }
+      return '${difference.inHours}h ago';
+    } else if (difference.inDays == 1) {
+      return 'Yesterday';
+    } else if (difference.inDays < 7) {
+      return '${difference.inDays}d ago';
+    } else {
+      return '${lastSeen.day}/${lastSeen.month}/${lastSeen.year}';
+    }
   }
 
   // Helper: Performance distribution
