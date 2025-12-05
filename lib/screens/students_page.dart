@@ -169,6 +169,13 @@ class _StudentsPageState extends State<StudentsPage> {
                 final email = (data['email'] ?? '').toString().toLowerCase();
                 return name.contains(query) || email.contains(query);
               }).toList();
+          
+          // Sort students alphabetically by name
+          students.sort((a, b) {
+            final nameA = ((a as Map<String, dynamic>)['displayName'] ?? '').toString().toLowerCase();
+            final nameB = ((b as Map<String, dynamic>)['displayName'] ?? '').toString().toLowerCase();
+            return nameA.compareTo(nameB);
+          });
 
           if (students.isEmpty) {
             return Center(

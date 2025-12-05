@@ -87,6 +87,15 @@ class _SchoolAdminDashboardState extends State<SchoolAdminDashboard> {
       _loadData();
     });
 
+    // Listen to teachers collection for dynamic updates
+    FirebaseFirestore.instance
+        .collection('users')
+        .where('role', isEqualTo: 'teacher')
+        .snapshots()
+        .listen((snapshot) {
+      _loadData();
+    });
+
     // Listen to quizzes collection
     _quizzesSubscription = FirebaseFirestore.instance
         .collection('quizzes')
@@ -256,9 +265,17 @@ class _SchoolAdminDashboardState extends State<SchoolAdminDashboard> {
         });
       }
 
-      // Sort students by XP and take top 5
-      allStudents.sort((a, b) => (b['xp'] as int).compareTo(a['xp'] as int));
-      final topStudents = allStudents.take(5).toList();
+      // Sort all students alphabetically by name first
+      allStudents.sort((a, b) {
+        final nameA = (a['studentName'] ?? '').toString().toLowerCase();
+        final nameB = (b['studentName'] ?? '').toString().toLowerCase();
+        return nameA.compareTo(nameB);
+      });
+      
+      // Create a copy for top students and sort by XP
+      final topStudentsList = List<Map<String, dynamic>>.from(allStudents);
+      topStudentsList.sort((a, b) => (b['xp'] as int).compareTo(a['xp'] as int));
+      final topStudents = topStudentsList.take(5).toList();
 
       // Calculate average accuracy across all students who have answered questions
       double avgAccuracy = 0;
@@ -268,18 +285,25 @@ class _SchoolAdminDashboardState extends State<SchoolAdminDashboard> {
             .where((s) => (s['questionsAnswered'] as int) > 0)
             .fold(0.0, (sum, s) => sum + (s['accuracy'] as double));
         avgAccuracy = totalAccuracySum / studentsWithQuizzes;
-      }      // Get teacher count
-      final teachersSnap = await FirebaseFirestore.instance
+      }      // Get teacher count with flexible school matching
+      final allTeachersSnap = await FirebaseFirestore.instance
           .collection('users')
           .where('role', isEqualTo: 'teacher')
-          .where('school', isEqualTo: _schoolName)
           .get();
+      
+      // Filter teachers by school name flexibly
+      final teachersInSchool = allTeachersSnap.docs.where((doc) {
+        final teacherSchool = doc.data()['school'];
+        return _schoolNamesMatch(teacherSchool, _schoolName);
+      }).toList();
+      
+      debugPrint('📊 Found ${teachersInSchool.length} teachers in school');
 
       if (mounted) {
         setState(() {
           _dashboardData = {
             'totalStudents': students.length,
-            'totalTeachers': teachersSnap.docs.length,
+            'totalTeachers': teachersInSchool.length,
             'totalXP': totalXP,
             'totalQuestions': totalQuestions,
             'avgAccuracy': avgAccuracy,

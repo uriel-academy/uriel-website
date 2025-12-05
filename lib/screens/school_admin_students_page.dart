@@ -334,6 +334,13 @@ class _SchoolAdminStudentsPageState extends State<SchoolAdminStudentsPage> {
             
             return true;
           }).toList();
+          
+          // Sort students alphabetically by name
+          students.sort((a, b) {
+            final nameA = ((a as Map<String, dynamic>)['displayName'] ?? '').toString().toLowerCase();
+            final nameB = ((b as Map<String, dynamic>)['displayName'] ?? '').toString().toLowerCase();
+            return nameA.compareTo(nameB);
+          });
 
           if (students.isEmpty) {
             return Center(

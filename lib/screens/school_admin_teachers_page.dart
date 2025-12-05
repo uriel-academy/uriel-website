@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/services.dart';
 
 class SchoolAdminTeachersPage extends StatefulWidget {
   const SchoolAdminTeachersPage({Key? key}) : super(key: key);
@@ -57,16 +58,25 @@ class _SchoolAdminTeachersPageState extends State<SchoolAdminTeachersPage> {
     setState(() => _isLoading = true);
     
     try {
+      debugPrint('🔍 Loading teachers for school: $_schoolName');
+      
       // Get all teachers in the school
       final teachersSnap = await FirebaseFirestore.instance
           .collection('users')
           .where('role', isEqualTo: 'teacher')
-          .where('school', isEqualTo: _schoolName)
           .get();
+
+      // Filter by school name flexibly
+      final matchingTeachers = teachersSnap.docs.where((doc) {
+        final teacherSchool = doc.data()['school'];
+        return _normalizeSchoolName(teacherSchool) == _normalizeSchoolName(_schoolName);
+      }).toList();
+
+      debugPrint('📊 Found ${matchingTeachers.length} teachers in school');
 
       List<Map<String, dynamic>> teachersList = [];
 
-      for (final doc in teachersSnap.docs) {
+      for (final doc in matchingTeachers) {
         final teacherData = doc.data();
         final teacherId = doc.id;
 
@@ -82,8 +92,6 @@ class _SchoolAdminTeachersPageState extends State<SchoolAdminTeachersPage> {
         // Get student metrics
         int totalXP = 0;
         int totalQuestions = 0;
-        double totalAccuracy = 0;
-        int studentsWithAccuracy = 0;
         
         if (studentIds.isNotEmpty) {
           // Get summaries in batches
@@ -91,37 +99,40 @@ class _SchoolAdminTeachersPageState extends State<SchoolAdminTeachersPage> {
             final batch = studentIds.skip(i).take(10).toList();
             final summariesSnap = await FirebaseFirestore.instance
                 .collection('studentSummaries')
-                .where('studentId', whereIn: batch)
+                .where(FieldPath.documentId, whereIn: batch)
                 .get();
 
             for (final sumDoc in summariesSnap.docs) {
               final data = sumDoc.data();
-              totalXP += (data['xp'] as int?) ?? 0;
-              totalQuestions += (data['questionsAnswered'] as int?) ?? 0;
-              
-              final acc = data['accuracy'];
-              if (acc != null && acc > 0) {
-                totalAccuracy += (acc is num) ? acc.toDouble() : 0;
-                studentsWithAccuracy++;
-              }
+              totalXP += (data['totalXP'] as int?) ?? 0;
+              totalQuestions += (data['totalQuestions'] as int?) ?? 0;
             }
           }
         }
 
-        final avgAccuracy = studentsWithAccuracy > 0 
-            ? totalAccuracy / studentsWithAccuracy 
-            : 0.0;
+        // Get last seen date
+        final lastSeen = teacherData['lastSeen'];
+        DateTime? lastSeenDate;
+        if (lastSeen != null) {
+          if (lastSeen is Timestamp) {
+            lastSeenDate = lastSeen.toDate();
+          } else if (lastSeen is String) {
+            lastSeenDate = DateTime.tryParse(lastSeen);
+          }
+        }
 
         teachersList.add({
           'teacherId': teacherId,
           'teacherName': teacherData['displayName'] ?? 
               '${teacherData['firstName'] ?? ''} ${teacherData['lastName'] ?? ''}'.trim(),
-          'email': teacherData['email'],
+          'email': teacherData['email'] ?? '',
+          'phone': teacherData['phoneNumber'] ?? teacherData['phone'] ?? 'N/A',
           'class': teacherData['class'] ?? teacherData['grade'] ?? 'Unassigned',
           'studentCount': studentIds.length,
           'totalXP': totalXP,
           'totalQuestions': totalQuestions,
-          'avgAccuracy': avgAccuracy,
+          'lastSeen': lastSeenDate,
+          'avatar': teacherData['avatar'],
         });
       }
 
@@ -137,9 +148,44 @@ class _SchoolAdminTeachersPageState extends State<SchoolAdminTeachersPage> {
         _filteredTeachers = teachersList;
         _isLoading = false;
       });
+      
+      debugPrint('✅ Teachers loaded successfully');
     } catch (e) {
-      debugPrint('Error loading teachers: $e');
+      debugPrint('❌ Error loading teachers: $e');
       setState(() => _isLoading = false);
+    }
+  }
+
+  String _normalizeSchoolName(String? schoolName) {
+    if (schoolName == null) return '';
+    return schoolName
+        .trim()
+        .toLowerCase()
+        .replaceAll(RegExp(r'\s+'), ' ')
+        .replaceAll(' school', '')
+        .replaceAll(' academy', '')
+        .replaceAll(' international', '')
+        .trim();
+  }
+
+  String _formatLastSeen(DateTime? lastSeen) {
+    if (lastSeen == null) return 'Never';
+    
+    final now = DateTime.now();
+    final difference = now.difference(lastSeen);
+    
+    if (difference.inDays == 0) {
+      if (difference.inHours == 0) {
+        if (difference.inMinutes == 0) return 'Just now';
+        return '${difference.inMinutes}m ago';
+      }
+      return '${difference.inHours}h ago';
+    } else if (difference.inDays == 1) {
+      return 'Yesterday';
+    } else if (difference.inDays < 7) {
+      return '${difference.inDays}d ago';
+    } else {
+      return '${lastSeen.day}/${lastSeen.month}/${lastSeen.year}';
     }
   }
 
@@ -158,6 +204,36 @@ class _SchoolAdminTeachersPageState extends State<SchoolAdminTeachersPage> {
         }).toList();
       }
     });
+  }
+
+  Future<void> _copyTeacherInfo(Map<String, dynamic> teacherData) async {
+    final info = '''
+Teacher Information
+==================
+Name: ${teacherData['teacherName'] ?? 'Unknown'}
+Email: ${teacherData['email'] ?? 'N/A'}
+Phone: ${teacherData['phone'] ?? 'N/A'}
+Class: ${teacherData['class'] ?? 'Unassigned'}
+Students: ${teacherData['studentCount'] ?? 0}
+Total XP: ${teacherData['totalXP'] ?? 0}
+Total Questions: ${teacherData['totalQuestions'] ?? 0}
+Last Seen: ${_formatLastSeen(teacherData['lastSeen'])}
+''';
+    
+    await Clipboard.setData(ClipboardData(text: info));
+    
+    if (mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            'Teacher info copied to clipboard',
+            style: GoogleFonts.montserrat(),
+          ),
+          backgroundColor: const Color(0xFF00C853),
+          duration: const Duration(seconds: 2),
+        ),
+      );
+    }
   }
 
   Future<void> _showTeacherDetailDialog(Map<String, dynamic> teacherData) async {
@@ -193,14 +269,19 @@ class _SchoolAdminTeachersPageState extends State<SchoolAdminTeachersPage> {
               CircleAvatar(
                 radius: 30,
                 backgroundColor: const Color(0xFF1A1E3F),
-                child: Text(
-                  (teacherData['teacherName'] ?? '?')[0].toUpperCase(),
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+                backgroundImage: teacherData['avatar'] != null 
+                    ? NetworkImage(teacherData['avatar']) 
+                    : null,
+                child: teacherData['avatar'] == null
+                    ? Text(
+                        (teacherData['teacherName'] ?? '?')[0].toUpperCase(),
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      )
+                    : null,
               ),
               const SizedBox(width: 16),
               Expanded(
@@ -225,6 +306,11 @@ class _SchoolAdminTeachersPageState extends State<SchoolAdminTeachersPage> {
                 ),
               ),
               IconButton(
+                icon: const Icon(Icons.copy, size: 20),
+                onPressed: () => _copyTeacherInfo(teacherData),
+                tooltip: 'Copy teacher info',
+              ),
+              IconButton(
                 icon: const Icon(Icons.close),
                 onPressed: () => Navigator.pop(context),
               ),
@@ -238,15 +324,14 @@ class _SchoolAdminTeachersPageState extends State<SchoolAdminTeachersPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  _buildDetailRow('Class', teacherData['class'] ?? 'Unassigned'),
+                  _buildDetailRow('Phone Number', teacherData['phone'] ?? 'N/A'),
+                  _buildDetailRow('Class Assigned', teacherData['class'] ?? 'Unassigned'),
                   _buildDetailRow('Total Students', '${teacherData['studentCount'] ?? 0}'),
-                  _buildDetailRow('Total XP (Class)', '${teacherData['totalXP'] ?? 0}'),
-                  _buildDetailRow('Total Questions (Class)', '${teacherData['totalQuestions'] ?? 0}'),
+                  _buildDetailRow('Class Total XP', '${teacherData['totalXP'] ?? 0}'),
+                  _buildDetailRow('Class Total Questions', '${teacherData['totalQuestions'] ?? 0}'),
                   _buildDetailRow(
-                    'Average Accuracy (Class)', 
-                    teacherData['avgAccuracy'] != null && teacherData['avgAccuracy'] > 0
-                        ? '${teacherData['avgAccuracy'].toStringAsFixed(1)}%'
-                        : 'N/A'
+                    'Last Seen', 
+                    _formatLastSeen(teacherData['lastSeen']),
                   ),
                 ],
               ),
@@ -454,7 +539,7 @@ class _SchoolAdminTeachersPageState extends State<SchoolAdminTeachersPage> {
             child: Row(
               children: [
                 Expanded(
-                  flex: 3,
+                  flex: 2,
                   child: Text(
                     'Name',
                     style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
@@ -462,6 +547,20 @@ class _SchoolAdminTeachersPageState extends State<SchoolAdminTeachersPage> {
                 ),
                 Expanded(
                   flex: 2,
+                  child: Text(
+                    'Email',
+                    style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
+                  ),
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Text(
+                    'Phone',
+                    style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
+                  ),
+                ),
+                Expanded(
+                  flex: 1,
                   child: Text(
                     'Class',
                     style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
@@ -478,9 +577,9 @@ class _SchoolAdminTeachersPageState extends State<SchoolAdminTeachersPage> {
                 Expanded(
                   flex: 1,
                   child: Text(
-                    'Total XP',
+                    'Last Seen',
                     style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
-                    textAlign: TextAlign.right,
+                    textAlign: TextAlign.center,
                   ),
                 ),
                 const SizedBox(width: 40), // For action button
@@ -507,20 +606,25 @@ class _SchoolAdminTeachersPageState extends State<SchoolAdminTeachersPage> {
         child: Row(
           children: [
             Expanded(
-              flex: 3,
+              flex: 2,
               child: Row(
                 children: [
                   CircleAvatar(
                     radius: 16,
                     backgroundColor: const Color(0xFF1A1E3F),
-                    child: Text(
-                      (teacher['teacherName'] ?? '?')[0].toUpperCase(),
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+                    backgroundImage: teacher['avatar'] != null 
+                        ? NetworkImage(teacher['avatar']) 
+                        : null,
+                    child: teacher['avatar'] == null
+                        ? Text(
+                            (teacher['teacherName'] ?? '?')[0].toUpperCase(),
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          )
+                        : null,
                   ),
                   const SizedBox(width: 12),
                   Expanded(
@@ -536,6 +640,22 @@ class _SchoolAdminTeachersPageState extends State<SchoolAdminTeachersPage> {
             Expanded(
               flex: 2,
               child: Text(
+                teacher['email'] ?? '',
+                style: GoogleFonts.montserrat(fontSize: 13, color: Colors.grey[700]),
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+            Expanded(
+              flex: 1,
+              child: Text(
+                teacher['phone'] ?? 'N/A',
+                style: GoogleFonts.montserrat(fontSize: 13),
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+            Expanded(
+              flex: 1,
+              child: Text(
                 teacher['class'] ?? 'Unassigned',
                 style: GoogleFonts.montserrat(fontSize: 14),
               ),
@@ -544,20 +664,19 @@ class _SchoolAdminTeachersPageState extends State<SchoolAdminTeachersPage> {
               flex: 1,
               child: Text(
                 '${teacher['studentCount'] ?? 0}',
-                style: GoogleFonts.montserrat(fontSize: 14),
+                style: GoogleFonts.montserrat(fontSize: 14, fontWeight: FontWeight.w600),
                 textAlign: TextAlign.center,
               ),
             ),
             Expanded(
               flex: 1,
               child: Text(
-                '${teacher['totalXP'] ?? 0}',
+                _formatLastSeen(teacher['lastSeen']),
                 style: GoogleFonts.montserrat(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w600,
-                  color: const Color(0xFFD62828),
+                  fontSize: 13,
+                  color: Colors.grey[600],
                 ),
-                textAlign: TextAlign.right,
+                textAlign: TextAlign.center,
               ),
             ),
             IconButton(
@@ -587,60 +706,97 @@ class _SchoolAdminTeachersPageState extends State<SchoolAdminTeachersPage> {
       ),
       child: InkWell(
         onTap: () => _showTeacherDetailDialog(teacher),
-        child: Row(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CircleAvatar(
-              radius: 24,
-              backgroundColor: const Color(0xFF1A1E3F),
-              child: Text(
-                (teacher['teacherName'] ?? '?')[0].toUpperCase(),
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            const SizedBox(width: 12),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    teacher['teacherName'] ?? 'Unknown',
-                    style: GoogleFonts.montserrat(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  const SizedBox(height: 4),
-                  Text(
-                    '${teacher['class'] ?? 'Unassigned'} • ${teacher['studentCount'] ?? 0} students',
-                    style: GoogleFonts.montserrat(
-                      fontSize: 12,
-                      color: Colors.grey[600],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
+            Row(
               children: [
-                Text(
-                  '${teacher['totalXP'] ?? 0} XP',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w600,
-                    color: const Color(0xFFD62828),
+                CircleAvatar(
+                  radius: 28,
+                  backgroundColor: const Color(0xFF1A1E3F),
+                  backgroundImage: teacher['avatar'] != null 
+                      ? NetworkImage(teacher['avatar']) 
+                      : null,
+                  child: teacher['avatar'] == null
+                      ? Text(
+                          (teacher['teacherName'] ?? '?')[0].toUpperCase(),
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        )
+                      : null,
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        teacher['teacherName'] ?? 'Unknown',
+                        style: GoogleFonts.montserrat(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      const SizedBox(height: 2),
+                      Text(
+                        teacher['email'] ?? '',
+                        style: GoogleFonts.montserrat(
+                          fontSize: 12,
+                          color: Colors.grey[600],
+                        ),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ],
                   ),
                 ),
-                const SizedBox(height: 4),
-                const Icon(Icons.arrow_forward_ios, size: 14),
+                const Icon(Icons.arrow_forward_ios, size: 16, color: Colors.grey),
+              ],
+            ),
+            const SizedBox(height: 12),
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children: [
+                _buildInfoChip(Icons.phone, teacher['phone'] ?? 'N/A'),
+                _buildInfoChip(Icons.class_, teacher['class'] ?? 'Unassigned'),
+                _buildInfoChip(Icons.people, '${teacher['studentCount']} students'),
+                _buildInfoChip(
+                  Icons.access_time, 
+                  _formatLastSeen(teacher['lastSeen']),
+                  color: Colors.orange,
+                ),
               ],
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _buildInfoChip(IconData icon, String label, {Color? color}) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+      decoration: BoxDecoration(
+        color: (color ?? const Color(0xFF1A1E3F)).withValues(alpha: 0.08),
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(icon, size: 14, color: color ?? const Color(0xFF1A1E3F)),
+          const SizedBox(width: 4),
+          Text(
+            label,
+            style: GoogleFonts.montserrat(
+              fontSize: 12,
+              color: color ?? const Color(0xFF1A1E3F),
+            ),
+          ),
+        ],
       ),
     );
   }

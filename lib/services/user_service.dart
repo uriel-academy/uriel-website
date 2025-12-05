@@ -156,14 +156,26 @@ class UserService implements IUserService {
     }
   }
 
-  /// Update user's last login time
+  /// Update user's last login time and last seen
   Future<void> updateLastLogin(String userId) async {
     try {
       await _usersCollection.doc(userId).update({
         'lastLoginAt': FieldValue.serverTimestamp(),
+        'lastSeen': FieldValue.serverTimestamp(),
       });
     } catch (e) {
       debugPrint('Error updating last login: $e');
+    }
+  }
+
+  /// Update user's last seen time (activity tracking)
+  Future<void> updateLastSeen(String userId) async {
+    try {
+      await _usersCollection.doc(userId).update({
+        'lastSeen': FieldValue.serverTimestamp(),
+      });
+    } catch (e) {
+      debugPrint('Error updating last seen: $e');
     }
   }
 

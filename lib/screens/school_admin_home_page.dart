@@ -320,17 +320,6 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
                       item['index'] as int, 
                       item['label'] as String,
                     ),
-                  
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                    child: Divider(),
-                  ),
-                  
-                  _buildNavItem(-1, 'Pricing'),
-                  _buildNavItem(-2, 'About Us'),
-                  _buildNavItem(-3, 'Contact'),
-                  _buildNavItem(-4, 'Privacy Policy'),
-                  _buildNavItem(-5, 'Terms of Service'),
                 ],
               ),
             ),

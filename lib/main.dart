@@ -9,6 +9,7 @@ import 'package:firebase_analytics/firebase_analytics.dart';
 import 'firebase_options.dart';
 import 'services/connection_service.dart'; // Import connection monitoring service
 // import 'services/push_notification_service.dart'; // Import push notification service - commented out as file doesn't exist
+import 'widgets/activity_tracker.dart'; // Import activity tracker for lastSeen updates
 // Core pages - loaded immediately
 import 'screens/landing_page.dart';
 import 'screens/sign_in.dart' as sign_in;
@@ -162,11 +163,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Uriel Academy',
-      debugShowCheckedModeBanner: false,
-      home: const AuthGate(), // Start with AuthGate (checks auth state automatically)
-      navigatorObservers: [observer], // Add analytics observer
+    return ActivityTracker(
+      child: MaterialApp(
+        title: 'Uriel Academy',
+        debugShowCheckedModeBanner: false,
+        home: const AuthGate(), // Start with AuthGate (checks auth state automatically)
+        navigatorObservers: [observer], // Add analytics observer
       onGenerateRoute: (settings) {
         // Check if user is authenticated
         final isAuthenticated = FirebaseAuth.instance.currentUser != null;
@@ -290,6 +292,7 @@ class MyApp extends StatelessWidget {
           builder: () => admin_dashboard.ComprehensiveAdminDashboard(),
         ),
       },
+      ),
     );
   }
 }
