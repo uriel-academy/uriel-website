@@ -9,29 +9,29 @@ import 'user_management_page.dart';
 import 'content_management_page.dart';
 import 'admin_analytics.dart';
 import 'redesigned_leaderboard_page.dart';
-import 'school_admin_students_page.dart';
-import 'school_admin_teachers_page.dart';
 
 class RedesignedAdminHomePage extends StatefulWidget {
   const RedesignedAdminHomePage({super.key});
 
   @override
-  State<RedesignedAdminHomePage> createState() => _RedesignedAdminHomePageState();
+  State<RedesignedAdminHomePage> createState() =>
+      _RedesignedAdminHomePageState();
 }
 
-class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with TickerProviderStateMixin {
+class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage>
+    with TickerProviderStateMixin {
   late AnimationController _animationController;
-  
+
   int _selectedIndex = 0;
   bool _showingProfile = false;
-  
+
   // Admin profile data
   String adminName = "";
   String adminRole = "Super Admin";
   String? adminPhotoUrl;
   String? adminPresetAvatar;
   StreamSubscription<DocumentSnapshot>? _adminStreamSubscription;
-  
+
   // Profile form controllers
   final _formKey = GlobalKey<FormState>();
   final _firstNameController = TextEditingController();
@@ -43,7 +43,7 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
   final _confirmPasswordController = TextEditingController();
   bool _isEditingPassword = false;
   bool _isLoading = false;
-  
+
   // Admin metrics
   int totalUsers = 0;
   int totalStudents = 0;
@@ -66,7 +66,7 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
   Duration? _metricsRefreshDuration = const Duration(minutes: 5);
   String _metricsRefreshLabel = '5m';
   DateTime? _lastMetricsRefresh;
-  
+
   @override
   void initState() {
     super.initState();
@@ -101,7 +101,8 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
     if (user == null) return;
 
     try {
-      final docRef = FirebaseFirestore.instance.collection('users').doc(user.uid);
+      final docRef =
+          FirebaseFirestore.instance.collection('users').doc(user.uid);
       _adminStreamSubscription = docRef.snapshots().listen((snapshot) {
         if (!mounted) return;
         if (snapshot.exists) {
@@ -111,7 +112,7 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
             adminRole = data['role'] == 'admin' ? 'Super Admin' : 'Admin';
             adminPhotoUrl = data['avatar'];
             adminPresetAvatar = data['presetAvatar'];
-            
+
             // Load form data
             _firstNameController.text = data['firstName'] ?? '';
             _lastNameController.text = data['lastName'] ?? '';
@@ -127,54 +128,101 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
 
   Future<void> _loadAdminMetrics() async {
     setState(() => _loadingMetrics = true);
-    
+
     try {
       debugPrint('📊 Starting to load admin metrics...');
-      
+
       // Load user counts first to verify connection
-      final usersCountSnap = await FirebaseFirestore.instance.collection('users').count().get();
+      final usersCountSnap =
+          await FirebaseFirestore.instance.collection('users').count().get();
       debugPrint('✅ Total users count: ${usersCountSnap.count}');
-      
+
       // Get all users to check data
-      final allUsersSnap = await FirebaseFirestore.instance.collection('users').limit(5).get();
+      final allUsersSnap =
+          await FirebaseFirestore.instance.collection('users').limit(5).get();
       debugPrint('📝 Sample users found: ${allUsersSnap.docs.length}');
       if (allUsersSnap.docs.isNotEmpty) {
         final firstUser = allUsersSnap.docs.first.data();
         debugPrint('Sample user role: ${firstUser['role']}');
       }
-      
+
       // Load all metrics in parallel for better performance
       final results = await Future.wait([
         // User counts by role
-        FirebaseFirestore.instance.collection('users').where('role', isEqualTo: 'student').count().get(),
-        FirebaseFirestore.instance.collection('users').where('role', isEqualTo: 'teacher').count().get(),
-        FirebaseFirestore.instance.collection('users').where('role', isEqualTo: 'schoolAdmin').count().get(),
-        FirebaseFirestore.instance.collection('users').where('role', isEqualTo: 'parent').count().get(),
-        
+        FirebaseFirestore.instance
+            .collection('users')
+            .where('role', isEqualTo: 'student')
+            .count()
+            .get(),
+        FirebaseFirestore.instance
+            .collection('users')
+            .where('role', isEqualTo: 'teacher')
+            .count()
+            .get(),
+        FirebaseFirestore.instance
+            .collection('users')
+            .where('role', isEqualTo: 'schoolAdmin')
+            .count()
+            .get(),
+        FirebaseFirestore.instance
+            .collection('users')
+            .where('role', isEqualTo: 'parent')
+            .count()
+            .get(),
+
         // Content counts (with error handling for non-existent collections)
-        FirebaseFirestore.instance.collection('questions').count().get().catchError((e) {
+        FirebaseFirestore.instance
+            .collection('questions')
+            .count()
+            .get()
+            .catchError((e) {
           debugPrint('⚠️ Questions collection error: $e');
-          return FirebaseFirestore.instance.collection('questions').count().get();
+          return FirebaseFirestore.instance
+              .collection('questions')
+              .count()
+              .get();
         }),
-        FirebaseFirestore.instance.collection('textbooks').count().get().catchError((e) {
+        FirebaseFirestore.instance
+            .collection('textbooks')
+            .count()
+            .get()
+            .catchError((e) {
           debugPrint('⚠️ Textbooks collection error: $e');
-          return FirebaseFirestore.instance.collection('textbooks').count().get();
+          return FirebaseFirestore.instance
+              .collection('textbooks')
+              .count()
+              .get();
         }),
-        FirebaseFirestore.instance.collection('trivia').count().get().catchError((e) {
+        FirebaseFirestore.instance
+            .collection('trivia')
+            .count()
+            .get()
+            .catchError((e) {
           debugPrint('⚠️ Trivia collection error: $e');
           return FirebaseFirestore.instance.collection('trivia').count().get();
         }),
-        FirebaseFirestore.instance.collection('notes').count().get().catchError((e) {
+        FirebaseFirestore.instance
+            .collection('notes')
+            .count()
+            .get()
+            .catchError((e) {
           debugPrint('⚠️ Notes collection error: $e');
           return FirebaseFirestore.instance.collection('notes').count().get();
         }),
-        
+
         // Get unique subjects from questions
-        FirebaseFirestore.instance.collection('questions').limit(100).get().catchError((e) {
+        FirebaseFirestore.instance
+            .collection('questions')
+            .limit(100)
+            .get()
+            .catchError((e) {
           debugPrint('⚠️ Error fetching questions for subjects: $e');
-          return FirebaseFirestore.instance.collection('questions').limit(0).get();
+          return FirebaseFirestore.instance
+              .collection('questions')
+              .limit(0)
+              .get();
         }),
-        
+
         // Recent activity - get all users with createdAt field
         FirebaseFirestore.instance
             .collection('users')
@@ -182,13 +230,13 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
             .limit(10)
             .get()
             .catchError((e) {
-              debugPrint('⚠️ Error fetching recent activity: $e');
-              return FirebaseFirestore.instance.collection('users').limit(10).get();
-            }),
+          debugPrint('⚠️ Error fetching recent activity: $e');
+          return FirebaseFirestore.instance.collection('users').limit(10).get();
+        }),
       ]);
-      
+
       debugPrint('✅ All queries completed');
-      
+
       // Count unique subjects
       final questionsSnap = results[8] as QuerySnapshot;
       final subjectsSet = <String>{};
@@ -199,7 +247,7 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
         }
       }
       debugPrint('📚 Unique subjects found: ${subjectsSet.length}');
-      
+
       // Process recent activities
       final recentUsersSnap = results[9] as QuerySnapshot;
       final activities = <Map<String, dynamic>>[];
@@ -208,7 +256,7 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
         final role = data['role'] ?? 'user';
         final name = data['displayName'] ?? data['firstName'] ?? 'Unknown';
         final createdAt = data['createdAt'] as Timestamp?;
-        
+
         activities.add({
           'title': 'New $role registered',
           'subtitle': '$name joined the platform',
@@ -217,23 +265,26 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
         });
       }
       debugPrint('📋 Recent activities: ${activities.length}');
-      
+
       if (mounted) {
         // Calculate system health based on successful data fetches
         const healthScore = 100.0;
-        
+
         final studentsCount = (results[0] as AggregateQuerySnapshot).count ?? 0;
         final teachersCount = (results[1] as AggregateQuerySnapshot).count ?? 0;
         final schoolsCount = (results[2] as AggregateQuerySnapshot).count ?? 0;
         final parentsCount = (results[3] as AggregateQuerySnapshot).count ?? 0;
-        final questionsCount = (results[4] as AggregateQuerySnapshot).count ?? 0;
-        final textbooksCount = (results[5] as AggregateQuerySnapshot).count ?? 0;
+        final questionsCount =
+            (results[4] as AggregateQuerySnapshot).count ?? 0;
+        final textbooksCount =
+            (results[5] as AggregateQuerySnapshot).count ?? 0;
         final triviaCount = (results[6] as AggregateQuerySnapshot).count ?? 0;
         final notesCount = (results[7] as AggregateQuerySnapshot).count ?? 0;
-        
-        debugPrint('🔢 Students: $studentsCount, Teachers: $teachersCount, Schools: $schoolsCount');
+
+        debugPrint(
+            '🔢 Students: $studentsCount, Teachers: $teachersCount, Schools: $schoolsCount');
         debugPrint('📚 Questions: $questionsCount, Textbooks: $textbooksCount');
-        
+
         setState(() {
           totalUsers = usersCountSnap.count ?? 0;
           totalStudents = studentsCount;
@@ -253,7 +304,7 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
         });
         // record last successful refresh time
         _lastMetricsRefresh = DateTime.now();
-        
+
         debugPrint('✅ Metrics loaded successfully!');
       }
     } catch (e) {
@@ -267,16 +318,19 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
       }
     }
   }
-  
+
   String _getTimeAgo(DateTime? dateTime) {
     if (dateTime == null) return 'Just now';
     final now = DateTime.now();
     final difference = now.difference(dateTime);
-    
+
     if (difference.inDays > 7) return '${difference.inDays} days ago';
-    if (difference.inDays > 0) return '${difference.inDays} day${difference.inDays > 1 ? 's' : ''} ago';
-    if (difference.inHours > 0) return '${difference.inHours} hour${difference.inHours > 1 ? 's' : ''} ago';
-    if (difference.inMinutes > 0) return '${difference.inMinutes} minute${difference.inMinutes > 1 ? 's' : ''} ago';
+    if (difference.inDays > 0)
+      return '${difference.inDays} day${difference.inDays > 1 ? 's' : ''} ago';
+    if (difference.inHours > 0)
+      return '${difference.inHours} hour${difference.inHours > 1 ? 's' : ''} ago';
+    if (difference.inMinutes > 0)
+      return '${difference.inMinutes} minute${difference.inMinutes > 1 ? 's' : ''} ago';
     return 'Just now';
   }
 
@@ -302,7 +356,7 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
     // restart timer according to new duration
     _startMetricsRefreshTimer();
   }
-  
+
   IconData _getRoleIcon(String role) {
     switch (role.toLowerCase()) {
       case 'student':
@@ -332,7 +386,8 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
   @override
   Widget build(BuildContext context) {
     final isMobile = MediaQuery.of(context).size.width < 768;
-    final isTablet = MediaQuery.of(context).size.width >= 768 && MediaQuery.of(context).size.width < 1024;
+    final isTablet = MediaQuery.of(context).size.width >= 768 &&
+        MediaQuery.of(context).size.width < 1024;
 
     return Scaffold(
       backgroundColor: AppStyles.warmWhite,
@@ -340,14 +395,14 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
         children: [
           // Sidebar navigation (desktop only)
           if (!isMobile) _buildSidebar(isTablet),
-          
+
           // Main content area
           Expanded(
             child: Column(
               children: [
                 // Top app bar
                 _buildTopBar(isMobile),
-                
+
                 // Main content with tabs
                 Expanded(
                   child: _showingProfile
@@ -362,7 +417,7 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
           ),
         ],
       ),
-      
+
       // Mobile bottom navigation
       bottomNavigationBar: isMobile ? _buildBottomNav() : null,
     );
@@ -408,30 +463,28 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
               ],
             ),
           ),
-          
+
           const Divider(height: 1),
-          
+
           const SizedBox(height: 24),
-          
+
           // Navigation Items
           Expanded(
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  for (final item in _navItems()) 
+                  for (final item in _navItems())
                     _buildNavItem(
-                      item['index'] as int, 
-                      item['label'] as String, 
+                      item['index'] as int,
+                      item['label'] as String,
                       icon: item['icon'] as IconData?,
                       isTablet: isTablet,
                     ),
-                  
-
                 ],
               ),
             ),
           ),
-          
+
           // Settings & Sign Out
           Container(
             padding: const EdgeInsets.all(16),
@@ -458,10 +511,11 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
     );
   }
 
-  Widget _buildNavItem(int index, String title, {IconData? icon, bool isTablet = false}) {
+  Widget _buildNavItem(int index, String title,
+      {IconData? icon, bool isTablet = false}) {
     final isSelected = _selectedIndex == index;
     final isMainNav = index >= 0;
-    
+
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 2),
       child: ListTile(
@@ -472,7 +526,8 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
                 style: GoogleFonts.montserrat(
                   fontSize: 14,
                   fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
-                  color: isSelected ? const Color(0xFFD62828) : Colors.grey[700],
+                  color:
+                      isSelected ? const Color(0xFFD62828) : Colors.grey[700],
                 ),
                 textAlign: TextAlign.left,
               )
@@ -542,9 +597,9 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
                 ),
               ),
             ],
-            
+
             const Spacer(),
-            
+
             // Profile button
             GestureDetector(
               onTap: () {
@@ -554,9 +609,12 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
                 });
               },
               child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                 decoration: BoxDecoration(
-                  color: _showingProfile ? const Color(0xFFD62828).withValues(alpha: 0.1) : Colors.grey[100],
+                  color: _showingProfile
+                      ? const Color(0xFFD62828).withValues(alpha: 0.1)
+                      : Colors.grey[100],
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Row(
@@ -570,7 +628,9 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
                           : null,
                       child: adminPhotoUrl == null
                           ? Text(
-                              adminName.isNotEmpty ? adminName[0].toUpperCase() : 'A',
+                              adminName.isNotEmpty
+                                  ? adminName[0].toUpperCase()
+                                  : 'A',
                               style: GoogleFonts.montserrat(
                                 color: Colors.white,
                                 fontWeight: FontWeight.w600,
@@ -680,31 +740,26 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
       {'index': 3, 'label': 'Analytics', 'icon': null},
       {'index': 4, 'label': 'Monitoring', 'icon': null},
       {'index': 11, 'label': 'Leaderboard', 'icon': null},
-      {'index': 13, 'label': 'Students', 'icon': null},
-      {'index': 14, 'label': 'Teachers', 'icon': null},
     ];
   }
 
   List<Widget> _homeChildren() {
     return [
-      _buildDashboardTab(),                 // 0: Dashboard
-      const UserManagementPage(),           // 1: Users
-      const ContentManagementPage(),        // 2: Content
-      const AdminAnalyticsPage(),           // 3: Analytics
-      _buildPlaceholderTab('Monitoring'),   // 4: Monitoring
-      Container(),                          // 5: Placeholder
-      Container(),                          // 6: Placeholder
-      Container(),                          // 7: Placeholder
-      Container(),                          // 8: Placeholder
-      Container(),                          // 9: Placeholder
-      Container(),                          // 10: Placeholder
-      const RedesignedLeaderboardPage(),    // 11: Leaderboard
-      Container(),                          // 12: Placeholder
-      const SchoolAdminStudentsPage(),      // 13: Students
-      const SchoolAdminTeachersPage(),      // 14: Teachers
+      _buildDashboardTab(), // 0: Dashboard
+      const UserManagementPage(), // 1: Users
+      const ContentManagementPage(), // 2: Content
+      const AdminAnalyticsPage(), // 3: Analytics
+      _buildPlaceholderTab('Monitoring'), // 4: Monitoring
+      Container(), // 5: Placeholder
+      Container(), // 6: Placeholder
+      Container(), // 7: Placeholder
+      Container(), // 8: Placeholder
+      Container(), // 9: Placeholder
+      Container(), // 10: Placeholder
+      const RedesignedLeaderboardPage(), // 11: Leaderboard
     ];
   }
-  
+
   // Placeholder tab for pages not yet implemented
   Widget _buildPlaceholderTab(String title) {
     return Center(
@@ -739,7 +794,7 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
     if (_loadingMetrics) {
       return const Center(child: CircularProgressIndicator());
     }
-    
+
     return SingleChildScrollView(
       padding: const EdgeInsets.all(24),
       child: Column(
@@ -762,9 +817,9 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
               color: Colors.grey[600],
             ),
           ),
-          
+
           const SizedBox(height: 32),
-          
+
           // Key Metrics - Highlighted
           Container(
             padding: const EdgeInsets.all(24),
@@ -794,7 +849,8 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
                         color: Colors.white.withValues(alpha: 0.15),
                         borderRadius: BorderRadius.circular(12),
                       ),
-                      child: const Icon(Icons.account_circle, color: Colors.white, size: 32),
+                      child: const Icon(Icons.account_circle,
+                          color: Colors.white, size: 32),
                     ),
                     const SizedBox(width: 16),
                     Expanded(
@@ -822,7 +878,8 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
                       ),
                     ),
                     Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 12, vertical: 6),
                       decoration: BoxDecoration(
                         color: const Color(0xFF2ECC71).withValues(alpha: 0.2),
                         borderRadius: BorderRadius.circular(20),
@@ -830,7 +887,8 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
                       ),
                       child: Row(
                         children: [
-                          const Icon(Icons.trending_up, color: Color(0xFF2ECC71), size: 16),
+                          const Icon(Icons.trending_up,
+                              color: Color(0xFF2ECC71), size: 16),
                           const SizedBox(width: 4),
                           Text(
                             'Live',
@@ -848,9 +906,9 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
               ],
             ),
           ),
-          
+
           const SizedBox(height: 32),
-          
+
           // User Metrics Section
           Text(
             'User Breakdown',
@@ -861,12 +919,12 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
             ),
           ),
           const SizedBox(height: 16),
-          
+
           LayoutBuilder(
             builder: (context, constraints) {
               final isMobile = constraints.maxWidth < 768;
               final crossAxisCount = isMobile ? 2 : 4;
-              
+
               return GridView.count(
                 crossAxisCount: crossAxisCount,
                 shrinkWrap: true,
@@ -875,18 +933,26 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
                 crossAxisSpacing: 16,
                 childAspectRatio: isMobile ? 1.5 : 1.8,
                 children: [
-                  _buildMetricCard('Students', totalStudents.toString(), Icons.school, const Color(0xFF3498DB)),
-                  _buildMetricCard('Active Students', totalActiveStudents.toString(), Icons.person_add, const Color(0xFF9B59B6)),
-                  _buildMetricCard('Teachers', totalTeachers.toString(), Icons.person, const Color(0xFFF77F00)),
-                  _buildMetricCard('Schools', totalSchools.toString(), Icons.account_balance, const Color(0xFFE74C3C)),
-                  _buildMetricCard('Parents', totalParents.toString(), Icons.family_restroom, const Color(0xFF1ABC9C)),
+                  _buildMetricCard('Students', totalStudents.toString(),
+                      Icons.school, const Color(0xFF3498DB)),
+                  _buildMetricCard(
+                      'Active Students',
+                      totalActiveStudents.toString(),
+                      Icons.person_add,
+                      const Color(0xFF9B59B6)),
+                  _buildMetricCard('Teachers', totalTeachers.toString(),
+                      Icons.person, const Color(0xFFF77F00)),
+                  _buildMetricCard('Schools', totalSchools.toString(),
+                      Icons.account_balance, const Color(0xFFE74C3C)),
+                  _buildMetricCard('Parents', totalParents.toString(),
+                      Icons.family_restroom, const Color(0xFF1ABC9C)),
                 ],
               );
             },
           ),
-          
+
           const SizedBox(height: 32),
-          
+
           // Content Metrics Section
           Text(
             'Content Library',
@@ -897,12 +963,12 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
             ),
           ),
           const SizedBox(height: 16),
-          
+
           LayoutBuilder(
             builder: (context, constraints) {
               final isMobile = constraints.maxWidth < 768;
               final crossAxisCount = isMobile ? 2 : 4;
-              
+
               return GridView.count(
                 crossAxisCount: crossAxisCount,
                 shrinkWrap: true,
@@ -911,18 +977,23 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
                 crossAxisSpacing: 16,
                 childAspectRatio: isMobile ? 1.5 : 1.8,
                 children: [
-                  _buildMetricCard('Questions', totalQuestions.toString(), Icons.quiz, const Color(0xFF3498DB)),
-                  _buildMetricCard('Subjects', totalSubjects.toString(), Icons.subject, const Color(0xFF9B59B6)),
-                  _buildMetricCard('Textbooks', totalTextbooks.toString(), Icons.library_books, const Color(0xFFF77F00)),
-                  _buildMetricCard('Trivia', totalTrivia.toString(), Icons.psychology, const Color(0xFF2ECC71)),
-                  _buildMetricCard('Notes', totalNotes.toString(), Icons.note, const Color(0xFFE74C3C)),
+                  _buildMetricCard('Questions', totalQuestions.toString(),
+                      Icons.quiz, const Color(0xFF3498DB)),
+                  _buildMetricCard('Subjects', totalSubjects.toString(),
+                      Icons.subject, const Color(0xFF9B59B6)),
+                  _buildMetricCard('Textbooks', totalTextbooks.toString(),
+                      Icons.library_books, const Color(0xFFF77F00)),
+                  _buildMetricCard('Trivia', totalTrivia.toString(),
+                      Icons.psychology, const Color(0xFF2ECC71)),
+                  _buildMetricCard('Notes', totalNotes.toString(), Icons.note,
+                      const Color(0xFFE74C3C)),
                 ],
               );
             },
           ),
-          
+
           const SizedBox(height: 32),
-          
+
           // System Health Section
           Text(
             'System Status',
@@ -933,12 +1004,12 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
             ),
           ),
           const SizedBox(height: 16),
-          
+
           LayoutBuilder(
             builder: (context, constraints) {
               final isMobile = constraints.maxWidth < 768;
               final crossAxisCount = isMobile ? 2 : 3;
-              
+
               return GridView.count(
                 crossAxisCount: crossAxisCount,
                 shrinkWrap: true,
@@ -947,16 +1018,28 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
                 crossAxisSpacing: 16,
                 childAspectRatio: isMobile ? 1.5 : 1.8,
                 children: [
-                  _buildMetricCard('System Health', '${systemHealth.toStringAsFixed(1)}%', Icons.health_and_safety, const Color(0xFF2ECC71)),
-                  _buildMetricCard('Uptime', '${systemUptime.toStringAsFixed(1)}%', Icons.trending_up, const Color(0xFF3498DB)),
-                  _buildMetricCard('Active Sessions', totalActiveStudents.toString(), Icons.people_outline, const Color(0xFF9B59B6)),
+                  _buildMetricCard(
+                      'System Health',
+                      '${systemHealth.toStringAsFixed(1)}%',
+                      Icons.health_and_safety,
+                      const Color(0xFF2ECC71)),
+                  _buildMetricCard(
+                      'Uptime',
+                      '${systemUptime.toStringAsFixed(1)}%',
+                      Icons.trending_up,
+                      const Color(0xFF3498DB)),
+                  _buildMetricCard(
+                      'Active Sessions',
+                      totalActiveStudents.toString(),
+                      Icons.people_outline,
+                      const Color(0xFF9B59B6)),
                 ],
               );
             },
           ),
-          
+
           const SizedBox(height: 32),
-          
+
           // Live Activity Feed with refresh controls
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -1002,7 +1085,8 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
                           _setMetricsRefresh(null, 'Manual');
                           break;
                         case '30s':
-                          _setMetricsRefresh(const Duration(seconds: 30), '30s');
+                          _setMetricsRefresh(
+                              const Duration(seconds: 30), '30s');
                           break;
                         case '1m':
                           _setMetricsRefresh(const Duration(minutes: 1), '1m');
@@ -1011,7 +1095,8 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
                           _setMetricsRefresh(const Duration(minutes: 5), '5m');
                           break;
                         case '15m':
-                          _setMetricsRefresh(const Duration(minutes: 15), '15m');
+                          _setMetricsRefresh(
+                              const Duration(minutes: 15), '15m');
                           break;
                       }
                     },
@@ -1026,7 +1111,9 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
                       children: [
                         Icon(Icons.timer, size: 18, color: Colors.grey[700]),
                         const SizedBox(width: 4),
-                        Text(_metricsRefreshLabel, style: GoogleFonts.montserrat(fontSize: 12, color: Colors.grey[700])),
+                        Text(_metricsRefreshLabel,
+                            style: GoogleFonts.montserrat(
+                                fontSize: 12, color: Colors.grey[700])),
                         const Icon(Icons.arrow_drop_down, size: 18),
                       ],
                     ),
@@ -1077,7 +1164,8 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
     );
   }
 
-  Widget _buildMetricCard(String title, String value, IconData icon, Color color) {
+  Widget _buildMetricCard(
+      String title, String value, IconData icon, Color color) {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
@@ -1128,7 +1216,8 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
     );
   }
 
-  Widget _buildActivityItem(String title, String subtitle, String time, {IconData? icon}) {
+  Widget _buildActivityItem(String title, String subtitle, String time,
+      {IconData? icon}) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8),
       child: Row(
@@ -1140,7 +1229,8 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
               color: const Color(0xFFD62828).withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(8),
             ),
-            child: Icon(icon ?? Icons.notifications_active, color: const Color(0xFFD62828), size: 20),
+            child: Icon(icon ?? Icons.notifications_active,
+                color: const Color(0xFFD62828), size: 20),
           ),
           const SizedBox(width: 12),
           Expanded(
@@ -1392,8 +1482,7 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
                                     padding: const EdgeInsets.symmetric(
                                         vertical: 14),
                                     shape: RoundedRectangleBorder(
-                                      borderRadius:
-                                          BorderRadius.circular(12),
+                                      borderRadius: BorderRadius.circular(12),
                                     ),
                                   ),
                                   child: Text(
@@ -1408,14 +1497,12 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
                                   onPressed:
                                       _isLoading ? null : _changePassword,
                                   style: ElevatedButton.styleFrom(
-                                    backgroundColor:
-                                        AppStyles.primaryNavy,
+                                    backgroundColor: AppStyles.primaryNavy,
                                     foregroundColor: Colors.white,
                                     padding: const EdgeInsets.symmetric(
                                         vertical: 14),
                                     shape: RoundedRectangleBorder(
-                                      borderRadius:
-                                          BorderRadius.circular(12),
+                                      borderRadius: BorderRadius.circular(12),
                                     ),
                                   ),
                                   child: Text(
@@ -1432,7 +1519,7 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
                       ],
                     ),
                     const SizedBox(height: 32),
-                    
+
                     // Sign out button
                     Center(
                       child: ElevatedButton.icon(
@@ -1442,7 +1529,8 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFFD62828),
                           foregroundColor: Colors.white,
-                          padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 32, vertical: 16),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12),
                           ),
