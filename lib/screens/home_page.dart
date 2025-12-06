@@ -125,6 +125,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   String? _selectedNotificationId;
   int _notificationPage = 0;
   static const int _notificationsPerPage = 5;
+  int _dashboardNotificationPage = 0;
 
   @override
   void initState() {
@@ -6157,7 +6158,12 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           return true; // If shape is unexpected, count it as unread
         }).length;
 
-        // Show only the 3 most recent notifications
+        // Pagination for dashboard card: show 5 notifications per page
+        const itemsPerPage = 5;
+        final totalPages = (notifications.length / itemsPerPage).ceil();
+        final startIndex = _dashboardNotificationPage * itemsPerPage;
+        final endIndex = (startIndex + itemsPerPage).clamp(0, notifications.length);
+        final paginatedNotifications = notifications.sublist(startIndex, endIndex);
         final recentNotifications = notifications.take(3).toList();
 
         return Container(
@@ -6237,7 +6243,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                 ],
               ),
               const SizedBox(height: 16),
-              if (recentNotifications.isEmpty) ...[
+              if (paginatedNotifications.isEmpty) ...[
                 Center(
                   child: Column(
                     children: [
@@ -6261,7 +6267,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   ),
                 ),
               ] else ...[
-                ...recentNotifications.map((doc) {
+                ...paginatedNotifications.map((doc) {
                   final data = doc.data() as Map<String, dynamic>;
                   final message = data['message'] as String? ?? 'Notification';
                   final type = data['type'] as String? ?? 'general';
@@ -6375,19 +6381,59 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                     ),
                   );
                 }),
-                if (notifications.length > 3) ...[
-                  const SizedBox(height: 8),
-                  Center(
-                    child: TextButton.icon(
-                      onPressed: () => _showComingSoon('Full Notifications Center'),
-                      icon: const Icon(Icons.more_horiz, size: 16),
-                      label: Text(
-                        'View All Notifications',
-                        style: GoogleFonts.montserrat(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w600,
+                if (totalPages > 1) ...[
+                  const SizedBox(height: 16),
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                    decoration: BoxDecoration(
+                      color: Colors.grey[50],
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Page ${_dashboardNotificationPage + 1} of $totalPages',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 12,
+                            color: Colors.grey[700],
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
-                      ),
+                        Row(
+                          children: [
+                            IconButton(
+                              icon: const Icon(Icons.chevron_left),
+                              onPressed: _dashboardNotificationPage > 0
+                                  ? () {
+                                      setState(() {
+                                        _dashboardNotificationPage--;
+                                      });
+                                    }
+                                  : null,
+                              iconSize: 18,
+                              padding: const EdgeInsets.all(4),
+                              constraints: const BoxConstraints(),
+                              color: const Color(0xFF1A1E3F),
+                            ),
+                            const SizedBox(width: 8),
+                            IconButton(
+                              icon: const Icon(Icons.chevron_right),
+                              onPressed: _dashboardNotificationPage < totalPages - 1
+                                  ? () {
+                                      setState(() {
+                                        _dashboardNotificationPage++;
+                                      });
+                                    }
+                                  : null,
+                              iconSize: 18,
+                              padding: const EdgeInsets.all(4),
+                              constraints: const BoxConstraints(),
+                              color: const Color(0xFF1A1E3F),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                   ),
                 ],
