@@ -900,28 +900,17 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
       senderLabel = 'System';
     }
     
-    final isExpanded = _selectedNotificationId == notification['id'];
-    
     return InkWell(
       onTap: () {
-        if (_selectedNotificationId == notification['id']) {
-          setState(() {
-            _selectedNotificationId = null;
-          });
-        } else {
-          setState(() {
-            _selectedNotificationId = notification['id'];
-          });
-          if (!isRead) {
-            _markNotificationAsRead(notification['id']);
-          }
+        if (!isRead) {
+          _markNotificationAsRead(notification['id']);
         }
+        _showMessageDetailDialog(notification);
       },
       child: Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: isExpanded ? const Color(0xFF007AFF).withValues(alpha: 0.08) :
-                 isRead ? Colors.transparent : const Color(0xFF007AFF).withValues(alpha: 0.05),
+          color: isRead ? Colors.transparent : const Color(0xFF007AFF).withValues(alpha: 0.05),
           borderRadius: BorderRadius.circular(12),
         ),
         child: Row(
@@ -955,7 +944,7 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
                     ],
                   ),
                   const SizedBox(height: 4),
-                  Text(message, style: GoogleFonts.inter(fontSize: 13, color: Colors.grey[700], height: 1.4), maxLines: isExpanded ? null : 3, overflow: isExpanded ? TextOverflow.visible : TextOverflow.ellipsis),
+                  Text(message, style: GoogleFonts.inter(fontSize: 13, color: Colors.grey[700], height: 1.4), maxLines: 3, overflow: TextOverflow.ellipsis),
                   const SizedBox(height: 8),
                   Row(
                     children: [
@@ -1032,6 +1021,201 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
     } catch (e) {
       debugPrint('Error marking all as read: $e');
     }
+  }
+
+  void _showMessageDetailDialog(Map<String, dynamic> notification) {
+    final String title = notification['title'] ?? 'Message';
+    final String message = notification['message'] ?? '';
+    final String senderName = notification['senderName'] ?? 'Unknown';
+    final String senderRole = notification['senderRole'] ?? 'system';
+    final Timestamp? timestamp = notification['timestamp'];
+    final String? grade = notification['data']?['grade'];
+    
+    // Determine sender icon and color
+    IconData senderIcon;
+    Color senderColor;
+    String senderLabel;
+    
+    if (senderRole == 'super_admin' || senderRole == 'app') {
+      senderIcon = Icons.school_rounded;
+      senderColor = const Color(0xFF007AFF);
+      senderLabel = 'Uriel Academy';
+    } else if (senderRole == 'school_admin') {
+      senderIcon = Icons.admin_panel_settings_rounded;
+      senderColor = const Color(0xFFFF9500);
+      senderLabel = 'School Admin';
+    } else if (senderRole == 'teacher') {
+      senderIcon = Icons.person_rounded;
+      senderColor = const Color(0xFF34C759);
+      senderLabel = grade != null ? 'Teacher - Class $grade' : 'Teacher';
+    } else {
+      senderIcon = Icons.info_rounded;
+      senderColor = Colors.grey;
+      senderLabel = 'System';
+    }
+
+    showDialog(
+      context: context,
+      barrierColor: Colors.transparent,
+      builder: (context) {
+        return Stack(
+          children: [
+            GestureDetector(
+              onTap: () => Navigator.pop(context),
+              child: Container(color: Colors.transparent),
+            ),
+            Positioned(
+              top: 70,
+              right: 16,
+              child: Material(
+                elevation: 16,
+                borderRadius: BorderRadius.circular(16),
+                child: Container(
+                  width: 420,
+                  constraints: const BoxConstraints(maxHeight: 600),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(16),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withValues(alpha: 0.12),
+                        blurRadius: 24,
+                        offset: const Offset(0, 8),
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      // Header with back button
+                      Container(
+                        padding: const EdgeInsets.all(20),
+                        decoration: const BoxDecoration(
+                          color: Color(0xFF001F3F),
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(16),
+                            topRight: Radius.circular(16),
+                          ),
+                        ),
+                        child: Row(
+                          children: [
+                            IconButton(
+                              icon: const Icon(Icons.arrow_back, color: Colors.white),
+                              onPressed: () {
+                                Navigator.pop(context);
+                                _showNotificationsDialog();
+                              },
+                              padding: EdgeInsets.zero,
+                              constraints: const BoxConstraints(),
+                            ),
+                            const SizedBox(width: 12),
+                            Expanded(
+                              child: Text(
+                                'Message',
+                                style: GoogleFonts.inter(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w600,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      
+                      // Message content
+                      Flexible(
+                        child: SingleChildScrollView(
+                          padding: const EdgeInsets.all(20),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              // Sender info
+                              Container(
+                                padding: const EdgeInsets.all(16),
+                                decoration: BoxDecoration(
+                                  color: senderColor.withValues(alpha: 0.08),
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.all(10),
+                                      decoration: BoxDecoration(
+                                        color: senderColor.withValues(alpha: 0.15),
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      child: Icon(senderIcon, size: 24, color: senderColor),
+                                    ),
+                                    const SizedBox(width: 12),
+                                    Expanded(
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            senderName,
+                                            style: GoogleFonts.inter(
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.w600,
+                                              color: const Color(0xFF1A1E3F),
+                                            ),
+                                          ),
+                                          const SizedBox(height: 2),
+                                          Text(
+                                            senderLabel,
+                                            style: GoogleFonts.inter(
+                                              fontSize: 13,
+                                              color: senderColor,
+                                              fontWeight: FontWeight.w500,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Text(
+                                      _formatTimestamp(timestamp),
+                                      style: GoogleFonts.inter(
+                                        fontSize: 12,
+                                        color: Colors.grey[500],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const SizedBox(height: 20),
+                              // Title
+                              Text(
+                                title,
+                                style: GoogleFonts.inter(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w700,
+                                  color: const Color(0xFF1A1E3F),
+                                  height: 1.4,
+                                ),
+                              ),
+                              const SizedBox(height: 12),
+                              // Message
+                              Text(
+                                message,
+                                style: GoogleFonts.inter(
+                                  fontSize: 15,
+                                  color: const Color(0xFF1A1E3F),
+                                  height: 1.6,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
   }
 
   void _handleSignOut() async {
