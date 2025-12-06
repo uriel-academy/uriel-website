@@ -490,13 +490,10 @@ class _StudentsPageState extends State<StudentsPage> {
                           CircleAvatar(
                             radius: 18,
                             backgroundColor: const Color(0xFFD62828).withValues(alpha: 0.1),
-                            backgroundImage: (data['avatar'] as String?)?.isNotEmpty == true ? NetworkImage((data['avatar'] as String)) : null,
-                            child: (data['avatar'] as String?) == null 
-                              ? Text(
-                                  (name.isNotEmpty ? name[0] : '?').toUpperCase(), 
-                                  style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, color: const Color(0xFFD62828))
-                                ) 
-                              : null,
+                            child: Text(
+                              (name.isNotEmpty ? name[0] : '?').toUpperCase(), 
+                              style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, color: const Color(0xFFD62828))
+                            ),
                           ),
                           const SizedBox(width: 12),
                           Expanded(
@@ -612,10 +609,10 @@ class _StudentsPageState extends State<StudentsPage> {
                 CircleAvatar(
                   radius: 20,
                   backgroundColor: const Color(0xFFD62828).withValues(alpha: 0.08),
-                  backgroundImage: (data['avatar'] as String?)?.isNotEmpty == true ? NetworkImage((data['avatar'] as String)) : null,
-                  child: (data['avatar'] as String?) == null
-                      ? Text((name.isNotEmpty ? name[0] : '?').toUpperCase(), style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, color: const Color(0xFFD62828)))
-                      : null,
+                  child: Text(
+                    (name.isNotEmpty ? name[0] : '?').toUpperCase(), 
+                    style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, color: const Color(0xFFD62828))
+                  ),
                 ),
                 const SizedBox(width: 12),
                 Expanded(
@@ -734,7 +731,13 @@ class _StudentsPageState extends State<StudentsPage> {
           final acc = data['avgPercent'] ?? 0;
           return ListTile(
             contentPadding: EdgeInsets.zero,
-            leading: CircleAvatar(backgroundImage: (data['avatar'] as String?)?.isNotEmpty == true ? NetworkImage(data['avatar']) : null, child: (data['avatar'] as String?) == null ? Text((name.isNotEmpty ? name[0] : '?').toUpperCase()) : null),
+            leading: CircleAvatar(
+              backgroundColor: const Color(0xFFD62828).withValues(alpha: 0.1),
+              child: Text(
+                (name.isNotEmpty ? name[0] : '?').toUpperCase(),
+                style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, color: const Color(0xFFD62828)),
+              ),
+            ),
             title: Text(name.isNotEmpty ? name : (data['email'] ?? '-'), style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
             subtitle: Text('XP: $xp • ${acc is num ? (acc).toStringAsFixed(1) : acc}%'),
           );
@@ -767,18 +770,13 @@ class _StudentsPageState extends State<StudentsPage> {
             children: [
               CircleAvatar(
                 radius: 32,
-                backgroundColor: Colors.white,
-                backgroundImage: (selectedData['avatar'] as String?)?.isNotEmpty == true
-                    ? NetworkImage(selectedData['avatar']) as ImageProvider
-                    : null,
-                child: (selectedData['avatar'] as String?) == null
-                    ? Text(
-                        (selectedData['displayName']?.toString().isNotEmpty == true 
-                          ? selectedData['displayName'][0] 
-                          : '?').toUpperCase(), 
-                        style: GoogleFonts.montserrat(fontSize: 20, color: const Color(0xFFD62828), fontWeight: FontWeight.bold)
-                      )
-                    : null,
+                backgroundColor: const Color(0xFFD62828).withValues(alpha: 0.1),
+                child: Text(
+                  (selectedData['displayName']?.toString().isNotEmpty == true 
+                    ? selectedData['displayName'][0] 
+                    : '?').toUpperCase(), 
+                  style: GoogleFonts.montserrat(fontSize: 20, color: const Color(0xFFD62828), fontWeight: FontWeight.bold)
+                ),
               ),
               const SizedBox(width: 16),
               Expanded(

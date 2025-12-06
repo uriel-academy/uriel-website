@@ -542,13 +542,10 @@ class _SchoolAdminStudentsPageState extends State<SchoolAdminStudentsPage> {
                           CircleAvatar(
                             radius: 18,
                             backgroundColor: const Color(0xFFD62828).withValues(alpha: 0.1),
-                            backgroundImage: (data['avatar'] as String?)?.isNotEmpty == true ? NetworkImage((data['avatar'] as String)) : null,
-                            child: (data['avatar'] as String?) == null 
-                              ? Text(
-                                  (name.isNotEmpty ? name[0] : '?').toUpperCase(), 
-                                  style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, color: const Color(0xFFD62828))
-                                ) 
-                              : null,
+                            child: Text(
+                              (name.isNotEmpty ? name[0] : '?').toUpperCase(), 
+                              style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, color: const Color(0xFFD62828))
+                            ),
                           ),
                           const SizedBox(width: 12),
                           Expanded(
@@ -664,10 +661,10 @@ class _SchoolAdminStudentsPageState extends State<SchoolAdminStudentsPage> {
                 CircleAvatar(
                   radius: 20,
                   backgroundColor: const Color(0xFFD62828).withValues(alpha: 0.08),
-                  backgroundImage: (data['avatar'] as String?)?.isNotEmpty == true ? NetworkImage((data['avatar'] as String)) : null,
-                  child: (data['avatar'] as String?) == null
-                      ? Text((name.isNotEmpty ? name[0] : '?').toUpperCase(), style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, color: const Color(0xFFD62828)))
-                      : null,
+                  child: Text(
+                    (name.isNotEmpty ? name[0] : '?').toUpperCase(), 
+                    style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, color: const Color(0xFFD62828))
+                  ),
                 ),
                 const SizedBox(width: 12),
                 Expanded(
@@ -750,18 +747,13 @@ class _SchoolAdminStudentsPageState extends State<SchoolAdminStudentsPage> {
             children: [
               CircleAvatar(
                 radius: 32,
-                backgroundColor: Colors.white,
-                backgroundImage: (selectedData['avatar'] as String?)?.isNotEmpty == true
-                    ? NetworkImage(selectedData['avatar']) as ImageProvider
-                    : null,
-                child: (selectedData['avatar'] as String?) == null
-                    ? Text(
-                        (selectedData['displayName']?.toString().isNotEmpty == true 
-                          ? selectedData['displayName'][0] 
-                          : '?').toUpperCase(), 
-                        style: GoogleFonts.montserrat(fontSize: 20, color: const Color(0xFFD62828), fontWeight: FontWeight.bold)
-                      )
-                    : null,
+                backgroundColor: const Color(0xFFD62828).withValues(alpha: 0.1),
+                child: Text(
+                  (selectedData['displayName']?.toString().isNotEmpty == true 
+                    ? selectedData['displayName'][0] 
+                    : '?').toUpperCase(), 
+                  style: GoogleFonts.montserrat(fontSize: 20, color: const Color(0xFFD62828), fontWeight: FontWeight.bold)
+                ),
               ),
               const SizedBox(width: 16),
               Expanded(
