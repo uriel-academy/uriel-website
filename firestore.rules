@@ -148,7 +148,11 @@ service cloud.firestore {
     // Notifications collection
     match /notifications/{notificationId} {
       allow read, delete: if isAuthenticated() && isOwner(resource.data.userId);
-      allow create, update: if false; // Server-side only
+      allow create: if false; // Server-side only
+      // Allow users to update only the 'read' field on their own notifications
+      allow update: if isAuthenticated() && 
+        isOwner(resource.data.userId) && 
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly(['read']);
     }
     
     // AI Chats collection (for logging)
