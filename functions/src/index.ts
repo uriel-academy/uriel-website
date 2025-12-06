@@ -1763,7 +1763,7 @@ export const sendMessage = functions.https.onCall(async (data, context) => {
       timestamp,
       data: {
         recipientType,
-        schoolId: senderSchoolId,
+        schoolId: senderSchoolId || null,
         grade: grade || null
       }
     });
@@ -1779,7 +1779,7 @@ export const sendMessage = functions.https.onCall(async (data, context) => {
       title,
       recipientType,
       recipientCount: recipients.length,
-      schoolId: senderSchoolId,
+      schoolId: senderSchoolId || null,
       grade: grade || null
     },
     timestamp
