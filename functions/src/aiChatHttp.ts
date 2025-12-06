@@ -295,7 +295,13 @@ When student uploads an image:
 WEB SEARCH STATUS: {useWebSearch} = "auto"
 When WebSearchResults are provided below, prioritize them for factual verification.`;
 
-export const aiChatHttpStreaming = functions.region('us-central1').https.onRequest(async (req: Request, res: Response) => {
+export const aiChatHttpStreaming = functions
+  .runWith({
+    timeoutSeconds: 540,
+    memory: '1GB',
+  })
+  .region('us-central1')
+  .https.onRequest(async (req: Request, res: Response) => {
   console.log('aiChatHttp function called with method:', req.method);
   // CORS preflight
   if (req.method === "OPTIONS") {

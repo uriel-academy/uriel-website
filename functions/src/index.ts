@@ -170,6 +170,10 @@ async function tavilySearch(query: string, maxResults = 6) {
 
 // Main HTTP aiChat handler: routes time-sensitive queries to Facts, otherwise asks the model
 export const aiChatHttpLegacy = functions
+  .runWith({
+    timeoutSeconds: 540,
+    memory: '1GB',
+  })
   .region('us-central1')
   .https.onRequest((req, res) => {
     corsHandler(req, res, () => {
@@ -1302,7 +1306,13 @@ const uploadNoteRateLimiter = new (require('rate-limiter-flexible').RateLimiterM
 
 // Upload Note: accepts POST with Authorization Bearer <idToken>
 // Body: { title?: string, subject?: string, text?: string, imageBase64?: string, fileName?: string }
-export const uploadNote = functions.region('us-central1').https.onRequest((req, res) => {
+export const uploadNote = functions
+  .runWith({
+    timeoutSeconds: 300,
+    memory: '512MB',
+  })
+  .region('us-central1')
+  .https.onRequest((req, res) => {
   corsHandler(req, res, () => {
     (async () => {
       if (req.method === 'OPTIONS') { res.set('Access-Control-Allow-Methods', 'POST, OPTIONS'); res.status(204).send(''); return; }
@@ -1435,7 +1445,13 @@ export const uploadNote = functions.region('us-central1').https.onRequest((req, 
 });
 
 // Generate a fresh signed URL for a note's file. POST { noteId?: string, filePath?: string }
-export const getNoteSignedUrl = functions.region('us-central1').https.onRequest((req, res) => {
+export const getNoteSignedUrl = functions
+  .runWith({
+    timeoutSeconds: 60,
+    memory: '256MB',
+  })
+  .region('us-central1')
+  .https.onRequest((req, res) => {
   corsHandler(req, res, () => {
     (async () => {
       if (req.method === 'OPTIONS') { res.set('Access-Control-Allow-Methods', 'POST, OPTIONS'); res.status(204).send(''); return; }
@@ -3205,7 +3221,13 @@ export const recommendationsRunNow = functions.https.onCall(async (data, context
 // Secure image proxy: streams a Storage file to the client with long cache headers.
 // Expects query param `path` pointing to the storage path (e.g. notes/<uid>/...).
 // Authorization: Bearer <idToken> required. Only the owner (uid) or admins may access.
-export const noteImageProxy = functions.region('us-central1').https.onRequest((req, res) => {
+export const noteImageProxy = functions
+  .runWith({
+    timeoutSeconds: 120,
+    memory: '512MB',
+  })
+  .region('us-central1')
+  .https.onRequest((req, res) => {
   corsHandler(req, res, async () => {
     if (req.method === 'OPTIONS') {
       res.set('Access-Control-Allow-Methods', 'GET, OPTIONS');
