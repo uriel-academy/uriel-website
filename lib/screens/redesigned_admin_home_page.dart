@@ -7,24 +7,9 @@ import 'dart:async';
 import '../constants/app_styles.dart';
 import 'user_management_page.dart';
 import 'content_management_page.dart';
-import 'feedback_page.dart';
-import 'question_collections_page.dart';
-import 'revision_page.dart';
-import 'generate_quiz_page.dart';
-import 'textbooks_page.dart';
-import 'trivia_categories_page.dart';
-import 'notes_page.dart'; // NotesTab
 import 'redesigned_leaderboard_page.dart';
-import 'uri_page.dart';
 import 'school_admin_students_page.dart';
 import 'school_admin_teachers_page.dart';
-import 'pricing_page.dart';
-import 'payment_page.dart';
-import 'terms_of_service.dart';
-import 'privacy_policy.dart';
-import 'contact.dart';
-import 'faq.dart';
-import 'redesigned_all_ranks_page.dart';
 
 class RedesignedAdminHomePage extends StatefulWidget {
   const RedesignedAdminHomePage({super.key});
@@ -440,18 +425,7 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
                       isTablet: isTablet,
                     ),
                   
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                    child: Divider(),
-                  ),
-                  
-                  _buildNavItem(16, 'Pricing', isTablet: isTablet),
-                  _buildNavItem(17, 'Payment', isTablet: isTablet),
-                  _buildNavItem(18, 'All Ranks', isTablet: isTablet),
-                  _buildNavItem(19, 'Terms of Service', isTablet: isTablet),
-                  _buildNavItem(20, 'Privacy Policy', isTablet: isTablet),
-                  _buildNavItem(21, 'Contact', isTablet: isTablet),
-                  _buildNavItem(22, 'FAQ', isTablet: isTablet),
+
                 ],
               ),
             ),
@@ -704,18 +678,9 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
       {'index': 2, 'label': 'Content', 'icon': null},
       {'index': 3, 'label': 'Analytics', 'icon': null},
       {'index': 4, 'label': 'Monitoring', 'icon': null},
-      {'index': 5, 'label': 'Settings', 'icon': null},
-      {'index': 6, 'label': 'Questions', 'icon': null},
-      {'index': 7, 'label': 'Revision', 'icon': null},
-      {'index': 8, 'label': 'Books', 'icon': null},
-      {'index': 9, 'label': 'Notes', 'icon': null},
-      {'index': 10, 'label': 'Trivia', 'icon': null},
       {'index': 11, 'label': 'Leaderboard', 'icon': null},
-      {'index': 12, 'label': 'Ask Uri', 'icon': null},
       {'index': 13, 'label': 'Students', 'icon': null},
       {'index': 14, 'label': 'Teachers', 'icon': null},
-      {'index': 15, 'label': 'Generate Quiz', 'icon': null},
-      {'index': 23, 'label': 'Feedback', 'icon': null},
     ];
   }
 
@@ -726,25 +691,16 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
       const ContentManagementPage(),        // 2: Content
       _buildPlaceholderTab('Analytics'),    // 3: Analytics
       _buildPlaceholderTab('Monitoring'),   // 4: Monitoring
-      _buildPlaceholderTab('Settings'),     // 5: Settings
-      const QuestionCollectionsPage(),      // 6: Questions
-      const RevisionPage(),                 // 7: Revision
-      const TextbooksPage(),                // 8: Books
-      const NotesTab(),                     // 9: Notes
-      const TriviaCategoriesPage(),         // 10: Trivia
+      Container(),                          // 5: Placeholder
+      Container(),                          // 6: Placeholder
+      Container(),                          // 7: Placeholder
+      Container(),                          // 8: Placeholder
+      Container(),                          // 9: Placeholder
+      Container(),                          // 10: Placeholder
       const RedesignedLeaderboardPage(),    // 11: Leaderboard
-      const UriPage(embedded: true),        // 12: Ask Uri
+      Container(),                          // 12: Placeholder
       const SchoolAdminStudentsPage(),      // 13: Students
       const SchoolAdminTeachersPage(),      // 14: Teachers
-      const GenerateQuizPage(),             // 15: Generate Quiz
-      const PricingPage(),                  // 16: Pricing
-      const PaymentPage(),                  // 17: Payment
-      const RedesignedAllRanksPage(),       // 18: All Ranks
-      const TermsOfServicePage(),           // 19: Terms of Service
-      const PrivacyPolicyPage(),            // 20: Privacy Policy
-      const ContactPage(),                  // 21: Contact
-      const FAQPage(),                      // 22: FAQ
-      const FeedbackPage(),                 // 23: Feedback
     ];
   }
   
