@@ -202,12 +202,8 @@ service cloud.firestore {
     
     // Storybooks collection
     match /storybooks/{bookId} {
-      allow read: if isAuthenticated() && (
-        hasEntitlement(get(/databases/$(database)/documents/users/$(request.auth.uid)).data.entitlements, ['storybooks', 'both', 'premium']) ||
-        hasRole('super_admin') ||
-        hasRole('school_admin') ||
-        hasRole('teacher') // Allow teachers to access storybooks
-      );
+      // Allow all authenticated users (including students) to read storybooks
+      allow read: if isAuthenticated();
       
       allow write: if hasRole('super_admin') || hasRole('school_admin');
     }
