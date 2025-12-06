@@ -1152,7 +1152,9 @@ class _UserManagementPageState extends State<UserManagementPage> {
     try {
       DateTime? dateTime;
 
-      if (lastSeen is Timestamp) {
+      if (lastSeen is DateTime) {
+        dateTime = lastSeen;
+      } else if (lastSeen is Timestamp) {
         dateTime = lastSeen.toDate();
       } else if (lastSeen is String) {
         dateTime = DateTime.tryParse(lastSeen);
