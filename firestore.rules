@@ -22,8 +22,18 @@ service cloud.firestore {
       return entitlements.hasAny(required);
     }
     
+    function isSuperAdmin() {
+      // Check for super admin via multiple methods:
+      // 1. Custom claim: superAdmin = true
+      // 2. Custom claim: admin = true
+      // 3. Token role: 'super_admin'
+      return request.auth.token.superAdmin == true || 
+             request.auth.token.admin == true || 
+             request.auth.token.role == 'super_admin';
+    }
+    
     function isAdmin() {
-      return hasRole('super_admin') || hasRole('school_admin');
+      return isSuperAdmin() || hasRole('school_admin');
     }
     
     // Users collection
@@ -42,7 +52,7 @@ service cloud.firestore {
          !('entitlements' in request.resource.data.diff(resource.data).affectedKeys()) &&
          !('tenant' in request.resource.data.diff(resource.data).affectedKeys())
         ) ||
-        hasRole('super_admin') ||
+        isSuperAdmin() ||
         (hasRole('school_admin') && sameTenant(request.resource.data.tenant.schoolId))
       );
     }
@@ -57,19 +67,19 @@ service cloud.firestore {
     // Schools collection
     match /schools/{schoolId} {
       allow read: if isAuthenticated() && (
-        hasRole('super_admin') ||
+        isSuperAdmin() ||
         sameTenant(schoolId) ||
         hasRole('parent') // Parents can read school info
       );
       
-      allow write: if hasRole('super_admin') || 
+      allow write: if isSuperAdmin() || 
         (hasRole('school_admin') && sameTenant(schoolId));
     }
     
     // Subjects collection (public read)
     match /subjects/{subjectId} {
       allow read: if isAuthenticated();
-      allow write: if hasRole('super_admin') || hasRole('school_admin');
+      allow write: if isSuperAdmin() || hasRole('school_admin');
     }
     
     // Questions collection (for RME import and other questions)
@@ -77,13 +87,13 @@ service cloud.firestore {
       // Allow all authenticated users to read questions
       allow read: if isAuthenticated();
       
-      allow write: if hasRole('super_admin') || hasRole('school_admin');
+      allow write: if isSuperAdmin() || hasRole('school_admin');
     }
     
     // App metadata collection (for import tracking)
     match /app_metadata/{docId} {
       allow read: if isAuthenticated();
-      allow write: if hasRole('super_admin') || hasRole('school_admin');
+      allow write: if isSuperAdmin() || hasRole('school_admin');
     }
     
     // Past Questions collection
@@ -91,13 +101,13 @@ service cloud.firestore {
       // Allow all authenticated users to read past questions
       allow read: if isAuthenticated();
       
-      allow write: if hasRole('super_admin') || hasRole('school_admin');
+      allow write: if isSuperAdmin() || hasRole('school_admin');
     }
     
     // Mock Exams collection
     match /mockExams/{examId} {
       allow read: if isAuthenticated();
-      allow write: if hasRole('super_admin') || hasRole('school_admin');
+      allow write: if isSuperAdmin() || hasRole('school_admin');
     }
     
     // Attempts collection - server-side scoring only
@@ -139,7 +149,7 @@ service cloud.firestore {
     match /payments/{paymentId} {
       allow read: if isAuthenticated() && (
         isOwner(resource.data.userId) ||
-        hasRole('super_admin')
+        isSuperAdmin()
       );
       
       allow write: if false; // Server-side only
@@ -163,39 +173,39 @@ service cloud.firestore {
     
     // Admin Flags collection
     match /adminFlags/{flagId} {
-      allow read: if hasRole('super_admin') || hasRole('school_admin');
+      allow read: if isSuperAdmin() || hasRole('school_admin');
       allow create: if isAuthenticated(); // Anyone can flag
-      allow update: if hasRole('super_admin') || hasRole('school_admin');
+      allow update: if isSuperAdmin() || hasRole('school_admin');
     }
     
     // Audits collection
     match /audits/{auditId} {
-      allow read: if hasRole('super_admin');
+      allow read: if isSuperAdmin();
       allow write: if false; // Server-side only
     }
     
     // Content collections (affirmations, etc.)
     match /content/{type}/{docId} {
       allow read: if isAuthenticated();
-      allow write: if hasRole('super_admin');
+      allow write: if isSuperAdmin();
     }
     
     // Textbooks collection
     match /textbooks/{bookId} {
       allow read: if isAuthenticated() && (
         hasEntitlement(get(/databases/$(database)/documents/users/$(request.auth.uid)).data.entitlements, ['textbooks', 'both', 'premium']) ||
-        hasRole('super_admin') ||
+        isSuperAdmin() ||
         hasRole('school_admin') ||
         hasRole('teacher') // Allow teachers to access textbooks
       );
       
-      allow write: if hasRole('super_admin') || hasRole('school_admin');
+      allow write: if isSuperAdmin() || hasRole('school_admin');
       
       // User progress subcollection within textbooks
       match /userProgress/{userId} {
         allow read: if isAuthenticated() && (
           isOwner(userId) ||
-          hasRole('super_admin') ||
+          isSuperAdmin() ||
           hasRole('school_admin') ||
           hasRole('teacher')
         );
@@ -209,7 +219,7 @@ service cloud.firestore {
       // Allow all authenticated users (including students) to read storybooks
       allow read: if isAuthenticated();
       
-      allow write: if hasRole('super_admin') || hasRole('school_admin');
+      allow write: if isSuperAdmin() || hasRole('school_admin');
     }
     
     // Quizzes collection - user's quiz results
@@ -240,19 +250,19 @@ service cloud.firestore {
     // Trivia collection - trivia questions (read-only for users)
     match /trivia/{triviaId} {
       allow read: if isAuthenticated();
-      allow write: if hasRole('super_admin') || hasRole('school_admin');
+      allow write: if isSuperAdmin() || hasRole('school_admin');
     }
     
     // Leaderboard Ranks collection - public read for rank information
     match /leaderboardRanks/{rankId} {
       allow read: if isAuthenticated();
-      allow write: if hasRole('super_admin') || hasRole('school_admin');
+      allow write: if isSuperAdmin() || hasRole('school_admin');
     }
     
     // Leaderboard Metadata collection - public read for rank system info
     match /leaderboardMetadata/{docId} {
       allow read: if isAuthenticated();
-      allow write: if hasRole('super_admin') || hasRole('school_admin');
+      allow write: if isSuperAdmin() || hasRole('school_admin');
     }
 
     // Materialized class aggregates - read by admins or teachers of the class
@@ -338,7 +348,7 @@ service cloud.firestore {
     // Theory Questions collection - read-only for authenticated users
     match /theoryQuestions/{questionId} {
       allow read: if isAuthenticated();
-      allow write: if hasRole('super_admin') || hasRole('school_admin');
+      allow write: if isSuperAdmin() || hasRole('school_admin');
     }
     
     // Theory Answers collection - student submissions for teacher review
@@ -373,7 +383,7 @@ service cloud.firestore {
       allow read: if isAuthenticated();
       
       // Only admins can create/update collections
-      allow write: if hasRole('super_admin') || hasRole('school_admin');
+      allow write: if isSuperAdmin() || hasRole('school_admin');
     }
     
     // Study Plans collection - AI-generated study plans for students
