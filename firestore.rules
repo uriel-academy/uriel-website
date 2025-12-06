@@ -376,6 +376,51 @@ service cloud.firestore {
       allow write: if hasRole('super_admin') || hasRole('school_admin');
     }
     
+    // Study Plans collection - AI-generated study plans for students
+    match /studyPlans/{planId} {
+      // Students can read their own study plans
+      // Teachers can read plans for their students
+      // Admins can read all plans
+      allow read: if isAuthenticated() && (
+        resource.data.userId == request.auth.uid ||
+        isAdmin() ||
+        (hasRole('parent') && resource.data.userId in request.auth.token.linkedStudentIds) ||
+        (hasRole('teacher') && sameTenant(resource.data.schoolId))
+      );
+      
+      // Only server-side functions can create/update plans
+      allow write: if false;
+    }
+    
+    // Category Stats collection - trivia category performance stats
+    match /categoryStats/{statId} {
+      // Students can read their own category stats
+      // Teachers can read stats for their students
+      // Admins can read all stats
+      allow read: if isAuthenticated() && (
+        resource.data.userId == request.auth.uid ||
+        isAdmin() ||
+        (hasRole('parent') && resource.data.userId in request.auth.token.linkedStudentIds) ||
+        (hasRole('teacher') && sameTenant(resource.data.schoolId))
+      );
+      
+      // Students can create and update their own stats
+      allow create, update: if isAuthenticated() && request.resource.data.userId == request.auth.uid;
+      allow delete: if false; // Maintain stats history
+    }
+    
+    // Telemetry collection - analytics and usage tracking (write-only for users)
+    match /telemetry/{eventId} {
+      // Only admins can read telemetry data
+      allow read: if isAdmin();
+      
+      // All authenticated users can create telemetry events
+      allow create: if isAuthenticated();
+      
+      // Prevent updates and deletes to maintain audit trail
+      allow update, delete: if false;
+    }
+    
     // Deny all other collections by default - prevents unauthorized data injection
     match /{document=**} {
       allow read, write: if false;
