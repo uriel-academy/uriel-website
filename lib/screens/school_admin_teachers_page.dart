@@ -3,6 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/services.dart';
+import 'package:cloud_functions/cloud_functions.dart';
 
 class SchoolAdminTeachersPage extends StatefulWidget {
   const SchoolAdminTeachersPage({Key? key}) : super(key: key);
@@ -373,6 +374,402 @@ Last Seen: ${_formatLastSeen(teacherData['lastSeen'])}
     );
   }
 
+  void _showSendMessageDialog() {
+    final titleController = TextEditingController();
+    final messageController = TextEditingController();
+    String recipientType = 'all_teachers';
+    String? selectedTeacherId;
+
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) => StatefulBuilder(
+        builder: (context, setState) {
+          final filteredTeachersForDialog = _filteredTeachers
+              .where((t) => t['teacherId'] != null)
+              .toList();
+
+          return Dialog(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
+            child: Container(
+              width: 600,
+              constraints: const BoxConstraints(maxHeight: 700),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  // Header with Navy Blue background
+                  Container(
+                    padding: const EdgeInsets.all(20),
+                    decoration: const BoxDecoration(
+                      color: Color(0xFF001F3F),
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(16),
+                        topRight: Radius.circular(16),
+                      ),
+                    ),
+                    child: Row(
+                      children: [
+                        const Icon(
+                          Icons.send,
+                          color: Colors.white,
+                          size: 24,
+                        ),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Send Message',
+                                style: GoogleFonts.inter(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w600,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              const SizedBox(height: 4),
+                              Text(
+                                'Notify your teachers',
+                                style: GoogleFonts.inter(
+                                  fontSize: 14,
+                                  color: Colors.white70,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        IconButton(
+                          onPressed: () => Navigator.pop(context),
+                          icon: const Icon(Icons.close, color: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  // Body
+                  Flexible(
+                    child: SingleChildScrollView(
+                      padding: const EdgeInsets.all(24),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          // Recipient Type
+                          Text(
+                            'Send to',
+                            style: GoogleFonts.inter(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.grey[700],
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          Container(
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Colors.grey[300]!),
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: Column(
+                              children: [
+                                RadioListTile<String>(
+                                  value: 'all_teachers',
+                                  groupValue: recipientType,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      recipientType = value!;
+                                      selectedTeacherId = null;
+                                    });
+                                  },
+                                  title: Text(
+                                    'All Teachers',
+                                    style: GoogleFonts.inter(fontSize: 15),
+                                  ),
+                                  subtitle: Text(
+                                    'Send to all teachers in your school',
+                                    style: GoogleFonts.inter(
+                                      fontSize: 13,
+                                      color: Colors.grey[600],
+                                    ),
+                                  ),
+                                  activeColor: const Color(0xFF00C853),
+                                ),
+                                const Divider(height: 1),
+                                RadioListTile<String>(
+                                  value: 'individual',
+                                  groupValue: recipientType,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      recipientType = value!;
+                                    });
+                                  },
+                                  title: Text(
+                                    'Individual Teacher',
+                                    style: GoogleFonts.inter(fontSize: 15),
+                                  ),
+                                  subtitle: Text(
+                                    'Send to a specific teacher',
+                                    style: GoogleFonts.inter(
+                                      fontSize: 13,
+                                      color: Colors.grey[600],
+                                    ),
+                                  ),
+                                  activeColor: const Color(0xFF00C853),
+                                ),
+                              ],
+                            ),
+                          ),
+
+                          // Teacher Selector (if individual)
+                          if (recipientType == 'individual') ...[
+                            const SizedBox(height: 16),
+                            Text(
+                              'Select Teacher',
+                              style: GoogleFonts.inter(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.grey[700],
+                              ),
+                            ),
+                            const SizedBox(height: 8),
+                            Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 16),
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.grey[300]!),
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: DropdownButtonHideUnderline(
+                                child: DropdownButton<String>(
+                                  isExpanded: true,
+                                  value: selectedTeacherId,
+                                  hint: Text(
+                                    'Choose a teacher...',
+                                    style: GoogleFonts.inter(color: Colors.grey[600]),
+                                  ),
+                                  items: filteredTeachersForDialog.map((teacher) {
+                                    return DropdownMenuItem<String>(
+                                      value: teacher['teacherId'] as String,
+                                      child: Text(
+                                        teacher['teacherName'] ?? 'Unknown',
+                                        style: GoogleFonts.inter(fontSize: 15),
+                                      ),
+                                    );
+                                  }).toList(),
+                                  onChanged: (value) {
+                                    setState(() {
+                                      selectedTeacherId = value;
+                                    });
+                                  },
+                                ),
+                              ),
+                            ),
+                          ],
+
+                          const SizedBox(height: 16),
+
+                          // Title
+                          Text(
+                            'Message Title',
+                            style: GoogleFonts.inter(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.grey[700],
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          TextField(
+                            controller: titleController,
+                            maxLength: 200,
+                            style: GoogleFonts.inter(),
+                            decoration: InputDecoration(
+                              hintText: 'Enter message title...',
+                              hintStyle: GoogleFonts.inter(color: Colors.grey[400]),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(12),
+                                borderSide: BorderSide(color: Colors.grey[300]!),
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(12),
+                                borderSide: BorderSide(color: Colors.grey[300]!),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(12),
+                                borderSide: const BorderSide(
+                                  color: Color(0xFF001F3F),
+                                  width: 2,
+                                ),
+                              ),
+                            ),
+                          ),
+
+                          const SizedBox(height: 16),
+
+                          // Message
+                          Text(
+                            'Message',
+                            style: GoogleFonts.inter(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.grey[700],
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          TextField(
+                            controller: messageController,
+                            maxLines: 6,
+                            maxLength: 2000,
+                            style: GoogleFonts.inter(),
+                            decoration: InputDecoration(
+                              hintText: 'Enter your message...',
+                              hintStyle: GoogleFonts.inter(color: Colors.grey[400]),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(12),
+                                borderSide: BorderSide(color: Colors.grey[300]!),
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(12),
+                                borderSide: BorderSide(color: Colors.grey[300]!),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(12),
+                                borderSide: const BorderSide(
+                                  color: Color(0xFF001F3F),
+                                  width: 2,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+
+                  // Footer
+                  Container(
+                    padding: const EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: Colors.grey[100],
+                      borderRadius: const BorderRadius.only(
+                        bottomLeft: Radius.circular(16),
+                        bottomRight: Radius.circular(16),
+                      ),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        TextButton(
+                          onPressed: () => Navigator.pop(context),
+                          child: Text(
+                            'Cancel',
+                            style: GoogleFonts.inter(
+                              fontSize: 15,
+                              color: Colors.grey[700],
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        ElevatedButton.icon(
+                          onPressed: () async {
+                            if (titleController.text.trim().isEmpty ||
+                                messageController.text.trim().isEmpty) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Text(
+                                    'Please fill in all fields',
+                                    style: GoogleFonts.inter(),
+                                  ),
+                                  backgroundColor: Colors.red,
+                                ),
+                              );
+                              return;
+                            }
+
+                            if (recipientType == 'individual' &&
+                                selectedTeacherId == null) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Text(
+                                    'Please select a teacher',
+                                    style: GoogleFonts.inter(),
+                                  ),
+                                  backgroundColor: Colors.red,
+                                ),
+                              );
+                              return;
+                            }
+
+                            Navigator.pop(context);
+
+                            try {
+                              final functions = FirebaseFunctions.instance;
+                              final callable = functions.httpsCallable('sendMessage');
+
+                              await callable.call({
+                                'title': titleController.text.trim(),
+                                'message': messageController.text.trim(),
+                                'recipientType': recipientType,
+                                if (recipientType == 'individual')
+                                  'recipientId': selectedTeacherId,
+                              });
+
+                              if (mounted) {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: Text(
+                                      'Message sent successfully!',
+                                      style: GoogleFonts.inter(),
+                                    ),
+                                    backgroundColor: const Color(0xFF00C853),
+                                  ),
+                                );
+                              }
+                            } catch (e) {
+                              if (mounted) {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: Text(
+                                      'Error sending message: $e',
+                                      style: GoogleFonts.inter(),
+                                    ),
+                                    backgroundColor: Colors.red,
+                                  ),
+                                );
+                              }
+                            }
+                          },
+                          icon: const Icon(Icons.send, color: Colors.white, size: 18),
+                          label: Text(
+                            'Send Message',
+                            style: GoogleFonts.inter(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white,
+                            ),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color(0xFF00C853),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 24,
+                              vertical: 12,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            elevation: 0,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          );
+        },
+      ),
+    );
+  }
+
   @override
   void dispose() {
     _searchController.dispose();
@@ -459,6 +856,32 @@ Last Seen: ${_formatLastSeen(teacherData['lastSeen'])}
                         style: GoogleFonts.montserrat(color: Colors.grey[700]),
                       ),
                     ],
+                  ),
+                ),
+                const SizedBox(height: 16),
+
+                // Send Message Button
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton.icon(
+                    onPressed: _showSendMessageDialog,
+                    icon: const Icon(Icons.send, color: Colors.white),
+                    label: Text(
+                      'Send Message to Teachers',
+                      style: GoogleFonts.inter(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white,
+                      ),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF00C853),
+                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      elevation: 0,
+                    ),
                   ),
                 ),
               ],

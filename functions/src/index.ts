@@ -1659,7 +1659,7 @@ export const sendMessage = functions.https.onCall(async (data, context) => {
   const schema = z.object({
     title: z.string().min(1).max(200),
     message: z.string().min(1).max(2000),
-    recipientType: z.enum(['individual', 'class', 'all']),
+    recipientType: z.enum(['individual', 'class', 'all', 'all_teachers']),
     recipientId: z.string().optional(), // userId for individual, classId for class
     schoolId: z.string().optional(),
     grade: z.string().optional() // For class messages
@@ -1678,18 +1678,20 @@ export const sendMessage = functions.https.onCall(async (data, context) => {
   const senderName = senderData?.profile?.displayName || senderData?.email || 'Teacher';
   const senderSchoolId = senderClaims.schoolId || schoolId;
 
-  if (!senderSchoolId && recipientType !== 'individual') {
-    throw new functions.https.HttpsError('invalid-argument', 'School ID required for class or all-student messages');
+  if (!senderSchoolId && !['individual'].includes(recipientType)) {
+    throw new functions.https.HttpsError('invalid-argument', 'School ID required for class, all-student, or all-teacher messages');
   }
 
   // Determine recipients
   let recipients: string[] = [];
+  let recipientLabel = 'recipients';
   
   if (recipientType === 'individual') {
     if (!recipientId) {
       throw new functions.https.HttpsError('invalid-argument', 'recipientId required for individual messages');
     }
     recipients = [recipientId];
+    recipientLabel = 'recipient';
   } else if (recipientType === 'class') {
     if (!grade) {
       throw new functions.https.HttpsError('invalid-argument', 'grade required for class messages');
@@ -1702,6 +1704,7 @@ export const sendMessage = functions.https.onCall(async (data, context) => {
       .get();
     
     recipients = studentsSnapshot.docs.map(doc => doc.id);
+    recipientLabel = 'students';
   } else if (recipientType === 'all') {
     // Query all students in the school
     const studentsSnapshot = await db.collection('users')
@@ -1710,6 +1713,16 @@ export const sendMessage = functions.https.onCall(async (data, context) => {
       .get();
     
     recipients = studentsSnapshot.docs.map(doc => doc.id);
+    recipientLabel = 'students';
+  } else if (recipientType === 'all_teachers') {
+    // Query all teachers in the school
+    const teachersSnapshot = await db.collection('users')
+      .where('role', '==', 'teacher')
+      .where('tenant.schoolId', '==', senderSchoolId)
+      .get();
+    
+    recipients = teachersSnapshot.docs.map(doc => doc.id);
+    recipientLabel = 'teachers';
   }
 
   if (recipients.length === 0) {
@@ -1759,7 +1772,7 @@ export const sendMessage = functions.https.onCall(async (data, context) => {
   return {
     success: true,
     recipientCount: recipients.length,
-    message: `Message sent to ${recipients.length} ${recipients.length === 1 ? 'student' : 'students'}`
+    message: `Message sent to ${recipients.length} ${recipientLabel}`
   };
 });
 
