@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:intl/intl.dart';
+import 'dart:async';
 
 class AdminAnalyticsPage extends StatefulWidget {
   const AdminAnalyticsPage({super.key});
@@ -9,16 +10,19 @@ class AdminAnalyticsPage extends StatefulWidget {
   State<AdminAnalyticsPage> createState() => _AdminAnalyticsPageState();
 }
 
-class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTickerProviderStateMixin {
+class _AdminAnalyticsPageState extends State<AdminAnalyticsPage>
+    with SingleTickerProviderStateMixin {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   late TabController _tabController;
-  
+
   bool _isLoading = true;
   Map<String, int> _collectionCounts = {};
   Map<String, dynamic> _analyticsData = {};
   String _selectedDateRange = 'Last 7 days';
   DateTime? _startDate;
   DateTime? _endDate;
+  Timer? _autoRefreshTimer;
+  DateTime? _lastRefreshTime;
 
   @override
   void initState() {
@@ -26,11 +30,18 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
     _tabController = TabController(length: 6, vsync: this);
     _setDateRange(_selectedDateRange);
     _loadAnalytics();
+    // Auto-refresh every 5 minutes
+    _autoRefreshTimer = Timer.periodic(const Duration(minutes: 5), (timer) {
+      if (mounted) {
+        _loadAnalytics();
+      }
+    });
   }
 
   @override
   void dispose() {
     _tabController.dispose();
+    _autoRefreshTimer?.cancel();
     super.dispose();
   }
 
@@ -62,8 +73,9 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
 
   Future<void> _loadAnalytics() async {
     setState(() => _isLoading = true);
-    
+
     try {
+      debugPrint('🔄 Refreshing analytics data...');
       // Load collection counts in parallel
       final futures = await Future.wait([
         _getCollectionCount('users'),
@@ -91,12 +103,18 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
         _getEngagementStats(),
       ]);
 
-      setState(() {
-        _isLoading = false;
-      });
+      if (mounted) {
+        setState(() {
+          _isLoading = false;
+          _lastRefreshTime = DateTime.now();
+        });
+        debugPrint('✅ Analytics refreshed at $_lastRefreshTime');
+      }
     } catch (e) {
-      debugPrint('Error loading analytics: $e');
-      setState(() => _isLoading = false);
+      debugPrint('❌ Error loading analytics: $e');
+      if (mounted) {
+        setState(() => _isLoading = false);
+      }
     }
   }
 
@@ -118,12 +136,12 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
     try {
       final snapshot = await _firestore.collection('users').get();
       final roleMap = <String, int>{};
-      
+
       for (var doc in snapshot.docs) {
         final role = doc.data()['role'] ?? 'unknown';
         roleMap[role] = (roleMap[role] ?? 0) + 1;
       }
-      
+
       setState(() {
         _analyticsData['usersByRole'] = roleMap;
       });
@@ -135,35 +153,36 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
   Future<void> _getQuizStats() async {
     try {
       Query query = _firestore.collection('quizzes');
-      
+
       if (_startDate != null) {
         query = query.where('completedAt', isGreaterThanOrEqualTo: _startDate);
       }
       if (_endDate != null) {
         query = query.where('completedAt', isLessThanOrEqualTo: _endDate);
       }
-      
+
       final snapshot = await query.get();
-      
+
       int totalQuizzes = snapshot.docs.length;
       double totalScore = 0;
       int totalQuestions = 0;
       int totalCorrect = 0;
-      
+
       for (var doc in snapshot.docs) {
         final data = doc.data() as Map<String, dynamic>;
         totalScore += (data['score'] ?? 0).toDouble();
         totalQuestions += (data['totalQuestions'] ?? 0) as int;
         totalCorrect += (data['correctAnswers'] ?? 0) as int;
       }
-      
+
       setState(() {
         _analyticsData['quizStats'] = {
           'total': totalQuizzes,
           'averageScore': totalQuizzes > 0 ? totalScore / totalQuizzes : 0,
           'totalQuestions': totalQuestions,
           'totalCorrect': totalCorrect,
-          'accuracy': totalQuestions > 0 ? (totalCorrect / totalQuestions * 100) : 0,
+          'accuracy':
+              totalQuestions > 0 ? (totalCorrect / totalQuestions * 100) : 0,
         };
       });
     } catch (e) {
@@ -174,29 +193,29 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
   Future<void> _getXPStats() async {
     try {
       Query query = _firestore.collection('xp_transactions');
-      
+
       if (_startDate != null) {
         query = query.where('timestamp', isGreaterThanOrEqualTo: _startDate);
       }
       if (_endDate != null) {
         query = query.where('timestamp', isLessThanOrEqualTo: _endDate);
       }
-      
+
       final snapshot = await query.get();
-      
+
       int totalTransactions = snapshot.docs.length;
       int totalXP = 0;
       final xpByReason = <String, int>{};
-      
+
       for (var doc in snapshot.docs) {
         final data = doc.data() as Map<String, dynamic>;
         final xp = (data['xp'] ?? 0) as int;
         final reason = data['reason'] ?? 'unknown';
-        
+
         totalXP += xp;
         xpByReason[reason] = (xpByReason[reason] ?? 0) + xp;
       }
-      
+
       setState(() {
         _analyticsData['xpStats'] = {
           'totalTransactions': totalTransactions,
@@ -219,7 +238,7 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
         _getCollectionCount('textbook_chapters'),
         _getCollectionCount('courses'),
       ]);
-      
+
       setState(() {
         _analyticsData['contentStats'] = {
           'notes': results[0],
@@ -237,29 +256,31 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
   Future<void> _getEngagementStats() async {
     try {
       final users = await _firestore.collection('users').get();
-      
+
       int activeUsers = 0;
       int totalStreaks = 0;
       int maxStreak = 0;
-      
+
       for (var doc in users.docs) {
         final data = doc.data();
         final lastActive = data['lastActiveAt'] as Timestamp?;
         final streak = (data['currentStreak'] ?? 0) as int;
-        
+
         if (lastActive != null) {
-          final daysSinceActive = DateTime.now().difference(lastActive.toDate()).inDays;
+          final daysSinceActive =
+              DateTime.now().difference(lastActive.toDate()).inDays;
           if (daysSinceActive <= 7) activeUsers++;
         }
-        
+
         totalStreaks += streak;
         if (streak > maxStreak) maxStreak = streak;
       }
-      
+
       setState(() {
         _analyticsData['engagementStats'] = {
           'activeUsers': activeUsers,
-          'averageStreak': users.docs.isNotEmpty ? totalStreaks / users.docs.length : 0,
+          'averageStreak':
+              users.docs.isNotEmpty ? totalStreaks / users.docs.length : 0,
           'maxStreak': maxStreak,
         };
       });
@@ -273,7 +294,8 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
     return Scaffold(
       backgroundColor: const Color(0xFFF5F5F7),
       body: _isLoading
-          ? const Center(child: CircularProgressIndicator(color: Color(0xFF007AFF)))
+          ? const Center(
+              child: CircularProgressIndicator(color: Color(0xFF007AFF)))
           : CustomScrollView(
               slivers: [
                 // Analytics Header Card
@@ -337,9 +359,9 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
                             ),
                           ],
                         ),
-                        
+
                         const SizedBox(height: 24),
-                        
+
                         // Date Range Selector
                         Container(
                           padding: const EdgeInsets.all(4),
@@ -411,7 +433,8 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
     );
   }
 
-  Widget _buildActionButton(String label, IconData icon, VoidCallback onPressed) {
+  Widget _buildActionButton(
+      String label, IconData icon, VoidCallback onPressed) {
     return Material(
       color: const Color(0xFFF5F5F7),
       borderRadius: BorderRadius.circular(10),
@@ -487,13 +510,18 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
         children: [
           const Icon(Icons.calendar_today, size: 20),
           const SizedBox(width: 8),
-          const Text('Date Range:', style: TextStyle(fontWeight: FontWeight.bold)),
+          const Text('Date Range:',
+              style: TextStyle(fontWeight: FontWeight.bold)),
           const SizedBox(width: 16),
           DropdownButton<String>(
             value: _selectedDateRange,
-            items: ['Today', 'Last 7 days', 'Last 30 days', 'Last 90 days', 'All time']
-                .map((d) => DropdownMenuItem(value: d, child: Text(d)))
-                .toList(),
+            items: [
+              'Today',
+              'Last 7 days',
+              'Last 30 days',
+              'Last 90 days',
+              'All time'
+            ].map((d) => DropdownMenuItem(value: d, child: Text(d))).toList(),
             onChanged: (val) {
               if (val != null) {
                 setState(() {
@@ -530,14 +558,28 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
             mainAxisSpacing: 12,
             childAspectRatio: 1.8,
             children: [
-              _buildMetricCard('Total Users', totalUsers, Icons.people, Colors.blue),
-              _buildMetricCard('Quizzes Taken', totalQuizzes, Icons.quiz, Colors.green),
-              _buildMetricCard('Questions', totalQuestions, Icons.question_answer, Colors.orange),
-              _buildMetricCard('Study Notes', totalNotes, Icons.note, Colors.purple),
-              _buildMetricCard('XP Earned', _analyticsData['xpStats']?['totalXP'] ?? 0, Icons.stars, Colors.amber),
-              _buildMetricCard('Active Users', _analyticsData['engagementStats']?['activeUsers'] ?? 0, Icons.trending_up, Colors.teal),
-              _buildMetricCard('AI Chats', _collectionCounts['aiChats'] ?? 0, Icons.smart_toy, Colors.pink),
-              _buildMetricCard('Feedback', _collectionCounts['feedback'] ?? 0, Icons.feedback, Colors.indigo),
+              _buildMetricCard(
+                  'Total Users', totalUsers, Icons.people, Colors.blue),
+              _buildMetricCard(
+                  'Quizzes Taken', totalQuizzes, Icons.quiz, Colors.green),
+              _buildMetricCard('Questions', totalQuestions,
+                  Icons.question_answer, Colors.orange),
+              _buildMetricCard(
+                  'Study Notes', totalNotes, Icons.note, Colors.purple),
+              _buildMetricCard(
+                  'XP Earned',
+                  _analyticsData['xpStats']?['totalXP'] ?? 0,
+                  Icons.stars,
+                  Colors.amber),
+              _buildMetricCard(
+                  'Active Users',
+                  _analyticsData['engagementStats']?['activeUsers'] ?? 0,
+                  Icons.trending_up,
+                  Colors.teal),
+              _buildMetricCard('AI Chats', _collectionCounts['aiChats'] ?? 0,
+                  Icons.smart_toy, Colors.pink),
+              _buildMetricCard('Feedback', _collectionCounts['feedback'] ?? 0,
+                  Icons.feedback, Colors.indigo),
             ],
           ),
           const SizedBox(height: 24),
@@ -548,7 +590,8 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
   }
 
   Widget _buildUsersTab() {
-    final usersByRole = _analyticsData['usersByRole'] as Map<String, int>? ?? {};
+    final usersByRole =
+        _analyticsData['usersByRole'] as Map<String, int>? ?? {};
     final totalUsers = _collectionCounts['users'] ?? 0;
     final studentSummaries = _collectionCounts['studentSummaries'] ?? 0;
 
@@ -581,14 +624,17 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
                       const SizedBox(height: 20),
                       if (usersByRole.isNotEmpty)
                         ...usersByRole.entries.map((entry) {
-                          final percentage = totalUsers > 0 ? (entry.value / totalUsers * 100) : 0;
+                          final percentage = totalUsers > 0
+                              ? (entry.value / totalUsers * 100)
+                              : 0;
                           return Padding(
                             padding: const EdgeInsets.only(bottom: 16),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
                                     Text(
                                       entry.key.toUpperCase(),
@@ -632,13 +678,21 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
               Expanded(
                 child: Column(
                   children: [
-                    _buildStatCard('Total Registered Users', totalUsers, Icons.people),
+                    _buildStatCard(
+                        'Total Registered Users', totalUsers, Icons.people),
                     const SizedBox(height: 12),
-                    _buildStatCard('Student Summaries', studentSummaries, Icons.summarize),
+                    _buildStatCard(
+                        'Student Summaries', studentSummaries, Icons.summarize),
                     const SizedBox(height: 12),
-                    _buildStatCard('Class Aggregates', _collectionCounts['classAggregates'] ?? 0, Icons.class_),
+                    _buildStatCard(
+                        'Class Aggregates',
+                        _collectionCounts['classAggregates'] ?? 0,
+                        Icons.class_),
                     const SizedBox(height: 12),
-                    _buildStatCard('Leaderboard Entries', _collectionCounts['leaderboardRanks'] ?? 0, Icons.leaderboard),
+                    _buildStatCard(
+                        'Leaderboard Entries',
+                        _collectionCounts['leaderboardRanks'] ?? 0,
+                        Icons.leaderboard),
                   ],
                 ),
               ),
@@ -650,7 +704,8 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
   }
 
   Widget _buildLearningTab() {
-    final quizStats = _analyticsData['quizStats'] as Map<String, dynamic>? ?? {};
+    final quizStats =
+        _analyticsData['quizStats'] as Map<String, dynamic>? ?? {};
     final xpStats = _analyticsData['xpStats'] as Map<String, dynamic>? ?? {};
 
     return SingleChildScrollView(
@@ -666,12 +721,30 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
             mainAxisSpacing: 12,
             childAspectRatio: 1.8,
             children: [
-              _buildMetricCard('Total Quizzes', quizStats['total'] ?? 0, Icons.quiz, Colors.blue),
-              _buildMetricCard('Avg Score', (quizStats['averageScore'] ?? 0).toStringAsFixed(1), Icons.grade, Colors.green),
-              _buildMetricCard('Accuracy', '${(quizStats['accuracy'] ?? 0).toStringAsFixed(1)}%', Icons.check_circle, Colors.orange),
-              _buildMetricCard('Questions Answered', quizStats['totalQuestions'] ?? 0, Icons.question_answer, Colors.purple),
-              _buildMetricCard('Correct Answers', quizStats['totalCorrect'] ?? 0, Icons.check, Colors.teal),
-              _buildMetricCard('XP Transactions', xpStats['totalTransactions'] ?? 0, Icons.account_balance_wallet, Colors.amber),
+              _buildMetricCard('Total Quizzes', quizStats['total'] ?? 0,
+                  Icons.quiz, Colors.blue),
+              _buildMetricCard(
+                  'Avg Score',
+                  (quizStats['averageScore'] ?? 0).toStringAsFixed(1),
+                  Icons.grade,
+                  Colors.green),
+              _buildMetricCard(
+                  'Accuracy',
+                  '${(quizStats['accuracy'] ?? 0).toStringAsFixed(1)}%',
+                  Icons.check_circle,
+                  Colors.orange),
+              _buildMetricCard(
+                  'Questions Answered',
+                  quizStats['totalQuestions'] ?? 0,
+                  Icons.question_answer,
+                  Colors.purple),
+              _buildMetricCard('Correct Answers',
+                  quizStats['totalCorrect'] ?? 0, Icons.check, Colors.teal),
+              _buildMetricCard(
+                  'XP Transactions',
+                  xpStats['totalTransactions'] ?? 0,
+                  Icons.account_balance_wallet,
+                  Colors.amber),
             ],
           ),
           const SizedBox(height: 20),
@@ -695,30 +768,32 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
                 ),
                 const SizedBox(height: 16),
                 if (xpStats['byReason'] != null)
-                  ...(xpStats['byReason'] as Map<String, int>).entries.map((entry) => Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 8),
-                        child: Row(
-                          children: [
-                            Expanded(
-                              child: Text(
-                                entry.key,
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: Colors.grey[700],
+                  ...(xpStats['byReason'] as Map<String, int>)
+                      .entries
+                      .map((entry) => Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 8),
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: Text(
+                                    entry.key,
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      color: Colors.grey[700],
+                                    ),
+                                  ),
                                 ),
-                              ),
+                                Text(
+                                  '${entry.value} XP',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.grey[900],
+                                  ),
+                                ),
+                              ],
                             ),
-                            Text(
-                              '${entry.value} XP',
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w600,
-                                color: Colors.grey[900],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ))
+                          ))
                 else
                   const Text('No XP data available'),
               ],
@@ -730,7 +805,8 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
   }
 
   Widget _buildContentTab() {
-    final contentStats = _analyticsData['contentStats'] as Map<String, dynamic>? ?? {};
+    final contentStats =
+        _analyticsData['contentStats'] as Map<String, dynamic>? ?? {};
 
     return SingleChildScrollView(
       padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
@@ -745,15 +821,39 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
             mainAxisSpacing: 12,
             childAspectRatio: 1.8,
             children: [
-              _buildMetricCard('Questions (MCQ)', _collectionCounts['questions'] ?? 0, Icons.radio_button_checked, Colors.blue),
-              _buildMetricCard('French Questions', _collectionCounts['french_questions'] ?? 0, Icons.language, Colors.pink),
-              _buildMetricCard('Theory Questions', _collectionCounts['theoryQuestions'] ?? 0, Icons.assignment, Colors.purple),
-              _buildMetricCard('Study Notes', contentStats['notes'] ?? 0, Icons.note, Colors.green),
-              _buildMetricCard('Storybooks', contentStats['storybooks'] ?? 0, Icons.menu_book, Colors.orange),
-              _buildMetricCard('Textbooks', contentStats['textbooks'] ?? 0, Icons.book, Colors.indigo),
-              _buildMetricCard('Courses', contentStats['courses'] ?? 0, Icons.school, Colors.teal),
-              _buildMetricCard('Notifications', _collectionCounts['notifications'] ?? 0, Icons.notifications, Colors.amber),
-              _buildMetricCard('Lesson Plans', _collectionCounts['lesson_plans'] ?? 0, Icons.event_note, Colors.cyan),
+              _buildMetricCard(
+                  'Questions (MCQ)',
+                  _collectionCounts['questions'] ?? 0,
+                  Icons.radio_button_checked,
+                  Colors.blue),
+              _buildMetricCard(
+                  'French Questions',
+                  _collectionCounts['french_questions'] ?? 0,
+                  Icons.language,
+                  Colors.pink),
+              _buildMetricCard(
+                  'Theory Questions',
+                  _collectionCounts['theoryQuestions'] ?? 0,
+                  Icons.assignment,
+                  Colors.purple),
+              _buildMetricCard('Study Notes', contentStats['notes'] ?? 0,
+                  Icons.note, Colors.green),
+              _buildMetricCard('Storybooks', contentStats['storybooks'] ?? 0,
+                  Icons.menu_book, Colors.orange),
+              _buildMetricCard('Textbooks', contentStats['textbooks'] ?? 0,
+                  Icons.book, Colors.indigo),
+              _buildMetricCard('Courses', contentStats['courses'] ?? 0,
+                  Icons.school, Colors.teal),
+              _buildMetricCard(
+                  'Notifications',
+                  _collectionCounts['notifications'] ?? 0,
+                  Icons.notifications,
+                  Colors.amber),
+              _buildMetricCard(
+                  'Lesson Plans',
+                  _collectionCounts['lesson_plans'] ?? 0,
+                  Icons.event_note,
+                  Colors.cyan),
             ],
           ),
         ],
@@ -762,7 +862,8 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
   }
 
   Widget _buildEngagementTab() {
-    final engagementStats = _analyticsData['engagementStats'] as Map<String, dynamic>? ?? {};
+    final engagementStats =
+        _analyticsData['engagementStats'] as Map<String, dynamic>? ?? {};
 
     return SingleChildScrollView(
       padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
@@ -777,12 +878,27 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
             mainAxisSpacing: 12,
             childAspectRatio: 1.8,
             children: [
-              _buildMetricCard('Active Users (7d)', engagementStats['activeUsers'] ?? 0, Icons.people_outline, Colors.blue),
-              _buildMetricCard('Avg Streak', (engagementStats['averageStreak'] ?? 0).toStringAsFixed(1), Icons.local_fire_department, Colors.orange),
-              _buildMetricCard('Max Streak', engagementStats['maxStreak'] ?? 0, Icons.whatshot, Colors.red),
-              _buildMetricCard('Notifications', _collectionCounts['notifications'] ?? 0, Icons.notifications_active, Colors.amber),
-              _buildMetricCard('Feedback', _collectionCounts['feedback'] ?? 0, Icons.rate_review, Colors.green),
-              _buildMetricCard('AI Chats', _collectionCounts['aiChats'] ?? 0, Icons.chat, Colors.purple),
+              _buildMetricCard(
+                  'Active Users (7d)',
+                  engagementStats['activeUsers'] ?? 0,
+                  Icons.people_outline,
+                  Colors.blue),
+              _buildMetricCard(
+                  'Avg Streak',
+                  (engagementStats['averageStreak'] ?? 0).toStringAsFixed(1),
+                  Icons.local_fire_department,
+                  Colors.orange),
+              _buildMetricCard('Max Streak', engagementStats['maxStreak'] ?? 0,
+                  Icons.whatshot, Colors.red),
+              _buildMetricCard(
+                  'Notifications',
+                  _collectionCounts['notifications'] ?? 0,
+                  Icons.notifications_active,
+                  Colors.amber),
+              _buildMetricCard('Feedback', _collectionCounts['feedback'] ?? 0,
+                  Icons.rate_review, Colors.green),
+              _buildMetricCard('AI Chats', _collectionCounts['aiChats'] ?? 0,
+                  Icons.chat, Colors.purple),
             ],
           ),
         ],
@@ -878,7 +994,8 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
                           ],
                         ),
                         Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 12, vertical: 6),
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(8),
@@ -904,7 +1021,8 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
     );
   }
 
-  Widget _buildMetricCard(String label, dynamic value, IconData icon, Color color) {
+  Widget _buildMetricCard(
+      String label, dynamic value, IconData icon, Color color) {
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
@@ -977,7 +1095,8 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
   }
 
   Widget _buildQuizAccuracyChart() {
-    final quizStats = _analyticsData['quizStats'] as Map<String, dynamic>? ?? {};
+    final quizStats =
+        _analyticsData['quizStats'] as Map<String, dynamic>? ?? {};
     final accuracy = (quizStats['accuracy'] ?? 0).toDouble();
 
     return Container(
@@ -1010,7 +1129,8 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: const Color(0xFF34C759).withValues(alpha: 0.1),
-                        border: Border.all(color: const Color(0xFF34C759), width: 8),
+                        border: Border.all(
+                            color: const Color(0xFF34C759), width: 8),
                       ),
                       child: Center(
                         child: Column(
@@ -1043,11 +1163,19 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    _buildStatRow('Total Questions', quizStats['totalQuestions'] ?? 0, null),
+                    _buildStatRow('Total Questions',
+                        quizStats['totalQuestions'] ?? 0, null),
                     const SizedBox(height: 16),
-                    _buildStatRow('Correct Answers', quizStats['totalCorrect'] ?? 0, null, color: const Color(0xFF34C759)),
+                    _buildStatRow(
+                        'Correct Answers', quizStats['totalCorrect'] ?? 0, null,
+                        color: const Color(0xFF34C759)),
                     const SizedBox(height: 16),
-                    _buildStatRow('Incorrect Answers', (quizStats['totalQuestions'] ?? 0) - (quizStats['totalCorrect'] ?? 0), null, color: const Color(0xFFFF3B30)),
+                    _buildStatRow(
+                        'Incorrect Answers',
+                        (quizStats['totalQuestions'] ?? 0) -
+                            (quizStats['totalCorrect'] ?? 0),
+                        null,
+                        color: const Color(0xFFFF3B30)),
                   ],
                 ),
               ),
@@ -1058,7 +1186,8 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
     );
   }
 
-  Widget _buildStatRow(String label, int value, IconData? icon, {Color? color}) {
+  Widget _buildStatRow(String label, int value, IconData? icon,
+      {Color? color}) {
     return Row(
       children: [
         Expanded(

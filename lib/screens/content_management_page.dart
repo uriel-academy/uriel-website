@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'dart:async';
 import 'admin_question_management.dart';
 import 'trivia_management_page.dart';
 import 'notes_page.dart';
@@ -15,31 +16,44 @@ class ContentManagementPage extends StatefulWidget {
 class _ContentManagementPageState extends State<ContentManagementPage> {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final TextEditingController _searchController = TextEditingController();
-  
+
   bool _isLoading = true;
   Map<String, int> _contentCounts = {};
   String _searchQuery = '';
+  List<StreamSubscription<QuerySnapshot>>? _contentStreams;
+  Timer? _autoRefreshTimer;
 
   @override
   void initState() {
     super.initState();
-    _loadContentCounts();
+    _startRealTimeContentMonitoring();
     _searchController.addListener(() {
       setState(() {
         _searchQuery = _searchController.text.toLowerCase();
       });
+    });
+    // Auto-refresh every 3 minutes for updated counts
+    _autoRefreshTimer = Timer.periodic(const Duration(minutes: 3), (timer) {
+      if (mounted) {
+        _refreshContentCounts();
+      }
     });
   }
 
   @override
   void dispose() {
     _searchController.dispose();
+    _contentStreams?.forEach((sub) => sub.cancel());
+    _autoRefreshTimer?.cancel();
     super.dispose();
   }
 
-  Future<void> _loadContentCounts() async {
+  void _startRealTimeContentMonitoring() {
     setState(() => _isLoading = true);
+    _refreshContentCounts();
+  }
 
+  Future<void> _refreshContentCounts() async {
     try {
       final results = await Future.wait([
         _firestore.collection('questions').count().get(),
@@ -53,30 +67,35 @@ class _ContentManagementPageState extends State<ContentManagementPage> {
         _firestore.collection('textbook_content').count().get(),
       ]);
 
-      setState(() {
-        _contentCounts = {
-          'questions': results[0].count ?? 0,
-          'french_questions': results[1].count ?? 0,
-          'theory_questions': results[2].count ?? 0,
-          'textbooks': results[3].count ?? 0,
-          'storybooks': results[4].count ?? 0,
-          'notes': results[5].count ?? 0,
-          'trivia': results[6].count ?? 0,
-          'courses': results[7].count ?? 0,
-          'textbook_content': results[8].count ?? 0,
-        };
-        _isLoading = false;
-      });
+      if (mounted) {
+        setState(() {
+          _contentCounts = {
+            'questions': results[0].count ?? 0,
+            'french_questions': results[1].count ?? 0,
+            'theory_questions': results[2].count ?? 0,
+            'textbooks': results[3].count ?? 0,
+            'storybooks': results[4].count ?? 0,
+            'notes': results[5].count ?? 0,
+            'trivia': results[6].count ?? 0,
+            'courses': results[7].count ?? 0,
+            'textbook_content': results[8].count ?? 0,
+          };
+          _isLoading = false;
+        });
+      }
     } catch (e) {
-      debugPrint('Error loading content counts: $e');
-      setState(() => _isLoading = false);
+      debugPrint('Error refreshing content counts: $e');
+      if (mounted) {
+        setState(() => _isLoading = false);
+      }
     }
   }
 
   @override
   Widget build(BuildContext context) {
     final contentItems = _getFilteredContentItems();
-    final totalContent = _contentCounts.values.fold(0, (sum, count) => sum + count);
+    final totalContent =
+        _contentCounts.values.fold(0, (sum, count) => sum + count);
 
     return Scaffold(
       backgroundColor: const Color(0xFFF5F5F7),
@@ -217,8 +236,11 @@ class _ContentManagementPageState extends State<ContentManagementPage> {
               padding: const EdgeInsets.fromLTRB(20, 0, 20, 40),
               sliver: SliverGrid(
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: MediaQuery.of(context).size.width < 768 ? 1 : 
-                                  MediaQuery.of(context).size.width < 1200 ? 2 : 3,
+                  crossAxisCount: MediaQuery.of(context).size.width < 768
+                      ? 1
+                      : MediaQuery.of(context).size.width < 1200
+                          ? 2
+                          : 3,
                   crossAxisSpacing: 16,
                   mainAxisSpacing: 16,
                   childAspectRatio: 1.4,
@@ -234,12 +256,6 @@ class _ContentManagementPageState extends State<ContentManagementPage> {
         ],
       ),
     );
-  }
-
-  @override
-  void dispose() {
-    _searchController.dispose();
-    super.dispose();
   }
 
   List<Map<String, dynamic>> _getFilteredContentItems() {
@@ -503,4 +519,3 @@ class NotesTab extends StatelessWidget {
     );
   }
 }
-  const PastQuestionsTab({super.key});

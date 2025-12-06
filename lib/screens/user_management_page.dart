@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cloud_functions/cloud_functions.dart';
+import 'dart:async';
 
 class UserManagementPage extends StatefulWidget {
   const UserManagementPage({Key? key}) : super(key: key);
@@ -21,99 +22,113 @@ class _UserManagementPageState extends State<UserManagementPage> {
   final int _pageSize = 20;
   int _currentPage = 1;
   final Set<String> _selectedUserIds = {};
+  StreamSubscription<QuerySnapshot>? _usersStreamSubscription;
+  Timer? _autoRefreshTimer;
 
   @override
   void initState() {
     super.initState();
-    _loadUsers();
+    _startRealTimeUserStream();
     _searchController.addListener(_filterUsers);
+    // Auto-refresh every 2 minutes to update relative times
+    _autoRefreshTimer = Timer.periodic(const Duration(minutes: 2), (timer) {
+      if (mounted) {
+        setState(() {}); // Refresh UI to update "time ago" displays
+      }
+    });
   }
 
   @override
   void dispose() {
     _searchController.removeListener(_filterUsers);
     _searchController.dispose();
+    _usersStreamSubscription?.cancel();
+    _autoRefreshTimer?.cancel();
     super.dispose();
   }
 
-  Future<void> _loadUsers() async {
+  void _startRealTimeUserStream() {
     setState(() => _isLoading = true);
 
     try {
-      final snapshot = await _firestore
+      // Use real-time stream for live updates
+      _usersStreamSubscription = _firestore
           .collection('users')
           .orderBy('createdAt', descending: true)
-          .get();
+          .snapshots()
+          .listen((snapshot) {
+        if (!mounted) return;
 
-      List<Map<String, dynamic>> usersList = [];
+        List<Map<String, dynamic>> usersList = [];
 
-      for (final doc in snapshot.docs) {
-        final data = doc.data();
-        final userId = doc.id;
+        for (final doc in snapshot.docs) {
+          final data = doc.data();
+          final userId = doc.id;
 
-        // Get last seen
-        final lastSeen = data['lastSeen'] ?? data['lastActiveAt'];
-        DateTime? lastSeenDate;
-        if (lastSeen != null) {
-          if (lastSeen is Timestamp) {
-            lastSeenDate = lastSeen.toDate();
-          } else if (lastSeen is String) {
-            lastSeenDate = DateTime.tryParse(lastSeen);
+          // Get last seen - check multiple fields for compatibility
+          final lastSeen =
+              data['lastSeen'] ?? data['lastActiveAt'] ?? data['lastActive'];
+          DateTime? lastSeenDate;
+          if (lastSeen != null) {
+            if (lastSeen is Timestamp) {
+              lastSeenDate = lastSeen.toDate();
+            } else if (lastSeen is String) {
+              lastSeenDate = DateTime.tryParse(lastSeen);
+            } else if (lastSeen is int) {
+              lastSeenDate = DateTime.fromMillisecondsSinceEpoch(lastSeen);
+            }
           }
+
+          // Get account created date
+          final createdAt = data['createdAt'];
+          DateTime? createdDate;
+          if (createdAt != null) {
+            if (createdAt is Timestamp) {
+              createdDate = createdAt.toDate();
+            } else if (createdAt is String) {
+              createdDate = DateTime.tryParse(createdAt);
+            } else if (createdAt is int) {
+              createdDate = DateTime.fromMillisecondsSinceEpoch(createdAt);
+            }
+          }
+
+          usersList.add({
+            'userId': userId,
+            'name': data['displayName'] ??
+                '${data['firstName'] ?? ''} ${data['lastName'] ?? ''}'.trim(),
+            'email': data['email'] ?? '',
+            'contact': data['phoneNumber'] ?? data['phone'] ?? 'N/A',
+            'school': data['school'] ?? 'N/A',
+            'class': data['class'] ?? data['grade'] ?? 'N/A',
+            'role': data['role'] ?? 'student',
+            'xp': (data['totalXP'] ?? data['xp'] ?? 0) as num,
+            'lastSeen': lastSeenDate,
+            'createdAt': createdDate,
+            'avatar': data['avatar'],
+            'parentEmail':
+                data['parentEmail'] ?? data['parent']?['email'] ?? 'N/A',
+            'parentContact': data['parentContact'] ??
+                data['parent']?['phone'] ??
+                data['parentPhone'] ??
+                'N/A',
+          });
         }
 
-        // Get account created date
-        final createdAt = data['createdAt'];
-        DateTime? createdDate;
-        if (createdAt != null) {
-          if (createdAt is Timestamp) {
-            createdDate = createdAt.toDate();
-          } else if (createdAt is String) {
-            createdDate = DateTime.tryParse(createdAt);
-          }
-        }
-
-        usersList.add({
-          'userId': userId,
-          'name': data['displayName'] ??
-              '${data['firstName'] ?? ''} ${data['lastName'] ?? ''}'.trim(),
-          'email': data['email'] ?? '',
-          'contact': data['phoneNumber'] ?? data['phone'] ?? 'N/A',
-          'school': data['school'] ?? 'N/A',
-          'class': data['class'] ?? data['grade'] ?? 'N/A',
-          'role': data['role'] ?? 'student',
-          'xp': (data['totalXP'] ?? data['xp'] ?? 0) as num,
-          'lastSeen': lastSeenDate,
-          'createdAt': createdDate,
-          'avatar': data['avatar'],
-          'parentEmail':
-              data['parentEmail'] ?? data['parent']?['email'] ?? 'N/A',
-          'parentContact': data['parentContact'] ??
-              data['parent']?['phone'] ??
-              data['parentPhone'] ??
-              'N/A',
+        setState(() {
+          _users = usersList;
+          _filteredUsers = usersList;
+          _isLoading = false;
         });
-      }
-
-      setState(() {
-        _users = usersList;
-        _filteredUsers = usersList;
-        _isLoading = false;
+        _filterUsers(); // Apply any active search filter
+      }, onError: (error) {
+        debugPrint('Error in user stream: $error');
+        if (mounted) {
+          setState(() => _isLoading = false);
+        }
       });
     } catch (e) {
-      debugPrint('Error loading users: $e');
+      debugPrint('Error starting user stream: $e');
       setState(() => _isLoading = false);
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('Error loading users: $e'),
-            backgroundColor: Colors.red[700],
-            behavior: SnackBarBehavior.floating,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-          ),
-        );
-      }
     }
   }
 

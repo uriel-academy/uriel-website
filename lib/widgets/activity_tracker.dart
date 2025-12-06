@@ -6,7 +6,7 @@ import '../services/user_service.dart';
 /// Tracks user activity and updates lastSeen timestamp
 class ActivityTracker extends StatefulWidget {
   final Widget child;
-  
+
   const ActivityTracker({
     super.key,
     required this.child,
@@ -19,8 +19,13 @@ class ActivityTracker extends StatefulWidget {
 class _ActivityTrackerState extends State<ActivityTracker> {
   Timer? _activityTimer;
   DateTime? _lastUpdateTime;
-  static const _updateInterval = Duration(minutes: 1); // Update every minute of activity
-  static const _activityThreshold = Duration(seconds: 30); // Consider active if any interaction in last 30 seconds
+  DateTime? _lastActivityTime;
+  static const _updateInterval =
+      Duration(seconds: 30); // Check every 30 seconds
+  static const _minUpdateInterval =
+      Duration(minutes: 1); // Minimum time between Firestore updates
+  static const _activityThreshold = Duration(
+      seconds: 45); // Consider active if any interaction in last 45 seconds
 
   @override
   void initState() {
@@ -43,18 +48,26 @@ class _ActivityTrackerState extends State<ActivityTracker> {
 
   void _onUserActivity() {
     // Record that user was active
-    _lastUpdateTime = DateTime.now();
+    _lastActivityTime = DateTime.now();
   }
 
   Future<void> _updateLastSeenIfActive() async {
     // Only update if there was recent activity
-    if (_lastUpdateTime != null) {
-      final timeSinceLastActivity = DateTime.now().difference(_lastUpdateTime!);
-      
+    if (_lastActivityTime != null) {
+      final now = DateTime.now();
+      final timeSinceLastActivity = now.difference(_lastActivityTime!);
+
+      // Check if user is still active
       if (timeSinceLastActivity <= _activityThreshold) {
-        final user = FirebaseAuth.instance.currentUser;
-        if (user != null) {
-          await UserService().updateLastSeen(user.uid);
+        // Prevent too frequent updates to Firestore
+        if (_lastUpdateTime == null ||
+            now.difference(_lastUpdateTime!) >= _minUpdateInterval) {
+          final user = FirebaseAuth.instance.currentUser;
+          if (user != null) {
+            await UserService().updateLastSeen(user.uid);
+            _lastUpdateTime = now;
+            debugPrint('📍 Updated last seen for user: ${user.uid}');
+          }
         }
       }
     }

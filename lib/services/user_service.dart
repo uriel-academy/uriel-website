@@ -33,21 +33,31 @@ class UserService implements IUserService {
   /// Removes common noise words and non-alphanumeric characters
   String? _normalizeSchoolClass(String? raw) {
     if (raw == null || raw.isEmpty) return null;
-    
+
     String s = raw.toLowerCase();
-    
+
     // Remove common noise words
-    final noiseWords = ['school', 'college', 'high', 'senior', 'basic', 'jhs', 'shs', 'form', 'the'];
+    final noiseWords = [
+      'school',
+      'college',
+      'high',
+      'senior',
+      'basic',
+      'jhs',
+      'shs',
+      'form',
+      'the'
+    ];
     for (final word in noiseWords) {
       s = s.replaceAll(RegExp('\\b$word\\b'), ' ');
     }
-    
+
     // Replace non-alphanumeric with spaces
     s = s.replaceAll(RegExp(r'[^a-z0-9\s]'), ' ');
-    
+
     // Collapse whitespace and replace with underscore
     s = s.replaceAll(RegExp(r'\s+'), '_').trim();
-    
+
     return s.isEmpty ? null : s;
   }
 
@@ -62,8 +72,9 @@ class UserService implements IUserService {
     Map<String, dynamic>? additionalData,
   }) async {
     try {
-      debugPrint('UserService: Creating profile for user: $userId, email: $email, role: $role');
-      
+      debugPrint(
+          'UserService: Creating profile for user: $userId, email: $email, role: $role');
+
       // Don't write 'role' from the client side - roles must be assigned by admin/server.
       final userData = {
         'userId': userId,
@@ -77,9 +88,11 @@ class UserService implements IUserService {
         ...?additionalData,
       };
 
-      await _usersCollection.doc(userId).set(userData, SetOptions(merge: true))
+      await _usersCollection
+          .doc(userId)
+          .set(userData, SetOptions(merge: true))
           .timeout(const Duration(seconds: 10));
-          
+
       debugPrint('UserService: Profile created successfully');
     } catch (e) {
       debugPrint('UserService Error creating user profile: $e');
@@ -110,7 +123,7 @@ class UserService implements IUserService {
         if (profile['isSuperAdmin'] == true || profile['role'] == 'admin') {
           return UserRole.superAdmin;
         }
-        
+
         if (profile['role'] != null) {
           final roleString = profile['role'] as String;
           return UserRole.values.firstWhere(
@@ -130,28 +143,30 @@ class UserService implements IUserService {
   Future<UserRole?> getUserRoleByEmail(String email) async {
     try {
       debugPrint('UserService: Looking up role for email: $email');
-      
+
       final querySnapshot = await _usersCollection
           .where('email', isEqualTo: email.toLowerCase())
           .limit(1)
           .get()
           .timeout(const Duration(seconds: 10));
 
-      debugPrint('UserService: Query returned ${querySnapshot.docs.length} documents');
+      debugPrint(
+          'UserService: Query returned ${querySnapshot.docs.length} documents');
 
       if (querySnapshot.docs.isNotEmpty) {
-        final userData = querySnapshot.docs.first.data() as Map<String, dynamic>;
-        
+        final userData =
+            querySnapshot.docs.first.data() as Map<String, dynamic>;
+
         // Check for super admin first (either by isSuperAdmin flag or role == 'admin')
         if (userData['isSuperAdmin'] == true || userData['role'] == 'admin') {
           debugPrint('UserService: User is super admin');
           return UserRole.superAdmin;
         }
-        
+
         final roleString = userData['role'] as String?;
-        
+
         debugPrint('UserService: Found role string: $roleString');
-        
+
         if (roleString != null) {
           final role = UserRole.values.firstWhere(
             (role) => role.name == roleString,
@@ -187,6 +202,8 @@ class UserService implements IUserService {
     try {
       await _usersCollection.doc(userId).update({
         'lastSeen': FieldValue.serverTimestamp(),
+        'lastActive': FieldValue.serverTimestamp(),
+        'lastActiveAt': FieldValue.serverTimestamp(),
       });
     } catch (e) {
       debugPrint('Error updating last seen: $e');
@@ -248,29 +265,33 @@ class UserService implements IUserService {
       // Parse firstName and lastName from name if not provided
       String fName = firstName ?? '';
       String lName = lastName ?? '';
-      
+
       if (fName.isEmpty && lName.isEmpty && name != null && name.isNotEmpty) {
         final parts = name.trim().split(' ');
         fName = parts.first;
         lName = parts.length > 1 ? parts.sublist(1).join(' ') : '';
       }
-      
+
       // Check if school or class has changed
       final teacherDoc = await _usersCollection.doc(userId).get();
       final oldData = teacherDoc.data() as Map<String, dynamic>?;
-      
+
       if (oldData != null) {
         final oldSchool = oldData['school'] ?? oldData['schoolName'] ?? '';
-        final oldClass = oldData['class'] ?? oldData['grade'] ?? oldData['teachingGrade'] ?? '';
-        
+        final oldClass = oldData['class'] ??
+            oldData['grade'] ??
+            oldData['teachingGrade'] ??
+            '';
+
         if (oldSchool != schoolName || oldClass != teachingClass) {
-          debugPrint('Teacher $userId changed from $oldSchool/$oldClass to $schoolName/$teachingClass');
-          
+          debugPrint(
+              'Teacher $userId changed from $oldSchool/$oldClass to $schoolName/$teachingClass');
+
           // Clean up old student associations
           await _cleanupOldTeacherAssociations(userId);
         }
       }
-      
+
       final teacherData = {
         'role': UserRole.teacher.name,
         'isTeacher': true, // Flag for queries
@@ -293,8 +314,10 @@ class UserService implements IUserService {
         'updatedAt': FieldValue.serverTimestamp(),
       };
 
-      await _usersCollection.doc(userId).set(teacherData, SetOptions(merge: true));
-      
+      await _usersCollection
+          .doc(userId)
+          .set(teacherData, SetOptions(merge: true));
+
       // When teacher profile is updated, find and link matching students
       await _linkMatchingStudents(userId, schoolName, teachingClass);
     } catch (e) {
@@ -307,44 +330,43 @@ class UserService implements IUserService {
   Future<void> _cleanupOldTeacherAssociations(String teacherId) async {
     try {
       debugPrint('Cleaning up old associations for teacher $teacherId');
-      
+
       // 1. Delete all entries in teacher's students subcollection
-      final studentsSnapshot = await _usersCollection
-          .doc(teacherId)
-          .collection('students')
-          .get();
-      
+      final studentsSnapshot =
+          await _usersCollection.doc(teacherId).collection('students').get();
+
       final batch = _firestore.batch();
-      
+
       for (var doc in studentsSnapshot.docs) {
         batch.delete(doc.reference);
       }
-      
+
       // 2. Delete all studentSummaries entries for this teacher
       final summariesSnapshot = await _firestore
           .collection('studentSummaries')
           .where('teacherId', isEqualTo: teacherId)
           .get();
-      
+
       for (var doc in summariesSnapshot.docs) {
         batch.delete(doc.reference);
       }
-      
+
       // 3. Clear teacherId from all students who had this teacher
       final studentsWithTeacherSnapshot = await _usersCollection
           .where('role', isEqualTo: UserRole.student.name)
           .where('teacherId', isEqualTo: teacherId)
           .get();
-      
+
       for (var doc in studentsWithTeacherSnapshot.docs) {
         batch.update(doc.reference, {
           'teacherId': FieldValue.delete(),
           'updatedAt': FieldValue.serverTimestamp(),
         });
       }
-      
+
       await batch.commit();
-      debugPrint('Cleaned up ${studentsSnapshot.docs.length} students subcollection entries, '
+      debugPrint(
+          'Cleaned up ${studentsSnapshot.docs.length} students subcollection entries, '
           '${summariesSnapshot.docs.length} studentSummaries entries, '
           'and ${studentsWithTeacherSnapshot.docs.length} student teacherId references');
     } catch (e) {
@@ -353,54 +375,62 @@ class UserService implements IUserService {
   }
 
   /// Link students with matching school and grade to this teacher
-  Future<void> _linkMatchingStudents(String teacherId, String schoolName, String teachingClass) async {
+  Future<void> _linkMatchingStudents(
+      String teacherId, String schoolName, String teachingClass) async {
     try {
       final normalizedSchool = _normalizeSchoolClass(schoolName);
       final normalizedClass = _normalizeSchoolClass(teachingClass);
-      
+
       if (normalizedSchool == null || normalizedClass == null) {
-        debugPrint('Could not normalize teacher school/class: $schoolName, $teachingClass');
+        debugPrint(
+            'Could not normalize teacher school/class: $schoolName, $teachingClass');
         return;
       }
-      
+
       // Get ALL students and filter by normalized school/class
       // This ensures we catch all variations of the same school/class name
       final allStudentsQuery = await _usersCollection
           .where('role', isEqualTo: UserRole.student.name)
           .get();
-      
-      debugPrint('Checking ${allStudentsQuery.docs.length} students for matches with $schoolName/$teachingClass');
-      
+
+      debugPrint(
+          'Checking ${allStudentsQuery.docs.length} students for matches with $schoolName/$teachingClass');
+
       final batch = _firestore.batch();
       int matchCount = 0;
-      
+
       for (var studentDoc in allStudentsQuery.docs) {
         final studentId = studentDoc.id;
         final studentData = studentDoc.data() as Map<String, dynamic>?;
-        
+
         if (studentData == null) continue;
-        
+
         final studentSchool = studentData['school'] ?? '';
         final studentGrade = studentData['grade'] ?? studentData['class'] ?? '';
-        
+
         // Normalize and compare
         final normalizedStudentSchool = _normalizeSchoolClass(studentSchool);
         final normalizedStudentGrade = _normalizeSchoolClass(studentGrade);
-        
-        if (normalizedStudentSchool == normalizedSchool && normalizedStudentGrade == normalizedClass) {
+
+        if (normalizedStudentSchool == normalizedSchool &&
+            normalizedStudentGrade == normalizedClass) {
           matchCount++;
-          debugPrint('  ✅ Matching student: ${studentData['firstName']} ${studentData['lastName']} ($studentSchool/$studentGrade)');
-          
+          debugPrint(
+              '  ✅ Matching student: ${studentData['firstName']} ${studentData['lastName']} ($studentSchool/$studentGrade)');
+
           // Update student's teacherId
           batch.update(_usersCollection.doc(studentId), {
             'teacherId': teacherId,
             'teacherAssignedAt': FieldValue.serverTimestamp(),
             'updatedAt': FieldValue.serverTimestamp(),
           });
-          
+
           // Add to teacher's students subcollection
           batch.set(
-            _usersCollection.doc(teacherId).collection('students').doc(studentId),
+            _usersCollection
+                .doc(teacherId)
+                .collection('students')
+                .doc(studentId),
             {
               'firstName': studentData['firstName'] ?? '',
               'lastName': studentData['lastName'] ?? '',
@@ -411,7 +441,7 @@ class UserService implements IUserService {
               'autoAssigned': true,
             },
           );
-          
+
           // Add to studentSummaries collection with full performance data
           batch.set(
             _firestore.collection('studentSummaries').doc(studentId),
@@ -426,21 +456,33 @@ class UserService implements IUserService {
               'normalizedClass': normalizedStudentGrade,
               // Include performance data from user document
               'totalXP': studentData['totalXP'] ?? studentData['xp'] ?? 0,
-              'totalQuestions': studentData['totalQuestions'] ?? studentData['questionsSolved'] ?? 0,
-              'subjectsCount': studentData['subjectsCount'] ?? studentData['subjectsSolved'] ?? 0,
-              'avgPercent': studentData['avgPercent'] ?? studentData['accuracy'] ?? 0,
-              'avatar': studentData['profileImageUrl'] ?? studentData['avatar'] ?? studentData['presetAvatar'],
-              'rank': studentData['currentRankName'] ?? studentData['rankName'] ?? studentData['rank'],
-              'displayName': '${studentData['firstName'] ?? ''} ${studentData['lastName'] ?? ''}'.trim(),
+              'totalQuestions': studentData['totalQuestions'] ??
+                  studentData['questionsSolved'] ??
+                  0,
+              'subjectsCount': studentData['subjectsCount'] ??
+                  studentData['subjectsSolved'] ??
+                  0,
+              'avgPercent':
+                  studentData['avgPercent'] ?? studentData['accuracy'] ?? 0,
+              'avatar': studentData['profileImageUrl'] ??
+                  studentData['avatar'] ??
+                  studentData['presetAvatar'],
+              'rank': studentData['currentRankName'] ??
+                  studentData['rankName'] ??
+                  studentData['rank'],
+              'displayName':
+                  '${studentData['firstName'] ?? ''} ${studentData['lastName'] ?? ''}'
+                      .trim(),
               'lastUpdated': FieldValue.serverTimestamp(),
             },
           );
         }
       }
-      
+
       if (matchCount > 0) {
         await batch.commit();
-        debugPrint('Successfully linked $matchCount students to teacher $teacherId');
+        debugPrint(
+            'Successfully linked $matchCount students to teacher $teacherId');
       } else {
         debugPrint('No matching students found for teacher $teacherId');
       }
@@ -469,51 +511,59 @@ class UserService implements IUserService {
       // Parse firstName and lastName from name if not provided
       String fName = firstName ?? '';
       String lName = lastName ?? '';
-      
+
       if (fName.isEmpty && lName.isEmpty && name != null && name.isNotEmpty) {
         final parts = name.trim().split(' ');
         fName = parts.first;
         lName = parts.length > 1 ? parts.sublist(1).join(' ') : '';
       }
-      
+
       // Find matching teacher based on normalized school and class
       String? matchedTeacherId;
       try {
         final normalizedSchool = _normalizeSchoolClass(schoolName);
         final normalizedClass = _normalizeSchoolClass(grade);
-        
+
         if (normalizedSchool == null || normalizedClass == null) {
-          debugPrint('Could not normalize school or class: $schoolName, $grade');
+          debugPrint(
+              'Could not normalize school or class: $schoolName, $grade');
         } else {
           final teachersQuery = await _usersCollection
               .where('role', isEqualTo: UserRole.teacher.name)
               .get();
-          
+
           for (var doc in teachersQuery.docs) {
             final teacherData = doc.data() as Map<String, dynamic>?;
             if (teacherData == null) continue;
-            
-            final teacherSchool = _normalizeSchoolClass((teacherData['school'] ?? '').toString());
-            final teacherClass = _normalizeSchoolClass((teacherData['class'] ?? '').toString());
-            
-            debugPrint('Comparing: Student($normalizedSchool, $normalizedClass) vs Teacher($teacherSchool, $teacherClass)');
-            
-            if (teacherSchool != null && teacherClass != null &&
-                teacherSchool == normalizedSchool && teacherClass == normalizedClass) {
+
+            final teacherSchool =
+                _normalizeSchoolClass((teacherData['school'] ?? '').toString());
+            final teacherClass =
+                _normalizeSchoolClass((teacherData['class'] ?? '').toString());
+
+            debugPrint(
+                'Comparing: Student($normalizedSchool, $normalizedClass) vs Teacher($teacherSchool, $teacherClass)');
+
+            if (teacherSchool != null &&
+                teacherClass != null &&
+                teacherSchool == normalizedSchool &&
+                teacherClass == normalizedClass) {
               matchedTeacherId = doc.id;
-              debugPrint('✓ Matched student to teacher: ${doc.id} (${teacherData['firstName']} ${teacherData['lastName']})');
+              debugPrint(
+                  '✓ Matched student to teacher: ${doc.id} (${teacherData['firstName']} ${teacherData['lastName']})');
               break;
             }
           }
-          
+
           if (matchedTeacherId == null) {
-            debugPrint('✗ No teacher found for normalized school: $normalizedSchool, class: $normalizedClass');
+            debugPrint(
+                '✗ No teacher found for normalized school: $normalizedSchool, class: $normalizedClass');
           }
         }
       } catch (e) {
         debugPrint('Error finding matching teacher: $e');
       }
-      
+
       // Client should not set role; leave role assignment to admin/server.
       final studentData = {
         'role': UserRole.student.name,
@@ -535,7 +585,9 @@ class UserService implements IUserService {
         'lastLoginAt': FieldValue.serverTimestamp(),
       };
 
-      await _usersCollection.doc(userId).set(studentData, SetOptions(merge: true));
+      await _usersCollection
+          .doc(userId)
+          .set(studentData, SetOptions(merge: true));
     } catch (e) {
       debugPrint('Error storing student data: $e');
       rethrow;
@@ -573,7 +625,9 @@ class UserService implements IUserService {
         'lastLoginAt': FieldValue.serverTimestamp(),
       };
 
-      await _usersCollection.doc(userId).set(schoolData, SetOptions(merge: true));
+      await _usersCollection
+          .doc(userId)
+          .set(schoolData, SetOptions(merge: true));
     } catch (e) {
       debugPrint('Error storing school data: $e');
       rethrow;
@@ -581,7 +635,8 @@ class UserService implements IUserService {
   }
 
   /// Get all teachers for a specific school
-  Future<List<Map<String, dynamic>>> getTeachersForSchool(String schoolName) async {
+  Future<List<Map<String, dynamic>>> getTeachersForSchool(
+      String schoolName) async {
     try {
       final querySnapshot = await _usersCollection
           .where('role', isEqualTo: UserRole.teacher.name)
@@ -598,7 +653,8 @@ class UserService implements IUserService {
   }
 
   /// Get all students for a specific school
-  Future<List<Map<String, dynamic>>> getStudentsForSchool(String schoolName) async {
+  Future<List<Map<String, dynamic>>> getStudentsForSchool(
+      String schoolName) async {
     try {
       final querySnapshot = await _usersCollection
           .where('role', isEqualTo: UserRole.student.name)

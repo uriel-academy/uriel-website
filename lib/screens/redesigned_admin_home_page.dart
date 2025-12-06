@@ -801,22 +801,59 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage>
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Welcome header
-          Text(
-            'Welcome back, ${adminName.split(' ').first}!',
-            style: GoogleFonts.playfairDisplay(
-              fontSize: 28,
-              fontWeight: FontWeight.bold,
-              color: AppStyles.primaryNavy,
-            ),
-          ),
-          const SizedBox(height: 8),
-          Text(
-            'Here\'s what\'s happening with your platform today.',
-            style: GoogleFonts.montserrat(
-              fontSize: 14,
-              color: Colors.grey[600],
-            ),
+          // Welcome header with refresh button
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Welcome back, ${adminName.split(' ').first}!',
+                      style: GoogleFonts.playfairDisplay(
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                        color: AppStyles.primaryNavy,
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    Row(
+                      children: [
+                        Text(
+                          'Here\'s what\'s happening with your platform today.',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 14,
+                            color: Colors.grey[600],
+                          ),
+                        ),
+                        if (_lastMetricsRefresh != null) ...[
+                          const SizedBox(width: 8),
+                          Text(
+                            '• Updated ${_getTimeAgo(_lastMetricsRefresh)}',
+                            style: GoogleFonts.montserrat(
+                              fontSize: 12,
+                              color: Colors.grey[500],
+                              fontStyle: FontStyle.italic,
+                            ),
+                          ),
+                        ],
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              IconButton(
+                onPressed: _loadingMetrics ? null : () => _loadAdminMetrics(),
+                icon: Icon(
+                  Icons.refresh,
+                  color: _loadingMetrics
+                      ? Colors.grey[400]
+                      : const Color(0xFF007AFF),
+                ),
+                tooltip: 'Refresh data',
+              ),
+            ],
           ),
 
           const SizedBox(height: 32),
