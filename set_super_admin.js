@@ -30,19 +30,21 @@ async function setAdminRole() {
     
     // Set custom claims
     await admin.auth().setCustomUserClaims(userRecord.uid, { 
-      role: 'super_admin',
+      admin: true,
+      superAdmin: true,
       email: email 
     });
-    console.log('✅ Set custom claims (role: super_admin)');
+    console.log('✅ Set custom claims (superAdmin: true)');
     
-    // Update user document in Firestore
+    // Update user document in Firestore with both isSuperAdmin flag and role
     const db = admin.firestore();
     await db.collection('users').doc(userRecord.uid).set({
-      role: 'super_admin',
+      role: 'admin',
+      isSuperAdmin: true,
       email: email,
-      updatedAt: new Date().toISOString()
+      updatedAt: admin.firestore.FieldValue.serverTimestamp()
     }, { merge: true });
-    console.log('✅ Updated user document in Firestore');
+    console.log('✅ Updated user document in Firestore (role: admin, isSuperAdmin: true)');
     
     console.log(`🎉 SUCCESS: ${email} now has super_admin privileges!`);
     console.log('📝 Note: User should sign out and sign in again to access admin features.');

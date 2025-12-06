@@ -1,0 +1,290 @@
+{"users": [
+{
+  "localId": "1KyEco2NEDVJE2LK61sBuTpmQOj2",
+  "email": "samwilfredaddo@gmail.com",
+  "emailVerified": true,
+  "displayName": "Sam Addo",
+  "photoUrl": "https://firebasestorage.googleapis.com/v0/b/uriel-academy-41fb0.firebasestorage.app/o/profile_images%2F1KyEco2NEDVJE2LK61sBuTpmQOj2.jpg?alt=media&token=bf653df1-ec1b-4354-a452-7cdacb6a886c",
+  "lastSignedInAt": "1764761074616",
+  "createdAt": "1754400126991",
+  "providerUserInfo": [
+    {
+      "providerId": "google.com",
+      "rawId": "117195166399214264654",
+      "email": "samwilfredaddo@gmail.com",
+      "displayName": "Sam Addo",
+      "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocIRadn-wZrRT9BWrZx9YTwx4ht54IDJGTRpXt56P6E1DSHfNA=s96-c"
+    }
+  ]
+},
+{
+  "localId": "2Uinubzgjhd9AWQQPfKOyK5D5a62",
+  "email": "macroleap@gmail.com",
+  "emailVerified": false,
+  "passwordHash": "soal0aBixKi7EJm6YbT1nH1kHkTrHHIwjCxwjeQ0jVPWxiDzjcXJy/nUeFbX8IjgYuE+wMS4vv6+ryPZQM+zhA==",
+  "salt": "wPdmZL4VE5c+NQ==",
+  "displayName": "mark morrison",
+  "lastSignedInAt": "1764950423984",
+  "createdAt": "1761915127680",
+  "customAttributes": "{\"role\":\"teacher\",\"schoolId\":\"ave maria school\",\"teachingGrade\":\"JHS FORM 1\"}",
+  "providerUserInfo": []
+},
+{
+  "localId": "52FNl0EZIVPkxCtA4lDXeNwaNSl1",
+  "email": "baebaeelna998@gmail.com",
+  "emailVerified": true,
+  "displayName": "Living n Loving it",
+  "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocJRUpbQr5im7AX7A1x1vnR025Zoo1wNrxOjf4lz1vRheBWINeKK=s96-c",
+  "lastSignedInAt": "1761248431886",
+  "createdAt": "1761248122347",
+  "providerUserInfo": [
+    {
+      "providerId": "google.com",
+      "rawId": "117889336597480994400",
+      "email": "baebaeelna998@gmail.com",
+      "displayName": "Living n Loving it",
+      "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocJRUpbQr5im7AX7A1x1vnR025Zoo1wNrxOjf4lz1vRheBWINeKK=s96-c"
+    }
+  ]
+},
+{
+  "localId": "9BW6UHZ1szLJ9WnkIqW5jweOP6b2",
+  "email": "wilfredsamaddo@gmail.com",
+  "emailVerified": true,
+  "passwordHash": "pTcs5AtTGsUdGegC5FXZBwK453DF70dzH3NPQT+xlqD14zzs7t0iqz0YilxgMmtgozwYOf5v93cqMYuYYxMNTg==",
+  "salt": "DuD2tCECojp6Gw==",
+  "displayName": "Ave Maria Admin",
+  "lastSignedInAt": "1764966706082",
+  "createdAt": "1764453573455",
+  "disabled": false,
+  "customAttributes": "{\"role\":\"school_admin\",\"school\":\"Ave Maria\"}",
+  "providerUserInfo": []
+},
+{
+  "localId": "AQxA2HZxvdQs390uN530oAAm2ey1",
+  "email": "citizenkankam@gmail.com",
+  "emailVerified": true,
+  "displayName": "Kankam Mensah",
+  "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocINfldAi4bHbYg2i9m6EKwg_AmUllXJFkDIxbHt5OKL8fyWVQ=s96-c",
+  "lastSignedInAt": "1760004894482",
+  "createdAt": "1760004894482",
+  "providerUserInfo": [
+    {
+      "providerId": "google.com",
+      "rawId": "109614976378965493217",
+      "email": "citizenkankam@gmail.com",
+      "displayName": "Kankam Mensah",
+      "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocINfldAi4bHbYg2i9m6EKwg_AmUllXJFkDIxbHt5OKL8fyWVQ=s96-c"
+    }
+  ]
+},
+{
+  "localId": "Aa7VNdNffiRFwzi7gcnRiwtQX3H2",
+  "email": "kelodot@gmail.com",
+  "emailVerified": true,
+  "displayName": "Kelvin Odotei",
+  "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocLiu9LDBagRK8708fSXtQlFktiXM3kehgv6naLohL4o9kfJkA=s96-c",
+  "lastSignedInAt": "1762341049839",
+  "createdAt": "1762341049839",
+  "providerUserInfo": [
+    {
+      "providerId": "google.com",
+      "rawId": "113803094835483190370",
+      "email": "kelodot@gmail.com",
+      "displayName": "Kelvin Odotei",
+      "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocLiu9LDBagRK8708fSXtQlFktiXM3kehgv6naLohL4o9kfJkA=s96-c"
+    }
+  ]
+},
+{
+  "localId": "EAm48Z2jekTyTZ2eNb41OtP9Gl02",
+  "email": "delasedenyo1992@gmail.com",
+  "emailVerified": true,
+  "displayName": "Denyo Delase",
+  "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocIC45b8USii3PUvwEE4qAGWT6uDJWk8aw2iASoR3NFC7a2EzA=s96-c",
+  "lastSignedInAt": "1762351613402",
+  "createdAt": "1762351613402",
+  "providerUserInfo": [
+    {
+      "providerId": "google.com",
+      "rawId": "101680962528001307778",
+      "email": "delasedenyo1992@gmail.com",
+      "displayName": "Denyo Delase",
+      "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocIC45b8USii3PUvwEE4qAGWT6uDJWk8aw2iASoR3NFC7a2EzA=s96-c"
+    }
+  ]
+},
+{
+  "localId": "IRWQEhOtQFddUJ7LoGYGbKyGPeN2",
+  "email": "kbboateng14@gmail.com",
+  "emailVerified": true,
+  "displayName": "Kwaku Boateng",
+  "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocK7lMyyXjKaIL4NfNUjnp_dcrHdVjf_iwtsbkYlsmIQMRPykXZupQ=s96-c",
+  "lastSignedInAt": "1764087722750",
+  "createdAt": "1759244913189",
+  "providerUserInfo": [
+    {
+      "providerId": "google.com",
+      "rawId": "114053118932858973485",
+      "email": "kbboateng14@gmail.com",
+      "displayName": "Kwaku Boateng",
+      "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocK7lMyyXjKaIL4NfNUjnp_dcrHdVjf_iwtsbkYlsmIQMRPykXZupQ=s96-c"
+    }
+  ]
+},
+{
+  "localId": "MwG2smyGApN78SvCk2jznQhKriM2",
+  "email": "jklayy5@gmail.com",
+  "emailVerified": true,
+  "displayName": "juliana gbekley",
+  "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocLa6D8uGHjL_pIKoHD27JI0TvxJee4cTN69u3qkFIUiSmxRFQ=s96-c",
+  "lastSignedInAt": "1759962900584",
+  "createdAt": "1759962900584",
+  "providerUserInfo": [
+    {
+      "providerId": "google.com",
+      "rawId": "109428464433757486399",
+      "email": "jklayy5@gmail.com",
+      "displayName": "juliana gbekley",
+      "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocLa6D8uGHjL_pIKoHD27JI0TvxJee4cTN69u3qkFIUiSmxRFQ=s96-c"
+    }
+  ]
+},
+{
+  "localId": "SxZ2j2wYJyUCyaYXHtgyrxiQFa53",
+  "email": "joyceaddo2019@gmail.com",
+  "emailVerified": true,
+  "displayName": "Joyce Addo",
+  "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocLl6vnQx3SYQf6MpRscDPgVf3ECXo1VLKh7Cvl7CW1rUj6SEQ=s96-c",
+  "lastSignedInAt": "1764101472966",
+  "createdAt": "1764101472965",
+  "providerUserInfo": [
+    {
+      "providerId": "google.com",
+      "rawId": "106736381517082397453",
+      "email": "joyceaddo2019@gmail.com",
+      "displayName": "Joyce Addo",
+      "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocLl6vnQx3SYQf6MpRscDPgVf3ECXo1VLKh7Cvl7CW1rUj6SEQ=s96-c"
+    }
+  ]
+},
+{
+  "localId": "WkwCtJADo5YGRJYqx7KRBYqJ8Ro2",
+  "email": "kulley25@gmail.com",
+  "emailVerified": true,
+  "displayName": " ",
+  "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocISE6WyDg7ir8LVMOYigxAmskB4CMoMHqjoDctiggEYI25aHIUx=s96-c",
+  "lastSignedInAt": "1762352470181",
+  "createdAt": "1762350308237",
+  "providerUserInfo": [
+    {
+      "providerId": "google.com",
+      "rawId": "102208249734979503053",
+      "email": "kulley25@gmail.com",
+      "displayName": "THE ACCRA PAINTER",
+      "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocISE6WyDg7ir8LVMOYigxAmskB4CMoMHqjoDctiggEYI25aHIUx=s96-c"
+    }
+  ]
+},
+{
+  "localId": "bZzmNZ8sILhLsmB4j3keWITmeTy2",
+  "email": "frankirama@gmail.com",
+  "emailVerified": true,
+  "displayName": "Awurama Nkrumah",
+  "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocLprP3ShyHHjnQIIsVmOtplXo_DrJDpfJe0E5ErFfIoY7wofA=s96-c",
+  "lastSignedInAt": "1762383032037",
+  "createdAt": "1762383032036",
+  "providerUserInfo": [
+    {
+      "providerId": "google.com",
+      "rawId": "100246929988697619227",
+      "email": "frankirama@gmail.com",
+      "displayName": "Awurama Nkrumah",
+      "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocLprP3ShyHHjnQIIsVmOtplXo_DrJDpfJe0E5ErFfIoY7wofA=s96-c"
+    }
+  ]
+},
+{
+  "localId": "keDAnJpBnXV8rRhaEthNfKxhyG63",
+  "email": "lafarid808@gmail.com",
+  "emailVerified": true,
+  "displayName": "Farid Laryea",
+  "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocKF4-EAxWohwMAxdkP8_rq3n3VM5NFukRBFXc6U06Kq_2jCHUc=s96-c",
+  "lastSignedInAt": "1762597646237",
+  "createdAt": "1762597646237",
+  "providerUserInfo": [
+    {
+      "providerId": "google.com",
+      "rawId": "103095252662144363183",
+      "email": "lafarid808@gmail.com",
+      "displayName": "Farid Laryea",
+      "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocKF4-EAxWohwMAxdkP8_rq3n3VM5NFukRBFXc6U06Kq_2jCHUc=s96-c"
+    }
+  ]
+},
+{
+  "localId": "mCMrd5GgXQWUF9iwt1yKKywOGRt1",
+  "email": "westendint.school@gmail.com",
+  "emailVerified": true,
+  "displayName": "West End",
+  "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocLloqK8KaQB3oSvssHRnUWwEAZfP8nEtldWEbpuxsRbcZzi2w=s96-c",
+  "lastSignedInAt": "1761246130861",
+  "createdAt": "1761246130860",
+  "providerUserInfo": [
+    {
+      "providerId": "google.com",
+      "rawId": "107184575248404471303",
+      "email": "westendint.school@gmail.com",
+      "displayName": "West End",
+      "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocLloqK8KaQB3oSvssHRnUWwEAZfP8nEtldWEbpuxsRbcZzi2w=s96-c"
+    }
+  ]
+},
+{
+  "localId": "mvmMYG1A79XYqicrtE2FVvH12p53",
+  "email": "test-rme+1@uriel.test",
+  "emailVerified": false,
+  "passwordHash": "nTayydpfnvGDaS1ZWa0fXABwXKArpGeAvDd1VD4WnIvTvlMDwEbJ/CYWl7XjDpcsGnzlkvK/V/BFynYEbX3hdg==",
+  "salt": "YZZUDlF+pdrszw==",
+  "displayName": "RME Tester",
+  "createdAt": "1759446581284",
+  "disabled": false,
+  "providerUserInfo": []
+},
+{
+  "localId": "od2gYGS4k9WQwcLGg9uGjmWysEi1",
+  "email": "studywithuriel@gmail.com",
+  "emailVerified": true,
+  "displayName": "Uriel Education",
+  "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocKRHYln7-2HfaFhbZjNtiLmRokb2q8GOgxGOqeOPLSdxpBXgA=s96-c",
+  "lastSignedInAt": "1765035780215",
+  "createdAt": "1754571957134",
+  "customAttributes": "{\"role\":\"super_admin\",\"email\":\"studywithuriel@gmail.com\"}",
+  "providerUserInfo": [
+    {
+      "providerId": "google.com",
+      "rawId": "100250715445152077276",
+      "email": "studywithuriel@gmail.com",
+      "displayName": "Uriel Education",
+      "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocKRHYln7-2HfaFhbZjNtiLmRokb2q8GOgxGOqeOPLSdxpBXgA=s96-c"
+    }
+  ]
+},
+{
+  "localId": "u0dMy9vISOVJKrNCpm5snlp9eEB3",
+  "email": "terryveith5@gmail.com",
+  "emailVerified": true,
+  "displayName": "Terry Veith",
+  "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocKpM7BcFloQXHnFr8xFiDMB1Xhl3k49vfbrZDkY9-NdD_x0BA=s96-c",
+  "lastSignedInAt": "1759498931071",
+  "createdAt": "1759498931071",
+  "providerUserInfo": [
+    {
+      "providerId": "google.com",
+      "rawId": "107557813967494644141",
+      "email": "terryveith5@gmail.com",
+      "displayName": "Terry Veith",
+      "photoUrl": "https://lh3.googleusercontent.com/a/ACg8ocKpM7BcFloQXHnFr8xFiDMB1Xhl3k49vfbrZDkY9-NdD_x0BA=s96-c"
+    }
+  ]
+}]}

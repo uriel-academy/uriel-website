@@ -2254,18 +2254,20 @@ export const setAdminRole = functions.https.onCall(async (data, context) => {
     
     // Set custom claims
     await admin.auth().setCustomUserClaims(userRecord.uid, { 
-      role: 'super_admin',
+      admin: true,
+      superAdmin: true,
       email: email 
     });
 
-    // Update user document
+    // Update user document with both isSuperAdmin flag and role: 'admin'
     await db.collection('users').doc(userRecord.uid).set({
-      role: 'super_admin',
+      role: 'admin',
+      isSuperAdmin: true,
       email: email,
-      updatedAt: new Date().toISOString()
+      updatedAt: admin.firestore.FieldValue.serverTimestamp()
     }, { merge: true });
 
-    console.log(`Set super_admin role for ${email}`);
+    console.log(`Set super admin role for ${email} (role: 'admin', isSuperAdmin: true)`);
     
     return {
       success: true,
