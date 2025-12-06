@@ -2417,6 +2417,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   ),
                   
                   _buildNavItem(-7, 'Payment'),
+                  _buildNavItem(-9, 'Notifications'),
                   _buildNavItem(-8, 'All Ranks'),
                 ],
               ),
@@ -2502,6 +2503,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       case 'Payment':
         route = '/payment';
         break;
+      case 'Notifications':
+        _showNotificationsDialog();
+        return;
       case 'About Us':
         route = '/about';
         break;

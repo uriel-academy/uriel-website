@@ -1104,6 +1104,7 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
       _buildTriviaPage(),                  // 5: Trivia
       const RedesignedLeaderboardPage(),   // 6: Leaderboard
       _buildFeedbackPage(),                // 7: Feedback
+      _buildNotificationsPage(),           // 8: Notifications
     ];
   }
 
@@ -1117,6 +1118,7 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
       {'index': 5, 'label': 'Trivia'},
       {'index': 6, 'label': 'Leaderboard'},
       {'index': 7, 'label': 'Feedback'},
+      {'index': 8, 'label': 'Notifications'},
     ];
   }
 
@@ -1130,6 +1132,225 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
 
   Widget _buildFeedbackPage() {
     return const FeedbackPage();
+  }
+
+  Widget _buildNotificationsPage() {
+    return Scaffold(
+      backgroundColor: Colors.grey[50],
+      body: Center(
+        child: Container(
+          constraints: const BoxConstraints(maxWidth: 800),
+          padding: const EdgeInsets.all(24),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Notifications',
+                style: GoogleFonts.inter(
+                  fontSize: 28,
+                  fontWeight: FontWeight.w700,
+                  color: const Color(0xFF001F3F),
+                ),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                'View all your messages and notifications',
+                style: GoogleFonts.inter(
+                  fontSize: 16,
+                  color: Colors.grey[600],
+                ),
+              ),
+              const SizedBox(height: 32),
+              Expanded(
+                child: _notifications.isEmpty
+                    ? Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.notifications_off_outlined,
+                              size: 80,
+                              color: Colors.grey[300],
+                            ),
+                            const SizedBox(height: 24),
+                            Text(
+                              'No notifications yet',
+                              style: GoogleFonts.inter(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.grey[600],
+                              ),
+                            ),
+                            const SizedBox(height: 12),
+                            Text(
+                              'Messages from teachers and system will appear here',
+                              textAlign: TextAlign.center,
+                              style: GoogleFonts.inter(
+                                fontSize: 14,
+                                color: Colors.grey[500],
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    : ListView.separated(
+                        itemCount: _notifications.length,
+                        separatorBuilder: (context, index) => const SizedBox(height: 16),
+                        itemBuilder: (context, index) {
+                          final notification = _notifications[index];
+                          return _buildNotificationCard(notification);
+                        },
+                      ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildNotificationCard(Map<String, dynamic> notification) {
+    final isRead = notification['read'] ?? false;
+    final title = notification['title'] ?? 'Notification';
+    final message = notification['message'] ?? '';
+    final senderName = notification['senderName'] ?? 'System';
+    final senderRole = notification['senderRole'] ?? 'app';
+    final timestamp = notification['timestamp'] as Timestamp?;
+    
+    IconData senderIcon;
+    Color senderColor;
+    String senderLabel;
+    
+    if (senderRole == 'super_admin' || senderRole == 'app') {
+      senderIcon = Icons.school_rounded;
+      senderColor = const Color(0xFF007AFF);
+      senderLabel = 'Uriel Academy';
+    } else if (senderRole == 'school_admin') {
+      senderIcon = Icons.admin_panel_settings_rounded;
+      senderColor = const Color(0xFFFF9500);
+      senderLabel = 'School Admin';
+    } else if (senderRole == 'teacher') {
+      senderIcon = Icons.person_rounded;
+      senderColor = const Color(0xFF34C759);
+      senderLabel = 'Teacher';
+    } else {
+      senderIcon = Icons.info_rounded;
+      senderColor = Colors.grey;
+      senderLabel = 'System';
+    }
+    
+    return InkWell(
+      onTap: () => _markNotificationAsRead(notification['id']),
+      child: Container(
+        padding: const EdgeInsets.all(20),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(
+            color: isRead ? Colors.grey[200]! : const Color(0xFF007AFF).withValues(alpha: 0.3),
+            width: isRead ? 1 : 2,
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withValues(alpha: 0.05),
+              blurRadius: 10,
+              offset: const Offset(0, 2),
+            ),
+          ],
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: senderColor.withValues(alpha: 0.12),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Icon(senderIcon, size: 24, color: senderColor),
+                ),
+                const SizedBox(width: 16),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              title,
+                              style: GoogleFonts.inter(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                                color: const Color(0xFF1A1E3F),
+                              ),
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                          if (!isRead)
+                            Container(
+                              width: 10,
+                              height: 10,
+                              margin: const EdgeInsets.only(left: 8),
+                              decoration: const BoxDecoration(
+                                color: Color(0xFF007AFF),
+                                shape: BoxShape.circle,
+                              ),
+                            ),
+                        ],
+                      ),
+                      const SizedBox(height: 4),
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                        decoration: BoxDecoration(
+                          color: senderColor.withValues(alpha: 0.12),
+                          borderRadius: BorderRadius.circular(6),
+                        ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Icon(senderIcon, size: 12, color: senderColor),
+                            const SizedBox(width: 4),
+                            Text(
+                              senderLabel,
+                              style: GoogleFonts.inter(
+                                fontSize: 11,
+                                fontWeight: FontWeight.w500,
+                                color: senderColor,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 16),
+            Text(
+              message,
+              style: GoogleFonts.inter(
+                fontSize: 14,
+                color: Colors.grey[700],
+                height: 1.5,
+              ),
+            ),
+            const SizedBox(height: 12),
+            Text(
+              _formatTimestamp(timestamp),
+              style: GoogleFonts.inter(
+                fontSize: 12,
+                color: Colors.grey[500],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   void _handleStaticPageNavigation(int index) {
