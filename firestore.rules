@@ -32,6 +32,10 @@ service cloud.firestore {
       // Individual privacy is maintained by not exposing sensitive data in the UI
       allow read: if isAuthenticated();
       
+      // Allow users to update their own lastSeen and lastLoginAt fields
+      allow update: if isAuthenticated() && isOwner(userId) && 
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly(['lastSeen', 'lastLoginAt']);
+      
       allow write: if isAuthenticated() && (
         (isOwner(userId) && 
          !('role' in request.resource.data.diff(resource.data).affectedKeys()) &&
