@@ -6,6 +6,7 @@ import 'landing_page.dart';
 import 'home_page.dart'; // Import StudentHomePage
 import 'teacher_home_page.dart'; // Import TeacherHomePage
 import 'school_admin_home_page.dart'; // Import SchoolAdminHomePage
+import 'redesigned_admin_home_page.dart'; // Import SuperAdminHomePage
 
 class AuthGate extends StatelessWidget {
   const AuthGate({super.key});
@@ -58,6 +59,8 @@ class AuthGate extends StatelessWidget {
 
               // Route based on user role
               switch (userRole) {
+                case UserRole.superAdmin:
+                  return const RedesignedAdminHomePage();
                 case UserRole.teacher:
                   return const TeacherHomePage();
                 case UserRole.schoolAdmin:

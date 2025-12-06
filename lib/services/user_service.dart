@@ -20,7 +20,7 @@ abstract class IUserService {
   });
 }
 
-enum UserRole { student, teacher, schoolAdmin }
+enum UserRole { student, teacher, schoolAdmin, superAdmin }
 
 class UserService implements IUserService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
@@ -105,12 +105,19 @@ class UserService implements IUserService {
   Future<UserRole?> getUserRole(String userId) async {
     try {
       final profile = await getUserProfile(userId);
-      if (profile != null && profile['role'] != null) {
-        final roleString = profile['role'] as String;
-        return UserRole.values.firstWhere(
-          (role) => role.name == roleString,
-          orElse: () => UserRole.student, // Default to student
-        );
+      if (profile != null) {
+        // Check for super admin first (either by isSuperAdmin flag or role == 'admin')
+        if (profile['isSuperAdmin'] == true || profile['role'] == 'admin') {
+          return UserRole.superAdmin;
+        }
+        
+        if (profile['role'] != null) {
+          final roleString = profile['role'] as String;
+          return UserRole.values.firstWhere(
+            (role) => role.name == roleString,
+            orElse: () => UserRole.student, // Default to student
+          );
+        }
       }
       return null;
     } catch (e) {
@@ -134,6 +141,13 @@ class UserService implements IUserService {
 
       if (querySnapshot.docs.isNotEmpty) {
         final userData = querySnapshot.docs.first.data() as Map<String, dynamic>;
+        
+        // Check for super admin first (either by isSuperAdmin flag or role == 'admin')
+        if (userData['isSuperAdmin'] == true || userData['role'] == 'admin') {
+          debugPrint('UserService: User is super admin');
+          return UserRole.superAdmin;
+        }
+        
         final roleString = userData['role'] as String?;
         
         debugPrint('UserService: Found role string: $roleString');
@@ -603,6 +617,9 @@ class UserService implements IUserService {
   /// Navigate to appropriate home page based on user role
   static void navigateToHomePage(BuildContext context, UserRole? role) {
     switch (role) {
+      case UserRole.superAdmin:
+        Navigator.pushReplacementNamed(context, '/admin');
+        break;
       case UserRole.student:
         Navigator.pushReplacementNamed(context, '/home');
         break;

@@ -33,6 +33,8 @@ class NavigationHelper {
     
     // Return route based on role
     switch (role) {
+      case UserRole.superAdmin:
+        return '/admin';
       case UserRole.teacher:
         return '/teacher';
       case UserRole.schoolAdmin:

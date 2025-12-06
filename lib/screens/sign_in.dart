@@ -160,6 +160,10 @@ class _SignInPageState extends State<SignInPage> {
     
     try {
       switch (role) {
+        case UserRole.superAdmin:
+          debugPrint('Routing to super admin dashboard');
+          Navigator.pushReplacementNamed(context, '/admin');
+          break;
         case UserRole.teacher:
           debugPrint('Routing to teacher dashboard');
           Navigator.pushReplacementNamed(context, '/teacher');
