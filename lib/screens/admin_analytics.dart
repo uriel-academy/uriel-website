@@ -271,40 +271,129 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Platform Analytics'),
-        backgroundColor: const Color(0xFF1A1E3F),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.refresh),
-            tooltip: 'Refresh Data',
-            onPressed: _loadAnalytics,
-          ),
-          IconButton(
-            icon: const Icon(Icons.file_download),
-            tooltip: 'Export Analytics',
-            onPressed: _exportAnalytics,
-          ),
-        ],
-        bottom: TabBar(
-          controller: _tabController,
-          isScrollable: true,
-          tabs: const [
-            Tab(text: 'Overview', icon: Icon(Icons.dashboard)),
-            Tab(text: 'Users', icon: Icon(Icons.people)),
-            Tab(text: 'Learning', icon: Icon(Icons.school)),
-            Tab(text: 'Content', icon: Icon(Icons.library_books)),
-            Tab(text: 'Engagement', icon: Icon(Icons.trending_up)),
-            Tab(text: 'Collections', icon: Icon(Icons.storage)),
-          ],
-        ),
-      ),
+      backgroundColor: const Color(0xFFF5F5F7),
       body: _isLoading
-          ? const Center(child: CircularProgressIndicator())
-          : Column(
-              children: [
-                _buildDateRangeSelector(),
-                Expanded(
+          ? const Center(child: CircularProgressIndicator(color: Color(0xFF007AFF)))
+          : CustomScrollView(
+              slivers: [
+                // Analytics Header Card
+                SliverToBoxAdapter(
+                  child: Container(
+                    margin: const EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(24),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(18),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withValues(alpha: 0.04),
+                          blurRadius: 20,
+                          offset: const Offset(0, 4),
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Platform Analytics',
+                                  style: TextStyle(
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.grey[900],
+                                    letterSpacing: -0.5,
+                                  ),
+                                ),
+                                const SizedBox(height: 4),
+                                Text(
+                                  'Real-time insights and metrics',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    color: Colors.grey[600],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                _buildActionButton(
+                                  'Refresh',
+                                  Icons.refresh,
+                                  _loadAnalytics,
+                                ),
+                                const SizedBox(width: 12),
+                                _buildActionButton(
+                                  'Export',
+                                  Icons.download,
+                                  _exportAnalytics,
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                        
+                        const SizedBox(height: 24),
+                        
+                        // Date Range Selector
+                        Container(
+                          padding: const EdgeInsets.all(4),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFF5F5F7),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Row(
+                            children: [
+                              _buildDateRangeChip('Today'),
+                              _buildDateRangeChip('Last 7 days'),
+                              _buildDateRangeChip('Last 30 days'),
+                              _buildDateRangeChip('Last 90 days'),
+                              _buildDateRangeChip('All time'),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+
+                // Tab Bar
+                SliverToBoxAdapter(
+                  child: Container(
+                    margin: const EdgeInsets.fromLTRB(20, 0, 20, 20),
+                    child: TabBar(
+                      controller: _tabController,
+                      isScrollable: true,
+                      labelColor: const Color(0xFF007AFF),
+                      unselectedLabelColor: Colors.grey[600],
+                      indicatorColor: const Color(0xFF007AFF),
+                      labelStyle: const TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                      ),
+                      unselectedLabelStyle: const TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      tabs: const [
+                        Tab(text: 'Overview'),
+                        Tab(text: 'Users'),
+                        Tab(text: 'Learning'),
+                        Tab(text: 'Content'),
+                        Tab(text: 'Engagement'),
+                        Tab(text: 'Collections'),
+                      ],
+                    ),
+                  ),
+                ),
+
+                // Tab Content
+                SliverFillRemaining(
                   child: TabBarView(
                     controller: _tabController,
                     children: [
@@ -319,6 +408,74 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
                 ),
               ],
             ),
+    );
+  }
+
+  Widget _buildActionButton(String label, IconData icon, VoidCallback onPressed) {
+    return Material(
+      color: const Color(0xFFF5F5F7),
+      borderRadius: BorderRadius.circular(10),
+      child: InkWell(
+        onTap: onPressed,
+        borderRadius: BorderRadius.circular(10),
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+          child: Row(
+            children: [
+              Icon(icon, size: 18, color: Colors.grey[700]),
+              const SizedBox(width: 8),
+              Text(
+                label,
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.grey[700],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildDateRangeChip(String range) {
+    final isSelected = _selectedDateRange == range;
+    return Expanded(
+      child: GestureDetector(
+        onTap: () {
+          setState(() {
+            _selectedDateRange = range;
+            _setDateRange(range);
+          });
+          _loadAnalytics();
+        },
+        child: Container(
+          padding: const EdgeInsets.symmetric(vertical: 10),
+          decoration: BoxDecoration(
+            color: isSelected ? Colors.white : Colors.transparent,
+            borderRadius: BorderRadius.circular(8),
+            boxShadow: isSelected
+                ? [
+                    BoxShadow(
+                      color: Colors.black.withValues(alpha: 0.06),
+                      blurRadius: 8,
+                      offset: const Offset(0, 2),
+                    ),
+                  ]
+                : null,
+          ),
+          child: Text(
+            range,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 13,
+              fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
+              color: isSelected ? const Color(0xFF007AFF) : Colors.grey[600],
+            ),
+          ),
+        ),
+      ),
     );
   }
 
@@ -361,19 +518,17 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
     final totalNotes = _collectionCounts['notes'] ?? 0;
 
     return SingleChildScrollView(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('Key Metrics', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-          const SizedBox(height: 16),
           GridView.count(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             crossAxisCount: 4,
-            crossAxisSpacing: 16,
-            mainAxisSpacing: 16,
-            childAspectRatio: 1.5,
+            crossAxisSpacing: 12,
+            mainAxisSpacing: 12,
+            childAspectRatio: 1.8,
             children: [
               _buildMetricCard('Total Users', totalUsers, Icons.people, Colors.blue),
               _buildMetricCard('Quizzes Taken', totalQuizzes, Icons.quiz, Colors.green),
@@ -385,7 +540,7 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
               _buildMetricCard('Feedback', _collectionCounts['feedback'] ?? 0, Icons.feedback, Colors.indigo),
             ],
           ),
-          const SizedBox(height: 32),
+          const SizedBox(height: 24),
           _buildQuizAccuracyChart(),
         ],
       ),
@@ -398,107 +553,96 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
     final studentSummaries = _collectionCounts['studentSummaries'] ?? 0;
 
     return SingleChildScrollView(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('User Analytics', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-          const SizedBox(height: 16),
           Row(
             children: [
               Expanded(
-                child: Card(
-                  child: Padding(
-                    padding: const EdgeInsets.all(16),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text('Users by Role', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-                        const SizedBox(height: 16),
-                        if (usersByRole.isNotEmpty)
-                          ...usersByRole.entries.map((entry) {
-                            final percentage = totalUsers > 0 ? (entry.value / totalUsers * 100) : 0;
-                            return Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 8),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(entry.key.toUpperCase()),
-                                      Text('${entry.value} (${percentage.toStringAsFixed(1)}%)'),
-                                    ],
-                                  ),
-                                  const SizedBox(height: 4),
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.circular(4),
-                                    child: LinearProgressIndicator(
-                                      value: percentage / 100,
-                                      backgroundColor: Colors.grey[200],
-                                      color: _getRoleColor(entry.key),
-                                      minHeight: 8,
+                child: Container(
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(color: Colors.grey[200]!),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Users by Role',
+                        style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.grey[900],
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      if (usersByRole.isNotEmpty)
+                        ...usersByRole.entries.map((entry) {
+                          final percentage = totalUsers > 0 ? (entry.value / totalUsers * 100) : 0;
+                          return Padding(
+                            padding: const EdgeInsets.only(bottom: 16),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      entry.key.toUpperCase(),
+                                      style: TextStyle(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.grey[700],
+                                      ),
                                     ),
+                                    Text(
+                                      '${entry.value} (${percentage.toStringAsFixed(1)}%)',
+                                      style: TextStyle(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w600,
+                                        color: Colors.grey[900],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(height: 6),
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(4),
+                                  child: LinearProgressIndicator(
+                                    value: percentage / 100,
+                                    backgroundColor: Colors.grey[100],
+                                    color: _getRoleColor(entry.key),
+                                    minHeight: 6,
                                   ),
-                                ],
-                              ),
-                            );
-                          })
-                        else
-                          const Text('No data available'),
-                      ],
-                    ),
+                                ),
+                              ],
+                            ),
+                          );
+                        })
+                      else
+                        const Text('No data available'),
+                    ],
                   ),
                 ),
               ),
-              const SizedBox(width: 16),
+              const SizedBox(width: 12),
               Expanded(
                 child: Column(
                   children: [
                     _buildStatCard('Total Registered Users', totalUsers, Icons.people),
-                    const SizedBox(height: 16),
+                    const SizedBox(height: 12),
                     _buildStatCard('Student Summaries', studentSummaries, Icons.summarize),
-                    const SizedBox(height: 16),
+                    const SizedBox(height: 12),
                     _buildStatCard('Class Aggregates', _collectionCounts['classAggregates'] ?? 0, Icons.class_),
-                    const SizedBox(height: 16),
+                    const SizedBox(height: 12),
                     _buildStatCard('Leaderboard Entries', _collectionCounts['leaderboardRanks'] ?? 0, Icons.leaderboard),
                   ],
                 ),
               ),
             ],
-          ),
-          const SizedBox(height: 24),
-          Card(
-            child: Padding(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text('User Role Breakdown', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-                  const SizedBox(height: 16),
-                  ...usersByRole.entries.map((entry) => Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 8),
-                        child: Row(
-                          children: [
-                            Container(
-                              width: 12,
-                              height: 12,
-                              decoration: BoxDecoration(
-                                color: _getRoleColor(entry.key),
-                                shape: BoxShape.circle,
-                              ),
-                            ),
-                            const SizedBox(width: 12),
-                            Expanded(child: Text(entry.key.toUpperCase())),
-                            Text('${entry.value} users', style: const TextStyle(fontWeight: FontWeight.bold)),
-                            const SizedBox(width: 16),
-                            Text('${((entry.value / totalUsers) * 100).toStringAsFixed(1)}%', style: TextStyle(color: Colors.grey[600])),
-                          ],
-                        ),
-                      )),
-                ],
-              ),
-            ),
           ),
         ],
       ),
@@ -510,19 +654,17 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
     final xpStats = _analyticsData['xpStats'] as Map<String, dynamic>? ?? {};
 
     return SingleChildScrollView(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('Learning Analytics', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-          const SizedBox(height: 16),
           GridView.count(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             crossAxisCount: 3,
-            crossAxisSpacing: 16,
-            mainAxisSpacing: 16,
-            childAspectRatio: 1.5,
+            crossAxisSpacing: 12,
+            mainAxisSpacing: 12,
+            childAspectRatio: 1.8,
             children: [
               _buildMetricCard('Total Quizzes', quizStats['total'] ?? 0, Icons.quiz, Colors.blue),
               _buildMetricCard('Avg Score', (quizStats['averageScore'] ?? 0).toStringAsFixed(1), Icons.grade, Colors.green),
@@ -532,42 +674,55 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
               _buildMetricCard('XP Transactions', xpStats['totalTransactions'] ?? 0, Icons.account_balance_wallet, Colors.amber),
             ],
           ),
-          const SizedBox(height: 24),
-          Card(
-            child: Padding(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text('XP by Activity', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-                  const SizedBox(height: 16),
-                  if (xpStats['byReason'] != null)
-                    ...(xpStats['byReason'] as Map<String, int>).entries.map((entry) => Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 8),
-                          child: Row(
-                            children: [
-                              Expanded(child: Text(entry.key)),
-                              Text('${entry.value} XP', style: const TextStyle(fontWeight: FontWeight.bold)),
-                            ],
-                          ),
-                        ))
-                  else
-                    const Text('No XP data available'),
-                ],
-              ),
+          const SizedBox(height: 20),
+          Container(
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: Colors.grey[200]!),
             ),
-          ),
-          const SizedBox(height: 24),
-          Row(
-            children: [
-              Expanded(
-                child: _buildStatCard('Trivia Results', _collectionCounts['trivia_results'] ?? 0, Icons.psychology),
-              ),
-              const SizedBox(width: 16),
-              Expanded(
-                child: _buildStatCard('Grade Predictions', _collectionCounts['gradePredictions'] ?? 0, Icons.insights),
-              ),
-            ],
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'XP by Activity',
+                  style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.grey[900],
+                  ),
+                ),
+                const SizedBox(height: 16),
+                if (xpStats['byReason'] != null)
+                  ...(xpStats['byReason'] as Map<String, int>).entries.map((entry) => Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 8),
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: Text(
+                                entry.key,
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Colors.grey[700],
+                                ),
+                              ),
+                            ),
+                            Text(
+                              '${entry.value} XP',
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.grey[900],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ))
+                else
+                  const Text('No XP data available'),
+              ],
+            ),
           ),
         ],
       ),
@@ -578,19 +733,17 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
     final contentStats = _analyticsData['contentStats'] as Map<String, dynamic>? ?? {};
 
     return SingleChildScrollView(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('Content Analytics', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-          const SizedBox(height: 16),
           GridView.count(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             crossAxisCount: 3,
-            crossAxisSpacing: 16,
-            mainAxisSpacing: 16,
-            childAspectRatio: 1.5,
+            crossAxisSpacing: 12,
+            mainAxisSpacing: 12,
+            childAspectRatio: 1.8,
             children: [
               _buildMetricCard('Questions (MCQ)', _collectionCounts['questions'] ?? 0, Icons.radio_button_checked, Colors.blue),
               _buildMetricCard('French Questions', _collectionCounts['french_questions'] ?? 0, Icons.language, Colors.pink),
@@ -599,28 +752,9 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
               _buildMetricCard('Storybooks', contentStats['storybooks'] ?? 0, Icons.menu_book, Colors.orange),
               _buildMetricCard('Textbooks', contentStats['textbooks'] ?? 0, Icons.book, Colors.indigo),
               _buildMetricCard('Courses', contentStats['courses'] ?? 0, Icons.school, Colors.teal),
-              _buildMetricCard('Notifications Sent', _collectionCounts['notifications'] ?? 0, Icons.notifications, Colors.amber),
+              _buildMetricCard('Notifications', _collectionCounts['notifications'] ?? 0, Icons.notifications, Colors.amber),
               _buildMetricCard('Lesson Plans', _collectionCounts['lesson_plans'] ?? 0, Icons.event_note, Colors.cyan),
             ],
-          ),
-          const SizedBox(height: 24),
-          Card(
-            child: Padding(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text('Content Breakdown', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-                  const SizedBox(height: 16),
-                  _buildContentBreakdownBar('Questions (MCQ)', _collectionCounts['questions'] ?? 0, Colors.blue),
-                  _buildContentBreakdownBar('French Questions', _collectionCounts['french_questions'] ?? 0, Colors.pink),
-                  _buildContentBreakdownBar('Theory Questions', _collectionCounts['theoryQuestions'] ?? 0, Colors.purple),
-                  _buildContentBreakdownBar('Study Notes', contentStats['notes'] ?? 0, Colors.green),
-                  _buildContentBreakdownBar('Storybooks', contentStats['storybooks'] ?? 0, Colors.orange),
-                  _buildContentBreakdownBar('Textbooks', contentStats['textbooks'] ?? 0, Colors.indigo),
-                ],
-              ),
-            ),
           ),
         ],
       ),
@@ -631,55 +765,25 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
     final engagementStats = _analyticsData['engagementStats'] as Map<String, dynamic>? ?? {};
 
     return SingleChildScrollView(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('Engagement Analytics', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-          const SizedBox(height: 16),
           GridView.count(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             crossAxisCount: 3,
-            crossAxisSpacing: 16,
-            mainAxisSpacing: 16,
-            childAspectRatio: 1.5,
+            crossAxisSpacing: 12,
+            mainAxisSpacing: 12,
+            childAspectRatio: 1.8,
             children: [
               _buildMetricCard('Active Users (7d)', engagementStats['activeUsers'] ?? 0, Icons.people_outline, Colors.blue),
               _buildMetricCard('Avg Streak', (engagementStats['averageStreak'] ?? 0).toStringAsFixed(1), Icons.local_fire_department, Colors.orange),
               _buildMetricCard('Max Streak', engagementStats['maxStreak'] ?? 0, Icons.whatshot, Colors.red),
-              _buildMetricCard('Total Notifications', _collectionCounts['notifications'] ?? 0, Icons.notifications_active, Colors.amber),
-              _buildMetricCard('Feedback Submitted', _collectionCounts['feedback'] ?? 0, Icons.rate_review, Colors.green),
-              _buildMetricCard('AI Chat Sessions', _collectionCounts['aiChats'] ?? 0, Icons.chat, Colors.purple),
+              _buildMetricCard('Notifications', _collectionCounts['notifications'] ?? 0, Icons.notifications_active, Colors.amber),
+              _buildMetricCard('Feedback', _collectionCounts['feedback'] ?? 0, Icons.rate_review, Colors.green),
+              _buildMetricCard('AI Chats', _collectionCounts['aiChats'] ?? 0, Icons.chat, Colors.purple),
             ],
-          ),
-          const SizedBox(height: 24),
-          Card(
-            child: Padding(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text('Engagement Metrics', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-                  const SizedBox(height: 16),
-                  ListTile(
-                    leading: const Icon(Icons.trending_up, color: Colors.green),
-                    title: const Text('Active Users (Last 7 Days)'),
-                    trailing: Text('${engagementStats['activeUsers'] ?? 0}', style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-                  ),
-                  ListTile(
-                    leading: const Icon(Icons.local_fire_department, color: Colors.orange),
-                    title: const Text('Average Streak'),
-                    trailing: Text('${(engagementStats['averageStreak'] ?? 0).toStringAsFixed(1)} days', style: const TextStyle(fontSize: 18)),
-                  ),
-                  ListTile(
-                    leading: const Icon(Icons.whatshot, color: Colors.red),
-                    title: const Text('Longest Streak'),
-                    trailing: Text('${engagementStats['maxStreak'] ?? 0} days', style: const TextStyle(fontSize: 18)),
-                  ),
-                ],
-              ),
-            ),
           ),
         ],
       ),
@@ -688,60 +792,111 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
 
   Widget _buildCollectionsTab() {
     final collections = [
-      {'name': 'users', 'label': 'Users', 'icon': Icons.people},
-      {'name': 'questions', 'label': 'Questions (MCQ)', 'icon': Icons.quiz},
-      {'name': 'french_questions', 'label': 'French Questions', 'icon': Icons.language},
-      {'name': 'theoryQuestions', 'label': 'Theory Questions', 'icon': Icons.assignment},
-      {'name': 'quizzes', 'label': 'Quiz Attempts', 'icon': Icons.assignment_turned_in},
-      {'name': 'xp_transactions', 'label': 'XP Transactions', 'icon': Icons.account_balance_wallet},
-      {'name': 'notes', 'label': 'Study Notes', 'icon': Icons.note},
-      {'name': 'storybooks', 'label': 'Storybooks', 'icon': Icons.menu_book},
-      {'name': 'courses', 'label': 'Courses', 'icon': Icons.school},
-      {'name': 'textbook_content', 'label': 'Textbook Content', 'icon': Icons.book},
-      {'name': 'studentSummaries', 'label': 'Student Summaries', 'icon': Icons.summarize},
-      {'name': 'classAggregates', 'label': 'Class Aggregates', 'icon': Icons.class_},
-      {'name': 'leaderboardRanks', 'label': 'Leaderboard Ranks', 'icon': Icons.leaderboard},
-      {'name': 'notifications', 'label': 'Notifications', 'icon': Icons.notifications},
-      {'name': 'feedback', 'label': 'Feedback', 'icon': Icons.feedback},
-      {'name': 'trivia_results', 'label': 'Trivia Results', 'icon': Icons.psychology},
-      {'name': 'aiChats', 'label': 'AI Chats', 'icon': Icons.smart_toy},
-      {'name': 'audits', 'label': 'Audit Logs', 'icon': Icons.history},
+      {'name': 'users', 'label': 'Users'},
+      {'name': 'questions', 'label': 'Questions (MCQ)'},
+      {'name': 'french_questions', 'label': 'French Questions'},
+      {'name': 'theoryQuestions', 'label': 'Theory Questions'},
+      {'name': 'quizzes', 'label': 'Quiz Attempts'},
+      {'name': 'xp_transactions', 'label': 'XP Transactions'},
+      {'name': 'notes', 'label': 'Study Notes'},
+      {'name': 'storybooks', 'label': 'Storybooks'},
+      {'name': 'courses', 'label': 'Courses'},
+      {'name': 'textbook_content', 'label': 'Textbook Content'},
+      {'name': 'studentSummaries', 'label': 'Student Summaries'},
+      {'name': 'classAggregates', 'label': 'Class Aggregates'},
+      {'name': 'leaderboardRanks', 'label': 'Leaderboard Ranks'},
+      {'name': 'notifications', 'label': 'Notifications'},
+      {'name': 'feedback', 'label': 'Feedback'},
+      {'name': 'trivia_results', 'label': 'Trivia Results'},
+      {'name': 'aiChats', 'label': 'AI Chats'},
+      {'name': 'audits', 'label': 'Audit Logs'},
     ];
 
     return SingleChildScrollView(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('Firestore Collections', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-          const SizedBox(height: 8),
-          const Text('Real-time document counts for all collections', style: TextStyle(color: Colors.grey)),
-          const SizedBox(height: 16),
-          Card(
+          Container(
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: Colors.grey[200]!),
+            ),
             child: Column(
-              children: collections.map((collection) {
-                final count = _collectionCounts[collection['name']] ?? 0;
-                return ListTile(
-                  leading: Icon(collection['icon'] as IconData, color: Colors.blue),
-                  title: Text(collection['label'] as String),
-                  subtitle: Text(collection['name'] as String),
-                  trailing: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                    decoration: BoxDecoration(
-                      color: Colors.blue.withOpacity(0.1),
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Text(
-                      count.toString(),
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                        color: Colors.blue,
-                      ),
-                    ),
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Firestore Collections',
+                  style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.grey[900],
                   ),
-                );
-              }).toList(),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  'Real-time document counts for all collections',
+                  style: TextStyle(
+                    fontSize: 13,
+                    color: Colors.grey[600],
+                  ),
+                ),
+                const SizedBox(height: 20),
+                ...collections.map((collection) {
+                  final count = _collectionCounts[collection['name']] ?? 0;
+                  return Container(
+                    margin: const EdgeInsets.only(bottom: 12),
+                    padding: const EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFF5F5F7),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              collection['label'] as String,
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.grey[900],
+                              ),
+                            ),
+                            const SizedBox(height: 2),
+                            Text(
+                              collection['name'] as String,
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: Colors.grey[600],
+                              ),
+                            ),
+                          ],
+                        ),
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Text(
+                            count.toString(),
+                            style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 15,
+                              color: Colors.grey[900],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                }),
+              ],
             ),
           ),
         ],
@@ -750,86 +905,70 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
   }
 
   Widget _buildMetricCard(String label, dynamic value, IconData icon, Color color) {
-    return Card(
-      elevation: 2,
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(icon, size: 32, color: color),
-            const SizedBox(height: 8),
-            Text(
-              value.toString(),
-              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+    return Container(
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: Colors.grey[200]!),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            label,
+            style: TextStyle(
+              fontSize: 13,
+              color: Colors.grey[600],
+              fontWeight: FontWeight.w500,
             ),
-            const SizedBox(height: 4),
-            Text(
-              label,
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 12, color: Colors.grey[600]),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            value.toString(),
+            style: TextStyle(
+              fontSize: 32,
+              fontWeight: FontWeight.w600,
+              color: Colors.grey[900],
+              letterSpacing: -1,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
 
   Widget _buildStatCard(String label, int value, IconData icon) {
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Row(
-          children: [
-            Icon(icon, size: 32, color: Colors.blue),
-            const SizedBox(width: 16),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(label, style: const TextStyle(fontSize: 12)),
-                  Text(value.toString(), style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                ],
-              ),
-            ),
-          ],
-        ),
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: Colors.grey[200]!),
       ),
-    );
-  }
-
-  Widget _buildContentBreakdownBar(String label, int count, Color color) {
-    final maxCount = [
-      _collectionCounts['questions'] ?? 0,
-      _collectionCounts['french_questions'] ?? 0,
-      _collectionCounts['theoryQuestions'] ?? 0,
-      _analyticsData['contentStats']?['notes'] ?? 0,
-      _analyticsData['contentStats']?['storybooks'] ?? 0,
-      _analyticsData['contentStats']?['textbooks'] ?? 0,
-    ].reduce((a, b) => a > b ? a : b);
-
-    final percentage = maxCount > 0 ? count / maxCount : 0.0;
-
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: Row(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(label),
-              Text('$count', style: const TextStyle(fontWeight: FontWeight.bold)),
-            ],
-          ),
-          const SizedBox(height: 4),
-          ClipRRect(
-            borderRadius: BorderRadius.circular(4),
-            child: LinearProgressIndicator(
-              value: percentage,
-              backgroundColor: Colors.grey[200],
-              color: color,
-              minHeight: 8,
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  label,
+                  style: TextStyle(
+                    fontSize: 13,
+                    color: Colors.grey[600],
+                  ),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  value.toString(),
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.grey[900],
+                  ),
+                ),
+              ],
             ),
           ),
         ],
@@ -840,85 +979,105 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> with SingleTick
   Widget _buildQuizAccuracyChart() {
     final quizStats = _analyticsData['quizStats'] as Map<String, dynamic>? ?? {};
     final accuracy = (quizStats['accuracy'] ?? 0).toDouble();
-    final remaining = (100 - accuracy).toDouble();
 
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text('Overall Quiz Accuracy', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-            const SizedBox(height: 16),
-            Row(
-              children: [
-                Expanded(
-                  child: Column(
-                    children: [
-                      Container(
-                        width: 150,
-                        height: 150,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.green.withOpacity(0.1),
-                          border: Border.all(color: Colors.green, width: 8),
-                        ),
-                        child: Center(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                '${accuracy.toStringAsFixed(1)}%',
-                                style: const TextStyle(fontSize: 32, fontWeight: FontWeight.bold, color: Colors.green),
-                              ),
-                              const Text('Accuracy', style: TextStyle(color: Colors.grey)),
-                            ],
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 16),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(width: 12, height: 12, color: Colors.green),
-                          const SizedBox(width: 8),
-                          const Text('Correct'),
-                          const SizedBox(width: 16),
-                          Container(width: 12, height: 12, color: Colors.red.withOpacity(0.3)),
-                          const SizedBox(width: 8),
-                          const Text('Incorrect'),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      _buildStatRow('Total Questions', quizStats['totalQuestions'] ?? 0, Icons.quiz),
-                      const SizedBox(height: 16),
-                      _buildStatRow('Correct Answers', quizStats['totalCorrect'] ?? 0, Icons.check_circle, color: Colors.green),
-                      const SizedBox(height: 16),
-                      _buildStatRow('Incorrect Answers', (quizStats['totalQuestions'] ?? 0) - (quizStats['totalCorrect'] ?? 0), Icons.cancel, color: Colors.red),
-                    ],
-                  ),
-                ),
-              ],
+    return Container(
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: Colors.grey[200]!),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Overall Quiz Accuracy',
+            style: TextStyle(
+              fontSize: 17,
+              fontWeight: FontWeight.w600,
+              color: Colors.grey[900],
             ),
-          ],
-        ),
+          ),
+          const SizedBox(height: 20),
+          Row(
+            children: [
+              Expanded(
+                child: Column(
+                  children: [
+                    Container(
+                      width: 150,
+                      height: 150,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: const Color(0xFF34C759).withValues(alpha: 0.1),
+                        border: Border.all(color: const Color(0xFF34C759), width: 8),
+                      ),
+                      child: Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              '${accuracy.toStringAsFixed(1)}%',
+                              style: const TextStyle(
+                                fontSize: 36,
+                                fontWeight: FontWeight.w600,
+                                color: Color(0xFF34C759),
+                                letterSpacing: -1,
+                              ),
+                            ),
+                            Text(
+                              'Accuracy',
+                              style: TextStyle(
+                                fontSize: 13,
+                                color: Colors.grey[600],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    _buildStatRow('Total Questions', quizStats['totalQuestions'] ?? 0, null),
+                    const SizedBox(height: 16),
+                    _buildStatRow('Correct Answers', quizStats['totalCorrect'] ?? 0, null, color: const Color(0xFF34C759)),
+                    const SizedBox(height: 16),
+                    _buildStatRow('Incorrect Answers', (quizStats['totalQuestions'] ?? 0) - (quizStats['totalCorrect'] ?? 0), null, color: const Color(0xFFFF3B30)),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
 
-  Widget _buildStatRow(String label, int value, IconData icon, {Color? color}) {
+  Widget _buildStatRow(String label, int value, IconData? icon, {Color? color}) {
     return Row(
       children: [
-        Icon(icon, color: color ?? Colors.blue),
-        const SizedBox(width: 8),
-        Expanded(child: Text(label)),
-        Text(value.toString(), style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: color)),
+        Expanded(
+          child: Text(
+            label,
+            style: TextStyle(
+              fontSize: 14,
+              color: Colors.grey[700],
+            ),
+          ),
+        ),
+        Text(
+          value.toString(),
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.w600,
+            color: color ?? Colors.grey[900],
+          ),
+        ),
       ],
     );
   }
