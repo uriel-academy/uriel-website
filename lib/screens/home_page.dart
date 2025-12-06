@@ -123,6 +123,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   List<Map<String, dynamic>> _notifications = [];
   StreamSubscription<QuerySnapshot>? _notificationsSubscription;
   String? _selectedNotificationId;
+  int _notificationPage = 0;
+  static const int _notificationsPerPage = 5;
 
   @override
   void initState() {
@@ -7232,14 +7234,87 @@ Widget _buildFeedbackPage() {
                                   ],
                                 ),
                               )
-                            : ListView.separated(
-                                shrinkWrap: true,
-                                padding: const EdgeInsets.all(8),
-                                itemCount: _notifications.length,
-                                separatorBuilder: (context, index) => const Divider(height: 1),
-                                itemBuilder: (context, index) {
-                                  final notification = _notifications[index];
-                                  return _buildNotificationItem(notification);
+                            : StatefulBuilder(
+                                builder: (context, setDialogState) {
+                                  final totalPages = (_notifications.length / _notificationsPerPage).ceil();
+                                  final startIndex = _notificationPage * _notificationsPerPage;
+                                  final endIndex = (startIndex + _notificationsPerPage).clamp(0, _notifications.length);
+                                  final paginatedNotifications = _notifications.sublist(startIndex, endIndex);
+                                  
+                                  return Column(
+                                    children: [
+                                      Expanded(
+                                        child: ListView.separated(
+                                          shrinkWrap: true,
+                                          padding: const EdgeInsets.all(8),
+                                          itemCount: paginatedNotifications.length,
+                                          separatorBuilder: (context, index) => const Divider(height: 1),
+                                          itemBuilder: (context, index) {
+                                            final notification = paginatedNotifications[index];
+                                            return _buildNotificationItem(notification);
+                                          },
+                                        ),
+                                      ),
+                                      if (totalPages > 1)
+                                        Container(
+                                          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                                          decoration: BoxDecoration(
+                                            color: Colors.grey[50],
+                                            border: Border(top: BorderSide(color: Colors.grey[200]!)),
+                                          ),
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Text(
+                                                'Page ${_notificationPage + 1} of $totalPages',
+                                                style: GoogleFonts.inter(
+                                                  fontSize: 13,
+                                                  color: Colors.grey[700],
+                                                  fontWeight: FontWeight.w500,
+                                                ),
+                                              ),
+                                              Row(
+                                                children: [
+                                                  IconButton(
+                                                    icon: const Icon(Icons.chevron_left),
+                                                    onPressed: _notificationPage > 0
+                                                        ? () {
+                                                            setDialogState(() {
+                                                              setState(() {
+                                                                _notificationPage--;
+                                                              });
+                                                            });
+                                                          }
+                                                        : null,
+                                                    iconSize: 20,
+                                                    padding: EdgeInsets.zero,
+                                                    constraints: const BoxConstraints(),
+                                                    color: const Color(0xFF007AFF),
+                                                  ),
+                                                  const SizedBox(width: 16),
+                                                  IconButton(
+                                                    icon: const Icon(Icons.chevron_right),
+                                                    onPressed: _notificationPage < totalPages - 1
+                                                        ? () {
+                                                            setDialogState(() {
+                                                              setState(() {
+                                                                _notificationPage++;
+                                                              });
+                                                            });
+                                                          }
+                                                        : null,
+                                                    iconSize: 20,
+                                                    padding: EdgeInsets.zero,
+                                                    constraints: const BoxConstraints(),
+                                                    color: const Color(0xFF007AFF),
+                                                  ),
+                                                ],
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                    ],
+                                  );
                                 },
                               ),
                       ),
