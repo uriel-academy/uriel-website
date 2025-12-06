@@ -7,6 +7,7 @@ import 'dart:async';
 import '../constants/app_styles.dart';
 import 'user_management_page.dart';
 import 'content_management_page.dart';
+import 'admin_analytics.dart';
 import 'redesigned_leaderboard_page.dart';
 import 'school_admin_students_page.dart';
 import 'school_admin_teachers_page.dart';
@@ -689,7 +690,7 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
       _buildDashboardTab(),                 // 0: Dashboard
       const UserManagementPage(),           // 1: Users
       const ContentManagementPage(),        // 2: Content
-      _buildPlaceholderTab('Analytics'),    // 3: Analytics
+      const AdminAnalyticsPage(),           // 3: Analytics
       _buildPlaceholderTab('Monitoring'),   // 4: Monitoring
       Container(),                          // 5: Placeholder
       Container(),                          // 6: Placeholder
