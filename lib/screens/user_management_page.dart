@@ -660,7 +660,7 @@ class _UserManagementPageState extends State<UserManagementPage> {
                   radius: 18,
                   backgroundColor: _getRoleColor(role).withValues(alpha: 0.15),
                   child: Text(
-                    name[0].toUpperCase(),
+                    name.isNotEmpty ? name[0].toUpperCase() : '?',
                     style: GoogleFonts.montserrat(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
@@ -798,7 +798,7 @@ class _UserManagementPageState extends State<UserManagementPage> {
                       backgroundColor:
                           _getRoleColor(role).withValues(alpha: 0.15),
                       child: Text(
-                        name[0].toUpperCase(),
+                        name.isNotEmpty ? name[0].toUpperCase() : '?',
                         style: GoogleFonts.montserrat(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
