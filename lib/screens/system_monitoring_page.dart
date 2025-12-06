@@ -27,6 +27,13 @@ class _SystemMonitoringPageState extends State<SystemMonitoringPage> {
   List<Map<String, dynamic>> _recentXPTransactions = [];
   List<Map<String, dynamic>> _systemAlerts = [];
 
+  // Pagination
+  final int _itemsPerPage = 10;
+  int _activeUsersPage = 1;
+  int _ongoingQuizzesPage = 1;
+  int _xpTransactionsPage = 1;
+  int _errorsPage = 1;
+
   // Performance metrics
   double _avgResponseTime = 0.0;
   int _totalRequests = 0;
@@ -475,6 +482,9 @@ class _SystemMonitoringPageState extends State<SystemMonitoringPage> {
                       Icons.people,
                       const Color(0xFF007AFF),
                       _buildActiveUsersList(),
+                      _activeUsersPage,
+                      (page) => setState(() => _activeUsersPage = page),
+                      _activeUsers.length,
                     ),
                   ),
                   const SizedBox(width: 16),
@@ -486,6 +496,9 @@ class _SystemMonitoringPageState extends State<SystemMonitoringPage> {
                       Icons.quiz,
                       const Color(0xFF9B59B6),
                       _buildOngoingQuizzesList(),
+                      _ongoingQuizzesPage,
+                      (page) => setState(() => _ongoingQuizzesPage = page),
+                      _ongoingQuizzes.length,
                     ),
                   ),
                 ],
@@ -510,6 +523,9 @@ class _SystemMonitoringPageState extends State<SystemMonitoringPage> {
                       Icons.star,
                       const Color(0xFF2ECC71),
                       _buildXPTransactionsList(),
+                      _xpTransactionsPage,
+                      (page) => setState(() => _xpTransactionsPage = page),
+                      _recentXPTransactions.length,
                     ),
                   ),
                   const SizedBox(width: 16),
@@ -521,6 +537,9 @@ class _SystemMonitoringPageState extends State<SystemMonitoringPage> {
                       Icons.error,
                       const Color(0xFFDC3545),
                       _buildErrorsList(),
+                      _errorsPage,
+                      (page) => setState(() => _errorsPage = page),
+                      _recentErrors.length,
                     ),
                   ),
                 ],
@@ -666,7 +685,13 @@ class _SystemMonitoringPageState extends State<SystemMonitoringPage> {
     IconData icon,
     Color color,
     Widget content,
+    int currentPage,
+    Function(int) onPageChanged,
+    int totalItems,
   ) {
+    final totalPages =
+        (totalItems / _itemsPerPage).ceil().clamp(1, double.infinity).toInt();
+
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
@@ -726,6 +751,48 @@ class _SystemMonitoringPageState extends State<SystemMonitoringPage> {
             constraints: const BoxConstraints(maxHeight: 300),
             child: content,
           ),
+          if (totalPages > 1) ...[
+            const Divider(height: 1),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Page $currentPage of $totalPages',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 12,
+                      color: Colors.grey[600],
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      IconButton(
+                        onPressed: currentPage > 1
+                            ? () => onPageChanged(currentPage - 1)
+                            : null,
+                        icon: const Icon(Icons.chevron_left, size: 20),
+                        color: currentPage > 1 ? color : Colors.grey[400],
+                        padding: EdgeInsets.zero,
+                        constraints: const BoxConstraints(),
+                      ),
+                      const SizedBox(width: 16),
+                      IconButton(
+                        onPressed: currentPage < totalPages
+                            ? () => onPageChanged(currentPage + 1)
+                            : null,
+                        icon: const Icon(Icons.chevron_right, size: 20),
+                        color:
+                            currentPage < totalPages ? color : Colors.grey[400],
+                        padding: EdgeInsets.zero,
+                        constraints: const BoxConstraints(),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
         ],
       ),
     );
@@ -736,11 +803,15 @@ class _SystemMonitoringPageState extends State<SystemMonitoringPage> {
       return _buildEmptyState('No active users');
     }
 
+    final startIndex = (_activeUsersPage - 1) * _itemsPerPage;
+    final endIndex = (startIndex + _itemsPerPage).clamp(0, _activeUsers.length);
+    final paginatedUsers = _activeUsers.sublist(startIndex, endIndex);
+
     return ListView.builder(
       shrinkWrap: true,
-      itemCount: _activeUsers.length,
+      itemCount: paginatedUsers.length,
       itemBuilder: (context, index) {
-        final user = _activeUsers[index];
+        final user = paginatedUsers[index];
         return ListTile(
           dense: true,
           leading: CircleAvatar(
@@ -781,11 +852,16 @@ class _SystemMonitoringPageState extends State<SystemMonitoringPage> {
       return _buildEmptyState('No ongoing quizzes');
     }
 
+    final startIndex = (_ongoingQuizzesPage - 1) * _itemsPerPage;
+    final endIndex =
+        (startIndex + _itemsPerPage).clamp(0, _ongoingQuizzes.length);
+    final paginatedQuizzes = _ongoingQuizzes.sublist(startIndex, endIndex);
+
     return ListView.builder(
       shrinkWrap: true,
-      itemCount: _ongoingQuizzes.length,
+      itemCount: paginatedQuizzes.length,
       itemBuilder: (context, index) {
-        final quiz = _ongoingQuizzes[index];
+        final quiz = paginatedQuizzes[index];
         return ListTile(
           dense: true,
           leading: const Icon(Icons.quiz, size: 20, color: Color(0xFF9B59B6)),
@@ -813,11 +889,17 @@ class _SystemMonitoringPageState extends State<SystemMonitoringPage> {
       return _buildEmptyState('No recent XP transactions');
     }
 
+    final startIndex = (_xpTransactionsPage - 1) * _itemsPerPage;
+    final endIndex =
+        (startIndex + _itemsPerPage).clamp(0, _recentXPTransactions.length);
+    final paginatedTransactions =
+        _recentXPTransactions.sublist(startIndex, endIndex);
+
     return ListView.builder(
       shrinkWrap: true,
-      itemCount: _recentXPTransactions.length,
+      itemCount: paginatedTransactions.length,
       itemBuilder: (context, index) {
-        final transaction = _recentXPTransactions[index];
+        final transaction = paginatedTransactions[index];
         final amount = transaction['amount'] as int;
         return ListTile(
           dense: true,
@@ -856,11 +938,16 @@ class _SystemMonitoringPageState extends State<SystemMonitoringPage> {
       return _buildEmptyState('No recent errors');
     }
 
+    final startIndex = (_errorsPage - 1) * _itemsPerPage;
+    final endIndex =
+        (startIndex + _itemsPerPage).clamp(0, _recentErrors.length);
+    final paginatedErrors = _recentErrors.sublist(startIndex, endIndex);
+
     return ListView.builder(
       shrinkWrap: true,
-      itemCount: _recentErrors.length,
+      itemCount: paginatedErrors.length,
       itemBuilder: (context, index) {
-        final error = _recentErrors[index];
+        final error = paginatedErrors[index];
         return ListTile(
           dense: true,
           leading: Icon(

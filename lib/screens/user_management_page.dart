@@ -82,11 +82,16 @@ class _UserManagementPageState extends State<UserManagementPage> {
           'school': data['school'] ?? 'N/A',
           'class': data['class'] ?? data['grade'] ?? 'N/A',
           'role': data['role'] ?? 'student',
+          'xp': (data['totalXP'] ?? data['xp'] ?? 0) as num,
           'lastSeen': lastSeenDate,
           'createdAt': createdDate,
           'avatar': data['avatar'],
-          'parentEmail': data['parentEmail'] ?? data['parent']?['email'] ?? 'N/A',
-          'parentContact': data['parentContact'] ?? data['parent']?['phone'] ?? data['parentPhone'] ?? 'N/A',
+          'parentEmail':
+              data['parentEmail'] ?? data['parent']?['email'] ?? 'N/A',
+          'parentContact': data['parentContact'] ??
+              data['parent']?['phone'] ??
+              data['parentPhone'] ??
+              'N/A',
         });
       }
 
@@ -559,11 +564,11 @@ class _UserManagementPageState extends State<UserManagementPage> {
                     ),
                   ),
                 ),
-                // Role
+                // Role / XP (stacked)
                 Expanded(
                   flex: 2,
                   child: Text(
-                    'Role',
+                    'Role / XP',
                     style: GoogleFonts.montserrat(
                       fontSize: 13,
                       fontWeight: FontWeight.w600,
@@ -741,10 +746,33 @@ class _UserManagementPageState extends State<UserManagementPage> {
               ],
             ),
           ),
-          // Role Badge
+          // Role & XP (stacked)
           Expanded(
             flex: 2,
-            child: _buildRoleBadge(role),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  _getRoleLabel(role),
+                  style: GoogleFonts.montserrat(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w600,
+                    color: _getRoleColor(role),
+                  ),
+                  overflow: TextOverflow.ellipsis,
+                ),
+                const SizedBox(height: 2),
+                Text(
+                  '${_formatNumber(user['xp'])} XP',
+                  style: GoogleFonts.montserrat(
+                    fontSize: 11,
+                    color: Colors.grey[600],
+                  ),
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ],
+            ),
           ),
           // Parent Info (stacked)
           Expanded(
@@ -1345,6 +1373,17 @@ class _UserManagementPageState extends State<UserManagementPage> {
       default:
         return role;
     }
+  }
+
+  String _formatNumber(dynamic number) {
+    if (number == null) return '0';
+    final num value = number is num ? number : 0;
+    if (value >= 1000000) {
+      return '${(value / 1000000).toStringAsFixed(1)}M';
+    } else if (value >= 1000) {
+      return '${(value / 1000).toStringAsFixed(1)}K';
+    }
+    return value.toInt().toString();
   }
 
   Color _getRoleColor(String role) {
