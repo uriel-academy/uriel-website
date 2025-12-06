@@ -442,14 +442,31 @@ class _StudentsPageState extends State<StudentsPage> {
               final subjectsCount = data['subjectsSolved'] ?? 0;
               final questionsCount = data['questionsSolved'] ?? 0;
               
-              // Parse lastSeen timestamp
-              final lastSeen = data['lastSeen'];
+              // Parse lastSeen timestamp - handle multiple formats from Cloud Function
+              final lastSeenRaw = data['lastSeen'];
               DateTime? lastSeenDate;
-              if (lastSeen != null) {
-                if (lastSeen is Timestamp) {
-                  lastSeenDate = lastSeen.toDate();
-                } else if (lastSeen is String) {
-                  lastSeenDate = DateTime.tryParse(lastSeen);
+              
+              if (lastSeenRaw != null) {
+                try {
+                  if (lastSeenRaw is Timestamp) {
+                    lastSeenDate = lastSeenRaw.toDate();
+                  } else if (lastSeenRaw is String) {
+                    lastSeenDate = DateTime.tryParse(lastSeenRaw);
+                  } else if (lastSeenRaw is Map) {
+                    // Cloud Functions may serialize Timestamp as {_seconds: X, _nanoseconds: Y}
+                    final seconds = lastSeenRaw['_seconds'] ?? lastSeenRaw['seconds'];
+                    final nanoseconds = lastSeenRaw['_nanoseconds'] ?? lastSeenRaw['nanoseconds'] ?? 0;
+                    if (seconds != null) {
+                      lastSeenDate = DateTime.fromMillisecondsSinceEpoch(
+                        (seconds * 1000) + (nanoseconds ~/ 1000000)
+                      );
+                    }
+                  } else if (lastSeenRaw is int) {
+                    // Unix timestamp in milliseconds
+                    lastSeenDate = DateTime.fromMillisecondsSinceEpoch(lastSeenRaw);
+                  }
+                } catch (e) {
+                  debugPrint('Error parsing lastSeen for ${data['displayName']}: $e, value: $lastSeenRaw (${lastSeenRaw.runtimeType})');
                 }
               }
 

@@ -3322,7 +3322,7 @@ export const getClassAggregates = functions.https.onCall(async (data, context) =
         subjectsSolved: data.subjectsCount || data.subjectsSolvedCount || data.subjectsSolved || 0,
         questionsSolved: data.totalQuestions || data.questionsSolved || data.questionsSolvedCount || 0,
         avgPercent: calculatedAccuracy,
-        lastSeen: userLastSeen,
+        lastSeen: userLastSeen ? (userLastSeen.toDate ? userLastSeen.toDate().toISOString() : userLastSeen) : null,
         raw: data
       };
     }));
@@ -4106,7 +4106,7 @@ export const getSchoolStudents = functions.https.onCall(async (data, context) =>
           avgPercent: summaryData.avgPercent || 0,
           subjectsSolved: summaryData.subjectsCount || 0,
           rank: summaryData.rankName || 'Learner',
-          lastSeen: userData.lastSeen || null,
+          lastSeen: userData.lastSeen ? (userData.lastSeen.toDate ? userData.lastSeen.toDate().toISOString() : userData.lastSeen) : null,
         });
       });
     }
