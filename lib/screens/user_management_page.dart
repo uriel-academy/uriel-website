@@ -71,12 +71,16 @@ class _UserManagementPageState extends State<UserManagementPage> {
             debugPrint('  Available fields: ${data.keys.toList()}');
             debugPrint('  lastSeen: ${data['lastSeen']}');
             debugPrint('  lastActiveAt: ${data['lastActiveAt']}');
-            debugPrint('  phone: ${data['phone']}');
+            debugPrint('  phone: "${data['phone']}"');
             debugPrint('  phoneNumber: ${data['phoneNumber']}');
             debugPrint('  contactNumber: ${data['contactNumber']}');
+            debugPrint('  guardianEmail: ${data['guardianEmail']}');
+            debugPrint('  guardianPhone: ${data['guardianPhone']}');
+            debugPrint('  guardianName: ${data['guardianName']}');
             debugPrint('  parentEmail: ${data['parentEmail']}');
             debugPrint('  parentPhone: ${data['parentPhone']}');
             debugPrint('  parent object: ${data['parent']}');
+            debugPrint('  guardian object: ${data['guardian']}');
           }
 
           // Get last seen - check multiple fields for compatibility
@@ -117,79 +121,101 @@ class _UserManagementPageState extends State<UserManagementPage> {
             'mobile'
           ];
           for (final field in possibleContactFields) {
-            if (data[field] != null && data[field].toString().isNotEmpty) {
-              contact = data[field].toString();
+            final value = data[field];
+            if (value != null &&
+                value.toString().trim().isNotEmpty &&
+                value.toString().trim() != '') {
+              contact = value.toString().trim();
               break;
             }
           }
 
-          // Get parent email - check multiple possible locations
+          // Get guardian/parent email - prioritize guardianEmail (actual field name used)
           String parentEmail = 'N/A';
-          if (data['parentEmail'] != null &&
-              data['parentEmail'].toString().isNotEmpty) {
-            parentEmail = data['parentEmail'].toString();
-          } else if (data['parent'] is Map) {
-            final parentData = data['parent'] as Map;
-            if (parentData['email'] != null &&
-                parentData['email'].toString().isNotEmpty) {
-              parentEmail = parentData['email'].toString();
-            }
-          } else if (data['guardian'] is Map) {
-            final guardianData = data['guardian'] as Map;
-            if (guardianData['email'] != null &&
-                guardianData['email'].toString().isNotEmpty) {
-              parentEmail = guardianData['email'].toString();
+          final emailFields = [
+            'guardianEmail', // Primary field in your Firestore
+            'parentEmail',
+            'guardian.email',
+            'parent.email'
+          ];
+
+          for (final field in emailFields) {
+            final value = data[field];
+            if (value != null && value.toString().trim().isNotEmpty) {
+              parentEmail = value.toString().trim();
+              break;
             }
           }
 
-          // Get parent contact - check multiple possible locations
+          // Check nested guardian object if still N/A
+          if (parentEmail == 'N/A' && data['guardian'] is Map) {
+            final guardianData = data['guardian'] as Map;
+            if (guardianData['email'] != null &&
+                guardianData['email'].toString().trim().isNotEmpty) {
+              parentEmail = guardianData['email'].toString().trim();
+            }
+          }
+
+          // Check nested parent object if still N/A
+          if (parentEmail == 'N/A' && data['parent'] is Map) {
+            final parentData = data['parent'] as Map;
+            if (parentData['email'] != null &&
+                parentData['email'].toString().trim().isNotEmpty) {
+              parentEmail = parentData['email'].toString().trim();
+            }
+          }
+
+          // Get guardian/parent contact - prioritize guardianPhone (actual field name used)
           String parentContact = 'N/A';
-          final possibleParentFields = [
+          final parentPhoneFields = [
+            'guardianPhone', // Primary field in your Firestore
+            'guardianContact',
             'parentPhone',
             'parentContact',
             'parentNumber',
-            'guardianPhone',
-            'guardianContact'
+            'guardianNumber'
           ];
 
-          for (final field in possibleParentFields) {
-            if (data[field] != null && data[field].toString().isNotEmpty) {
-              parentContact = data[field].toString();
+          for (final field in parentPhoneFields) {
+            final value = data[field];
+            if (value != null && value.toString().trim().isNotEmpty) {
+              parentContact = value.toString().trim();
               break;
             }
           }
 
-          // Check nested parent object
-          if (parentContact == 'N/A') {
-            if (data['parent'] is Map) {
-              final parentData = data['parent'] as Map;
-              final parentPhoneFields = [
-                'phone',
-                'phoneNumber',
-                'contact',
-                'mobile'
-              ];
-              for (final field in parentPhoneFields) {
-                if (parentData[field] != null &&
-                    parentData[field].toString().isNotEmpty) {
-                  parentContact = parentData[field].toString();
-                  break;
-                }
+          // Check nested guardian object if still N/A
+          if (parentContact == 'N/A' && data['guardian'] is Map) {
+            final guardianData = data['guardian'] as Map;
+            final guardianPhoneFields = [
+              'phone',
+              'phoneNumber',
+              'contact',
+              'mobile'
+            ];
+            for (final field in guardianPhoneFields) {
+              final value = guardianData[field];
+              if (value != null && value.toString().trim().isNotEmpty) {
+                parentContact = value.toString().trim();
+                break;
               }
-            } else if (data['guardian'] is Map) {
-              final guardianData = data['guardian'] as Map;
-              final guardianPhoneFields = [
-                'phone',
-                'phoneNumber',
-                'contact',
-                'mobile'
-              ];
-              for (final field in guardianPhoneFields) {
-                if (guardianData[field] != null &&
-                    guardianData[field].toString().isNotEmpty) {
-                  parentContact = guardianData[field].toString();
-                  break;
-                }
+            }
+          }
+
+          // Check nested parent object if still N/A
+          if (parentContact == 'N/A' && data['parent'] is Map) {
+            final parentData = data['parent'] as Map;
+            final parentPhoneFields = [
+              'phone',
+              'phoneNumber',
+              'contact',
+              'mobile'
+            ];
+            for (final field in parentPhoneFields) {
+              final value = parentData[field];
+              if (value != null && value.toString().trim().isNotEmpty) {
+                parentContact = value.toString().trim();
+                break;
               }
             }
           }
