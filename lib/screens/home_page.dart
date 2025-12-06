@@ -122,6 +122,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   int _unreadNotificationCount = 0;
   List<Map<String, dynamic>> _notifications = [];
   StreamSubscription<QuerySnapshot>? _notificationsSubscription;
+  String? _selectedNotificationId;
 
   @override
   void initState() {
@@ -7282,17 +7283,26 @@ Widget _buildFeedbackPage() {
       senderLabel = 'System';
     }
     
+    final isExpanded = _selectedNotificationId == notification['id'];
+    
     return InkWell(
       onTap: () async {
-        await _markNotificationAsRead(notification['id']);
-        if (mounted) {
-          _showFullNotificationDialog(notification);
-        }
+        setState(() {
+          if (_selectedNotificationId == notification['id']) {
+            _selectedNotificationId = null;
+          } else {
+            _selectedNotificationId = notification['id'];
+            if (!isRead) {
+              _markNotificationAsRead(notification['id']);
+            }
+          }
+        });
       },
       child: Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: isRead ? Colors.transparent : const Color(0xFF007AFF).withValues(alpha: 0.05),
+          color: isExpanded ? const Color(0xFF007AFF).withValues(alpha: 0.08) :
+                 isRead ? Colors.transparent : const Color(0xFF007AFF).withValues(alpha: 0.05),
           borderRadius: BorderRadius.circular(12),
         ),
         child: Row(
@@ -7352,8 +7362,8 @@ Widget _buildFeedbackPage() {
                       color: Colors.grey[700],
                       height: 1.4,
                     ),
-                    maxLines: 3,
-                    overflow: TextOverflow.ellipsis,
+                    maxLines: isExpanded ? null : 3,
+                    overflow: isExpanded ? TextOverflow.visible : TextOverflow.ellipsis,
                   ),
                   const SizedBox(height: 8),
                   Row(
@@ -7428,125 +7438,6 @@ Widget _buildFeedbackPage() {
     } catch (e) {
       debugPrint('Error marking notification as read: $e');
     }
-  }
-
-  void _showFullNotificationDialog(Map<String, dynamic> notification) {
-    final String title = notification['title'] ?? 'Notification';
-    final String message = notification['message'] ?? '';
-    final String senderName = notification['senderName'] ?? 'Unknown';
-    final String senderRole = notification['senderRole'] ?? 'system';
-    final Timestamp? timestamp = notification['timestamp'];
-
-    showDialog(
-      context: context,
-      builder: (context) => Dialog(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        child: Container(
-          width: 500,
-          constraints: const BoxConstraints(maxHeight: 600),
-          padding: const EdgeInsets.all(24),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  Expanded(
-                    child: Text(
-                      title,
-                      style: GoogleFonts.inter(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w700,
-                        color: const Color(0xFF1A1E3F),
-                      ),
-                    ),
-                  ),
-                  IconButton(
-                    icon: const Icon(Icons.close),
-                    onPressed: () => Navigator.of(context).pop(),
-                    color: Colors.grey[600],
-                  ),
-                ],
-              ),
-              const SizedBox(height: 16),
-              Container(
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  color: Colors.grey[100],
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: Row(
-                  children: [
-                    Icon(
-                      senderRole == 'teacher' ? Icons.school : 
-                      senderRole == 'school_admin' ? Icons.admin_panel_settings :
-                      Icons.info_rounded,
-                      size: 20,
-                      color: senderRole == 'teacher' ? Colors.green :
-                             senderRole == 'school_admin' ? Colors.orange :
-                             Colors.grey,
-                    ),
-                    const SizedBox(width: 8),
-                    Text(
-                      'From: $senderName',
-                      style: GoogleFonts.inter(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.grey[700],
-                      ),
-                    ),
-                    const Spacer(),
-                    Text(
-                      _formatTimestamp(timestamp),
-                      style: GoogleFonts.inter(
-                        fontSize: 12,
-                        color: Colors.grey[500],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 20),
-              Flexible(
-                child: SingleChildScrollView(
-                  child: Text(
-                    message,
-                    style: GoogleFonts.inter(
-                      fontSize: 15,
-                      color: const Color(0xFF1A1E3F),
-                      height: 1.6,
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(height: 20),
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: () => Navigator.of(context).pop(),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF007AFF),
-                    foregroundColor: Colors.white,
-                    padding: const EdgeInsets.symmetric(vertical: 14),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    elevation: 0,
-                  ),
-                  child: Text(
-                    'Close',
-                    style: GoogleFonts.inter(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
   }
 
   Future<void> _markAllAsRead() async {
