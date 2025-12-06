@@ -535,21 +535,14 @@ class _StudentsPageState extends State<StudentsPage> {
                       ),
                       Expanded(
                         flex: 1,
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                          decoration: BoxDecoration(
-                            color: rank.toString() != '-' ? const Color(0xFFD62828).withValues(alpha: 0.1) : Colors.grey.withValues(alpha: 0.1),
-                            borderRadius: BorderRadius.circular(8),
+                        child: Text(
+                          rank.toString(),
+                          style: GoogleFonts.montserrat(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w600,
+                            color: rank.toString() != '-' ? const Color(0xFFD62828) : Colors.grey[700],
                           ),
-                          child: Text(
-                            rank.toString(), 
-                            style: GoogleFonts.montserrat(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w600,
-                              color: rank.toString() != '-' ? const Color(0xFFD62828) : Colors.grey[700],
-                            )
-                          ),
-                        )
+                        ),
                       ),
                       Expanded(
                         flex: 1,

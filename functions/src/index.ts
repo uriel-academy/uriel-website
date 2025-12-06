@@ -3244,6 +3244,7 @@ export const getClassAggregates = functions.https.onCall(async (data, context) =
       // Fetch additional user data for rank and other fields
       let userRank = null;
       let userAvatar = null;
+      let userLastSeen = null;
       let calculatedAccuracy = data.avgPercent || 0;
       
       try {
@@ -3252,6 +3253,7 @@ export const getClassAggregates = functions.https.onCall(async (data, context) =
           const userData = userDoc.data() || {};
           userRank = userData.currentRankName || userData.rankName || userData.rank || null;
           userAvatar = userData.profileImageUrl || userData.avatar || userData.presetAvatar || null;
+          userLastSeen = userData.lastSeen || null;
         }
       } catch (err) {
         console.warn('Failed to fetch user data for', d.id, err);
@@ -3308,6 +3310,7 @@ export const getClassAggregates = functions.https.onCall(async (data, context) =
         subjectsSolved: data.subjectsCount || data.subjectsSolvedCount || data.subjectsSolved || 0,
         questionsSolved: data.totalQuestions || data.questionsSolved || data.questionsSolvedCount || 0,
         avgPercent: calculatedAccuracy,
+        lastSeen: userLastSeen,
         raw: data
       };
     }));
@@ -4091,6 +4094,7 @@ export const getSchoolStudents = functions.https.onCall(async (data, context) =>
           avgPercent: summaryData.avgPercent || 0,
           subjectsSolved: summaryData.subjectsCount || 0,
           rank: summaryData.rankName || 'Learner',
+          lastSeen: userData.lastSeen || null,
         });
       });
     }
