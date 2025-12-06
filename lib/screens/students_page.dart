@@ -82,6 +82,214 @@ class _StudentsPageState extends State<StudentsPage> {
     );
   }
 
+  /// Show message composition dialog
+  Future<void> _showSendMessageDialog() async {
+    String recipientType = 'class'; // 'individual', 'class', 'all'
+    String? selectedStudentId;
+    final titleController = TextEditingController();
+    final messageController = TextEditingController();
+    bool isSending = false;
+
+    // Get list of students for individual selection
+    final page = _pageCache[_currentCursorKey] as Map<String, dynamic>?;
+    final allStudents = (page != null ? page['students'] as List<dynamic> : <dynamic>[]);
+
+    await showDialog(
+      context: context,
+      builder: (context) => StatefulBuilder(
+        builder: (context, setDialogState) {
+          return AlertDialog(
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+            title: Row(
+              children: [
+                const Icon(Icons.send, color: Color(0xFFD62828)),
+                const SizedBox(width: 8),
+                Text('Send Message', style: GoogleFonts.playfairDisplay(fontWeight: FontWeight.bold)),
+              ],
+            ),
+            content: SizedBox(
+              width: 500,
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Recipient Type Selector
+                    Text('Send To:', style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
+                    const SizedBox(height: 8),
+                    SegmentedButton<String>(
+                      segments: const [
+                        ButtonSegment(value: 'class', label: Text('My Class'), icon: Icon(Icons.group)),
+                        ButtonSegment(value: 'all', label: Text('All Students'), icon: Icon(Icons.people)),
+                        ButtonSegment(value: 'individual', label: Text('Individual'), icon: Icon(Icons.person)),
+                      ],
+                      selected: {recipientType},
+                      onSelectionChanged: (Set<String> newSelection) {
+                        setDialogState(() {
+                          recipientType = newSelection.first;
+                          if (recipientType != 'individual') {
+                            selectedStudentId = null;
+                          }
+                        });
+                      },
+                    ),
+                    const SizedBox(height: 16),
+
+                    // Individual Student Picker (if individual selected)
+                    if (recipientType == 'individual') ...[
+                      Text('Select Student:', style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
+                      const SizedBox(height: 8),
+                      DropdownButtonFormField<String>(
+                        value: selectedStudentId,
+                        decoration: InputDecoration(
+                          hintText: 'Choose a student...',
+                          border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                          filled: true,
+                          fillColor: const Color(0xFFF8FAFE),
+                        ),
+                        items: allStudents.map((student) {
+                          final data = student as Map<String, dynamic>;
+                          final name = data['displayName'] ?? 'Unknown';
+                          final email = data['email'] ?? '';
+                          final uid = data['uid'] as String;
+                          return DropdownMenuItem(
+                            value: uid,
+                            child: Text('$name ($email)', style: GoogleFonts.montserrat(fontSize: 14)),
+                          );
+                        }).toList(),
+                        onChanged: (value) {
+                          setDialogState(() {
+                            selectedStudentId = value;
+                          });
+                        },
+                      ),
+                      const SizedBox(height: 16),
+                    ],
+
+                    // Message Title
+                    Text('Title:', style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
+                    const SizedBox(height: 8),
+                    TextField(
+                      controller: titleController,
+                      decoration: InputDecoration(
+                        hintText: 'Enter message title...',
+                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                        filled: true,
+                        fillColor: const Color(0xFFF8FAFE),
+                      ),
+                      maxLength: 200,
+                    ),
+                    const SizedBox(height: 16),
+
+                    // Message Body
+                    Text('Message:', style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
+                    const SizedBox(height: 8),
+                    TextField(
+                      controller: messageController,
+                      decoration: InputDecoration(
+                        hintText: 'Enter your message...',
+                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                        filled: true,
+                        fillColor: const Color(0xFFF8FAFE),
+                      ),
+                      maxLines: 6,
+                      maxLength: 2000,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            actions: [
+              TextButton(
+                onPressed: isSending ? null : () => Navigator.of(context).pop(),
+                child: Text('Cancel', style: GoogleFonts.montserrat(color: Colors.grey)),
+              ),
+              ElevatedButton.icon(
+                onPressed: isSending
+                    ? null
+                    : () async {
+                        final title = titleController.text.trim();
+                        final message = messageController.text.trim();
+
+                        // Validation
+                        if (title.isEmpty) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text('Please enter a title', style: GoogleFonts.montserrat())),
+                          );
+                          return;
+                        }
+                        if (message.isEmpty) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text('Please enter a message', style: GoogleFonts.montserrat())),
+                          );
+                          return;
+                        }
+                        if (recipientType == 'individual' && selectedStudentId == null) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text('Please select a student', style: GoogleFonts.montserrat())),
+                          );
+                          return;
+                        }
+
+                        setDialogState(() => isSending = true);
+
+                        try {
+                          final functions = FirebaseFunctions.instanceFor(region: 'us-central1');
+                          final callable = functions.httpsCallable('sendMessage');
+
+                          final data = <String, dynamic>{
+                            'title': title,
+                            'message': message,
+                            'recipientType': recipientType,
+                          };
+
+                          if (recipientType == 'individual') {
+                            data['recipientId'] = selectedStudentId;
+                          } else if (recipientType == 'class') {
+                            data['grade'] = _teachingGrade;
+                          }
+
+                          final result = await callable.call(data);
+                          final response = result.data as Map<String, dynamic>;
+                          final recipientCount = response['recipientCount'] ?? 0;
+
+                          if (!context.mounted) return;
+                          Navigator.of(context).pop();
+                          
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text(
+                                '✓ Message sent to $recipientCount ${recipientCount == 1 ? 'student' : 'students'}',
+                                style: GoogleFonts.montserrat(),
+                              ),
+                              backgroundColor: Colors.green,
+                            ),
+                          );
+                        } catch (e) {
+                          setDialogState(() => isSending = false);
+                          if (!context.mounted) return;
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text('Error sending message: $e', style: GoogleFonts.montserrat()),
+                              backgroundColor: Colors.red,
+                            ),
+                          );
+                        }
+                      },
+                icon: isSending ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white)) : const Icon(Icons.send),
+                label: Text(isSending ? 'Sending...' : 'Send', style: GoogleFonts.montserrat()),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFFD62828),
+                  foregroundColor: Colors.white,
+                ),
+              ),
+            ],
+          );
+        },
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
@@ -98,6 +306,23 @@ class _StudentsPageState extends State<StudentsPage> {
                 Text('Students', style: GoogleFonts.playfairDisplay(fontSize: isSmallScreen ? 20 : 22, fontWeight: FontWeight.bold)),
                 const SizedBox(height: 8),
                 Text('Search and view students in your class', style: GoogleFonts.montserrat(fontSize: isSmallScreen ? 13 : 14, color: Colors.grey[600])),
+                const SizedBox(height: 16),
+
+                // Send Message Button
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton.icon(
+                    onPressed: _showSendMessageDialog,
+                    icon: const Icon(Icons.send),
+                    label: const Text('Send Message to Students'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFFD62828),
+                      foregroundColor: Colors.white,
+                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                    ),
+                  ),
+                ),
                 const SizedBox(height: 16),
 
                 // Search Card (matches Notes design language)

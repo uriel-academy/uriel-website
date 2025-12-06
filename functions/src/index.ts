@@ -1642,6 +1642,127 @@ export const grantRole = functions.https.onCall(async (data, context) => {
   return { success: true };
 });
 
+// Send Message/Notification to Students
+export const sendMessage = functions.https.onCall(async (data, context) => {
+  if (!context.auth) throw new functions.https.HttpsError('unauthenticated', 'Must be signed in');
+  
+  // Get sender's role and school
+  const sender = await admin.auth().getUser(context.auth.uid);
+  const senderClaims = sender.customClaims || {};
+  const senderRole = senderClaims.role as string;
+  
+  // Only teachers and school_admins can send messages
+  if (!['teacher', 'school_admin', 'super_admin'].includes(senderRole)) {
+    throw new functions.https.HttpsError('permission-denied', 'Only teachers and school admins can send messages');
+  }
+
+  const schema = z.object({
+    title: z.string().min(1).max(200),
+    message: z.string().min(1).max(2000),
+    recipientType: z.enum(['individual', 'class', 'all']),
+    recipientId: z.string().optional(), // userId for individual, classId for class
+    schoolId: z.string().optional(),
+    grade: z.string().optional() // For class messages
+  });
+
+  const parsed = schema.safeParse(data);
+  if (!parsed.success) {
+    throw new functions.https.HttpsError('invalid-argument', 'Invalid payload: ' + parsed.error.message);
+  }
+
+  const { title, message, recipientType, recipientId, schoolId, grade } = parsed.data;
+
+  // Get sender info
+  const senderDoc = await db.collection('users').doc(context.auth.uid).get();
+  const senderData = senderDoc.data();
+  const senderName = senderData?.profile?.displayName || senderData?.email || 'Teacher';
+  const senderSchoolId = senderClaims.schoolId || schoolId;
+
+  if (!senderSchoolId && recipientType !== 'individual') {
+    throw new functions.https.HttpsError('invalid-argument', 'School ID required for class or all-student messages');
+  }
+
+  // Determine recipients
+  let recipients: string[] = [];
+  
+  if (recipientType === 'individual') {
+    if (!recipientId) {
+      throw new functions.https.HttpsError('invalid-argument', 'recipientId required for individual messages');
+    }
+    recipients = [recipientId];
+  } else if (recipientType === 'class') {
+    if (!grade) {
+      throw new functions.https.HttpsError('invalid-argument', 'grade required for class messages');
+    }
+    // Query students in the specified school and grade
+    const studentsSnapshot = await db.collection('users')
+      .where('role', '==', 'student')
+      .where('tenant.schoolId', '==', senderSchoolId)
+      .where('profile.level', '==', grade)
+      .get();
+    
+    recipients = studentsSnapshot.docs.map(doc => doc.id);
+  } else if (recipientType === 'all') {
+    // Query all students in the school
+    const studentsSnapshot = await db.collection('users')
+      .where('role', '==', 'student')
+      .where('tenant.schoolId', '==', senderSchoolId)
+      .get();
+    
+    recipients = studentsSnapshot.docs.map(doc => doc.id);
+  }
+
+  if (recipients.length === 0) {
+    throw new functions.https.HttpsError('not-found', 'No recipients found');
+  }
+
+  // Create notifications for each recipient
+  const batch = db.batch();
+  const timestamp = admin.firestore.FieldValue.serverTimestamp();
+  
+  for (const userId of recipients) {
+    const notificationRef = db.collection('notifications').doc();
+    batch.set(notificationRef, {
+      userId,
+      title,
+      message,
+      type: 'message',
+      senderName,
+      senderId: context.auth.uid,
+      senderRole,
+      read: false,
+      timestamp,
+      data: {
+        recipientType,
+        schoolId: senderSchoolId,
+        grade: grade || null
+      }
+    });
+  }
+
+  await batch.commit();
+
+  // Log the message send action
+  await db.collection('audits').add({
+    action: 'send_message',
+    performedBy: context.auth.uid,
+    details: {
+      title,
+      recipientType,
+      recipientCount: recipients.length,
+      schoolId: senderSchoolId,
+      grade: grade || null
+    },
+    timestamp
+  });
+
+  return {
+    success: true,
+    recipientCount: recipients.length,
+    message: `Message sent to ${recipients.length} ${recipients.length === 1 ? 'student' : 'students'}`
+  };
+});
+
 // Generate Mock Exam
 export const generateMockExam = functions.https.onCall(async (data, context) => {
   if (!context.auth) throw new functions.https.HttpsError('unauthenticated', 'Must be signed in');
