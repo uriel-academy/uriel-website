@@ -37,6 +37,11 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
   String? userPresetAvatar;
   StreamSubscription<DocumentSnapshot>? _userStreamSubscription;
 
+  // Notifications state
+  int _unreadNotificationCount = 0;
+  List<Map<String, dynamic>> _notifications = [];
+  StreamSubscription<QuerySnapshot>? _notificationsSubscription;
+
   @override
   void initState() {
     super.initState();
@@ -49,6 +54,7 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
     
     _loadUserData();
     _setupUserStream();
+    _loadNotifications();
   }
   
   void _loadUserData() async {
@@ -103,6 +109,7 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
     _mainTabController.dispose();
     _animationController.dispose();
     _userStreamSubscription?.cancel();
+    _notificationsSubscription?.cancel();
     super.dispose();
   }
 
@@ -483,25 +490,536 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
               ],
             ),
           ),
-          // Profile button
+          // Profile button with notification badge
           GestureDetector(
-            onTap: () => setState(() {
-              _showingProfile = !_showingProfile;
-              if (_showingProfile) _selectedIndex = 0;
-            }),
-            child: CircleAvatar(
-              radius: 20,
-              backgroundColor: const Color(0xFF1A1E3F),
-              backgroundImage: _getAvatarImage(),
-              child: _getAvatarImage() == null ? Text(
-                userName.isNotEmpty ? userName[0].toUpperCase() : '?',
-                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-              ) : null,
+            onTap: () => _showProfileMenu(),
+            child: Stack(
+              clipBehavior: Clip.none,
+              children: [
+                CircleAvatar(
+                  radius: 20,
+                  backgroundColor: const Color(0xFF1A1E3F),
+                  backgroundImage: _getAvatarImage(),
+                  child: _getAvatarImage() == null ? Text(
+                    userName.isNotEmpty ? userName[0].toUpperCase() : '?',
+                    style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                  ) : null,
+                ),
+                if (_unreadNotificationCount > 0)
+                  Positioned(
+                    right: -2,
+                    top: -2,
+                    child: Container(
+                      padding: const EdgeInsets.all(4),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFFF3B30),
+                        shape: BoxShape.circle,
+                        border: Border.all(color: Colors.white, width: 2),
+                      ),
+                      constraints: const BoxConstraints(
+                        minWidth: 18,
+                        minHeight: 18,
+                      ),
+                      child: Center(
+                        child: Text(
+                          _unreadNotificationCount > 99 ? '99+' : _unreadNotificationCount.toString(),
+                          style: GoogleFonts.inter(
+                            color: Colors.white,
+                            fontSize: 9,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+              ],
             ),
           ),
         ],
       ),
     );
+  }
+
+  void _loadNotifications() async {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) return;
+
+    try {
+      _notificationsSubscription = FirebaseFirestore.instance
+          .collection('notifications')
+          .where('userId', isEqualTo: user.uid)
+          .orderBy('timestamp', descending: true)
+          .limit(50)
+          .snapshots()
+          .listen((snapshot) {
+        if (mounted) {
+          setState(() {
+            _notifications = snapshot.docs.map((doc) {
+              final data = doc.data();
+              return {
+                'id': doc.id,
+                ...data,
+              };
+            }).toList();
+            
+            _unreadNotificationCount = _notifications.where((n) => n['read'] == false).length;
+          });
+        }
+      });
+    } catch (e) {
+      debugPrint('Error loading notifications: $e');
+    }
+  }
+
+  void _showProfileMenu() {
+    showDialog(
+      context: context,
+      barrierColor: Colors.transparent,
+      builder: (context) {
+        final dialogWidth = 320.0;
+        
+        return Stack(
+          children: [
+            GestureDetector(
+              onTap: () => Navigator.pop(context),
+              child: Container(color: Colors.transparent),
+            ),
+            Positioned(
+              top: 70,
+              right: 16,
+              child: Material(
+                elevation: 8,
+                borderRadius: BorderRadius.circular(12),
+                child: Container(
+                  width: dialogWidth,
+                  constraints: const BoxConstraints(maxHeight: 400),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(12),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withValues(alpha: 0.1),
+                        blurRadius: 10,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF1A1E3F).withValues(alpha: 0.05),
+                          borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(12),
+                            topRight: Radius.circular(12),
+                          ),
+                        ),
+                        child: Row(
+                          children: [
+                            CircleAvatar(
+                              radius: 18,
+                              backgroundColor: const Color(0xFF1A1E3F),
+                              backgroundImage: _getAvatarImage(),
+                              child: _getAvatarImage() == null ? Text(
+                                userName[0].toUpperCase(),
+                                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14),
+                              ) : null,
+                            ),
+                            const SizedBox(width: 12),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    userName,
+                                    style: GoogleFonts.montserrat(
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 14,
+                                    ),
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                  Text(
+                                    schoolName,
+                                    style: GoogleFonts.montserrat(
+                                      fontSize: 11,
+                                      color: Colors.grey[600],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      
+                      _buildProfileMenuItem(Icons.person, 'Profile Settings', () {
+                        Navigator.pop(context);
+                        setState(() {
+                          _selectedIndex = 0;
+                          _showingProfile = true;
+                        });
+                      }),
+                      
+                      const Divider(height: 1),
+                      
+                      _buildProfileMenuItem(
+                        Icons.notifications_outlined,
+                        'Notifications',
+                        () {
+                          Navigator.pop(context);
+                          _showNotificationsDialog();
+                        },
+                        badge: _unreadNotificationCount > 0 ? _unreadNotificationCount : null,
+                      ),
+                      
+                      const Divider(height: 1),
+                      
+                      _buildProfileMenuItem(
+                        Icons.logout,
+                        'Sign Out',
+                        _handleSignOut,
+                        color: const Color(0xFFD62828),
+                      ),
+                      
+                      const SizedBox(height: 4),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  Widget _buildProfileMenuItem(IconData icon, String title, VoidCallback onTap, {Color? color, int? badge}) {
+    return InkWell(
+      onTap: onTap,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        child: Row(
+          children: [
+            Stack(
+              clipBehavior: Clip.none,
+              children: [
+                Icon(icon, size: 20, color: color ?? Colors.grey[700]),
+                if (badge != null && badge > 0)
+                  Positioned(
+                    right: -8,
+                    top: -8,
+                    child: Container(
+                      padding: const EdgeInsets.all(4),
+                      decoration: const BoxDecoration(
+                        color: Color(0xFFFF3B30),
+                        shape: BoxShape.circle,
+                      ),
+                      constraints: const BoxConstraints(
+                        minWidth: 16,
+                        minHeight: 16,
+                      ),
+                      child: Center(
+                        child: Text(
+                          badge > 99 ? '99+' : badge.toString(),
+                          style: GoogleFonts.inter(
+                            color: Colors.white,
+                            fontSize: 9,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+              ],
+            ),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Text(
+                title,
+                style: GoogleFonts.montserrat(
+                  fontSize: 13,
+                  color: color ?? Colors.grey[800],
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  void _showNotificationsDialog() {
+    // Use the same notification dialog implementation from home_page.dart
+    // Copy the exact implementation here
+    showDialog(
+      context: context,
+      barrierColor: Colors.transparent,
+      builder: (context) {
+        return Stack(
+          children: [
+            GestureDetector(
+              onTap: () => Navigator.pop(context),
+              child: Container(color: Colors.transparent),
+            ),
+            Positioned(
+              top: 70,
+              right: 16,
+              child: Material(
+                elevation: 16,
+                borderRadius: BorderRadius.circular(16),
+                child: Container(
+                  width: 420,
+                  constraints: const BoxConstraints(maxHeight: 600),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(16),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withValues(alpha: 0.12),
+                        blurRadius: 24,
+                        offset: const Offset(0, 8),
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(20),
+                        decoration: const BoxDecoration(
+                          color: Color(0xFF001F3F),
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(16),
+                            topRight: Radius.circular(16),
+                          ),
+                        ),
+                        child: Row(
+                          children: [
+                            const Icon(Icons.notifications_rounded, color: Colors.white, size: 24),
+                            const SizedBox(width: 12),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text('Notifications', style: GoogleFonts.inter(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.white)),
+                                  if (_unreadNotificationCount > 0)
+                                    Text('$_unreadNotificationCount unread', style: GoogleFonts.inter(fontSize: 13, color: Colors.white70)),
+                                ],
+                              ),
+                            ),
+                            if (_unreadNotificationCount > 0)
+                              TextButton(
+                                onPressed: () => _markAllAsRead(),
+                                style: TextButton.styleFrom(
+                                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                                  backgroundColor: Colors.white.withValues(alpha: 0.15),
+                                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                                ),
+                                child: Text('Mark all read', style: GoogleFonts.inter(fontSize: 12, color: Colors.white, fontWeight: FontWeight.w500)),
+                              ),
+                          ],
+                        ),
+                      ),
+                      Flexible(
+                        child: _notifications.isEmpty
+                            ? Container(
+                                padding: const EdgeInsets.all(48),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(Icons.notifications_off_outlined, size: 64, color: Colors.grey[300]),
+                                    const SizedBox(height: 16),
+                                    Text('No notifications yet', style: GoogleFonts.inter(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.grey[600])),
+                                    const SizedBox(height: 8),
+                                    Text('Messages from teachers and system will appear here', textAlign: TextAlign.center, style: GoogleFonts.inter(fontSize: 14, color: Colors.grey[500])),
+                                  ],
+                                ),
+                              )
+                            : ListView.separated(
+                                shrinkWrap: true,
+                                padding: const EdgeInsets.all(8),
+                                itemCount: _notifications.length,
+                                separatorBuilder: (context, index) => const Divider(height: 1),
+                                itemBuilder: (context, index) => _buildNotificationItem(_notifications[index]),
+                              ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  Widget _buildNotificationItem(Map<String, dynamic> notification) {
+    final isRead = notification['read'] ?? false;
+    final title = notification['title'] ?? 'Notification';
+    final message = notification['message'] ?? '';
+    final senderName = notification['senderName'] ?? 'System';
+    final senderRole = notification['senderRole'] ?? 'app';
+    final timestamp = notification['timestamp'] as Timestamp?;
+    
+    IconData senderIcon;
+    Color senderColor;
+    String senderLabel;
+    
+    if (senderRole == 'super_admin' || senderRole == 'app') {
+      senderIcon = Icons.school_rounded;
+      senderColor = const Color(0xFF007AFF);
+      senderLabel = 'Uriel Academy';
+    } else if (senderRole == 'school_admin') {
+      senderIcon = Icons.admin_panel_settings_rounded;
+      senderColor = const Color(0xFFFF9500);
+      senderLabel = 'School Admin';
+    } else if (senderRole == 'teacher') {
+      senderIcon = Icons.person_rounded;
+      senderColor = const Color(0xFF34C759);
+      senderLabel = 'Teacher';
+    } else {
+      senderIcon = Icons.info_rounded;
+      senderColor = Colors.grey;
+      senderLabel = 'System';
+    }
+    
+    return InkWell(
+      onTap: () => _markNotificationAsRead(notification['id']),
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          color: isRead ? Colors.transparent : const Color(0xFF007AFF).withValues(alpha: 0.05),
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              padding: const EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                color: senderColor.withValues(alpha: 0.12),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Icon(senderIcon, size: 20, color: senderColor),
+            ),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Text(title, style: GoogleFonts.inter(fontSize: 14, fontWeight: FontWeight.w600, color: const Color(0xFF1A1E3F)), maxLines: 2, overflow: TextOverflow.ellipsis),
+                      ),
+                      if (!isRead)
+                        Container(
+                          width: 8,
+                          height: 8,
+                          margin: const EdgeInsets.only(left: 8),
+                          decoration: const BoxDecoration(color: Color(0xFF007AFF), shape: BoxShape.circle),
+                        ),
+                    ],
+                  ),
+                  const SizedBox(height: 4),
+                  Text(message, style: GoogleFonts.inter(fontSize: 13, color: Colors.grey[700], height: 1.4), maxLines: 3, overflow: TextOverflow.ellipsis),
+                  const SizedBox(height: 8),
+                  Row(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                        decoration: BoxDecoration(color: senderColor.withValues(alpha: 0.12), borderRadius: BorderRadius.circular(6)),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Icon(senderIcon, size: 12, color: senderColor),
+                            const SizedBox(width: 4),
+                            Text(senderLabel, style: GoogleFonts.inter(fontSize: 11, fontWeight: FontWeight.w500, color: senderColor)),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Text(_formatTimestamp(timestamp), style: GoogleFonts.inter(fontSize: 11, color: Colors.grey[500])),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  String _formatTimestamp(Timestamp? timestamp) {
+    if (timestamp == null) return 'Just now';
+    
+    final now = DateTime.now();
+    final date = timestamp.toDate();
+    final difference = now.difference(date);
+    
+    if (difference.inMinutes < 1) {
+      return 'Just now';
+    } else if (difference.inHours < 1) {
+      return '${difference.inMinutes}m ago';
+    } else if (difference.inDays < 1) {
+      return '${difference.inHours}h ago';
+    } else if (difference.inDays < 7) {
+      return '${difference.inDays}d ago';
+    } else {
+      return '${date.day}/${date.month}/${date.year}';
+    }
+  }
+
+  Future<void> _markNotificationAsRead(String notificationId) async {
+    try {
+      await FirebaseFirestore.instance
+          .collection('notifications')
+          .doc(notificationId)
+          .update({'read': true});
+    } catch (e) {
+      debugPrint('Error marking notification as read: $e');
+    }
+  }
+
+  Future<void> _markAllAsRead() async {
+    try {
+      final batch = FirebaseFirestore.instance.batch();
+      
+      for (final notification in _notifications) {
+        if (notification['read'] == false) {
+          batch.update(
+            FirebaseFirestore.instance.collection('notifications').doc(notification['id']),
+            {'read': true},
+          );
+        }
+      }
+      
+      await batch.commit();
+    } catch (e) {
+      debugPrint('Error marking all as read: $e');
+    }
+  }
+
+  void _handleSignOut() async {
+    final navigator = Navigator.of(context);
+    final messenger = ScaffoldMessenger.of(context);
+    try {
+      await FirebaseAuth.instance.signOut();
+      if (mounted) {
+        navigator.pushNamedAndRemoveUntil('/landing', (route) => false);
+      }
+    } catch (e) {
+      if (mounted) {
+        messenger.showSnackBar(
+          const SnackBar(content: Text('Error signing out. Please try again.')),
+        );
+      }
+    }
   }
 
   Widget _buildBottomNavigation() {
