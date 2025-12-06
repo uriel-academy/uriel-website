@@ -7175,7 +7175,9 @@ Widget _buildFeedbackPage() {
                             ),
                             if (_unreadNotificationCount > 0)
                               TextButton(
-                                onPressed: () => _markAllAsRead(),
+                                onPressed: () async {
+                                  await _markAllAsRead();
+                                },
                                 style: TextButton.styleFrom(
                                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                                   backgroundColor: Colors.white.withValues(alpha: 0.15),
@@ -7286,17 +7288,19 @@ Widget _buildFeedbackPage() {
     final isExpanded = _selectedNotificationId == notification['id'];
     
     return InkWell(
-      onTap: () async {
-        setState(() {
-          if (_selectedNotificationId == notification['id']) {
+      onTap: () {
+        if (_selectedNotificationId == notification['id']) {
+          setState(() {
             _selectedNotificationId = null;
-          } else {
+          });
+        } else {
+          setState(() {
             _selectedNotificationId = notification['id'];
-            if (!isRead) {
-              _markNotificationAsRead(notification['id']);
-            }
+          });
+          if (!isRead) {
+            _markNotificationAsRead(notification['id']);
           }
-        });
+        }
       },
       child: Container(
         padding: const EdgeInsets.all(16),
