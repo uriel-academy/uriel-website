@@ -189,230 +189,433 @@ class _SchoolAdminStudentsPageState extends State<SchoolAdminStudentsPage> {
 
     await showDialog(
       context: context,
+      barrierDismissible: false,
       builder: (context) => StatefulBuilder(
         builder: (context, setDialogState) {
-          return AlertDialog(
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-            title: Row(
-              children: [
-                const Icon(Icons.send, color: Color(0xFFD62828)),
-                const SizedBox(width: 8),
-                Text('Send Message', style: GoogleFonts.playfairDisplay(fontWeight: FontWeight.bold)),
-              ],
-            ),
-            content: SizedBox(
-              width: 500,
-              child: SingleChildScrollView(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    // Recipient Type Selector
-                    Text('Send To:', style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
-                    const SizedBox(height: 8),
-                    SegmentedButton<String>(
-                      segments: const [
-                        ButtonSegment(value: 'all', label: Text('All Students'), icon: Icon(Icons.people)),
-                        ButtonSegment(value: 'class', label: Text('Specific Class'), icon: Icon(Icons.group)),
-                        ButtonSegment(value: 'individual', label: Text('Individual'), icon: Icon(Icons.person)),
+          return Dialog(
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+            child: Container(
+              width: 560,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  // Navy Blue Header
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 32),
+                    decoration: const BoxDecoration(
+                      color: Color(0xFF001F3F),
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        topRight: Radius.circular(20),
+                      ),
+                    ),
+                    child: Row(
+                      children: [
+                        const Icon(Icons.send_rounded, color: Colors.white, size: 28),
+                        const SizedBox(width: 12),
+                        Text(
+                          'Send Message',
+                          style: GoogleFonts.inter(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white,
+                            letterSpacing: -0.5,
+                          ),
+                        ),
                       ],
-                      selected: {recipientType},
-                      onSelectionChanged: (Set<String> newSelection) {
-                        setDialogState(() {
-                          recipientType = newSelection.first;
-                          if (recipientType != 'individual') {
-                            selectedStudentId = null;
-                          }
-                          if (recipientType != 'class') {
-                            selectedClass = null;
-                          }
-                        });
-                      },
                     ),
-                    const SizedBox(height: 16),
+                  ),
 
-                    // Class Picker (if class selected)
-                    if (recipientType == 'class') ...[
-                      Text('Select Class:', style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
-                      const SizedBox(height: 8),
-                      DropdownButtonFormField<String>(
-                        value: selectedClass,
-                        decoration: InputDecoration(
-                          hintText: 'Choose a class...',
-                          border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-                          filled: true,
-                          fillColor: const Color(0xFFF8FAFE),
+                  // Content Area
+                  Flexible(
+                    child: SingleChildScrollView(
+                      padding: const EdgeInsets.all(32),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          // Recipient Type Selector
+                          Text(
+                            'Send To',
+                            style: GoogleFonts.inter(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600,
+                              color: const Color(0xFF1d1d1f),
+                              letterSpacing: -0.3,
+                            ),
+                          ),
+                          const SizedBox(height: 12),
+                          SegmentedButton<String>(
+                            segments: [
+                              ButtonSegment(
+                                value: 'all',
+                                label: Text('All Students', style: GoogleFonts.inter(fontSize: 13)),
+                                icon: const Icon(Icons.people, size: 18),
+                              ),
+                              ButtonSegment(
+                                value: 'class',
+                                label: Text('Specific Class', style: GoogleFonts.inter(fontSize: 13)),
+                                icon: const Icon(Icons.group, size: 18),
+                              ),
+                              ButtonSegment(
+                                value: 'individual',
+                                label: Text('Individual', style: GoogleFonts.inter(fontSize: 13)),
+                                icon: const Icon(Icons.person, size: 18),
+                              ),
+                            ],
+                            selected: {recipientType},
+                            onSelectionChanged: (Set<String> newSelection) {
+                              setDialogState(() {
+                                recipientType = newSelection.first;
+                                if (recipientType != 'individual') {
+                                  selectedStudentId = null;
+                                }
+                                if (recipientType != 'class') {
+                                  selectedClass = null;
+                                }
+                              });
+                            },
+                          ),
+                          const SizedBox(height: 24),
+
+                          // Class Picker (if class selected)
+                          if (recipientType == 'class') ...[
+                            Text(
+                              'Select Class',
+                              style: GoogleFonts.inter(
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600,
+                                color: const Color(0xFF1d1d1f),
+                                letterSpacing: -0.3,
+                              ),
+                            ),
+                            const SizedBox(height: 12),
+                            DropdownButtonFormField<String>(
+                              value: selectedClass,
+                              decoration: InputDecoration(
+                                hintText: 'Choose a class...',
+                                hintStyle: GoogleFonts.inter(
+                                  fontSize: 14,
+                                  color: Colors.grey[400],
+                                ),
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                  borderSide: BorderSide(color: Colors.grey[300]!, width: 1),
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                  borderSide: BorderSide(color: Colors.grey[300]!, width: 1),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                  borderSide: const BorderSide(color: Color(0xFF001F3F), width: 2),
+                                ),
+                                filled: true,
+                                fillColor: Colors.grey[50],
+                                contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                              ),
+                              style: GoogleFonts.inter(fontSize: 14, color: const Color(0xFF1d1d1f)),
+                              items: _availableClasses.map((className) {
+                                return DropdownMenuItem(
+                                  value: className,
+                                  child: Text(className, style: GoogleFonts.inter(fontSize: 14)),
+                                );
+                              }).toList(),
+                              onChanged: (value) {
+                                setDialogState(() {
+                                  selectedClass = value;
+                                });
+                              },
+                            ),
+                            const SizedBox(height: 24),
+                          ],
+
+                          // Individual Student Picker (if individual selected)
+                          if (recipientType == 'individual') ...[
+                            Text(
+                              'Select Student',
+                              style: GoogleFonts.inter(
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600,
+                                color: const Color(0xFF1d1d1f),
+                                letterSpacing: -0.3,
+                              ),
+                            ),
+                            const SizedBox(height: 12),
+                            DropdownButtonFormField<String>(
+                              value: selectedStudentId,
+                              decoration: InputDecoration(
+                                hintText: 'Choose a student...',
+                                hintStyle: GoogleFonts.inter(
+                                  fontSize: 14,
+                                  color: Colors.grey[400],
+                                ),
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                  borderSide: BorderSide(color: Colors.grey[300]!, width: 1),
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                  borderSide: BorderSide(color: Colors.grey[300]!, width: 1),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                  borderSide: const BorderSide(color: Color(0xFF001F3F), width: 2),
+                                ),
+                                filled: true,
+                                fillColor: Colors.grey[50],
+                                contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                              ),
+                              style: GoogleFonts.inter(fontSize: 14, color: const Color(0xFF1d1d1f)),
+                              items: allStudents.map((student) {
+                                final data = student as Map<String, dynamic>;
+                                final name = data['displayName'] ?? 'Unknown';
+                                final email = data['email'] ?? '';
+                                final uid = data['uid'] as String;
+                                return DropdownMenuItem(
+                                  value: uid,
+                                  child: Text('$name ($email)', style: GoogleFonts.inter(fontSize: 14)),
+                                );
+                              }).toList(),
+                              onChanged: (value) {
+                                setDialogState(() {
+                                  selectedStudentId = value;
+                                });
+                              },
+                            ),
+                            const SizedBox(height: 24),
+                          ],
+
+                          // Message Title
+                          Text(
+                            'Title',
+                            style: GoogleFonts.inter(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600,
+                              color: const Color(0xFF1d1d1f),
+                              letterSpacing: -0.3,
+                            ),
+                          ),
+                          const SizedBox(height: 12),
+                          TextField(
+                            controller: titleController,
+                            style: GoogleFonts.inter(fontSize: 14, color: const Color(0xFF1d1d1f)),
+                            decoration: InputDecoration(
+                              hintText: 'Enter message title...',
+                              hintStyle: GoogleFonts.inter(
+                                fontSize: 14,
+                                color: Colors.grey[400],
+                              ),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(12),
+                                borderSide: BorderSide(color: Colors.grey[300]!, width: 1),
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(12),
+                                borderSide: BorderSide(color: Colors.grey[300]!, width: 1),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(12),
+                                borderSide: const BorderSide(color: Color(0xFF001F3F), width: 2),
+                              ),
+                              filled: true,
+                              fillColor: Colors.grey[50],
+                              contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                              counterStyle: GoogleFonts.inter(fontSize: 12, color: Colors.grey[500]),
+                            ),
+                            maxLength: 200,
+                          ),
+                          const SizedBox(height: 20),
+
+                          // Message Body
+                          Text(
+                            'Message',
+                            style: GoogleFonts.inter(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600,
+                              color: const Color(0xFF1d1d1f),
+                              letterSpacing: -0.3,
+                            ),
+                          ),
+                          const SizedBox(height: 12),
+                          TextField(
+                            controller: messageController,
+                            style: GoogleFonts.inter(fontSize: 14, color: const Color(0xFF1d1d1f)),
+                            decoration: InputDecoration(
+                              hintText: 'Enter your message...',
+                              hintStyle: GoogleFonts.inter(
+                                fontSize: 14,
+                                color: Colors.grey[400],
+                              ),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(12),
+                                borderSide: BorderSide(color: Colors.grey[300]!, width: 1),
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(12),
+                                borderSide: BorderSide(color: Colors.grey[300]!, width: 1),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(12),
+                                borderSide: const BorderSide(color: Color(0xFF001F3F), width: 2),
+                              ),
+                              filled: true,
+                              fillColor: Colors.grey[50],
+                              contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                              counterStyle: GoogleFonts.inter(fontSize: 12, color: Colors.grey[500]),
+                            ),
+                            maxLines: 6,
+                            maxLength: 2000,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+
+                  // Footer with buttons
+                  Container(
+                    padding: const EdgeInsets.all(24),
+                    decoration: BoxDecoration(
+                      color: Colors.grey[50],
+                      borderRadius: const BorderRadius.only(
+                        bottomLeft: Radius.circular(20),
+                        bottomRight: Radius.circular(20),
+                      ),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        TextButton(
+                          onPressed: isSending ? null : () => Navigator.of(context).pop(),
+                          style: TextButton.styleFrom(
+                            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                          ),
+                          child: Text(
+                            'Cancel',
+                            style: GoogleFonts.inter(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.grey[700],
+                            ),
+                          ),
                         ),
-                        items: _availableClasses.map((className) {
-                          return DropdownMenuItem(
-                            value: className,
-                            child: Text(className, style: GoogleFonts.montserrat(fontSize: 14)),
-                          );
-                        }).toList(),
-                        onChanged: (value) {
-                          setDialogState(() {
-                            selectedClass = value;
-                          });
-                        },
-                      ),
-                      const SizedBox(height: 16),
-                    ],
+                        const SizedBox(width: 12),
+                        ElevatedButton.icon(
+                          onPressed: isSending
+                              ? null
+                              : () async {
+                                  final title = titleController.text.trim();
+                                  final message = messageController.text.trim();
 
-                    // Individual Student Picker (if individual selected)
-                    if (recipientType == 'individual') ...[
-                      Text('Select Student:', style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
-                      const SizedBox(height: 8),
-                      DropdownButtonFormField<String>(
-                        value: selectedStudentId,
-                        decoration: InputDecoration(
-                          hintText: 'Choose a student...',
-                          border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-                          filled: true,
-                          fillColor: const Color(0xFFF8FAFE),
+                                  // Validation
+                                  if (title.isEmpty) {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(content: Text('Please enter a title', style: GoogleFonts.inter())),
+                                    );
+                                    return;
+                                  }
+                                  if (message.isEmpty) {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(content: Text('Please enter a message', style: GoogleFonts.inter())),
+                                    );
+                                    return;
+                                  }
+                                  if (recipientType == 'class' && selectedClass == null) {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(content: Text('Please select a class', style: GoogleFonts.inter())),
+                                    );
+                                    return;
+                                  }
+                                  if (recipientType == 'individual' && selectedStudentId == null) {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(content: Text('Please select a student', style: GoogleFonts.inter())),
+                                    );
+                                    return;
+                                  }
+
+                                  setDialogState(() => isSending = true);
+
+                                  try {
+                                    final functions = FirebaseFunctions.instanceFor(region: 'us-central1');
+                                    final callable = functions.httpsCallable('sendMessage');
+
+                                    final data = <String, dynamic>{
+                                      'title': title,
+                                      'message': message,
+                                      'recipientType': recipientType,
+                                    };
+
+                                    if (recipientType == 'individual') {
+                                      data['recipientId'] = selectedStudentId;
+                                    } else if (recipientType == 'class') {
+                                      data['grade'] = selectedClass;
+                                    }
+
+                                    final result = await callable.call(data);
+                                    final response = result.data as Map<String, dynamic>;
+                                    final recipientCount = response['recipientCount'] ?? 0;
+
+                                    if (!context.mounted) return;
+                                    Navigator.of(context).pop();
+                                    
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        content: Text(
+                                          '✓ Message sent to $recipientCount ${recipientCount == 1 ? 'student' : 'students'}',
+                                          style: GoogleFonts.inter(),
+                                        ),
+                                        backgroundColor: Colors.green,
+                                      ),
+                                    );
+                                  } catch (e) {
+                                    setDialogState(() => isSending = false);
+                                    if (!context.mounted) return;
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        content: Text('Error sending message: $e', style: GoogleFonts.inter()),
+                                        backgroundColor: Colors.red,
+                                      ),
+                                    );
+                                  }
+                                },
+                          icon: isSending
+                              ? const SizedBox(
+                                  width: 16,
+                                  height: 16,
+                                  child: CircularProgressIndicator(
+                                    strokeWidth: 2,
+                                    color: Colors.white,
+                                  ),
+                                )
+                              : const Icon(Icons.send_rounded, size: 18),
+                          label: Text(
+                            isSending ? 'Sending...' : 'Send Message',
+                            style: GoogleFonts.inter(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600,
+                              letterSpacing: -0.3,
+                            ),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color(0xFF00C853),
+                            foregroundColor: Colors.white,
+                            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                            elevation: 0,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                          ),
                         ),
-                        items: allStudents.map((student) {
-                          final data = student as Map<String, dynamic>;
-                          final name = data['displayName'] ?? 'Unknown';
-                          final email = data['email'] ?? '';
-                          final uid = data['uid'] as String;
-                          return DropdownMenuItem(
-                            value: uid,
-                            child: Text('$name ($email)', style: GoogleFonts.montserrat(fontSize: 14)),
-                          );
-                        }).toList(),
-                        onChanged: (value) {
-                          setDialogState(() {
-                            selectedStudentId = value;
-                          });
-                        },
-                      ),
-                      const SizedBox(height: 16),
-                    ],
-
-                    // Message Title
-                    Text('Title:', style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
-                    const SizedBox(height: 8),
-                    TextField(
-                      controller: titleController,
-                      decoration: InputDecoration(
-                        hintText: 'Enter message title...',
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-                        filled: true,
-                        fillColor: const Color(0xFFF8FAFE),
-                      ),
-                      maxLength: 200,
+                      ],
                     ),
-                    const SizedBox(height: 16),
-
-                    // Message Body
-                    Text('Message:', style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
-                    const SizedBox(height: 8),
-                    TextField(
-                      controller: messageController,
-                      decoration: InputDecoration(
-                        hintText: 'Enter your message...',
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-                        filled: true,
-                        fillColor: const Color(0xFFF8FAFE),
-                      ),
-                      maxLines: 6,
-                      maxLength: 2000,
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
-            actions: [
-              TextButton(
-                onPressed: isSending ? null : () => Navigator.of(context).pop(),
-                child: Text('Cancel', style: GoogleFonts.montserrat(color: Colors.grey)),
-              ),
-              ElevatedButton.icon(
-                onPressed: isSending
-                    ? null
-                    : () async {
-                        final title = titleController.text.trim();
-                        final message = messageController.text.trim();
-
-                        // Validation
-                        if (title.isEmpty) {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(content: Text('Please enter a title', style: GoogleFonts.montserrat())),
-                          );
-                          return;
-                        }
-                        if (message.isEmpty) {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(content: Text('Please enter a message', style: GoogleFonts.montserrat())),
-                          );
-                          return;
-                        }
-                        if (recipientType == 'class' && selectedClass == null) {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(content: Text('Please select a class', style: GoogleFonts.montserrat())),
-                          );
-                          return;
-                        }
-                        if (recipientType == 'individual' && selectedStudentId == null) {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(content: Text('Please select a student', style: GoogleFonts.montserrat())),
-                          );
-                          return;
-                        }
-
-                        setDialogState(() => isSending = true);
-
-                        try {
-                          final functions = FirebaseFunctions.instanceFor(region: 'us-central1');
-                          final callable = functions.httpsCallable('sendMessage');
-
-                          final data = <String, dynamic>{
-                            'title': title,
-                            'message': message,
-                            'recipientType': recipientType,
-                          };
-
-                          if (recipientType == 'individual') {
-                            data['recipientId'] = selectedStudentId;
-                          } else if (recipientType == 'class') {
-                            data['grade'] = selectedClass;
-                          }
-
-                          final result = await callable.call(data);
-                          final response = result.data as Map<String, dynamic>;
-                          final recipientCount = response['recipientCount'] ?? 0;
-
-                          if (!context.mounted) return;
-                          Navigator.of(context).pop();
-                          
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text(
-                                '✓ Message sent to $recipientCount ${recipientCount == 1 ? 'student' : 'students'}',
-                                style: GoogleFonts.montserrat(),
-                              ),
-                              backgroundColor: Colors.green,
-                            ),
-                          );
-                        } catch (e) {
-                          setDialogState(() => isSending = false);
-                          if (!context.mounted) return;
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text('Error sending message: $e', style: GoogleFonts.montserrat()),
-                              backgroundColor: Colors.red,
-                            ),
-                          );
-                        }
-                      },
-                icon: isSending ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white)) : const Icon(Icons.send),
-                label: Text(isSending ? 'Sending...' : 'Send', style: GoogleFonts.montserrat()),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFD62828),
-                  foregroundColor: Colors.white,
-                ),
-              ),
-            ],
           );
         },
       ),
@@ -435,23 +638,6 @@ class _SchoolAdminStudentsPageState extends State<SchoolAdminStudentsPage> {
                 Text('Students', style: GoogleFonts.playfairDisplay(fontSize: isSmallScreen ? 20 : 22, fontWeight: FontWeight.bold)),
                 const SizedBox(height: 8),
                 Text('Search and view students in your school', style: GoogleFonts.montserrat(fontSize: isSmallScreen ? 13 : 14, color: Colors.grey[600])),
-                const SizedBox(height: 16),
-
-                // Send Message Button
-                SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton.icon(
-                    onPressed: _showSendMessageDialog,
-                    icon: const Icon(Icons.send),
-                    label: const Text('Send Message to Students'),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFFD62828),
-                      foregroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(vertical: 16),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                    ),
-                  ),
-                ),
                 const SizedBox(height: 16),
 
                 // Search Card (matches Notes design language)
@@ -557,6 +743,23 @@ class _SchoolAdminStudentsPageState extends State<SchoolAdminStudentsPage> {
                           },
                         ),
                     ],
+                  ),
+                ),
+                const SizedBox(height: 16),
+
+                // Send Message Button
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton.icon(
+                    onPressed: _showSendMessageDialog,
+                    icon: const Icon(Icons.send),
+                    label: const Text('Send Message to Students'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF00C853),
+                      foregroundColor: Colors.white,
+                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                    ),
                   ),
                 ),
               ],

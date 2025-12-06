@@ -96,118 +96,313 @@ class _StudentsPageState extends State<StudentsPage> {
 
     await showDialog(
       context: context,
+      barrierColor: Colors.black.withValues(alpha: 0.5),
       builder: (context) => StatefulBuilder(
         builder: (context, setDialogState) {
-          return AlertDialog(
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-            title: Row(
-              children: [
-                const Icon(Icons.send, color: Color(0xFFD62828)),
-                const SizedBox(width: 8),
-                Text('Send Message', style: GoogleFonts.playfairDisplay(fontWeight: FontWeight.bold)),
-              ],
-            ),
-            content: SizedBox(
-              width: 500,
-              child: SingleChildScrollView(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    // Recipient Type Selector
-                    Text('Send To:', style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
-                    const SizedBox(height: 8),
-                    SegmentedButton<String>(
-                      segments: const [
-                        ButtonSegment(value: 'class', label: Text('My Class'), icon: Icon(Icons.group)),
-                        ButtonSegment(value: 'all', label: Text('All Students'), icon: Icon(Icons.people)),
-                        ButtonSegment(value: 'individual', label: Text('Individual'), icon: Icon(Icons.person)),
-                      ],
-                      selected: {recipientType},
-                      onSelectionChanged: (Set<String> newSelection) {
-                        setDialogState(() {
-                          recipientType = newSelection.first;
-                          if (recipientType != 'individual') {
-                            selectedStudentId = null;
-                          }
-                        });
-                      },
+          return Dialog(
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+            elevation: 0,
+            backgroundColor: Colors.transparent,
+            child: Container(
+              constraints: const BoxConstraints(maxWidth: 540),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withValues(alpha: 0.1),
+                    blurRadius: 40,
+                    offset: const Offset(0, 20),
+                  ),
+                ],
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  // Header
+                  Container(
+                    padding: const EdgeInsets.all(24),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF001F3F),
+                      borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
                     ),
-                    const SizedBox(height: 16),
-
-                    // Individual Student Picker (if individual selected)
-                    if (recipientType == 'individual') ...[
-                      Text('Select Student:', style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
-                      const SizedBox(height: 8),
-                      DropdownButtonFormField<String>(
-                        value: selectedStudentId,
-                        decoration: InputDecoration(
-                          hintText: 'Choose a student...',
-                          border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-                          filled: true,
-                          fillColor: const Color(0xFFF8FAFE),
+                    child: Row(
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                            color: Colors.white.withValues(alpha: 0.15),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: const Icon(Icons.send_rounded, color: Colors.white, size: 24),
                         ),
-                        items: allStudents.map((student) {
-                          final data = student as Map<String, dynamic>;
-                          final name = data['displayName'] ?? 'Unknown';
-                          final email = data['email'] ?? '';
-                          final uid = data['uid'] as String;
-                          return DropdownMenuItem(
-                            value: uid,
-                            child: Text('$name ($email)', style: GoogleFonts.montserrat(fontSize: 14)),
-                          );
-                        }).toList(),
-                        onChanged: (value) {
-                          setDialogState(() {
-                            selectedStudentId = value;
-                          });
-                        },
-                      ),
-                      const SizedBox(height: 16),
-                    ],
-
-                    // Message Title
-                    Text('Title:', style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
-                    const SizedBox(height: 8),
-                    TextField(
-                      controller: titleController,
-                      decoration: InputDecoration(
-                        hintText: 'Enter message title...',
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-                        filled: true,
-                        fillColor: const Color(0xFFF8FAFE),
-                      ),
-                      maxLength: 200,
+                        const SizedBox(width: 16),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Send Message',
+                                style: GoogleFonts.inter(
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.w600,
+                                  color: Colors.white,
+                                  letterSpacing: -0.5,
+                                ),
+                              ),
+                              const SizedBox(height: 4),
+                              Text(
+                                'Notify your students',
+                                style: GoogleFonts.inter(
+                                  fontSize: 14,
+                                  color: Colors.white.withValues(alpha: 0.7),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        IconButton(
+                          onPressed: () => Navigator.of(context).pop(),
+                          icon: const Icon(Icons.close_rounded, color: Colors.white, size: 24),
+                          padding: EdgeInsets.zero,
+                          constraints: const BoxConstraints(),
+                        ),
+                      ],
                     ),
-                    const SizedBox(height: 16),
+                  ),
+                  // Content
+                  Flexible(
+                    child: SingleChildScrollView(
+                      padding: const EdgeInsets.all(24),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          // Recipient Type Selector
+                          Text(
+                            'Recipients',
+                            style: GoogleFonts.inter(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.grey[700],
+                              letterSpacing: -0.2,
+                            ),
+                          ),
+                          const SizedBox(height: 12),
+                          Container(
+                            decoration: BoxDecoration(
+                              color: Colors.grey[100],
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: SegmentedButton<String>(
+                              segments: [
+                                ButtonSegment(
+                                  value: 'class',
+                                  label: Text('My Class', style: GoogleFonts.inter(fontSize: 13, fontWeight: FontWeight.w500)),
+                                  icon: const Icon(Icons.group_rounded, size: 18),
+                                ),
+                                ButtonSegment(
+                                  value: 'all',
+                                  label: Text('All Students', style: GoogleFonts.inter(fontSize: 13, fontWeight: FontWeight.w500)),
+                                  icon: const Icon(Icons.people_rounded, size: 18),
+                                ),
+                                ButtonSegment(
+                                  value: 'individual',
+                                  label: Text('Individual', style: GoogleFonts.inter(fontSize: 13, fontWeight: FontWeight.w500)),
+                                  icon: const Icon(Icons.person_rounded, size: 18),
+                                ),
+                              ],
+                              selected: {recipientType},
+                              onSelectionChanged: (Set<String> newSelection) {
+                                setDialogState(() {
+                                  recipientType = newSelection.first;
+                                  if (recipientType != 'individual') {
+                                    selectedStudentId = null;
+                                  }
+                                });
+                              },
+                              style: ButtonStyle(
+                                backgroundColor: WidgetStateProperty.resolveWith((states) {
+                                  if (states.contains(WidgetState.selected)) {
+                                    return const Color(0xFF001F3F);
+                                  }
+                                  return Colors.transparent;
+                                }),
+                                foregroundColor: WidgetStateProperty.resolveWith((states) {
+                                  if (states.contains(WidgetState.selected)) {
+                                    return Colors.white;
+                                  }
+                                  return Colors.grey[700];
+                                }),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 20),
 
-                    // Message Body
-                    Text('Message:', style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
-                    const SizedBox(height: 8),
-                    TextField(
-                      controller: messageController,
-                      decoration: InputDecoration(
-                        hintText: 'Enter your message...',
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-                        filled: true,
-                        fillColor: const Color(0xFFF8FAFE),
+                          // Individual Student Picker (if individual selected)
+                          if (recipientType == 'individual') ...[
+                            Text(
+                              'Select Student',
+                              style: GoogleFonts.inter(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.grey[700],
+                                letterSpacing: -0.2,
+                              ),
+                            ),
+                            const SizedBox(height: 12),
+                            DropdownButtonFormField<String>(
+                              value: selectedStudentId,
+                              decoration: InputDecoration(
+                                hintText: 'Choose a student...',
+                                hintStyle: GoogleFonts.inter(color: Colors.grey[400]),
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                  borderSide: BorderSide(color: Colors.grey[300]!),
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                  borderSide: BorderSide(color: Colors.grey[300]!),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                  borderSide: const BorderSide(color: Color(0xFF001F3F), width: 2),
+                                ),
+                                filled: true,
+                                fillColor: Colors.grey[50],
+                                contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                              ),
+                              items: allStudents.map((student) {
+                                final data = student as Map<String, dynamic>;
+                                final name = data['displayName'] ?? 'Unknown';
+                                final email = data['email'] ?? '';
+                                final uid = data['uid'] as String;
+                                return DropdownMenuItem(
+                                  value: uid,
+                                  child: Text('$name ($email)', style: GoogleFonts.inter(fontSize: 14)),
+                                );
+                              }).toList(),
+                              onChanged: (value) {
+                                setDialogState(() {
+                                  selectedStudentId = value;
+                                });
+                              },
+                            ),
+                            const SizedBox(height: 20),
+                          ],
+
+                          // Message Title
+                          Text(
+                            'Title',
+                            style: GoogleFonts.inter(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.grey[700],
+                              letterSpacing: -0.2,
+                            ),
+                          ),
+                          const SizedBox(height: 12),
+                          TextField(
+                            controller: titleController,
+                            style: GoogleFonts.inter(fontSize: 15),
+                            decoration: InputDecoration(
+                              hintText: 'Enter message title...',
+                              hintStyle: GoogleFonts.inter(color: Colors.grey[400]),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(12),
+                                borderSide: BorderSide(color: Colors.grey[300]!),
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(12),
+                                borderSide: BorderSide(color: Colors.grey[300]!),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(12),
+                                borderSide: const BorderSide(color: Color(0xFF001F3F), width: 2),
+                              ),
+                              filled: true,
+                              fillColor: Colors.grey[50],
+                              contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                              counterText: '',
+                            ),
+                            maxLength: 200,
+                          ),
+                          const SizedBox(height: 20),
+
+                          // Message Body
+                          Text(
+                            'Message',
+                            style: GoogleFonts.inter(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.grey[700],
+                              letterSpacing: -0.2,
+                            ),
+                          ),
+                          const SizedBox(height: 12),
+                          TextField(
+                            controller: messageController,
+                            style: GoogleFonts.inter(fontSize: 15),
+                            decoration: InputDecoration(
+                              hintText: 'Enter your message...',
+                              hintStyle: GoogleFonts.inter(color: Colors.grey[400]),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(12),
+                                borderSide: BorderSide(color: Colors.grey[300]!),
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(12),
+                                borderSide: BorderSide(color: Colors.grey[300]!),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(12),
+                                borderSide: const BorderSide(color: Color(0xFF001F3F), width: 2),
+                              ),
+                              filled: true,
+                              fillColor: Colors.grey[50],
+                              contentPadding: const EdgeInsets.all(16),
+                              counterText: '',
+                            ),
+                            maxLines: 6,
+                            maxLength: 2000,
+                          ),
+                        ],
                       ),
-                      maxLines: 6,
-                      maxLength: 2000,
                     ),
-                  ],
-                ),
-              ),
-            ),
-            actions: [
-              TextButton(
-                onPressed: isSending ? null : () => Navigator.of(context).pop(),
-                child: Text('Cancel', style: GoogleFonts.montserrat(color: Colors.grey)),
-              ),
-              ElevatedButton.icon(
-                onPressed: isSending
-                    ? null
-                    : () async {
+                  ),
+                  // Footer Actions
+                  Container(
+                    padding: const EdgeInsets.all(24),
+                    decoration: BoxDecoration(
+                      color: Colors.grey[50],
+                      borderRadius: const BorderRadius.vertical(bottom: Radius.circular(20)),
+                    ),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: TextButton(
+                            onPressed: isSending ? null : () => Navigator.of(context).pop(),
+                            style: TextButton.styleFrom(
+                              padding: const EdgeInsets.symmetric(vertical: 16),
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                            ),
+                            child: Text(
+                              'Cancel',
+                              style: GoogleFonts.inter(
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.grey[700],
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          flex: 2,
+                          child: ElevatedButton(
+                            onPressed: isSending
+                                ? null
+                                : () async {
                         final title = titleController.text.trim();
                         final message = messageController.text.trim();
 
@@ -256,34 +451,61 @@ class _StudentsPageState extends State<StudentsPage> {
                           if (!context.mounted) return;
                           Navigator.of(context).pop();
                           
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text(
-                                '✓ Message sent to $recipientCount ${recipientCount == 1 ? 'student' : 'students'}',
-                                style: GoogleFonts.montserrat(),
-                              ),
-                              backgroundColor: Colors.green,
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      content: Text(
+                                        '✓ Message sent to $recipientCount ${recipientCount == 1 ? 'student' : 'students'}',
+                                        style: GoogleFonts.inter(),
+                                      ),
+                                      backgroundColor: const Color(0xFF00C853),
+                                    ),
+                                  );
+                                } catch (e) {
+                                  setDialogState(() => isSending = false);
+                                  if (!context.mounted) return;
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      content: Text('Error sending message: $e', style: GoogleFonts.inter()),
+                                      backgroundColor: Colors.red,
+                                    ),
+                                  );
+                                }
+                              },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: const Color(0xFF00C853),
+                              foregroundColor: Colors.white,
+                              padding: const EdgeInsets.symmetric(vertical: 16),
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                              elevation: 0,
                             ),
-                          );
-                        } catch (e) {
-                          setDialogState(() => isSending = false);
-                          if (!context.mounted) return;
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text('Error sending message: $e', style: GoogleFonts.montserrat()),
-                              backgroundColor: Colors.red,
-                            ),
-                          );
-                        }
-                      },
-                icon: isSending ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white)) : const Icon(Icons.send),
-                label: Text(isSending ? 'Sending...' : 'Send', style: GoogleFonts.montserrat()),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFD62828),
-                  foregroundColor: Colors.white,
-                ),
+                            child: isSending
+                                ? const SizedBox(
+                                    width: 20,
+                                    height: 20,
+                                    child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
+                                  )
+                                : Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      const Icon(Icons.send_rounded, size: 18),
+                                      const SizedBox(width: 8),
+                                      Text(
+                                        'Send Message',
+                                        style: GoogleFonts.inter(
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
               ),
-            ],
+            ),
           );
         },
       ),
@@ -306,23 +528,6 @@ class _StudentsPageState extends State<StudentsPage> {
                 Text('Students', style: GoogleFonts.playfairDisplay(fontSize: isSmallScreen ? 20 : 22, fontWeight: FontWeight.bold)),
                 const SizedBox(height: 8),
                 Text('Search and view students in your class', style: GoogleFonts.montserrat(fontSize: isSmallScreen ? 13 : 14, color: Colors.grey[600])),
-                const SizedBox(height: 16),
-
-                // Send Message Button
-                SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton.icon(
-                    onPressed: _showSendMessageDialog,
-                    icon: const Icon(Icons.send),
-                    label: const Text('Send Message to Students'),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFFD62828),
-                      foregroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(vertical: 16),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                    ),
-                  ),
-                ),
                 const SizedBox(height: 16),
 
                 // Search Card (matches Notes design language)
@@ -369,6 +574,24 @@ class _StudentsPageState extends State<StudentsPage> {
                           },
                         ),
                     ],
+                  ),
+                ),
+                const SizedBox(height: 16),
+
+                // Send Message Button (below search card)
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton.icon(
+                    onPressed: _showSendMessageDialog,
+                    icon: const Icon(Icons.send_rounded, size: 20),
+                    label: Text('Send Message to Students', style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF00C853),
+                      foregroundColor: Colors.white,
+                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                      elevation: 0,
+                    ),
                   ),
                 ),
               ],
