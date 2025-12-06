@@ -542,7 +542,12 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
 
   void _loadNotifications() async {
     final user = FirebaseAuth.instance.currentUser;
-    if (user == null) return;
+    if (user == null) {
+      debugPrint('❌ No user logged in for notifications');
+      return;
+    }
+
+    debugPrint('🔔 Loading notifications for user: ${user.uid}');
 
     try {
       _notificationsSubscription = FirebaseFirestore.instance
@@ -552,10 +557,12 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
           .limit(50)
           .snapshots()
           .listen((snapshot) {
+        debugPrint('📬 Received ${snapshot.docs.length} notifications');
         if (mounted) {
           setState(() {
             _notifications = snapshot.docs.map((doc) {
               final data = doc.data();
+              debugPrint('  - ${data['title']} from ${data['senderName']}');
               return {
                 'id': doc.id,
                 ...data,
@@ -563,11 +570,14 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
             }).toList();
             
             _unreadNotificationCount = _notifications.where((n) => n['read'] == false).length;
+            debugPrint('📊 Unread count: $_unreadNotificationCount');
           });
         }
+      }, onError: (error) {
+        debugPrint('❌ Error listening to notifications: $error');
       });
     } catch (e) {
-      debugPrint('Error loading notifications: $e');
+      debugPrint('❌ Error loading notifications: $e');
     }
   }
 
