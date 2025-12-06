@@ -190,6 +190,30 @@ service cloud.firestore {
       allow write: if isSuperAdmin();
     }
     
+    // French Questions collection
+    match /french_questions/{questionId} {
+      allow read: if isAuthenticated();
+      allow write: if isSuperAdmin() || hasRole('school_admin');
+    }
+    
+    // Courses collection
+    match /courses/{courseId} {
+      allow read: if isAuthenticated();
+      allow write: if isSuperAdmin() || hasRole('school_admin');
+    }
+    
+    // Textbook Content collection
+    match /textbook_content/{contentId} {
+      allow read: if isAuthenticated();
+      allow write: if isSuperAdmin() || hasRole('school_admin');
+    }
+    
+    // Textbook Chapters collection
+    match /textbook_chapters/{chapterId} {
+      allow read: if isAuthenticated();
+      allow write: if isSuperAdmin() || hasRole('school_admin');
+    }
+    
     // Textbooks collection
     match /textbooks/{bookId} {
       allow read: if isAuthenticated() && (
@@ -245,6 +269,36 @@ service cloud.firestore {
       
       // Prevent updates and deletes to maintain data integrity
       allow update, delete: if false;
+    }
+    
+    // Feedback collection
+    match /feedback/{feedbackId} {
+      allow read: if isSuperAdmin() || hasRole('school_admin');
+      allow create: if isAuthenticated();
+      allow update, delete: if isSuperAdmin();
+    }
+    
+    // Trivia Results collection
+    match /trivia_results/{resultId} {
+      allow read: if isAuthenticated() && (
+        resource.data.userId == request.auth.uid ||
+        isSuperAdmin() ||
+        hasRole('school_admin') ||
+        hasRole('teacher')
+      );
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.uid;
+      allow update, delete: if false;
+    }
+    
+    // XP Transactions collection
+    match /xp_transactions/{transactionId} {
+      allow read: if isAuthenticated() && (
+        resource.data.userId == request.auth.uid ||
+        isSuperAdmin() ||
+        hasRole('school_admin') ||
+        hasRole('teacher')
+      );
+      allow write: if false; // Server-side only
     }
     
     // Trivia collection - trivia questions (read-only for users)

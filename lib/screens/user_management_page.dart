@@ -88,12 +88,25 @@ class _UserManagementPageState extends State<UserManagementPage> {
               data['lastSeen'] ?? data['lastActiveAt'] ?? data['lastActive'];
           DateTime? lastSeenDate;
           if (lastSeen != null) {
-            if (lastSeen is Timestamp) {
-              lastSeenDate = lastSeen.toDate();
-            } else if (lastSeen is String) {
-              lastSeenDate = DateTime.tryParse(lastSeen);
-            } else if (lastSeen is int) {
-              lastSeenDate = DateTime.fromMillisecondsSinceEpoch(lastSeen);
+            try {
+              if (lastSeen is Timestamp) {
+                lastSeenDate = lastSeen.toDate();
+              } else if (lastSeen is String) {
+                lastSeenDate = DateTime.tryParse(lastSeen);
+              } else if (lastSeen is Map) {
+                // Cloud Functions may serialize Timestamp as {_seconds: X, _nanoseconds: Y}
+                final seconds = lastSeen['_seconds'] ?? lastSeen['seconds'];
+                final nanoseconds =
+                    lastSeen['_nanoseconds'] ?? lastSeen['nanoseconds'] ?? 0;
+                if (seconds != null) {
+                  lastSeenDate = DateTime.fromMillisecondsSinceEpoch(
+                      (seconds * 1000) + (nanoseconds ~/ 1000000));
+                }
+              } else if (lastSeen is int) {
+                lastSeenDate = DateTime.fromMillisecondsSinceEpoch(lastSeen);
+              }
+            } catch (e) {
+              debugPrint('Error parsing lastSeen: $e, value: $lastSeen');
             }
           }
 
