@@ -181,10 +181,23 @@ service cloud.firestore {
       allow read: if isAuthenticated() && (
         hasEntitlement(get(/databases/$(database)/documents/users/$(request.auth.uid)).data.entitlements, ['textbooks', 'both', 'premium']) ||
         hasRole('super_admin') ||
-        hasRole('school_admin')
+        hasRole('school_admin') ||
+        hasRole('teacher') // Allow teachers to access textbooks
       );
       
       allow write: if hasRole('super_admin') || hasRole('school_admin');
+      
+      // User progress subcollection within textbooks
+      match /userProgress/{userId} {
+        allow read: if isAuthenticated() && (
+          isOwner(userId) ||
+          hasRole('super_admin') ||
+          hasRole('school_admin') ||
+          hasRole('teacher')
+        );
+        
+        allow write: if isAuthenticated() && isOwner(userId);
+      }
     }
     
     // Storybooks collection
@@ -192,7 +205,8 @@ service cloud.firestore {
       allow read: if isAuthenticated() && (
         hasEntitlement(get(/databases/$(database)/documents/users/$(request.auth.uid)).data.entitlements, ['storybooks', 'both', 'premium']) ||
         hasRole('super_admin') ||
-        hasRole('school_admin')
+        hasRole('school_admin') ||
+        hasRole('teacher') // Allow teachers to access storybooks
       );
       
       allow write: if hasRole('super_admin') || hasRole('school_admin');

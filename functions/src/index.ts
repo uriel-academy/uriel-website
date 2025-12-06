@@ -1496,7 +1496,19 @@ export const getNoteSignedUrlCallable = functions.region('us-central1').https.on
     const doc = await admin.firestore().collection('notes').doc(noteId).get();
     if (!doc.exists) throw new functions.https.HttpsError('not-found', 'Note not found');
     const docData = doc.data() || {};
-    if (docData.userId !== uid) throw new functions.https.HttpsError('permission-denied', 'Not authorized');
+    
+    // Check permissions: owner, teacher, or admin
+    const userDoc = await admin.firestore().collection('users').doc(uid).get();
+    const userData = userDoc.data() || {};
+    const userRole = userData.role || '';
+    const isOwner = docData.userId === uid;
+    const isTeacher = userRole === 'teacher';
+    const isAdmin = userRole === 'super_admin' || userRole === 'school_admin';
+    
+    if (!isOwner && !isTeacher && !isAdmin) {
+      throw new functions.https.HttpsError('permission-denied', 'Not authorized');
+    }
+    
     storagePath = docData.filePath || '';
   }
 
