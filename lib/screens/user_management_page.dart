@@ -65,6 +65,20 @@ class _UserManagementPageState extends State<UserManagementPage> {
           final data = doc.data();
           final userId = doc.id;
 
+          // Debug: Log first user's data structure
+          if (usersList.isEmpty) {
+            debugPrint('📊 Sample user data structure:');
+            debugPrint('  Available fields: ${data.keys.toList()}');
+            debugPrint('  lastSeen: ${data['lastSeen']}');
+            debugPrint('  lastActiveAt: ${data['lastActiveAt']}');
+            debugPrint('  phone: ${data['phone']}');
+            debugPrint('  phoneNumber: ${data['phoneNumber']}');
+            debugPrint('  contactNumber: ${data['contactNumber']}');
+            debugPrint('  parentEmail: ${data['parentEmail']}');
+            debugPrint('  parentPhone: ${data['parentPhone']}');
+            debugPrint('  parent object: ${data['parent']}');
+          }
+
           // Get last seen - check multiple fields for compatibility
           final lastSeen =
               data['lastSeen'] ?? data['lastActiveAt'] ?? data['lastActive'];
@@ -92,12 +106,100 @@ class _UserManagementPageState extends State<UserManagementPage> {
             }
           }
 
+          // Get contact number - check multiple possible field names
+          String contact = 'N/A';
+          final possibleContactFields = [
+            'phoneNumber',
+            'phone',
+            'contactNumber',
+            'contact',
+            'mobileNumber',
+            'mobile'
+          ];
+          for (final field in possibleContactFields) {
+            if (data[field] != null && data[field].toString().isNotEmpty) {
+              contact = data[field].toString();
+              break;
+            }
+          }
+
+          // Get parent email - check multiple possible locations
+          String parentEmail = 'N/A';
+          if (data['parentEmail'] != null &&
+              data['parentEmail'].toString().isNotEmpty) {
+            parentEmail = data['parentEmail'].toString();
+          } else if (data['parent'] is Map) {
+            final parentData = data['parent'] as Map;
+            if (parentData['email'] != null &&
+                parentData['email'].toString().isNotEmpty) {
+              parentEmail = parentData['email'].toString();
+            }
+          } else if (data['guardian'] is Map) {
+            final guardianData = data['guardian'] as Map;
+            if (guardianData['email'] != null &&
+                guardianData['email'].toString().isNotEmpty) {
+              parentEmail = guardianData['email'].toString();
+            }
+          }
+
+          // Get parent contact - check multiple possible locations
+          String parentContact = 'N/A';
+          final possibleParentFields = [
+            'parentPhone',
+            'parentContact',
+            'parentNumber',
+            'guardianPhone',
+            'guardianContact'
+          ];
+
+          for (final field in possibleParentFields) {
+            if (data[field] != null && data[field].toString().isNotEmpty) {
+              parentContact = data[field].toString();
+              break;
+            }
+          }
+
+          // Check nested parent object
+          if (parentContact == 'N/A') {
+            if (data['parent'] is Map) {
+              final parentData = data['parent'] as Map;
+              final parentPhoneFields = [
+                'phone',
+                'phoneNumber',
+                'contact',
+                'mobile'
+              ];
+              for (final field in parentPhoneFields) {
+                if (parentData[field] != null &&
+                    parentData[field].toString().isNotEmpty) {
+                  parentContact = parentData[field].toString();
+                  break;
+                }
+              }
+            } else if (data['guardian'] is Map) {
+              final guardianData = data['guardian'] as Map;
+              final guardianPhoneFields = [
+                'phone',
+                'phoneNumber',
+                'contact',
+                'mobile'
+              ];
+              for (final field in guardianPhoneFields) {
+                if (guardianData[field] != null &&
+                    guardianData[field].toString().isNotEmpty) {
+                  parentContact = guardianData[field].toString();
+                  break;
+                }
+              }
+            }
+          }
+
           usersList.add({
             'userId': userId,
             'name': data['displayName'] ??
                 '${data['firstName'] ?? ''} ${data['lastName'] ?? ''}'.trim(),
             'email': data['email'] ?? '',
-            'contact': data['phoneNumber'] ?? data['phone'] ?? 'N/A',
+            'contact': contact,
             'school': data['school'] ?? 'N/A',
             'class': data['class'] ?? data['grade'] ?? 'N/A',
             'role': data['role'] ?? 'student',
@@ -105,12 +207,8 @@ class _UserManagementPageState extends State<UserManagementPage> {
             'lastSeen': lastSeenDate,
             'createdAt': createdDate,
             'avatar': data['avatar'],
-            'parentEmail':
-                data['parentEmail'] ?? data['parent']?['email'] ?? 'N/A',
-            'parentContact': data['parentContact'] ??
-                data['parent']?['phone'] ??
-                data['parentPhone'] ??
-                'N/A',
+            'parentEmail': parentEmail,
+            'parentContact': parentContact,
           });
         }
 
