@@ -8285,9 +8285,265 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
               _buildRankDistribution(students, isSmallScreen),
               const SizedBox(height: 32),
             ],
+            
+            // Messages & Notifications Card
+            _buildMessagesNotificationsCardForTeacher(),
+            const SizedBox(height: 32),
           ],
         ),
       ),
+    );
+  }
+  
+  Widget _buildMessagesNotificationsCardForTeacher() {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) return const SizedBox.shrink();
+
+    return StreamBuilder<QuerySnapshot>(
+      stream: FirebaseFirestore.instance
+          .collection('notifications')
+          .where('userId', isEqualTo: user.uid)
+          .orderBy('timestamp', descending: true)
+          .limit(10)
+          .snapshots(),
+      builder: (context, snapshot) {
+        if (!snapshot.hasData) {
+          return Container(
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(16),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: 0.08),
+                  blurRadius: 16,
+                  offset: const Offset(0, 4),
+                ),
+              ],
+            ),
+            child: const Center(child: CircularProgressIndicator(strokeWidth: 2)),
+          );
+        }
+
+        final allNotifications = snapshot.data!.docs;
+        final unreadCount = allNotifications.where((doc) => !(doc.data() as Map<String, dynamic>)['read'] as bool? ?? false).length;
+
+        return Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(16),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withValues(alpha: 0.08),
+                blurRadius: 16,
+                offset: const Offset(0, 4),
+              ),
+            ],
+          ),
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF001F3F).withValues(alpha: 0.1),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: const Icon(
+                      Icons.notifications_outlined,
+                      color: Color(0xFF001F3F),
+                      size: 20,
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Text(
+                      'Messages & Notifications',
+                      style: GoogleFonts.inter(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        color: const Color(0xFF001F3F),
+                      ),
+                    ),
+                  ),
+                  if (unreadCount > 0)
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFFF3B30),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Text(
+                        unreadCount > 99 ? '99+' : '$unreadCount',
+                        style: GoogleFonts.inter(
+                          color: Colors.white,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                ],
+              ),
+              const SizedBox(height: 16),
+              if (allNotifications.isEmpty)
+                Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: Column(
+                      children: [
+                        Icon(
+                          Icons.notifications_none,
+                          size: 48,
+                          color: Colors.grey[400],
+                        ),
+                        const SizedBox(height: 8),
+                        Text(
+                          'No notifications yet',
+                          style: GoogleFonts.inter(
+                            color: Colors.grey[600],
+                            fontSize: 14,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                )
+              else
+                ...allNotifications.take(5).map((doc) {
+                  final data = doc.data() as Map<String, dynamic>;
+                  final isRead = data['read'] as bool? ?? false;
+                  final title = data['title'] as String? ?? 'Notification';
+                  final message = data['message'] as String? ?? '';
+                  final timestamp = data['timestamp'] as Timestamp?;
+                  final senderRole = data['senderRole'] as String? ?? 'unknown';
+
+                  String timeAgo = 'Just now';
+                  if (timestamp != null) {
+                    final now = DateTime.now();
+                    final messageTime = timestamp.toDate();
+                    final difference = now.difference(messageTime);
+
+                    if (difference.inDays > 0) {
+                      timeAgo = '${difference.inDays}d ago';
+                    } else if (difference.inHours > 0) {
+                      timeAgo = '${difference.inHours}h ago';
+                    } else if (difference.inMinutes > 0) {
+                      timeAgo = '${difference.inMinutes}m ago';
+                    }
+                  }
+
+                  Color senderColor;
+                  IconData senderIcon;
+                  switch (senderRole) {
+                    case 'teacher':
+                      senderColor = Colors.blue;
+                      senderIcon = Icons.school;
+                      break;
+                    case 'school_admin':
+                      senderColor = Colors.purple;
+                      senderIcon = Icons.admin_panel_settings;
+                      break;
+                    case 'super_admin':
+                      senderColor = Colors.orange;
+                      senderIcon = Icons.verified_user;
+                      break;
+                    default:
+                      senderColor = Colors.grey;
+                      senderIcon = Icons.person;
+                  }
+
+                  return Container(
+                    margin: const EdgeInsets.only(bottom: 8),
+                    decoration: BoxDecoration(
+                      color: isRead ? Colors.white : const Color(0xFF001F3F).withValues(alpha: 0.05),
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(
+                        color: isRead ? Colors.grey[200]! : const Color(0xFF001F3F).withValues(alpha: 0.2),
+                      ),
+                    ),
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        borderRadius: BorderRadius.circular(8),
+                        onTap: () {
+                          // Mark as read
+                          FirebaseFirestore.instance
+                              .collection('notifications')
+                              .doc(doc.id)
+                              .update({'read': true});
+                          // Show detail (you can implement this later)
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.all(12),
+                          child: Row(
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.all(8),
+                                decoration: BoxDecoration(
+                                  color: senderColor.withValues(alpha: 0.1),
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: Icon(senderIcon, color: senderColor, size: 16),
+                              ),
+                              const SizedBox(width: 12),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      title,
+                                      style: GoogleFonts.inter(
+                                        fontSize: 13,
+                                        fontWeight: isRead ? FontWeight.w500 : FontWeight.w600,
+                                        color: const Color(0xFF001F3F),
+                                      ),
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                    const SizedBox(height: 2),
+                                    Text(
+                                      message,
+                                      style: GoogleFonts.inter(
+                                        fontSize: 12,
+                                        color: Colors.grey[600],
+                                      ),
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                    const SizedBox(height: 2),
+                                    Text(
+                                      timeAgo,
+                                      style: GoogleFonts.inter(
+                                        fontSize: 11,
+                                        color: Colors.grey[500],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              if (!isRead)
+                                Container(
+                                  width: 8,
+                                  height: 8,
+                                  decoration: const BoxDecoration(
+                                    color: Color(0xFFFF3B30),
+                                    shape: BoxShape.circle,
+                                  ),
+                                ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  );
+                }),
+            ],
+          ),
+        );
+      },
     );
   }
 

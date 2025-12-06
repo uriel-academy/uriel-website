@@ -43,6 +43,7 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
   StreamSubscription<QuerySnapshot>? _notificationsSubscription;
   String? _selectedNotificationId;
   int _notificationPage = 0;
+  int _dashboardNotificationPage = 0;
   static const int _notificationsPerPage = 5;
 
   @override
@@ -537,6 +538,291 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
                   ),
               ],
             ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // Messages & Notifications card for dashboard
+  Widget _buildMessagesNotificationsCard(bool isSmallScreen) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.08),
+            blurRadius: 16,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      padding: const EdgeInsets.all(20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: const Color(0xFF001F3F).withValues(alpha: 0.1),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: const Icon(
+                  Icons.notifications_outlined,
+                  color: Color(0xFF001F3F),
+                  size: 20,
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Text(
+                  'Messages & Notifications',
+                  style: GoogleFonts.inter(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    color: const Color(0xFF001F3F),
+                  ),
+                ),
+              ),
+              if (_unreadNotificationCount > 0)
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFFF3B30),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Text(
+                    _unreadNotificationCount > 99 ? '99+' : '$_unreadNotificationCount',
+                    style: GoogleFonts.inter(
+                      color: Colors.white,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+            ],
+          ),
+          const SizedBox(height: 16),
+          StreamBuilder<QuerySnapshot>(
+            stream: FirebaseFirestore.instance
+                .collection('notifications')
+                .where('userId', isEqualTo: FirebaseAuth.instance.currentUser?.uid)
+                .orderBy('timestamp', descending: true)
+                .limit(100)
+                .snapshots(),
+            builder: (context, snapshot) {
+              if (!snapshot.hasData) {
+                return const Center(
+                  child: Padding(
+                    padding: EdgeInsets.all(20),
+                    child: CircularProgressIndicator(strokeWidth: 2),
+                  ),
+                );
+              }
+
+              final allNotifications = snapshot.data!.docs;
+
+              if (allNotifications.isEmpty) {
+                return Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: Column(
+                      children: [
+                        Icon(
+                          Icons.notifications_none,
+                          size: 48,
+                          color: Colors.grey[400],
+                        ),
+                        const SizedBox(height: 8),
+                        Text(
+                          'No notifications yet',
+                          style: GoogleFonts.inter(
+                            color: Colors.grey[600],
+                            fontSize: 14,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                );
+              }
+
+              // Pagination for dashboard card
+              final startIndex = _dashboardNotificationPage * _notificationsPerPage;
+              final endIndex = (startIndex + _notificationsPerPage).clamp(0, allNotifications.length);
+              final paginatedNotifications = allNotifications.sublist(
+                startIndex,
+                endIndex,
+              );
+              final totalPages = (allNotifications.length / _notificationsPerPage).ceil();
+
+              return Column(
+                children: [
+                  ...paginatedNotifications.map((doc) {
+                    final data = doc.data() as Map<String, dynamic>;
+                    final isRead = data['read'] as bool? ?? false;
+                    final title = data['title'] as String? ?? 'Notification';
+                    final message = data['message'] as String? ?? '';
+                    final timestamp = data['timestamp'] as Timestamp?;
+                    final senderRole = data['senderRole'] as String? ?? 'unknown';
+
+                    String timeAgo = 'Just now';
+                    if (timestamp != null) {
+                      final now = DateTime.now();
+                      final messageTime = timestamp.toDate();
+                      final difference = now.difference(messageTime);
+
+                      if (difference.inDays > 0) {
+                        timeAgo = '${difference.inDays}d ago';
+                      } else if (difference.inHours > 0) {
+                        timeAgo = '${difference.inHours}h ago';
+                      } else if (difference.inMinutes > 0) {
+                        timeAgo = '${difference.inMinutes}m ago';
+                      }
+                    }
+
+                    Color senderColor;
+                    IconData senderIcon;
+                    switch (senderRole) {
+                      case 'teacher':
+                        senderColor = Colors.blue;
+                        senderIcon = Icons.school;
+                        break;
+                      case 'school_admin':
+                        senderColor = Colors.purple;
+                        senderIcon = Icons.admin_panel_settings;
+                        break;
+                      case 'super_admin':
+                        senderColor = Colors.orange;
+                        senderIcon = Icons.verified_user;
+                        break;
+                      default:
+                        senderColor = Colors.grey;
+                        senderIcon = Icons.person;
+                    }
+
+                    return Container(
+                      margin: const EdgeInsets.only(bottom: 8),
+                      decoration: BoxDecoration(
+                        color: isRead ? Colors.white : const Color(0xFF001F3F).withValues(alpha: 0.05),
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(
+                          color: isRead ? Colors.grey[200]! : const Color(0xFF001F3F).withValues(alpha: 0.2),
+                        ),
+                      ),
+                      child: Material(
+                        color: Colors.transparent,
+                        child: InkWell(
+                          borderRadius: BorderRadius.circular(8),
+                          onTap: () {
+                            setState(() => _selectedNotificationId = doc.id);
+                            _markNotificationAsRead(doc.id);
+                            _showMessageDetailDialog(data);
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(12),
+                            child: Row(
+                              children: [
+                                Container(
+                                  padding: const EdgeInsets.all(8),
+                                  decoration: BoxDecoration(
+                                    color: senderColor.withValues(alpha: 0.1),
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                  child: Icon(senderIcon, color: senderColor, size: 16),
+                                ),
+                                const SizedBox(width: 12),
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        title,
+                                        style: GoogleFonts.inter(
+                                          fontSize: 13,
+                                          fontWeight: isRead ? FontWeight.w500 : FontWeight.w600,
+                                          color: const Color(0xFF001F3F),
+                                        ),
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                      const SizedBox(height: 2),
+                                      Text(
+                                        message,
+                                        style: GoogleFonts.inter(
+                                          fontSize: 12,
+                                          color: Colors.grey[600],
+                                        ),
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                      const SizedBox(height: 2),
+                                      Text(
+                                        timeAgo,
+                                        style: GoogleFonts.inter(
+                                          fontSize: 11,
+                                          color: Colors.grey[500],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                if (!isRead)
+                                  Container(
+                                    width: 8,
+                                    height: 8,
+                                    decoration: const BoxDecoration(
+                                      color: Color(0xFFFF3B30),
+                                      shape: BoxShape.circle,
+                                    ),
+                                  ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    );
+                  }),
+                  // Pagination controls for dashboard card
+                  if (totalPages > 1) ...[
+                    const SizedBox(height: 12),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        IconButton(
+                          icon: const Icon(Icons.chevron_left),
+                          onPressed: _dashboardNotificationPage > 0
+                              ? () => setState(() => _dashboardNotificationPage--)
+                              : null,
+                          iconSize: 20,
+                          padding: EdgeInsets.zero,
+                          constraints: const BoxConstraints(minWidth: 32, minHeight: 32),
+                        ),
+                        Text(
+                          'Page ${_dashboardNotificationPage + 1} of $totalPages',
+                          style: GoogleFonts.inter(
+                            fontSize: 12,
+                            color: Colors.grey[600],
+                          ),
+                        ),
+                        IconButton(
+                          icon: const Icon(Icons.chevron_right),
+                          onPressed: _dashboardNotificationPage < totalPages - 1
+                              ? () => setState(() => _dashboardNotificationPage++)
+                              : null,
+                          iconSize: 20,
+                          padding: EdgeInsets.zero,
+                          constraints: const BoxConstraints(minWidth: 32, minHeight: 32),
+                        ),
+                      ],
+                    ),
+                  ],
+                ],
+              );
+            },
           ),
         ],
       ),
