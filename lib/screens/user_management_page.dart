@@ -62,6 +62,17 @@ class _UserManagementPageState extends State<UserManagementPage> {
           }
         }
 
+        // Get account created date
+        final createdAt = data['createdAt'];
+        DateTime? createdDate;
+        if (createdAt != null) {
+          if (createdAt is Timestamp) {
+            createdDate = createdAt.toDate();
+          } else if (createdAt is String) {
+            createdDate = DateTime.tryParse(createdAt);
+          }
+        }
+
         usersList.add({
           'userId': userId,
           'name': data['displayName'] ??
@@ -72,6 +83,7 @@ class _UserManagementPageState extends State<UserManagementPage> {
           'class': data['class'] ?? data['grade'] ?? 'N/A',
           'role': data['role'] ?? 'student',
           'lastSeen': lastSeenDate,
+          'createdAt': createdDate,
           'avatar': data['avatar'],
         });
       }
@@ -509,23 +521,11 @@ class _UserManagementPageState extends State<UserManagementPage> {
                     ),
                   ),
                 ),
-                // Name
+                // Name & Email (stacked)
                 Expanded(
-                  flex: 2,
+                  flex: 3,
                   child: Text(
-                    'Name',
-                    style: GoogleFonts.montserrat(
-                      fontSize: 13,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.grey[700],
-                    ),
-                  ),
-                ),
-                // Email
-                Expanded(
-                  flex: 2,
-                  child: Text(
-                    'Email',
+                    'Name / Email',
                     style: GoogleFonts.montserrat(
                       fontSize: 13,
                       fontWeight: FontWeight.w600,
@@ -535,7 +535,7 @@ class _UserManagementPageState extends State<UserManagementPage> {
                 ),
                 // Contact
                 Expanded(
-                  flex: 1,
+                  flex: 2,
                   child: Text(
                     'Contact',
                     style: GoogleFonts.montserrat(
@@ -545,23 +545,11 @@ class _UserManagementPageState extends State<UserManagementPage> {
                     ),
                   ),
                 ),
-                // School
+                // School & Class (stacked)
                 Expanded(
-                  flex: 2,
+                  flex: 3,
                   child: Text(
-                    'School',
-                    style: GoogleFonts.montserrat(
-                      fontSize: 13,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.grey[700],
-                    ),
-                  ),
-                ),
-                // Class
-                Expanded(
-                  flex: 1,
-                  child: Text(
-                    'Class',
+                    'School / Class',
                     style: GoogleFonts.montserrat(
                       fontSize: 13,
                       fontWeight: FontWeight.w600,
@@ -571,7 +559,7 @@ class _UserManagementPageState extends State<UserManagementPage> {
                 ),
                 // Role
                 Expanded(
-                  flex: 1,
+                  flex: 2,
                   child: Text(
                     'Role',
                     style: GoogleFonts.montserrat(
@@ -581,9 +569,22 @@ class _UserManagementPageState extends State<UserManagementPage> {
                     ),
                   ),
                 ),
+                // Account Created
+                Expanded(
+                  flex: 2,
+                  child: Text(
+                    'Created',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.grey[700],
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
                 // Last Seen
                 Expanded(
-                  flex: 1,
+                  flex: 2,
                   child: Text(
                     'Last Seen',
                     style: GoogleFonts.montserrat(
@@ -619,6 +620,7 @@ class _UserManagementPageState extends State<UserManagementPage> {
     final className = user['class'] ?? 'N/A';
     final role = user['role'] ?? 'student';
     final lastSeen = user['lastSeen'];
+    final createdAt = user['createdAt'];
 
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
@@ -651,9 +653,9 @@ class _UserManagementPageState extends State<UserManagementPage> {
               ),
             ),
           ),
-          // Name with Avatar
+          // Name & Email (stacked)
           Expanded(
-            flex: 2,
+            flex: 3,
             child: Row(
               children: [
                 CircleAvatar(
@@ -670,33 +672,36 @@ class _UserManagementPageState extends State<UserManagementPage> {
                 ),
                 const SizedBox(width: 12),
                 Expanded(
-                  child: Text(
-                    name,
-                    style: GoogleFonts.montserrat(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w500,
-                    ),
-                    overflow: TextOverflow.ellipsis,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        name,
+                        style: GoogleFonts.montserrat(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                        ),
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      const SizedBox(height: 2),
+                      Text(
+                        email,
+                        style: GoogleFonts.montserrat(
+                          fontSize: 12,
+                          color: Colors.grey[600],
+                        ),
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ],
                   ),
                 ),
               ],
             ),
           ),
-          // Email
-          Expanded(
-            flex: 2,
-            child: Text(
-              email,
-              style: GoogleFonts.montserrat(
-                fontSize: 13,
-                color: Colors.grey[700],
-              ),
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
           // Contact
           Expanded(
-            flex: 1,
+            flex: 2,
             child: Text(
               contact,
               style: GoogleFonts.montserrat(
@@ -706,37 +711,53 @@ class _UserManagementPageState extends State<UserManagementPage> {
               overflow: TextOverflow.ellipsis,
             ),
           ),
-          // School
+          // School & Class (stacked)
           Expanded(
-            flex: 2,
-            child: Text(
-              school,
-              style: GoogleFonts.montserrat(
-                fontSize: 13,
-                color: Colors.grey[700],
-              ),
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-          // Class
-          Expanded(
-            flex: 1,
-            child: Text(
-              className,
-              style: GoogleFonts.montserrat(
-                fontSize: 13,
-                color: Colors.grey[700],
-              ),
+            flex: 3,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  school,
+                  style: GoogleFonts.montserrat(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w500,
+                  ),
+                  overflow: TextOverflow.ellipsis,
+                ),
+                const SizedBox(height: 2),
+                Text(
+                  className,
+                  style: GoogleFonts.montserrat(
+                    fontSize: 12,
+                    color: Colors.grey[600],
+                  ),
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ],
             ),
           ),
           // Role Badge
           Expanded(
-            flex: 1,
+            flex: 2,
             child: _buildRoleBadge(role),
+          ),
+          // Account Created
+          Expanded(
+            flex: 2,
+            child: Text(
+              _formatDate(createdAt),
+              style: GoogleFonts.montserrat(
+                fontSize: 12,
+                color: Colors.grey[600],
+              ),
+              textAlign: TextAlign.center,
+            ),
           ),
           // Last Seen
           Expanded(
-            flex: 1,
+            flex: 2,
             child: Text(
               _formatLastSeen(lastSeen),
               style: GoogleFonts.montserrat(
@@ -761,6 +782,7 @@ class _UserManagementPageState extends State<UserManagementPage> {
     final className = user['class'] ?? 'N/A';
     final role = user['role'] ?? 'student';
     final lastSeen = user['lastSeen'];
+    final createdAt = user['createdAt'];
 
     return Container(
       margin: const EdgeInsets.only(bottom: 12),
@@ -843,6 +865,8 @@ class _UserManagementPageState extends State<UserManagementPage> {
                 _buildInfoRow('School', school),
                 const SizedBox(height: 6),
                 _buildInfoRow('Class', className),
+                const SizedBox(height: 6),
+                _buildInfoRow('Created', _formatDate(createdAt)),
                 const SizedBox(height: 6),
                 _buildInfoRow('Last Seen', _formatLastSeen(lastSeen)),
               ],
@@ -931,6 +955,43 @@ class _UserManagementPageState extends State<UserManagementPage> {
       return '${(difference.inDays / 365).floor()}y ago';
     } catch (e) {
       return 'Never';
+    }
+  }
+
+  String _formatDate(dynamic date) {
+    if (date == null) return 'N/A';
+
+    try {
+      DateTime? dateTime;
+
+      if (date is Timestamp) {
+        dateTime = date.toDate();
+      } else if (date is String) {
+        dateTime = DateTime.tryParse(date);
+      } else if (date is DateTime) {
+        dateTime = date;
+      }
+
+      if (dateTime == null) return 'N/A';
+
+      // Format as: Dec 6, 2024
+      final months = [
+        'Jan',
+        'Feb',
+        'Mar',
+        'Apr',
+        'May',
+        'Jun',
+        'Jul',
+        'Aug',
+        'Sep',
+        'Oct',
+        'Nov',
+        'Dec'
+      ];
+      return '${months[dateTime.month - 1]} ${dateTime.day}, ${dateTime.year}';
+    } catch (e) {
+      return 'N/A';
     }
   }
 
@@ -1070,9 +1131,10 @@ class _UserManagementPageState extends State<UserManagementPage> {
 
                         try {
                           final callable =
-                              _functions.httpsCallable('sendMessageToUsers');
+                              _functions.httpsCallable('sendMessage');
                           await callable.call({
-                            'userIds': _selectedUserIds.toList(),
+                            'recipientType': 'multiple',
+                            'recipientIds': _selectedUserIds.toList(),
                             'title': titleController.text.trim(),
                             'message': messageController.text.trim(),
                           });
