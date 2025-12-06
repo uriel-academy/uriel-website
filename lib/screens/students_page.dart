@@ -491,7 +491,7 @@ class _StudentsPageState extends State<StudentsPage> {
                             radius: 18,
                             backgroundColor: const Color(0xFFD62828).withValues(alpha: 0.1),
                             child: Text(
-                              (name.isNotEmpty ? name[0] : '?').toUpperCase(), 
+                              (name.isNotEmpty ? name[0] : (email.isNotEmpty ? email[0] : '?')).toUpperCase(), 
                               style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, color: const Color(0xFFD62828))
                             ),
                           ),
@@ -610,7 +610,7 @@ class _StudentsPageState extends State<StudentsPage> {
                   radius: 20,
                   backgroundColor: const Color(0xFFD62828).withValues(alpha: 0.08),
                   child: Text(
-                    (name.isNotEmpty ? name[0] : '?').toUpperCase(), 
+                    (name.isNotEmpty ? name[0] : (email.isNotEmpty ? email[0] : '?')).toUpperCase(), 
                     style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, color: const Color(0xFFD62828))
                   ),
                 ),
@@ -727,6 +727,7 @@ class _StudentsPageState extends State<StudentsPage> {
         ...students.take(5).map((s) {
           final data = s as Map<String, dynamic>;
           final name = (data['displayName'] ?? '') as String;
+          final email = (data['email'] ?? '') as String;
           final xp = data['totalXP'] ?? 0;
           final acc = data['avgPercent'] ?? 0;
           return ListTile(
@@ -734,11 +735,11 @@ class _StudentsPageState extends State<StudentsPage> {
             leading: CircleAvatar(
               backgroundColor: const Color(0xFFD62828).withValues(alpha: 0.1),
               child: Text(
-                (name.isNotEmpty ? name[0] : '?').toUpperCase(),
+                (name.isNotEmpty ? name[0] : (email.isNotEmpty ? email[0] : '?')).toUpperCase(),
                 style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, color: const Color(0xFFD62828)),
               ),
             ),
-            title: Text(name.isNotEmpty ? name : (data['email'] ?? '-'), style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
+            title: Text(name.isNotEmpty ? name : (email.isNotEmpty ? email : '-'), style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
             subtitle: Text('XP: $xp • ${acc is num ? (acc).toStringAsFixed(1) : acc}%'),
           );
         }).toList(),
@@ -774,7 +775,9 @@ class _StudentsPageState extends State<StudentsPage> {
                 child: Text(
                   (selectedData['displayName']?.toString().isNotEmpty == true 
                     ? selectedData['displayName'][0] 
-                    : '?').toUpperCase(), 
+                    : (selectedData['email']?.toString().isNotEmpty == true 
+                      ? selectedData['email'][0] 
+                      : '?')).toUpperCase(), 
                   style: GoogleFonts.montserrat(fontSize: 20, color: const Color(0xFFD62828), fontWeight: FontWeight.bold)
                 ),
               ),

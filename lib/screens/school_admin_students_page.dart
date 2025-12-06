@@ -543,7 +543,7 @@ class _SchoolAdminStudentsPageState extends State<SchoolAdminStudentsPage> {
                             radius: 18,
                             backgroundColor: const Color(0xFFD62828).withValues(alpha: 0.1),
                             child: Text(
-                              (name.isNotEmpty ? name[0] : '?').toUpperCase(), 
+                              (name.isNotEmpty ? name[0] : (email.isNotEmpty ? email[0] : '?')).toUpperCase(), 
                               style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, color: const Color(0xFFD62828))
                             ),
                           ),
@@ -662,7 +662,7 @@ class _SchoolAdminStudentsPageState extends State<SchoolAdminStudentsPage> {
                   radius: 20,
                   backgroundColor: const Color(0xFFD62828).withValues(alpha: 0.08),
                   child: Text(
-                    (name.isNotEmpty ? name[0] : '?').toUpperCase(), 
+                    (name.isNotEmpty ? name[0] : (email.isNotEmpty ? email[0] : '?')).toUpperCase(), 
                     style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, color: const Color(0xFFD62828))
                   ),
                 ),
@@ -751,7 +751,9 @@ class _SchoolAdminStudentsPageState extends State<SchoolAdminStudentsPage> {
                 child: Text(
                   (selectedData['displayName']?.toString().isNotEmpty == true 
                     ? selectedData['displayName'][0] 
-                    : '?').toUpperCase(), 
+                    : (selectedData['email']?.toString().isNotEmpty == true 
+                      ? selectedData['email'][0] 
+                      : '?')).toUpperCase(), 
                   style: GoogleFonts.montserrat(fontSize: 20, color: const Color(0xFFD62828), fontWeight: FontWeight.bold)
                 ),
               ),
