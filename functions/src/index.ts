@@ -1675,8 +1675,9 @@ export const sendMessage = functions.https.onCall(async (data, context) => {
   const schema = z.object({
     title: z.string().min(1).max(200),
     message: z.string().min(1).max(2000),
-    recipientType: z.enum(['individual', 'class', 'all', 'all_teachers']),
-    recipientId: z.string().optional(), // userId for individual, classId for class
+    recipientType: z.enum(['individual', 'class', 'all', 'all_teachers', 'multiple']),
+    recipientId: z.string().optional(), // userId for individual
+    recipientIds: z.array(z.string()).optional(), // Multiple userIds for 'multiple' type
     schoolId: z.string().optional(),
     grade: z.string().optional() // For class messages
   });
@@ -1686,7 +1687,7 @@ export const sendMessage = functions.https.onCall(async (data, context) => {
     throw new functions.https.HttpsError('invalid-argument', 'Invalid payload: ' + parsed.error.message);
   }
 
-  const { title, message, recipientType, recipientId, schoolId, grade } = parsed.data;
+  const { title, message, recipientType, recipientId, recipientIds, schoolId, grade } = parsed.data;
 
   // Get sender info
   const senderDoc = await db.collection('users').doc(context.auth.uid).get();
@@ -1694,7 +1695,7 @@ export const sendMessage = functions.https.onCall(async (data, context) => {
   const senderName = senderData?.profile?.displayName || senderData?.email || 'Teacher';
   const senderSchoolId = senderClaims.schoolId || schoolId;
 
-  if (!senderSchoolId && !['individual'].includes(recipientType)) {
+  if (!senderSchoolId && !['individual', 'multiple'].includes(recipientType)) {
     throw new functions.https.HttpsError('invalid-argument', 'School ID required for class, all-student, or all-teacher messages');
   }
 
@@ -1708,6 +1709,12 @@ export const sendMessage = functions.https.onCall(async (data, context) => {
     }
     recipients = [recipientId];
     recipientLabel = 'recipient';
+  } else if (recipientType === 'multiple') {
+    if (!recipientIds || recipientIds.length === 0) {
+      throw new functions.https.HttpsError('invalid-argument', 'recipientIds required for multiple messages');
+    }
+    recipients = recipientIds;
+    recipientLabel = 'recipients';
   } else if (recipientType === 'class') {
     if (!grade) {
       throw new functions.https.HttpsError('invalid-argument', 'grade required for class messages');
