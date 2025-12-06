@@ -9,6 +9,7 @@ import 'user_management_page.dart';
 import 'content_management_page.dart';
 import 'admin_analytics.dart';
 import 'redesigned_leaderboard_page.dart';
+import 'system_monitoring_page.dart';
 
 class RedesignedAdminHomePage extends StatefulWidget {
   const RedesignedAdminHomePage({super.key});
@@ -749,7 +750,7 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage>
       const UserManagementPage(), // 1: Users
       const ContentManagementPage(), // 2: Content
       const AdminAnalyticsPage(), // 3: Analytics
-      _buildPlaceholderTab('Monitoring'), // 4: Monitoring
+      const SystemMonitoringPage(), // 4: Monitoring
       Container(), // 5: Placeholder
       Container(), // 6: Placeholder
       Container(), // 7: Placeholder
