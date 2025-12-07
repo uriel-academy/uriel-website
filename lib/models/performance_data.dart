@@ -151,6 +151,22 @@ class GradePrediction {
   final List<String> strongTopics;
   final String recommendation;
   final DateTime calculatedAt;
+  
+  // 95% Confidence Interval
+  final double marginOfError; // ±margin at 95% confidence
+  final double lowerBound; // Lower grade bound
+  final double upperBound; // Upper grade bound
+  
+  // Topic Diversity Requirements
+  final int totalAttempts; // Total quiz attempts
+  final int uniqueTopicsCovered; // Unique topics covered
+  final int requiredTopics; // Required topics for prediction (40% of total)
+  final int uniqueCollectionsCovered; // Unique quiz collections/sets covered
+  final int requiredCollections; // Required collections for diversity
+  final bool meetsRequirements; // Whether requirements are met
+  final bool usedTheory; // Whether student engaged with theory content
+  final int mcqAttempts; // MCQ quiz attempts
+  final int theoryAttempts; // Theory question attempts
 
   GradePrediction({
     required this.subject,
@@ -164,6 +180,18 @@ class GradePrediction {
     required this.strongTopics,
     required this.recommendation,
     required this.calculatedAt,
+    required this.marginOfError,
+    required this.lowerBound,
+    required this.upperBound,
+    required this.totalAttempts,
+    required this.uniqueTopicsCovered,
+    required this.requiredTopics,
+    required this.uniqueCollectionsCovered,
+    required this.requiredCollections,
+    required this.meetsRequirements,
+    required this.usedTheory,
+    required this.mcqAttempts,
+    required this.theoryAttempts,
   });
 
   Map<String, dynamic> toMap() {
@@ -179,6 +207,18 @@ class GradePrediction {
       'strongTopics': strongTopics,
       'recommendation': recommendation,
       'calculatedAt': calculatedAt.toIso8601String(),
+      'marginOfError': marginOfError,
+      'lowerBound': lowerBound,
+      'upperBound': upperBound,
+      'totalAttempts': totalAttempts,
+      'uniqueTopicsCovered': uniqueTopicsCovered,
+      'requiredTopics': requiredTopics,
+      'uniqueCollectionsCovered': uniqueCollectionsCovered,
+      'requiredCollections': requiredCollections,
+      'meetsRequirements': meetsRequirements,
+      'usedTheory': usedTheory,
+      'mcqAttempts': mcqAttempts,
+      'theoryAttempts': theoryAttempts,
     };
   }
 
@@ -195,6 +235,18 @@ class GradePrediction {
       strongTopics: List<String>.from(map['strongTopics'] ?? []),
       recommendation: map['recommendation'] ?? '',
       calculatedAt: DateTime.parse(map['calculatedAt']),
+      marginOfError: (map['marginOfError'] ?? 0.0).toDouble(),
+      lowerBound: (map['lowerBound'] ?? 0.0).toDouble(),
+      upperBound: (map['upperBound'] ?? 0.0).toDouble(),
+      totalAttempts: map['totalAttempts'] ?? 0,
+      uniqueTopicsCovered: map['uniqueTopicsCovered'] ?? 0,
+      requiredTopics: map['requiredTopics'] ?? 0,
+      uniqueCollectionsCovered: map['uniqueCollectionsCovered'] ?? 0,
+      requiredCollections: map['requiredCollections'] ?? 0,
+      meetsRequirements: map['meetsRequirements'] ?? false,
+      usedTheory: map['usedTheory'] ?? false,
+      mcqAttempts: map['mcqAttempts'] ?? 0,
+      theoryAttempts: map['theoryAttempts'] ?? 0,
     );
   }
 

@@ -67,23 +67,30 @@ class GradePredictionService {
       // 9. Convert to BECE grade (1-9 scale)
       final predictedGrade = _scoreToGrade(predictedScore);
 
-      // 10. Calculate confidence level
-      final confidence = _calculateConfidence(attempts);
+      // 10. Calculate 95% confidence interval
+      final ciData = _calculate95ConfidenceInterval(attempts, predictedScore);
+      final confidence = ciData['confidence'] as double;
 
-      // 11. Identify weak and strong topics
+      // 11. Calculate topic diversity and collection coverage
+      final diversityData = await _calculateTopicDiversity(userId, subject, attempts);
+
+      // 12. Identify weak and strong topics
       final weakTopics = _identifyWeakTopics(topicMasteryMap);
       final strongTopics = _identifyStrongTopics(topicMasteryMap);
 
-      // 12. Generate recommendation
+      // 13. Generate recommendation
       final recommendation = _generateRecommendation(
         grade: predictedGrade,
         score: predictedScore,
         weakTopics: weakTopics,
         improvementTrend: improvementTrend,
         studyConsistency: studyConsistency,
+        meetsRequirements: diversityData['meetsRequirements'] as bool,
+        topicCoverage: diversityData['uniqueTopicsCovered'] as int,
+        requiredTopics: diversityData['requiredTopics'] as int,
       );
 
-      // 13. Create and save prediction
+      // 14. Create and save prediction
       final prediction = GradePrediction(
         subject: subject,
         predictedGrade: predictedGrade,
@@ -96,6 +103,18 @@ class GradePredictionService {
         strongTopics: strongTopics,
         recommendation: recommendation,
         calculatedAt: DateTime.now(),
+        marginOfError: ciData['marginOfError'] as double,
+        lowerBound: ciData['lowerBound'] as double,
+        upperBound: ciData['upperBound'] as double,
+        totalAttempts: diversityData['totalAttempts'] as int,
+        uniqueTopicsCovered: diversityData['uniqueTopicsCovered'] as int,
+        requiredTopics: diversityData['requiredTopics'] as int,
+        uniqueCollectionsCovered: diversityData['uniqueCollectionsCovered'] as int,
+        requiredCollections: diversityData['requiredCollections'] as int,
+        meetsRequirements: diversityData['meetsRequirements'] as bool,
+        usedTheory: diversityData['usedTheory'] as bool,
+        mcqAttempts: diversityData['mcqAttempts'] as int,
+        theoryAttempts: diversityData['theoryAttempts'] as int,
       );
 
       // Save to Firestore
@@ -226,16 +245,137 @@ class GradePredictionService {
   }
 
   /// Convert percentage score to BECE grade (1-9 scale)
+  /// Adjusted Ghana BECE grading: Grade 1 (80-100%), Grade 2 (70-79%), etc.
   int _scoreToGrade(double score) {
-    if (score >= 85) return 1; // Grade 1: 85-100
-    if (score >= 75) return 2; // Grade 2: 75-84
-    if (score >= 65) return 3; // Grade 3: 65-74
-    if (score >= 55) return 4; // Grade 4: 55-64
-    if (score >= 50) return 5; // Grade 5: 50-54
-    if (score >= 45) return 6; // Grade 6: 45-49
-    if (score >= 40) return 7; // Grade 7: 40-44
-    if (score >= 35) return 8; // Grade 8: 35-39
-    return 9; // Grade 9: Below 35
+    if (score >= 80) return 1; // Grade 1: 80-100 (Highest Distinction)
+    if (score >= 70) return 2; // Grade 2: 70-79 (Higher Distinction)
+    if (score >= 60) return 3; // Grade 3: 60-69 (Distinction)
+    if (score >= 50) return 4; // Grade 4: 50-59 (High Credit)
+    if (score >= 45) return 5; // Grade 5: 45-49 (Credit)
+    if (score >= 40) return 6; // Grade 6: 40-44 (High Pass)
+    if (score >= 35) return 7; // Grade 7: 35-39 (Pass)
+    if (score >= 30) return 8; // Grade 8: 30-34 (Low Pass)
+    return 9; // Grade 9: Below 30 (Fail)
+  }
+
+  /// Calculate 95% confidence interval using binomial proportion standard error
+  Map<String, dynamic> _calculate95ConfidenceInterval(
+    List<QuestionAttempt> attempts,
+    double predictedScore,
+  ) {
+    if (attempts.length < 10) {
+      return {
+        'confidence': 0.3,
+        'marginOfError': 0.0,
+        'lowerBound': predictedScore,
+        'upperBound': predictedScore,
+      };
+    }
+
+    // Get last 20 attempts for CI calculation
+    final recentAttempts = attempts.take(min(20, attempts.length)).toList();
+    final n = recentAttempts.length;
+    final correctCount = recentAttempts.where((a) => a.isCorrect).length;
+    final accuracy = correctCount / n;
+
+    // Calculate standard error using binomial proportion formula
+    // SE = sqrt(p * (1 - p) / n)
+    final standardError = sqrt(accuracy * (1 - accuracy) / n);
+
+    // Calculate margin of error at 95% confidence (z = 1.96)
+    final marginOfError = 1.96 * standardError;
+
+    // Calculate bounds in grade scale (0-100)
+    final lowerBound = ((accuracy - marginOfError) * 100).clamp(0.0, 100.0);
+    final upperBound = ((accuracy + marginOfError) * 100).clamp(0.0, 100.0);
+
+    // Convert margin to confidence (smaller margin = higher confidence)
+    // Margin typically ranges from 0 to ~0.5 for small samples
+    final confidence = (1.0 - (marginOfError * 2)).clamp(0.0, 1.0);
+
+    return {
+      'confidence': confidence,
+      'marginOfError': marginOfError,
+      'lowerBound': lowerBound,
+      'upperBound': upperBound,
+    };
+  }
+
+  /// Calculate topic diversity and collection coverage
+  Future<Map<String, dynamic>> _calculateTopicDiversity(
+    String userId,
+    String subject,
+    List<QuestionAttempt> attempts,
+  ) async {
+    // Get total quiz attempts count
+    final totalAttempts = attempts.length;
+
+    // Count unique topics covered
+    final uniqueTopics = attempts.map((a) => a.topic).toSet();
+    final uniqueTopicsCovered = uniqueTopics.length;
+
+    // Count unique collections from quiz attempts
+    final quizzesSnapshot = await _firestore
+        .collection('users')
+        .doc(userId)
+        .collection('quizzes')
+        .where('subject', isEqualTo: subject)
+        .where('isCompleted', isEqualTo: true)
+        .get();
+
+    final quizzes = quizzesSnapshot.docs;
+    final uniqueCollections = quizzes.map((doc) {
+      final data = doc.data();
+      return data['collectionName'] ?? data['year'] ?? 'Unknown';
+    }).toSet();
+    final uniqueCollectionsCovered = uniqueCollections.length;
+
+    // Count MCQ vs Theory attempts
+    int mcqAttempts = 0;
+    int theoryAttempts = 0;
+    
+    for (final quiz in quizzes) {
+      final data = quiz.data();
+      final quizType = data['quizType'] ?? '';
+      if (quizType.toLowerCase().contains('mcq') || 
+          quizType.toLowerCase().contains('multiple')) {
+        mcqAttempts++;
+      } else if (quizType.toLowerCase().contains('theory') || 
+                 quizType.toLowerCase().contains('essay')) {
+        theoryAttempts++;
+      }
+    }
+
+    final usedTheory = theoryAttempts > 0;
+
+    // Fetch total available collections for this subject
+    final collectionsSnapshot = await _firestore
+        .collection('questionCollections')
+        .where('subject', isEqualTo: subject)
+        .get();
+
+    final totalCollections = collectionsSnapshot.docs.length;
+    final requiredCollections = (totalCollections * 0.4).ceil(); // 40% of total
+
+    // Calculate required topics (assume 3 topics per collection on average)
+    final estimatedTotalTopics = max(totalCollections * 3, uniqueTopicsCovered);
+    final requiredTopics = (estimatedTotalTopics * 0.4).ceil(); // 40% coverage
+
+    // Check if requirements are met
+    final meetsRequirements = totalAttempts >= 20 &&
+        uniqueCollectionsCovered >= requiredCollections;
+
+    return {
+      'totalAttempts': totalAttempts,
+      'uniqueTopicsCovered': uniqueTopicsCovered,
+      'requiredTopics': requiredTopics,
+      'uniqueCollectionsCovered': uniqueCollectionsCovered,
+      'requiredCollections': requiredCollections,
+      'meetsRequirements': meetsRequirements,
+      'usedTheory': usedTheory,
+      'mcqAttempts': mcqAttempts,
+      'theoryAttempts': theoryAttempts,
+    };
   }
 
   /// Calculate confidence based on variance of recent scores
@@ -347,8 +487,25 @@ class GradePredictionService {
     required List<String> weakTopics,
     required double improvementTrend,
     required double studyConsistency,
+    required bool meetsRequirements,
+    required int topicCoverage,
+    required int requiredTopics,
   }) {
     final recommendations = <String>[];
+
+    // Requirements check
+    if (!meetsRequirements) {
+      final topicsNeeded = requiredTopics - topicCoverage;
+      if (topicsNeeded > 0) {
+        recommendations.add(
+          'Complete quizzes across $topicsNeeded more topics to unlock your grade prediction.'
+        );
+      }
+      recommendations.add(
+        'Try exploring different quiz collections to get a comprehensive assessment.'
+      );
+      return recommendations.join(' ');
+    }
 
     // Grade-based recommendations
     if (grade <= 3) {
@@ -394,27 +551,27 @@ class GradePredictionService {
     return recommendations.join(' ');
   }
 
-  /// Get minimum score threshold for a grade
+  /// Get minimum score threshold for a grade (Adjusted BECE thresholds)
   double _getGradeThreshold(int grade) {
     switch (grade) {
       case 1:
-        return 85.0;
+        return 80.0; // Grade 1: 80-100%
       case 2:
-        return 75.0;
+        return 70.0; // Grade 2: 70-79%
       case 3:
-        return 65.0;
+        return 60.0; // Grade 3: 60-69%
       case 4:
-        return 55.0;
+        return 50.0; // Grade 4: 50-59%
       case 5:
-        return 50.0;
+        return 45.0; // Grade 5: 45-49%
       case 6:
-        return 45.0;
+        return 40.0; // Grade 6: 40-44%
       case 7:
-        return 40.0;
+        return 35.0; // Grade 7: 35-39%
       case 8:
-        return 35.0;
+        return 30.0; // Grade 8: 30-34%
       default:
-        return 0.0;
+        return 0.0; // Grade 9: Below 30%
     }
   }
 
@@ -432,6 +589,18 @@ class GradePredictionService {
       strongTopics: [],
       recommendation: 'Start practicing questions to get a grade prediction.',
       calculatedAt: DateTime.now(),
+      marginOfError: 0.0,
+      lowerBound: 0.0,
+      upperBound: 0.0,
+      totalAttempts: 0,
+      uniqueTopicsCovered: 0,
+      requiredTopics: 0,
+      uniqueCollectionsCovered: 0,
+      requiredCollections: 0,
+      meetsRequirements: false,
+      usedTheory: false,
+      mcqAttempts: 0,
+      theoryAttempts: 0,
     );
   }
 

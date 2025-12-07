@@ -20,6 +20,7 @@ import '../models/subject_progress_model.dart';
 import '../services/xp_service.dart';
 import '../widgets/rank_badge_widget.dart';
 import '../services/streak_service.dart';
+import '../services/grade_prediction_service.dart';
 import '../screens/redesigned_all_ranks_page.dart';
 import '../widgets/mobile_notification_dialog.dart';
 import 'question_collections_page.dart';
@@ -3363,6 +3364,8 @@ class _StudentHomePageState extends State<StudentHomePage>
           if (isSmallScreen) ...[
             _buildSubjectProgressCard(),
             const SizedBox(height: 16),
+            _buildGradePredictionCard(),
+            const SizedBox(height: 16),
             _buildRecentActivityCard(),
             const SizedBox(height: 16),
             _buildPastQuestionsCard(),
@@ -3384,6 +3387,8 @@ class _StudentHomePageState extends State<StudentHomePage>
                   child: Column(
                     children: [
                       _buildSubjectProgressCard(),
+                      const SizedBox(height: 16),
+                      _buildGradePredictionCard(),
                       const SizedBox(height: 16),
                       _buildRecentActivityCard(),
                       const SizedBox(height: 16),
@@ -5050,6 +5055,530 @@ class _StudentHomePageState extends State<StudentHomePage>
         ],
       ),
     );
+  }
+
+  Widget _buildGradePredictionCard() {
+    final userId = FirebaseAuth.instance.currentUser?.uid;
+    if (userId == null) return const SizedBox.shrink();
+
+    return FutureBuilder(
+      future: GradePredictionService().predictGrade(
+        userId: userId,
+        subject: 'Mathematics', // Default subject, can be made dynamic
+      ),
+      builder: (context, snapshot) {
+        if (!snapshot.hasData) {
+          return Container(
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(16),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: 0.05),
+                  blurRadius: 10,
+                  offset: const Offset(0, 4),
+                ),
+              ],
+            ),
+            child: const Center(
+              child: CircularProgressIndicator(),
+            ),
+          );
+        }
+
+        final prediction = snapshot.data!;
+        final isLocked = !prediction.meetsRequirements;
+        final progressPercent = prediction.totalAttempts / 20;
+        final topicProgressPercent = prediction.uniqueCollectionsCovered / 
+            (prediction.requiredCollections > 0 ? prediction.requiredCollections : 1);
+
+        return Container(
+          padding: const EdgeInsets.all(20),
+          decoration: BoxDecoration(
+            gradient: isLocked
+                ? LinearGradient(
+                    colors: [
+                      Colors.grey[100]!,
+                      Colors.grey[50]!,
+                    ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  )
+                : LinearGradient(
+                    colors: [
+                      const Color(0xFF6366F1).withValues(alpha: 0.1),
+                      const Color(0xFF8B5CF6).withValues(alpha: 0.05),
+                    ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(
+              color: isLocked ? Colors.grey[300]! : const Color(0xFF6366F1).withValues(alpha: 0.3),
+              width: 2,
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: isLocked 
+                    ? Colors.black.withValues(alpha: 0.05)
+                    : const Color(0xFF6366F1).withValues(alpha: 0.15),
+                blurRadius: 10,
+                offset: const Offset(0, 4),
+              ),
+            ],
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: isLocked 
+                          ? Colors.grey[300]
+                          : const Color(0xFF6366F1).withValues(alpha: 0.2),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Icon(
+                      isLocked ? Icons.lock : Icons.grade,
+                      color: isLocked ? Colors.grey[600] : const Color(0xFF6366F1),
+                      size: 20,
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'BECE Grade Predictor',
+                          style: GoogleFonts.playfairDisplay(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: const Color(0xFF1A1E3F),
+                          ),
+                        ),
+                        Text(
+                          isLocked ? 'Complete requirements to unlock' : prediction.subject,
+                          style: GoogleFonts.montserrat(
+                            fontSize: 12,
+                            color: Colors.grey[600],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 16),
+
+              if (isLocked) ...[
+                // Locked State - Show Requirements
+                Text(
+                  'Unlock your personalized grade prediction',
+                  style: GoogleFonts.montserrat(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                    color: const Color(0xFF1A1E3F),
+                  ),
+                ),
+                const SizedBox(height: 12),
+
+                // Quiz Progress
+                _buildProgressBar(
+                  label: 'Complete quizzes',
+                  current: prediction.totalAttempts,
+                  required: 20,
+                  icon: Icons.quiz,
+                  color: Colors.blue,
+                ),
+                const SizedBox(height: 12),
+
+                // Topic Coverage Progress
+                _buildProgressBar(
+                  label: 'Topic diversity',
+                  current: prediction.uniqueCollectionsCovered,
+                  required: prediction.requiredCollections,
+                  icon: Icons.library_books,
+                  color: Colors.purple,
+                  subtitle: '(${(topicProgressPercent * 100).toStringAsFixed(0)}% of ${prediction.subject} topics)',
+                ),
+                const SizedBox(height: 12),
+
+                // Collection Type Breakdown
+                Container(
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(color: Colors.grey[300]!),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Quiz Types Attempted',
+                        style: GoogleFonts.montserrat(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.grey[700],
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          _buildQuizTypeChip('MCQ', prediction.mcqAttempts, Icons.check_circle),
+                          _buildQuizTypeChip('Theory', prediction.theoryAttempts, Icons.edit_note),
+                          _buildQuizTypeChip('Topics', prediction.uniqueTopicsCovered, Icons.topic),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 12),
+
+                // Motivational Message
+                Container(
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: Colors.amber[50],
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(color: Colors.amber[200]!),
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(Icons.lightbulb, color: Colors.amber[700], size: 16),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: Text(
+                          prediction.recommendation,
+                          style: GoogleFonts.montserrat(
+                            fontSize: 11,
+                            color: Colors.amber[900],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ] else ...[
+                // Unlocked State - Show Prediction
+                Container(
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        const Color(0xFF6366F1),
+                        const Color(0xFF8B5CF6),
+                      ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Predicted BECE Grade',
+                        style: GoogleFonts.montserrat(
+                          fontSize: 12,
+                          color: Colors.white.withValues(alpha: 0.9),
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.baseline,
+                        textBaseline: TextBaseline.alphabetic,
+                        children: [
+                          Text(
+                            'Grade ${prediction.predictedGrade}',
+                            style: GoogleFonts.playfairDisplay(
+                              fontSize: 32,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          Text(
+                            '±${prediction.marginOfError.toStringAsFixed(1)}',
+                            style: GoogleFonts.montserrat(
+                              fontSize: 16,
+                              color: Colors.white.withValues(alpha: 0.8),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        '${prediction.predictedScore.toStringAsFixed(1)}% (95% confidence)',
+                        style: GoogleFonts.montserrat(
+                          fontSize: 12,
+                          color: Colors.white.withValues(alpha: 0.9),
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                        decoration: BoxDecoration(
+                          color: Colors.white.withValues(alpha: 0.2),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Text(
+                          'Range: ${prediction.lowerBound.toStringAsFixed(0)}%-${prediction.upperBound.toStringAsFixed(0)}%',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 11,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 16),
+
+                // Performance Insights
+                Row(
+                  children: [
+                    Expanded(
+                      child: _buildInsightChip(
+                        'Confidence',
+                        prediction.confidenceLevel,
+                        _getConfidenceColor(prediction.confidence),
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: _buildInsightChip(
+                        'Consistency',
+                        '${(prediction.studyConsistency * 100).toStringAsFixed(0)}%',
+                        Colors.blue,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 12),
+
+                // Weak & Strong Topics
+                if (prediction.weakTopics.isNotEmpty || prediction.strongTopics.isNotEmpty) ...[
+                  Container(
+                    padding: const EdgeInsets.all(12),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(color: Colors.grey[300]!),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        if (prediction.strongTopics.isNotEmpty) ...[
+                          Row(
+                            children: [
+                              Icon(Icons.check_circle, color: Colors.green, size: 14),
+                              const SizedBox(width: 4),
+                              Text(
+                                'Strong: ${prediction.strongTopics.take(2).join(", ")}',
+                                style: GoogleFonts.montserrat(
+                                  fontSize: 11,
+                                  color: Colors.green[700],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                        if (prediction.strongTopics.isNotEmpty && prediction.weakTopics.isNotEmpty)
+                          const SizedBox(height: 4),
+                        if (prediction.weakTopics.isNotEmpty) ...[
+                          Row(
+                            children: [
+                              Icon(Icons.warning, color: Colors.orange, size: 14),
+                              const SizedBox(width: 4),
+                              Expanded(
+                                child: Text(
+                                  'Improve: ${prediction.weakTopics.take(2).join(", ")}',
+                                  style: GoogleFonts.montserrat(
+                                    fontSize: 11,
+                                    color: Colors.orange[700],
+                                  ),
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                ],
+
+                // Recommendation
+                Container(
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF6366F1).withValues(alpha: 0.1),
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(color: const Color(0xFF6366F1).withValues(alpha: 0.3)),
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(Icons.lightbulb_outline, color: const Color(0xFF6366F1), size: 16),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: Text(
+                          prediction.recommendation,
+                          style: GoogleFonts.montserrat(
+                            fontSize: 11,
+                            color: const Color(0xFF1A1E3F),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _buildProgressBar({
+    required String label,
+    required int current,
+    required int required,
+    required IconData icon,
+    required Color color,
+    String? subtitle,
+  }) {
+    final progress = (current / required).clamp(0.0, 1.0);
+    final isComplete = current >= required;
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            Icon(icon, size: 14, color: color),
+            const SizedBox(width: 4),
+            Text(
+              label,
+              style: GoogleFonts.montserrat(
+                fontSize: 12,
+                fontWeight: FontWeight.w600,
+                color: const Color(0xFF1A1E3F),
+              ),
+            ),
+            const Spacer(),
+            Text(
+              '$current/$required',
+              style: GoogleFonts.montserrat(
+                fontSize: 12,
+                fontWeight: FontWeight.bold,
+                color: isComplete ? Colors.green : color,
+              ),
+            ),
+            if (isComplete) ...[
+              const SizedBox(width: 4),
+              const Icon(Icons.check_circle, size: 14, color: Colors.green),
+            ],
+          ],
+        ),
+        if (subtitle != null) ...[
+          const SizedBox(height: 2),
+          Text(
+            subtitle,
+            style: GoogleFonts.montserrat(
+              fontSize: 10,
+              color: Colors.grey[600],
+            ),
+          ),
+        ],
+        const SizedBox(height: 6),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(4),
+          child: LinearProgressIndicator(
+            value: progress,
+            backgroundColor: Colors.grey[200],
+            valueColor: AlwaysStoppedAnimation<Color>(color),
+            minHeight: 6,
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildQuizTypeChip(String label, int count, IconData icon) {
+    return Column(
+      children: [
+        Container(
+          padding: const EdgeInsets.all(6),
+          decoration: BoxDecoration(
+            color: const Color(0xFF6366F1).withValues(alpha: 0.1),
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Icon(icon, size: 16, color: const Color(0xFF6366F1)),
+        ),
+        const SizedBox(height: 4),
+        Text(
+          label,
+          style: GoogleFonts.montserrat(
+            fontSize: 10,
+            color: Colors.grey[600],
+          ),
+        ),
+        Text(
+          count.toString(),
+          style: GoogleFonts.montserrat(
+            fontSize: 12,
+            fontWeight: FontWeight.bold,
+            color: const Color(0xFF1A1E3F),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildInsightChip(String label, String value, Color color) {
+    return Container(
+      padding: const EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(color: Colors.grey[300]!),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            label,
+            style: GoogleFonts.montserrat(
+              fontSize: 10,
+              color: Colors.grey[600],
+            ),
+          ),
+          const SizedBox(height: 4),
+          Text(
+            value,
+            style: GoogleFonts.montserrat(
+              fontSize: 14,
+              fontWeight: FontWeight.bold,
+              color: color,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Color _getConfidenceColor(double confidence) {
+    if (confidence >= 0.8) return Colors.green;
+    if (confidence >= 0.6) return Colors.orange;
+    return Colors.red;
   }
 
   Widget _buildPastQuestionsCard() {
