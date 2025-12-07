@@ -782,205 +782,211 @@ class _UserManagementPageState extends State<UserManagementPage> {
     final parentEmail = user['parentEmail'] ?? 'N/A';
     final parentContact = user['parentContact'] ?? 'N/A';
 
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
-      decoration: BoxDecoration(
-        border: Border(
-          bottom: BorderSide(color: Colors.grey.shade200),
-        ),
-      ),
-      child: Row(
-        children: [
-          // Checkbox
-          SizedBox(
-            width: 40,
-            child: Checkbox(
-              value: isSelected,
-              onChanged: (val) => _toggleUserSelection(userId),
-              activeColor: const Color(0xFF007AFF),
-            ),
+    return InkWell(
+      onTap: () {
+        _showUserDetailDialog(user);
+      },
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
+        decoration: BoxDecoration(
+          border: Border(
+            bottom: BorderSide(color: Colors.grey.shade200),
           ),
-          const SizedBox(width: 12),
-          // Number
-          SizedBox(
-            width: 50,
-            child: Text(
-              '$userNumber',
-              style: GoogleFonts.montserrat(
-                fontSize: 14,
-                fontWeight: FontWeight.w600,
-                color: Colors.grey[600],
+        ),
+        child: Row(
+          children: [
+            // Checkbox
+            SizedBox(
+              width: 40,
+              child: Checkbox(
+                value: isSelected,
+                onChanged: (val) => _toggleUserSelection(userId),
+                activeColor: const Color(0xFF007AFF),
               ),
             ),
-          ),
-          // Name & Email (stacked)
-          Expanded(
-            flex: 3,
-            child: Row(
-              children: [
-                CircleAvatar(
-                  radius: 18,
-                  backgroundColor: _getRoleColor(role).withValues(alpha: 0.15),
-                  child: Text(
-                    name.isNotEmpty ? name[0].toUpperCase() : '?',
-                    style: GoogleFonts.montserrat(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                      color: _getRoleColor(role),
+            const SizedBox(width: 12),
+            // Number
+            SizedBox(
+              width: 50,
+              child: Text(
+                '$userNumber',
+                style: GoogleFonts.montserrat(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.grey[600],
+                ),
+              ),
+            ),
+            // Name & Email (stacked)
+            Expanded(
+              flex: 3,
+              child: Row(
+                children: [
+                  CircleAvatar(
+                    radius: 18,
+                    backgroundColor:
+                        _getRoleColor(role).withValues(alpha: 0.15),
+                    child: Text(
+                      name.isNotEmpty ? name[0].toUpperCase() : '?',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                        color: _getRoleColor(role),
+                      ),
                     ),
                   ),
-                ),
-                const SizedBox(width: 12),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        name,
-                        style: GoogleFonts.montserrat(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600,
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          name,
+                          style: GoogleFonts.montserrat(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                          ),
+                          overflow: TextOverflow.ellipsis,
                         ),
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                      const SizedBox(height: 2),
-                      Text(
-                        email,
-                        style: GoogleFonts.montserrat(
-                          fontSize: 12,
-                          color: Colors.grey[600],
+                        const SizedBox(height: 2),
+                        Text(
+                          email,
+                          style: GoogleFonts.montserrat(
+                            fontSize: 12,
+                            color: Colors.grey[600],
+                          ),
+                          overflow: TextOverflow.ellipsis,
                         ),
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-              ],
-            ),
-          ),
-          // Contact
-          Expanded(
-            flex: 2,
-            child: Text(
-              contact,
-              style: GoogleFonts.montserrat(
-                fontSize: 13,
-                color: Colors.grey[700],
+                ],
               ),
-              overflow: TextOverflow.ellipsis,
             ),
-          ),
-          // School & Class (stacked)
-          Expanded(
-            flex: 3,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(
-                  school,
-                  style: GoogleFonts.montserrat(
-                    fontSize: 13,
-                    fontWeight: FontWeight.w500,
-                  ),
-                  overflow: TextOverflow.ellipsis,
+            // Contact
+            Expanded(
+              flex: 2,
+              child: Text(
+                contact,
+                style: GoogleFonts.montserrat(
+                  fontSize: 13,
+                  color: Colors.grey[700],
                 ),
-                const SizedBox(height: 2),
-                Text(
-                  className,
-                  style: GoogleFonts.montserrat(
-                    fontSize: 12,
-                    color: Colors.grey[600],
-                  ),
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ],
+                overflow: TextOverflow.ellipsis,
+              ),
             ),
-          ),
-          // Role & XP (stacked)
-          Expanded(
-            flex: 2,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(
-                  _getRoleLabel(role),
-                  style: GoogleFonts.montserrat(
-                    fontSize: 13,
-                    fontWeight: FontWeight.w600,
-                    color: _getRoleColor(role),
+            // School & Class (stacked)
+            Expanded(
+              flex: 3,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    school,
+                    style: GoogleFonts.montserrat(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    overflow: TextOverflow.ellipsis,
                   ),
-                  overflow: TextOverflow.ellipsis,
-                ),
-                const SizedBox(height: 2),
-                Text(
-                  '${_formatNumber(user['xp'])} XP',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 11,
-                    color: Colors.grey[600],
+                  const SizedBox(height: 2),
+                  Text(
+                    className,
+                    style: GoogleFonts.montserrat(
+                      fontSize: 12,
+                      color: Colors.grey[600],
+                    ),
+                    overflow: TextOverflow.ellipsis,
                   ),
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          // Parent Info (stacked)
-          Expanded(
-            flex: 3,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(
-                  parentEmail,
-                  style: GoogleFonts.montserrat(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w500,
+            // Role & XP (stacked)
+            Expanded(
+              flex: 2,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    _getRoleLabel(role),
+                    style: GoogleFonts.montserrat(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w600,
+                      color: _getRoleColor(role),
+                    ),
+                    overflow: TextOverflow.ellipsis,
                   ),
-                  overflow: TextOverflow.ellipsis,
-                ),
-                const SizedBox(height: 2),
-                Text(
-                  parentContact,
-                  style: GoogleFonts.montserrat(
-                    fontSize: 11,
-                    color: Colors.grey[600],
+                  const SizedBox(height: 2),
+                  Text(
+                    '${_formatNumber(user['xp'])} XP',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 11,
+                      color: Colors.grey[600],
+                    ),
+                    overflow: TextOverflow.ellipsis,
                   ),
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          // Created & Last Seen (stacked)
-          Expanded(
-            flex: 2,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(
-                  _formatDate(createdAt),
-                  style: GoogleFonts.montserrat(
-                    fontSize: 11,
-                    fontWeight: FontWeight.w500,
+            // Parent Info (stacked)
+            Expanded(
+              flex: 3,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    parentEmail,
+                    style: GoogleFonts.montserrat(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    overflow: TextOverflow.ellipsis,
                   ),
-                  textAlign: TextAlign.center,
-                ),
-                const SizedBox(height: 2),
-                Text(
-                  _formatLastSeen(lastSeen),
-                  style: GoogleFonts.montserrat(
-                    fontSize: 11,
-                    color: Colors.grey[600],
+                  const SizedBox(height: 2),
+                  Text(
+                    parentContact,
+                    style: GoogleFonts.montserrat(
+                      fontSize: 11,
+                      color: Colors.grey[600],
+                    ),
+                    overflow: TextOverflow.ellipsis,
                   ),
-                  textAlign: TextAlign.center,
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-        ],
+            // Created & Last Seen (stacked)
+            Expanded(
+              flex: 2,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    _formatDate(createdAt),
+                    style: GoogleFonts.montserrat(
+                      fontSize: 11,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 2),
+                  Text(
+                    _formatLastSeen(lastSeen),
+                    style: GoogleFonts.montserrat(
+                      fontSize: 11,
+                      color: Colors.grey[600],
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
