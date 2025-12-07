@@ -2873,7 +2873,7 @@ class _StudentHomePageState extends State<StudentHomePage>
             ],
           ),
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8),
+            padding: const EdgeInsets.only(top: 6, bottom: 10),
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               padding: const EdgeInsets.symmetric(horizontal: 8),
