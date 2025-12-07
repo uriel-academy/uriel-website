@@ -408,6 +408,115 @@ class GradePredictionService {
     return 'Low';
   }
 
+  /// Get grade predictions for multiple students (for teachers/admins)
+  /// Returns Map<subject, Map<grade, List<studentId>>>
+  Future<Map<String, Map<int, List<String>>>> getGradeDistribution({
+    required List<String> studentIds,
+    List<String>? subjects,
+  }) async {
+    // All BECE subjects if not specified
+    final subjectsToCheck = subjects ?? [
+      'Mathematics',
+      'English Language',
+      'Integrated Science',
+      'Social Studies',
+      'RME',
+      'ICT',
+      'Ga',
+      'Asante Twi',
+      'French',
+      'Creative Arts',
+      'Career Technology',
+    ];
+
+    final distribution = <String, Map<int, List<String>>>{};
+
+    // Initialize distribution structure
+    for (final subject in subjectsToCheck) {
+      distribution[subject] = {};
+      for (int grade = 1; grade <= 9; grade++) {
+        distribution[subject]![grade] = [];
+      }
+    }
+
+    // Fetch predictions for each student and subject
+    for (final studentId in studentIds) {
+      for (final subject in subjectsToCheck) {
+        try {
+          final prediction = await predictGrade(
+            userId: studentId,
+            subject: subject,
+          );
+
+          // Only count if requirements are met
+          if (prediction.meetsRequirements) {
+            distribution[subject]![prediction.predictedGrade]!.add(studentId);
+          }
+        } catch (e) {
+          debugPrint('Error predicting for $studentId in $subject: $e');
+        }
+      }
+    }
+
+    return distribution;
+  }
+
+  /// Get aggregated grade statistics for a subject
+  /// Returns Map with statistics like average, distribution, etc.
+  Future<Map<String, dynamic>> getSubjectStatistics({
+    required List<String> studentIds,
+    required String subject,
+  }) async {
+    final predictions = <GradePrediction>[];
+
+    for (final studentId in studentIds) {
+      try {
+        final prediction = await predictGrade(
+          userId: studentId,
+          subject: subject,
+        );
+
+        if (prediction.meetsRequirements) {
+          predictions.add(prediction);
+        }
+      } catch (e) {
+        debugPrint('Error predicting for $studentId: $e');
+      }
+    }
+
+    if (predictions.isEmpty) {
+      return {
+        'totalStudents': studentIds.length,
+        'studentsWithPredictions': 0,
+        'averageGrade': 0.0,
+        'averageScore': 0.0,
+        'gradeDistribution': <int, int>{},
+        'topPerformers': <String>[],
+        'needsSupport': <String>[],
+      };
+    }
+
+    // Calculate statistics
+    final totalPredicted = predictions.length;
+    final avgGrade = predictions.map((p) => p.predictedGrade).reduce((a, b) => a + b) / totalPredicted;
+    final avgScore = predictions.map((p) => p.predictedScore).reduce((a, b) => a + b) / totalPredicted;
+
+    // Grade distribution
+    final gradeDistribution = <int, int>{};
+    for (int grade = 1; grade <= 9; grade++) {
+      gradeDistribution[grade] = predictions.where((p) => p.predictedGrade == grade).length;
+    }
+
+    return {
+      'totalStudents': studentIds.length,
+      'studentsWithPredictions': totalPredicted,
+      'averageGrade': avgGrade,
+      'averageScore': avgScore,
+      'gradeDistribution': gradeDistribution,
+      'predictions': predictions,
+    };
+  }
+
   /// Calculate mastery for each topic
   Map<String, TopicMastery> _calculateTopicMastery(List<QuestionAttempt> attempts) {
     final topicMap = <String, List<QuestionAttempt>>{};

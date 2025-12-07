@@ -55,6 +55,9 @@ class _StudentHomePageState extends State<StudentHomePage>
   late AnimationController _animationController;
   late Animation<double> _fadeAnimation;
 
+  // Firestore instance
+  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
+
   int _selectedIndex = 0;
   late bool _showingProfile;
 
@@ -3430,7 +3433,343 @@ class _StudentHomePageState extends State<StudentHomePage>
 
   /// Teacher-facing dashboard: aggregates average data of students in teacher's class
   Widget _buildTeacherDashboard() {
-    return TeacherDashboardWidget();
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          TeacherDashboardWidget(),
+          const SizedBox(height: 16),
+          _buildGradePredictionAnalytics(),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildGradePredictionAnalytics() {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isSmallScreen = screenWidth < 768;
+    final user = FirebaseAuth.instance.currentUser;
+
+    if (user == null) return const SizedBox.shrink();
+
+    return FutureBuilder<List<String>>(
+      future: _getTeacherStudentIds(user.uid),
+      builder: (context, snapshot) {
+        if (!snapshot.hasData || snapshot.data!.isEmpty) {
+          return Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Container(
+              padding: const EdgeInsets.all(24),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(16),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withValues(alpha: 0.05),
+                    blurRadius: 10,
+                    offset: const Offset(0, 4),
+                  ),
+                ],
+              ),
+              child: Column(
+                children: [
+                  Icon(Icons.people_outline, size: 48, color: Colors.grey[400]),
+                  const SizedBox(height: 16),
+                  Text(
+                    'No Students Found',
+                    style: GoogleFonts.playfairDisplay(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey[600],
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    'Students will appear here once they join your class',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 14,
+                      color: Colors.grey[500],
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+            ),
+          );
+        }
+
+        final studentIds = snapshot.data!;
+
+        return Padding(
+          padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
+          child: Container(
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(16),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: 0.05),
+                  blurRadius: 10,
+                  offset: const Offset(0, 4),
+                ),
+              ],
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF6366F1).withValues(alpha: 0.1),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: const Icon(
+                        Icons.analytics,
+                        color: Color(0xFF6366F1),
+                        size: 24,
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Class Grade Predictions',
+                            style: GoogleFonts.playfairDisplay(
+                              fontSize: isSmallScreen ? 18 : 20,
+                              fontWeight: FontWeight.bold,
+                              color: const Color(0xFF1A1E3F),
+                            ),
+                          ),
+                          Text(
+                            '${studentIds.length} students • BECE predictions',
+                            style: GoogleFonts.montserrat(
+                              fontSize: 12,
+                              color: Colors.grey[600],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 20),
+                _buildGradeDistributionView(studentIds, isSmallScreen),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  Future<List<String>> _getTeacherStudentIds(String teacherId) async {
+    try {
+      // Get teacher's document to find their class/school
+      final teacherDoc = await _firestore.collection('users').doc(teacherId).get();
+      
+      if (!teacherDoc.exists) return [];
+      
+      final teacherData = teacherDoc.data() as Map<String, dynamic>;
+      final teacherClass = teacherData['class'] as String?;
+      final teacherSchool = teacherData['schoolName'] as String?;
+
+      if (teacherClass == null) return [];
+
+      // Find all students in the same class
+      final studentsQuery = await _firestore
+          .collection('users')
+          .where('role', isEqualTo: 'student')
+          .where('class', isEqualTo: teacherClass)
+          .where('schoolName', isEqualTo: teacherSchool)
+          .limit(100) // Limit to avoid overload
+          .get();
+
+      return studentsQuery.docs.map((doc) => doc.id).toList();
+    } catch (e) {
+      debugPrint('Error fetching teacher students: $e');
+      return [];
+    }
+  }
+
+  Widget _buildGradeDistributionView(List<String> studentIds, bool isSmallScreen) {
+    final subjects = [
+      'Mathematics',
+      'English Language',
+      'Integrated Science',
+      'Social Studies',
+      'RME',
+      'ICT',
+      'Ga',
+      'Asante Twi',
+      'French',
+      'Creative Arts',
+      'Career Technology',
+    ];
+
+    return FutureBuilder<Map<String, Map<int, List<String>>>>(
+      future: GradePredictionService().getGradeDistribution(
+        studentIds: studentIds,
+        subjects: subjects,
+      ),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Center(
+            child: Padding(
+              padding: EdgeInsets.all(32.0),
+              child: CircularProgressIndicator(),
+            ),
+          );
+        }
+
+        if (!snapshot.hasData) {
+          return Center(
+            child: Text(
+              'No prediction data available',
+              style: GoogleFonts.montserrat(color: Colors.grey[600]),
+            ),
+          );
+        }
+
+        final distribution = snapshot.data!;
+
+        return Column(
+          children: [
+            for (final subject in subjects)
+              if (distribution[subject] != null)
+                _buildSubjectGradeCard(
+                  subject,
+                  distribution[subject]!,
+                  studentIds.length,
+                  isSmallScreen,
+                ),
+          ],
+        );
+      },
+    );
+  }
+
+  Widget _buildSubjectGradeCard(
+    String subject,
+    Map<int, List<String>> gradeDistribution,
+    int totalStudents,
+    bool isSmallScreen,
+  ) {
+    final studentsWithPredictions = gradeDistribution.values.fold<int>(
+      0,
+      (sum, list) => sum + list.length,
+    );
+
+    if (studentsWithPredictions == 0) {
+      return const SizedBox.shrink();
+    }
+
+    return Container(
+      margin: const EdgeInsets.only(bottom: 16),
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Colors.grey[50],
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: Colors.grey[200]!),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  subject,
+                  style: GoogleFonts.montserrat(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    color: const Color(0xFF1A1E3F),
+                  ),
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                decoration: BoxDecoration(
+                  color: const Color(0xFF6366F1).withValues(alpha: 0.1),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Text(
+                  '$studentsWithPredictions/$totalStudents students',
+                  style: GoogleFonts.montserrat(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w600,
+                    color: const Color(0xFF6366F1),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 12),
+          Wrap(
+            spacing: 8,
+            runSpacing: 8,
+            children: [
+              for (int grade = 1; grade <= 9; grade++)
+                if (gradeDistribution[grade]!.isNotEmpty)
+                  _buildGradeChip(
+                    grade,
+                    gradeDistribution[grade]!.length,
+                    _getGradeColor(grade),
+                  ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildGradeChip(int grade, int count, Color color) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      decoration: BoxDecoration(
+        color: color.withValues(alpha: 0.1),
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(color: color.withValues(alpha: 0.3)),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            'Grade $grade',
+            style: GoogleFonts.montserrat(
+              fontSize: 12,
+              fontWeight: FontWeight.w600,
+              color: color,
+            ),
+          ),
+          const SizedBox(width: 8),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+            decoration: BoxDecoration(
+              color: color,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Text(
+              count.toString(),
+              style: GoogleFonts.montserrat(
+                fontSize: 11,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Color _getGradeColor(int grade) {
+    if (grade <= 3) return Colors.green;
+    if (grade <= 6) return Colors.orange;
+    return Colors.red;
   }
 
   // NEW: Students at Risk Section
