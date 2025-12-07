@@ -2782,6 +2782,7 @@ class _StudentHomePageState extends State<StudentHomePage>
     return SafeArea(
       top: false,
       child: Container(
+        height: 60,
         decoration: BoxDecoration(
           color: Colors.white,
           boxShadow: [
@@ -2794,7 +2795,7 @@ class _StudentHomePageState extends State<StudentHomePage>
         ),
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
-          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
+          padding: const EdgeInsets.symmetric(horizontal: 8),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: List.generate(tabs.length, (index) {
@@ -2807,8 +2808,8 @@ class _StudentHomePageState extends State<StudentHomePage>
                     _showingProfile = false;
                   }),
                   child: Container(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 16, vertical: 10),
+                    height: 36,
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
                     decoration: BoxDecoration(
                       color: isSelected
                           ? const Color(0xFFD62828).withValues(alpha: 0.1)
@@ -2821,17 +2822,16 @@ class _StudentHomePageState extends State<StudentHomePage>
                               width: 1)
                           : null,
                     ),
-                    child: Center(
-                      child: Text(
-                        tabs[index]['label'] as String,
-                        style: GoogleFonts.montserrat(
-                          fontSize: 12,
-                          fontWeight:
-                              isSelected ? FontWeight.w600 : FontWeight.w500,
-                          color: isSelected
-                              ? const Color(0xFFD62828)
-                              : Colors.grey[600],
-                        ),
+                    alignment: Alignment.center,
+                    child: Text(
+                      tabs[index]['label'] as String,
+                      style: GoogleFonts.montserrat(
+                        fontSize: 12,
+                        fontWeight:
+                            isSelected ? FontWeight.w600 : FontWeight.w500,
+                        color: isSelected
+                            ? const Color(0xFFD62828)
+                            : Colors.grey[600],
                       ),
                     ),
                   ),
