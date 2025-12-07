@@ -2053,22 +2053,34 @@ class _SchoolAdminDashboardState extends State<SchoolAdminDashboard> {
   Future<List<String>> _getSchoolStudentIds() async {
     try {
       final user = FirebaseAuth.instance.currentUser;
-      if (user == null) return [];
+      if (user == null) {
+        debugPrint('❌ School Grade Analytics: No user logged in');
+        return [];
+      }
 
       final adminDoc = await FirebaseFirestore.instance
           .collection('users')
           .doc(user.uid)
           .get();
 
-      if (!adminDoc.exists) return [];
+      if (!adminDoc.exists) {
+        debugPrint('❌ School Grade Analytics: Admin doc does not exist');
+        return [];
+      }
 
       final adminData = adminDoc.data() as Map<String, dynamic>;
       final schoolName = adminData['schoolName'] as String?;
 
-      if (schoolName == null) return [];
+      debugPrint('🔍 School Grade Analytics: Admin school name: "$schoolName"');
+
+      if (schoolName == null) {
+        debugPrint('❌ School Grade Analytics: School name is null');
+        return [];
+      }
 
       // Normalize school name for case-insensitive matching
       final normalizedSchoolName = schoolName.toLowerCase().trim();
+      debugPrint('🔍 School Grade Analytics: Normalized school name: "$normalizedSchoolName"');
 
       // Fetch all students and filter by normalized school name
       final studentsQuery = await FirebaseFirestore.instance
@@ -2077,15 +2089,20 @@ class _SchoolAdminDashboardState extends State<SchoolAdminDashboard> {
           .limit(500)
           .get();
 
+      debugPrint('🔍 School Grade Analytics: Found ${studentsQuery.docs.length} total students');
+
       final matchingStudents = studentsQuery.docs.where((doc) {
         final data = doc.data() as Map<String, dynamic>;
         final studentSchool = (data['schoolName'] as String?)?.toLowerCase().trim();
         return studentSchool == normalizedSchoolName;
       }).toList();
 
-      return matchingStudents.map((doc) => doc.id).toList();
+      final studentIds = matchingStudents.map((doc) => doc.id).toList();
+      debugPrint('✅ School Grade Analytics: Found ${studentIds.length} matching students for school "$schoolName"');
+      
+      return studentIds;
     } catch (e) {
-      debugPrint('Error fetching school students: $e');
+      debugPrint('❌ Error fetching school students for grade analytics: $e');
       return [];
     }
   }
