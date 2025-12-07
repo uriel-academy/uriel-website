@@ -3367,8 +3367,10 @@ class _StudentHomePageState extends State<StudentHomePage>
           if (isSmallScreen) ...[
             _buildSubjectProgressCard(),
             const SizedBox(height: 16),
-            _buildGradePredictionCard(),
-            const SizedBox(height: 16),
+            if (!widget.isTeacher) _buildGradePredictionCard(),
+            if (!widget.isTeacher) const SizedBox(height: 16),
+            if (widget.isTeacher) _buildTeacherGradePredictionAnalytics(),
+            if (widget.isTeacher) const SizedBox(height: 16),
             _buildRecentActivityCard(),
             const SizedBox(height: 16),
             _buildPastQuestionsCard(),
@@ -3391,8 +3393,10 @@ class _StudentHomePageState extends State<StudentHomePage>
                     children: [
                       _buildSubjectProgressCard(),
                       const SizedBox(height: 16),
-                      _buildGradePredictionCard(),
-                      const SizedBox(height: 16),
+                      if (!widget.isTeacher) _buildGradePredictionCard(),
+                      if (!widget.isTeacher) const SizedBox(height: 16),
+                      if (widget.isTeacher) _buildTeacherGradePredictionAnalytics(),
+                      if (widget.isTeacher) const SizedBox(height: 16),
                       _buildRecentActivityCard(),
                       const SizedBox(height: 16),
                       _buildPastQuestionsCard(),
@@ -3433,18 +3437,10 @@ class _StudentHomePageState extends State<StudentHomePage>
 
   /// Teacher-facing dashboard: aggregates average data of students in teacher's class
   Widget _buildTeacherDashboard() {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          TeacherDashboardWidget(),
-          const SizedBox(height: 16),
-          _buildGradePredictionAnalytics(),
-        ],
-      ),
-    );
+    return TeacherDashboardWidget();
   }
 
-  Widget _buildGradePredictionAnalytics() {
+  Widget _buildTeacherGradePredictionAnalytics() {
     final screenWidth = MediaQuery.of(context).size.width;
     final isSmallScreen = screenWidth < 768;
     final user = FirebaseAuth.instance.currentUser;
@@ -3499,9 +3495,7 @@ class _StudentHomePageState extends State<StudentHomePage>
 
         final studentIds = snapshot.data!;
 
-        return Padding(
-          padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
-          child: Container(
+        return Container(
             padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
               color: Colors.white,
@@ -3560,7 +3554,6 @@ class _StudentHomePageState extends State<StudentHomePage>
                 _buildGradeDistributionView(studentIds, isSmallScreen),
               ],
             ),
-          ),
         );
       },
     );
@@ -5468,52 +5461,82 @@ class _StudentHomePageState extends State<StudentHomePage>
             ],
           ),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                      color: isLocked 
-                          ? Colors.grey[300]
-                          : const Color(0xFF6366F1).withValues(alpha: 0.2),
-                      borderRadius: BorderRadius.circular(8),
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        color: isLocked 
+                            ? Colors.grey[300]
+                            : const Color(0xFF6366F1).withValues(alpha: 0.2),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Icon(
+                        isLocked ? Icons.lock : Icons.grade,
+                        color: isLocked ? Colors.grey[600] : const Color(0xFF6366F1),
+                        size: 20,
+                      ),
                     ),
-                    child: Icon(
-                      isLocked ? Icons.lock : Icons.grade,
-                      color: isLocked ? Colors.grey[600] : const Color(0xFF6366F1),
-                      size: 20,
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'BECE Grade Predictor',
+                            style: GoogleFonts.playfairDisplay(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: const Color(0xFF1A1E3F),
+                            ),
+                          ),
+                          Text(
+                            isLocked ? 'Complete requirements to unlock' : prediction.subject,
+                            style: GoogleFonts.montserrat(
+                              fontSize: 12,
+                              color: Colors.grey[600],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 12),
+                Container(
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF6366F1).withValues(alpha: 0.05),
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(
+                      color: const Color(0xFF6366F1).withValues(alpha: 0.2),
                     ),
                   ),
-                  const SizedBox(width: 12),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'BECE Grade Predictor',
-                          style: GoogleFonts.playfairDisplay(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: const Color(0xFF1A1E3F),
-                          ),
-                        ),
-                        Text(
-                          isLocked ? 'Complete requirements to unlock' : prediction.subject,
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Icon(
+                        Icons.info_outline,
+                        size: 16,
+                        color: const Color(0xFF6366F1),
+                      ),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: Text(
+                          'AI-powered prediction using your quiz performance, topic coverage, and study patterns. Take more quizzes across different topics for accurate predictions!',
                           style: GoogleFonts.montserrat(
-                            fontSize: 12,
-                            color: Colors.grey[600],
+                            fontSize: 11,
+                            color: Colors.grey[700],
+                            height: 1.4,
                           ),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
-              const SizedBox(height: 16),
-
-              if (isLocked) ...[
+                ),
+                const SizedBox(height: 16),              if (isLocked) ...[
                 // Locked State - Show Requirements
                 Text(
                   'Unlock your personalized grade prediction',
