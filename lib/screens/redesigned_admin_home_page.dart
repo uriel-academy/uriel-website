@@ -1362,6 +1362,8 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage>
                   distribution[subject]!,
                   studentIds.length,
                 ),
+            const SizedBox(height: 16),
+            _buildAppWideOverallGradeSummary(distribution, studentIds.length),
           ],
         );
       },
@@ -1433,6 +1435,7 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage>
                     grade,
                     gradeDistribution[grade]!.length,
                     _getGradeColorForAnalytics(grade),
+                    totalStudents: studentsWithPredictions,
                   ),
             ],
           ),
@@ -1441,7 +1444,11 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage>
     );
   }
 
-  Widget _buildAppWideGradeChip(int grade, int count, Color color) {
+  Widget _buildAppWideGradeChip(int grade, int count, Color color, {int? totalStudents}) {
+    final percentage = totalStudents != null && totalStudents > 0
+        ? (count / totalStudents * 100).toStringAsFixed(0)
+        : null;
+
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       decoration: BoxDecoration(
@@ -1468,7 +1475,7 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage>
               borderRadius: BorderRadius.circular(10),
             ),
             child: Text(
-              count.toString(),
+              percentage != null ? '$count ($percentage%)' : count.toString(),
               style: GoogleFonts.montserrat(
                 fontSize: 11,
                 fontWeight: FontWeight.bold,
@@ -1485,6 +1492,108 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage>
     if (grade <= 3) return Colors.green;
     if (grade <= 6) return Colors.orange;
     return Colors.red;
+  }
+
+  Widget _buildAppWideOverallGradeSummary(
+    Map<String, Map<int, List<String>>> distribution,
+    int totalStudents,
+  ) {
+    // Aggregate all predictions across subjects
+    final overallCounts = <int, Set<String>>{};
+    for (int grade = 1; grade <= 9; grade++) {
+      overallCounts[grade] = {};
+    }
+
+    for (final subjectDist in distribution.values) {
+      for (int grade = 1; grade <= 9; grade++) {
+        if (subjectDist[grade] != null) {
+          overallCounts[grade]!.addAll(subjectDist[grade]!);
+        }
+      }
+    }
+
+    final totalPredictions = overallCounts.values.fold<int>(
+      0,
+      (sum, set) => sum + set.length,
+    );
+
+    if (totalPredictions == 0) {
+      return const SizedBox.shrink();
+    }
+
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            const Color(0xFF6366F1).withValues(alpha: 0.1),
+            const Color(0xFF8B5CF6).withValues(alpha: 0.05),
+          ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(
+          color: const Color(0xFF6366F1).withValues(alpha: 0.3),
+          width: 2,
+        ),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Icon(
+                Icons.summarize,
+                color: const Color(0xFF6366F1),
+                size: 20,
+              ),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Text(
+                  'Overall Grade Distribution',
+                  style: GoogleFonts.montserrat(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: const Color(0xFF1A1E3F),
+                  ),
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                decoration: BoxDecoration(
+                  color: const Color(0xFF6366F1).withValues(alpha: 0.2),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Text(
+                  '$totalPredictions total predictions',
+                  style: GoogleFonts.montserrat(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w600,
+                    color: const Color(0xFF6366F1),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 12),
+          Wrap(
+            spacing: 8,
+            runSpacing: 8,
+            children: [
+              for (int grade = 1; grade <= 9; grade++)
+                if (overallCounts[grade]!.isNotEmpty)
+                  _buildAppWideGradeChip(
+                    grade,
+                    overallCounts[grade]!.length,
+                    _getGradeColorForAnalytics(grade),
+                    totalStudents: totalPredictions,
+                  ),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 
   Widget _buildMetricCard(
