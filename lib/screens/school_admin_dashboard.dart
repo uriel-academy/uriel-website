@@ -1879,6 +1879,24 @@ class _SchoolAdminDashboardState extends State<SchoolAdminDashboard> {
     return FutureBuilder<List<String>>(
       future: _getSchoolStudentIds(_selectedClass),
       builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return Container(
+            padding: const EdgeInsets.all(24),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(16),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: 0.05),
+                  blurRadius: 10,
+                  offset: const Offset(0, 4),
+                ),
+              ],
+            ),
+            child: const Center(child: CircularProgressIndicator()),
+          );
+        }
+
         if (!snapshot.hasData || snapshot.data!.isEmpty) {
           return Container(
             padding: const EdgeInsets.all(24),
@@ -1939,6 +1957,55 @@ class _SchoolAdminDashboardState extends State<SchoolAdminDashboard> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              // Info Box: AI Model Explanation
+              Container(
+                padding: const EdgeInsets.all(16),
+                margin: const EdgeInsets.only(bottom: 20),
+                decoration: BoxDecoration(
+                  color: const Color(0xFF6366F1).withValues(alpha: 0.05),
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: const Color(0xFF6366F1).withValues(alpha: 0.2),
+                  ),
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Icon(
+                      Icons.info_outline,
+                      color: const Color(0xFF6366F1),
+                      size: 20,
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'AI-Powered Grade Predictions',
+                            style: GoogleFonts.montserrat(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w600,
+                              color: const Color(0xFF6366F1),
+                            ),
+                          ),
+                          const SizedBox(height: 6),
+                          Text(
+                            _selectedClass != null
+                                ? 'This shows how many students in $_selectedClass are predicted to achieve each BECE grade (1-9) based on their quiz performance. Our AI model requires each student to complete at least 20 quizzes with 40% topic diversity to make reliable predictions.'
+                                : 'This shows how many students in your school are predicted to achieve each BECE grade (1-9) based on their quiz performance. Our AI model requires each student to complete at least 20 quizzes with 40% topic diversity to make reliable predictions.',
+                            style: GoogleFonts.montserrat(
+                              fontSize: 12,
+                              color: Colors.grey[700],
+                              height: 1.4,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               Row(
                 children: [
                   Container(
@@ -1979,38 +2046,6 @@ class _SchoolAdminDashboardState extends State<SchoolAdminDashboard> {
                     ),
                   ),
                 ],
-              ),
-              const SizedBox(height: 16),
-              Container(
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  color: const Color(0xFF6366F1).withValues(alpha: 0.05),
-                  borderRadius: BorderRadius.circular(8),
-                  border: Border.all(
-                    color: const Color(0xFF6366F1).withValues(alpha: 0.2),
-                  ),
-                ),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Icon(
-                      Icons.info_outline,
-                      size: 16,
-                      color: const Color(0xFF6366F1),
-                    ),
-                    const SizedBox(width: 8),
-                    Expanded(
-                      child: Text(
-                        'AI predictions based on quiz performance and topic diversity. Students need 20+ quizzes across 40% of topics. Encourage regular practice for accurate results!',
-                        style: GoogleFonts.montserrat(
-                          fontSize: 11,
-                          color: Colors.grey[700],
-                          height: 1.4,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
               ),
               const SizedBox(height: 20),
               _buildSchoolGradeDistributionView(studentIds, isSmallScreen),
