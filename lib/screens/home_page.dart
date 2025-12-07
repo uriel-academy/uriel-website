@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -2779,10 +2780,12 @@ class _StudentHomePageState extends State<StudentHomePage>
     final tabs =
         nav.map((n) => {'label': n['label'], 'icon': n['icon']}).toList();
 
-    return SafeArea(
-      top: false,
-      child: Container(
-        height: 60,
+    // Web maintains original compact design, PWA/Native gets comfortable height
+    final useOriginalCompact = kIsWeb;
+
+    if (useOriginalCompact) {
+      // Original web mobile design - compact and tight
+      return Container(
         decoration: BoxDecoration(
           color: Colors.white,
           boxShadow: [
@@ -2795,9 +2798,8 @@ class _StudentHomePageState extends State<StudentHomePage>
         ),
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
-          padding: const EdgeInsets.symmetric(horizontal: 8),
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: List.generate(tabs.length, (index) {
               final isSelected = _selectedIndex == index;
               return Padding(
@@ -2808,8 +2810,8 @@ class _StudentHomePageState extends State<StudentHomePage>
                     _showingProfile = false;
                   }),
                   child: Container(
-                    height: 36,
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                     decoration: BoxDecoration(
                       color: isSelected
                           ? const Color(0xFFD62828).withValues(alpha: 0.1)
@@ -2822,7 +2824,6 @@ class _StudentHomePageState extends State<StudentHomePage>
                               width: 1)
                           : null,
                     ),
-                    alignment: Alignment.center,
                     child: Text(
                       tabs[index]['label'] as String,
                       style: GoogleFonts.montserrat(
@@ -2840,8 +2841,76 @@ class _StudentHomePageState extends State<StudentHomePage>
             }),
           ),
         ),
-      ),
-    );
+      );
+    } else {
+      // PWA/Native design - taller with SafeArea for iOS home indicator
+      return SafeArea(
+        top: false,
+        child: Container(
+          height: 68,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withValues(alpha: 0.1),
+                blurRadius: 10,
+                offset: const Offset(0, -2),
+              ),
+            ],
+          ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 8),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              padding: const EdgeInsets.symmetric(horizontal: 8),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: List.generate(tabs.length, (index) {
+                  final isSelected = _selectedIndex == index;
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 4),
+                    child: GestureDetector(
+                      onTap: () => setState(() {
+                        _selectedIndex = index;
+                        _showingProfile = false;
+                      }),
+                      child: Container(
+                        height: 40,
+                        padding: const EdgeInsets.symmetric(horizontal: 16),
+                        decoration: BoxDecoration(
+                          color: isSelected
+                              ? const Color(0xFFD62828).withValues(alpha: 0.1)
+                              : Colors.transparent,
+                          borderRadius: BorderRadius.circular(20),
+                          border: isSelected
+                              ? Border.all(
+                                  color: const Color(0xFFD62828)
+                                      .withValues(alpha: 0.3),
+                                  width: 1)
+                              : null,
+                        ),
+                        alignment: Alignment.center,
+                        child: Text(
+                          tabs[index]['label'] as String,
+                          style: GoogleFonts.montserrat(
+                            fontSize: 12,
+                            fontWeight:
+                                isSelected ? FontWeight.w600 : FontWeight.w500,
+                            color: isSelected
+                                ? const Color(0xFFD62828)
+                                : Colors.grey[600],
+                          ),
+                        ),
+                      ),
+                    ),
+                  );
+                }),
+              ),
+            ),
+          ),
+        ),
+      );
+    }
   }
 
   /// Returns the list of widgets used for the main content in the correct order
