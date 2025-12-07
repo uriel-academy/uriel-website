@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cloud_functions/cloud_functions.dart';
@@ -1200,6 +1201,87 @@ class _UserManagementPageState extends State<UserManagementPage> {
     }
   }
 
+  void _copyToClipboard(String text, String label) {
+    Clipboard.setData(ClipboardData(text: text));
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('$label copied to clipboard'),
+        duration: const Duration(seconds: 2),
+        behavior: SnackBarBehavior.floating,
+      ),
+    );
+  }
+
+  Future<void> _copyAllUserInfo(
+      String userId, Map<String, dynamic> userData) async {
+    final name = userData['name'] ?? 'User';
+    final email = userData['email'] ?? '-';
+    final role = userData['role'] ?? 'student';
+    final school = userData['school'] ?? '-';
+    final grade = userData['class'] ?? '-';
+    final lastSeen = _formatLastSeen(userData['lastSeen']);
+    final xp = userData['xp'] ?? 0;
+
+    String allInfo = '''
+User Information:
+Name: $name
+Email: $email
+Role: ${role.toUpperCase()}
+School: $school
+Grade: $grade
+User ID: $userId
+Last Seen: $lastSeen
+''';
+
+    if (role == 'student') {
+      try {
+        final stats = await _fetchUserStats(userId);
+        allInfo += '''
+
+Performance Stats:
+Total XP: $xp
+Questions Solved: ${stats['questionsSolved'] ?? 0}
+Average Score: ${stats['avgPercent'] != null ? (stats['avgPercent'] as num).toStringAsFixed(1) : '-'}%
+Subjects: ${stats['subjectsSolved'] ?? 0}
+''';
+
+        // Get recent quizzes
+        final quizzesSnapshot = await FirebaseFirestore.instance
+            .collection('quizzes')
+            .where('userId', isEqualTo: userId)
+            .orderBy('timestamp', descending: true)
+            .limit(5)
+            .get();
+
+        if (quizzesSnapshot.docs.isNotEmpty) {
+          allInfo += '\nRecent Quizzes:\n';
+          for (var doc in quizzesSnapshot.docs) {
+            final data = doc.data();
+            final percentage = (data['percentage'] as num?)?.toDouble() ?? 0.0;
+            final title = data['title'] ??
+                data['collectionName'] ??
+                data['subject'] ??
+                'Quiz';
+            allInfo += '- $title: ${percentage.toStringAsFixed(1)}%\n';
+          }
+        }
+      } catch (e) {
+        debugPrint('Error fetching stats for copy: $e');
+      }
+    }
+
+    Clipboard.setData(ClipboardData(text: allInfo));
+    if (mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('All user information copied to clipboard'),
+          duration: Duration(seconds: 2),
+          behavior: SnackBarBehavior.floating,
+        ),
+      );
+    }
+  }
+
   void _showUserDetailDialog(Map<String, dynamic> userData) {
     final userId = userData['userId'] as String?;
     if (userId == null) return;
@@ -1406,6 +1488,28 @@ class _UserManagementPageState extends State<UserManagementPage> {
             ),
           ),
         ),
+
+        // Footer with Copy All button
+        Container(
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: Colors.grey[50],
+            border: Border(top: BorderSide(color: Colors.grey[200]!)),
+          ),
+          child: ElevatedButton.icon(
+            onPressed: () => _copyAllUserInfo(userId, userData),
+            icon: const Icon(Icons.copy_all),
+            label: const Text('Copy All Information'),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: _getRoleColor(role),
+              foregroundColor: Colors.white,
+              padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+            ),
+          ),
+        ),
       ],
     );
   }
@@ -1445,9 +1549,18 @@ class _UserManagementPageState extends State<UserManagementPage> {
                 style: GoogleFonts.montserrat(
                     fontSize: 13, color: Colors.grey[600])),
           ),
-          Text(value,
-              style: GoogleFonts.montserrat(
-                  fontSize: 13, fontWeight: FontWeight.w600)),
+          Expanded(
+            child: Text(value,
+                style: GoogleFonts.montserrat(
+                    fontSize: 13, fontWeight: FontWeight.w600)),
+          ),
+          IconButton(
+            icon: Icon(Icons.copy, size: 16, color: Colors.grey[600]),
+            onPressed: () => _copyToClipboard(value, label),
+            padding: EdgeInsets.zero,
+            constraints: const BoxConstraints(),
+            tooltip: 'Copy $label',
+          ),
         ],
       ),
     );
