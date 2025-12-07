@@ -6,6 +6,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cloud_functions/cloud_functions.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'dart:async';
+import 'dart:html' as html show window;
 import '../constants/app_styles.dart';
 import '../services/connection_service.dart';
 import '../services/auth_service.dart';
@@ -2780,8 +2781,21 @@ class _StudentHomePageState extends State<StudentHomePage>
     final tabs =
         nav.map((n) => {'label': n['label'], 'icon': n['icon']}).toList();
 
-    // Web maintains original compact design, PWA/Native gets comfortable height
-    final useOriginalCompact = kIsWeb;
+    // Detect if running as standalone PWA
+    bool isStandalonePwa = false;
+    if (kIsWeb) {
+      try {
+        // Check if app is in standalone mode (PWA)
+        final mediaQuery = html.window.matchMedia('(display-mode: standalone)');
+        isStandalonePwa = mediaQuery.matches;
+      } catch (e) {
+        // Fallback: not standalone
+        isStandalonePwa = false;
+      }
+    }
+
+    // Browser web gets original compact design, PWA standalone gets comfortable height
+    final useOriginalCompact = !isStandalonePwa;
 
     if (useOriginalCompact) {
       // Original web mobile design - compact and tight
