@@ -2062,35 +2062,65 @@ class _SchoolAdminDashboardState extends State<SchoolAdminDashboard> {
     try {
       // Get current admin's school
       final user = FirebaseAuth.instance.currentUser;
-      if (user == null) return [];
+      if (user == null) {
+        debugPrint('❌ School Admin Analytics: No user logged in');
+        return [];
+      }
 
       final adminDoc = await FirebaseFirestore.instance
           .collection('users')
           .doc(user.uid)
           .get();
 
-      if (!adminDoc.exists) return [];
+      if (!adminDoc.exists) {
+        debugPrint('❌ School Admin Analytics: Admin doc does not exist');
+        return [];
+      }
 
       final adminData = adminDoc.data() as Map<String, dynamic>;
       final schoolName = adminData['schoolName'] as String?;
+      
+      debugPrint('🔍 School Admin Analytics: Admin school name: "$schoolName"');
 
-      if (schoolName == null) return [];
+      if (schoolName == null || schoolName.isEmpty) {
+        debugPrint('❌ School Admin Analytics: School name is null or empty');
+        return [];
+      }
 
-      // Build query for students in this school
+      // Normalize school name for comparison (lowercase, trim)
+      final normalizedSchoolName = schoolName.toLowerCase().trim();
+      debugPrint('🔍 School Admin Analytics: Normalized school name: "$normalizedSchoolName"');
+
+      // Get ALL students first, then filter in memory for case-insensitive matching
       Query query = FirebaseFirestore.instance
           .collection('users')
           .where('role', isEqualTo: 'student')
-          .where('schoolName', isEqualTo: schoolName);
+          .limit(500);
 
-      // Apply class filter if specified
-      if (classFilter != null) {
-        query = query.where('class', isEqualTo: classFilter);
-      }
+      final studentsQuery = await query.get();
+      debugPrint('🔍 School Admin Analytics: Found ${studentsQuery.docs.length} total students');
 
-      final studentsQuery = await query.limit(500).get(); // Increased limit for school-wide
+      // Filter students by normalized school name
+      final matchingStudents = studentsQuery.docs.where((doc) {
+        final data = doc.data() as Map<String, dynamic>;
+        final studentSchool = (data['schoolName'] as String?)?.toLowerCase().trim();
+        final studentClass = data['class'] as String?;
+        
+        // Match school name (case-insensitive)
+        final schoolMatches = studentSchool == normalizedSchoolName;
+        
+        // If class filter is specified, also match class
+        final classMatches = classFilter == null || studentClass == classFilter;
+        
+        if (schoolMatches && classMatches) {
+          debugPrint('   ✅ Match: ${data['displayName']} - school: "$studentSchool", class: "$studentClass"');
+        }
+        
+        return schoolMatches && classMatches;
+      }).toList();
 
-      final studentIds = studentsQuery.docs.map((doc) => doc.id).toList();
-      debugPrint('🔍 School Admin: Found ${studentIds.length} students for school: $schoolName, class: $classFilter');
+      final studentIds = matchingStudents.map((doc) => doc.id).toList();
+      debugPrint('🔍 School Admin Analytics: Found ${studentIds.length} matching students for school: "$schoolName", class: $classFilter');
       return studentIds;
     } catch (e) {
       debugPrint('❌ Error fetching school students: $e');
