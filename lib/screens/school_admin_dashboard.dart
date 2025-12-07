@@ -677,6 +677,16 @@ class _SchoolAdminDashboardState extends State<SchoolAdminDashboard> {
           const SizedBox(height: 24),
 
           // School-Wide Grade Predictions
+          Text(
+            'School-Wide Grade Predictions',
+            style: GoogleFonts.playfairDisplay(
+              fontSize: isSmallScreen ? 20 : 24,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(height: 16),
+          _buildSchoolGradePredictionAnalytics(isSmallScreen),
+
           const SizedBox(height: 24),
 
           // Time Spent by Subject Card
@@ -1861,7 +1871,409 @@ class _SchoolAdminDashboardState extends State<SchoolAdminDashboard> {
       },
     );
   }
+
+  Widget _buildSchoolGradePredictionAnalytics(bool isSmallScreen) {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) return const SizedBox.shrink();
+
+    return FutureBuilder<List<String>>(
+      future: _getSchoolStudentIds(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return Container(
+            padding: const EdgeInsets.all(24),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(16),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: 0.05),
+                  blurRadius: 10,
+                  offset: const Offset(0, 4),
+                ),
+              ],
+            ),
+            child: const Center(child: CircularProgressIndicator()),
+          );
+        }
+
+        if (!snapshot.hasData || snapshot.data!.isEmpty) {
+          return Container(
+            padding: const EdgeInsets.all(24),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(16),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: 0.05),
+                  blurRadius: 10,
+                  offset: const Offset(0, 4),
+                ),
+              ],
+            ),
+            child: Column(
+              children: [
+                Icon(Icons.people_outline, size: 48, color: Colors.grey[400]),
+                const SizedBox(height: 16),
+                Text(
+                  'No Students Found',
+                  style: GoogleFonts.playfairDisplay(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey[600],
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  'Students will appear here once they join your school',
+                  style: GoogleFonts.montserrat(
+                    fontSize: 14,
+                    color: Colors.grey[500],
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
+          );
+        }
+
+        final studentIds = snapshot.data!;
+
+        return Container(
+          padding: const EdgeInsets.all(20),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(16),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withValues(alpha: 0.05),
+                blurRadius: 10,
+                offset: const Offset(0, 4),
+              ),
+            ],
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Info Box: AI Model Explanation
+              Container(
+                padding: const EdgeInsets.all(16),
+                margin: const EdgeInsets.only(bottom: 20),
+                decoration: BoxDecoration(
+                  color: const Color(0xFF6366F1).withValues(alpha: 0.05),
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: const Color(0xFF6366F1).withValues(alpha: 0.2),
+                  ),
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Icon(
+                      Icons.info_outline,
+                      color: const Color(0xFF6366F1),
+                      size: 20,
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'AI-Powered Grade Predictions',
+                            style: GoogleFonts.montserrat(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w600,
+                              color: const Color(0xFF6366F1),
+                            ),
+                          ),
+                          const SizedBox(height: 6),
+                          Text(
+                            'This shows how many students in your school are predicted to achieve each BECE grade (1-9) based on their quiz performance. Our AI model requires each student to complete at least 20 quizzes with 40% topic diversity to make reliable predictions.',
+                            style: GoogleFonts.montserrat(
+                              fontSize: 12,
+                              color: Colors.grey[700],
+                              height: 1.4,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Row(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF6366F1).withValues(alpha: 0.1),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const Icon(
+                      Icons.analytics,
+                      color: Color(0xFF6366F1),
+                      size: 24,
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'School-Wide Grade Predictions',
+                          style: GoogleFonts.playfairDisplay(
+                            fontSize: isSmallScreen ? 18 : 20,
+                            fontWeight: FontWeight.bold,
+                            color: const Color(0xFF1A1E3F),
+                          ),
+                        ),
+                        Text(
+                          '${studentIds.length} students • BECE predictions',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 12,
+                            color: Colors.grey[600],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 20),
+              _buildSchoolGradeDistributionView(studentIds, isSmallScreen),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  Future<List<String>> _getSchoolStudentIds() async {
+    try {
+      final user = FirebaseAuth.instance.currentUser;
+      if (user == null) return [];
+
+      final adminDoc = await FirebaseFirestore.instance
+          .collection('users')
+          .doc(user.uid)
+          .get();
+
+      if (!adminDoc.exists) return [];
+
+      final adminData = adminDoc.data() as Map<String, dynamic>;
+      final schoolName = adminData['schoolName'] as String?;
+
+      if (schoolName == null) return [];
+
+      // Normalize school name for case-insensitive matching
+      final normalizedSchoolName = schoolName.toLowerCase().trim();
+
+      // Fetch all students and filter by normalized school name
+      final studentsQuery = await FirebaseFirestore.instance
+          .collection('users')
+          .where('role', isEqualTo: 'student')
+          .limit(500)
+          .get();
+
+      final matchingStudents = studentsQuery.docs.where((doc) {
+        final data = doc.data() as Map<String, dynamic>;
+        final studentSchool = (data['schoolName'] as String?)?.toLowerCase().trim();
+        return studentSchool == normalizedSchoolName;
+      }).toList();
+
+      return matchingStudents.map((doc) => doc.id).toList();
+    } catch (e) {
+      debugPrint('Error fetching school students: $e');
+      return [];
+    }
+  }
+
+  Widget _buildSchoolGradeDistributionView(
+    List<String> studentIds,
+    bool isSmallScreen,
+  ) {
+    final subjects = [
+      'Mathematics',
+      'English Language',
+      'Integrated Science',
+      'Social Studies',
+      'RME',
+      'ICT',
+      'Ga',
+      'Asante Twi',
+      'French',
+      'Creative Arts',
+      'Career Technology',
+    ];
+
+    return FutureBuilder<Map<String, Map<int, List<String>>>>(
+      future: GradePredictionService().getGradeDistribution(
+        studentIds: studentIds,
+        subjects: subjects,
+      ),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Center(
+            child: Padding(
+              padding: EdgeInsets.all(32.0),
+              child: CircularProgressIndicator(),
+            ),
+          );
+        }
+
+        if (!snapshot.hasData) {
+          return Center(
+            child: Text(
+              'No prediction data available',
+              style: GoogleFonts.montserrat(color: Colors.grey[600]),
+            ),
+          );
+        }
+
+        final distribution = snapshot.data!;
+
+        return Column(
+          children: [
+            for (final subject in subjects)
+              if (distribution[subject] != null)
+                _buildSchoolSubjectGradeCard(
+                  subject,
+                  distribution[subject]!,
+                  studentIds.length,
+                  isSmallScreen,
+                ),
+          ],
+        );
+      },
+    );
+  }
+
+  Widget _buildSchoolSubjectGradeCard(
+    String subject,
+    Map<int, List<String>> gradeDistribution,
+    int totalStudents,
+    bool isSmallScreen,
+  ) {
+    final studentsWithPredictions = gradeDistribution.values.fold<int>(
+      0,
+      (sum, list) => sum + list.length,
+    );
+
+    if (studentsWithPredictions == 0) {
+      return const SizedBox.shrink();
+    }
+
+    return Container(
+      margin: const EdgeInsets.only(bottom: 16),
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Colors.grey[50],
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: Colors.grey[200]!),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  subject,
+                  style: GoogleFonts.montserrat(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    color: const Color(0xFF1A1E3F),
+                  ),
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                decoration: BoxDecoration(
+                  color: const Color(0xFF6366F1).withValues(alpha: 0.1),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Text(
+                  '$studentsWithPredictions/$totalStudents students',
+                  style: GoogleFonts.montserrat(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w600,
+                    color: const Color(0xFF6366F1),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 12),
+          Wrap(
+            spacing: 8,
+            runSpacing: 8,
+            children: [
+              for (int grade = 1; grade <= 9; grade++)
+                if (gradeDistribution[grade]!.isNotEmpty)
+                  _buildSchoolGradeChip(
+                    grade,
+                    gradeDistribution[grade]!.length,
+                    _getSchoolGradeColor(grade),
+                  ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildSchoolGradeChip(int grade, int count, Color color) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      decoration: BoxDecoration(
+        color: color.withValues(alpha: 0.1),
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(color: color.withValues(alpha: 0.3)),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            'Grade $grade',
+            style: GoogleFonts.montserrat(
+              fontSize: 12,
+              fontWeight: FontWeight.w600,
+              color: color,
+            ),
+          ),
+          const SizedBox(width: 8),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+            decoration: BoxDecoration(
+              color: color,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Text(
+              count.toString(),
+              style: GoogleFonts.montserrat(
+                fontSize: 11,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Color _getSchoolGradeColor(int grade) {
+    if (grade <= 3) return Colors.green;
+    if (grade <= 6) return Colors.orange;
+    return Colors.red;
+  }
 }
+
+
+
+
 
 
 
