@@ -1879,6 +1879,8 @@ class _SchoolAdminDashboardState extends State<SchoolAdminDashboard> {
     return FutureBuilder<List<String>>(
       future: _getSchoolStudentIds(_selectedClass),
       builder: (context, snapshot) {
+        debugPrint('🔍 School Admin Analytics - ConnectionState: ${snapshot.connectionState}, hasData: ${snapshot.hasData}, data length: ${snapshot.data?.length ?? 0}');
+        
         if (snapshot.connectionState == ConnectionState.waiting) {
           return Container(
             padding: const EdgeInsets.all(24),
@@ -2087,9 +2089,11 @@ class _SchoolAdminDashboardState extends State<SchoolAdminDashboard> {
 
       final studentsQuery = await query.limit(500).get(); // Increased limit for school-wide
 
-      return studentsQuery.docs.map((doc) => doc.id).toList();
+      final studentIds = studentsQuery.docs.map((doc) => doc.id).toList();
+      debugPrint('🔍 School Admin: Found ${studentIds.length} students for school: $schoolName, class: $classFilter');
+      return studentIds;
     } catch (e) {
-      debugPrint('Error fetching school students: $e');
+      debugPrint('❌ Error fetching school students: $e');
       return [];
     }
   }
