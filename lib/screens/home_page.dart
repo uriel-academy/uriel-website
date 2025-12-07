@@ -2349,9 +2349,29 @@ class _StudentHomePageState extends State<StudentHomePage>
                                           );
                                         }
                                       },
-                                      child: IndexedStack(
-                                        index: _selectedIndex,
-                                        children: _homeChildren(),
+                                      child: AnimatedSwitcher(
+                                        duration:
+                                            const Duration(milliseconds: 300),
+                                        switchInCurve: Curves.easeInOut,
+                                        switchOutCurve: Curves.easeInOut,
+                                        transitionBuilder: (Widget child,
+                                            Animation<double> animation) {
+                                          return FadeTransition(
+                                            opacity: animation,
+                                            child: SlideTransition(
+                                              position: Tween<Offset>(
+                                                begin: const Offset(0.03, 0),
+                                                end: Offset.zero,
+                                              ).animate(animation),
+                                              child: child,
+                                            ),
+                                          );
+                                        },
+                                        child: KeyedSubtree(
+                                          key: ValueKey<int>(_selectedIndex),
+                                          child:
+                                              _homeChildren()[_selectedIndex],
+                                        ),
                                       ),
                                     ),
                             ),
@@ -2378,9 +2398,31 @@ class _StudentHomePageState extends State<StudentHomePage>
                                                 ? const TeacherProfilePage()
                                                 : const StudentProfilePage(),
                                           )
-                                        : IndexedStack(
-                                            index: _selectedIndex,
-                                            children: _homeChildren(),
+                                        : AnimatedSwitcher(
+                                            duration: const Duration(
+                                                milliseconds: 300),
+                                            switchInCurve: Curves.easeInOut,
+                                            switchOutCurve: Curves.easeInOut,
+                                            transitionBuilder: (Widget child,
+                                                Animation<double> animation) {
+                                              return FadeTransition(
+                                                opacity: animation,
+                                                child: SlideTransition(
+                                                  position: Tween<Offset>(
+                                                    begin:
+                                                        const Offset(0.03, 0),
+                                                    end: Offset.zero,
+                                                  ).animate(animation),
+                                                  child: child,
+                                                ),
+                                              );
+                                            },
+                                            child: KeyedSubtree(
+                                              key:
+                                                  ValueKey<int>(_selectedIndex),
+                                              child: _homeChildren()[
+                                                  _selectedIndex],
+                                            ),
                                           ),
                                   ),
                                 ],
