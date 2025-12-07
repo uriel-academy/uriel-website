@@ -1016,7 +1016,9 @@ class _UserManagementPageState extends State<UserManagementPage> {
         color: Colors.transparent,
         child: InkWell(
           borderRadius: BorderRadius.circular(12),
-          onTap: () => _toggleUserSelection(userId),
+          onTap: () {
+            _showUserDetailDialog(user);
+          },
           child: Padding(
             padding: const EdgeInsets.all(16),
             child: Column(
@@ -1144,6 +1146,305 @@ class _UserManagementPageState extends State<UserManagementPage> {
         _selectedUserIds.add(userId);
       }
     });
+  }
+
+  Future<Map<String, dynamic>> _fetchUserStats(String userId) async {
+    try {
+      final quizzesSnapshot = await FirebaseFirestore.instance
+          .collection('quizzes')
+          .where('userId', isEqualTo: userId)
+          .get();
+
+      if (quizzesSnapshot.docs.isEmpty) {
+        return {
+          'questionsSolved': 0,
+          'avgPercent': 0.0,
+          'subjectsSolved': 0,
+        };
+      }
+
+      int totalQuestions = 0;
+      double totalPercent = 0.0;
+      Set<String> subjects = {};
+
+      for (var doc in quizzesSnapshot.docs) {
+        final data = doc.data();
+        totalQuestions += (data['totalQuestions'] as num?)?.toInt() ?? 0;
+        totalPercent += (data['percentage'] as num?)?.toDouble() ?? 0.0;
+        final subject = data['subject'] as String?;
+        if (subject != null && subject.isNotEmpty) {
+          subjects.add(subject);
+        }
+      }
+
+      return {
+        'questionsSolved': totalQuestions,
+        'avgPercent': quizzesSnapshot.docs.isEmpty
+            ? 0.0
+            : totalPercent / quizzesSnapshot.docs.length,
+        'subjectsSolved': subjects.length,
+      };
+    } catch (e) {
+      debugPrint('Error fetching user stats: $e');
+      return {
+        'questionsSolved': 0,
+        'avgPercent': 0.0,
+        'subjectsSolved': 0,
+      };
+    }
+  }
+
+  void _showUserDetailDialog(Map<String, dynamic> userData) {
+    final userId = userData['userId'] as String?;
+    if (userId == null) return;
+
+    showDialog(
+      context: context,
+      barrierDismissible: true,
+      builder: (context) => Dialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        insetPadding: const EdgeInsets.symmetric(horizontal: 40, vertical: 24),
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+            maxWidth: 700,
+            maxHeight: MediaQuery.of(context).size.height * 0.85,
+          ),
+          child: _buildUserDetail(userId, userData),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildUserDetail(String userId, Map<String, dynamic> userData) {
+    final name = userData['name'] ?? 'User';
+    final email = userData['email'] ?? '-';
+    final role = userData['role'] ?? 'student';
+    final school = userData['school'] ?? '-';
+    final grade = userData['class'] ?? '-';
+
+    return Column(
+      children: [
+        // Header with close button
+        Container(
+          padding: const EdgeInsets.all(20),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                _getRoleColor(role),
+                _getRoleColor(role).withValues(alpha: 0.8)
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+            borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
+          ),
+          child: Row(
+            children: [
+              CircleAvatar(
+                radius: 32,
+                backgroundColor: Colors.white.withValues(alpha: 0.3),
+                child: Text(
+                  name.isNotEmpty ? name[0].toUpperCase() : '?',
+                  style: GoogleFonts.montserrat(
+                      fontSize: 20,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+              const SizedBox(width: 16),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(name,
+                        style: GoogleFonts.playfairDisplay(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white)),
+                    const SizedBox(height: 4),
+                    Text(
+                      email,
+                      style: GoogleFonts.montserrat(
+                          fontSize: 13,
+                          color: Colors.white.withValues(alpha: 0.9)),
+                    ),
+                  ],
+                ),
+              ),
+              IconButton(
+                icon: const Icon(Icons.close, color: Colors.white),
+                onPressed: () => Navigator.of(context).pop(),
+              ),
+            ],
+          ),
+        ),
+
+        // Scrollable content
+        Expanded(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // User Information
+                _buildInfoSection('User Information', [
+                  _buildDetailInfoRow('Role', role.toUpperCase(), Icons.badge),
+                  _buildDetailInfoRow('School', school, Icons.school),
+                  if (role == 'student' || role == 'teacher')
+                    _buildDetailInfoRow('Grade', grade, Icons.class_),
+                  _buildDetailInfoRow('User ID', userId, Icons.fingerprint),
+                  _buildDetailInfoRow('Last Seen',
+                      _formatLastSeen(userData['lastSeen']), Icons.access_time),
+                ]),
+
+                const SizedBox(height: 20),
+
+                // Stats for students
+                if (role == 'student') ...[
+                  FutureBuilder<Map<String, dynamic>>(
+                    future: _fetchUserStats(userId),
+                    builder: (context, snapshot) {
+                      final stats = snapshot.data ?? {};
+                      return _buildInfoSection('Performance Stats', [
+                        _buildDetailInfoRow('Total XP',
+                            (userData['xp'] ?? 0).toString(), Icons.stars),
+                        _buildDetailInfoRow(
+                            'Questions Solved',
+                            (stats['questionsSolved'] ?? 0).toString(),
+                            Icons.quiz),
+                        _buildDetailInfoRow(
+                            'Average Score',
+                            stats['avgPercent'] != null
+                                ? '${(stats['avgPercent'] as num).toStringAsFixed(1)}%'
+                                : '-',
+                            Icons.trending_up),
+                        _buildDetailInfoRow(
+                            'Subjects',
+                            (stats['subjectsSolved'] ?? 0).toString(),
+                            Icons.library_books),
+                      ]);
+                    },
+                  ),
+
+                  const SizedBox(height: 20),
+
+                  // Recent quizzes
+                  Text('Recent Quizzes',
+                      style: GoogleFonts.playfairDisplay(
+                          fontSize: 16, fontWeight: FontWeight.bold)),
+                  const SizedBox(height: 12),
+                  FutureBuilder<QuerySnapshot>(
+                    future: FirebaseFirestore.instance
+                        .collection('quizzes')
+                        .where('userId', isEqualTo: userId)
+                        .orderBy('timestamp', descending: true)
+                        .limit(5)
+                        .get(),
+                    builder: (context, snap) {
+                      if (snap.connectionState == ConnectionState.waiting) {
+                        return const Center(child: CircularProgressIndicator());
+                      }
+                      final docs = snap.data?.docs ?? [];
+                      if (docs.isEmpty) {
+                        return Container(
+                          padding: const EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            color: Colors.grey[100],
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Text('No recent quizzes',
+                              style: GoogleFonts.montserrat(
+                                  color: Colors.grey[600])),
+                        );
+                      }
+                      return Column(
+                        children: docs.map((d) {
+                          final data = d.data() as Map<String, dynamic>;
+                          final percentage =
+                              (data['percentage'] as num?)?.toDouble() ?? 0.0;
+                          final title = data['title'] ??
+                              data['collectionName'] ??
+                              data['subject'] ??
+                              'Quiz';
+                          return Container(
+                            margin: const EdgeInsets.only(bottom: 8),
+                            padding: const EdgeInsets.all(12),
+                            decoration: BoxDecoration(
+                              color: Colors.grey[50],
+                              borderRadius: BorderRadius.circular(8),
+                              border: Border.all(color: Colors.grey[200]!),
+                            ),
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: Text(
+                                    title.toString(),
+                                    style: GoogleFonts.montserrat(fontSize: 13),
+                                  ),
+                                ),
+                                Text(
+                                  '${percentage.toStringAsFixed(1)}%',
+                                  style: GoogleFonts.montserrat(
+                                      fontWeight: FontWeight.w600,
+                                      color: _getRoleColor(role)),
+                                ),
+                              ],
+                            ),
+                          );
+                        }).toList(),
+                      );
+                    },
+                  ),
+                ],
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildInfoSection(String title, List<Widget> children) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(title,
+            style: GoogleFonts.playfairDisplay(
+                fontSize: 16, fontWeight: FontWeight.bold)),
+        const SizedBox(height: 12),
+        Container(
+          decoration: BoxDecoration(
+            color: Colors.grey[50],
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: Colors.grey[200]!),
+          ),
+          child: Column(children: children),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildDetailInfoRow(String label, String value, IconData icon) {
+    return Container(
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        border: Border(bottom: BorderSide(color: Colors.grey[200]!)),
+      ),
+      child: Row(
+        children: [
+          Icon(icon, size: 20, color: Colors.grey[600]),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Text(label,
+                style: GoogleFonts.montserrat(
+                    fontSize: 13, color: Colors.grey[600])),
+          ),
+          Text(value,
+              style: GoogleFonts.montserrat(
+                  fontSize: 13, fontWeight: FontWeight.w600)),
+        ],
+      ),
+    );
   }
 
   String _formatLastSeen(dynamic lastSeen) {
