@@ -19,6 +19,7 @@ import '../services/xp_service.dart';
 import '../widgets/rank_badge_widget.dart';
 import '../services/streak_service.dart';
 import '../screens/redesigned_all_ranks_page.dart';
+import '../widgets/mobile_notification_dialog.dart';
 import 'question_collections_page.dart';
 import 'revision_page.dart';
 import 'generate_quiz_page.dart';
@@ -38,23 +39,25 @@ import 'package:uuid/uuid.dart';
 class StudentHomePage extends StatefulWidget {
   final bool isTeacher;
   final bool showProfileOnInit;
-  const StudentHomePage({super.key, this.isTeacher = false, this.showProfileOnInit = false});
+  const StudentHomePage(
+      {super.key, this.isTeacher = false, this.showProfileOnInit = false});
 
   @override
   State<StudentHomePage> createState() => _StudentHomePageState();
 }
 
-class _StudentHomePageState extends State<StudentHomePage> with TickerProviderStateMixin {
+class _StudentHomePageState extends State<StudentHomePage>
+    with TickerProviderStateMixin {
   late TabController _mainTabController;
   late AnimationController _animationController;
   late Animation<double> _fadeAnimation;
-  
+
   int _selectedIndex = 0;
   late bool _showingProfile;
-  
+
   // Uri Chatbot state
   bool _showUriChat = false;
-  
+
   // User progress data - Live from Firestore
   String userName = "";
   String userClass = "JHS Form 3 Student";
@@ -69,30 +72,30 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   StreamSubscription<DocumentSnapshot>? _userStreamSubscription;
   Timer? _userPollingTimer; // SCALABILITY: Polling instead of real-time
   bool _loadingFullStats = false;
-  
+
   // Past Questions tracking
   int pastQuestionsAnswered = 0;
   double pastQuestionsProgress = 0.0;
-  
+
   // Trivia tracking
   int triviaQuestionsAnswered = 0;
   double triviaProgress = 0.0;
   int triviaCorrect = 0;
-  
+
   // Rank tracking
   int userXP = 0;
   LeaderboardRank? currentRank;
   LeaderboardRank? nextRank;
-  
+
   // Subject progress data - Live from quiz performance
   List<SubjectProgress> _subjectProgress = [];
-  
+
   // Subject time spent data
   Map<String, double> _subjectTimeSpent = {};
-  
+
   // Subject question counts data
   Map<String, int> _subjectQuestionCounts = {};
-  
+
   // Recent activity data
   // ignore: unused_field
   List<Map<String, dynamic>> _recentActivity = [];
@@ -131,10 +134,10 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   void initState() {
     super.initState();
     _showingProfile = widget.showProfileOnInit;
-  // Teacher: Dashboard, Students, Generate Quiz, Lesson Planner, Notes, Uri, Books, Trivia, Leaderboard, Feedback (10 tabs)
-  // Student: Dashboard, Questions, Revision, Books, Notes, Study Planner, Trivia, Leaderboard, Uri, Feedback (10 tabs)
-  final tabLength = widget.isTeacher ? 10 : 10;
-  _mainTabController = TabController(length: tabLength, vsync: this);
+    // Teacher: Dashboard, Students, Generate Quiz, Lesson Planner, Notes, Uri, Books, Trivia, Leaderboard, Feedback (10 tabs)
+    // Student: Dashboard, Questions, Revision, Books, Notes, Study Planner, Trivia, Leaderboard, Uri, Feedback (10 tabs)
+    final tabLength = widget.isTeacher ? 10 : 10;
+    _mainTabController = TabController(length: tabLength, vsync: this);
     _animationController = AnimationController(
       duration: const Duration(milliseconds: 800),
       vsync: this,
@@ -143,7 +146,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       CurvedAnimation(parent: _animationController, curve: Curves.easeIn),
     );
     _animationController.forward();
-    
+
     _calculateBeceCountdown();
     _loadUserData();
     if (!widget.isTeacher) {
@@ -154,29 +157,30 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     _setupUserStream();
     _loadNotifications();
   }
-  
+
   void _loadUserRank() async {
     final user = FirebaseAuth.instance.currentUser;
     if (user == null) return;
-    
+
     try {
       final xpService = XPService();
       final rankService = LeaderboardRankService();
-      
+
       // Get user XP
       final xp = await xpService.getUserTotalXP(user.uid);
-      
+
       // Get current and next rank
       final current = await rankService.getUserRank(xp);
       final next = await rankService.getNextRank(xp);
-      
+
       setState(() {
         userXP = xp;
         currentRank = current;
         nextRank = next;
       });
-      
-      debugPrint('👑 User Rank: ${current?.name} (Rank #${current?.rank}) - XP: $xp');
+
+      debugPrint(
+          '👑 User Rank: ${current?.name} (Rank #${current?.rank}) - XP: $xp');
       debugPrint('🖼️ Rank Image URL: ${current?.imageUrl}');
       if (current?.imageUrl.isEmpty ?? true) {
         debugPrint('⚠️ WARNING: Rank image URL is empty!');
@@ -185,7 +189,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       debugPrint('❌ Error loading user rank: $e');
     }
   }
-  
+
   void _setupUserStream() {
     final user = FirebaseAuth.instance.currentUser;
     if (user != null) {
@@ -193,10 +197,10 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       // Reduces active connections from 1 per user to periodic fetches
       _userStreamSubscription?.cancel();
       _userStreamSubscription = null;
-      
+
       // Initial load
       _fetchUserDataPolling(user.uid);
-      
+
       // Poll every 30 seconds instead of real-time listener
       _userPollingTimer = Timer.periodic(const Duration(seconds: 30), (timer) {
         if (mounted) {
@@ -211,7 +215,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       _userPollingTimer = null;
     }
   }
-  
+
   Future<void> _fetchUserDataPolling(String userId) async {
     try {
       // SCALABILITY: Use GetOptions to avoid cache listeners that cause INTERNAL ASSERTION errors
@@ -219,15 +223,20 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           .collection('users')
           .doc(userId)
           .get(const GetOptions(source: Source.server));
-      
+
       if (snapshot.exists && mounted) {
         final data = snapshot.data() as Map<String, dynamic>;
         setState(() {
-          userName = data['firstName'] ?? FirebaseAuth.instance.currentUser?.displayName?.split(' ').first ?? _getNameFromEmail(FirebaseAuth.instance.currentUser?.email);
+          userName = data['firstName'] ??
+              FirebaseAuth.instance.currentUser?.displayName
+                  ?.split(' ')
+                  .first ??
+              _getNameFromEmail(FirebaseAuth.instance.currentUser?.email);
           final rawClass = data['class'] ?? 'JHS FORM 3';
           final isTeacher = widget.isTeacher || data['role'] == 'teacher';
           userClass = isTeacher ? '$rawClass TEACHER' : rawClass;
-          userPhotoUrl = data['profileImageUrl'] ?? FirebaseAuth.instance.currentUser?.photoURL;
+          userPhotoUrl = data['profileImageUrl'] ??
+              FirebaseAuth.instance.currentUser?.photoURL;
           userPresetAvatar = data['presetAvatar'];
         });
       }
@@ -235,6 +244,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       debugPrint('⚠️ User polling error (non-critical): $error');
     }
   }
+
   ImageProvider? _getAvatarImage() {
     if (userPresetAvatar != null) {
       return AssetImage(userPresetAvatar!);
@@ -259,13 +269,13 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       }
     }
   }
-  
+
   void _calculateBeceCountdown() {
     // BECE 2026: May 4 - May 11, 2026
     final beceStartDate = DateTime(2026, 5, 4);
     final now = DateTime.now();
     final difference = beceStartDate.difference(now);
-    
+
     setState(() {
       beceCountdownDays = difference.inDays > 0 ? difference.inDays : 0;
     });
@@ -275,7 +285,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   void dispose() {
     _mainTabController.dispose();
     _animationController.dispose();
-    _userStreamSubscription?.cancel(); // Cancel the user stream subscription to prevent memory leaks and assertion errors
+    _userStreamSubscription
+        ?.cancel(); // Cancel the user stream subscription to prevent memory leaks and assertion errors
     _userPollingTimer?.cancel(); // Cancel polling timer
     _notificationsSubscription?.cancel();
     super.dispose();
@@ -291,16 +302,18 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             .doc(user.uid)
             .get()
             .timeout(
-              const Duration(seconds: 5),
-              onTimeout: () {
-                throw Exception('Connection timeout');
-              },
-            );
-        
+          const Duration(seconds: 5),
+          onTimeout: () {
+            throw Exception('Connection timeout');
+          },
+        );
+
         if (userDoc.exists) {
           final data = userDoc.data() as Map<String, dynamic>;
           setState(() {
-            userName = data['firstName'] ?? user.displayName?.split(' ').first ?? _getNameFromEmail(user.email);
+            userName = data['firstName'] ??
+                user.displayName?.split(' ').first ??
+                _getNameFromEmail(user.email);
             final rawClass = data['class'] ?? 'JHS FORM 3';
             final isTeacher = widget.isTeacher || data['role'] == 'teacher';
             userClass = isTeacher ? '$rawClass TEACHER' : rawClass;
@@ -309,7 +322,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           });
         } else {
           setState(() {
-            userName = user.displayName?.split(' ').first ?? _getNameFromEmail(user.email);
+            userName = user.displayName?.split(' ').first ??
+                _getNameFromEmail(user.email);
             const rawClass = 'JHS FORM 3';
             userClass = widget.isTeacher ? '$rawClass TEACHER' : rawClass;
           });
@@ -317,11 +331,13 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       } catch (e) {
         // Handle offline or connection errors gracefully
         setState(() {
-          userName = user.displayName?.split(' ').first ?? _getNameFromEmail(user.email);
+          userName = user.displayName?.split(' ').first ??
+              _getNameFromEmail(user.email);
         });
-        
+
         // Only log the error, don't show it to the user
-        debugPrint('Unable to load user data (offline or connection issue): $e');
+        debugPrint(
+            'Unable to load user data (offline or connection issue): $e');
       }
     } else {
       // Set default name when no user is logged in
@@ -330,7 +346,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       });
     }
   }
-  
+
   Future<void> _loadUserStats() async {
     final user = FirebaseAuth.instance.currentUser;
     if (user == null) return;
@@ -340,9 +356,10 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       // Telemetry: mark quick dashboard load start
       try {
         TelemetryService().markStart('dashboard_quick_${user.uid}');
-        TelemetryService().recordEvent('dashboard_load_start', properties: {'phase': 'quick'});
+        TelemetryService().recordEvent('dashboard_load_start',
+            properties: {'phase': 'quick'});
       } catch (_) {}
-      
+
       // Use resilient query with circuit breaker and retry logic
       final quickSnapshot = await ResilienceService().executeQuery(
         queryKey: 'dashboard_quick_${user.uid}',
@@ -362,13 +379,15 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
 
       // Telemetry: quick load completed (duration measured if start exists)
       try {
-        await TelemetryService().markEnd('dashboard_quick_${user.uid}', 'dashboard_quick_loaded', 
-          properties: {'count': quickSnapshot?.docs.length ?? 0});
+        await TelemetryService().markEnd(
+            'dashboard_quick_${user.uid}', 'dashboard_quick_loaded',
+            properties: {'count': quickSnapshot?.docs.length ?? 0});
       } catch (_) {}
     } catch (e) {
       debugPrint('Quick stats load failed: $e');
       try {
-        TelemetryService().recordEvent('dashboard_quick_load_failed', properties: {'error': e.toString()});
+        TelemetryService().recordEvent('dashboard_quick_load_failed',
+            properties: {'error': e.toString()});
       } catch (_) {}
     }
 
@@ -381,30 +400,34 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           // Telemetry: mark full dashboard load start
           try {
             TelemetryService().markStart('dashboard_full_${user.uid}');
-            TelemetryService().recordEvent('dashboard_load_start', properties: {'phase': 'full'});
+            TelemetryService().recordEvent('dashboard_load_start',
+                properties: {'phase': 'full'});
           } catch (_) {}
           final fullSnapshot = await FirebaseFirestore.instance
-                  .collection('quizzes')
-                  .where('userId', isEqualTo: user.uid)
-                  .orderBy('timestamp', descending: true)
-                  .limit(200) // SCALABILITY: Increased from 100 to 200
-                  .get()
-                  .timeout(const Duration(seconds: 12));
+              .collection('quizzes')
+              .where('userId', isEqualTo: user.uid)
+              .orderBy('timestamp', descending: true)
+              .limit(200) // SCALABILITY: Increased from 100 to 200
+              .get()
+              .timeout(const Duration(seconds: 12));
 
-              await _processQuizSnapshot(fullSnapshot.docs, quick: false);
-              // Compute lifetime study hours in background (paginated to avoid large reads)
-              try {
-                await _computeLifetimeStudyHours(user.uid);
-              } catch (e) {
-                debugPrint('Error computing lifetime study hours: $e');
-              }
+          await _processQuizSnapshot(fullSnapshot.docs, quick: false);
+          // Compute lifetime study hours in background (paginated to avoid large reads)
           try {
-            await TelemetryService().markEnd('dashboard_full_${user.uid}', 'dashboard_full_loaded', properties: {'count': fullSnapshot.docs.length});
+            await _computeLifetimeStudyHours(user.uid);
+          } catch (e) {
+            debugPrint('Error computing lifetime study hours: $e');
+          }
+          try {
+            await TelemetryService().markEnd(
+                'dashboard_full_${user.uid}', 'dashboard_full_loaded',
+                properties: {'count': fullSnapshot.docs.length});
           } catch (_) {}
         } catch (e) {
           debugPrint('Full stats load failed: $e');
           try {
-            TelemetryService().recordEvent('dashboard_full_load_failed', properties: {'error': e.toString()});
+            TelemetryService().recordEvent('dashboard_full_load_failed',
+                properties: {'error': e.toString()});
           } catch (_) {}
         } finally {
           _loadingFullStats = false;
@@ -414,7 +437,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   }
 
   // Process a list of quiz documents and update state. If quick==true we apply lightweight updates.
-  Future<void> _processQuizSnapshot(List<QueryDocumentSnapshot> docs, {bool quick = false}) async {
+  Future<void> _processQuizSnapshot(List<QueryDocumentSnapshot> docs,
+      {bool quick = false}) async {
     if (docs.isEmpty) {
       if (quick) {
         setState(() {
@@ -460,14 +484,17 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         pastQuestionsCorrect += correct;
       }
 
-      if (quizType.toLowerCase().contains('trivia') || subject.toLowerCase().contains('trivia')) {
+      if (quizType.toLowerCase().contains('trivia') ||
+          subject.toLowerCase().contains('trivia')) {
         triviaTotal += questions;
         triviaCorrectCount += correct;
       }
 
       subjectScores.putIfAbsent(subject, () => []).add(score);
-      subjectQuestionCounts[subject] = (subjectQuestionCounts[subject] ?? 0) + questions;
-      subjectTimeSpent[subject] = (subjectTimeSpent[subject] ?? 0) + (questions * 2.0);
+      subjectQuestionCounts[subject] =
+          (subjectQuestionCounts[subject] ?? 0) + questions;
+      subjectTimeSpent[subject] =
+          (subjectTimeSpent[subject] ?? 0) + (questions * 2.0);
 
       if (data['timestamp'] != null) {
         try {
@@ -493,9 +520,13 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       }
     }
 
-    double avgProgress = totalQuestions > 0 ? (totalCorrect / totalQuestions * 100) : 0.0;
-    double pastQProgress = pastQuestionsTotal > 0 ? (pastQuestionsCorrect / pastQuestionsTotal * 100) : 0.0;
-    double triviaAvg = triviaTotal > 0 ? (triviaCorrectCount / triviaTotal * 100) : 0.0;
+    double avgProgress =
+        totalQuestions > 0 ? (totalCorrect / totalQuestions * 100) : 0.0;
+    double pastQProgress = pastQuestionsTotal > 0
+        ? (pastQuestionsCorrect / pastQuestionsTotal * 100)
+        : 0.0;
+    double triviaAvg =
+        triviaTotal > 0 ? (triviaCorrectCount / triviaTotal * 100) : 0.0;
     int streak = _calculateStreak(activityDates);
     // Prefer persisted streak in case server-side logic (or other clients) maintain it more authoritatively
     try {
@@ -511,7 +542,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     // Weekly study hours (estimate)
     final now = DateTime.now();
     final weekStart = now.subtract(Duration(days: now.weekday - 1));
-    final weekStartDate = DateTime(weekStart.year, weekStart.month, weekStart.day);
+    final weekStartDate =
+        DateTime(weekStart.year, weekStart.month, weekStart.day);
     int weeklyQuestions = 0;
     for (var doc in docs) {
       final data = doc.data() as Map<String, dynamic>;
@@ -532,11 +564,19 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     int studyHours = (weeklyQuestions * 2 / 60).round();
 
     List<SubjectProgress> subjects = [];
-    final colors = [Colors.blue, Colors.green, Colors.orange, Colors.purple, Colors.red, Colors.teal];
+    final colors = [
+      Colors.blue,
+      Colors.green,
+      Colors.orange,
+      Colors.purple,
+      Colors.red,
+      Colors.teal
+    ];
     int colorIndex = 0;
     subjectScores.forEach((subject, scores) {
       double avgScore = scores.reduce((a, b) => a + b) / scores.length;
-      subjects.add(SubjectProgress(subject, avgScore, colors[colorIndex % colors.length]));
+      subjects.add(SubjectProgress(
+          subject, avgScore, colors[colorIndex % colors.length]));
       colorIndex++;
     });
 
@@ -588,28 +628,28 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       _analyzeUserBehaviorProfile();
     }
   }
-  
+
   int _calculateStreak(List<DateTime> activityDates) {
     if (activityDates.isEmpty) return 0;
-    
+
     // Sort dates
     activityDates.sort((a, b) => b.compareTo(a));
-    
+
     // Check if user was active today or yesterday
     final now = DateTime.now();
     final today = DateTime(now.year, now.month, now.day);
     final yesterday = today.subtract(const Duration(days: 1));
-    
+
     final lastActivity = DateTime(
       activityDates.first.year,
       activityDates.first.month,
       activityDates.first.day,
     );
-    
+
     if (lastActivity != today && lastActivity != yesterday) {
       return 0; // Streak broken
     }
-    
+
     // Count consecutive days
     int streak = 1;
     for (int i = 0; i < activityDates.length - 1; i++) {
@@ -623,7 +663,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         activityDates[i + 1].month,
         activityDates[i + 1].day,
       );
-      
+
       final difference = current.difference(next).inDays;
       if (difference == 1) {
         streak++;
@@ -631,23 +671,27 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         break;
       }
     }
-    
+
     return streak;
   }
-  
+
   /// Compute lifetime study hours by paginating through all quizzes for the user.
   /// This avoids a single huge Firestore read and updates `lifetimeStudyHours`.
   Future<void> _computeLifetimeStudyHours(String userId) async {
     try {
       int totalQuestions = 0;
       final collection = FirebaseFirestore.instance.collection('quizzes');
-      Query query = collection.where('userId', isEqualTo: userId).orderBy('timestamp', descending: true).limit(500);
-      QuerySnapshot snap = await query.get().timeout(const Duration(seconds: 10));
-      
+      Query query = collection
+          .where('userId', isEqualTo: userId)
+          .orderBy('timestamp', descending: true)
+          .limit(500);
+      QuerySnapshot snap =
+          await query.get().timeout(const Duration(seconds: 10));
+
       // Safety limits to prevent infinite loops
       const int maxPages = 50; // Max 25k quizzes (50 * 500)
       int pageCount = 0;
-      
+
       while (pageCount < maxPages) {
         pageCount++;
         if (snap.docs.isEmpty) break;
@@ -658,7 +702,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           } catch (_) {}
         }
         if (snap.docs.length < 500) break;
-        
+
         try {
           final last = snap.docs.last;
           snap = await collection
@@ -673,7 +717,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           break; // Exit loop on error
         }
       }
-      
+
       if (pageCount >= maxPages) {
         debugPrint('⚠️ Reached max pagination limit ($maxPages pages)');
       }
@@ -688,7 +732,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       debugPrint('Error computing lifetimeStudyHours: $e');
     }
   }
-  
+
   void _generateActivityItems() {
     if (_recentActivity.isEmpty) {
       // Generate intelligent default activities based on user profile
@@ -715,27 +759,29 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       });
 
     for (var activity in sortedActivities) {
-  // ignore: unused_local_variable
-  final subject = activity['subject'] ?? 'General';
-  final score = activity['score'] ?? 0.0;
-  // ignore: unused_local_variable
-  final questions = activity['questions'] ?? 0;
+      // ignore: unused_local_variable
+      final subject = activity['subject'] ?? 'General';
+      final score = activity['score'] ?? 0.0;
+      // ignore: unused_local_variable
+      final questions = activity['questions'] ?? 0;
       final timestamp = activity['date'];
 
       final activityDate = _parseActivityDate(timestamp);
       final timeAgo = _getTimeAgo(activityDate);
-  // ignore: unused_local_variable
-  final isHighScore = score >= 80.0;
-  // ignore: unused_local_variable
-  final isPerfect = score >= 95.0;
+      // ignore: unused_local_variable
+      final isHighScore = score >= 80.0;
+      // ignore: unused_local_variable
+      final isPerfect = score >= 95.0;
       final isRecent = now.difference(activityDate).inHours < 24;
 
       // Enhanced activity type determination with ML insights
       final activityType = _classifyActivityType(activity, userProfile);
-      final smartMessage = _generateSmartActivityMessage(activity, activityType, userProfile);
+      final smartMessage =
+          _generateSmartActivityMessage(activity, activityType, userProfile);
 
       // Dynamic color and icon based on performance and type
-      final displayConfig = _getActivityDisplayConfig(activityType, score, isRecent);
+      final displayConfig =
+          _getActivityDisplayConfig(activityType, score, isRecent);
 
       _activityItems.add({
         'title': smartMessage['title'],
@@ -747,7 +793,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         'type': activityType,
       });
 
-      if (_activityItems.length >= 6) break; // Increased limit for more activity
+      if (_activityItems.length >= 6)
+        break; // Increased limit for more activity
     }
 
     // Add contextual motivational messages
@@ -759,13 +806,15 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     }
 
     // Sort final list by relevance
-    _activityItems.sort((a, b) => (b['relevance'] as int).compareTo(a['relevance'] as int));
+    _activityItems.sort(
+        (a, b) => (b['relevance'] as int).compareTo(a['relevance'] as int));
   }
 
   void _generateSmartDefaultActivities() {
     final profile = _userBehaviorProfile;
     final learningStyle = profile['learningStyle'] as String? ?? 'explorer';
-    final engagementLevel = profile['engagementLevel'] as String? ?? 'needs_encouragement';
+    final engagementLevel =
+        profile['engagementLevel'] as String? ?? 'needs_encouragement';
 
     _activityItems = [];
 
@@ -834,7 +883,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     }
 
     // Add subject-specific suggestions
-    final preferredSubjects = profile['preferredSubjects'] as List<String>? ?? ['General'];
+    final preferredSubjects =
+        profile['preferredSubjects'] as List<String>? ?? ['General'];
     if (preferredSubjects.isNotEmpty && preferredSubjects.first != 'General') {
       _activityItems.add({
         'title': '📚 Dive Deeper into ${preferredSubjects.first}',
@@ -860,7 +910,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     return DateTime.now().subtract(const Duration(days: 1));
   }
 
-  int _calculateActivityRelevance(Map<String, dynamic> activity, Map<String, dynamic> userProfile) {
+  int _calculateActivityRelevance(
+      Map<String, dynamic> activity, Map<String, dynamic> userProfile) {
     int relevance = 5; // Base relevance
 
     final score = activity['score'] as double? ?? 0.0;
@@ -886,7 +937,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     }
 
     // Subject preference bonus
-    final preferredSubjects = userProfile['preferredSubjects'] as List<String>? ?? [];
+    final preferredSubjects =
+        userProfile['preferredSubjects'] as List<String>? ?? [];
     if (preferredSubjects.contains(subject)) {
       relevance += 2;
     }
@@ -903,14 +955,17 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     return relevance;
   }
 
-  String _classifyActivityType(Map<String, dynamic> activity, Map<String, dynamic> userProfile) {
+  String _classifyActivityType(
+      Map<String, dynamic> activity, Map<String, dynamic> userProfile) {
     final subject = activity['subject'] as String? ?? '';
     final score = activity['score'] as double? ?? 0.0;
     final questions = activity['questions'] as int? ?? 0;
 
     if (subject.toLowerCase().contains('trivia')) return 'trivia';
-    if (subject.toLowerCase().contains('rme') || subject.toLowerCase().contains('religious')) return 'rme';
-    if (subject.toLowerCase().contains('bece') || subject.toLowerCase().contains('past')) return 'past_questions';
+    if (subject.toLowerCase().contains('rme') ||
+        subject.toLowerCase().contains('religious')) return 'rme';
+    if (subject.toLowerCase().contains('bece') ||
+        subject.toLowerCase().contains('past')) return 'past_questions';
 
     // Classify based on performance patterns
     if (score >= 95.0) return 'mastery';
@@ -924,7 +979,10 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     return 'regular_practice';
   }
 
-  Map<String, String> _generateSmartActivityMessage(Map<String, dynamic> activity, String activityType, Map<String, dynamic> userProfile) {
+  Map<String, String> _generateSmartActivityMessage(
+      Map<String, dynamic> activity,
+      String activityType,
+      Map<String, dynamic> userProfile) {
     final subject = activity['subject'] as String? ?? 'General';
     final score = activity['score'] as double? ?? 0.0;
     final questions = activity['questions'] as int? ?? 0;
@@ -934,57 +992,75 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
 
     switch (activityType) {
       case 'trivia':
-        title = score >= 80.0 ? '🎯 Trivia Champion!' : '🎮 Trivia Challenge Completed';
-        detail = '${score.toStringAsFixed(0)}% score • $questions fun questions';
+        title = score >= 80.0
+            ? '🎯 Trivia Champion!'
+            : '🎮 Trivia Challenge Completed';
+        detail =
+            '${score.toStringAsFixed(0)}% score • $questions fun questions';
         break;
       case 'rme':
-        title = score >= 85.0 ? '🙏 RME Excellence Achieved' : '📖 RME Study Session';
-        detail = '${score.toStringAsFixed(0)}% score • $questions questions explored';
+        title = score >= 85.0
+            ? '🙏 RME Excellence Achieved'
+            : '📖 RME Study Session';
+        detail =
+            '${score.toStringAsFixed(0)}% score • $questions questions explored';
         break;
       case 'past_questions':
-        title = score >= 75.0 ? '📚 BECE Mastery Progress' : '📝 Past Questions Practice';
-        detail = '${score.toStringAsFixed(0)}% score • $questions exam questions';
+        title = score >= 75.0
+            ? '📚 BECE Mastery Progress'
+            : '📝 Past Questions Practice';
+        detail =
+            '${score.toStringAsFixed(0)}% score • $questions exam questions';
         break;
       case 'mastery':
         title = '🏆 Perfect Score Achievement!';
-        detail = 'Outstanding performance in $subject • $questions questions mastered';
+        detail =
+            'Outstanding performance in $subject • $questions questions mastered';
         break;
       case 'strong_performance':
         title = '⭐ Excellent Work in $subject!';
-        detail = '${score.toStringAsFixed(0)}% score • Keep up the great performance';
+        detail =
+            '${score.toStringAsFixed(0)}% score • Keep up the great performance';
         break;
       case 'needs_improvement':
         title = '📈 Growth Opportunity in $subject';
-        detail = '${score.toStringAsFixed(0)}% score • Review and try again for better results';
+        detail =
+            '${score.toStringAsFixed(0)}% score • Review and try again for better results';
         break;
       case 'intensive_study':
         title = '🔥 Intensive Study Session Complete!';
-        detail = 'Covered $questions questions in $subject • Impressive dedication';
+        detail =
+            'Covered $questions questions in $subject • Impressive dedication';
         break;
       default:
         title = '$subject Quiz Completed';
-        detail = '${score.toStringAsFixed(0)}% score • $questions questions answered';
+        detail =
+            '${score.toStringAsFixed(0)}% score • $questions questions answered';
     }
 
     return {'title': title, 'detail': detail};
   }
 
-  Map<String, dynamic> _getActivityDisplayConfig(String activityType, double score, bool isRecent) {
+  Map<String, dynamic> _getActivityDisplayConfig(
+      String activityType, double score, bool isRecent) {
     IconData icon;
     Color color;
 
     switch (activityType) {
       case 'trivia':
         icon = Icons.psychology;
-        color = score >= 80.0 ? const Color(0xFFFF9800) : const Color(0xFFE91E63);
+        color =
+            score >= 80.0 ? const Color(0xFFFF9800) : const Color(0xFFE91E63);
         break;
       case 'rme':
         icon = Icons.book;
-        color = score >= 85.0 ? const Color(0xFF6C5CE7) : const Color(0xFF2196F3);
+        color =
+            score >= 85.0 ? const Color(0xFF6C5CE7) : const Color(0xFF2196F3);
         break;
       case 'past_questions':
         icon = Icons.history_edu;
-        color = score >= 75.0 ? const Color(0xFF4CAF50) : const Color(0xFF8BC34A);
+        color =
+            score >= 75.0 ? const Color(0xFF4CAF50) : const Color(0xFF8BC34A);
         break;
       case 'mastery':
         icon = Icons.stars;
@@ -1012,7 +1088,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
 
   void _addContextualMotivationalActivities() {
     final profile = _userBehaviorProfile;
-    final engagementLevel = profile['engagementLevel'] as String? ?? 'needs_encouragement';
+    final engagementLevel =
+        profile['engagementLevel'] as String? ?? 'needs_encouragement';
     final currentStreak = this.currentStreak;
 
     // Add motivational activities based on context
@@ -1022,7 +1099,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         'time': 'Motivational',
         'icon': Icons.local_fire_department,
         'color': const Color(0xFFFF5722),
-        'detail': '$currentStreak-day streak! Every day counts toward your goals',
+        'detail':
+            '$currentStreak-day streak! Every day counts toward your goals',
         'relevance': 7,
         'type': 'motivational',
       });
@@ -1034,7 +1112,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         'time': 'Achievement',
         'icon': Icons.school,
         'color': const Color(0xFF4CAF50),
-        'detail': '${overallProgress.toStringAsFixed(0)}% average! You\'re performing exceptionally well',
+        'detail':
+            '${overallProgress.toStringAsFixed(0)}% average! You\'re performing exceptionally well',
         'relevance': 6,
         'type': 'achievement',
       });
@@ -1070,7 +1149,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     ];
 
     // Add a random fallback activity
-    final randomIndex = DateTime.now().millisecondsSinceEpoch % fallbackActivities.length;
+    final randomIndex =
+        DateTime.now().millisecondsSinceEpoch % fallbackActivities.length;
     _activityItems.add(fallbackActivities[randomIndex]);
   }
 
@@ -1078,8 +1158,10 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     _userAchievements = [];
     final userProfile = _userBehaviorProfile;
     final learningStyle = userProfile['learningStyle'] as String? ?? 'explorer';
-    final engagementLevel = userProfile['engagementLevel'] as String? ?? 'needs_encouragement';
-    final performanceTrends = userProfile['performanceTrends'] as Map<String, dynamic>? ?? {};
+    final engagementLevel =
+        userProfile['engagementLevel'] as String? ?? 'needs_encouragement';
+    final performanceTrends =
+        userProfile['performanceTrends'] as Map<String, dynamic>? ?? {};
     final trend = performanceTrends['trend'] as String? ?? 'stable';
 
     // Dynamic achievement detection based on user behavior patterns
@@ -1287,7 +1369,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           9,
         ));
       } else if (currentRank!.name.toLowerCase().contains('expert') ||
-                 currentRank!.name.toLowerCase().contains('advanced')) {
+          currentRank!.name.toLowerCase().contains('advanced')) {
         _userAchievements.add(_createSmartAchievement(
           'Advanced Learner',
           Icons.emoji_events,
@@ -1341,7 +1423,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     }
   }
 
-  Map<String, dynamic> _createSmartAchievement(String title, IconData icon, Color color, String description, String type, int relevance) {
+  Map<String, dynamic> _createSmartAchievement(String title, IconData icon,
+      Color color, String description, String type, int relevance) {
     return {
       'title': title,
       'icon': icon,
@@ -1355,8 +1438,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
 
   void _addSubjectSpecificAchievements() {
     final weakAreas = _userBehaviorProfile['weaknesses'] as List<String>? ?? [];
-  // ignore: unused_local_variable
-  final strengths = _userBehaviorProfile['strengths'] as List<String>? ?? [];
+    // ignore: unused_local_variable
+    final strengths = _userBehaviorProfile['strengths'] as List<String>? ?? [];
 
     // Subject mastery achievements
     for (var subject in _subjectProgress) {
@@ -1382,7 +1465,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     }
 
     // Improvement achievements
-    if (weakAreas.isNotEmpty && _subjectProgress.any((s) => s.progress >= 70.0)) {
+    if (weakAreas.isNotEmpty &&
+        _subjectProgress.any((s) => s.progress >= 70.0)) {
       _userAchievements.add(_createSmartAchievement(
         'Subject Improver',
         Icons.trending_up,
@@ -1422,7 +1506,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         break;
       case 'challenge_seeker':
         if (_recentActivity.any((a) => (a['score'] as double? ?? 0.0) < 60.0) &&
-            _recentActivity.any((a) => (a['score'] as double? ?? 0.0) >= 80.0)) {
+            _recentActivity
+                .any((a) => (a['score'] as double? ?? 0.0) >= 80.0)) {
           _userAchievements.add(_createSmartAchievement(
             'Challenge Conqueror',
             Icons.sports_score,
@@ -1543,12 +1628,16 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     _studyRecommendations = [];
     final userProfile = _userBehaviorProfile;
     final learningStyle = userProfile['learningStyle'] as String? ?? 'explorer';
-    final engagementLevel = userProfile['engagementLevel'] as String? ?? 'needs_encouragement';
-    final studyPatterns = userProfile['studyPatterns'] as Map<String, dynamic>? ?? {};
-    final performanceTrends = userProfile['performanceTrends'] as Map<String, dynamic>? ?? {};
+    final engagementLevel =
+        userProfile['engagementLevel'] as String? ?? 'needs_encouragement';
+    final studyPatterns =
+        userProfile['studyPatterns'] as Map<String, dynamic>? ?? {};
+    final performanceTrends =
+        userProfile['performanceTrends'] as Map<String, dynamic>? ?? {};
     final weakAreas = userProfile['weaknesses'] as List<String>? ?? [];
     final strengths = userProfile['strengths'] as List<String>? ?? [];
-    final preferredSubjects = userProfile['preferredSubjects'] as List<String>? ?? [];
+    final preferredSubjects =
+        userProfile['preferredSubjects'] as List<String>? ?? [];
 
     // ML-powered recommendation engine
 
@@ -1561,9 +1650,11 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       );
 
       if (weakSubjectProgress.progress < 50.0) {
-        _studyRecommendations.add('🚨 Critical Focus: $primaryWeakArea needs immediate attention. Dedicate extra study time to improve from ${weakSubjectProgress.progress.toStringAsFixed(0)}%');
+        _studyRecommendations.add(
+            '🚨 Critical Focus: $primaryWeakArea needs immediate attention. Dedicate extra study time to improve from ${weakSubjectProgress.progress.toStringAsFixed(0)}%');
       } else {
-        _studyRecommendations.add('📈 Growth Zone: $primaryWeakArea shows improvement potential. Targeted practice will yield quick results');
+        _studyRecommendations.add(
+            '📈 Growth Zone: $primaryWeakArea shows improvement potential. Targeted practice will yield quick results');
       }
     }
 
@@ -1571,33 +1662,41 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     switch (learningStyle) {
       case 'quick_learner':
         if (overallProgress >= 80.0) {
-          _studyRecommendations.add('🧠 Advanced Challenge: Your quick learning style thrives on complexity. Try advanced topics in ${preferredSubjects.isNotEmpty ? preferredSubjects.first : 'your favorite subjects'}');
+          _studyRecommendations.add(
+              '🧠 Advanced Challenge: Your quick learning style thrives on complexity. Try advanced topics in ${preferredSubjects.isNotEmpty ? preferredSubjects.first : 'your favorite subjects'}');
         } else {
-          _studyRecommendations.add('⚡ Speed Learning: Leverage your quick comprehension! Focus on understanding concepts deeply rather than memorizing');
+          _studyRecommendations.add(
+              '⚡ Speed Learning: Leverage your quick comprehension! Focus on understanding concepts deeply rather than memorizing');
         }
         break;
       case 'consistent_builder':
         if (currentStreak < 5) {
-          _studyRecommendations.add('🔄 Build Consistency: Your learning style benefits from regular practice. Aim for daily 15-minute sessions to build momentum');
+          _studyRecommendations.add(
+              '🔄 Build Consistency: Your learning style benefits from regular practice. Aim for daily 15-minute sessions to build momentum');
         } else {
-          _studyRecommendations.add('📊 Steady Progress: Your consistent approach is working! Maintain this pattern while gradually increasing difficulty');
+          _studyRecommendations.add(
+              '📊 Steady Progress: Your consistent approach is working! Maintain this pattern while gradually increasing difficulty');
         }
         break;
       case 'challenge_seeker':
-        _studyRecommendations.add('🎯 Challenge Seeker: You excel when pushed! Seek out difficult questions and complex problems in ${preferredSubjects.isNotEmpty ? preferredSubjects.first : 'challenging subjects'}');
+        _studyRecommendations.add(
+            '🎯 Challenge Seeker: You excel when pushed! Seek out difficult questions and complex problems in ${preferredSubjects.isNotEmpty ? preferredSubjects.first : 'challenging subjects'}');
         break;
     }
 
     // 3. Engagement-based motivation
     switch (engagementLevel) {
       case 'highly_engaged':
-        _studyRecommendations.add('⭐ Elite Performer: Your dedication is exceptional! Consider mentoring others or exploring advanced certifications');
+        _studyRecommendations.add(
+            '⭐ Elite Performer: Your dedication is exceptional! Consider mentoring others or exploring advanced certifications');
         break;
       case 'moderately_engaged':
-        _studyRecommendations.add('💪 Stay Motivated: You\'re on the right track! Set small daily goals to maintain and increase your engagement level');
+        _studyRecommendations.add(
+            '💪 Stay Motivated: You\'re on the right track! Set small daily goals to maintain and increase your engagement level');
         break;
       case 'needs_encouragement':
-        _studyRecommendations.add('🌱 Start Small: Begin with 10 minutes daily. Small consistent efforts compound into remarkable results over time');
+        _studyRecommendations.add(
+            '🌱 Start Small: Begin with 10 minutes daily. Small consistent efforts compound into remarkable results over time');
         break;
     }
 
@@ -1606,106 +1705,134 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     final consistency = studyPatterns['consistency'] as String? ?? 'irregular';
 
     if (frequency == 'high' && consistency == 'excellent') {
-      _studyRecommendations.add('🏆 Study Master: Your patterns are optimal! Focus on quality over quantity and explore interdisciplinary connections');
+      _studyRecommendations.add(
+          '🏆 Study Master: Your patterns are optimal! Focus on quality over quantity and explore interdisciplinary connections');
     } else if (frequency == 'low') {
-      _studyRecommendations.add('⏰ Study Rhythm: Establish a consistent study schedule. Even 20 minutes daily creates powerful learning momentum');
+      _studyRecommendations.add(
+          '⏰ Study Rhythm: Establish a consistent study schedule. Even 20 minutes daily creates powerful learning momentum');
     } else if (consistency == 'needs_improvement') {
-      _studyRecommendations.add('📅 Routine Builder: Create a study routine that fits your lifestyle. Consistency beats intensity for long-term success');
+      _studyRecommendations.add(
+          '📅 Routine Builder: Create a study routine that fits your lifestyle. Consistency beats intensity for long-term success');
     }
 
     // 5. Performance trend analysis and recommendations
     final trend = performanceTrends['trend'] as String? ?? 'insufficient_data';
-    final improvementRate = performanceTrends['improvement_rate'] as double? ?? 0.0;
+    final improvementRate =
+        performanceTrends['improvement_rate'] as double? ?? 0.0;
 
     switch (trend) {
       case 'improving':
-        _studyRecommendations.add('📈 Trending Up: ${improvementRate.abs().toStringAsFixed(1)}% improvement detected! Keep doing what works and accelerate your progress');
+        _studyRecommendations.add(
+            '📈 Trending Up: ${improvementRate.abs().toStringAsFixed(1)}% improvement detected! Keep doing what works and accelerate your progress');
         break;
       case 'declining':
-        _studyRecommendations.add('🔄 Course Correction: Recent scores show a dip. Review recent quizzes and identify areas for focused improvement');
+        _studyRecommendations.add(
+            '🔄 Course Correction: Recent scores show a dip. Review recent quizzes and identify areas for focused improvement');
         break;
       case 'stable':
         if (overallProgress >= 80.0) {
-          _studyRecommendations.add('🎯 Performance Plateau: Excellent stable performance! Introduce variety and challenges to continue growing');
+          _studyRecommendations.add(
+              '🎯 Performance Plateau: Excellent stable performance! Introduce variety and challenges to continue growing');
         } else {
-          _studyRecommendations.add('📊 Steady Foundation: Building solid fundamentals. Focus on understanding core concepts for breakthrough improvement');
+          _studyRecommendations.add(
+              '📊 Steady Foundation: Building solid fundamentals. Focus on understanding core concepts for breakthrough improvement');
         }
         break;
     }
 
     // 6. Subject variety and balance
     if (_subjectProgress.length < 3 && questionsAnswered >= 15) {
-      _studyRecommendations.add('🌟 Subject Diversity: Explore different subjects to build well-rounded knowledge. Interdisciplinary learning enhances understanding');
+      _studyRecommendations.add(
+          '🌟 Subject Diversity: Explore different subjects to build well-rounded knowledge. Interdisciplinary learning enhances understanding');
     }
 
     // 7. Time management insights
     if (weeklyStudyHours < 3 && questionsAnswered >= 10) {
-      _studyRecommendations.add('⏱️ Time Investment: Increase study time gradually. Quality learning requires consistent time investment for lasting retention');
+      _studyRecommendations.add(
+          '⏱️ Time Investment: Increase study time gradually. Quality learning requires consistent time investment for lasting retention');
     } else if (weeklyStudyHours > 15) {
-      _studyRecommendations.add('⚖️ Balance Check: Excellent dedication! Remember to balance intense study with rest and reflection for optimal learning');
+      _studyRecommendations.add(
+          '⚖️ Balance Check: Excellent dedication! Remember to balance intense study with rest and reflection for optimal learning');
     }
 
     // 8. Past questions specific advice with predictive elements
     if (pastQuestionsAnswered > 0) {
       if (pastQuestionsProgress < 70.0) {
-        _studyRecommendations.add('📚 Exam Preparation: Past questions are crucial for BECE success. Focus on understanding patterns and time management strategies');
+        _studyRecommendations.add(
+            '📚 Exam Preparation: Past questions are crucial for BECE success. Focus on understanding patterns and time management strategies');
       } else if (pastQuestionsProgress >= 85.0) {
-        _studyRecommendations.add('🎓 Exam Ready: Strong BECE preparation! Focus on revision techniques and mock exam simulations for peak performance');
+        _studyRecommendations.add(
+            '🎓 Exam Ready: Strong BECE preparation! Focus on revision techniques and mock exam simulations for peak performance');
       }
     } else if (questionsAnswered >= 10) {
-      _studyRecommendations.add('📖 BECE Foundation: Start practicing past questions now. They provide invaluable insight into exam patterns and expectations');
+      _studyRecommendations.add(
+          '📖 BECE Foundation: Start practicing past questions now. They provide invaluable insight into exam patterns and expectations');
     }
 
     // 9. Trivia engagement for knowledge breadth
     if (triviaQuestionsAnswered == 0 && questionsAnswered >= 5) {
-      _studyRecommendations.add('🎮 Knowledge Games: Trivia questions build general knowledge and make learning enjoyable. Try some fun challenges!');
+      _studyRecommendations.add(
+          '🎮 Knowledge Games: Trivia questions build general knowledge and make learning enjoyable. Try some fun challenges!');
     } else if (triviaProgress >= 80.0 && triviaQuestionsAnswered >= 10) {
-      _studyRecommendations.add('🌍 Knowledge Master: Excellent general knowledge! Continue exploring diverse topics for well-rounded intellectual development');
+      _studyRecommendations.add(
+          '🌍 Knowledge Master: Excellent general knowledge! Continue exploring diverse topics for well-rounded intellectual development');
     }
 
     // 10. Rank progression guidance
     if (nextRank != null) {
       final xpToNext = nextRank!.minXP - userXP;
       if (xpToNext <= 500) {
-        _studyRecommendations.add('🏅 Rank Advancement: Just ${xpToNext}XP from ${nextRank!.name}! Focus on high-scoring quizzes to level up quickly');
+        _studyRecommendations.add(
+            '🏅 Rank Advancement: Just ${xpToNext}XP from ${nextRank!.name}! Focus on high-scoring quizzes to level up quickly');
       } else if (xpToNext <= 2000) {
-        _studyRecommendations.add('🎯 Rank Journey: ${nextRank!.name} is within reach! Consistent performance will get you there faster than you think');
+        _studyRecommendations.add(
+            '🎯 Rank Journey: ${nextRank!.name} is within reach! Consistent performance will get you there faster than you think');
       }
     }
 
     // 11. Adaptive difficulty recommendations
-    if (overallProgress >= 90.0 && _recentActivity.any((a) => (a['score'] as double? ?? 0.0) >= 95.0)) {
-      _studyRecommendations.add('🚀 Difficulty Scaling: You\'re ready for advanced challenges! Seek out complex problems that push your intellectual boundaries');
+    if (overallProgress >= 90.0 &&
+        _recentActivity.any((a) => (a['score'] as double? ?? 0.0) >= 95.0)) {
+      _studyRecommendations.add(
+          '🚀 Difficulty Scaling: You\'re ready for advanced challenges! Seek out complex problems that push your intellectual boundaries');
     } else if (overallProgress < 60.0 && questionsAnswered >= 20) {
-      _studyRecommendations.add('🛡️ Foundation Building: Focus on fundamentals first. Strong basics create the foundation for advanced learning');
+      _studyRecommendations.add(
+          '🛡️ Foundation Building: Focus on fundamentals first. Strong basics create the foundation for advanced learning');
     }
 
     // 12. Study streak maintenance
     if (currentStreak == 0 && questionsAnswered > 0) {
-      _studyRecommendations.add('🔥 Streak Starter: Begin a daily study habit. Even short sessions create powerful momentum and build lasting learning habits');
+      _studyRecommendations.add(
+          '🔥 Streak Starter: Begin a daily study habit. Even short sessions create powerful momentum and build lasting learning habits');
     } else if (currentStreak > 0 && currentStreak < 7) {
-      _studyRecommendations.add('⚡ Momentum Builder: $currentStreak-day streak in progress! Each day adds to your learning momentum and confidence');
+      _studyRecommendations.add(
+          '⚡ Momentum Builder: $currentStreak-day streak in progress! Each day adds to your learning momentum and confidence');
     } else if (currentStreak >= 7) {
-      _studyRecommendations.add('🏆 Habit Champion: $currentStreak-day streak! You\'ve built an impressive learning habit. This consistency will carry you far');
+      _studyRecommendations.add(
+          '🏆 Habit Champion: $currentStreak-day streak! You\'ve built an impressive learning habit. This consistency will carry you far');
     }
 
     // 13. Personalized subject focus
     if (strengths.isNotEmpty && strengths.length >= 2) {
-      _studyRecommendations.add('💎 Subject Strengths: Excel in ${strengths.take(2).join(' and ')}! Use these strengths to help others and explore advanced topics');
+      _studyRecommendations.add(
+          '💎 Subject Strengths: Excel in ${strengths.take(2).join(' and ')}! Use these strengths to help others and explore advanced topics');
     }
 
     // 14. Predictive learning path
     if (questionsAnswered >= 50 && overallProgress >= 75.0) {
-      _studyRecommendations.add('🎓 Advanced Learning: Ready for advanced topics! Consider exploring specialized areas or helping mentor fellow students');
+      _studyRecommendations.add(
+          '🎓 Advanced Learning: Ready for advanced topics! Consider exploring specialized areas or helping mentor fellow students');
     }
 
     // 15. Contextual timing advice
     final now = DateTime.now();
     final hour = now.hour;
     if (hour >= 6 && hour < 12) {
-      _studyRecommendations.add('🌅 Morning Excellence: Studies show morning learning improves retention by 20%. Perfect timing for focused study sessions');
+      _studyRecommendations.add(
+          '🌅 Morning Excellence: Studies show morning learning improves retention by 20%. Perfect timing for focused study sessions');
     } else if (hour >= 18 && hour < 22) {
-      _studyRecommendations.add('🌙 Evening Mastery: Your brain is primed for learning. Use this peak cognitive time for complex problem-solving');
+      _studyRecommendations.add(
+          '🌙 Evening Mastery: Your brain is primed for learning. Use this peak cognitive time for complex problem-solving');
     }
 
     // Remove duplicates and prioritize
@@ -1726,36 +1853,44 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     // Ensure minimum recommendations
     while (_studyRecommendations.length < 3) {
       if (!_studyRecommendations.any((rec) => rec.contains('quiz'))) {
-        _studyRecommendations.add('📝 Practice Makes Perfect: Regular quiz practice strengthens memory retention and builds confidence');
+        _studyRecommendations.add(
+            '📝 Practice Makes Perfect: Regular quiz practice strengthens memory retention and builds confidence');
       } else if (!_studyRecommendations.any((rec) => rec.contains('book'))) {
-        _studyRecommendations.add('📖 Theory + Practice: Combine textbook reading with quizzes for comprehensive subject mastery');
+        _studyRecommendations.add(
+            '📖 Theory + Practice: Combine textbook reading with quizzes for comprehensive subject mastery');
       } else {
-        _studyRecommendations.add('🎯 Goal Setting: Set specific, achievable learning goals to maintain motivation and track progress');
+        _studyRecommendations.add(
+            '🎯 Goal Setting: Set specific, achievable learning goals to maintain motivation and track progress');
       }
     }
   }
 
-  int _calculateRecommendationPriority(String recommendation, Map<String, dynamic> userProfile) {
+  int _calculateRecommendationPriority(
+      String recommendation, Map<String, dynamic> userProfile) {
     int priority = 5; // Base priority
 
     // High priority recommendations
     if (recommendation.contains('Critical') || recommendation.contains('🚨')) {
       priority += 5;
-    } else if (recommendation.contains('improvement') || recommendation.contains('Focus')) {
+    } else if (recommendation.contains('improvement') ||
+        recommendation.contains('Focus')) {
       priority += 3;
     }
 
     // Medium priority based on user state
     final engagementLevel = userProfile['engagementLevel'] as String? ?? '';
-    if (engagementLevel == 'needs_encouragement' && recommendation.contains('Start Small')) {
+    if (engagementLevel == 'needs_encouragement' &&
+        recommendation.contains('Start Small')) {
       priority += 3;
     }
 
     // Learning style alignment
     final learningStyle = userProfile['learningStyle'] as String? ?? '';
-    if (learningStyle == 'quick_learner' && recommendation.contains('Advanced')) {
+    if (learningStyle == 'quick_learner' &&
+        recommendation.contains('Advanced')) {
       priority += 2;
-    } else if (learningStyle == 'consistent_builder' && recommendation.contains('Consistency')) {
+    } else if (learningStyle == 'consistent_builder' &&
+        recommendation.contains('Consistency')) {
       priority += 2;
     }
 
@@ -1804,7 +1939,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       }
     }
 
-    if (quickLearners > consistentLearners && quickLearners > challengeSeekers) {
+    if (quickLearners > consistentLearners &&
+        quickLearners > challengeSeekers) {
       return 'quick_learner';
     } else if (consistentLearners > challengeSeekers) {
       return 'consistent_builder';
@@ -1825,22 +1961,35 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
 
   Map<String, dynamic> _analyzeStudyPatterns() {
     if (_recentActivity.isEmpty) {
-      return {'frequency': 'low', 'consistency': 'irregular', 'peak_times': 'unknown'};
+      return {
+        'frequency': 'low',
+        'consistency': 'irregular',
+        'peak_times': 'unknown'
+      };
     }
 
     // Analyze activity frequency
     final recentCount = _recentActivity.length;
-    final frequency = recentCount >= 5 ? 'high' : recentCount >= 2 ? 'medium' : 'low';
+    final frequency = recentCount >= 5
+        ? 'high'
+        : recentCount >= 2
+            ? 'medium'
+            : 'low';
 
     // Analyze consistency (based on streak)
-    final consistency = currentStreak >= 7 ? 'excellent' :
-                       currentStreak >= 3 ? 'good' : 'needs_improvement';
+    final consistency = currentStreak >= 7
+        ? 'excellent'
+        : currentStreak >= 3
+            ? 'good'
+            : 'needs_improvement';
 
     return {
       'frequency': frequency,
       'consistency': consistency,
       'peak_times': 'evening', // Could be enhanced with actual time analysis
-      'preferred_quiz_length': questionsAnswered > 0 ? (questionsAnswered / _recentActivity.length).round() : 5,
+      'preferred_quiz_length': questionsAnswered > 0
+          ? (questionsAnswered / _recentActivity.length).round()
+          : 5,
     };
   }
 
@@ -1850,13 +1999,19 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     }
 
     // Calculate trend based on recent scores
-    final recentScores = _recentActivity.map((a) => a['score'] as double).toList();
-    final avgRecent = recentScores.reduce((a, b) => a + b) / recentScores.length;
+    final recentScores =
+        _recentActivity.map((a) => a['score'] as double).toList();
+    final avgRecent =
+        recentScores.reduce((a, b) => a + b) / recentScores.length;
 
-    final trend = avgRecent >= overallProgress + 5.0 ? 'improving' :
-                  avgRecent <= overallProgress - 5.0 ? 'declining' : 'stable';
+    final trend = avgRecent >= overallProgress + 5.0
+        ? 'improving'
+        : avgRecent <= overallProgress - 5.0
+            ? 'declining'
+            : 'stable';
 
-    final improvementRate = ((avgRecent - overallProgress) / overallProgress * 100);
+    final improvementRate =
+        ((avgRecent - overallProgress) / overallProgress * 100);
 
     return {
       'trend': trend,
@@ -1868,10 +2023,26 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
 
   String _measureEngagementLevel() {
     final factors = [
-      currentStreak >= 7 ? 3 : currentStreak >= 3 ? 2 : 1,
-      questionsAnswered >= 50 ? 3 : questionsAnswered >= 20 ? 2 : 1,
-      weeklyStudyHours >= 10 ? 3 : weeklyStudyHours >= 5 ? 2 : 1,
-      overallProgress >= 80.0 ? 3 : overallProgress >= 60.0 ? 2 : 1,
+      currentStreak >= 7
+          ? 3
+          : currentStreak >= 3
+              ? 2
+              : 1,
+      questionsAnswered >= 50
+          ? 3
+          : questionsAnswered >= 20
+              ? 2
+              : 1,
+      weeklyStudyHours >= 10
+          ? 3
+          : weeklyStudyHours >= 5
+              ? 2
+              : 1,
+      overallProgress >= 80.0
+          ? 3
+          : overallProgress >= 60.0
+              ? 2
+              : 1,
     ];
 
     final avgEngagement = factors.reduce((a, b) => a + b) / factors.length;
@@ -1902,7 +2073,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     final learningStyle = profile['learningStyle'] as String;
     final engagementLevel = profile['engagementLevel'] as String;
     final studyPatterns = profile['studyPatterns'] as Map<String, dynamic>;
-    final performanceTrends = profile['performanceTrends'] as Map<String, dynamic>;
+    final performanceTrends =
+        profile['performanceTrends'] as Map<String, dynamic>;
     final preferredSubjects = profile['preferredSubjects'] as List<String>;
     final weakAreas = profile['weaknesses'] as List<String>;
     final strengths = profile['strengths'] as List<String>;
@@ -1912,26 +2084,32 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     // 1. Learning style-based recommendations
     switch (learningStyle) {
       case 'quick_learner':
-        _personalizedContent.add('🚀 Quick Learner: You excel at grasping concepts fast! Try advanced topics in ${preferredSubjects.first}');
+        _personalizedContent.add(
+            '🚀 Quick Learner: You excel at grasping concepts fast! Try advanced topics in ${preferredSubjects.first}');
         break;
       case 'consistent_builder':
-        _personalizedContent.add('📈 Steady Builder: Your consistent approach is paying off! Keep building on your ${preferredSubjects.first} foundation');
+        _personalizedContent.add(
+            '📈 Steady Builder: Your consistent approach is paying off! Keep building on your ${preferredSubjects.first} foundation');
         break;
       case 'challenge_seeker':
-        _personalizedContent.add('🎯 Challenge Seeker: You thrive on difficult questions! Push your limits with complex ${preferredSubjects.first} problems');
+        _personalizedContent.add(
+            '🎯 Challenge Seeker: You thrive on difficult questions! Push your limits with complex ${preferredSubjects.first} problems');
         break;
     }
 
     // 2. Engagement-based motivation
     switch (engagementLevel) {
       case 'highly_engaged':
-        _personalizedContent.add('⭐ Champion: Your dedication is inspiring! You\'re on track to master ${preferredSubjects.take(2).join(' and ')}');
+        _personalizedContent.add(
+            '⭐ Champion: Your dedication is inspiring! You\'re on track to master ${preferredSubjects.take(2).join(' and ')}');
         break;
       case 'moderately_engaged':
-        _personalizedContent.add('💪 Keep Going: You\'re making great progress! A little more consistency will take you far');
+        _personalizedContent.add(
+            '💪 Keep Going: You\'re making great progress! A little more consistency will take you far');
         break;
       case 'needs_encouragement':
-        _personalizedContent.add('🌱 Start Small: Every expert was once a beginner. Take one quiz today to build momentum!');
+        _personalizedContent.add(
+            '🌱 Start Small: Every expert was once a beginner. Take one quiz today to build momentum!');
         break;
     }
 
@@ -1940,9 +2118,11 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     final consistency = studyPatterns['consistency'] as String;
 
     if (frequency == 'high' && consistency == 'excellent') {
-      _personalizedContent.add('🔥 Study Master: Your $currentStreak-day streak shows incredible discipline! You\'re unstoppable');
+      _personalizedContent.add(
+          '🔥 Study Master: Your $currentStreak-day streak shows incredible discipline! You\'re unstoppable');
     } else if (frequency == 'low') {
-      _personalizedContent.add('⏰ Study Time: Regular practice (even 15 minutes daily) leads to remarkable improvement');
+      _personalizedContent.add(
+          '⏰ Study Time: Regular practice (even 15 minutes daily) leads to remarkable improvement');
     }
 
     // 4. Performance trend analysis
@@ -1950,18 +2130,22 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     final improvementRate = performanceTrends['improvement_rate'] as double;
 
     if (trend == 'improving') {
-      _personalizedContent.add('📊 Trending Up: ${improvementRate.toStringAsFixed(1)}% improvement! Your hard work is showing results');
+      _personalizedContent.add(
+          '📊 Trending Up: ${improvementRate.toStringAsFixed(1)}% improvement! Your hard work is showing results');
     } else if (trend == 'declining') {
-      _personalizedContent.add('📉 Focus Time: Let\'s turn things around. Review your weak areas and practice consistently');
+      _personalizedContent.add(
+          '📉 Focus Time: Let\'s turn things around. Review your weak areas and practice consistently');
     }
 
     // 5. Subject-specific insights
     if (weakAreas.isNotEmpty) {
-      _personalizedContent.add('🎯 Growth Areas: Focus on ${weakAreas.take(2).join(' and ')} - targeted practice will boost your scores');
+      _personalizedContent.add(
+          '🎯 Growth Areas: Focus on ${weakAreas.take(2).join(' and ')} - targeted practice will boost your scores');
     }
 
     if (strengths.isNotEmpty && strengths.length >= 2) {
-      _personalizedContent.add('🏆 Subject Stars: You\'re excelling in ${strengths.take(2).join(' and ')}! Teach others or explore advanced topics');
+      _personalizedContent.add(
+          '🏆 Subject Stars: You\'re excelling in ${strengths.take(2).join(' and ')}! Teach others or explore advanced topics');
     }
 
     // 6. Smart timing suggestions
@@ -1969,27 +2153,33 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     final hour = now.hour;
 
     if (hour >= 6 && hour < 12) {
-      _personalizedContent.add('🌅 Morning Mind: Studies show morning study sessions improve retention by 20%. Perfect timing!');
+      _personalizedContent.add(
+          '🌅 Morning Mind: Studies show morning study sessions improve retention by 20%. Perfect timing!');
     } else if (hour >= 18 && hour < 22) {
-      _personalizedContent.add('🌙 Evening Excellence: Your brain is primed for learning. Make the most of peak cognitive hours');
+      _personalizedContent.add(
+          '🌙 Evening Excellence: Your brain is primed for learning. Make the most of peak cognitive hours');
     }
 
     // 7. Achievement predictions
     if (userXP > 0) {
       final predictedRank = _predictNextAchievement();
       if (predictedRank != null) {
-        _personalizedContent.add('🎖️ Next Milestone: Keep going! You\'re on track to reach $predictedRank soon');
+        _personalizedContent.add(
+            '🎖️ Next Milestone: Keep going! You\'re on track to reach $predictedRank soon');
       }
     }
 
     // Ensure we have at least 3 personalized items
     while (_personalizedContent.length < 3) {
       if (!_personalizedContent.any((item) => item.contains('quiz'))) {
-        _personalizedContent.add('📚 Knowledge Builder: Each quiz you complete adds to your growing expertise');
+        _personalizedContent.add(
+            '📚 Knowledge Builder: Each quiz you complete adds to your growing expertise');
       } else if (!_personalizedContent.any((item) => item.contains('streak'))) {
-        _personalizedContent.add('🔥 Habit Hero: Building daily study habits creates lifelong learning success');
+        _personalizedContent.add(
+            '🔥 Habit Hero: Building daily study habits creates lifelong learning success');
       } else {
-        _personalizedContent.add('🎓 Learning Journey: Every question answered brings you closer to academic excellence');
+        _personalizedContent.add(
+            '🎓 Learning Journey: Every question answered brings you closer to academic excellence');
       }
     }
 
@@ -2017,12 +2207,18 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     if (_recentActivity.length < 3) return 0.0;
 
     // Calculate trend based on recent vs overall performance
-    final recentScores = _recentActivity.map((a) => a['score'] as double).toList();
-    final avgRecent = recentScores.reduce((a, b) => a + b) / recentScores.length;
+    final recentScores =
+        _recentActivity.map((a) => a['score'] as double).toList();
+    final avgRecent =
+        recentScores.reduce((a, b) => a + b) / recentScores.length;
 
     // Return positive for improving, negative for declining
     final trend = avgRecent - overallProgress;
-    return trend > 2.0 ? 1.0 : trend < -2.0 ? -1.0 : 0.0;
+    return trend > 2.0
+        ? 1.0
+        : trend < -2.0
+            ? -1.0
+            : 0.0;
   }
 
   String _getTimeAgo(DateTime dateTime) {
@@ -2032,7 +2228,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     if (difference.inDays > 0) {
       if (difference.inDays == 1) return '1 day ago';
       if (difference.inDays < 7) return '${difference.inDays} days ago';
-      if (difference.inDays < 30) return '${(difference.inDays / 7).round()} weeks ago';
+      if (difference.inDays < 30)
+        return '${(difference.inDays / 7).round()} weeks ago';
       return '${(difference.inDays / 30).round()} months ago';
     } else if (difference.inHours > 0) {
       if (difference.inHours == 1) return '1 hour ago';
@@ -2058,48 +2255,49 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     final isSmallScreen = screenWidth < 768;
-    
+
     return PopScope(
       canPop: false,
       onPopInvokedWithResult: (bool didPop, dynamic result) async {
         if (didPop) return;
-        
+
         // Prevent going back to landing/login page
         // Show exit confirmation dialog instead
         final shouldExit = await showDialog<bool>(
-          context: context,
-          builder: (context) => AlertDialog(
-            title: Text(
-              'Exit App?',
-              style: GoogleFonts.playfairDisplay(
-                fontWeight: FontWeight.bold,
-                color: const Color(0xFF1A1E3F),
-              ),
-            ),
-            content: Text(
-              'Are you sure you want to exit?',
-              style: GoogleFonts.montserrat(),
-            ),
-            actions: [
-              TextButton(
-                onPressed: () => Navigator.of(context).pop(false),
-                child: Text(
-                  'Cancel',
-                  style: GoogleFonts.montserrat(color: Colors.grey[600]),
+              context: context,
+              builder: (context) => AlertDialog(
+                title: Text(
+                  'Exit App?',
+                  style: GoogleFonts.playfairDisplay(
+                    fontWeight: FontWeight.bold,
+                    color: const Color(0xFF1A1E3F),
+                  ),
                 ),
-              ),
-              ElevatedButton(
-                onPressed: () => Navigator.of(context).pop(true),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFD62828),
-                  foregroundColor: Colors.white,
+                content: Text(
+                  'Are you sure you want to exit?',
+                  style: GoogleFonts.montserrat(),
                 ),
-                child: Text('Exit', style: GoogleFonts.montserrat()),
+                actions: [
+                  TextButton(
+                    onPressed: () => Navigator.of(context).pop(false),
+                    child: Text(
+                      'Cancel',
+                      style: GoogleFonts.montserrat(color: Colors.grey[600]),
+                    ),
+                  ),
+                  ElevatedButton(
+                    onPressed: () => Navigator.of(context).pop(true),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFFD62828),
+                      foregroundColor: Colors.white,
+                    ),
+                    child: Text('Exit', style: GoogleFonts.montserrat()),
+                  ),
+                ],
               ),
-            ],
-          ),
-        ) ?? false;
-        
+            ) ??
+            false;
+
         if (shouldExit == true) {
           if (context.mounted) {
             Navigator.of(context).pop();
@@ -2111,82 +2309,109 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         builder: (context, child) {
           return Scaffold(
             backgroundColor: const Color(0xFFF8FAFE),
-          body: Stack(
-            children: [
-              SafeArea(
-                child: isSmallScreen 
-                    ? Column(
-                        children: [
-                          // Mobile Header
-                          _buildMobileHeader(),
-                          
-                          // Mobile Content
-                          Expanded(
-                            child: _showingProfile 
-                                ? Container(
-                                    color: Colors.grey[50],
-                                    child: widget.isTeacher ? const TeacherProfilePage() : const StudentProfilePage(),
-                                  )
-                                : IndexedStack(
-                                    index: _selectedIndex,
-                                    children: _homeChildren(),
+            body: Stack(
+              children: [
+                SafeArea(
+                  child: isSmallScreen
+                      ? Column(
+                          children: [
+                            // Mobile Header
+                            _buildMobileHeader(),
+
+                            // Mobile Content with Pull-to-Refresh
+                            Expanded(
+                              child: _showingProfile
+                                  ? Container(
+                                      color: Colors.grey[50],
+                                      child: widget.isTeacher
+                                          ? const TeacherProfilePage()
+                                          : const StudentProfilePage(),
+                                    )
+                                  : RefreshIndicator(
+                                      onRefresh: () async {
+                                        _loadUserData();
+                                        _loadUserStats();
+                                        _loadNotifications();
+                                        if (mounted) {
+                                          ScaffoldMessenger.of(context)
+                                              .showSnackBar(
+                                            SnackBar(
+                                              content: const Text(
+                                                  'Refreshed successfully'),
+                                              backgroundColor: Colors.green,
+                                              duration:
+                                                  const Duration(seconds: 1),
+                                              behavior:
+                                                  SnackBarBehavior.floating,
+                                            ),
+                                          );
+                                        }
+                                      },
+                                      child: IndexedStack(
+                                        index: _selectedIndex,
+                                        children: _homeChildren(),
+                                      ),
+                                    ),
+                            ),
+                          ],
+                        )
+                      : Row(
+                          children: [
+                            // Desktop Sidebar Navigation
+                            _buildSideNavigation(),
+
+                            // Desktop Main Content
+                            Expanded(
+                              child: Column(
+                                children: [
+                                  // Desktop Header
+                                  _buildHeader(context),
+
+                                  // Desktop Content Area
+                                  Expanded(
+                                    child: _showingProfile
+                                        ? Container(
+                                            color: Colors.grey[50],
+                                            child: widget.isTeacher
+                                                ? const TeacherProfilePage()
+                                                : const StudentProfilePage(),
+                                          )
+                                        : IndexedStack(
+                                            index: _selectedIndex,
+                                            children: _homeChildren(),
+                                          ),
                                   ),
-                          ),
-                        ],
-                      )
-                    : Row(
-                        children: [
-                          // Desktop Sidebar Navigation
-                          _buildSideNavigation(),
-                          
-                          // Desktop Main Content
-                          Expanded(
-                            child: Column(
-                              children: [
-                                // Desktop Header
-                                _buildHeader(context),
-                                
-                                // Desktop Content Area
-                                Expanded(
-                                  child: _showingProfile 
-                                      ? Container(
-                                          color: Colors.grey[50],
-                                          child: widget.isTeacher ? const TeacherProfilePage() : const StudentProfilePage(),
-                                        )
-                                      : IndexedStack(
-                                          index: _selectedIndex,
-                                          children: _homeChildren(),
-                                        ),
+                                ],
+                              ),
                             ),
                           ],
                         ),
-                      ),
-                    ],
-                  ),
-              ),
-              
-              // Connection Status Indicator
-              StreamBuilder<bool>(
-                stream: ConnectionService().connectionStatus,
-                builder: (context, snapshot) {
-                  if (snapshot.hasData && !snapshot.data!) {
-                    return _buildConnectionBanner();
-                  }
-                  return const SizedBox.shrink();
-                },
-              ),
-              
-              // Uri Chat Overlay (when floating button is clicked)
-              if (_showUriChat && _shouldShowUriButton())
-                _buildUriChatOverlay(isSmallScreen),
-            ],
-          ),
-          
-          // Bottom Navigation (Mobile Only)
-          bottomNavigationBar: isSmallScreen ? _buildBottomNavigation() : null,
-          
-          // Floating Uri Chatbot Button (show on all pages except Uri page)
-          floatingActionButton: _shouldShowUriButton() ? _buildUriFloatingButton() : null,
+                ),
+
+                // Connection Status Indicator
+                StreamBuilder<bool>(
+                  stream: ConnectionService().connectionStatus,
+                  builder: (context, snapshot) {
+                    if (snapshot.hasData && !snapshot.data!) {
+                      return _buildConnectionBanner();
+                    }
+                    return const SizedBox.shrink();
+                  },
+                ),
+
+                // Uri Chat Overlay (when floating button is clicked)
+                if (_showUriChat && _shouldShowUriButton())
+                  _buildUriChatOverlay(isSmallScreen),
+              ],
+            ),
+
+            // Bottom Navigation (Mobile Only)
+            bottomNavigationBar:
+                isSmallScreen ? _buildBottomNavigation() : null,
+
+            // Floating Uri Chatbot Button (show on all pages except Uri page)
+            floatingActionButton:
+                _shouldShowUriButton() ? _buildUriFloatingButton() : null,
           );
         },
       ),
@@ -2263,9 +2488,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             'Uriel Academy',
             style: AppStyles.brandNameLight(fontSize: 18),
           ),
-          
+
           const Spacer(),
-          
+
           // User Rank Badge (smaller than profile)
           GestureDetector(
             onTap: () => _showRankDialog(),
@@ -2273,14 +2498,14 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(
-                  color: currentRank != null 
+                  color: currentRank != null
                       ? currentRank!.getTierColor().withValues(alpha: 0.3)
                       : Colors.grey.withValues(alpha: 0.3),
                   width: 1.5,
                 ),
                 boxShadow: [
                   BoxShadow(
-                    color: currentRank != null 
+                    color: currentRank != null
                         ? currentRank!.getTierColor().withValues(alpha: 0.15)
                         : Colors.grey.withValues(alpha: 0.08),
                     blurRadius: 6,
@@ -2291,12 +2516,15 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               child: CircleAvatar(
                 radius: 16,
                 backgroundColor: Colors.white,
-                backgroundImage: currentRank != null && currentRank!.imageUrl.isNotEmpty
-                    ? CachedNetworkImageProvider(currentRank!.imageUrl)
-                    : null,
+                backgroundImage:
+                    currentRank != null && currentRank!.imageUrl.isNotEmpty
+                        ? CachedNetworkImageProvider(currentRank!.imageUrl)
+                        : null,
                 child: currentRank == null || currentRank!.imageUrl.isEmpty
                     ? Icon(
-                        currentRank != null ? Icons.emoji_events : Icons.emoji_events_outlined,
+                        currentRank != null
+                            ? Icons.emoji_events
+                            : Icons.emoji_events_outlined,
                         color: currentRank?.getTierColor() ?? Colors.grey,
                         size: 16,
                       )
@@ -2304,9 +2532,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               ),
             ),
           ),
-          
+
           const SizedBox(width: 8),
-          
+
           // Profile Avatar (larger than badge)
           GestureDetector(
             onTap: () => _showProfileMenu(),
@@ -2314,10 +2542,15 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               radius: 18,
               backgroundColor: const Color(0xFF1A1E3F),
               backgroundImage: _getAvatarImage(),
-              child: _getAvatarImage() == null ? Text(
-                userName.isNotEmpty ? userName[0].toUpperCase() : '?',
-                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
-              ) : null,
+              child: _getAvatarImage() == null
+                  ? Text(
+                      userName.isNotEmpty ? userName[0].toUpperCase() : '?',
+                      style: const TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16),
+                    )
+                  : null,
             ),
           ),
         ],
@@ -2350,12 +2583,13 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               ),
             ),
           ),
-          
+
           // User Profile Card
           GestureDetector(
             onTap: () => setState(() {
               _showingProfile = !_showingProfile;
-              if (_showingProfile) _selectedIndex = 0; // Reset to dashboard when returning
+              if (_showingProfile)
+                _selectedIndex = 0; // Reset to dashboard when returning
             }),
             child: Container(
               margin: const EdgeInsets.symmetric(horizontal: 16),
@@ -2373,10 +2607,16 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                     radius: 20,
                     backgroundColor: const Color(0xFF1A1E3F),
                     backgroundImage: _getAvatarImage(),
-                    child: _getAvatarImage() == null ? Text(
-                      userName.isNotEmpty ? userName[0].toUpperCase() : '?',
-                      style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-                    ) : null,
+                    child: _getAvatarImage() == null
+                        ? Text(
+                            userName.isNotEmpty
+                                ? userName[0].toUpperCase()
+                                : '?',
+                            style: const TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          )
+                        : null,
                   ),
                   const SizedBox(width: 12),
                   Expanded(
@@ -2404,22 +2644,24 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               ),
             ),
           ),
-          
+
           const SizedBox(height: 24),
-          
+
           // Navigation Items
           Expanded(
             child: SingleChildScrollView(
               child: Column(
                 children: [
                   // Build navigation items dynamically so teacher view can exclude some tabs
-                  for (final item in _navItems()) _buildNavItem(item['index'] as int, item['label'] as String, icon: item['icon'] as IconData?),
-                  
+                  for (final item in _navItems())
+                    _buildNavItem(item['index'] as int, item['label'] as String,
+                        icon: item['icon'] as IconData?),
+
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                     child: Divider(),
                   ),
-                  
+
                   _buildNavItem(-7, 'Payment'),
                   _buildNavItem(-9, 'Notifications'),
                   _buildNavItem(-8, 'All Ranks'),
@@ -2427,7 +2669,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               ),
             ),
           ),
-          
+
           // Settings & Theme Toggle
           Container(
             padding: const EdgeInsets.all(16),
@@ -2455,19 +2697,20 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   Widget _buildNavItem(int index, String title, {IconData? icon}) {
     final isSelected = _selectedIndex == index;
     final isMainNav = index >= 0;
-    
+
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 2),
       child: ListTile(
-        leading: icon != null ? Icon(icon, color: isSelected ? const Color(0xFFD62828) : Colors.grey[600]) : null,
+        leading: icon != null
+            ? Icon(icon,
+                color: isSelected ? const Color(0xFFD62828) : Colors.grey[600])
+            : null,
         title: Text(
           title,
           style: GoogleFonts.montserrat(
             fontSize: 14,
             fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
-            color: isSelected 
-                ? const Color(0xFFD62828)
-                : Colors.grey[700],
+            color: isSelected ? const Color(0xFFD62828) : Colors.grey[700],
           ),
         ),
         selected: isSelected,
@@ -2486,7 +2729,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       ),
     );
   }
-  
+
   void _navigateToFooterPage(String pageName) {
     // Handle All Ranks page separately
     if (pageName == 'All Ranks') {
@@ -2498,7 +2741,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       );
       return;
     }
-    
+
     String route;
     switch (pageName) {
       case 'Pricing':
@@ -2533,8 +2776,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
 
   Widget _buildBottomNavigation() {
     final nav = _navItems();
-    final tabs = nav.map((n) => {'label': n['label'], 'icon': n['icon']}).toList();
-    
+    final tabs =
+        nav.map((n) => {'label': n['label'], 'icon': n['icon']}).toList();
+
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
@@ -2560,22 +2804,27 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   _showingProfile = false;
                 }),
                 child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                   decoration: BoxDecoration(
-                    color: isSelected 
+                    color: isSelected
                         ? const Color(0xFFD62828).withValues(alpha: 0.1)
                         : Colors.transparent,
                     borderRadius: BorderRadius.circular(20),
-                    border: isSelected 
-                        ? Border.all(color: const Color(0xFFD62828).withValues(alpha: 0.3), width: 1)
+                    border: isSelected
+                        ? Border.all(
+                            color:
+                                const Color(0xFFD62828).withValues(alpha: 0.3),
+                            width: 1)
                         : null,
                   ),
                   child: Text(
                     tabs[index]['label'] as String,
                     style: GoogleFonts.montserrat(
                       fontSize: 12,
-                      fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
-                      color: isSelected 
+                      fontWeight:
+                          isSelected ? FontWeight.w600 : FontWeight.w500,
+                      color: isSelected
                           ? const Color(0xFFD62828)
                           : Colors.grey[600],
                     ),
@@ -2628,8 +2877,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     final items = <Map<String, Object?>>[];
     int idx = 0;
     // Remove icons for teacher mode (icon: null) so tabs render without icons.
-  // Dashboard always first (label-only tab — no icon for teacher or student)
-  items.add({'index': idx++, 'label': 'Dashboard', 'icon': null});
+    // Dashboard always first (label-only tab — no icon for teacher or student)
+    items.add({'index': idx++, 'label': 'Dashboard', 'icon': null});
     if (widget.isTeacher) {
       // Teacher order: Students, Generate Quiz, Lesson Planner, Notes, Ask Uri, Books, Trivia, Leaderboard, Feedback
       items.add({'index': idx++, 'label': 'Students', 'icon': null});
@@ -2671,16 +2920,16 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   bool _shouldShowUriButton() {
     // Hide Uri chatbot for teachers
     if (widget.isTeacher) return false;
-    
+
     // Hide on Study Planner page (index 5 for students)
     if (_selectedIndex == 5) return false;
-    
+
     // Hide on Questions page (index 1 for students)
     if (_selectedIndex == 1) return false;
-    
-    return !_showingProfile && 
-           _selectedIndex != _uriIndex() && 
-           _selectedIndex != _feedbackIndex();
+
+    return !_showingProfile &&
+        _selectedIndex != _uriIndex() &&
+        _selectedIndex != _feedbackIndex();
   }
 
   // Build floating Uri chatbot button
@@ -2694,23 +2943,24 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           });
         },
         backgroundColor: const Color(0xFF001F3F), // Navy blue
-        icon: _showUriChat 
-          ? const Icon(Icons.close, color: Colors.white)
-          : Container(
-              width: 40,
-              height: 40,
-              padding: const EdgeInsets.all(1), // Minimal white border showing
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                shape: BoxShape.circle,
-              ),
-              child: ClipOval(
-                child: Image.asset(
-                  'assets/uri.webp',
-                  fit: BoxFit.cover,
+        icon: _showUriChat
+            ? const Icon(Icons.close, color: Colors.white)
+            : Container(
+                width: 40,
+                height: 40,
+                padding:
+                    const EdgeInsets.all(1), // Minimal white border showing
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  shape: BoxShape.circle,
+                ),
+                child: ClipOval(
+                  child: Image.asset(
+                    'assets/uri.webp',
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
-            ),
         label: Text(
           _showUriChat ? 'Close Uri' : 'Ask Uri',
           style: GoogleFonts.montserrat(
@@ -2737,11 +2987,13 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         clipBehavior: Clip.antiAlias, // Ensure clean rounded edges
         child: Container(
           width: isSmallScreen ? MediaQuery.of(context).size.width - 32 : 400,
-          height: isSmallScreen ? MediaQuery.of(context).size.height * 0.6 : 600,
+          height:
+              isSmallScreen ? MediaQuery.of(context).size.height * 0.6 : 600,
           decoration: BoxDecoration(
             color: Colors.white,
             border: Border.all(
-              color: const Color(0xFF001F3F).withValues(alpha: 0.2), // Navy blue border
+              color: const Color(0xFF001F3F)
+                  .withValues(alpha: 0.2), // Navy blue border
               width: 2,
             ),
           ),
@@ -2758,7 +3010,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                     Container(
                       width: 48,
                       height: 48,
-                      padding: const EdgeInsets.all(2), // Minimal white border showing
+                      padding: const EdgeInsets.all(
+                          2), // Minimal white border showing
                       decoration: const BoxDecoration(
                         color: Colors.white,
                         shape: BoxShape.circle,
@@ -2818,7 +3071,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   Widget _buildHeader(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     final isSmallScreen = screenWidth < 768;
-    
+
     return Container(
       padding: EdgeInsets.symmetric(
         horizontal: isSmallScreen ? 16 : 32,
@@ -2844,9 +3097,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             ),
             const SizedBox(width: 16),
           ],
-          
+
           const Spacer(),
-          
+
           // User Rank Badge (smaller than profile)
           GestureDetector(
             onTap: () => _showRankDialog(),
@@ -2854,14 +3107,14 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(
-                  color: currentRank != null 
+                  color: currentRank != null
                       ? currentRank!.getTierColor().withValues(alpha: 0.3)
                       : Colors.grey.withValues(alpha: 0.3),
                   width: 1.5,
                 ),
                 boxShadow: [
                   BoxShadow(
-                    color: currentRank != null 
+                    color: currentRank != null
                         ? currentRank!.getTierColor().withValues(alpha: 0.15)
                         : Colors.grey.withValues(alpha: 0.08),
                     blurRadius: 8,
@@ -2872,12 +3125,15 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               child: CircleAvatar(
                 radius: 19,
                 backgroundColor: Colors.white,
-                backgroundImage: currentRank != null && currentRank!.imageUrl.isNotEmpty
-                    ? CachedNetworkImageProvider(currentRank!.imageUrl)
-                    : null,
+                backgroundImage:
+                    currentRank != null && currentRank!.imageUrl.isNotEmpty
+                        ? CachedNetworkImageProvider(currentRank!.imageUrl)
+                        : null,
                 child: currentRank == null || currentRank!.imageUrl.isEmpty
                     ? Icon(
-                        currentRank != null ? Icons.emoji_events : Icons.emoji_events_outlined,
+                        currentRank != null
+                            ? Icons.emoji_events
+                            : Icons.emoji_events_outlined,
                         color: currentRank?.getTierColor() ?? Colors.grey,
                         size: 20,
                       )
@@ -2885,9 +3141,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               ),
             ),
           ),
-          
+
           const SizedBox(width: 16),
-          
+
           // Profile Avatar (larger than badge) with notification badge
           GestureDetector(
             onTap: () => _showProfileMenu(),
@@ -2898,10 +3154,15 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   radius: 22,
                   backgroundColor: const Color(0xFF1A1E3F),
                   backgroundImage: _getAvatarImage(),
-                  child: _getAvatarImage() == null ? Text(
-                    userName.isNotEmpty ? userName[0].toUpperCase() : '?',
-                    style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),
-                  ) : null,
+                  child: _getAvatarImage() == null
+                      ? Text(
+                          userName.isNotEmpty ? userName[0].toUpperCase() : '?',
+                          style: const TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18),
+                        )
+                      : null,
                 ),
                 if (_unreadNotificationCount > 0)
                   Positioned(
@@ -2920,7 +3181,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                       ),
                       child: Center(
                         child: Text(
-                          _unreadNotificationCount > 99 ? '99+' : _unreadNotificationCount.toString(),
+                          _unreadNotificationCount > 99
+                              ? '99+'
+                              : _unreadNotificationCount.toString(),
                           style: GoogleFonts.inter(
                             color: Colors.white,
                             fontSize: 10,
@@ -2966,7 +3229,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                     children: [
                       TextSpan(text: 'Welcome $userName!\n'),
                       TextSpan(
-                        text: 'Ready to rise through the ranks? Earn XP and dominate the leaderboards. Start a quiz now!',
+                        text:
+                            'Ready to rise through the ranks? Earn XP and dominate the leaderboards. Start a quiz now!',
                         style: GoogleFonts.montserrat(
                           fontSize: isSmallScreen ? 14 : 16,
                           fontWeight: FontWeight.normal,
@@ -2979,14 +3243,14 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               ],
             ),
           ),
-          
+
           SizedBox(height: isSmallScreen ? 24 : 32),
-          
+
           // Progress Overview Hero Card
           _buildProgressOverviewCard(),
-          
+
           SizedBox(height: isSmallScreen ? 16 : 24),
-          
+
           // Rank Progress Card
           if (currentRank != null)
             RankProgressCard(
@@ -2997,14 +3261,15 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => RedesignedAllRanksPage(userXP: userXP),
+                    builder: (context) =>
+                        RedesignedAllRanksPage(userXP: userXP),
                   ),
                 );
               },
             ),
-          
+
           SizedBox(height: isSmallScreen ? 16 : 24),
-          
+
           // Performance Metrics & Subject Progress - Mobile Layout
           if (isSmallScreen) ...[
             _buildSubjectProgressCard(),
@@ -3051,17 +3316,17 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                     ],
                   ),
                 ),
+              ],
+            ),
           ],
-        ),
-      ],
-      
-      SizedBox(height: isSmallScreen ? 16 : 24),
-      
-      // Messages & Notifications Card
-      _buildMessagesNotificationsCard(),
-      
-      SizedBox(height: isSmallScreen ? 16 : 24),
-          
+
+          SizedBox(height: isSmallScreen ? 16 : 24),
+
+          // Messages & Notifications Card
+          _buildMessagesNotificationsCard(),
+
+          SizedBox(height: isSmallScreen ? 16 : 24),
+
           // Add extra bottom padding for mobile to account for bottom navigation
           if (isSmallScreen) const SizedBox(height: 80),
         ],
@@ -3080,16 +3345,16 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     final isSmallScreen = screenWidth < 768;
     final now = DateTime.now();
     final sevenDaysAgo = now.subtract(const Duration(days: 7));
-    
+
     final atRiskStudents = students.where((s) {
       final student = s as Map<String, dynamic>;
       final accuracy = (student['avgPercent'] as num?) ?? 0;
       final lastActiveStr = student['lastActive'] as String?;
-      
+
       // Low accuracy or inactive
       final hasLowAccuracy = accuracy > 0 && accuracy < 50;
       bool isInactive = false;
-      
+
       if (lastActiveStr != null) {
         try {
           final lastActive = DateTime.parse(lastActiveStr);
@@ -3098,16 +3363,17 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           // Invalid date
         }
       }
-      
+
       return hasLowAccuracy || isInactive;
     }).toList();
-    
+
     return Container(
       padding: EdgeInsets.all(isSmallScreen ? 16 : 20),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: const Color(0xFFD62828).withValues(alpha: 0.2)),
+        border:
+            Border.all(color: const Color(0xFFD62828).withValues(alpha: 0.2)),
         boxShadow: [
           BoxShadow(
             color: const Color(0xFFD62828).withValues(alpha: 0.05),
@@ -3127,7 +3393,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   color: const Color(0xFFD62828).withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: const Icon(Icons.warning_amber_rounded, color: Color(0xFFD62828), size: 24),
+                child: const Icon(Icons.warning_amber_rounded,
+                    color: Color(0xFFD62828), size: 24),
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -3143,13 +3410,16 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                     ),
                     Text(
                       'Students who may need extra support',
-                      style: GoogleFonts.montserrat(fontSize: isSmallScreen ? 12 : 13, color: Colors.grey[600]),
+                      style: GoogleFonts.montserrat(
+                          fontSize: isSmallScreen ? 12 : 13,
+                          color: Colors.grey[600]),
                     ),
                   ],
                 ),
               ),
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                 decoration: BoxDecoration(
                   color: const Color(0xFFD62828),
                   borderRadius: BorderRadius.circular(20),
@@ -3174,7 +3444,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               ),
               child: Row(
                 children: [
-                  const Icon(Icons.check_circle, color: Color(0xFF00C853), size: 20),
+                  const Icon(Icons.check_circle,
+                      color: Color(0xFF00C853), size: 20),
                   const SizedBox(width: 12),
                   Expanded(
                     child: Text(
@@ -3193,7 +3464,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               final accuracy = (student['avgPercent'] as num?) ?? 0;
               final questions = (student['questionsSolved'] as int?) ?? 0;
               final lastActiveStr = student['lastActive'] as String?;
-              
+
               String reason = '';
               if (accuracy > 0 && accuracy < 50) {
                 reason = 'Low accuracy (${accuracy.toStringAsFixed(1)}%)';
@@ -3210,7 +3481,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   // Silently handle date parsing errors
                 }
               }
-              
+
               return Container(
                 margin: const EdgeInsets.only(bottom: 8),
                 padding: const EdgeInsets.all(12),
@@ -3222,7 +3493,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   children: [
                     CircleAvatar(
                       radius: 18,
-                      backgroundColor: const Color(0xFFD62828).withValues(alpha: 0.1),
+                      backgroundColor:
+                          const Color(0xFFD62828).withValues(alpha: 0.1),
                       child: Text(
                         name[0].toUpperCase(),
                         style: GoogleFonts.montserrat(
@@ -3282,7 +3554,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       ),
     );
   }
-  
+
   // NEW: Weekly Activity Section
   Widget _buildWeeklyActivitySection(List students) {
     final screenWidth = MediaQuery.of(context).size.width;
@@ -3290,20 +3562,21 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     final now = DateTime.now();
     final thisWeekStart = now.subtract(Duration(days: now.weekday % 7));
     final lastWeekStart = thisWeekStart.subtract(const Duration(days: 7));
-    
+
     int activeThisWeek = 0;
     int activeLastWeek = 0;
-    
+
     for (final s in students) {
       final student = s as Map<String, dynamic>;
       final lastActiveStr = student['lastActive'] as String?;
-      
+
       if (lastActiveStr != null) {
         try {
           final lastActive = DateTime.parse(lastActiveStr);
           if (lastActive.isAfter(thisWeekStart)) {
             activeThisWeek++;
-          } else if (lastActive.isAfter(lastWeekStart) && lastActive.isBefore(thisWeekStart)) {
+          } else if (lastActive.isAfter(lastWeekStart) &&
+              lastActive.isBefore(thisWeekStart)) {
             activeLastWeek++;
           }
         } catch (e) {
@@ -3311,11 +3584,14 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         }
       }
     }
-    
-    final engagementRate = students.isNotEmpty ? (activeThisWeek / students.length * 100) : 0;
-    final weeklyChange = activeLastWeek > 0 ? ((activeThisWeek - activeLastWeek) / activeLastWeek * 100) : 0;
+
+    final engagementRate =
+        students.isNotEmpty ? (activeThisWeek / students.length * 100) : 0;
+    final weeklyChange = activeLastWeek > 0
+        ? ((activeThisWeek - activeLastWeek) / activeLastWeek * 100)
+        : 0;
     final isImproving = weeklyChange >= 0;
-    
+
     return Container(
       padding: EdgeInsets.all(isSmallScreen ? 16 : 20),
       decoration: BoxDecoration(
@@ -3341,7 +3617,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   color: const Color(0xFF2196F3).withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Icon(Icons.trending_up, color: const Color(0xFF2196F3), size: isSmallScreen ? 20 : 24),
+                child: Icon(Icons.trending_up,
+                    color: const Color(0xFF2196F3),
+                    size: isSmallScreen ? 20 : 24),
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -3357,7 +3635,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                     ),
                     Text(
                       'Student engagement trends',
-                      style: GoogleFonts.montserrat(fontSize: isSmallScreen ? 12 : 13, color: Colors.grey[600]),
+                      style: GoogleFonts.montserrat(
+                          fontSize: isSmallScreen ? 12 : 13,
+                          color: Colors.grey[600]),
                     ),
                   ],
                 ),
@@ -3378,38 +3658,47 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                     _buildActivityMetric(
                       'Engagement Rate',
                       '${engagementRate.toStringAsFixed(0)}%',
-                      isImproving ? '+${weeklyChange.toStringAsFixed(0)}% vs last week' : '${weeklyChange.toStringAsFixed(0)}% vs last week',
-                      isImproving ? const Color(0xFF00C853) : const Color(0xFFFF9800),
+                      isImproving
+                          ? '+${weeklyChange.toStringAsFixed(0)}% vs last week'
+                          : '${weeklyChange.toStringAsFixed(0)}% vs last week',
+                      isImproving
+                          ? const Color(0xFF00C853)
+                          : const Color(0xFFFF9800),
                     ),
                   ],
                 )
               : Row(
-            children: [
-              Expanded(
-                child: _buildActivityMetric(
-                  'Active This Week',
-                  '$activeThisWeek',
-                  '${students.length} total',
-                  const Color(0xFF2196F3),
+                  children: [
+                    Expanded(
+                      child: _buildActivityMetric(
+                        'Active This Week',
+                        '$activeThisWeek',
+                        '${students.length} total',
+                        const Color(0xFF2196F3),
+                      ),
+                    ),
+                    const SizedBox(width: 16),
+                    Expanded(
+                      child: _buildActivityMetric(
+                        'Engagement Rate',
+                        '${engagementRate.toStringAsFixed(0)}%',
+                        isImproving
+                            ? '+${weeklyChange.toStringAsFixed(0)}% vs last week'
+                            : '${weeklyChange.toStringAsFixed(0)}% vs last week',
+                        isImproving
+                            ? const Color(0xFF00C853)
+                            : const Color(0xFFFF9800),
+                      ),
+                    ),
+                  ],
                 ),
-              ),
-              const SizedBox(width: 16),
-              Expanded(
-                child: _buildActivityMetric(
-                  'Engagement Rate',
-                  '${engagementRate.toStringAsFixed(0)}%',
-                  isImproving ? '+${weeklyChange.toStringAsFixed(0)}% vs last week' : '${weeklyChange.toStringAsFixed(0)}% vs last week',
-                  isImproving ? const Color(0xFF00C853) : const Color(0xFFFF9800),
-                ),
-              ),
-            ],
-          ),
         ],
       ),
     );
   }
-  
-  Widget _buildActivityMetric(String label, String value, String subtitle, Color color) {
+
+  Widget _buildActivityMetric(
+      String label, String value, String subtitle, Color color) {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
@@ -3448,20 +3737,20 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       ),
     );
   }
-  
+
   // NEW: Student Engagement Overview
   Widget _buildEngagementOverview(List students) {
     final screenWidth = MediaQuery.of(context).size.width;
     final isSmallScreen = screenWidth < 768;
-    
+
     int improving = 0;
     int declining = 0;
     int stable = 0;
-    
+
     for (final s in students) {
       final student = s as Map<String, dynamic>;
       final trending = student['isTrending'] as String?;
-      
+
       if (trending == 'up') {
         improving++;
       } else if (trending == 'down') {
@@ -3470,7 +3759,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         stable++;
       }
     }
-    
+
     return Container(
       padding: EdgeInsets.all(isSmallScreen ? 16 : 20),
       decoration: BoxDecoration(
@@ -3496,7 +3785,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   color: const Color(0xFF9C27B0).withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Icon(Icons.people, color: const Color(0xFF9C27B0), size: isSmallScreen ? 20 : 24),
+                child: Icon(Icons.people,
+                    color: const Color(0xFF9C27B0),
+                    size: isSmallScreen ? 20 : 24),
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -3512,7 +3803,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                     ),
                     Text(
                       'How your students are progressing',
-                      style: GoogleFonts.montserrat(fontSize: isSmallScreen ? 12 : 13, color: Colors.grey[600]),
+                      style: GoogleFonts.montserrat(
+                          fontSize: isSmallScreen ? 12 : 13,
+                          color: Colors.grey[600]),
                     ),
                   ],
                 ),
@@ -3523,15 +3816,18 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           Row(
             children: [
               Expanded(
-                child: _buildTrendCard('Improving', improving, const Color(0xFF00C853), Icons.trending_up),
+                child: _buildTrendCard('Improving', improving,
+                    const Color(0xFF00C853), Icons.trending_up),
               ),
               const SizedBox(width: 12),
               Expanded(
-                child: _buildTrendCard('Stable', stable, Colors.grey[600]!, Icons.trending_flat),
+                child: _buildTrendCard(
+                    'Stable', stable, Colors.grey[600]!, Icons.trending_flat),
               ),
               const SizedBox(width: 12),
               Expanded(
-                child: _buildTrendCard('Declining', declining, const Color(0xFFFF9800), Icons.trending_down),
+                child: _buildTrendCard('Declining', declining,
+                    const Color(0xFFFF9800), Icons.trending_down),
               ),
             ],
           ),
@@ -3539,7 +3835,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       ),
     );
   }
-  
+
   Widget _buildTrendCard(String label, int count, Color color, IconData icon) {
     return Container(
       padding: const EdgeInsets.all(16),
@@ -3571,25 +3867,26 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       ),
     );
   }
-  
+
   // NEW: Time-Based Progress
   Widget _buildTimeBasedProgress(List students) {
     final screenWidth = MediaQuery.of(context).size.width;
     final isSmallScreen = screenWidth < 768;
     int totalWeeklyXP = 0;
     int activeStreaks = 0;
-    
+
     for (final s in students) {
       final student = s as Map<String, dynamic>;
       final weeklyActivity = (student['weeklyActivity'] as int?) ?? 0;
       final streak = (student['streak'] as int?) ?? 0;
-      
+
       totalWeeklyXP += weeklyActivity * 10; // Rough estimate
       if (streak > 0) activeStreaks++;
     }
-    
-    final avgWeeklyXP = students.isNotEmpty ? (totalWeeklyXP / students.length) : 0;
-    
+
+    final avgWeeklyXP =
+        students.isNotEmpty ? (totalWeeklyXP / students.length) : 0;
+
     return Container(
       padding: EdgeInsets.all(isSmallScreen ? 16 : 20),
       decoration: BoxDecoration(
@@ -3612,7 +3909,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         children: [
           Row(
             children: [
-              Icon(Icons.access_time, color: Colors.white, size: isSmallScreen ? 24 : 28),
+              Icon(Icons.access_time,
+                  color: Colors.white, size: isSmallScreen ? 24 : 28),
               const SizedBox(width: 12),
               Expanded(
                 child: Column(
@@ -3666,7 +3964,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       ),
     );
   }
-  
+
   Widget _buildTimeMetricWhite(String label, String value, IconData icon) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -3695,7 +3993,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     );
   }
 
-  Widget _buildModernMetricCard(String title, String value, IconData icon, Color color) {
+  Widget _buildModernMetricCard(
+      String title, String value, IconData icon, Color color) {
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
@@ -3740,7 +4039,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   Widget _buildProgressOverviewCard() {
     final screenWidth = MediaQuery.of(context).size.width;
     final isSmallScreen = screenWidth < 768;
-    
+
     return Container(
       padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
       decoration: BoxDecoration(
@@ -3796,7 +4095,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   ),
                 ),
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                   decoration: BoxDecoration(
                     color: Colors.white.withValues(alpha: 0.2),
                     borderRadius: BorderRadius.circular(20),
@@ -3813,9 +4113,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               ],
             ),
           ],
-          
+
           SizedBox(height: isSmallScreen ? 16 : 24),
-          
+
           // Progress metrics - Stack on mobile, row on desktop
           if (isSmallScreen) ...[
             // Mobile: Stack metrics vertically with 2 columns
@@ -3880,9 +4180,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               ],
             ),
           ],
-          
+
           SizedBox(height: isSmallScreen ? 16 : 20),
-          
+
           // Exam countdown - Responsive layout
           Container(
             padding: EdgeInsets.all(isSmallScreen ? 12 : 16),
@@ -3891,7 +4191,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               borderRadius: BorderRadius.circular(12),
               border: Border.all(color: Colors.white.withValues(alpha: 0.2)),
             ),
-            child: isSmallScreen 
+            child: isSmallScreen
                 ? Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -3903,7 +4203,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                               color: const Color(0xFFD62828),
                               borderRadius: BorderRadius.circular(6),
                             ),
-                            child: const Icon(Icons.event, color: Colors.white, size: 16),
+                            child: const Icon(Icons.event,
+                                color: Colors.white, size: 16),
                           ),
                           const SizedBox(width: 8),
                           Column(
@@ -3946,7 +4247,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                           color: const Color(0xFFD62828),
                           borderRadius: BorderRadius.circular(8),
                         ),
-                        child: const Icon(Icons.event, color: Colors.white, size: 20),
+                        child: const Icon(Icons.event,
+                            color: Colors.white, size: 20),
                       ),
                       const SizedBox(width: 12),
                       Column(
@@ -3985,7 +4287,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     );
   }
 
-  Widget _buildProgressMetric(String title, String value, IconData icon, double progress) {
+  Widget _buildProgressMetric(
+      String title, String value, IconData icon, double progress) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -4024,13 +4327,13 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
 
   Widget _buildSubjectProgressCard() {
     // If no subject progress data, show default subjects with 0%
-    final displayProgress = _subjectProgress.isEmpty 
+    final displayProgress = _subjectProgress.isEmpty
         ? [
             SubjectProgress('RME', 0.0, Colors.blue),
             SubjectProgress('Trivia', 0.0, Colors.green),
           ]
         : _subjectProgress;
-    
+
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
@@ -4076,7 +4379,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           const SizedBox(height: 20),
 
           // Enhanced Subject Progress Items
-          ...displayProgress.map((subject) => _buildEnhancedSubjectProgressItem(subject)).toList(),
+          ...displayProgress
+              .map((subject) => _buildEnhancedSubjectProgressItem(subject))
+              .toList(),
 
           // Overall Progress Summary
           if (displayProgress.isNotEmpty) ...[
@@ -4108,7 +4413,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                         ),
                       ),
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 12, vertical: 6),
                         decoration: BoxDecoration(
                           color: Colors.white.withValues(alpha: 0.2),
                           borderRadius: BorderRadius.circular(20),
@@ -4131,9 +4437,11 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                       value: _calculateOverallProgress(displayProgress) / 100,
                       backgroundColor: Colors.white24,
                       valueColor: AlwaysStoppedAnimation<Color>(
-                        _calculateOverallProgress(displayProgress) >= 75 ? Colors.green.shade400 :
-                        _calculateOverallProgress(displayProgress) >= 50 ? Colors.orange.shade400 :
-                        Colors.red.shade400,
+                        _calculateOverallProgress(displayProgress) >= 75
+                            ? Colors.green.shade400
+                            : _calculateOverallProgress(displayProgress) >= 50
+                                ? Colors.orange.shade400
+                                : Colors.red.shade400,
                       ),
                       minHeight: 8,
                     ),
@@ -4182,7 +4490,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   color: subject.color.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(8),
                 ),
-                child: Icon(subjectData['icon'] as IconData, color: subject.color, size: 20),
+                child: Icon(subjectData['icon'] as IconData,
+                    color: subject.color, size: 20),
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -4219,16 +4528,21 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                     const SizedBox(width: 4),
                   ],
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                     decoration: BoxDecoration(
-                      color: subject.progress >= 75 ? Colors.green.shade50 :
-                             subject.progress >= 50 ? Colors.orange.shade50 :
-                             Colors.red.shade50,
+                      color: subject.progress >= 75
+                          ? Colors.green.shade50
+                          : subject.progress >= 50
+                              ? Colors.orange.shade50
+                              : Colors.red.shade50,
                       borderRadius: BorderRadius.circular(16),
                       border: Border.all(
-                        color: subject.progress >= 75 ? Colors.green.shade200 :
-                               subject.progress >= 50 ? Colors.orange.shade200 :
-                               Colors.red.shade200,
+                        color: subject.progress >= 75
+                            ? Colors.green.shade200
+                            : subject.progress >= 50
+                                ? Colors.orange.shade200
+                                : Colors.red.shade200,
                       ),
                     ),
                     child: Text(
@@ -4236,9 +4550,11 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                       style: GoogleFonts.montserrat(
                         fontSize: 12,
                         fontWeight: FontWeight.bold,
-                        color: subject.progress >= 75 ? Colors.green.shade700 :
-                               subject.progress >= 50 ? Colors.orange.shade700 :
-                               Colors.red.shade700,
+                        color: subject.progress >= 75
+                            ? Colors.green.shade700
+                            : subject.progress >= 50
+                                ? Colors.orange.shade700
+                                : Colors.red.shade700,
                       ),
                     ),
                   ),
@@ -4327,9 +4643,11 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                       style: GoogleFonts.montserrat(
                         fontSize: 12,
                         fontWeight: FontWeight.bold,
-                        color: subject.progress >= 75 ? Colors.green.shade600 :
-                               subject.progress >= 50 ? Colors.orange.shade600 :
-                               Colors.red.shade600,
+                        color: subject.progress >= 75
+                            ? Colors.green.shade600
+                            : subject.progress >= 50
+                                ? Colors.orange.shade600
+                                : Colors.red.shade600,
                       ),
                     ),
                     Text(
@@ -4379,7 +4697,10 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
 
   Map<String, dynamic> _getSubjectData(String subjectName) {
     final subjectIcons = {
-      'RME': {'icon': Icons.church, 'description': 'Religious & Moral Education'},
+      'RME': {
+        'icon': Icons.church,
+        'description': 'Religious & Moral Education'
+      },
       'English': {'icon': Icons.language, 'description': 'English Language'},
       'Mathematics': {'icon': Icons.calculate, 'description': 'Mathematics'},
       'Science': {'icon': Icons.science, 'description': 'Integrated Science'},
@@ -4387,14 +4708,24 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       'French': {'icon': Icons.translate, 'description': 'French Language'},
       'ICT': {'icon': Icons.computer, 'description': 'Information Technology'},
       'BDT': {'icon': Icons.build, 'description': 'Basic Design & Technology'},
-      'Home Economics': {'icon': Icons.kitchen, 'description': 'Home Economics'},
+      'Home Economics': {
+        'icon': Icons.kitchen,
+        'description': 'Home Economics'
+      },
       'Visual Arts': {'icon': Icons.palette, 'description': 'Visual Arts'},
       'Ga': {'icon': Icons.record_voice_over, 'description': 'Ga Language'},
-      'Asante Twi': {'icon': Icons.record_voice_over, 'description': 'Asante Twi Language'},
-      'Trivia': {'icon': Icons.emoji_events, 'description': 'General Knowledge'},
+      'Asante Twi': {
+        'icon': Icons.record_voice_over,
+        'description': 'Asante Twi Language'
+      },
+      'Trivia': {
+        'icon': Icons.emoji_events,
+        'description': 'General Knowledge'
+      },
     };
 
-    return subjectIcons[subjectName] ?? {'icon': Icons.school, 'description': 'Academic Subject'};
+    return subjectIcons[subjectName] ??
+        {'icon': Icons.school, 'description': 'Academic Subject'};
   }
 
   int _getSubjectQuestionsCount(String subjectName) {
@@ -4405,20 +4736,28 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   double _calculateSubjectTrend(String subjectName) {
     // Mock trend calculation - in real app this would use historical data
     // Return 1 for improving, -1 for declining, 0 for stable
-    return subjectName == 'RME' ? 1.0 : subjectName == 'Trivia' ? 0.5 : -0.5;
+    return subjectName == 'RME'
+        ? 1.0
+        : subjectName == 'Trivia'
+            ? 0.5
+            : -0.5;
   }
 
   double _calculateOverallProgress(List<SubjectProgress> subjects) {
     if (subjects.isEmpty) return 0.0;
-    final total = subjects.fold<double>(0, (accumulator, subject) => accumulator + subject.progress);
+    final total = subjects.fold<double>(
+        0, (accumulator, subject) => accumulator + subject.progress);
     return total / subjects.length;
   }
 
   String _getOverallPerformanceMessage(List<SubjectProgress> subjects) {
     final overallProgress = _calculateOverallProgress(subjects);
-    if (overallProgress >= 80) return 'Excellent progress! Keep up the great work!';
-    if (overallProgress >= 60) return 'Good progress. Focus on weaker subjects to excel further.';
-    if (overallProgress >= 40) return 'Making progress. Consistent practice will yield results.';
+    if (overallProgress >= 80)
+      return 'Excellent progress! Keep up the great work!';
+    if (overallProgress >= 60)
+      return 'Good progress. Focus on weaker subjects to excel further.';
+    if (overallProgress >= 40)
+      return 'Making progress. Consistent practice will yield results.';
     return 'Building foundations. Regular study will improve your performance.';
   }
 
@@ -4458,18 +4797,19 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           ),
           const SizedBox(height: 16),
           ..._activityItems.map((activity) => _buildActivityItem(
-            activity['title'] as String,
-            activity['time'] as String,
-            activity['icon'] as IconData,
-            activity['color'] as Color,
-            activity['detail'] as String,
-          )),
+                activity['title'] as String,
+                activity['time'] as String,
+                activity['icon'] as IconData,
+                activity['color'] as Color,
+                activity['detail'] as String,
+              )),
         ],
       ),
     );
   }
 
-  Widget _buildActivityItem(String title, String time, IconData icon, Color color, String detail) {
+  Widget _buildActivityItem(
+      String title, String time, IconData icon, Color color, String detail) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
       child: Row(
@@ -4526,46 +4866,62 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             ),
           ),
           const SizedBox(height: 16),
-          _buildQuickStatItem('Lifetime Study Hours', '${lifetimeStudyHours}h', Icons.access_time),
+          _buildQuickStatItem('Lifetime Study Hours', '${lifetimeStudyHours}h',
+              Icons.access_time),
           const SizedBox(height: 8),
-          _buildQuickStatItem('Questions Answered', questionsAnswered.toString(), Icons.quiz),
           _buildQuickStatItem(
-            'Average Score', 
-            '${(overallProgress * 0.85).toStringAsFixed(1)}%', 
+              'Questions Answered', questionsAnswered.toString(), Icons.quiz),
+          _buildQuickStatItem(
+            'Average Score',
+            '${(overallProgress * 0.85).toStringAsFixed(1)}%',
             Icons.trending_up,
             showTrend: _recentActivity.length >= 3,
             trendValue: _calculateScoreTrend(),
           ),
-          _buildQuickStatItem('Study Streak', '$currentStreak days', Icons.local_fire_department),
+          _buildQuickStatItem('Study Streak', '$currentStreak days',
+              Icons.local_fire_department),
           const Divider(height: 24),
-          _buildQuickStatItem('Past Questions Solved', pastQuestionsAnswered.toString(), Icons.history_edu),
+          _buildQuickStatItem('Past Questions Solved',
+              pastQuestionsAnswered.toString(), Icons.history_edu),
           _buildQuickStatItem(
-            'Past Questions Average Score', 
-            '${pastQuestionsProgress.toStringAsFixed(1)}%', 
+            'Past Questions Average Score',
+            '${pastQuestionsProgress.toStringAsFixed(1)}%',
             Icons.school,
             showTrend: pastQuestionsAnswered > 5,
-            trendValue: pastQuestionsProgress > 70 ? 1.0 : pastQuestionsProgress < 50 ? -1.0 : 0.0,
+            trendValue: pastQuestionsProgress > 70
+                ? 1.0
+                : pastQuestionsProgress < 50
+                    ? -1.0
+                    : 0.0,
           ),
           const Divider(height: 24),
-          _buildQuickStatItem('Trivia Answered', triviaQuestionsAnswered.toString(), Icons.emoji_events),
+          _buildQuickStatItem('Trivia Answered',
+              triviaQuestionsAnswered.toString(), Icons.emoji_events),
           _buildQuickStatItem(
-            'Trivia Average Score', 
-            '${triviaProgress.toStringAsFixed(1)}%', 
+            'Trivia Average Score',
+            '${triviaProgress.toStringAsFixed(1)}%',
             Icons.stars,
             showTrend: triviaQuestionsAnswered > 5,
-            trendValue: triviaProgress > 75 ? 1.0 : triviaProgress < 60 ? -1.0 : 0.0,
+            trendValue: triviaProgress > 75
+                ? 1.0
+                : triviaProgress < 60
+                    ? -1.0
+                    : 0.0,
           ),
           const Divider(height: 24),
           // Advanced metrics
-          _buildQuickStatItem('Weekly Study Hours', '${weeklyStudyHours}h', Icons.access_time),
+          _buildQuickStatItem(
+              'Weekly Study Hours', '${weeklyStudyHours}h', Icons.access_time),
           _buildQuickStatItem('XP Earned', _formatXP(userXP), Icons.flash_on),
-          _buildQuickStatItem('Current Rank', currentRank?.name ?? 'Learner', Icons.emoji_events),
+          _buildQuickStatItem('Current Rank', currentRank?.name ?? 'Learner',
+              Icons.emoji_events),
         ],
       ),
     );
   }
 
-  Widget _buildQuickStatItem(String label, String value, IconData icon, {bool showTrend = false, double? trendValue}) {
+  Widget _buildQuickStatItem(String label, String value, IconData icon,
+      {bool showTrend = false, double? trendValue}) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
       child: Row(
@@ -4589,9 +4945,17 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           if (showTrend && trendValue != null) ...[
             const SizedBox(width: 8),
             Icon(
-              trendValue > 0 ? Icons.trending_up : trendValue < 0 ? Icons.trending_down : Icons.trending_flat,
+              trendValue > 0
+                  ? Icons.trending_up
+                  : trendValue < 0
+                      ? Icons.trending_down
+                      : Icons.trending_flat,
               size: 14,
-              color: trendValue > 0 ? Colors.green : trendValue < 0 ? Colors.red : Colors.grey,
+              color: trendValue > 0
+                  ? Colors.green
+                  : trendValue < 0
+                      ? Colors.red
+                      : Colors.grey,
             ),
           ],
         ],
@@ -4643,12 +5007,21 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               ),
               // Progress Badge
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                 decoration: BoxDecoration(
-                  color: pastQuestionsProgress >= 75 ? Colors.green.shade50 : pastQuestionsProgress >= 50 ? Colors.orange.shade50 : Colors.red.shade50,
+                  color: pastQuestionsProgress >= 75
+                      ? Colors.green.shade50
+                      : pastQuestionsProgress >= 50
+                          ? Colors.orange.shade50
+                          : Colors.red.shade50,
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(
-                    color: pastQuestionsProgress >= 75 ? Colors.green.shade200 : pastQuestionsProgress >= 50 ? Colors.orange.shade200 : Colors.red.shade200,
+                    color: pastQuestionsProgress >= 75
+                        ? Colors.green.shade200
+                        : pastQuestionsProgress >= 50
+                            ? Colors.orange.shade200
+                            : Colors.red.shade200,
                   ),
                 ),
                 child: Text(
@@ -4656,7 +5029,11 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   style: GoogleFonts.montserrat(
                     fontSize: 12,
                     fontWeight: FontWeight.bold,
-                    color: pastQuestionsProgress >= 75 ? Colors.green.shade700 : pastQuestionsProgress >= 50 ? Colors.orange.shade700 : Colors.red.shade700,
+                    color: pastQuestionsProgress >= 75
+                        ? Colors.green.shade700
+                        : pastQuestionsProgress >= 50
+                            ? Colors.orange.shade700
+                            : Colors.red.shade700,
                   ),
                 ),
               ),
@@ -4746,7 +5123,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                       child: Column(
                         children: [
                           Text(
-                            pastQuestionsAnswered > 0 ? (pastQuestionsAnswered * 2).toString() : '0',
+                            pastQuestionsAnswered > 0
+                                ? (pastQuestionsAnswered * 2).toString()
+                                : '0',
                             style: GoogleFonts.montserrat(
                               fontSize: 28,
                               fontWeight: FontWeight.bold,
@@ -4792,9 +5171,13 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                             ),
                           ),
                           Text(
-                            pastQuestionsProgress >= 80 ? 'Exam Ready!' :
-                            pastQuestionsProgress >= 60 ? 'Good Progress' :
-                            pastQuestionsProgress >= 40 ? 'Keep Going' : 'Start Practicing',
+                            pastQuestionsProgress >= 80
+                                ? 'Exam Ready!'
+                                : pastQuestionsProgress >= 60
+                                    ? 'Good Progress'
+                                    : pastQuestionsProgress >= 40
+                                        ? 'Keep Going'
+                                        : 'Start Practicing',
                             style: GoogleFonts.montserrat(
                               fontSize: 10,
                               color: Colors.white70,
@@ -4809,9 +5192,11 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                           value: pastQuestionsProgress / 100,
                           backgroundColor: Colors.white24,
                           valueColor: AlwaysStoppedAnimation<Color>(
-                            pastQuestionsProgress >= 80 ? Colors.green.shade400 :
-                            pastQuestionsProgress >= 60 ? Colors.orange.shade400 :
-                            Colors.red.shade400,
+                            pastQuestionsProgress >= 80
+                                ? Colors.green.shade400
+                                : pastQuestionsProgress >= 60
+                                    ? Colors.orange.shade400
+                                    : Colors.red.shade400,
                           ),
                           minHeight: 8,
                         ),
@@ -4925,7 +5310,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               ),
               child: Row(
                 children: [
-                  Icon(Icons.celebration, color: Colors.green.shade600, size: 16),
+                  Icon(Icons.celebration,
+                      color: Colors.green.shade600, size: 16),
                   const SizedBox(width: 8),
                   Expanded(
                     child: Text(
@@ -4971,12 +5357,12 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             ),
           ),
           const SizedBox(height: 16),
-          
+
           // Charts Row - Responsive layout
           LayoutBuilder(
             builder: (context, constraints) {
               final isSmallScreen = constraints.maxWidth < 600;
-              
+
               if (isSmallScreen) {
                 // Mobile: Stack charts vertically
                 return Column(
@@ -5062,15 +5448,18 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                       children: _subjectTimeSpent.entries.map((entry) {
                         final subjectName = entry.key;
                         final timeSpent = entry.value;
-                        final totalTime = _subjectTimeSpent.values.fold(0.0, (accumulator, time) => accumulator + time);
-                        final percentage = totalTime > 0 ? (timeSpent / totalTime) : 0.0;
-                        
+                        final totalTime = _subjectTimeSpent.values.fold(
+                            0.0, (accumulator, time) => accumulator + time);
+                        final percentage =
+                            totalTime > 0 ? (timeSpent / totalTime) : 0.0;
+
                         // Get color for subject (reuse from subject progress if available)
                         final subjectProgress = _subjectProgress.firstWhere(
                           (sp) => sp.name == subjectName,
-                          orElse: () => SubjectProgress(subjectName, 0, Colors.blue),
+                          orElse: () =>
+                              SubjectProgress(subjectName, 0, Colors.blue),
                         );
-                        
+
                         return Expanded(
                           child: Padding(
                             padding: const EdgeInsets.symmetric(vertical: 2),
@@ -5087,7 +5476,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                                 const SizedBox(width: 8),
                                 Expanded(
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(
@@ -5101,8 +5491,11 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                                       const SizedBox(height: 2),
                                       LinearProgressIndicator(
                                         value: percentage,
-                                        backgroundColor: subjectProgress.color.withValues(alpha: 0.2),
-                                        valueColor: AlwaysStoppedAnimation<Color>(subjectProgress.color),
+                                        backgroundColor: subjectProgress.color
+                                            .withValues(alpha: 0.2),
+                                        valueColor:
+                                            AlwaysStoppedAnimation<Color>(
+                                                subjectProgress.color),
                                         minHeight: 4,
                                       ),
                                     ],
@@ -5168,7 +5561,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               crossAxisAlignment: CrossAxisAlignment.end,
               children: weeklyData.map((data) {
                 final questions = data['questions'] as int;
-                final maxQuestions = weeklyData.map((d) => d['questions'] as int).reduce((a, b) => a > b ? a : b);
+                final maxQuestions = weeklyData
+                    .map((d) => d['questions'] as int)
+                    .reduce((a, b) => a > b ? a : b);
                 final height = questions / maxQuestions;
 
                 return Expanded(
@@ -5227,7 +5622,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     // Trivia performance: correct vs incorrect
     final correct = triviaCorrect.toDouble();
     final incorrect = (triviaQuestionsAnswered - triviaCorrect).toDouble();
-    
+
     // If no trivia data, show placeholder
     if (triviaQuestionsAnswered == 0) {
       return Container(
@@ -5241,7 +5636,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(Icons.emoji_events_outlined, color: Colors.grey, size: 32),
+              const Icon(Icons.emoji_events_outlined,
+                  color: Colors.grey, size: 32),
               const SizedBox(height: 8),
               Text(
                 'No Trivia Data Yet',
@@ -5301,7 +5697,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                               alignment: Alignment.bottomCenter,
                               child: Container(
                                 width: double.infinity,
-                                height: 150 * (correct / triviaQuestionsAnswered),
+                                height:
+                                    150 * (correct / triviaQuestionsAnswered),
                                 decoration: BoxDecoration(
                                   color: Colors.green,
                                   borderRadius: BorderRadius.circular(8),
@@ -5346,7 +5743,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                               alignment: Alignment.bottomCenter,
                               child: Container(
                                 width: double.infinity,
-                                height: 150 * (incorrect / triviaQuestionsAnswered),
+                                height:
+                                    150 * (incorrect / triviaQuestionsAnswered),
                                 decoration: BoxDecoration(
                                   color: Colors.red,
                                   borderRadius: BorderRadius.circular(8),
@@ -5424,8 +5822,6 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     );
   }
 
-
-
   Widget _buildUpcomingDeadlines() {
     // Generate dynamic upcoming items based on user behavior
     _generateUpcomingItems();
@@ -5456,7 +5852,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           ),
           const SizedBox(height: 16),
           if (_upcomingItems.isEmpty) ...[
-            _buildDeadlineItem('No upcoming items', 'Check back later', Colors.grey),
+            _buildDeadlineItem(
+                'No upcoming items', 'Check back later', Colors.grey),
           ] else ...[
             ..._upcomingItems.map((item) => _buildSmartDeadlineItem(item)),
           ],
@@ -5520,7 +5917,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   ),
                 ),
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                   decoration: BoxDecoration(
                     color: color.withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(10),
@@ -5553,9 +5951,11 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               child: Row(
                 children: [
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
                     decoration: BoxDecoration(
-                      color: _getDifficultyColor(difficulty).withValues(alpha: 0.1),
+                      color: _getDifficultyColor(difficulty)
+                          .withValues(alpha: 0.1),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Text(
@@ -5604,10 +6004,13 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     _upcomingItems = [];
     final userProfile = _userBehaviorProfile;
     final learningStyle = userProfile['learningStyle'] as String? ?? 'explorer';
-    final engagementLevel = userProfile['engagementLevel'] as String? ?? 'needs_encouragement';
-    final studyPatterns = userProfile['studyPatterns'] as Map<String, dynamic>? ?? {};
+    final engagementLevel =
+        userProfile['engagementLevel'] as String? ?? 'needs_encouragement';
+    final studyPatterns =
+        userProfile['studyPatterns'] as Map<String, dynamic>? ?? {};
     final weakAreas = userProfile['weaknesses'] as List<String>? ?? [];
-    final preferredSubjects = userProfile['preferredSubjects'] as List<String>? ?? [];
+    final preferredSubjects =
+        userProfile['preferredSubjects'] as List<String>? ?? [];
 
     // ML-powered upcoming content generation
 
@@ -5615,7 +6018,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     if (overallProgress >= 80.0) {
       _upcomingItems.add({
         'title': 'Advanced Challenge Series',
-        'description': 'Master complex problems in ${preferredSubjects.isNotEmpty ? preferredSubjects.first : 'your strongest subjects'}',
+        'description':
+            'Master complex problems in ${preferredSubjects.isNotEmpty ? preferredSubjects.first : 'your strongest subjects'}',
         'type': 'challenge',
         'priority': 'high',
         'estimatedTime': '45 min',
@@ -5625,7 +6029,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     } else if (overallProgress >= 60.0) {
       _upcomingItems.add({
         'title': 'Intermediate Mastery',
-        'description': 'Build deeper understanding in ${weakAreas.isNotEmpty ? weakAreas.first : 'core subjects'}',
+        'description':
+            'Build deeper understanding in ${weakAreas.isNotEmpty ? weakAreas.first : 'core subjects'}',
         'type': 'practice',
         'priority': 'high',
         'estimatedTime': '30 min',
@@ -5635,7 +6040,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     } else {
       _upcomingItems.add({
         'title': 'Foundation Builder',
-        'description': 'Strengthen basics in ${preferredSubjects.isNotEmpty ? preferredSubjects.first : 'key subjects'}',
+        'description':
+            'Strengthen basics in ${preferredSubjects.isNotEmpty ? preferredSubjects.first : 'key subjects'}',
         'type': 'foundation',
         'priority': 'high',
         'estimatedTime': '20 min',
@@ -5660,7 +6066,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       case 'consistent_builder':
         _upcomingItems.add({
           'title': 'Daily Progress Builder',
-          'description': 'Structured daily learning path for steady improvement',
+          'description':
+              'Structured daily learning path for steady improvement',
           'type': 'structured',
           'priority': 'medium',
           'estimatedTime': '25 min',
@@ -5779,7 +6186,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     if (dayOfWeek == DateTime.saturday || dayOfWeek == DateTime.sunday) {
       _upcomingItems.add({
         'title': 'Weekend Deep Study',
-        'description': 'Extended learning session for comprehensive understanding',
+        'description':
+            'Extended learning session for comprehensive understanding',
         'type': 'weekend',
         'priority': 'medium',
         'estimatedTime': '60 min',
@@ -5929,19 +6337,24 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             ),
           ),
           const SizedBox(height: 16),
-          _buildQuickActionButton('Continue Study', Icons.play_arrow, () => setState(() => _selectedIndex = 1)),
+          _buildQuickActionButton('Continue Study', Icons.play_arrow,
+              () => setState(() => _selectedIndex = 1)),
           const SizedBox(height: 8),
-          _buildQuickActionButton('Take a Quiz', Icons.quiz, () => setState(() => _selectedIndex = 6)),
+          _buildQuickActionButton('Take a Quiz', Icons.quiz,
+              () => setState(() => _selectedIndex = 6)),
           const SizedBox(height: 8),
-          _buildQuickActionButton('Read Books', Icons.menu_book, () => setState(() => _selectedIndex = 3)),
+          _buildQuickActionButton('Read Books', Icons.menu_book,
+              () => setState(() => _selectedIndex = 3)),
           const SizedBox(height: 8),
-          _buildQuickActionButton('View your Rank', Icons.emoji_events, () => setState(() => _selectedIndex = 7)),
+          _buildQuickActionButton('View your Rank', Icons.emoji_events,
+              () => setState(() => _selectedIndex = 7)),
         ],
       ),
     );
   }
 
-  Widget _buildQuickActionButton(String label, IconData icon, VoidCallback onTap) {
+  Widget _buildQuickActionButton(
+      String label, IconData icon, VoidCallback onTap) {
     return InkWell(
       onTap: onTap,
       borderRadius: BorderRadius.circular(8),
@@ -5999,12 +6412,14 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
-              children: _userAchievements.map((achievement) => _buildAchievementBadge(
-                achievement['title'] as String,
-                achievement['icon'] as IconData,
-                achievement['color'] as Color,
-                description: achievement['description'] as String?,
-              )).toList(),
+              children: _userAchievements
+                  .map((achievement) => _buildAchievementBadge(
+                        achievement['title'] as String,
+                        achievement['icon'] as IconData,
+                        achievement['color'] as Color,
+                        description: achievement['description'] as String?,
+                      ))
+                  .toList(),
             ),
           ),
         ],
@@ -6014,7 +6429,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
 
   Widget _buildMessagesNotificationsCard() {
     return StreamBuilder<QuerySnapshot>(
-      stream: NotificationService().getUserNotifications(FirebaseAuth.instance.currentUser!.uid),
+      stream: NotificationService()
+          .getUserNotifications(FirebaseAuth.instance.currentUser!.uid),
       builder: (context, snapshot) {
         if (snapshot.hasError) {
           return Container(
@@ -6046,7 +6462,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                         ),
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: const Icon(Icons.message, color: Colors.white, size: 18),
+                      child: const Icon(Icons.message,
+                          color: Colors.white, size: 18),
                     ),
                     const SizedBox(width: 12),
                     Column(
@@ -6115,7 +6532,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                         ),
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: const Icon(Icons.message, color: Colors.white, size: 18),
+                      child: const Icon(Icons.message,
+                          color: Colors.white, size: 18),
                     ),
                     const SizedBox(width: 12),
                     Column(
@@ -6162,8 +6580,10 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         const itemsPerPage = 5;
         final totalPages = (notifications.length / itemsPerPage).ceil();
         final startIndex = _dashboardNotificationPage * itemsPerPage;
-        final endIndex = (startIndex + itemsPerPage).clamp(0, notifications.length);
-        final paginatedNotifications = notifications.sublist(startIndex, endIndex);
+        final endIndex =
+            (startIndex + itemsPerPage).clamp(0, notifications.length);
+        final paginatedNotifications =
+            notifications.sublist(startIndex, endIndex);
         final recentNotifications = notifications.take(3).toList();
 
         return Container(
@@ -6198,7 +6618,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                           ),
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: const Icon(Icons.message, color: Colors.white, size: 18),
+                        child: const Icon(Icons.message,
+                            color: Colors.white, size: 18),
                       ),
                       const SizedBox(width: 12),
                       Column(
@@ -6225,7 +6646,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   ),
                   if (unreadCount > 0) ...[
                     Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 8, vertical: 4),
                       decoration: BoxDecoration(
                         color: const Color(0xFFD62828),
                         borderRadius: BorderRadius.circular(12),
@@ -6247,7 +6669,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                 Center(
                   child: Column(
                     children: [
-                      Icon(Icons.notifications_none, color: Colors.grey[400], size: 48),
+                      Icon(Icons.notifications_none,
+                          color: Colors.grey[400], size: 48),
                       const SizedBox(height: 8),
                       Text(
                         'No notifications yet',
@@ -6323,10 +6746,14 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                       child: Container(
                         padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
-                          color: isRead ? Colors.grey.shade50 : color.withValues(alpha: 0.05),
+                          color: isRead
+                              ? Colors.grey.shade50
+                              : color.withValues(alpha: 0.05),
                           borderRadius: BorderRadius.circular(8),
                           border: Border.all(
-                            color: isRead ? Colors.grey.shade200 : color.withValues(alpha: 0.2),
+                            color: isRead
+                                ? Colors.grey.shade200
+                                : color.withValues(alpha: 0.2),
                           ),
                         ),
                         child: Row(
@@ -6384,7 +6811,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                 if (totalPages > 1) ...[
                   const SizedBox(height: 16),
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                     decoration: BoxDecoration(
                       color: Colors.grey[50],
                       borderRadius: BorderRadius.circular(8),
@@ -6419,13 +6847,14 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                             const SizedBox(width: 8),
                             IconButton(
                               icon: const Icon(Icons.chevron_right),
-                              onPressed: _dashboardNotificationPage < totalPages - 1
-                                  ? () {
-                                      setState(() {
-                                        _dashboardNotificationPage++;
-                                      });
-                                    }
-                                  : null,
+                              onPressed:
+                                  _dashboardNotificationPage < totalPages - 1
+                                      ? () {
+                                          setState(() {
+                                            _dashboardNotificationPage++;
+                                          });
+                                        }
+                                      : null,
                               iconSize: 18,
                               padding: const EdgeInsets.all(4),
                               constraints: const BoxConstraints(),
@@ -6445,7 +6874,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     );
   }
 
-  Widget _buildAchievementBadge(String title, IconData icon, Color color, {String? description}) {
+  Widget _buildAchievementBadge(String title, IconData icon, Color color,
+      {String? description}) {
     return Container(
       margin: const EdgeInsets.only(right: 12),
       padding: const EdgeInsets.all(16),
@@ -6532,7 +6962,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             ),
           ),
           const SizedBox(height: 12),
-          ..._studyRecommendations.map((recommendation) => _buildRecommendationItem(recommendation)),
+          ..._studyRecommendations.map(
+              (recommendation) => _buildRecommendationItem(recommendation)),
           const SizedBox(height: 16),
           ElevatedButton(
             onPressed: () => setState(() => _selectedIndex = 1),
@@ -6690,20 +7121,18 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     return const RevisionPage();
   }
 
-Widget _buildTextbooksPage() {
-  // Return the existing TextbooksPage with tabs (All Books, Textbooks, Storybooks)
-  return const TextbooksPage();
-}
+  Widget _buildTextbooksPage() {
+    // Return the existing TextbooksPage with tabs (All Books, Textbooks, Storybooks)
+    return const TextbooksPage();
+  }
 
-Widget _buildFeedbackPage() {
-  return const FeedbackPage();
-}
+  Widget _buildFeedbackPage() {
+    return const FeedbackPage();
+  }
 
   Widget _buildTriviaPage() {
     return const TriviaCategoriesPage();
   }
-
-  
 
   // Helper methods
   void _showMobileMenu() {
@@ -6741,7 +7170,9 @@ Widget _buildFeedbackPage() {
     } else {
       final hours = (minutes / 60).floor();
       final remainingMinutes = (minutes % 60).toInt();
-      return remainingMinutes > 0 ? '${hours}h ${remainingMinutes}m' : '${hours}h';
+      return remainingMinutes > 0
+          ? '${hours}h ${remainingMinutes}m'
+          : '${hours}h';
     }
   }
 
@@ -6762,7 +7193,7 @@ Widget _buildFeedbackPage() {
       builder: (context) {
         final screenWidth = MediaQuery.of(context).size.width;
         final isMobile = screenWidth < 768;
-        
+
         return Stack(
           children: [
             // Invisible barrier to close on outside click
@@ -6823,7 +7254,8 @@ Widget _buildFeedbackPage() {
                         children: [
                           // Current Rank - Compact
                           Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 16, vertical: 12),
                             child: Text(
                               '${currentRank?.name.toUpperCase() ?? 'LEARNER'} · ${_formatXP(userXP)}XP',
                               style: GoogleFonts.inter(
@@ -6834,13 +7266,13 @@ Widget _buildFeedbackPage() {
                               ),
                             ),
                           ),
-                          
+
                           // Subtle divider
                           Container(
                             height: 0.5,
                             color: Colors.grey.shade200,
                           ),
-                          
+
                           // All Ranks Button - Minimal
                           InkWell(
                             onTap: () {
@@ -6848,19 +7280,22 @@ Widget _buildFeedbackPage() {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => RedesignedAllRanksPage(userXP: userXP),
+                                  builder: (context) =>
+                                      RedesignedAllRanksPage(userXP: userXP),
                                 ),
                               );
                             },
                             child: Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 16, vertical: 12),
                               child: Row(
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   Icon(
                                     Icons.emoji_events_outlined,
                                     size: 16,
-                                    color: currentRank?.getTierColor() ?? Colors.grey.shade600,
+                                    color: currentRank?.getTierColor() ??
+                                        Colors.grey.shade600,
                                   ),
                                   const SizedBox(width: 8),
                                   Text(
@@ -6868,7 +7303,8 @@ Widget _buildFeedbackPage() {
                                     style: GoogleFonts.inter(
                                       fontSize: 13,
                                       fontWeight: FontWeight.w500,
-                                      color: currentRank?.getTierColor() ?? Colors.grey.shade600,
+                                      color: currentRank?.getTierColor() ??
+                                          Colors.grey.shade600,
                                     ),
                                   ),
                                   const Spacer(),
@@ -6900,8 +7336,9 @@ Widget _buildFeedbackPage() {
       barrierColor: Colors.transparent,
       builder: (context) {
         final screenWidth = MediaQuery.of(context).size.width;
-        final dialogWidth = screenWidth * 0.18; // 50% reduction from typical 36% to 18%
-        
+        final dialogWidth =
+            screenWidth * 0.18; // 50% reduction from typical 36% to 18%
+
         return Stack(
           children: [
             // Invisible barrier to close on outside click
@@ -6938,7 +7375,8 @@ Widget _buildFeedbackPage() {
                         Container(
                           padding: const EdgeInsets.all(16),
                           decoration: BoxDecoration(
-                            color: const Color(0xFF1A1E3F).withValues(alpha: 0.05),
+                            color:
+                                const Color(0xFF1A1E3F).withValues(alpha: 0.05),
                             borderRadius: const BorderRadius.only(
                               topLeft: Radius.circular(12),
                               topRight: Radius.circular(12),
@@ -6950,10 +7388,14 @@ Widget _buildFeedbackPage() {
                                 radius: 20,
                                 backgroundColor: const Color(0xFF1A1E3F),
                                 backgroundImage: _getAvatarImage(),
-                                child: _getAvatarImage() == null ? Text(
-                                  userName[0].toUpperCase(),
-                                  style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-                                ) : null,
+                                child: _getAvatarImage() == null
+                                    ? Text(
+                                        userName[0].toUpperCase(),
+                                        style: const TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold),
+                                      )
+                                    : null,
                               ),
                               const SizedBox(width: 12),
                               Expanded(
@@ -6981,18 +7423,19 @@ Widget _buildFeedbackPage() {
                             ],
                           ),
                         ),
-                        
+
                         // Menu Items
-                        _buildProfileMenuItem(Icons.person, 'Profile Settings', () {
+                        _buildProfileMenuItem(Icons.person, 'Profile Settings',
+                            () {
                           Navigator.pop(context);
                           setState(() {
                             _selectedIndex = 0; // Navigate to Profile tab
                             _showingProfile = true;
                           });
                         }),
-                        
+
                         const Divider(height: 1),
-                        
+
                         // Notifications
                         _buildProfileMenuItem(
                           Icons.notifications_outlined,
@@ -7001,19 +7444,21 @@ Widget _buildFeedbackPage() {
                             Navigator.pop(context);
                             _showNotificationsDialog();
                           },
-                          badge: _unreadNotificationCount > 0 ? _unreadNotificationCount : null,
+                          badge: _unreadNotificationCount > 0
+                              ? _unreadNotificationCount
+                              : null,
                         ),
-                        
+
                         const Divider(height: 1),
-                        
+
                         // Footer Pages Section
                         _buildProfileMenuItem(Icons.payment, 'Payment', () {
                           Navigator.pop(context);
                           Navigator.pushNamed(context, '/payment');
                         }),
-                        
+
                         const Divider(height: 1),
-                        
+
                         // Sign Out
                         _buildProfileMenuItem(
                           Icons.logout,
@@ -7021,7 +7466,7 @@ Widget _buildFeedbackPage() {
                           _handleSignOut,
                           color: const Color(0xFFD62828),
                         ),
-                        
+
                         const SizedBox(height: 4),
                       ],
                     ),
@@ -7034,8 +7479,9 @@ Widget _buildFeedbackPage() {
       },
     );
   }
-  
-  Widget _buildProfileMenuItem(IconData icon, String title, VoidCallback onTap, {Color? color, int? badge}) {
+
+  Widget _buildProfileMenuItem(IconData icon, String title, VoidCallback onTap,
+      {Color? color, int? badge}) {
     return InkWell(
       onTap: onTap,
       child: Padding(
@@ -7130,9 +7576,10 @@ Widget _buildFeedbackPage() {
                 ...data,
               };
             }).toList();
-            
+
             // Count unread notifications
-            _unreadNotificationCount = _notifications.where((n) => n['read'] == false).length;
+            _unreadNotificationCount =
+                _notifications.where((n) => n['read'] == false).length;
             debugPrint('📊 Unread count: $_unreadNotificationCount');
           });
         }
@@ -7145,234 +7592,38 @@ Widget _buildFeedbackPage() {
   }
 
   void _showNotificationsDialog() {
-    showDialog(
-      context: context,
-      barrierColor: Colors.transparent,
-      builder: (context) {
-        return Stack(
-          children: [
-            // Invisible barrier to close on outside click
-            GestureDetector(
-              onTap: () => Navigator.pop(context),
-              child: Container(color: Colors.transparent),
-            ),
-            // Positioned dialog in top right
-            Positioned(
-              top: 70,
-              right: 16,
-              child: Material(
-                elevation: 16,
-                borderRadius: BorderRadius.circular(16),
-                child: Container(
-                  width: 420,
-                  constraints: const BoxConstraints(maxHeight: 600),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(16),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withValues(alpha: 0.12),
-                        blurRadius: 24,
-                        offset: const Offset(0, 8),
-                      ),
-                    ],
-                  ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      // Header
-                      Container(
-                        padding: const EdgeInsets.all(20),
-                        decoration: const BoxDecoration(
-                          color: Color(0xFF001F3F),
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(16),
-                            topRight: Radius.circular(16),
-                          ),
-                        ),
-                        child: Row(
-                          children: [
-                            const Icon(
-                              Icons.notifications_rounded,
-                              color: Colors.white,
-                              size: 24,
-                            ),
-                            const SizedBox(width: 12),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Notifications',
-                                    style: GoogleFonts.inter(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w600,
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                  if (_unreadNotificationCount > 0)
-                                    Text(
-                                      '$_unreadNotificationCount unread',
-                                      style: GoogleFonts.inter(
-                                        fontSize: 13,
-                                        color: Colors.white70,
-                                      ),
-                                    ),
-                                ],
-                              ),
-                            ),
-                            if (_unreadNotificationCount > 0)
-                              TextButton(
-                                onPressed: () async {
-                                  await _markAllAsRead();
-                                },
-                                style: TextButton.styleFrom(
-                                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                                  backgroundColor: Colors.white.withValues(alpha: 0.15),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(8),
-                                  ),
-                                ),
-                                child: Text(
-                                  'Mark all read',
-                                  style: GoogleFonts.inter(
-                                    fontSize: 12,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                              ),
-                          ],
-                        ),
-                      ),
-                      
-                      // Notifications List
-                      Flexible(
-                        child: _notifications.isEmpty
-                            ? Container(
-                                padding: const EdgeInsets.all(48),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Icon(
-                                      Icons.notifications_off_outlined,
-                                      size: 64,
-                                      color: Colors.grey[300],
-                                    ),
-                                    const SizedBox(height: 16),
-                                    Text(
-                                      'No notifications yet',
-                                      style: GoogleFonts.inter(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w600,
-                                        color: Colors.grey[600],
-                                      ),
-                                    ),
-                                    const SizedBox(height: 8),
-                                    Text(
-                                      'Messages from teachers and admins will appear here',
-                                      textAlign: TextAlign.center,
-                                      style: GoogleFonts.inter(
-                                        fontSize: 14,
-                                        color: Colors.grey[500],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              )
-                            : StatefulBuilder(
-                                builder: (context, setDialogState) {
-                                  final totalPages = (_notifications.length / _notificationsPerPage).ceil();
-                                  final startIndex = _notificationPage * _notificationsPerPage;
-                                  final endIndex = (startIndex + _notificationsPerPage).clamp(0, _notifications.length);
-                                  final paginatedNotifications = _notifications.sublist(startIndex, endIndex);
-                                  
-                                  return Column(
-                                    children: [
-                                      Expanded(
-                                        child: ListView.separated(
-                                          shrinkWrap: true,
-                                          padding: const EdgeInsets.all(8),
-                                          itemCount: paginatedNotifications.length,
-                                          separatorBuilder: (context, index) => const Divider(height: 1),
-                                          itemBuilder: (context, index) {
-                                            final notification = paginatedNotifications[index];
-                                            return _buildNotificationItem(notification);
-                                          },
-                                        ),
-                                      ),
-                                      if (totalPages > 1)
-                                        Container(
-                                          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                                          decoration: BoxDecoration(
-                                            color: Colors.grey[50],
-                                            border: Border(top: BorderSide(color: Colors.grey[200]!)),
-                                          ),
-                                          child: Row(
-                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Text(
-                                                'Page ${_notificationPage + 1} of $totalPages',
-                                                style: GoogleFonts.inter(
-                                                  fontSize: 13,
-                                                  color: Colors.grey[700],
-                                                  fontWeight: FontWeight.w500,
-                                                ),
-                                              ),
-                                              Row(
-                                                children: [
-                                                  IconButton(
-                                                    icon: const Icon(Icons.chevron_left),
-                                                    onPressed: _notificationPage > 0
-                                                        ? () {
-                                                            setDialogState(() {
-                                                              setState(() {
-                                                                _notificationPage--;
-                                                              });
-                                                            });
-                                                          }
-                                                        : null,
-                                                    iconSize: 20,
-                                                    padding: EdgeInsets.zero,
-                                                    constraints: const BoxConstraints(),
-                                                    color: const Color(0xFF007AFF),
-                                                  ),
-                                                  const SizedBox(width: 16),
-                                                  IconButton(
-                                                    icon: const Icon(Icons.chevron_right),
-                                                    onPressed: _notificationPage < totalPages - 1
-                                                        ? () {
-                                                            setDialogState(() {
-                                                              setState(() {
-                                                                _notificationPage++;
-                                                              });
-                                                            });
-                                                          }
-                                                        : null,
-                                                    iconSize: 20,
-                                                    padding: EdgeInsets.zero,
-                                                    constraints: const BoxConstraints(),
-                                                    color: const Color(0xFF007AFF),
-                                                  ),
-                                                ],
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                    ],
-                                  );
-                                },
-                              ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ],
-        );
-      },
-    );
+    final isMobile = MediaQuery.of(context).size.width < 768;
+
+    if (isMobile) {
+      showModalBottomSheet(
+        context: context,
+        isScrollControlled: true,
+        backgroundColor: Colors.transparent,
+        builder: (context) => MobileNotificationDialog(
+          notifications: _notifications,
+          unreadCount: _unreadNotificationCount,
+          onMarkAsRead: (notificationId) {
+            _markNotificationAsRead(notificationId);
+          },
+          onMarkAllAsRead: _markAllAsRead,
+          buildNotificationItem: _buildNotificationItem,
+        ),
+      );
+    } else {
+      showDialog(
+        context: context,
+        barrierColor: Colors.transparent,
+        builder: (context) => MobileNotificationDialog(
+          notifications: _notifications,
+          unreadCount: _unreadNotificationCount,
+          onMarkAsRead: (notificationId) {
+            _markNotificationAsRead(notificationId);
+          },
+          onMarkAllAsRead: _markAllAsRead,
+          buildNotificationItem: _buildNotificationItem,
+        ),
+      );
+    }
   }
 
   Widget _buildNotificationItem(Map<String, dynamic> notification) {
@@ -7382,12 +7633,12 @@ Widget _buildFeedbackPage() {
     final senderName = notification['senderName'] ?? 'System';
     final senderRole = notification['senderRole'] ?? 'app';
     final timestamp = notification['timestamp'] as Timestamp?;
-    
+
     // Determine sender icon and color
     IconData senderIcon;
     Color senderColor;
     String senderLabel;
-    
+
     if (senderRole == 'super_admin' || senderRole == 'app') {
       senderIcon = Icons.school_rounded;
       senderColor = const Color(0xFF007AFF);
@@ -7405,7 +7656,7 @@ Widget _buildFeedbackPage() {
       senderColor = Colors.grey;
       senderLabel = 'System';
     }
-    
+
     return InkWell(
       onTap: () {
         if (!isRead) {
@@ -7416,7 +7667,9 @@ Widget _buildFeedbackPage() {
       child: Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: isRead ? Colors.transparent : const Color(0xFF007AFF).withValues(alpha: 0.05),
+          color: isRead
+              ? Colors.transparent
+              : const Color(0xFF007AFF).withValues(alpha: 0.05),
           borderRadius: BorderRadius.circular(12),
         ),
         child: Row(
@@ -7436,7 +7689,7 @@ Widget _buildFeedbackPage() {
               ),
             ),
             const SizedBox(width: 12),
-            
+
             // Content
             Expanded(
               child: Column(
@@ -7483,7 +7736,8 @@ Widget _buildFeedbackPage() {
                   Row(
                     children: [
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 8, vertical: 4),
                         decoration: BoxDecoration(
                           color: senderColor.withValues(alpha: 0.12),
                           borderRadius: BorderRadius.circular(6),
@@ -7525,11 +7779,11 @@ Widget _buildFeedbackPage() {
 
   String _formatTimestamp(Timestamp? timestamp) {
     if (timestamp == null) return 'Just now';
-    
+
     final now = DateTime.now();
     final date = timestamp.toDate();
     final difference = now.difference(date);
-    
+
     if (difference.inMinutes < 1) {
       return 'Just now';
     } else if (difference.inHours < 1) {
@@ -7557,16 +7811,18 @@ Widget _buildFeedbackPage() {
   Future<void> _markAllAsRead() async {
     try {
       final batch = FirebaseFirestore.instance.batch();
-      
+
       for (final notification in _notifications) {
         if (notification['read'] == false) {
           batch.update(
-            FirebaseFirestore.instance.collection('notifications').doc(notification['id']),
+            FirebaseFirestore.instance
+                .collection('notifications')
+                .doc(notification['id']),
             {'read': true},
           );
         }
       }
-      
+
       await batch.commit();
     } catch (e) {
       debugPrint('Error marking all as read: $e');
@@ -7580,12 +7836,12 @@ Widget _buildFeedbackPage() {
     final String senderRole = notification['senderRole'] ?? 'system';
     final Timestamp? timestamp = notification['timestamp'];
     final String? grade = notification['data']?['grade'];
-    
+
     // Determine sender icon and color
     IconData senderIcon;
     Color senderColor;
     String senderLabel;
-    
+
     if (senderRole == 'super_admin' || senderRole == 'app') {
       senderIcon = Icons.school_rounded;
       senderColor = const Color(0xFF007AFF);
@@ -7650,7 +7906,8 @@ Widget _buildFeedbackPage() {
                         child: Row(
                           children: [
                             IconButton(
-                              icon: const Icon(Icons.arrow_back, color: Colors.white),
+                              icon: const Icon(Icons.arrow_back,
+                                  color: Colors.white),
                               onPressed: () {
                                 Navigator.pop(context);
                                 _showNotificationsDialog();
@@ -7672,7 +7929,7 @@ Widget _buildFeedbackPage() {
                           ],
                         ),
                       ),
-                      
+
                       // Message content
                       Flexible(
                         child: SingleChildScrollView(
@@ -7692,15 +7949,18 @@ Widget _buildFeedbackPage() {
                                     Container(
                                       padding: const EdgeInsets.all(10),
                                       decoration: BoxDecoration(
-                                        color: senderColor.withValues(alpha: 0.15),
+                                        color:
+                                            senderColor.withValues(alpha: 0.15),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(senderIcon, size: 24, color: senderColor),
+                                      child: Icon(senderIcon,
+                                          size: 24, color: senderColor),
                                     ),
                                     const SizedBox(width: 12),
                                     Expanded(
                                       child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             senderName,
@@ -7812,7 +8072,8 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
     _loadInitialData();
     _setupRealtimeUpdates();
     // Keep periodic refresh as backup
-    _refreshTimer = Timer.periodic(const Duration(minutes: 5), (_) => _loadData());
+    _refreshTimer =
+        Timer.periodic(const Duration(minutes: 5), (_) => _loadData());
   }
 
   @override
@@ -7838,7 +8099,9 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
       final teacherData = teacherSnap.data();
       _teacherId = FirebaseAuth.instance.currentUser?.uid;
       _school = teacherData?['schoolName'] ?? teacherData?['school'];
-      _grade = teacherData?['teachingGrade'] ?? teacherData?['grade'] ?? teacherData?['class'];
+      _grade = teacherData?['teachingGrade'] ??
+          teacherData?['grade'] ??
+          teacherData?['class'];
 
       if (_school == null || _grade == null) {
         setState(() {
@@ -7867,11 +8130,11 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
         .where('teacherId', isEqualTo: _teacherId)
         .snapshots()
         .listen((snapshot) {
-          debugPrint('🔄 Teacher Dashboard: Real-time update received');
-          _processStudentData(snapshot.docs);
-        }, onError: (error) {
-          debugPrint('❌ Teacher Dashboard: Real-time listener error: $error');
-        });
+      debugPrint('🔄 Teacher Dashboard: Real-time update received');
+      _processStudentData(snapshot.docs);
+    }, onError: (error) {
+      debugPrint('❌ Teacher Dashboard: Real-time listener error: $error');
+    });
   }
 
   Future<void> _loadData() async {
@@ -7884,7 +8147,7 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
           .get();
 
       _processStudentData(studentSummariesSnap.docs);
-      
+
       // Load subject analytics
       await _loadSubjectMasteryData();
     } catch (e) {
@@ -7898,9 +8161,9 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
       debugPrint('   Teacher ID: $_teacherId');
       debugPrint('   School: $_school');
       debugPrint('   Grade: $_grade');
-      
+
       List<String> studentIds = [];
-      
+
       // First try: Get students from same school and grade
       if (_school != null && _grade != null) {
         debugPrint('🔍 Querying users collection for students...');
@@ -7915,19 +8178,22 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
         for (var doc in usersQuery.docs) {
           final data = doc.data();
           final studentSchool = data['schoolName'] ?? data['school'];
-          final studentGrade = data['grade'] ?? data['class'] ?? data['teachingGrade'];
-          
-          debugPrint('   Student ${doc.id}: school=$studentSchool, grade=$studentGrade');
-          
+          final studentGrade =
+              data['grade'] ?? data['class'] ?? data['teachingGrade'];
+
+          debugPrint(
+              '   Student ${doc.id}: school=$studentSchool, grade=$studentGrade');
+
           if (studentSchool == _school && studentGrade == _grade) {
             studentIds.add(doc.id);
             debugPrint('   ✅ Match! Added student ${doc.id}');
           }
         }
-        
-        debugPrint('📊 Matched ${studentIds.length} students in school "$_school" grade "$_grade"');
+
+        debugPrint(
+            '📊 Matched ${studentIds.length} students in school "$_school" grade "$_grade"');
       }
-      
+
       if (studentIds.isEmpty) {
         debugPrint('⚠️ No students found');
         if (mounted) {
@@ -7950,7 +8216,8 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
             .where('userId', isEqualTo: studentId)
             .get();
 
-        debugPrint('  Found ${quizzes.docs.length} quizzes for student $studentId');
+        debugPrint(
+            '  Found ${quizzes.docs.length} quizzes for student $studentId');
 
         for (var quiz in quizzes.docs) {
           final data = quiz.data();
@@ -7959,14 +8226,16 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
           double score = (data['percentage'] as num?)?.toDouble() ?? 0.0;
           int questions = (data['totalQuestions'] as int?) ?? 0;
 
-          debugPrint('  Quiz: $rawSubject -> $subject, Score: $score%, Questions: $questions');
+          debugPrint(
+              '  Quiz: $rawSubject -> $subject, Score: $score%, Questions: $questions');
 
           if (subject.isNotEmpty) {
             if (score > 0) {
               subjectScores.putIfAbsent(subject, () => []).add(score);
             }
             if (questions > 0) {
-              timeSpent[subject] = (timeSpent[subject] ?? 0) + (questions * 2.0);
+              timeSpent[subject] =
+                  (timeSpent[subject] ?? 0) + (questions * 2.0);
             }
           }
         }
@@ -7975,9 +8244,17 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
       // Calculate averages for subjects with MCQ questions in database
       Map<String, dynamic> mastery = {};
       final beceSubjects = [
-        'English', 'Mathematics', 'Science', 'Social Studies',
-        'RME', 'ICT', 'French', 'Ga', 'Asante Twi',
-        'Career Technology', 'Creative Arts'
+        'English',
+        'Mathematics',
+        'Science',
+        'Social Studies',
+        'RME',
+        'ICT',
+        'French',
+        'Ga',
+        'Asante Twi',
+        'Career Technology',
+        'Creative Arts'
       ];
 
       for (String subject in beceSubjects) {
@@ -7991,7 +8268,8 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
         }
       }
 
-      debugPrint('✅ Subject mastery data loaded: ${mastery.keys.length} subjects');
+      debugPrint(
+          '✅ Subject mastery data loaded: ${mastery.keys.length} subjects');
       debugPrint('📊 Subjects with data: ${mastery.keys.join(", ")}');
       debugPrint('✅ Time spent data loaded: ${timeSpent.keys.length} subjects');
       debugPrint('⏱️ Time by subject: ${timeSpent.keys.join(", ")}');
@@ -8019,7 +8297,8 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
     if (s.contains('french')) return 'French';
     if (s == 'ga') return 'Ga';
     if (s.contains('twi') || s.contains('asante')) return 'Asante Twi';
-    if (s.contains('career') || s.contains('technology')) return 'Career Technology';
+    if (s.contains('career') || s.contains('technology'))
+      return 'Career Technology';
     if (s.contains('creative') || s.contains('arts')) return 'Creative Arts';
     return subject;
   }
@@ -8086,7 +8365,8 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
               const SizedBox(height: 16),
               Text(
                 'Error Loading Dashboard',
-                style: GoogleFonts.playfairDisplay(fontSize: 24, fontWeight: FontWeight.bold),
+                style: GoogleFonts.playfairDisplay(
+                    fontSize: 24, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 8),
               Text(
@@ -8106,7 +8386,8 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
     }
 
     final students = (_dashboardData?['students'] as List?) ?? [];
-    final totalStudents = (_dashboardData?['totalCount'] as int?) ?? students.length;
+    final totalStudents =
+        (_dashboardData?['totalCount'] as int?) ?? students.length;
 
     // Calculate summary metrics
     int totalXP = 0;
@@ -8127,7 +8408,8 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
     }
 
     final avgXP = totalStudents > 0 ? (totalXP / totalStudents).round() : 0;
-    final avgAccuracy = studentsWithAccuracy > 0 ? (totalAccuracy / studentsWithAccuracy) : 0;
+    final avgAccuracy =
+        studentsWithAccuracy > 0 ? (totalAccuracy / studentsWithAccuracy) : 0;
 
     return RefreshIndicator(
       onRefresh: _loadData,
@@ -8167,7 +8449,9 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
               const SizedBox(height: 16),
               LayoutBuilder(
                 builder: (context, constraints) {
-                  final cardWidth = isSmallScreen ? constraints.maxWidth : (constraints.maxWidth - 32) / 3;
+                  final cardWidth = isSmallScreen
+                      ? constraints.maxWidth
+                      : (constraints.maxWidth - 32) / 3;
                   return Wrap(
                     spacing: 16,
                     runSpacing: 16,
@@ -8194,7 +8478,9 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
                         width: cardWidth,
                         child: _buildMetricCard(
                           'Average Accuracy',
-                          avgAccuracy > 0 ? '${avgAccuracy.toStringAsFixed(1)}%' : 'N/A',
+                          avgAccuracy > 0
+                              ? '${avgAccuracy.toStringAsFixed(1)}%'
+                              : 'N/A',
                           Icons.trending_up_rounded,
                           const Color(0xFF00C853),
                         ),
@@ -8285,7 +8571,7 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
               _buildRankDistribution(students, isSmallScreen),
               const SizedBox(height: 32),
             ],
-            
+
             // Messages & Notifications Card
             _buildMessagesNotificationsCardForTeacher(),
             const SizedBox(height: 32),
@@ -8294,7 +8580,7 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
       ),
     );
   }
-  
+
   Widget _buildMessagesNotificationsCardForTeacher() {
     final user = FirebaseAuth.instance.currentUser;
     if (user == null) return const SizedBox.shrink();
@@ -8321,12 +8607,16 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
                 ),
               ],
             ),
-            child: const Center(child: CircularProgressIndicator(strokeWidth: 2)),
+            child:
+                const Center(child: CircularProgressIndicator(strokeWidth: 2)),
           );
         }
 
         final allNotifications = snapshot.data!.docs;
-        final unreadCount = allNotifications.where((doc) => !(doc.data() as Map<String, dynamic>)['read'] as bool? ?? false).length;
+        final unreadCount = allNotifications
+            .where((doc) =>
+                !(doc.data() as Map<String, dynamic>)['read'] as bool? ?? false)
+            .length;
 
         return Container(
           decoration: BoxDecoration(
@@ -8371,7 +8661,8 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
                   ),
                   if (unreadCount > 0)
                     Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 8, vertical: 4),
                       decoration: BoxDecoration(
                         color: const Color(0xFFFF3B30),
                         borderRadius: BorderRadius.circular(12),
@@ -8458,10 +8749,14 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
                   return Container(
                     margin: const EdgeInsets.only(bottom: 8),
                     decoration: BoxDecoration(
-                      color: isRead ? Colors.white : const Color(0xFF001F3F).withValues(alpha: 0.05),
+                      color: isRead
+                          ? Colors.white
+                          : const Color(0xFF001F3F).withValues(alpha: 0.05),
                       borderRadius: BorderRadius.circular(8),
                       border: Border.all(
-                        color: isRead ? Colors.grey[200]! : const Color(0xFF001F3F).withValues(alpha: 0.2),
+                        color: isRead
+                            ? Colors.grey[200]!
+                            : const Color(0xFF001F3F).withValues(alpha: 0.2),
                       ),
                     ),
                     child: Material(
@@ -8486,7 +8781,8 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
                                   color: senderColor.withValues(alpha: 0.1),
                                   borderRadius: BorderRadius.circular(8),
                                 ),
-                                child: Icon(senderIcon, color: senderColor, size: 16),
+                                child: Icon(senderIcon,
+                                    color: senderColor, size: 16),
                               ),
                               const SizedBox(width: 12),
                               Expanded(
@@ -8497,7 +8793,9 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
                                       title,
                                       style: GoogleFonts.inter(
                                         fontSize: 13,
-                                        fontWeight: isRead ? FontWeight.w500 : FontWeight.w600,
+                                        fontWeight: isRead
+                                            ? FontWeight.w500
+                                            : FontWeight.w600,
                                         color: const Color(0xFF001F3F),
                                       ),
                                       maxLines: 1,
@@ -8547,7 +8845,8 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
     );
   }
 
-  Widget _buildMetricCard(String title, String value, IconData icon, Color color) {
+  Widget _buildMetricCard(
+      String title, String value, IconData icon, Color color) {
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
@@ -8597,9 +8896,17 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
 
   Widget _buildSubjectMasteryCard(bool isSmallScreen) {
     final beceSubjects = [
-      'English', 'Mathematics', 'Science', 'Social Studies',
-      'RME', 'ICT', 'French', 'Ga', 'Asante Twi',
-      'Career Technology', 'Creative Arts'
+      'English',
+      'Mathematics',
+      'Science',
+      'Social Studies',
+      'RME',
+      'ICT',
+      'French',
+      'Ga',
+      'Asante Twi',
+      'Career Technology',
+      'Creative Arts'
     ];
 
     return Container(
@@ -8631,7 +8938,7 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: beceSubjects.map((subject) {
                 final data = _subjectMastery[subject];
-                
+
                 if (data == null) {
                   // Show subject with no data
                   return Padding(
@@ -8831,7 +9138,8 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
                   child: LinearProgressIndicator(
                     value: percentage / 100,
                     backgroundColor: Colors.grey[200],
-                    valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFF2196F3)),
+                    valueColor:
+                        const AlwaysStoppedAnimation<Color>(Color(0xFF2196F3)),
                     minHeight: 8,
                   ),
                 ),
@@ -8877,7 +9185,8 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
               'count': entry.value['count'] as int,
             })
         .toList()
-      ..sort((a, b) => (b['average'] as double).compareTo(a['average'] as double));
+      ..sort(
+          (a, b) => (b['average'] as double).compareTo(a['average'] as double));
 
     if (subjectsWithData.isEmpty) {
       return Container(
@@ -8997,7 +9306,8 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: const Color(0xFFD62828).withValues(alpha: 0.2)),
+        border:
+            Border.all(color: const Color(0xFFD62828).withValues(alpha: 0.2)),
         boxShadow: [
           BoxShadow(
             color: const Color(0xFFD62828).withValues(alpha: 0.05),
@@ -9017,7 +9327,8 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
                   color: const Color(0xFFD62828).withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: const Icon(Icons.warning_amber_rounded, color: Color(0xFFD62828), size: 24),
+                child: const Icon(Icons.warning_amber_rounded,
+                    color: Color(0xFFD62828), size: 24),
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -9041,7 +9352,8 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
               ),
               child: Row(
                 children: [
-                  const Icon(Icons.check_circle, color: Color(0xFF00C853), size: 20),
+                  const Icon(Icons.check_circle,
+                      color: Color(0xFF00C853), size: 20),
                   const SizedBox(width: 12),
                   Expanded(
                     child: Text(
@@ -9116,23 +9428,51 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
 
   Widget _buildPerformanceDistribution(List students, bool isSmallScreen) {
     final ranges = [
-      {'label': '90-100%', 'min': 90, 'max': 100, 'color': const Color(0xFF00C853)},
-      {'label': '80-89%', 'min': 80, 'max': 89, 'color': const Color(0xFF4CAF50)},
-      {'label': '70-79%', 'min': 70, 'max': 79, 'color': const Color(0xFF2196F3)},
-      {'label': '60-69%', 'min': 60, 'max': 69, 'color': const Color(0xFFFFA726)},
-      {'label': 'Below 60%', 'min': 0, 'max': 59, 'color': const Color(0xFFE53935)},
+      {
+        'label': '90-100%',
+        'min': 90,
+        'max': 100,
+        'color': const Color(0xFF00C853)
+      },
+      {
+        'label': '80-89%',
+        'min': 80,
+        'max': 89,
+        'color': const Color(0xFF4CAF50)
+      },
+      {
+        'label': '70-79%',
+        'min': 70,
+        'max': 79,
+        'color': const Color(0xFF2196F3)
+      },
+      {
+        'label': '60-69%',
+        'min': 60,
+        'max': 69,
+        'color': const Color(0xFFFFA726)
+      },
+      {
+        'label': 'Below 60%',
+        'min': 0,
+        'max': 59,
+        'color': const Color(0xFFE53935)
+      },
     ];
 
     final distribution = ranges.map((range) {
       final count = students.where((s) {
         final student = s as Map<String, dynamic>;
         final accuracy = (student['avgPercent'] as num?) ?? 0;
-        return accuracy >= (range['min'] as int) && accuracy <= (range['max'] as int);
+        return accuracy >= (range['min'] as int) &&
+            accuracy <= (range['max'] as int);
       }).length;
       return {...range, 'count': count};
     }).toList();
 
-    final maxCount = distribution.map((d) => d['count'] as int).reduce((a, b) => a > b ? a : b);
+    final maxCount = distribution
+        .map((d) => d['count'] as int)
+        .reduce((a, b) => a > b ? a : b);
 
     return Container(
       padding: const EdgeInsets.all(20),
@@ -9152,7 +9492,8 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: distribution.map((range) {
           final count = range['count'] as int;
-          final percentage = students.isNotEmpty ? (count / students.length * 100) : 0.0;
+          final percentage =
+              students.isNotEmpty ? (count / students.length * 100) : 0.0;
           final barWidth = maxCount > 0 ? (count / maxCount) : 0.0;
 
           return Padding(
@@ -9185,7 +9526,8 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
                   child: LinearProgressIndicator(
                     value: barWidth,
                     backgroundColor: Colors.grey[200],
-                    valueColor: AlwaysStoppedAnimation<Color>(range['color'] as Color),
+                    valueColor:
+                        AlwaysStoppedAnimation<Color>(range['color'] as Color),
                     minHeight: 8,
                   ),
                 ),
@@ -9200,10 +9542,13 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
   Widget _buildXPDistribution(List students, bool isSmallScreen) {
     final sortedByXP = List<Map<String, dynamic>>.from(
       students.map((s) => s as Map<String, dynamic>),
-    )..sort((a, b) => ((b['totalXP'] as int?) ?? 0).compareTo((a['totalXP'] as int?) ?? 0));
+    )..sort((a, b) =>
+        ((b['totalXP'] as int?) ?? 0).compareTo((a['totalXP'] as int?) ?? 0));
 
     final topStudents = sortedByXP.take(10).toList();
-    final maxXP = topStudents.isNotEmpty ? (topStudents.first['totalXP'] as int? ?? 0) : 0;
+    final maxXP = topStudents.isNotEmpty
+        ? (topStudents.first['totalXP'] as int? ?? 0)
+        : 0;
 
     return Container(
       padding: const EdgeInsets.all(20),
@@ -9256,7 +9601,9 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
                         style: GoogleFonts.montserrat(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
-                          color: index < 3 ? const Color(0xFFFFA726) : Colors.grey[600],
+                          color: index < 3
+                              ? const Color(0xFFFFA726)
+                              : Colors.grey[600],
                         ),
                       ),
                     ),
@@ -9290,7 +9637,8 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
                             child: LinearProgressIndicator(
                               value: barWidth,
                               backgroundColor: Colors.grey[200],
-                              valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFF1A1E3F)),
+                              valueColor: const AlwaysStoppedAnimation<Color>(
+                                  Color(0xFF1A1E3F)),
                               minHeight: 6,
                             ),
                           ),
@@ -9365,7 +9713,8 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
             ...sortedRanks.map((entry) {
               final rank = entry.key;
               final count = entry.value;
-              final percentage = students.isNotEmpty ? (count / students.length * 100) : 0.0;
+              final percentage =
+                  students.isNotEmpty ? (count / students.length * 100) : 0.0;
               final color = rankColors[rank] ?? Colors.grey;
 
               return Padding(
@@ -9463,11 +9812,11 @@ class _StudentDetailDialogState extends State<StudentDetailDialog> {
         .limit(20) // Increased limit for better stats
         .snapshots()
         .listen((snapshot) {
-          debugPrint('🔄 Student Detail: Real-time quiz update received');
-          _processQuizData(snapshot.docs);
-        }, onError: (error) {
-          debugPrint('❌ Student Detail: Real-time listener error: $error');
-        });
+      debugPrint('🔄 Student Detail: Real-time quiz update received');
+      _processQuizData(snapshot.docs);
+    }, onError: (error) {
+      debugPrint('❌ Student Detail: Real-time listener error: $error');
+    });
   }
 
   Future<void> _loadDetailedData() async {
@@ -9490,8 +9839,9 @@ class _StudentDetailDialogState extends State<StudentDetailDialog> {
   }
 
   void _processQuizData(List<QueryDocumentSnapshot> docs) {
-    final recentQuizzes = docs.map((doc) => doc.data() as Map<String, dynamic>).toList();
-    
+    final recentQuizzes =
+        docs.map((doc) => doc.data() as Map<String, dynamic>).toList();
+
     // Calculate comprehensive stats
     final stats = _calculateStudentStats(recentQuizzes);
 
@@ -9501,42 +9851,55 @@ class _StudentDetailDialogState extends State<StudentDetailDialog> {
         .doc(widget.studentData['uid'])
         .get()
         .then((userSnap) {
-          final userData = userSnap.data() ?? {};
+      final userData = userSnap.data() ?? {};
 
-          if (mounted) {
-            setState(() {
-              _detailedData = {
-                ...widget.studentData,
-                'recentQuizzes': recentQuizzes.take(10), // Show last 10 for display
-                'userProfile': userData,
-                'stats': stats,
-              };
-              _isLoading = false;
-            });
-          }
-        }).catchError((error) {
-          debugPrint('Error loading user profile: $error');
-          if (mounted) {
-            setState(() {
-              _detailedData = {
-                ...widget.studentData,
-                'recentQuizzes': recentQuizzes.take(10),
-                'userProfile': {},
-                'stats': stats,
-              };
-              _isLoading = false;
-            });
-          }
+      if (mounted) {
+        setState(() {
+          _detailedData = {
+            ...widget.studentData,
+            'recentQuizzes': recentQuizzes.take(10), // Show last 10 for display
+            'userProfile': userData,
+            'stats': stats,
+          };
+          _isLoading = false;
         });
+      }
+    }).catchError((error) {
+      debugPrint('Error loading user profile: $error');
+      if (mounted) {
+        setState(() {
+          _detailedData = {
+            ...widget.studentData,
+            'recentQuizzes': recentQuizzes.take(10),
+            'userProfile': {},
+            'stats': stats,
+          };
+          _isLoading = false;
+        });
+      }
+    });
   }
 
-  Map<String, dynamic> _calculateStudentStats(List<Map<String, dynamic>> quizzes) {
+  Map<String, dynamic> _calculateStudentStats(
+      List<Map<String, dynamic>> quizzes) {
     if (quizzes.isEmpty) {
       return {
-        'overallPerformance': {'average': 0.0, 'totalQuestions': 0, 'totalCorrect': 0},
+        'overallPerformance': {
+          'average': 0.0,
+          'totalQuestions': 0,
+          'totalCorrect': 0
+        },
         'subjectMastery': {},
-        'becePerformance': {'average': 0.0, 'totalQuestions': 0, 'totalCorrect': 0},
-        'triviaPerformance': {'average': 0.0, 'totalQuestions': 0, 'totalCorrect': 0},
+        'becePerformance': {
+          'average': 0.0,
+          'totalQuestions': 0,
+          'totalCorrect': 0
+        },
+        'triviaPerformance': {
+          'average': 0.0,
+          'totalQuestions': 0,
+          'totalCorrect': 0
+        },
         'studyTimeBySubject': {},
       };
     }
@@ -9547,7 +9910,7 @@ class _StudentDetailDialogState extends State<StudentDetailDialog> {
     Map<String, List<double>> subjectScores = {};
     Map<String, int> subjectQuestionCounts = {};
     Map<String, int> subjectCorrectCounts = {};
-    
+
     // BECE and Trivia specific
     int beceQuestions = 0;
     int beceCorrect = 0;
@@ -9571,8 +9934,10 @@ class _StudentDetailDialogState extends State<StudentDetailDialog> {
         subjectCorrectCounts[subject] = 0;
       }
       subjectScores[subject]!.add(percentage);
-      subjectQuestionCounts[subject] = (subjectQuestionCounts[subject] ?? 0) + questions;
-      subjectCorrectCounts[subject] = (subjectCorrectCounts[subject] ?? 0) + correct;
+      subjectQuestionCounts[subject] =
+          (subjectQuestionCounts[subject] ?? 0) + questions;
+      subjectCorrectCounts[subject] =
+          (subjectCorrectCounts[subject] ?? 0) + correct;
 
       // BECE performance
       if (quizType.toLowerCase().contains('bece') ||
@@ -9583,16 +9948,20 @@ class _StudentDetailDialogState extends State<StudentDetailDialog> {
       }
 
       // Trivia performance
-      if (quizType.toLowerCase().contains('trivia') || subject.toLowerCase().contains('trivia')) {
+      if (quizType.toLowerCase().contains('trivia') ||
+          subject.toLowerCase().contains('trivia')) {
         triviaQuestions += questions;
         triviaCorrect += correct;
       }
     }
 
     // Calculate averages
-    final overallAverage = totalQuestions > 0 ? (totalCorrect / totalQuestions * 100) : 0.0;
-    final beceAverage = beceQuestions > 0 ? (beceCorrect / beceQuestions * 100) : 0.0;
-    final triviaAverage = triviaQuestions > 0 ? (triviaCorrect / triviaQuestions * 100) : 0.0;
+    final overallAverage =
+        totalQuestions > 0 ? (totalCorrect / totalQuestions * 100) : 0.0;
+    final beceAverage =
+        beceQuestions > 0 ? (beceCorrect / beceQuestions * 100) : 0.0;
+    final triviaAverage =
+        triviaQuestions > 0 ? (triviaCorrect / triviaQuestions * 100) : 0.0;
 
     // Subject mastery
     Map<String, dynamic> subjectMastery = {};
@@ -9642,7 +10011,8 @@ class _StudentDetailDialogState extends State<StudentDetailDialog> {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: Container(
         width: isSmallScreen ? screenWidth * 0.9 : 500,
-        constraints: BoxConstraints(maxHeight: MediaQuery.of(context).size.height * 0.8),
+        constraints:
+            BoxConstraints(maxHeight: MediaQuery.of(context).size.height * 0.8),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -9661,21 +10031,25 @@ class _StudentDetailDialogState extends State<StudentDetailDialog> {
                   CircleAvatar(
                     radius: 30,
                     backgroundImage: widget.studentData['avatar'] != null
-                      ? NetworkImage(widget.studentData['avatar'])
-                      : null,
+                        ? NetworkImage(widget.studentData['avatar'])
+                        : null,
                     child: widget.studentData['avatar'] == null
-                      ? Text(
-                          (() {
-                            final name = widget.studentData['displayName'] as String? ?? 'S';
-                            return name.isNotEmpty ? name[0].toUpperCase() : 'S';
-                          })(),
-                          style: const TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: Color(0xFF1A1E3F),
-                          ),
-                        )
-                      : null,
+                        ? Text(
+                            (() {
+                              final name = widget.studentData['displayName']
+                                      as String? ??
+                                  'S';
+                              return name.isNotEmpty
+                                  ? name[0].toUpperCase()
+                                  : 'S';
+                            })(),
+                            style: const TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xFF1A1E3F),
+                            ),
+                          )
+                        : null,
                   ),
                   const SizedBox(width: 16),
                   Expanded(
@@ -9683,7 +10057,8 @@ class _StudentDetailDialogState extends State<StudentDetailDialog> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          widget.studentData['displayName'] ?? 'Unknown Student',
+                          widget.studentData['displayName'] ??
+                              'Unknown Student',
                           style: GoogleFonts.montserrat(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
@@ -9713,322 +10088,75 @@ class _StudentDetailDialogState extends State<StudentDetailDialog> {
               child: SingleChildScrollView(
                 padding: const EdgeInsets.all(20),
                 child: _isLoading
-                  ? const Center(child: CircularProgressIndicator())
-                  : Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        // Overall Performance
-                        Text(
-                          'Overall Performance',
-                          style: GoogleFonts.playfairDisplay(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        const SizedBox(height: 12),
-                        Container(
-                          padding: const EdgeInsets.all(16),
-                          decoration: BoxDecoration(
-                            color: Colors.blue.withValues(alpha: 0.1),
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Row(
-                            children: [
-                              Icon(Icons.assessment, color: Colors.blue[700]),
-                              const SizedBox(width: 12),
-                              Expanded(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      '${_detailedData?['stats']?['overallPerformance']?['average']?.toStringAsFixed(1) ?? 'N/A'}%',
-                                      style: GoogleFonts.montserrat(
-                                        fontSize: 24,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.blue[700],
-                                      ),
-                                    ),
-                                    Text(
-                                      '${_detailedData?['stats']?['overallPerformance']?['totalCorrect'] ?? 0}/${_detailedData?['stats']?['overallPerformance']?['totalQuestions'] ?? 0} questions correct',
-                                      style: GoogleFonts.montserrat(
-                                        fontSize: 12,
-                                        color: Colors.blue[600],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-
-                        const SizedBox(height: 24),
-
-                        // Subject Mastery
-                        Text(
-                          'Subject Mastery',
-                          style: GoogleFonts.playfairDisplay(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        const SizedBox(height: 12),
-                        ...(_detailedData?['stats']?['subjectMastery'] as Map<String, dynamic>? ?? {}).entries.map((entry) {
-                          final subject = entry.key;
-                          final data = entry.value as Map<String, dynamic>;
-                          final average = data['average'] as double? ?? 0.0;
-                          
-                          return Container(
-                            margin: const EdgeInsets.only(bottom: 8),
-                            padding: const EdgeInsets.all(12),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(8),
-                              border: Border.all(color: Colors.grey[200]!),
+                    ? const Center(child: CircularProgressIndicator())
+                    : Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          // Overall Performance
+                          Text(
+                            'Overall Performance',
+                            style: GoogleFonts.playfairDisplay(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
                             ),
-                            child: Row(
-                              children: [
-                                Container(
-                                  padding: const EdgeInsets.all(8),
-                                  decoration: BoxDecoration(
-                                    color: average >= 70 ? Colors.green.withValues(alpha: 0.1) : 
-                                          average >= 50 ? Colors.orange.withValues(alpha: 0.1) : 
-                                          Colors.red.withValues(alpha: 0.1),
-                                    borderRadius: BorderRadius.circular(6),
-                                  ),
-                                  child: Icon(
-                                    Icons.subject,
-                                    size: 16,
-                                    color: average >= 70 ? Colors.green : 
-                                          average >= 50 ? Colors.orange : 
-                                          Colors.red,
-                                  ),
-                                ),
-                                const SizedBox(width: 12),
-                                Expanded(
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        subject,
-                                        style: GoogleFonts.montserrat(
-                                          fontWeight: FontWeight.w600,
-                                          fontSize: 14,
-                                        ),
-                                      ),
-                                      Text(
-                                        '${average.toStringAsFixed(1)}% • ${data['totalCorrect']}/${data['totalQuestions']} questions',
-                                        style: GoogleFonts.montserrat(
-                                          fontSize: 12,
-                                          color: Colors.grey[600],
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          );
-                        }).toList(),
-
-                        const SizedBox(height: 24),
-
-                        // BECE Performance
-                        Text(
-                          'BECE Performance',
-                          style: GoogleFonts.playfairDisplay(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
                           ),
-                        ),
-                        const SizedBox(height: 12),
-                        Container(
-                          padding: const EdgeInsets.all(16),
-                          decoration: BoxDecoration(
-                            color: Colors.purple.withValues(alpha: 0.1),
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Row(
-                            children: [
-                              Icon(Icons.school, color: Colors.purple[700]),
-                              const SizedBox(width: 12),
-                              Expanded(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      '${_detailedData?['stats']?['becePerformance']?['average']?.toStringAsFixed(1) ?? 'N/A'}%',
-                                      style: GoogleFonts.montserrat(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.purple[700],
-                                      ),
-                                    ),
-                                    Text(
-                                      '${_detailedData?['stats']?['becePerformance']?['totalCorrect'] ?? 0}/${_detailedData?['stats']?['becePerformance']?['totalQuestions'] ?? 0} BECE questions',
-                                      style: GoogleFonts.montserrat(
-                                        fontSize: 12,
-                                        color: Colors.purple[600],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-
-                        const SizedBox(height: 24),
-
-                        // Trivia Performance
-                        Text(
-                          'Trivia Performance',
-                          style: GoogleFonts.playfairDisplay(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        const SizedBox(height: 12),
-                        Container(
-                          padding: const EdgeInsets.all(16),
-                          decoration: BoxDecoration(
-                            color: Colors.orange.withValues(alpha: 0.1),
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Row(
-                            children: [
-                              Icon(Icons.quiz, color: Colors.orange[700]),
-                              const SizedBox(width: 12),
-                              Expanded(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      '${_detailedData?['stats']?['triviaPerformance']?['average']?.toStringAsFixed(1) ?? 'N/A'}%',
-                                      style: GoogleFonts.montserrat(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.orange[700],
-                                      ),
-                                    ),
-                                    Text(
-                                      '${_detailedData?['stats']?['triviaPerformance']?['totalCorrect'] ?? 0}/${_detailedData?['stats']?['triviaPerformance']?['totalQuestions'] ?? 0} trivia questions',
-                                      style: GoogleFonts.montserrat(
-                                        fontSize: 12,
-                                        color: Colors.orange[600],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-
-                        const SizedBox(height: 24),
-
-                        // Study Time by Subject
-                        Text(
-                          'Study Time by Subject',
-                          style: GoogleFonts.playfairDisplay(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        const SizedBox(height: 12),
-                        ...(_detailedData?['stats']?['studyTimeBySubject'] as Map<String, dynamic>? ?? {}).entries.map((entry) {
-                          final subject = entry.key;
-                          final minutes = entry.value as double? ?? 0.0;
-                          final hours = (minutes / 60).floor();
-                          final remainingMinutes = (minutes % 60).round();
-                          
-                          return Container(
-                            margin: const EdgeInsets.only(bottom: 8),
-                            padding: const EdgeInsets.all(12),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(8),
-                              border: Border.all(color: Colors.grey[200]!),
-                            ),
-                            child: Row(
-                              children: [
-                                Container(
-                                  padding: const EdgeInsets.all(8),
-                                  decoration: BoxDecoration(
-                                    color: Colors.teal.withValues(alpha: 0.1),
-                                    borderRadius: BorderRadius.circular(6),
-                                  ),
-                                  child: Icon(
-                                    Icons.schedule,
-                                    size: 16,
-                                    color: Colors.teal[700],
-                                  ),
-                                ),
-                                const SizedBox(width: 12),
-                                Expanded(
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        subject,
-                                        style: GoogleFonts.montserrat(
-                                          fontWeight: FontWeight.w600,
-                                          fontSize: 14,
-                                        ),
-                                      ),
-                                      Text(
-                                        hours > 0 
-                                          ? '${hours}h ${remainingMinutes}m'
-                                          : '${remainingMinutes}m',
-                                        style: GoogleFonts.montserrat(
-                                          fontSize: 12,
-                                          color: Colors.grey[600],
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          );
-                        }).toList(),
-
-                        const SizedBox(height: 24),
-
-                        // Recent Activity
-                        Text(
-                          'Recent Quizzes',
-                          style: GoogleFonts.playfairDisplay(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        const SizedBox(height: 12),
-
-                        if (_detailedData?['recentQuizzes']?.isEmpty ?? true) ...[
+                          const SizedBox(height: 12),
                           Container(
-                            padding: const EdgeInsets.all(20),
+                            padding: const EdgeInsets.all(16),
                             decoration: BoxDecoration(
-                              color: Colors.grey[50],
-                              borderRadius: BorderRadius.circular(8),
+                              color: Colors.blue.withValues(alpha: 0.1),
+                              borderRadius: BorderRadius.circular(12),
                             ),
                             child: Row(
                               children: [
-                                Icon(Icons.quiz_outlined, color: Colors.grey[400]),
+                                Icon(Icons.assessment, color: Colors.blue[700]),
                                 const SizedBox(width: 12),
-                                Text(
-                                  'No recent quizzes',
-                                  style: GoogleFonts.montserrat(color: Colors.grey[600]),
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        '${_detailedData?['stats']?['overallPerformance']?['average']?.toStringAsFixed(1) ?? 'N/A'}%',
+                                        style: GoogleFonts.montserrat(
+                                          fontSize: 24,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.blue[700],
+                                        ),
+                                      ),
+                                      Text(
+                                        '${_detailedData?['stats']?['overallPerformance']?['totalCorrect'] ?? 0}/${_detailedData?['stats']?['overallPerformance']?['totalQuestions'] ?? 0} questions correct',
+                                        style: GoogleFonts.montserrat(
+                                          fontSize: 12,
+                                          color: Colors.blue[600],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ],
                             ),
                           ),
-                        ] else ...[
-                          ...(_detailedData!['recentQuizzes'] as List).map((quiz) {
-                            final quizData = quiz as Map<String, dynamic>;
-                            final subject = quizData['subject'] ?? quizData['collectionName'] ?? 'Unknown';
-                            final percentage = (quizData['percentage'] as num?)?.toDouble() ?? 0;
-                            final createdAt = quizData['createdAt'] as Timestamp?;
+
+                          const SizedBox(height: 24),
+
+                          // Subject Mastery
+                          Text(
+                            'Subject Mastery',
+                            style: GoogleFonts.playfairDisplay(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const SizedBox(height: 12),
+                          ...(_detailedData?['stats']?['subjectMastery']
+                                      as Map<String, dynamic>? ??
+                                  {})
+                              .entries
+                              .map((entry) {
+                            final subject = entry.key;
+                            final data = entry.value as Map<String, dynamic>;
+                            final average = data['average'] as double? ?? 0.0;
 
                             return Container(
                               margin: const EdgeInsets.only(bottom: 8),
@@ -10043,27 +10171,30 @@ class _StudentDetailDialogState extends State<StudentDetailDialog> {
                                   Container(
                                     padding: const EdgeInsets.all(8),
                                     decoration: BoxDecoration(
-                                      color: percentage >= 70
-                                        ? Colors.green.withValues(alpha: 0.1)
-                                        : percentage >= 50
-                                          ? Colors.orange.withValues(alpha: 0.1)
-                                          : Colors.red.withValues(alpha: 0.1),
+                                      color: average >= 70
+                                          ? Colors.green.withValues(alpha: 0.1)
+                                          : average >= 50
+                                              ? Colors.orange
+                                                  .withValues(alpha: 0.1)
+                                              : Colors.red
+                                                  .withValues(alpha: 0.1),
                                       borderRadius: BorderRadius.circular(6),
                                     ),
                                     child: Icon(
-                                      Icons.quiz,
+                                      Icons.subject,
                                       size: 16,
-                                      color: percentage >= 70
-                                        ? Colors.green
-                                        : percentage >= 50
-                                          ? Colors.orange
-                                          : Colors.red,
+                                      color: average >= 70
+                                          ? Colors.green
+                                          : average >= 50
+                                              ? Colors.orange
+                                              : Colors.red,
                                     ),
                                   ),
                                   const SizedBox(width: 12),
                                   Expanded(
                                     child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
                                         Text(
                                           subject,
@@ -10073,7 +10204,7 @@ class _StudentDetailDialogState extends State<StudentDetailDialog> {
                                           ),
                                         ),
                                         Text(
-                                          '${percentage.toStringAsFixed(1)}%',
+                                          '${average.toStringAsFixed(1)}% • ${data['totalCorrect']}/${data['totalQuestions']} questions',
                                           style: GoogleFonts.montserrat(
                                             fontSize: 12,
                                             color: Colors.grey[600],
@@ -10082,21 +10213,298 @@ class _StudentDetailDialogState extends State<StudentDetailDialog> {
                                       ],
                                     ),
                                   ),
-                                  if (createdAt != null)
-                                    Text(
-                                      _formatDate(createdAt.toDate()),
-                                      style: GoogleFonts.montserrat(
-                                        fontSize: 12,
-                                        color: Colors.grey[500],
-                                      ),
-                                    ),
                                 ],
                               ),
                             );
                           }).toList(),
+
+                          const SizedBox(height: 24),
+
+                          // BECE Performance
+                          Text(
+                            'BECE Performance',
+                            style: GoogleFonts.playfairDisplay(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const SizedBox(height: 12),
+                          Container(
+                            padding: const EdgeInsets.all(16),
+                            decoration: BoxDecoration(
+                              color: Colors.purple.withValues(alpha: 0.1),
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: Row(
+                              children: [
+                                Icon(Icons.school, color: Colors.purple[700]),
+                                const SizedBox(width: 12),
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        '${_detailedData?['stats']?['becePerformance']?['average']?.toStringAsFixed(1) ?? 'N/A'}%',
+                                        style: GoogleFonts.montserrat(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.purple[700],
+                                        ),
+                                      ),
+                                      Text(
+                                        '${_detailedData?['stats']?['becePerformance']?['totalCorrect'] ?? 0}/${_detailedData?['stats']?['becePerformance']?['totalQuestions'] ?? 0} BECE questions',
+                                        style: GoogleFonts.montserrat(
+                                          fontSize: 12,
+                                          color: Colors.purple[600],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+
+                          const SizedBox(height: 24),
+
+                          // Trivia Performance
+                          Text(
+                            'Trivia Performance',
+                            style: GoogleFonts.playfairDisplay(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const SizedBox(height: 12),
+                          Container(
+                            padding: const EdgeInsets.all(16),
+                            decoration: BoxDecoration(
+                              color: Colors.orange.withValues(alpha: 0.1),
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: Row(
+                              children: [
+                                Icon(Icons.quiz, color: Colors.orange[700]),
+                                const SizedBox(width: 12),
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        '${_detailedData?['stats']?['triviaPerformance']?['average']?.toStringAsFixed(1) ?? 'N/A'}%',
+                                        style: GoogleFonts.montserrat(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.orange[700],
+                                        ),
+                                      ),
+                                      Text(
+                                        '${_detailedData?['stats']?['triviaPerformance']?['totalCorrect'] ?? 0}/${_detailedData?['stats']?['triviaPerformance']?['totalQuestions'] ?? 0} trivia questions',
+                                        style: GoogleFonts.montserrat(
+                                          fontSize: 12,
+                                          color: Colors.orange[600],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+
+                          const SizedBox(height: 24),
+
+                          // Study Time by Subject
+                          Text(
+                            'Study Time by Subject',
+                            style: GoogleFonts.playfairDisplay(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const SizedBox(height: 12),
+                          ...(_detailedData?['stats']?['studyTimeBySubject']
+                                      as Map<String, dynamic>? ??
+                                  {})
+                              .entries
+                              .map((entry) {
+                            final subject = entry.key;
+                            final minutes = entry.value as double? ?? 0.0;
+                            final hours = (minutes / 60).floor();
+                            final remainingMinutes = (minutes % 60).round();
+
+                            return Container(
+                              margin: const EdgeInsets.only(bottom: 8),
+                              padding: const EdgeInsets.all(12),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(8),
+                                border: Border.all(color: Colors.grey[200]!),
+                              ),
+                              child: Row(
+                                children: [
+                                  Container(
+                                    padding: const EdgeInsets.all(8),
+                                    decoration: BoxDecoration(
+                                      color: Colors.teal.withValues(alpha: 0.1),
+                                      borderRadius: BorderRadius.circular(6),
+                                    ),
+                                    child: Icon(
+                                      Icons.schedule,
+                                      size: 16,
+                                      color: Colors.teal[700],
+                                    ),
+                                  ),
+                                  const SizedBox(width: 12),
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          subject,
+                                          style: GoogleFonts.montserrat(
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 14,
+                                          ),
+                                        ),
+                                        Text(
+                                          hours > 0
+                                              ? '${hours}h ${remainingMinutes}m'
+                                              : '${remainingMinutes}m',
+                                          style: GoogleFonts.montserrat(
+                                            fontSize: 12,
+                                            color: Colors.grey[600],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            );
+                          }).toList(),
+
+                          const SizedBox(height: 24),
+
+                          // Recent Activity
+                          Text(
+                            'Recent Quizzes',
+                            style: GoogleFonts.playfairDisplay(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const SizedBox(height: 12),
+
+                          if (_detailedData?['recentQuizzes']?.isEmpty ??
+                              true) ...[
+                            Container(
+                              padding: const EdgeInsets.all(20),
+                              decoration: BoxDecoration(
+                                color: Colors.grey[50],
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              child: Row(
+                                children: [
+                                  Icon(Icons.quiz_outlined,
+                                      color: Colors.grey[400]),
+                                  const SizedBox(width: 12),
+                                  Text(
+                                    'No recent quizzes',
+                                    style: GoogleFonts.montserrat(
+                                        color: Colors.grey[600]),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ] else ...[
+                            ...(_detailedData!['recentQuizzes'] as List)
+                                .map((quiz) {
+                              final quizData = quiz as Map<String, dynamic>;
+                              final subject = quizData['subject'] ??
+                                  quizData['collectionName'] ??
+                                  'Unknown';
+                              final percentage =
+                                  (quizData['percentage'] as num?)
+                                          ?.toDouble() ??
+                                      0;
+                              final createdAt =
+                                  quizData['createdAt'] as Timestamp?;
+
+                              return Container(
+                                margin: const EdgeInsets.only(bottom: 8),
+                                padding: const EdgeInsets.all(12),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(8),
+                                  border: Border.all(color: Colors.grey[200]!),
+                                ),
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.all(8),
+                                      decoration: BoxDecoration(
+                                        color: percentage >= 70
+                                            ? Colors.green
+                                                .withValues(alpha: 0.1)
+                                            : percentage >= 50
+                                                ? Colors.orange
+                                                    .withValues(alpha: 0.1)
+                                                : Colors.red
+                                                    .withValues(alpha: 0.1),
+                                        borderRadius: BorderRadius.circular(6),
+                                      ),
+                                      child: Icon(
+                                        Icons.quiz,
+                                        size: 16,
+                                        color: percentage >= 70
+                                            ? Colors.green
+                                            : percentage >= 50
+                                                ? Colors.orange
+                                                : Colors.red,
+                                      ),
+                                    ),
+                                    const SizedBox(width: 12),
+                                    Expanded(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            subject,
+                                            style: GoogleFonts.montserrat(
+                                              fontWeight: FontWeight.w600,
+                                              fontSize: 14,
+                                            ),
+                                          ),
+                                          Text(
+                                            '${percentage.toStringAsFixed(1)}%',
+                                            style: GoogleFonts.montserrat(
+                                              fontSize: 12,
+                                              color: Colors.grey[600],
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    if (createdAt != null)
+                                      Text(
+                                        _formatDate(createdAt.toDate()),
+                                        style: GoogleFonts.montserrat(
+                                          fontSize: 12,
+                                          color: Colors.grey[500],
+                                        ),
+                                      ),
+                                  ],
+                                ),
+                              );
+                            }).toList(),
+                          ],
                         ],
-                      ],
-                    ),
+                      ),
               ),
             ),
           ],
