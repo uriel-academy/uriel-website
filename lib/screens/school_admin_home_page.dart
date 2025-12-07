@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'dart:async';
 import '../constants/app_styles.dart';
+import '../widgets/mobile_notification_dialog.dart';
 import '../services/connection_service.dart';
 import '../services/auth_service.dart';
 import 'textbooks_page.dart';
@@ -23,13 +24,14 @@ class SchoolAdminHomePage extends StatefulWidget {
   State<SchoolAdminHomePage> createState() => _SchoolAdminHomePageState();
 }
 
-class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerProviderStateMixin {
+class _SchoolAdminHomePageState extends State<SchoolAdminHomePage>
+    with TickerProviderStateMixin {
   late TabController _mainTabController;
   late AnimationController _animationController;
-  
+
   int _selectedIndex = 0;
   bool _showingProfile = false;
-  
+
   // User profile data
   String userName = "";
   String schoolName = "";
@@ -49,32 +51,33 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
   @override
   void initState() {
     super.initState();
-    _mainTabController = TabController(length: 7, vsync: this); // 7 tabs for school admin
+    _mainTabController =
+        TabController(length: 7, vsync: this); // 7 tabs for school admin
     _animationController = AnimationController(
       duration: const Duration(milliseconds: 800),
       vsync: this,
     );
     _animationController.forward();
-    
+
     _loadUserData();
     _setupUserStream();
     _loadNotifications();
   }
-  
+
   void _loadUserData() async {
     final user = FirebaseAuth.instance.currentUser;
     if (user == null) return;
-    
+
     try {
       final userDoc = await FirebaseFirestore.instance
           .collection('users')
           .doc(user.uid)
           .get();
-      
+
       if (userDoc.exists) {
         final data = userDoc.data()!;
         setState(() {
-          userName = data['displayName'] ?? 
+          userName = data['displayName'] ??
               '${data['firstName'] ?? ''} ${data['lastName'] ?? ''}'.trim();
           schoolName = data['school'] ?? 'School Admin';
           userPhotoUrl = data['photoURL'];
@@ -85,11 +88,11 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
       debugPrint('Error loading user data: $e');
     }
   }
-  
+
   void _setupUserStream() {
     final user = FirebaseAuth.instance.currentUser;
     if (user == null) return;
-    
+
     _userStreamSubscription = FirebaseFirestore.instance
         .collection('users')
         .doc(user.uid)
@@ -98,7 +101,7 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
       if (snapshot.exists && mounted) {
         final data = snapshot.data()!;
         setState(() {
-          userName = data['displayName'] ?? 
+          userName = data['displayName'] ??
               '${data['firstName'] ?? ''} ${data['lastName'] ?? ''}'.trim();
           schoolName = data['school'] ?? 'School Admin';
           userPhotoUrl = data['photoURL'];
@@ -131,7 +134,7 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
     return LayoutBuilder(
       builder: (context, constraints) {
         final isSmallScreen = constraints.maxWidth < 600;
-        
+
         return Scaffold(
           backgroundColor: const Color(0xFFF8F9FA),
           body: SafeArea(
@@ -143,15 +146,37 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
                         children: [
                           // Mobile Header
                           _buildMobileHeader(),
-                          
-                          // Mobile Content
+
+                          // Mobile Content with Pull-to-Refresh
                           Expanded(
-                            child: _showingProfile 
-                                ? const SchoolAdminProfilePage()
-                                : IndexedStack(
-                                    index: _selectedIndex,
-                                    children: _homeChildren(),
-                                  ),
+                            child: RefreshIndicator(
+                              onRefresh: () async {
+                                // Refresh current page data
+                                _loadUserData();
+                                _loadNotifications();
+                                await Future.delayed(
+                                    const Duration(milliseconds: 500));
+                                if (mounted) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      content: Text(
+                                        'Dashboard refreshed',
+                                        style: GoogleFonts.montserrat(),
+                                      ),
+                                      backgroundColor: Color(0xFF4CAF50),
+                                      duration: Duration(seconds: 2),
+                                      behavior: SnackBarBehavior.floating,
+                                    ),
+                                  );
+                                }
+                              },
+                              child: _showingProfile
+                                  ? const SchoolAdminProfilePage()
+                                  : IndexedStack(
+                                      index: _selectedIndex,
+                                      children: _homeChildren(),
+                                    ),
+                            ),
                           ),
                         ],
                       )
@@ -159,17 +184,17 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
                         children: [
                           // Desktop Sidebar Navigation
                           _buildSideNavigation(),
-                          
+
                           // Desktop Main Content
                           Expanded(
                             child: Column(
                               children: [
                                 // Desktop Header
                                 _buildHeader(context),
-                                
+
                                 // Desktop Content Area
                                 Expanded(
-                                  child: _showingProfile 
+                                  child: _showingProfile
                                       ? const SchoolAdminProfilePage()
                                       : IndexedStack(
                                           index: _selectedIndex,
@@ -181,7 +206,7 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
                           ),
                         ],
                       ),
-                
+
                 // Connection Status Indicator
                 StreamBuilder<bool>(
                   stream: ConnectionService().connectionStatus,
@@ -195,7 +220,7 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
               ],
             ),
           ),
-          
+
           // Bottom Navigation (Mobile Only)
           bottomNavigationBar: isSmallScreen ? _buildBottomNavigation() : null,
         );
@@ -264,7 +289,7 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
               ),
             ),
           ),
-          
+
           // User Profile Card
           GestureDetector(
             onTap: () => setState(() {
@@ -287,10 +312,16 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
                     radius: 20,
                     backgroundColor: const Color(0xFF1A1E3F),
                     backgroundImage: _getAvatarImage(),
-                    child: _getAvatarImage() == null ? Text(
-                      userName.isNotEmpty ? userName[0].toUpperCase() : '?',
-                      style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-                    ) : null,
+                    child: _getAvatarImage() == null
+                        ? Text(
+                            userName.isNotEmpty
+                                ? userName[0].toUpperCase()
+                                : '?',
+                            style: const TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          )
+                        : null,
                   ),
                   const SizedBox(width: 12),
                   Expanded(
@@ -318,24 +349,24 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
               ),
             ),
           ),
-          
+
           const SizedBox(height: 24),
-          
+
           // Navigation Items
           Expanded(
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  for (final item in _navItems()) 
+                  for (final item in _navItems())
                     _buildNavItem(
-                      item['index'] as int, 
+                      item['index'] as int,
                       item['label'] as String,
                     ),
                 ],
               ),
             ),
           ),
-          
+
           // Logout Section
           Container(
             padding: const EdgeInsets.all(16),
@@ -361,8 +392,9 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
   }
 
   Widget _buildNavItem(int index, String label) {
-    final isSelected = index >= 0 && _selectedIndex == index && !_showingProfile;
-    
+    final isSelected =
+        index >= 0 && _selectedIndex == index && !_showingProfile;
+
     return InkWell(
       onTap: () {
         if (index >= 0) {
@@ -378,7 +410,9 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
         margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
         decoration: BoxDecoration(
-          color: isSelected ? const Color(0xFF1A1E3F).withValues(alpha: 0.08) : Colors.transparent,
+          color: isSelected
+              ? const Color(0xFF1A1E3F).withValues(alpha: 0.08)
+              : Colors.transparent,
           borderRadius: BorderRadius.circular(12),
         ),
         child: Align(
@@ -419,10 +453,13 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
               radius: 20,
               backgroundColor: const Color(0xFF1A1E3F),
               backgroundImage: _getAvatarImage(),
-              child: _getAvatarImage() == null ? Text(
-                userName.isNotEmpty ? userName[0].toUpperCase() : '?',
-                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-              ) : null,
+              child: _getAvatarImage() == null
+                  ? Text(
+                      userName.isNotEmpty ? userName[0].toUpperCase() : '?',
+                      style: const TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.bold),
+                    )
+                  : null,
             ),
           ),
           const SizedBox(width: 12),
@@ -504,10 +541,13 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
                   radius: 20,
                   backgroundColor: const Color(0xFF1A1E3F),
                   backgroundImage: _getAvatarImage(),
-                  child: _getAvatarImage() == null ? Text(
-                    userName.isNotEmpty ? userName[0].toUpperCase() : '?',
-                    style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-                  ) : null,
+                  child: _getAvatarImage() == null
+                      ? Text(
+                          userName.isNotEmpty ? userName[0].toUpperCase() : '?',
+                          style: const TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold),
+                        )
+                      : null,
                 ),
                 if (_unreadNotificationCount > 0)
                   Positioned(
@@ -526,7 +566,9 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
                       ),
                       child: Center(
                         child: Text(
-                          _unreadNotificationCount > 99 ? '99+' : _unreadNotificationCount.toString(),
+                          _unreadNotificationCount > 99
+                              ? '99+'
+                              : _unreadNotificationCount.toString(),
                           style: GoogleFonts.inter(
                             color: Colors.white,
                             fontSize: 9,
@@ -589,13 +631,16 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
               ),
               if (_unreadNotificationCount > 0)
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                   decoration: BoxDecoration(
                     color: const Color(0xFFFF3B30),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Text(
-                    _unreadNotificationCount > 99 ? '99+' : '$_unreadNotificationCount',
+                    _unreadNotificationCount > 99
+                        ? '99+'
+                        : '$_unreadNotificationCount',
                     style: GoogleFonts.inter(
                       color: Colors.white,
                       fontSize: 12,
@@ -609,7 +654,8 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
           StreamBuilder<QuerySnapshot>(
             stream: FirebaseFirestore.instance
                 .collection('notifications')
-                .where('userId', isEqualTo: FirebaseAuth.instance.currentUser?.uid)
+                .where('userId',
+                    isEqualTo: FirebaseAuth.instance.currentUser?.uid)
                 .orderBy('timestamp', descending: true)
                 .limit(100)
                 .snapshots(),
@@ -651,13 +697,16 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
               }
 
               // Pagination for dashboard card
-              final startIndex = _dashboardNotificationPage * _notificationsPerPage;
-              final endIndex = (startIndex + _notificationsPerPage).clamp(0, allNotifications.length);
+              final startIndex =
+                  _dashboardNotificationPage * _notificationsPerPage;
+              final endIndex = (startIndex + _notificationsPerPage)
+                  .clamp(0, allNotifications.length);
               final paginatedNotifications = allNotifications.sublist(
                 startIndex,
                 endIndex,
               );
-              final totalPages = (allNotifications.length / _notificationsPerPage).ceil();
+              final totalPages =
+                  (allNotifications.length / _notificationsPerPage).ceil();
 
               return Column(
                 children: [
@@ -667,7 +716,8 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
                     final title = data['title'] as String? ?? 'Notification';
                     final message = data['message'] as String? ?? '';
                     final timestamp = data['timestamp'] as Timestamp?;
-                    final senderRole = data['senderRole'] as String? ?? 'unknown';
+                    final senderRole =
+                        data['senderRole'] as String? ?? 'unknown';
 
                     String timeAgo = 'Just now';
                     if (timestamp != null) {
@@ -707,10 +757,14 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
                     return Container(
                       margin: const EdgeInsets.only(bottom: 8),
                       decoration: BoxDecoration(
-                        color: isRead ? Colors.white : const Color(0xFF001F3F).withValues(alpha: 0.05),
+                        color: isRead
+                            ? Colors.white
+                            : const Color(0xFF001F3F).withValues(alpha: 0.05),
                         borderRadius: BorderRadius.circular(8),
                         border: Border.all(
-                          color: isRead ? Colors.grey[200]! : const Color(0xFF001F3F).withValues(alpha: 0.2),
+                          color: isRead
+                              ? Colors.grey[200]!
+                              : const Color(0xFF001F3F).withValues(alpha: 0.2),
                         ),
                       ),
                       child: Material(
@@ -732,18 +786,22 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
                                     color: senderColor.withValues(alpha: 0.1),
                                     borderRadius: BorderRadius.circular(8),
                                   ),
-                                  child: Icon(senderIcon, color: senderColor, size: 16),
+                                  child: Icon(senderIcon,
+                                      color: senderColor, size: 16),
                                 ),
                                 const SizedBox(width: 12),
                                 Expanded(
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Text(
                                         title,
                                         style: GoogleFonts.inter(
                                           fontSize: 13,
-                                          fontWeight: isRead ? FontWeight.w500 : FontWeight.w600,
+                                          fontWeight: isRead
+                                              ? FontWeight.w500
+                                              : FontWeight.w600,
                                           color: const Color(0xFF001F3F),
                                         ),
                                         maxLines: 1,
@@ -795,11 +853,13 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
                         IconButton(
                           icon: const Icon(Icons.chevron_left),
                           onPressed: _dashboardNotificationPage > 0
-                              ? () => setState(() => _dashboardNotificationPage--)
+                              ? () =>
+                                  setState(() => _dashboardNotificationPage--)
                               : null,
                           iconSize: 20,
                           padding: EdgeInsets.zero,
-                          constraints: const BoxConstraints(minWidth: 32, minHeight: 32),
+                          constraints:
+                              const BoxConstraints(minWidth: 32, minHeight: 32),
                         ),
                         Text(
                           'Page ${_dashboardNotificationPage + 1} of $totalPages',
@@ -811,11 +871,13 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
                         IconButton(
                           icon: const Icon(Icons.chevron_right),
                           onPressed: _dashboardNotificationPage < totalPages - 1
-                              ? () => setState(() => _dashboardNotificationPage++)
+                              ? () =>
+                                  setState(() => _dashboardNotificationPage++)
                               : null,
                           iconSize: 20,
                           padding: EdgeInsets.zero,
-                          constraints: const BoxConstraints(minWidth: 32, minHeight: 32),
+                          constraints:
+                              const BoxConstraints(minWidth: 32, minHeight: 32),
                         ),
                       ],
                     ),
@@ -857,8 +919,9 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
                 ...data,
               };
             }).toList();
-            
-            _unreadNotificationCount = _notifications.where((n) => n['read'] == false).length;
+
+            _unreadNotificationCount =
+                _notifications.where((n) => n['read'] == false).length;
             debugPrint('📊 Unread count: $_unreadNotificationCount');
           });
         }
@@ -876,7 +939,7 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
       barrierColor: Colors.transparent,
       builder: (context) {
         final dialogWidth = 320.0;
-        
+
         return Stack(
           children: [
             GestureDetector(
@@ -909,7 +972,8 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
                       Container(
                         padding: const EdgeInsets.all(16),
                         decoration: BoxDecoration(
-                          color: const Color(0xFF1A1E3F).withValues(alpha: 0.05),
+                          color:
+                              const Color(0xFF1A1E3F).withValues(alpha: 0.05),
                           borderRadius: const BorderRadius.only(
                             topLeft: Radius.circular(12),
                             topRight: Radius.circular(12),
@@ -921,10 +985,15 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
                               radius: 18,
                               backgroundColor: const Color(0xFF1A1E3F),
                               backgroundImage: _getAvatarImage(),
-                              child: _getAvatarImage() == null ? Text(
-                                userName[0].toUpperCase(),
-                                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14),
-                              ) : null,
+                              child: _getAvatarImage() == null
+                                  ? Text(
+                                      userName[0].toUpperCase(),
+                                      style: const TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 14),
+                                    )
+                                  : null,
                             ),
                             const SizedBox(width: 12),
                             Expanded(
@@ -952,17 +1021,15 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
                           ],
                         ),
                       ),
-                      
-                      _buildProfileMenuItem(Icons.person, 'Profile Settings', () {
+                      _buildProfileMenuItem(Icons.person, 'Profile Settings',
+                          () {
                         Navigator.pop(context);
                         setState(() {
                           _selectedIndex = 0;
                           _showingProfile = true;
                         });
                       }),
-                      
                       const Divider(height: 1),
-                      
                       _buildProfileMenuItem(
                         Icons.notifications_outlined,
                         'Notifications',
@@ -970,18 +1037,17 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
                           Navigator.pop(context);
                           _showNotificationsDialog();
                         },
-                        badge: _unreadNotificationCount > 0 ? _unreadNotificationCount : null,
+                        badge: _unreadNotificationCount > 0
+                            ? _unreadNotificationCount
+                            : null,
                       ),
-                      
                       const Divider(height: 1),
-                      
                       _buildProfileMenuItem(
                         Icons.logout,
                         'Sign Out',
                         _handleSignOut,
                         color: const Color(0xFFD62828),
                       ),
-                      
                       const SizedBox(height: 4),
                     ],
                   ),
@@ -994,7 +1060,8 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
     );
   }
 
-  Widget _buildProfileMenuItem(IconData icon, String title, VoidCallback onTap, {Color? color, int? badge}) {
+  Widget _buildProfileMenuItem(IconData icon, String title, VoidCallback onTap,
+      {Color? color, int? badge}) {
     return InkWell(
       onTap: onTap,
       child: Padding(
@@ -1051,180 +1118,44 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
   }
 
   void _showNotificationsDialog() {
-    // Use the same notification dialog implementation from home_page.dart
-    // Copy the exact implementation here
-    showDialog(
-      context: context,
-      barrierColor: Colors.transparent,
-      builder: (context) {
-        return Stack(
-          children: [
-            GestureDetector(
-              onTap: () => Navigator.pop(context),
-              child: Container(color: Colors.transparent),
-            ),
-            Positioned(
-              top: 70,
-              right: 16,
-              child: Material(
-                elevation: 16,
-                borderRadius: BorderRadius.circular(16),
-                child: Container(
-                  width: 420,
-                  constraints: const BoxConstraints(maxHeight: 600),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(16),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withValues(alpha: 0.12),
-                        blurRadius: 24,
-                        offset: const Offset(0, 8),
-                      ),
-                    ],
-                  ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.all(20),
-                        decoration: const BoxDecoration(
-                          color: Color(0xFF001F3F),
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(16),
-                            topRight: Radius.circular(16),
-                          ),
-                        ),
-                        child: Row(
-                          children: [
-                            const Icon(Icons.notifications_rounded, color: Colors.white, size: 24),
-                            const SizedBox(width: 12),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text('Notifications', style: GoogleFonts.inter(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.white)),
-                                  if (_unreadNotificationCount > 0)
-                                    Text('$_unreadNotificationCount unread', style: GoogleFonts.inter(fontSize: 13, color: Colors.white70)),
-                                ],
-                              ),
-                            ),
-                            if (_unreadNotificationCount > 0)
-                              TextButton(
-                                onPressed: () async {
-                                  await _markAllAsRead();
-                                },
-                                style: TextButton.styleFrom(
-                                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                                  backgroundColor: Colors.white.withValues(alpha: 0.15),
-                                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                                ),
-                                child: Text('Mark all read', style: GoogleFonts.inter(fontSize: 12, color: Colors.white, fontWeight: FontWeight.w500)),
-                              ),
-                          ],
-                        ),
-                      ),
-                      Flexible(
-                        child: _notifications.isEmpty
-                            ? Container(
-                                padding: const EdgeInsets.all(48),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Icon(Icons.notifications_off_outlined, size: 64, color: Colors.grey[300]),
-                                    const SizedBox(height: 16),
-                                    Text('No notifications yet', style: GoogleFonts.inter(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.grey[600])),
-                                    const SizedBox(height: 8),
-                                    Text('Messages from teachers and system will appear here', textAlign: TextAlign.center, style: GoogleFonts.inter(fontSize: 14, color: Colors.grey[500])),
-                                  ],
-                                ),
-                              )
-                            : StatefulBuilder(
-                                builder: (context, setDialogState) {
-                                  final totalPages = (_notifications.length / _notificationsPerPage).ceil();
-                                  final startIndex = _notificationPage * _notificationsPerPage;
-                                  final endIndex = (startIndex + _notificationsPerPage).clamp(0, _notifications.length);
-                                  final paginatedNotifications = _notifications.sublist(startIndex, endIndex);
-                                  
-                                  return Column(
-                                    children: [
-                                      Expanded(
-                                        child: ListView.separated(
-                                          shrinkWrap: true,
-                                          padding: const EdgeInsets.all(8),
-                                          itemCount: paginatedNotifications.length,
-                                          separatorBuilder: (context, index) => const Divider(height: 1),
-                                          itemBuilder: (context, index) => _buildNotificationItem(paginatedNotifications[index]),
-                                        ),
-                                      ),
-                                      if (totalPages > 1)
-                                        Container(
-                                          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                                          decoration: BoxDecoration(
-                                            color: Colors.grey[50],
-                                            border: Border(top: BorderSide(color: Colors.grey[200]!)),
-                                          ),
-                                          child: Row(
-                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Text(
-                                                'Page ${_notificationPage + 1} of $totalPages',
-                                                style: GoogleFonts.inter(fontSize: 13, color: Colors.grey[700], fontWeight: FontWeight.w500),
-                                              ),
-                                              Row(
-                                                children: [
-                                                  IconButton(
-                                                    icon: const Icon(Icons.chevron_left),
-                                                    onPressed: _notificationPage > 0
-                                                        ? () {
-                                                            setDialogState(() {
-                                                              setState(() {
-                                                                _notificationPage--;
-                                                              });
-                                                            });
-                                                          }
-                                                        : null,
-                                                    iconSize: 20,
-                                                    padding: EdgeInsets.zero,
-                                                    constraints: const BoxConstraints(),
-                                                    color: const Color(0xFF007AFF),
-                                                  ),
-                                                  const SizedBox(width: 16),
-                                                  IconButton(
-                                                    icon: const Icon(Icons.chevron_right),
-                                                    onPressed: _notificationPage < totalPages - 1
-                                                        ? () {
-                                                            setDialogState(() {
-                                                              setState(() {
-                                                                _notificationPage++;
-                                                              });
-                                                            });
-                                                          }
-                                                        : null,
-                                                    iconSize: 20,
-                                                    padding: EdgeInsets.zero,
-                                                    constraints: const BoxConstraints(),
-                                                    color: const Color(0xFF007AFF),
-                                                  ),
-                                                ],
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                    ],
-                                  );
-                                },
-                              ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ],
-        );
-      },
-    );
+    final isMobile = MediaQuery.of(context).size.width < 768;
+
+    if (isMobile) {
+      showModalBottomSheet(
+        context: context,
+        isScrollControlled: true,
+        backgroundColor: Colors.transparent,
+        builder: (context) => MobileNotificationDialog(
+          notifications: _notifications,
+          unreadCount: _unreadNotificationCount,
+          onMarkAsRead: (notificationId) async {
+            await FirebaseFirestore.instance
+                .collection('notifications')
+                .doc(notificationId)
+                .update({'read': true});
+          },
+          onMarkAllAsRead: _markAllAsRead,
+          buildNotificationItem: _buildNotificationItem,
+        ),
+      );
+    } else {
+      showDialog(
+        context: context,
+        barrierColor: Colors.transparent,
+        builder: (context) => MobileNotificationDialog(
+          notifications: _notifications,
+          unreadCount: _unreadNotificationCount,
+          onMarkAsRead: (notificationId) async {
+            await FirebaseFirestore.instance
+                .collection('notifications')
+                .doc(notificationId)
+                .update({'read': true});
+          },
+          onMarkAllAsRead: _markAllAsRead,
+          buildNotificationItem: _buildNotificationItem,
+        ),
+      );
+    }
   }
 
   Widget _buildNotificationItem(Map<String, dynamic> notification) {
@@ -1234,11 +1165,11 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
     final senderName = notification['senderName'] ?? 'System';
     final senderRole = notification['senderRole'] ?? 'app';
     final timestamp = notification['timestamp'] as Timestamp?;
-    
+
     IconData senderIcon;
     Color senderColor;
     String senderLabel;
-    
+
     if (senderRole == 'super_admin' || senderRole == 'app') {
       senderIcon = Icons.school_rounded;
       senderColor = const Color(0xFF007AFF);
@@ -1256,7 +1187,7 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
       senderColor = Colors.grey;
       senderLabel = 'System';
     }
-    
+
     return InkWell(
       onTap: () {
         if (!isRead) {
@@ -1267,7 +1198,9 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
       child: Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: isRead ? Colors.transparent : const Color(0xFF007AFF).withValues(alpha: 0.05),
+          color: isRead
+              ? Colors.transparent
+              : const Color(0xFF007AFF).withValues(alpha: 0.05),
           borderRadius: BorderRadius.circular(12),
         ),
         child: Row(
@@ -1289,36 +1222,56 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
                   Row(
                     children: [
                       Expanded(
-                        child: Text(title, style: GoogleFonts.inter(fontSize: 14, fontWeight: FontWeight.w600, color: const Color(0xFF1A1E3F)), maxLines: 2, overflow: TextOverflow.ellipsis),
+                        child: Text(title,
+                            style: GoogleFonts.inter(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                color: const Color(0xFF1A1E3F)),
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis),
                       ),
                       if (!isRead)
                         Container(
                           width: 8,
                           height: 8,
                           margin: const EdgeInsets.only(left: 8),
-                          decoration: const BoxDecoration(color: Color(0xFF007AFF), shape: BoxShape.circle),
+                          decoration: const BoxDecoration(
+                              color: Color(0xFF007AFF), shape: BoxShape.circle),
                         ),
                     ],
                   ),
                   const SizedBox(height: 4),
-                  Text(message, style: GoogleFonts.inter(fontSize: 13, color: Colors.grey[700], height: 1.4), maxLines: 3, overflow: TextOverflow.ellipsis),
+                  Text(message,
+                      style: GoogleFonts.inter(
+                          fontSize: 13, color: Colors.grey[700], height: 1.4),
+                      maxLines: 3,
+                      overflow: TextOverflow.ellipsis),
                   const SizedBox(height: 8),
                   Row(
                     children: [
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                        decoration: BoxDecoration(color: senderColor.withValues(alpha: 0.12), borderRadius: BorderRadius.circular(6)),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 8, vertical: 4),
+                        decoration: BoxDecoration(
+                            color: senderColor.withValues(alpha: 0.12),
+                            borderRadius: BorderRadius.circular(6)),
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Icon(senderIcon, size: 12, color: senderColor),
                             const SizedBox(width: 4),
-                            Text(senderLabel, style: GoogleFonts.inter(fontSize: 11, fontWeight: FontWeight.w500, color: senderColor)),
+                            Text(senderLabel,
+                                style: GoogleFonts.inter(
+                                    fontSize: 11,
+                                    fontWeight: FontWeight.w500,
+                                    color: senderColor)),
                           ],
                         ),
                       ),
                       const SizedBox(width: 8),
-                      Text(_formatTimestamp(timestamp), style: GoogleFonts.inter(fontSize: 11, color: Colors.grey[500])),
+                      Text(_formatTimestamp(timestamp),
+                          style: GoogleFonts.inter(
+                              fontSize: 11, color: Colors.grey[500])),
                     ],
                   ),
                 ],
@@ -1332,11 +1285,11 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
 
   String _formatTimestamp(Timestamp? timestamp) {
     if (timestamp == null) return 'Just now';
-    
+
     final now = DateTime.now();
     final date = timestamp.toDate();
     final difference = now.difference(date);
-    
+
     if (difference.inMinutes < 1) {
       return 'Just now';
     } else if (difference.inHours < 1) {
@@ -1364,16 +1317,18 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
   Future<void> _markAllAsRead() async {
     try {
       final batch = FirebaseFirestore.instance.batch();
-      
+
       for (final notification in _notifications) {
         if (notification['read'] == false) {
           batch.update(
-            FirebaseFirestore.instance.collection('notifications').doc(notification['id']),
+            FirebaseFirestore.instance
+                .collection('notifications')
+                .doc(notification['id']),
             {'read': true},
           );
         }
       }
-      
+
       await batch.commit();
     } catch (e) {
       debugPrint('Error marking all as read: $e');
@@ -1387,12 +1342,12 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
     final String senderRole = notification['senderRole'] ?? 'system';
     final Timestamp? timestamp = notification['timestamp'];
     final String? grade = notification['data']?['grade'];
-    
+
     // Determine sender icon and color
     IconData senderIcon;
     Color senderColor;
     String senderLabel;
-    
+
     if (senderRole == 'super_admin' || senderRole == 'app') {
       senderIcon = Icons.school_rounded;
       senderColor = const Color(0xFF007AFF);
@@ -1457,7 +1412,8 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
                         child: Row(
                           children: [
                             IconButton(
-                              icon: const Icon(Icons.arrow_back, color: Colors.white),
+                              icon: const Icon(Icons.arrow_back,
+                                  color: Colors.white),
                               onPressed: () {
                                 Navigator.pop(context);
                                 _showNotificationsDialog();
@@ -1479,7 +1435,7 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
                           ],
                         ),
                       ),
-                      
+
                       // Message content
                       Flexible(
                         child: SingleChildScrollView(
@@ -1499,15 +1455,18 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
                                     Container(
                                       padding: const EdgeInsets.all(10),
                                       decoration: BoxDecoration(
-                                        color: senderColor.withValues(alpha: 0.15),
+                                        color:
+                                            senderColor.withValues(alpha: 0.15),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
-                                      child: Icon(senderIcon, size: 24, color: senderColor),
+                                      child: Icon(senderIcon,
+                                          size: 24, color: senderColor),
                                     ),
                                     const SizedBox(width: 12),
                                     Expanded(
                                       child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             senderName,
@@ -1614,7 +1573,7 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
               final index = item['index'] as int;
               final label = item['label'] as String;
               final isSelected = _selectedIndex == index && !_showingProfile;
-              
+
               return Expanded(
                 child: InkWell(
                   onTap: () => setState(() {
@@ -1626,7 +1585,8 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
                     children: [
                       Icon(
                         _getIconForIndex(index),
-                        color: isSelected ? const Color(0xFF1A1E3F) : Colors.grey,
+                        color:
+                            isSelected ? const Color(0xFF1A1E3F) : Colors.grey,
                         size: 24,
                       ),
                       const SizedBox(height: 4),
@@ -1634,8 +1594,11 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
                         label,
                         style: GoogleFonts.montserrat(
                           fontSize: 11,
-                          color: isSelected ? const Color(0xFF1A1E3F) : Colors.grey,
-                          fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
+                          color: isSelected
+                              ? const Color(0xFF1A1E3F)
+                              : Colors.grey,
+                          fontWeight:
+                              isSelected ? FontWeight.w600 : FontWeight.w500,
                         ),
                         textAlign: TextAlign.center,
                         overflow: TextOverflow.ellipsis,
@@ -1653,28 +1616,36 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
 
   IconData _getIconForIndex(int index) {
     switch (index) {
-      case 0: return Icons.dashboard;
-      case 1: return Icons.people;
-      case 2: return Icons.school;
-      case 3: return Icons.person;
-      case 4: return Icons.library_books;
-      case 5: return Icons.quiz;
-      case 6: return Icons.leaderboard;
-      default: return Icons.dashboard;
+      case 0:
+        return Icons.dashboard;
+      case 1:
+        return Icons.people;
+      case 2:
+        return Icons.school;
+      case 3:
+        return Icons.person;
+      case 4:
+        return Icons.library_books;
+      case 5:
+        return Icons.quiz;
+      case 6:
+        return Icons.leaderboard;
+      default:
+        return Icons.dashboard;
     }
   }
 
   List<Widget> _homeChildren() {
     return [
-      const SchoolAdminDashboard(),        // 0: Dashboard
-      const SchoolAdminStudentsPage(),     // 1: Students
-      const SchoolAdminTeachersPage(),     // 2: Teachers
-      const UriPage(embedded: true),       // 3: Ask Uri
-      _buildTextbooksPage(),               // 4: Books
-      _buildTriviaPage(),                  // 5: Trivia
-      const RedesignedLeaderboardPage(),   // 6: Leaderboard
-      _buildFeedbackPage(),                // 7: Feedback
-      _buildNotificationsPage(),           // 8: Notifications
+      const SchoolAdminDashboard(), // 0: Dashboard
+      const SchoolAdminStudentsPage(), // 1: Students
+      const SchoolAdminTeachersPage(), // 2: Teachers
+      const UriPage(embedded: true), // 3: Ask Uri
+      _buildTextbooksPage(), // 4: Books
+      _buildTriviaPage(), // 5: Trivia
+      const RedesignedLeaderboardPage(), // 6: Leaderboard
+      _buildFeedbackPage(), // 7: Feedback
+      _buildNotificationsPage(), // 8: Notifications
     ];
   }
 
@@ -1765,7 +1736,8 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
                       )
                     : ListView.separated(
                         itemCount: _notifications.length,
-                        separatorBuilder: (context, index) => const SizedBox(height: 16),
+                        separatorBuilder: (context, index) =>
+                            const SizedBox(height: 16),
                         itemBuilder: (context, index) {
                           final notification = _notifications[index];
                           return _buildNotificationCard(notification);
@@ -1786,11 +1758,11 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
     final senderName = notification['senderName'] ?? 'System';
     final senderRole = notification['senderRole'] ?? 'app';
     final timestamp = notification['timestamp'] as Timestamp?;
-    
+
     IconData senderIcon;
     Color senderColor;
     String senderLabel;
-    
+
     if (senderRole == 'super_admin' || senderRole == 'app') {
       senderIcon = Icons.school_rounded;
       senderColor = const Color(0xFF007AFF);
@@ -1808,7 +1780,7 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
       senderColor = Colors.grey;
       senderLabel = 'System';
     }
-    
+
     return InkWell(
       onTap: () => _markNotificationAsRead(notification['id']),
       child: Container(
@@ -1817,7 +1789,9 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
           color: Colors.white,
           borderRadius: BorderRadius.circular(16),
           border: Border.all(
-            color: isRead ? Colors.grey[200]! : const Color(0xFF007AFF).withValues(alpha: 0.3),
+            color: isRead
+                ? Colors.grey[200]!
+                : const Color(0xFF007AFF).withValues(alpha: 0.3),
             width: isRead ? 1 : 2,
           ),
           boxShadow: [
@@ -1874,7 +1848,8 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
                       ),
                       const SizedBox(height: 4),
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 8, vertical: 4),
                         decoration: BoxDecoration(
                           color: senderColor.withValues(alpha: 0.12),
                           borderRadius: BorderRadius.circular(6),

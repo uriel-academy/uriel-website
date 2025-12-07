@@ -5,6 +5,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'dart:async';
 import '../constants/app_styles.dart';
+import '../widgets/mobile_notification_dialog.dart';
 import 'user_management_page.dart';
 import 'content_management_page.dart';
 import 'admin_analytics.dart';
@@ -406,12 +407,32 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage>
 
                 // Main content with tabs
                 Expanded(
-                  child: _showingProfile
-                      ? _buildProfilePage()
-                      : IndexedStack(
-                          index: _selectedIndex,
-                          children: _homeChildren(),
-                        ),
+                  child: RefreshIndicator(
+                    onRefresh: () async {
+                      if (isMobile) {
+                        await _loadAdminMetrics();
+                        if (mounted) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text(
+                                'Dashboard refreshed',
+                                style: GoogleFonts.montserrat(),
+                              ),
+                              backgroundColor: const Color(0xFF4CAF50),
+                              duration: const Duration(seconds: 2),
+                              behavior: SnackBarBehavior.floating,
+                            ),
+                          );
+                        }
+                      }
+                    },
+                    child: _showingProfile
+                        ? _buildProfilePage()
+                        : IndexedStack(
+                            index: _selectedIndex,
+                            children: _homeChildren(),
+                          ),
+                  ),
                 ),
               ],
             ),
