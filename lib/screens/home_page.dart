@@ -132,7 +132,7 @@ class _StudentHomePageState extends State<StudentHomePage>
   List<Map<String, dynamic>> _notifications = [];
   StreamSubscription<QuerySnapshot>? _notificationsSubscription;
   String? _selectedNotificationId;
-  int _notificationPage = 0;
+  final int _notificationPage = 0;
   static const int _notificationsPerPage = 5;
   int _dashboardNotificationPage = 0;
 
@@ -799,8 +799,9 @@ class _StudentHomePageState extends State<StudentHomePage>
         'type': activityType,
       });
 
-      if (_activityItems.length >= 6)
+      if (_activityItems.length >= 6) {
         break; // Increased limit for more activity
+      }
     }
 
     // Add contextual motivational messages
@@ -969,9 +970,13 @@ class _StudentHomePageState extends State<StudentHomePage>
 
     if (subject.toLowerCase().contains('trivia')) return 'trivia';
     if (subject.toLowerCase().contains('rme') ||
-        subject.toLowerCase().contains('religious')) return 'rme';
+        subject.toLowerCase().contains('religious')) {
+      return 'rme';
+    }
     if (subject.toLowerCase().contains('bece') ||
-        subject.toLowerCase().contains('past')) return 'past_questions';
+        subject.toLowerCase().contains('past')) {
+      return 'past_questions';
+    }
 
     // Classify based on performance patterns
     if (score >= 95.0) return 'mastery';
@@ -2234,8 +2239,9 @@ class _StudentHomePageState extends State<StudentHomePage>
     if (difference.inDays > 0) {
       if (difference.inDays == 1) return '1 day ago';
       if (difference.inDays < 7) return '${difference.inDays} days ago';
-      if (difference.inDays < 30)
+      if (difference.inDays < 30) {
         return '${(difference.inDays / 7).round()} weeks ago';
+      }
       return '${(difference.inDays / 30).round()} months ago';
     } else if (difference.inHours > 0) {
       if (difference.inHours == 1) return '1 hour ago';
@@ -2341,12 +2347,12 @@ class _StudentHomePageState extends State<StudentHomePage>
                                         if (mounted) {
                                           ScaffoldMessenger.of(context)
                                               .showSnackBar(
-                                            SnackBar(
-                                              content: const Text(
+                                            const SnackBar(
+                                              content: Text(
                                                   'Refreshed successfully'),
                                               backgroundColor: Colors.green,
                                               duration:
-                                                  const Duration(seconds: 1),
+                                                  Duration(seconds: 1),
                                               behavior:
                                                   SnackBarBehavior.floating,
                                             ),
@@ -2594,8 +2600,9 @@ class _StudentHomePageState extends State<StudentHomePage>
           GestureDetector(
             onTap: () => setState(() {
               _showingProfile = !_showingProfile;
-              if (_showingProfile)
+              if (_showingProfile) {
                 _selectedIndex = 0; // Reset to dashboard when returning
+              }
             }),
             child: Container(
               margin: const EdgeInsets.symmetric(horizontal: 16),
@@ -2865,7 +2872,7 @@ class _StudentHomePageState extends State<StudentHomePage>
       return SafeArea(
         top: false,
         child: Container(
-          height: 68,
+          height: 72,
           decoration: BoxDecoration(
             color: Colors.white,
             boxShadow: [
@@ -3437,7 +3444,7 @@ class _StudentHomePageState extends State<StudentHomePage>
 
   /// Teacher-facing dashboard: aggregates average data of students in teacher's class
   Widget _buildTeacherDashboard() {
-    return TeacherDashboardWidget();
+    return const TeacherDashboardWidget();
   }
 
   Widget _buildTeacherGradePredictionAnalytics() {
@@ -3821,9 +3828,9 @@ class _StudentHomePageState extends State<StudentHomePage>
         children: [
           Row(
             children: [
-              Icon(
+              const Icon(
                 Icons.summarize,
-                color: const Color(0xFF6366F1),
+                color: Color(0xFF6366F1),
                 size: 20,
               ),
               const SizedBox(width: 8),
@@ -5287,12 +5294,15 @@ class _StudentHomePageState extends State<StudentHomePage>
 
   String _getOverallPerformanceMessage(List<SubjectProgress> subjects) {
     final overallProgress = _calculateOverallProgress(subjects);
-    if (overallProgress >= 80)
+    if (overallProgress >= 80) {
       return 'Excellent progress! Keep up the great work!';
-    if (overallProgress >= 60)
+    }
+    if (overallProgress >= 60) {
       return 'Good progress. Focus on weaker subjects to excel further.';
-    if (overallProgress >= 40)
+    }
+    if (overallProgress >= 40) {
       return 'Making progress. Consistent practice will yield results.';
+    }
     return 'Building foundations. Regular study will improve your performance.';
   }
 
@@ -5626,10 +5636,10 @@ class _StudentHomePageState extends State<StudentHomePage>
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.info_outline,
                         size: 16,
-                        color: const Color(0xFF6366F1),
+                        color: Color(0xFF6366F1),
                       ),
                       const SizedBox(width: 8),
                       Expanded(
@@ -5740,10 +5750,10 @@ class _StudentHomePageState extends State<StudentHomePage>
                 Container(
                   padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(
+                    gradient: const LinearGradient(
                       colors: [
-                        const Color(0xFF6366F1),
-                        const Color(0xFF8B5CF6),
+                        Color(0xFF6366F1),
+                        Color(0xFF8B5CF6),
                       ],
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
@@ -5848,7 +5858,7 @@ class _StudentHomePageState extends State<StudentHomePage>
                         if (prediction.strongTopics.isNotEmpty) ...[
                           Row(
                             children: [
-                              Icon(Icons.check_circle, color: Colors.green, size: 14),
+                              const Icon(Icons.check_circle, color: Colors.green, size: 14),
                               const SizedBox(width: 4),
                               Text(
                                 'Strong: ${prediction.strongTopics.take(2).join(", ")}',
@@ -5865,7 +5875,7 @@ class _StudentHomePageState extends State<StudentHomePage>
                         if (prediction.weakTopics.isNotEmpty) ...[
                           Row(
                             children: [
-                              Icon(Icons.warning, color: Colors.orange, size: 14),
+                              const Icon(Icons.warning, color: Colors.orange, size: 14),
                               const SizedBox(width: 4),
                               Expanded(
                                 child: Text(
@@ -5896,7 +5906,7 @@ class _StudentHomePageState extends State<StudentHomePage>
                   ),
                   child: Row(
                     children: [
-                      Icon(Icons.lightbulb_outline, color: const Color(0xFF6366F1), size: 16),
+                      const Icon(Icons.lightbulb_outline, color: Color(0xFF6366F1), size: 16),
                       const SizedBox(width: 8),
                       Expanded(
                         child: Text(
@@ -9553,8 +9563,9 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
     if (s.contains('french')) return 'French';
     if (s == 'ga') return 'Ga';
     if (s.contains('twi') || s.contains('asante')) return 'Asante Twi';
-    if (s.contains('career') || s.contains('technology'))
+    if (s.contains('career') || s.contains('technology')) {
       return 'Career Technology';
+    }
     if (s.contains('creative') || s.contains('arts')) return 'Creative Arts';
     return subject;
   }
@@ -10209,9 +10220,9 @@ class _TeacherDashboardWidgetState extends State<TeacherDashboardWidget> {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.info_outline,
-                      color: const Color(0xFF6366F1),
+                      color: Color(0xFF6366F1),
                       size: 20,
                     ),
                     const SizedBox(width: 12),
@@ -11667,9 +11678,9 @@ class _StudentDetailDialogState extends State<StudentDetailDialog> {
             // Header
             Container(
               padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                color: const Color(0xFF1A1E3F),
-                borderRadius: const BorderRadius.only(
+              decoration: const BoxDecoration(
+                color: Color(0xFF1A1E3F),
+                borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(16),
                   topRight: Radius.circular(16),
                 ),

@@ -32,14 +32,14 @@ import 'screens/study_planner_page.dart' deferred as study_planner;
 import 'screens/upload_note_page.dart' deferred as upload_note;
 import 'screens/uri_page.dart' deferred as uri_page;
 
-// Static pages - deferred (rarely accessed)
-import 'screens/about_us.dart' deferred as about_us;
-import 'screens/privacy_policy.dart' deferred as privacy_policy;
-import 'screens/terms_of_service.dart' deferred as terms_of_service;
-import 'screens/contact.dart' deferred as contact;
-import 'screens/faq.dart' deferred as faq;
-import 'screens/pricing_page.dart' deferred as pricing;
-import 'screens/payment_page.dart' deferred as payment;
+// Static pages - loaded immediately for reliability
+import 'screens/about_us.dart';
+import 'screens/privacy_policy.dart';
+import 'screens/terms_of_service.dart';
+import 'screens/contact.dart';
+import 'screens/faq.dart';
+import 'screens/pricing_page.dart';
+import 'screens/payment_page.dart';
 
 // Note viewer - keep eager (used frequently)
 import 'screens/note_viewer_page.dart';
@@ -204,34 +204,13 @@ class MyApp extends StatelessWidget {
       },
       routes: {
         '/landing': (_) => const LandingPage(),
-        '/pricing': (_) => DeferredWidget(
-          loadLibrary: pricing.loadLibrary,
-          builder: () => pricing.PricingPage(),
-        ),
-        '/payment': (_) => DeferredWidget(
-          loadLibrary: payment.loadLibrary,
-          builder: () => payment.PaymentPage(),
-        ),
-        '/about': (_) => DeferredWidget(
-          loadLibrary: about_us.loadLibrary,
-          builder: () => about_us.AboutUsPage(),
-        ),
-        '/privacy': (_) => DeferredWidget(
-          loadLibrary: privacy_policy.loadLibrary,
-          builder: () => privacy_policy.PrivacyPolicyPage(),
-        ),
-        '/terms': (_) => DeferredWidget(
-          loadLibrary: terms_of_service.loadLibrary,
-          builder: () => terms_of_service.TermsOfServicePage(),
-        ),
-        '/contact': (_) => DeferredWidget(
-          loadLibrary: contact.loadLibrary,
-          builder: () => contact.ContactPage(),
-        ),
-        '/faq': (_) => DeferredWidget(
-          loadLibrary: faq.loadLibrary,
-          builder: () => faq.FAQPage(),
-        ),
+        '/pricing': (_) => const PricingPage(),
+        '/payment': (_) => const PaymentPage(),
+        '/about': (_) => const AboutUsPage(),
+        '/privacy': (_) => const PrivacyPolicyPage(),
+        '/terms': (_) => const TermsOfServicePage(),
+        '/contact': (_) => const ContactPage(),
+        '/faq': (_) => const FAQPage(),
         '/login': (_) => const sign_in.SignInPage(),
         '/auth': (_) => const AuthGate(),
         '/home': (_) => const StudentHomePage(),
