@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../constants/app_styles.dart';
+import '../widgets/common_footer.dart';
 import '../utils/navigation_helper.dart';
 import 'sign_up.dart';
 
@@ -100,10 +101,20 @@ class _TermsOfServicePageState extends State<TermsOfServicePage> with TickerProv
           
           const Spacer(),
           
-          // Navigation - removed for cleaner look
-          if (!isSmallScreen) ...[
-            const SizedBox(width: 32),
-          ],
+          // Back to Home Button (Desktop)
+          if (!isSmallScreen)
+            TextButton(
+              onPressed: () => Navigator.pushNamed(context, '/landing'),
+              child: Text(
+                'Back to Home',
+                style: GoogleFonts.montserrat(
+                  color: const Color(0xFF1A1E3F),
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
+          
+          if (!isSmallScreen) const SizedBox(width: 16),
           
           // Get Started Button
           ElevatedButton(
@@ -222,7 +233,7 @@ class _TermsOfServicePageState extends State<TermsOfServicePage> with TickerProv
             // Section 1: Who We Are
             _buildTermsCard(
               '1. Who We Are',
-              'Uriel Academy is an EdTech platform designed for Ghanaian students preparing for BECE and WASSCE. We provide past questions, NACCA-approved textbooks, AI-powered study tools, progress tracking, and parent/school reporting.',
+              'Uriel Academy is an EdTech platform designed for Ghanaian students preparing for BECE and WASSCE. We provide past questions, NACCA-aligned textbooks, AI-powered study tools, progress tracking, and parent/school reporting.',
               isSmallScreen,
             ),
             
@@ -490,7 +501,7 @@ class _TermsOfServicePageState extends State<TermsOfServicePage> with TickerProv
                         Icon(Icons.email, color: Colors.white.withValues(alpha: 0.9), size: 16),
                         const SizedBox(width: 8),
                         Text(
-                          'studywithuriel@gmail.com',
+                          'info@uriel.academy',
                           style: GoogleFonts.montserrat(
                             fontSize: isSmallScreen ? 14 : 16,
                             color: Colors.white.withValues(alpha: 0.9),
@@ -537,32 +548,10 @@ class _TermsOfServicePageState extends State<TermsOfServicePage> with TickerProv
   }
 
   Widget _buildFooter(bool isSmallScreen) {
-    return Container(
-      width: double.infinity,
-      padding: EdgeInsets.symmetric(
-        horizontal: isSmallScreen ? 16 : 32,
-        vertical: isSmallScreen ? 24 : 32,
-      ),
-      color: const Color(0xFF1A1E3F),
-      child: Column(
-        children: [
-          Text(
-            'Uriel Academy',
-            style: AppStyles.brandNameDark(fontSize: isSmallScreen ? 18 : 20),
-          ),
-          
-          SizedBox(height: isSmallScreen ? 12 : 16),
-          
-          Text(
-            '© 2025 Uriel Academy. Built with ❤️ for Ghanaian students.',
-            style: GoogleFonts.montserrat(
-              fontSize: isSmallScreen ? 12 : 14,
-              color: Colors.white.withValues(alpha: 0.7),
-            ),
-            textAlign: TextAlign.center,
-          ),
-        ],
-      ),
+    return CommonFooter(
+      isSmallScreen: isSmallScreen,
+      showLinks: true,
+      showPricing: true,
     );
   }
 }

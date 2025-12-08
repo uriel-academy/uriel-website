@@ -1157,11 +1157,7 @@ class _PricingPageState extends State<PricingPage> {
       },
       {
         'question': 'Do you offer refunds?',
-        'answer': 'Yes. If you\'re not satisfied within 7 days, we\'ll refund you—no questions asked.',
-      },
-      {
-        'question': 'Can schools try before buying?',
-        'answer': 'Absolutely! We offer FREE 6-month pilot programs for schools. Contact us at schools@urielacademy.com',
+        'answer': 'No. All sales are final once you subscribe and gain access to premium content. We encourage you to try our free tier first to ensure Uriel Academy meets your needs before upgrading.',
       },
       {
         'question': 'Is my data safe?',
@@ -1267,6 +1263,8 @@ class _PricingPageState extends State<PricingPage> {
   Widget _buildFooter(bool isMobile) {
     return CommonFooter(
       isSmallScreen: isMobile,
+      showLinks: true,
+      showPricing: true,
     );
   }
 }

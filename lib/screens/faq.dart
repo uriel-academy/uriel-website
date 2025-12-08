@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../constants/app_styles.dart';
+import '../widgets/common_footer.dart';
 import '../utils/navigation_helper.dart';
 import 'sign_up.dart';
 import 'contact.dart';
@@ -37,7 +38,7 @@ class _FAQPageState extends State<FAQPage> with TickerProviderStateMixin {
     {
       'category': 'Getting Started',
       'question': 'What is Uriel Academy?',
-      'answer': 'Uriel Academy is your all-in-one learning app for BECE and WASSCE prep. You\'ll find past questions, NACCA-approved textbooks, AI-powered help, mock exams, revision plans, and even a fun mascot (Uri!) to keep you motivated.',
+      'answer': 'Uriel Academy is your all-in-one learning app for BECE and WASSCE prep. You\'ll find past questions, NACCA-aligned textbooks, AI-powered help, mock exams, revision plans, and even a fun mascot (Uri!) to keep you motivated.',
       'popular': true,
     },
     {
@@ -55,7 +56,7 @@ class _FAQPageState extends State<FAQPage> with TickerProviderStateMixin {
     {
       'category': 'Getting Started',
       'question': 'What do I need to get started?',
-      'answer': 'Just a smartphone or computer with internet access. You can download content for offline use later. No special equipment needed!',
+      'answer': 'Just a smartphone or computer with internet access. No special equipment needed!',
       'popular': false,
     },
     {
@@ -67,7 +68,7 @@ class _FAQPageState extends State<FAQPage> with TickerProviderStateMixin {
     {
       'category': 'Getting Started',
       'question': 'Do I need internet to use Uriel Academy?',
-      'answer': 'No. You can download question packs, textbooks, and notes for offline use. Perfect for when data is low or you\'re in an area with poor network coverage.',
+      'answer': 'Yes, you need internet to access Uriel Academy. An active internet connection is required for all features, including past questions, textbooks, AI tools, and progress tracking. We\'re working on offline mode for future updates.',
       'popular': true,
     },
     {
@@ -81,7 +82,7 @@ class _FAQPageState extends State<FAQPage> with TickerProviderStateMixin {
     {
       'category': 'Account & Billing',
       'question': 'How much does it cost?',
-      'answer': 'We keep it affordable! You can subscribe weekly (from GHS 2.99), bi-weekly, monthly, or yearly. The longer the plan, the more you save. We also offer student and school discounts.',
+      'answer': 'We keep it affordable! You can subscribe monthly or yearly. The longer the plan, the more you save. We also offer student and school discounts.',
       'popular': true,
     },
     {
@@ -99,7 +100,7 @@ class _FAQPageState extends State<FAQPage> with TickerProviderStateMixin {
     {
       'category': 'Account & Billing',
       'question': 'Can I get a refund?',
-      'answer': 'Refunds are processed within 7 days of purchase if you haven\'t accessed premium content. Contact our support team with your subscription details for assistance.',
+      'answer': 'No. All sales are final once you subscribe and gain access to premium content. We encourage you to explore our free tier first to ensure Uriel Academy meets your needs before upgrading to premium.',
       'popular': false,
     },
     {
@@ -131,7 +132,7 @@ class _FAQPageState extends State<FAQPage> with TickerProviderStateMixin {
     {
       'category': 'Learning Features',
       'question': 'Can I download textbooks for offline reading?',
-      'answer': 'Yes! Premium subscribers can download NACCA-approved textbooks and study materials for offline reading. Perfect for studying without internet.',
+      'answer': 'Not yet. Currently, you need an active internet connection to access all content. We\'re working on offline download features for future updates.',
       'popular': false,
     },
     {
@@ -364,10 +365,20 @@ class _FAQPageState extends State<FAQPage> with TickerProviderStateMixin {
           
           const Spacer(),
           
-          // Navigation - removed for cleaner look
-          if (!isSmallScreen) ...[
-            const SizedBox(width: 32),
-          ],
+          // Back to Home Button (Desktop)
+          if (!isSmallScreen)
+            TextButton(
+              onPressed: () => Navigator.pushNamed(context, '/landing'),
+              child: Text(
+                'Back to Home',
+                style: GoogleFonts.montserrat(
+                  color: const Color(0xFF1A1E3F),
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
+          
+          if (!isSmallScreen) const SizedBox(width: 16),
           
           // Get Started Button
           ElevatedButton(
@@ -1038,32 +1049,10 @@ class _FAQPageState extends State<FAQPage> with TickerProviderStateMixin {
   }
 
   Widget _buildFooter(bool isSmallScreen) {
-    return Container(
-      width: double.infinity,
-      padding: EdgeInsets.symmetric(
-        horizontal: isSmallScreen ? 16 : 32,
-        vertical: isSmallScreen ? 24 : 32,
-      ),
-      color: const Color(0xFF1A1E3F),
-      child: Column(
-        children: [
-          Text(
-            'Uriel Academy',
-            style: AppStyles.brandNameDark(fontSize: isSmallScreen ? 18 : 20),
-          ),
-          
-          SizedBox(height: isSmallScreen ? 12 : 16),
-          
-          Text(
-            '© 2025 Uriel Academy. Built with ❤️ for Ghanaian students.',
-            style: GoogleFonts.montserrat(
-              fontSize: isSmallScreen ? 12 : 14,
-              color: Colors.white.withValues(alpha: 0.7),
-            ),
-            textAlign: TextAlign.center,
-          ),
-        ],
-      ),
+    return CommonFooter(
+      isSmallScreen: isSmallScreen,
+      showLinks: true,
+      showPricing: true,
     );
   }
 

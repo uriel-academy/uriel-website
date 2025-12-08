@@ -51,7 +51,7 @@ class TextbooksPage extends StatelessWidget {
                   child: ListTile(
                     leading: const Icon(Icons.menu_book, color: Color(0xFFD62828)),
                     title: Text('Textbook ${i + 1}'),
-                    subtitle: Text('Subject: $selectedSubject | NACCA-approved'),
+                    subtitle: Text('Subject: $selectedSubject | NACCA-aligned'),
                     trailing: IconButton(
                       icon: const Icon(Icons.download),
                       onPressed: () {

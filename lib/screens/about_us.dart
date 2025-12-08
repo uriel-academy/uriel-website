@@ -77,7 +77,8 @@ class _AboutUsPageState extends State<AboutUsPage> with TickerProviderStateMixin
             // Footer
             CommonFooter(
               isSmallScreen: isSmallScreen,
-              showLinks: false,
+              showLinks: true,
+              showPricing: true,
             ),
           ],
         ),
@@ -117,10 +118,20 @@ class _AboutUsPageState extends State<AboutUsPage> with TickerProviderStateMixin
           
           const Spacer(),
           
-          // Navigation (Desktop) - removed for cleaner look
-          if (!isSmallScreen) ...[
-            const SizedBox(width: 32),
-          ],
+          // Back to Home Button (Desktop)
+          if (!isSmallScreen)
+            TextButton(
+              onPressed: () => Navigator.pushNamed(context, '/landing'),
+              child: Text(
+                'Back to Home',
+                style: GoogleFonts.montserrat(
+                  color: const Color(0xFF1A1E3F),
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
+          
+          if (!isSmallScreen) const SizedBox(width: 16),
           
           // Get Started Button
           ElevatedButton(
@@ -351,13 +362,13 @@ class _AboutUsPageState extends State<AboutUsPage> with TickerProviderStateMixin
                   isSmallScreen,
                 ),
                 _buildOfferingCard(
-                  'NACCA-Approved Textbooks',
+                  'NACCA-Aligned Textbooks',
                   'Your entire bookshelf, online. Study any subject anytime, anywhere—without carrying a heavy bag.',
                   isSmallScreen,
                 ),
                 _buildOfferingCard(
                   'AI Learning Tools',
-                  'Our friendly AI assistant helps you solve problems, summarize textbooks, create revision plans, and even chat with you in Twi, Ga, Ewe, or Hausa.',
+                  'Our friendly AI assistant helps you solve problems, summarize textbooks, and create revision plans.',
                   isSmallScreen,
                 ),
                 _buildOfferingCard(
@@ -482,7 +493,7 @@ class _AboutUsPageState extends State<AboutUsPage> with TickerProviderStateMixin
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    'With affordable pricing (as little as GHS 2.99 a week), we\'re proving that quality education doesn\'t have to be a luxury—it should be for everyone.',
+                    'With affordable pricing, we\'re proving that quality education doesn\'t have to be a luxury—it should be for everyone.',
                     style: GoogleFonts.montserrat(
                       fontSize: isSmallScreen ? 14 : 16,
                       color: Colors.grey[700],

@@ -1842,7 +1842,7 @@ class _PaymentPageState extends State<PaymentPage> {
           const SizedBox(height: 12),
           ...[
             '✓ Browse 10,000+ BECE & WASSCE past questions',
-            '✓ Access NACCA-approved textbooks and notes',
+            '✓ Access NACCA-aligned textbooks and notes',
             '✓ Take your first adaptive Uri AI quiz',
             '✓ Set up your personalised study plan',
           ].map((item) => Padding(

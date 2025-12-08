@@ -55,7 +55,7 @@ class _ContactPageState extends State<ContactPage> with TickerProviderStateMixin
     },
     {
       'question': 'Can I get a refund?',
-      'answer': 'Refunds are processed within 7 days of purchase if you haven\'t accessed premium content. Contact support with your subscription details.'
+      'answer': 'No. All sales are final once you subscribe and gain access to premium content. We encourage you to try our free tier first to ensure Uriel Academy meets your needs before upgrading.'
     },
     {
       'question': 'How do I access past questions?',
@@ -137,7 +137,8 @@ class _ContactPageState extends State<ContactPage> with TickerProviderStateMixin
             // Footer
             CommonFooter(
               isSmallScreen: isSmallScreen,
-              showLinks: false,
+              showLinks: true,
+              showPricing: true,
             ),
           ],
         ),
@@ -177,10 +178,20 @@ class _ContactPageState extends State<ContactPage> with TickerProviderStateMixin
           
           const Spacer(),
           
-          // Navigation - removed for cleaner look
-          if (!isSmallScreen) ...[
-            const SizedBox(width: 32),
-          ],
+          // Back to Home Button (Desktop)
+          if (!isSmallScreen)
+            TextButton(
+              onPressed: () => Navigator.pushNamed(context, '/landing'),
+              child: Text(
+                'Back to Home',
+                style: GoogleFonts.montserrat(
+                  color: const Color(0xFF1A1E3F),
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
+          
+          if (!isSmallScreen) const SizedBox(width: 16),
           
           // Get Started Button
           ElevatedButton(
