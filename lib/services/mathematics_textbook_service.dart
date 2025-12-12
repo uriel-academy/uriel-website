@@ -22,7 +22,7 @@ class MathematicsTextbookService {
     if (_cacheLoaded) return;
     
     try {
-      final textbookIds = ['Mathematics_jhs_1', 'Mathematics_jhs_2', 'Mathematics_jhs_3'];
+      final textbookIds = ['mathematics_jhs_1', 'mathematics_jhs_2', 'mathematics_jhs_3'];
       
       // Clear any existing cache to force fresh load
       _textbookCache.clear();
