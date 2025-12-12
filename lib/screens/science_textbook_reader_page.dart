@@ -94,8 +94,14 @@ class _ScienceTextbookReaderPageState extends State<ScienceTextbookReaderPage> {
     });
     try {
       // Convert string IDs to int chapter/section numbers
-      final chapterNum = int.tryParse(chapterId.replaceAll(RegExp(r'\D'), '')) ?? 1;
-      final sectionNum = int.tryParse(sectionId.replaceAll(RegExp(r'\D'), '')) ?? 1;
+      // chapterId format: "chapter_1" -> extract 1
+      // sectionId format: "section_1_1" -> extract chapter=1, section=1
+      final chapterParts = chapterId.split('_');
+      final chapterNum = chapterParts.length > 1 ? int.tryParse(chapterParts[1]) ?? 1 : 1;
+      
+      final sectionParts = sectionId.split('_');
+      final sectionNum = sectionParts.length > 2 ? int.tryParse(sectionParts[2]) ?? 1 : 1;
+      
       currentSection = await _service.getSection(widget.textbookId, chapterNum, sectionNum);
       currentChapterId = chapterId;
       currentSectionId = sectionId;
@@ -125,8 +131,14 @@ class _ScienceTextbookReaderPageState extends State<ScienceTextbookReaderPage> {
     if (currentSectionId == null) return;
     
     final xpReward = currentSection?['xpReward'] as int? ?? 50;
-    final chapterNum = int.tryParse(currentChapterId!.replaceAll(RegExp(r'\D'), '')) ?? 1;
-    final sectionNum = int.tryParse(currentSectionId!.replaceAll(RegExp(r'\D'), '')) ?? 1;
+    
+    // Parse chapter and section numbers correctly
+    final chapterParts = currentChapterId!.split('_');
+    final chapterNum = chapterParts.length > 1 ? int.tryParse(chapterParts[1]) ?? 1 : 1;
+    
+    final sectionParts = currentSectionId!.split('_');
+    final sectionNum = sectionParts.length > 2 ? int.tryParse(sectionParts[2]) ?? 1 : 1;
+    
     await _service.completeSection(
       textbookId: widget.textbookId,
       chapterNumber: chapterNum,
