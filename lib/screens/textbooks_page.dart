@@ -679,6 +679,28 @@ class _TextbooksPageState extends State<TextbooksPage>
                 ),
                 _buildScienceTextbooksGrid(isMobile),
               ],
+              // Mathematics Textbooks
+              if (!isLoadingMathematics && filteredMathematicsTextbooks.isNotEmpty) ...[
+                SliverToBoxAdapter(
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(
+                      isMobile ? 16 : 24,
+                      (filteredEnglishTextbooks.isNotEmpty || filteredScienceTextbooks.isNotEmpty) ? 16 : (isMobile ? 16 : 24),
+                      isMobile ? 16 : 24,
+                      8,
+                    ),
+                    child: Text(
+                      'Mathematics',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: const Color(0xFF1A1E3F),
+                      ),
+                    ),
+                  ),
+                ),
+                _buildMathematicsTextbooksGrid(isMobile),
+              ],
               // Social Studies and RME Textbooks
               if (!isLoadingSocialRme && filteredSocialRmeTextbooks.isNotEmpty) ...[
                 SliverToBoxAdapter(
@@ -775,6 +797,28 @@ class _TextbooksPageState extends State<TextbooksPage>
                   ),
                 ),
                 _buildScienceTextbooksGrid(isMobile),
+              ],
+              // Mathematics Textbooks
+              if (!isLoadingMathematics && filteredMathematicsTextbooks.isNotEmpty) ...[
+                SliverToBoxAdapter(
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(
+                      isMobile ? 16 : 24,
+                      (filteredEnglishTextbooks.isNotEmpty || filteredScienceTextbooks.isNotEmpty) ? 16 : (isMobile ? 16 : 24),
+                      isMobile ? 16 : 24,
+                      8,
+                    ),
+                    child: Text(
+                      'Mathematics',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: const Color(0xFF1A1E3F),
+                      ),
+                    ),
+                  ),
+                ),
+                _buildMathematicsTextbooksGrid(isMobile),
               ],
               // Social Studies and RME Textbooks
               if (!isLoadingSocialRme && filteredSocialRmeTextbooks.isNotEmpty) ...[
