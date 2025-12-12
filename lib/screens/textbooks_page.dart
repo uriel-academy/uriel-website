@@ -98,7 +98,7 @@ class _TextbooksPageState extends State<TextbooksPage>
     _loadStorybooks();
     _loadEnglishTextbooks();
     _loadSocialRmeTextbooks();
-    // _loadScienceTextbooks(); // TODO: Fix science service methods
+    _loadScienceTextbooks();
     _animationController.forward();
   }
 
