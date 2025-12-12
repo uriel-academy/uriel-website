@@ -9,12 +9,14 @@ import '../services/english_textbook_service.dart';
 import '../services/social_rme_textbook_service.dart';
 import '../services/science_textbook_service.dart';
 import '../services/mathematics_textbook_service.dart';
+import '../services/career_technology_textbook_service.dart';
 import 'enhanced_epub_reader_page.dart';
 import 'course_unit_list_page.dart';
 import 'english_textbook_reader_page.dart';
 import 'social_rme_textbook_reader_page.dart';
 import 'science_textbook_reader_page.dart';
 import 'mathematics_textbook_reader_page.dart';
+import 'career_technology_textbook_reader_page.dart';
 
 class TextbooksPage extends StatefulWidget {
   const TextbooksPage({super.key});
@@ -34,6 +36,7 @@ class _TextbooksPageState extends State<TextbooksPage>
   final SocialRmeTextbookService _socialRmeService = SocialRmeTextbookService();
   final ScienceTextbookService _scienceService = ScienceTextbookService();
   final MathematicsTextbookService _mathematicsService = MathematicsTextbookService();
+  final CareerTechnologyTextbookService _careerTechService = CareerTechnologyTextbookService();
   final TextEditingController _searchController = TextEditingController();
 
   String selectedLevel = 'All';
@@ -67,8 +70,14 @@ class _TextbooksPageState extends State<TextbooksPage>
   List<Map<String, dynamic>> mathematicsTextbooks = [];
   List<Map<String, dynamic>> filteredMathematicsTextbooks = [];
   Map<String, Map<String, dynamic>> mathematicsProgressMap = {};
+  
+  List<Map<String, dynamic>> careerTechTextbooks = [];
+  List<Map<String, dynamic>> filteredCareerTechTextbooks = [];
+  Map<String, Map<String, dynamic>> careerTechProgressMap = {};
+  
   bool isLoadingScience = true;
   bool isLoadingMathematics = true;
+  bool isLoadingCareerTech = true;
   
   bool isLoading = true;
   bool isLoadingEnglish = true;
@@ -108,6 +117,7 @@ class _TextbooksPageState extends State<TextbooksPage>
     _loadSocialRmeTextbooks();
     _loadScienceTextbooks();
     _loadMathematicsTextbooks();
+    _loadCareerTechTextbooks();
     _loadMathematicsTextbooks();
     _animationController.forward();
   }
@@ -354,6 +364,52 @@ class _TextbooksPageState extends State<TextbooksPage>
     });
   }
 
+  Future<void> _loadCareerTechTextbooks() async {
+    setState(() => isLoadingCareerTech = true);
+    try {
+      careerTechTextbooks = await _careerTechService.getAllTextbooks();
+      debugPrint('📚 Loaded ${careerTechTextbooks.length} Career Technology textbooks');
+      
+      for (final textbook in careerTechTextbooks) {
+        final progress = await _careerTechService.getUserProgress(textbook['id']);
+        careerTechProgressMap[textbook['id']] = progress;
+      }
+      
+      filteredCareerTechTextbooks = List.from(careerTechTextbooks);
+      _applyCareerTechFilter();
+    } catch (e) {
+      debugPrint('❌ Error loading Career Technology textbooks: $e');
+    } finally {
+      setState(() => isLoadingCareerTech = false);
+    }
+  }
+
+  void _applyCareerTechFilter() {
+    setState(() {
+      if (searchQuery.isEmpty && selectedLevel == 'All' && selectedSubject == 'All') {
+        filteredCareerTechTextbooks = List.from(careerTechTextbooks);
+      } else {
+        filteredCareerTechTextbooks = careerTechTextbooks.where((book) {
+          final title = (book['title'] as String? ?? '').toLowerCase();
+          final year = (book['year'] as String? ?? '').toLowerCase();
+          final subject = (book['subject'] as String? ?? '').toLowerCase();
+          final query = searchQuery.toLowerCase().trim();
+          
+          bool matchesLevel = selectedLevel == 'All' || year == selectedLevel.toLowerCase();
+          bool matchesSubject = selectedSubject == 'All' || 
+              subject.contains(selectedSubject.toLowerCase()) ||
+              (selectedSubject.toLowerCase() == 'career technology' && subject.contains('career'));
+          bool matchesSearch = query.isEmpty || 
+              title.contains(query) || 
+              year.contains(query) ||
+              subject.contains(query);
+          
+          return matchesLevel && matchesSubject && matchesSearch;
+        }).toList();
+      }
+    });
+  }
+
   void _onTabChanged() {
     setState(() {
       // Reset search when switching tabs
@@ -364,6 +420,7 @@ class _TextbooksPageState extends State<TextbooksPage>
       _applySocialRmeFilter();
       _applyScienceFilter();
       _applyMathematicsFilter();
+      _applyCareerTechFilter();
     });
   }
 
@@ -701,6 +758,28 @@ class _TextbooksPageState extends State<TextbooksPage>
                 ),
                 _buildMathematicsTextbooksGrid(isMobile),
               ],
+              // Career Technology Textbooks
+              if (!isLoadingCareerTech && filteredCareerTechTextbooks.isNotEmpty) ...[
+                SliverToBoxAdapter(
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(
+                      isMobile ? 16 : 24,
+                      (filteredEnglishTextbooks.isNotEmpty || filteredScienceTextbooks.isNotEmpty || filteredMathematicsTextbooks.isNotEmpty) ? 16 : (isMobile ? 16 : 24),
+                      isMobile ? 16 : 24,
+                      8,
+                    ),
+                    child: Text(
+                      'Career Technology',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: const Color(0xFF1A1E3F),
+                      ),
+                    ),
+                  ),
+                ),
+                _buildCareerTechTextbooksGrid(isMobile),
+              ],
               // Social Studies and RME Textbooks
               if (!isLoadingSocialRme && filteredSocialRmeTextbooks.isNotEmpty) ...[
                 SliverToBoxAdapter(
@@ -819,6 +898,28 @@ class _TextbooksPageState extends State<TextbooksPage>
                   ),
                 ),
                 _buildMathematicsTextbooksGrid(isMobile),
+              ],
+              // Career Technology Textbooks
+              if (!isLoadingCareerTech && filteredCareerTechTextbooks.isNotEmpty) ...[
+                SliverToBoxAdapter(
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(
+                      isMobile ? 16 : 24,
+                      (filteredEnglishTextbooks.isNotEmpty || filteredScienceTextbooks.isNotEmpty || filteredMathematicsTextbooks.isNotEmpty) ? 16 : (isMobile ? 16 : 24),
+                      isMobile ? 16 : 24,
+                      8,
+                    ),
+                    child: Text(
+                      'Career Technology',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: const Color(0xFF1A1E3F),
+                      ),
+                    ),
+                  ),
+                ),
+                _buildCareerTechTextbooksGrid(isMobile),
               ],
               // Social Studies and RME Textbooks
               if (!isLoadingSocialRme && filteredSocialRmeTextbooks.isNotEmpty) ...[
@@ -3672,6 +3773,180 @@ class _TextbooksPageState extends State<TextbooksPage>
             }
           },
           childCount: filteredMathematicsTextbooks.length,
+        ),
+      ),
+    );
+  }
+
+  /// Build grid of Career Technology textbooks
+  Widget _buildCareerTechTextbooksGrid(bool isMobile) {
+    if (filteredCareerTechTextbooks.isEmpty) {
+      return const SliverToBoxAdapter(child: SizedBox());
+    }
+
+    return SliverPadding(
+      padding: EdgeInsets.all(isMobile ? 16 : 24),
+      sliver: SliverGrid(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: isMobile ? 2 : 3,
+          childAspectRatio: isMobile ? 0.58 : 0.7,
+          crossAxisSpacing: isMobile ? 12 : 16,
+          mainAxisSpacing: isMobile ? 12 : 16,
+        ),
+        delegate: SliverChildBuilderDelegate(
+          (context, index) {
+            try {
+              final textbook = filteredCareerTechTextbooks[index];
+              final textbookId = textbook['id'] as String ?? 'unknown';
+              final subject = textbook['subject'] as String? ?? 'Career Technology';
+              final yearString = textbook['year'] as String? ?? 'JHS 1';
+              final totalChapters = textbook['totalChapters'] as int? ?? 0;
+              final totalSections = textbook['totalSections'] as int? ?? 0;
+              
+              final progressData = careerTechProgressMap[textbookId] ?? {};
+              final completedSections = (progressData['completedSections'] as List?)?.length ?? 0;
+              final totalXP = progressData['totalXP'] as int? ?? 0;
+              final progressPercent = totalSections > 0 ? (completedSections / totalSections * 100).toInt() : 0;
+              
+              const subjectColor = Color(0xFFFF9800);
+
+              return Card(
+                elevation: 4,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => CareerTechnologyTextbookReaderPage(
+                          textbookId: textbookId,
+                          subject: subject,
+                          year: yearString,
+                        ),
+                      ),
+                    );
+                  },
+                  borderRadius: BorderRadius.circular(12),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        height: isMobile ? 8 : 12,
+                        decoration: BoxDecoration(
+                          color: subjectColor,
+                          borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(12),
+                            topRight: Radius.circular(12),
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Padding(
+                          padding: EdgeInsets.all(isMobile ? 12 : 16),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: isMobile ? 8 : 12,
+                                  vertical: isMobile ? 4 : 6,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: subjectColor.withOpacity(0.1),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Text(
+                                  yearString.toUpperCase(),
+                                  style: GoogleFonts.montserrat(
+                                    fontSize: isMobile ? 10 : 12,
+                                    fontWeight: FontWeight.w600,
+                                    color: subjectColor,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(height: isMobile ? 8 : 12),
+                              Text(
+                                subject,
+                                style: GoogleFonts.montserrat(
+                                  fontSize: isMobile ? 12 : 14,
+                                  fontWeight: FontWeight.bold,
+                                  color: const Color(0xFF1A1E3F),
+                                ),
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                              const SizedBox(height: 4),
+                              Text(
+                                '$totalChapters chapters • $totalSections sections',
+                                style: GoogleFonts.montserrat(
+                                  fontSize: isMobile ? 10 : 12,
+                                  color: Colors.grey[600],
+                                ),
+                              ),
+                              const Spacer(),
+                              if (progressPercent > 0) ...[
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(4),
+                                  child: LinearProgressIndicator(
+                                    value: progressPercent / 100,
+                                    backgroundColor: Colors.grey[200],
+                                    valueColor: AlwaysStoppedAnimation<Color>(subjectColor),
+                                    minHeight: isMobile ? 4 : 6,
+                                  ),
+                                ),
+                                SizedBox(height: isMobile ? 4 : 6),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      '$progressPercent% complete',
+                                      style: GoogleFonts.montserrat(
+                                        fontSize: isMobile ? 9 : 11,
+                                        color: Colors.grey[600],
+                                      ),
+                                    ),
+                                    if (totalXP > 0)
+                                      Row(
+                                        children: [
+                                          Icon(
+                                            Icons.stars,
+                                            size: isMobile ? 12 : 14,
+                                            color: Colors.amber,
+                                          ),
+                                          const SizedBox(width: 2),
+                                          Text(
+                                            '$totalXP XP',
+                                            style: GoogleFonts.montserrat(
+                                              fontSize: isMobile ? 9 : 11,
+                                              fontWeight: FontWeight.w600,
+                                              color: Colors.amber[700],
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                  ],
+                                ),
+                              ],
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              );
+            } catch (e) {
+              debugPrint('❌ Error rendering Career Technology textbook: $e');
+              return const Card(
+                child: Center(
+                  child: Icon(Icons.error, color: Colors.red),
+                ),
+              );
+            }
+          },
+          childCount: filteredCareerTechTextbooks.length,
         ),
       ),
     );
