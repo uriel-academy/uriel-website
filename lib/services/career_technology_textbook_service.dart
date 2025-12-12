@@ -22,7 +22,7 @@ class CareerTechnologyTextbookService {
     if (_cacheLoaded) return;
     
     try {
-      final textbookIds = ['CareerTechnology_jhs_1', 'CareerTechnology_jhs_2', 'CareerTechnology_jhs_3'];
+      final textbookIds = ['career_technology_jhs_1', 'career_technology_jhs_2', 'career_technology_jhs_3'];
       
       // Clear any existing cache to force fresh load
       _textbookCache.clear();
