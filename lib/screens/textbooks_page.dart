@@ -8,11 +8,13 @@ import '../services/course_reader_service.dart';
 import '../services/english_textbook_service.dart';
 import '../services/social_rme_textbook_service.dart';
 import '../services/science_textbook_service.dart';
+import '../services/mathematics_textbook_service.dart';
 import 'enhanced_epub_reader_page.dart';
 import 'course_unit_list_page.dart';
 import 'english_textbook_reader_page.dart';
 import 'social_rme_textbook_reader_page.dart';
 import 'science_textbook_reader_page.dart';
+import 'mathematics_textbook_reader_page.dart';
 
 class TextbooksPage extends StatefulWidget {
   const TextbooksPage({super.key});
@@ -31,6 +33,7 @@ class _TextbooksPageState extends State<TextbooksPage>
   final StorybookService _storybookService = StorybookService();
   final SocialRmeTextbookService _socialRmeService = SocialRmeTextbookService();
   final ScienceTextbookService _scienceService = ScienceTextbookService();
+  final MathematicsTextbookService _mathematicsService = MathematicsTextbookService();
   final TextEditingController _searchController = TextEditingController();
 
   String selectedLevel = 'All';
@@ -60,7 +63,12 @@ class _TextbooksPageState extends State<TextbooksPage>
   List<Map<String, dynamic>> scienceTextbooks = [];
   List<Map<String, dynamic>> filteredScienceTextbooks = [];
   Map<String, Map<String, dynamic>> scienceProgressMap = {};
+  
+  List<Map<String, dynamic>> mathematicsTextbooks = [];
+  List<Map<String, dynamic>> filteredMathematicsTextbooks = [];
+  Map<String, Map<String, dynamic>> mathematicsProgressMap = {};
   bool isLoadingScience = true;
+  bool isLoadingMathematics = true;
   
   bool isLoading = true;
   bool isLoadingEnglish = true;
@@ -99,6 +107,8 @@ class _TextbooksPageState extends State<TextbooksPage>
     _loadEnglishTextbooks();
     _loadSocialRmeTextbooks();
     _loadScienceTextbooks();
+    _loadMathematicsTextbooks();
+    _loadMathematicsTextbooks();
     _animationController.forward();
   }
 
@@ -288,6 +298,62 @@ class _TextbooksPageState extends State<TextbooksPage>
     });
   }
 
+  Future<void> _loadMathematicsTextbooks() async {
+    setState(() => isLoadingMathematics = true);
+    try {
+      // Load all mathematics textbooks
+      mathematicsTextbooks = await _mathematicsService.getAllTextbooks();
+      debugPrint('📚 Loaded ${mathematicsTextbooks.length} Mathematics textbooks');
+      
+      // Load progress for each textbook
+      for (final textbook in mathematicsTextbooks) {
+        final progress = await _mathematicsService.getUserProgress(textbook['id']);
+        mathematicsProgressMap[textbook['id']] = progress;
+      }
+      
+      // Initialize filtered list
+      filteredMathematicsTextbooks = List.from(mathematicsTextbooks);
+      
+      // Apply any existing filters
+      _applyMathematicsFilter();
+    } catch (e) {
+      debugPrint('❌ Error loading Mathematics textbooks: $e');
+    } finally {
+      setState(() => isLoadingMathematics = false);
+    }
+  }
+
+  void _applyMathematicsFilter() {
+    setState(() {
+      if (searchQuery.isEmpty && selectedLevel == 'All' && selectedSubject == 'All') {
+        filteredMathematicsTextbooks = List.from(mathematicsTextbooks);
+      } else {
+        filteredMathematicsTextbooks = mathematicsTextbooks.where((book) {
+          final title = (book['title'] as String? ?? '').toLowerCase();
+          final year = (book['year'] as String? ?? '').toLowerCase();
+          final subject = (book['subject'] as String? ?? '').toLowerCase();
+          final query = searchQuery.toLowerCase().trim();
+          
+          // Level filter
+          bool matchesLevel = selectedLevel == 'All' || year == selectedLevel.toLowerCase();
+          
+          // Subject filter
+          bool matchesSubject = selectedSubject == 'All' || 
+              subject.contains(selectedSubject.toLowerCase()) ||
+              (selectedSubject.toLowerCase() == 'mathematics' && subject.contains('mathematics'));
+          
+          // Search query filter
+          bool matchesSearch = query.isEmpty || 
+              title.contains(query) || 
+              year.contains(query) ||
+              subject.contains(query);
+          
+          return matchesLevel && matchesSubject && matchesSearch;
+        }).toList();
+      }
+    });
+  }
+
   void _onTabChanged() {
     setState(() {
       // Reset search when switching tabs
@@ -297,6 +363,7 @@ class _TextbooksPageState extends State<TextbooksPage>
       _applyStoryFilter();
       _applySocialRmeFilter();
       _applyScienceFilter();
+      _applyMathematicsFilter();
     });
   }
 
@@ -3380,6 +3447,187 @@ class _TextbooksPageState extends State<TextbooksPage>
             }
           },
           childCount: filteredScienceTextbooks.length,
+        ),
+      ),
+    );
+  }
+
+  /// Build grid of Mathematics textbooks
+  Widget _buildMathematicsTextbooksGrid(bool isMobile) {
+    if (filteredMathematicsTextbooks.isEmpty) {
+      return const SliverToBoxAdapter(child: SizedBox());
+    }
+
+    return SliverPadding(
+      padding: EdgeInsets.all(isMobile ? 16 : 24),
+      sliver: SliverGrid(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: isMobile ? 2 : 3,
+          childAspectRatio: isMobile ? 0.58 : 0.7,
+          crossAxisSpacing: isMobile ? 12 : 16,
+          mainAxisSpacing: isMobile ? 12 : 16,
+        ),
+        delegate: SliverChildBuilderDelegate(
+          (context, index) {
+            try {
+              final textbook = filteredMathematicsTextbooks[index];
+              final textbookId = textbook['id'] as String ?? 'unknown';
+              final subject = textbook['subject'] as String? ?? 'Mathematics';
+              final yearString = textbook['year'] as String? ?? 'JHS 1';
+              final totalChapters = textbook['totalChapters'] as int? ?? 0;
+              final totalSections = textbook['totalSections'] as int? ?? 0;
+              
+              // Get progress data
+              final progressData = mathematicsProgressMap[textbookId] ?? {};
+              final completedSections = (progressData['completedSections'] as List?)?.length ?? 0;
+              final totalXP = progressData['totalXP'] as int? ?? 0;
+              final progressPercent = totalSections > 0 ? (completedSections / totalSections * 100).toInt() : 0;
+              
+              // Blue color for Mathematics
+              const subjectColor = Color(0xFF2196F3);
+
+              return Card(
+                elevation: 4,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => MathematicsTextbookReaderPage(
+                          textbookId: textbookId,
+                          subject: subject,
+                          year: yearString,
+                        ),
+                      ),
+                    );
+                  },
+                  borderRadius: BorderRadius.circular(12),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // Color banner
+                      Container(
+                        height: isMobile ? 8 : 12,
+                        decoration: BoxDecoration(
+                          color: subjectColor,
+                          borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(12),
+                            topRight: Radius.circular(12),
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Padding(
+                          padding: EdgeInsets.all(isMobile ? 12 : 16),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              // Year badge
+                              Container(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: isMobile ? 8 : 12,
+                                  vertical: isMobile ? 4 : 6,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: subjectColor.withOpacity(0.1),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Text(
+                                  yearString.toUpperCase(),
+                                  style: GoogleFonts.montserrat(
+                                    fontSize: isMobile ? 10 : 12,
+                                    fontWeight: FontWeight.w600,
+                                    color: subjectColor,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(height: isMobile ? 8 : 12),
+                              // Subject name
+                              Text(
+                                subject,
+                                style: GoogleFonts.montserrat(
+                                  fontSize: isMobile ? 12 : 14,
+                                  fontWeight: FontWeight.bold,
+                                  color: const Color(0xFF1A1E3F),
+                                ),
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                              const SizedBox(height: 4),
+                              // Chapters/Sections
+                              Text(
+                                '$totalChapters chapters • $totalSections sections',
+                                style: GoogleFonts.montserrat(
+                                  fontSize: isMobile ? 10 : 12,
+                                  color: Colors.grey[600],
+                                ),
+                              ),
+                              const Spacer(),
+                              // Progress bar
+                              if (progressPercent > 0) ...[
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(4),
+                                  child: LinearProgressIndicator(
+                                    value: progressPercent / 100,
+                                    backgroundColor: Colors.grey[200],
+                                    valueColor: AlwaysStoppedAnimation<Color>(subjectColor),
+                                    minHeight: isMobile ? 4 : 6,
+                                  ),
+                                ),
+                                SizedBox(height: isMobile ? 4 : 6),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      '$progressPercent% complete',
+                                      style: GoogleFonts.montserrat(
+                                        fontSize: isMobile ? 9 : 11,
+                                        color: Colors.grey[600],
+                                      ),
+                                    ),
+                                    if (totalXP > 0)
+                                      Row(
+                                        children: [
+                                          Icon(
+                                            Icons.stars,
+                                            size: isMobile ? 12 : 14,
+                                            color: Colors.amber,
+                                          ),
+                                          const SizedBox(width: 2),
+                                          Text(
+                                            '$totalXP XP',
+                                            style: GoogleFonts.montserrat(
+                                              fontSize: isMobile ? 9 : 11,
+                                              fontWeight: FontWeight.w600,
+                                              color: Colors.amber[700],
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                  ],
+                                ),
+                              ],
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              );
+            } catch (e) {
+              debugPrint('❌ Error rendering Mathematics textbook: $e');
+              return const Card(
+                child: Center(
+                  child: Icon(Icons.error, color: Colors.red),
+                ),
+              );
+            }
+          },
+          childCount: filteredMathematicsTextbooks.length,
         ),
       ),
     );
