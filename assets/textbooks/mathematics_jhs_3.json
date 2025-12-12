@@ -1,4 +1,13 @@
 {
+  "id": "mathematics_jhs_3",
+  "subject": "Mathematics",
+  "year": "JHS 3",
+  "title": "Uriel Academy Mathematics JHS 3",
+  "description": "Complete Mathematics textbook for JHS 3",
+  "coverImage": "",
+  "totalChapters": 5,
+  "totalSections": 25,
+  "createdAt": "2025-12-12T17:35:59.950Z",
   "chapters": [
     {
       "id": "chapter_1",

@@ -1,4 +1,13 @@
 {
+  "id": "mathematics_jhs_2",
+  "subject": "Mathematics",
+  "year": "JHS 2",
+  "title": "Uriel Academy Mathematics JHS 2",
+  "description": "Complete Mathematics textbook for JHS 2",
+  "coverImage": "",
+  "totalChapters": 5,
+  "totalSections": 25,
+  "createdAt": "2025-12-12T17:35:59.948Z",
   "chapters": [
     {
       "id": "chapter_1",

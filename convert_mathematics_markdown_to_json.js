@@ -120,6 +120,15 @@ async function convertMarkdownToJson() {
       });
 
       const textbookData = {
+        id: `mathematics_jhs_${year}`,
+        subject: 'Mathematics',
+        year: `JHS ${year}`,
+        title: `Uriel Academy Mathematics JHS ${year}`,
+        description: `Complete Mathematics textbook for JHS ${year}`,
+        coverImage: '',
+        totalChapters: chaptersArray.length,
+        totalSections: chaptersArray.reduce((sum, ch) => sum + ch.sections.length, 0),
+        createdAt: new Date().toISOString(),
         chapters: chaptersArray
       };
 
