@@ -7,10 +7,12 @@ import '../services/storybook_service.dart';
 import '../services/course_reader_service.dart';
 import '../services/english_textbook_service.dart';
 import '../services/social_rme_textbook_service.dart';
+import '../services/science_textbook_service.dart';
 import 'enhanced_epub_reader_page.dart';
 import 'course_unit_list_page.dart';
 import 'english_textbook_reader_page.dart';
 import 'social_rme_textbook_reader_page.dart';
+import 'science_textbook_reader_page.dart';
 
 class TextbooksPage extends StatefulWidget {
   const TextbooksPage({super.key});
@@ -28,6 +30,7 @@ class _TextbooksPageState extends State<TextbooksPage>
   final TextbookService _textbookService = TextbookService();
   final StorybookService _storybookService = StorybookService();
   final SocialRmeTextbookService _socialRmeService = SocialRmeTextbookService();
+  final ScienceTextbookService _scienceService = ScienceTextbookService();
   final TextEditingController _searchController = TextEditingController();
 
   String selectedLevel = 'All';
@@ -52,6 +55,12 @@ class _TextbooksPageState extends State<TextbooksPage>
   List<Map<String, dynamic>> filteredSocialRmeTextbooks = [];
   Map<String, Map<String, dynamic>> socialRmeProgressMap = {};
   bool isLoadingSocialRme = true;
+  
+  // Science textbooks
+  List<Map<String, dynamic>> scienceTextbooks = [];
+  List<Map<String, dynamic>> filteredScienceTextbooks = [];
+  Map<String, Map<String, dynamic>> scienceProgressMap = {};
+  bool isLoadingScience = true;
   
   bool isLoading = true;
   bool isLoadingEnglish = true;
@@ -89,6 +98,7 @@ class _TextbooksPageState extends State<TextbooksPage>
     _loadStorybooks();
     _loadEnglishTextbooks();
     _loadSocialRmeTextbooks();
+    // _loadScienceTextbooks(); // TODO: Fix science service methods
     _animationController.forward();
   }
 
@@ -222,6 +232,62 @@ class _TextbooksPageState extends State<TextbooksPage>
     });
   }
 
+  Future<void> _loadScienceTextbooks() async {
+    setState(() => isLoadingScience = true);
+    try {
+      // Load all science textbooks
+      scienceTextbooks = await _scienceService.getAllTextbooks();
+      debugPrint('📚 Loaded ${scienceTextbooks.length} Science textbooks');
+      
+      // Load progress for each textbook
+      for (final textbook in scienceTextbooks) {
+        final progress = await _scienceService.getUserProgress(textbook['id']);
+        scienceProgressMap[textbook['id']] = progress;
+      }
+      
+      // Initialize filtered list
+      filteredScienceTextbooks = List.from(scienceTextbooks);
+      
+      // Apply any existing filters
+      _applyScienceFilter();
+    } catch (e) {
+      debugPrint('❌ Error loading Science textbooks: $e');
+    } finally {
+      setState(() => isLoadingScience = false);
+    }
+  }
+
+  void _applyScienceFilter() {
+    setState(() {
+      if (searchQuery.isEmpty && selectedLevel == 'All' && selectedSubject == 'All') {
+        filteredScienceTextbooks = List.from(scienceTextbooks);
+      } else {
+        filteredScienceTextbooks = scienceTextbooks.where((book) {
+          final title = (book['title'] as String? ?? '').toLowerCase();
+          final year = (book['year'] as String? ?? '').toLowerCase();
+          final subject = (book['subject'] as String? ?? '').toLowerCase();
+          final query = searchQuery.toLowerCase().trim();
+          
+          // Level filter
+          bool matchesLevel = selectedLevel == 'All' || year == selectedLevel.toLowerCase();
+          
+          // Subject filter
+          bool matchesSubject = selectedSubject == 'All' || 
+              subject.contains(selectedSubject.toLowerCase()) ||
+              (selectedSubject.toLowerCase() == 'science' && subject.contains('science'));
+          
+          // Search query filter
+          bool matchesSearch = query.isEmpty || 
+              title.contains(query) || 
+              year.contains(query) ||
+              subject.contains(query);
+          
+          return matchesLevel && matchesSubject && matchesSearch;
+        }).toList();
+      }
+    });
+  }
+
   void _onTabChanged() {
     setState(() {
       // Reset search when switching tabs
@@ -230,6 +296,7 @@ class _TextbooksPageState extends State<TextbooksPage>
       _applyFilters();
       _applyStoryFilter();
       _applySocialRmeFilter();
+      _applyScienceFilter();
     });
   }
 
@@ -363,6 +430,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                           _applyFilters();
                           _applyStoryFilter();
                           _applySocialRmeFilter();
+                          _applyScienceFilter();
                         },
                       ),
                     ),
@@ -522,13 +590,35 @@ class _TextbooksPageState extends State<TextbooksPage>
                   child: _buildEnglishPaginationControls(),
                 ),
               ],
+              // Science Textbooks
+              if (!isLoadingScience && filteredScienceTextbooks.isNotEmpty) ...[
+                SliverToBoxAdapter(
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(
+                      isMobile ? 16 : 24,
+                      filteredEnglishTextbooks.isNotEmpty ? 16 : (isMobile ? 16 : 24),
+                      isMobile ? 16 : 24,
+                      8,
+                    ),
+                    child: Text(
+                      'Science',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: const Color(0xFF1A1E3F),
+                      ),
+                    ),
+                  ),
+                ),
+                _buildScienceTextbooksGrid(isMobile),
+              ],
               // Social Studies and RME Textbooks
               if (!isLoadingSocialRme && filteredSocialRmeTextbooks.isNotEmpty) ...[
                 SliverToBoxAdapter(
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(
                       isMobile ? 16 : 24,
-                      filteredEnglishTextbooks.isNotEmpty ? 16 : (isMobile ? 16 : 24),
+                      (filteredEnglishTextbooks.isNotEmpty || filteredScienceTextbooks.isNotEmpty) ? 16 : (isMobile ? 16 : 24),
                       isMobile ? 16 : 24,
                       8,
                     ),
@@ -549,7 +639,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(
                       isMobile ? 16 : 24,
-                      filteredEnglishTextbooks.isNotEmpty || filteredSocialRmeTextbooks.isNotEmpty ? 8 : (isMobile ? 16 : 24),
+                      (filteredEnglishTextbooks.isNotEmpty || filteredScienceTextbooks.isNotEmpty || filteredSocialRmeTextbooks.isNotEmpty) ? 8 : (isMobile ? 16 : 24),
                       isMobile ? 16 : 24,
                       8,
                     ),
@@ -575,7 +665,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                       : _buildTextbookList(isMobile),
                 ),
               ],
-              if (!isLoadingEnglish && !isLoadingSocialRme && filteredEnglishTextbooks.isEmpty && filteredSocialRmeTextbooks.isEmpty && filteredTextbooks.isEmpty) ...[
+              if (!isLoadingEnglish && !isLoadingScience && !isLoadingSocialRme && filteredEnglishTextbooks.isEmpty && filteredScienceTextbooks.isEmpty && filteredSocialRmeTextbooks.isEmpty && filteredTextbooks.isEmpty) ...[
                 SliverFillRemaining(
                   child: _buildEmptyState(),
                 ),
@@ -597,13 +687,35 @@ class _TextbooksPageState extends State<TextbooksPage>
                   child: _buildEnglishPaginationControls(),
                 ),
               ],
+              // Science Textbooks
+              if (!isLoadingScience && filteredScienceTextbooks.isNotEmpty) ...[
+                SliverToBoxAdapter(
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(
+                      isMobile ? 16 : 24,
+                      filteredEnglishTextbooks.isNotEmpty ? 16 : (isMobile ? 16 : 24),
+                      isMobile ? 16 : 24,
+                      8,
+                    ),
+                    child: Text(
+                      'Science',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: const Color(0xFF1A1E3F),
+                      ),
+                    ),
+                  ),
+                ),
+                _buildScienceTextbooksGrid(isMobile),
+              ],
               // Social Studies and RME Textbooks
               if (!isLoadingSocialRme && filteredSocialRmeTextbooks.isNotEmpty) ...[
                 SliverToBoxAdapter(
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(
                       isMobile ? 16 : 24,
-                      filteredEnglishTextbooks.isNotEmpty ? 16 : (isMobile ? 16 : 24),
+                      (filteredEnglishTextbooks.isNotEmpty || filteredScienceTextbooks.isNotEmpty) ? 16 : (isMobile ? 16 : 24),
                       isMobile ? 16 : 24,
                       8,
                     ),
@@ -624,7 +736,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(
                       isMobile ? 16 : 24,
-                      (filteredEnglishTextbooks.isNotEmpty || filteredSocialRmeTextbooks.isNotEmpty) ? 8 : (isMobile ? 16 : 24),
+                      (filteredEnglishTextbooks.isNotEmpty || filteredScienceTextbooks.isNotEmpty || filteredSocialRmeTextbooks.isNotEmpty) ? 8 : (isMobile ? 16 : 24),
                       isMobile ? 16 : 24,
                       8,
                     ),
@@ -645,7 +757,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                       : _buildTextbookList(isMobile),
                 ),
               ],
-              if (!isLoadingEnglish && !isLoadingSocialRme && filteredEnglishTextbooks.isEmpty && filteredSocialRmeTextbooks.isEmpty && filteredTextbooks.isEmpty) ...[
+              if (!isLoadingEnglish && !isLoadingScience && !isLoadingSocialRme && filteredEnglishTextbooks.isEmpty && filteredScienceTextbooks.isEmpty && filteredSocialRmeTextbooks.isEmpty && filteredTextbooks.isEmpty) ...[
                 SliverFillRemaining(
                   child: _buildEmptyState(),
                 ),
@@ -679,6 +791,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                   selectedLevel = value!;
                   _applyFilters();
                   _applySocialRmeFilter();
+                  _applyScienceFilter();
                 }),
               ),
             ),
@@ -692,6 +805,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                   selectedSubject = value!;
                   _applyFilters();
                   _applySocialRmeFilter();
+                  _applyScienceFilter();
                 }),
               ),
             ),
@@ -707,6 +821,7 @@ class _TextbooksPageState extends State<TextbooksPage>
             selectedPublisher = value!;
             _applyFilters();
             _applySocialRmeFilter();
+            _applyScienceFilter();
           }),
         ),
       ],
@@ -725,6 +840,7 @@ class _TextbooksPageState extends State<TextbooksPage>
               selectedLevel = value!;
               _applyFilters();
               _applySocialRmeFilter();
+              _applyScienceFilter();
             }),
           ),
         ),
@@ -738,6 +854,7 @@ class _TextbooksPageState extends State<TextbooksPage>
               selectedSubject = value!;
               _applyFilters();
               _applySocialRmeFilter();
+              _applyScienceFilter();
             }),
           ),
         ),
@@ -751,6 +868,7 @@ class _TextbooksPageState extends State<TextbooksPage>
               selectedPublisher = value!;
               _applyFilters();
               _applySocialRmeFilter();
+              _applyScienceFilter();
             }),
           ),
         ),
@@ -3081,6 +3199,187 @@ class _TextbooksPageState extends State<TextbooksPage>
             }
           },
           childCount: filteredSocialRmeTextbooks.length,
+        ),
+      ),
+    );
+  }
+
+  /// Build grid of Science textbooks
+  Widget _buildScienceTextbooksGrid(bool isMobile) {
+    if (filteredScienceTextbooks.isEmpty) {
+      return const SliverToBoxAdapter(child: SizedBox());
+    }
+
+    return SliverPadding(
+      padding: EdgeInsets.all(isMobile ? 16 : 24),
+      sliver: SliverGrid(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: isMobile ? 2 : 3,
+          childAspectRatio: isMobile ? 0.58 : 0.7,
+          crossAxisSpacing: isMobile ? 12 : 16,
+          mainAxisSpacing: isMobile ? 12 : 16,
+        ),
+        delegate: SliverChildBuilderDelegate(
+          (context, index) {
+            try {
+              final textbook = filteredScienceTextbooks[index];
+              final textbookId = textbook['id'] as String ?? 'unknown';
+              final subject = textbook['subject'] as String? ?? 'Integrated Science';
+              final yearString = textbook['year'] as String? ?? 'JHS 1';
+              final totalChapters = textbook['totalChapters'] as int? ?? 0;
+              final totalSections = textbook['totalSections'] as int? ?? 0;
+              
+              // Get progress data
+              final progressData = scienceProgressMap[textbookId] ?? {};
+              final completedSections = (progressData['completedSections'] as List?)?.length ?? 0;
+              final totalXP = progressData['totalXP'] as int? ?? 0;
+              final progressPercent = totalSections > 0 ? (completedSections / totalSections * 100).toInt() : 0;
+              
+              // Green color for Science
+              const subjectColor = Color(0xFF4CAF50);
+
+              return Card(
+                elevation: 4,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ScienceTextbookReaderPage(
+                          textbookId: textbookId,
+                          subject: subject,
+                          year: yearString,
+                        ),
+                      ),
+                    );
+                  },
+                  borderRadius: BorderRadius.circular(12),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // Book cover
+                      Expanded(
+                        flex: 5,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: subjectColor.withOpacity(0.1),
+                            borderRadius: const BorderRadius.vertical(
+                              top: Radius.circular(12),
+                            ),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.science,
+                                size: isMobile ? 40 : 48,
+                                color: subjectColor.withOpacity(0.7),
+                              ),
+                              const SizedBox(height: 8),
+                              Text(
+                                yearString,
+                                style: GoogleFonts.montserrat(
+                                  fontSize: isMobile ? 14 : 16,
+                                  fontWeight: FontWeight.bold,
+                                  color: subjectColor,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      // Book details
+                      Expanded(
+                        flex: 4,
+                        child: Padding(
+                          padding: EdgeInsets.all(isMobile ? 8 : 12),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              // Title
+                              Text(
+                                subject,
+                                style: GoogleFonts.montserrat(
+                                  fontSize: isMobile ? 12 : 14,
+                                  fontWeight: FontWeight.bold,
+                                  color: const Color(0xFF1A1E3F),
+                                ),
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                              const SizedBox(height: 4),
+                              // Chapters/Sections
+                              Text(
+                                '$totalChapters chapters • $totalSections sections',
+                                style: GoogleFonts.montserrat(
+                                  fontSize: isMobile ? 10 : 12,
+                                  color: Colors.grey[600],
+                                ),
+                              ),
+                              const Spacer(),
+                              // Progress bar
+                              if (progressPercent > 0) ...[
+                                const SizedBox(height: 4),
+                                LinearProgressIndicator(
+                                  value: progressPercent / 100,
+                                  backgroundColor: Colors.grey[200],
+                                  valueColor: const AlwaysStoppedAnimation<Color>(subjectColor),
+                                  minHeight: isMobile ? 3 : 4,
+                                  borderRadius: BorderRadius.circular(2),
+                                ),
+                                const SizedBox(height: 2),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      '$progressPercent%',
+                                      style: GoogleFonts.montserrat(
+                                        fontSize: isMobile ? 8 : 10,
+                                        color: Colors.grey[600],
+                                      ),
+                                    ),
+                                    Row(
+                                      children: [
+                                        Icon(
+                                          Icons.star,
+                                          size: isMobile ? 10 : 12,
+                                          color: Colors.amber[700],
+                                        ),
+                                        const SizedBox(width: 2),
+                                        Text(
+                                          '$totalXP XP',
+                                          style: GoogleFonts.montserrat(
+                                            fontSize: isMobile ? 8 : 10,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.amber[700],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              );
+            } catch (e) {
+              debugPrint('❌ Error rendering Science textbook: $e');
+              return const Card(
+                child: Center(
+                  child: Icon(Icons.error, color: Colors.red),
+                ),
+              );
+            }
+          },
+          childCount: filteredScienceTextbooks.length,
         ),
       ),
     );
