@@ -3,6 +3,14 @@
     "uriel": "uriel-academy-41fb0",
     "storybook": "uriel-academy-41fb0"
   },
-  "targets": {},
+  "targets": {
+    "uriel-academy-41fb0": {
+      "hosting": {
+        "uriel-academy": [
+          "uriel-academy-41fb0"
+        ]
+      }
+    }
+  },
   "etags": {}
 }

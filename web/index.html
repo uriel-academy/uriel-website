@@ -286,6 +286,13 @@
     <div class="loader"></div>
   </div>
   
+  <!-- Configure Flutter to use HTML renderer to avoid CanvasKit CDN -->
+  <script>
+    window.flutterConfiguration = {
+      renderer: "html"
+    };
+  </script>
+  
   <script src="flutter_bootstrap.js" async></script>
   
   <script>
