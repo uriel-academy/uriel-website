@@ -197,7 +197,7 @@ class LandingPage extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               Text(
-                'Fast, mobile-first, exam-focused.',
+                'Fast, mobile-first, and exam-focused.',
                 style: TextStyle(
                   fontSize: 14,
                   color: Colors.grey[600],
@@ -215,44 +215,135 @@ class LandingPage extends StatelessWidget {
   }
 
   Widget _buildBackgroundSymbols(double width, bool isDesktop) {
-    final symbols = [
-      {'icon': '📚', 'color': const Color(0xFFE8F4F8), 'size': isDesktop ? 120.0 : 80.0, 'top': 50.0, 'left': width * 0.05, 'rotation': -0.2},
-      {'icon': '✏️', 'color': const Color(0xFFFFF4E6), 'size': isDesktop ? 100.0 : 70.0, 'top': 150.0, 'right': width * 0.08, 'rotation': 0.3},
-      {'icon': '🎓', 'color': const Color(0xFFF0E6FF), 'size': isDesktop ? 110.0 : 75.0, 'top': 280.0, 'left': width * 0.1, 'rotation': 0.15},
-      {'icon': '📝', 'color': const Color(0xFFFFE8F0), 'size': isDesktop ? 90.0 : 65.0, 'top': 400.0, 'right': width * 0.12, 'rotation': -0.25},
-      {'icon': '🧑‍🎓', 'color': const Color(0xFFE8F5E9), 'size': isDesktop ? 130.0 : 85.0, 'top': 100.0, 'right': width * 0.15, 'rotation': 0.1},
-      {'icon': '👩‍🎓', 'color': const Color(0xFFFFF3E0), 'size': isDesktop ? 125.0 : 80.0, 'top': 320.0, 'left': width * 0.08, 'rotation': -0.15},
-      {'icon': '💡', 'color': const Color(0xFFFFFDE7), 'size': isDesktop ? 95.0 : 70.0, 'top': 200.0, 'left': width * 0.15, 'rotation': 0.2},
-      {'icon': '🎯', 'color': const Color(0xFFE3F2FD), 'size': isDesktop ? 105.0 : 75.0, 'top': 450.0, 'left': width * 0.12, 'rotation': -0.1},
-    ];
-
+    if (width < 400) return const SizedBox.shrink();
+    
     return Stack(
-      children: symbols.map((symbol) {
-        return Positioned(
-          top: symbol['top'] as double,
-          left: symbol.containsKey('left') ? symbol['left'] as double : null,
-          right: symbol.containsKey('right') ? symbol['right'] as double : null,
-          child: Transform.rotate(
-            angle: symbol['rotation'] as double,
-            child: Container(
-              width: symbol['size'] as double,
-              height: symbol['size'] as double,
-              decoration: BoxDecoration(
-                color: symbol['color'] as Color,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Center(
-                child: Text(
-                  symbol['icon'] as String,
-                  style: TextStyle(
-                    fontSize: (symbol['size'] as double) * 0.6,
-                  ),
-                ),
-              ),
+      children: [
+        // Books - top left
+        Positioned(
+          top: 50,
+          left: width * 0.05,
+          child: _buildSymbol('📚', const Color(0xFFE8F4F8), isDesktop ? 120.0 : 80.0, -0.2),
+        ),
+        // Pencil - top right
+        Positioned(
+          top: 150,
+          right: width * 0.08,
+          child: _buildSymbol('✏️', const Color(0xFFFFF4E6), isDesktop ? 100.0 : 70.0, 0.3),
+        ),
+        // Graduation cap - middle left
+        Positioned(
+          top: 280,
+          left: width * 0.1,
+          child: _buildSymbol('🎓', const Color(0xFFF0E6FF), isDesktop ? 110.0 : 75.0, 0.15),
+        ),
+        // Note - bottom right
+        Positioned(
+          top: 400,
+          right: width * 0.12,
+          child: _buildSymbol('📝', const Color(0xFFFFE8F0), isDesktop ? 90.0 : 65.0, -0.25),
+        ),
+        // Male student - top right
+        Positioned(
+          top: 100,
+          right: width * 0.15,
+          child: _buildSymbol('🧑‍🎓', const Color(0xFFE8F5E9), isDesktop ? 130.0 : 85.0, 0.1),
+        ),
+        // Female student - middle left
+        Positioned(
+          top: 320,
+          left: width * 0.08,
+          child: _buildSymbol('👩‍🎓', const Color(0xFFFFF3E0), isDesktop ? 125.0 : 80.0, -0.15),
+        ),
+        // Light bulb - upper left
+        Positioned(
+          top: 200,
+          left: width * 0.15,
+          child: _buildSymbol('💡', const Color(0xFFFFFDE7), isDesktop ? 95.0 : 70.0, 0.2),
+        ),
+        // Target - bottom left
+        Positioned(
+          top: 450,
+          left: width * 0.12,
+          child: _buildSymbol('🎯', const Color(0xFFE3F2FD), isDesktop ? 105.0 : 75.0, -0.1),
+        ),
+        // Adinkra: Nyansapo (wisdom knot) - upper right
+        Positioned(
+          top: 80,
+          right: width * 0.05,
+          child: _buildTextSymbol('◈', const Color(0xFFFFEBEE), isDesktop ? 100.0 : 65.0, 0.25),
+        ),
+        // Adinkra: Sankofa (learning from past) - middle right
+        Positioned(
+          top: 250,
+          right: width * 0.06,
+          child: _buildTextSymbol('⟲', const Color(0xFFF3E5F5), isDesktop ? 110.0 : 70.0, -0.2),
+        ),
+        // Adinkra: Nkyinkyim (twists of life/learning) - lower left
+        Positioned(
+          top: 380,
+          left: width * 0.06,
+          child: _buildTextSymbol('⚡', const Color(0xFFE8EAF6), isDesktop ? 95.0 : 65.0, 0.15),
+        ),
+        // Adinkra: Dwennimmen (humility/strength) - bottom middle
+        Positioned(
+          top: 480,
+          right: width * 0.2,
+          child: _buildTextSymbol('◊', const Color(0xFFFFF9C4), isDesktop ? 105.0 : 70.0, -0.3),
+        ),
+        // Adinkra: Ese Ne Tekrema (friendship) - top middle
+        Positioned(
+          top: 60,
+          left: width * 0.25,
+          child: _buildTextSymbol('⚘', const Color(0xFFE0F2F1), isDesktop ? 90.0 : 60.0, 0.1),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildSymbol(String icon, Color bgColor, double size, double rotation) {
+    return Transform.rotate(
+      angle: rotation,
+      child: Container(
+        width: size,
+        height: size,
+        decoration: BoxDecoration(
+          color: bgColor,
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Center(
+          child: Text(
+            icon,
+            style: TextStyle(
+              fontSize: size * 0.6,
             ),
           ),
-        );
-      }).toList(),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildTextSymbol(String symbol, Color bgColor, double size, double rotation) {
+    return Transform.rotate(
+      angle: rotation,
+      child: Container(
+        width: size,
+        height: size,
+        decoration: BoxDecoration(
+          color: bgColor,
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Center(
+          child: Text(
+            symbol,
+            style: TextStyle(
+              fontSize: size * 0.5,
+              fontWeight: FontWeight.bold,
+              color: Colors.black45,
+            ),
+          ),
+        ),
+      ),
     );
   }
 
