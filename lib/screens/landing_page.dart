@@ -270,12 +270,12 @@ class LandingPage extends StatelessWidget {
                 children: [
                   _buildFeatureCard(
                     title: '10,000+ Past Questions',
-                    description: 'Access BECE, WASSCE, and NOVDEC past questions with comprehensive answers and explanations',
+                    description: 'Access BECE past questions with comprehensive answers and explanations',
                     width: isDesktop ? (constraints.maxWidth - 40) / 3 : constraints.maxWidth,
                   ),
                   _buildFeatureCard(
                     title: 'Complete Study Toolkit',
-                    description: 'Approved textbooks, interactive flashcards, educational trivia, and smart revision notes',
+                    description: 'Curriculum-aligned textbooks, interactive flashcards, educational trivia, and smart revision notes',
                     width: isDesktop ? (constraints.maxWidth - 40) / 3 : constraints.maxWidth,
                   ),
                   _buildFeatureCard(
@@ -405,7 +405,7 @@ class LandingPage extends StatelessWidget {
                     period: '/month',
                     features: [
                       'All textbooks - JHS 1-3',
-                      'All past questions - 1990-2024',
+                      'All past questions - 1990-2025',
                       'Student dashboard',
                       'Weekly parent reports',
                       'Priority support - Email 48hr',

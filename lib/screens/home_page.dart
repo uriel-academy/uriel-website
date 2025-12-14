@@ -3,7 +3,6 @@ import 'package:flutter/foundation.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:cloud_functions/cloud_functions.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'dart:async';
 import 'dart:html' as html show window;
@@ -14,8 +13,6 @@ import '../services/notification_service.dart';
 import '../services/leaderboard_rank_service.dart';
 import '../services/telemetry_service.dart';
 import '../services/resilience_service.dart';
-import '../widgets/uri_chat_input.dart';
-import '../widgets/uri_chat_interface.dart';
 import '../models/subject_progress_model.dart';
 import '../services/xp_service.dart';
 import '../widgets/rank_badge_widget.dart';
@@ -37,7 +34,6 @@ import 'student_profile_page.dart';
 import 'teacher_profile_page.dart';
 import 'redesigned_leaderboard_page.dart';
 import 'uri_page.dart';
-import 'package:uuid/uuid.dart';
 
 class StudentHomePage extends StatefulWidget {
   final bool isTeacher;
@@ -3351,6 +3347,11 @@ class _StudentHomePageState extends State<StudentHomePage>
 
           SizedBox(height: isSmallScreen ? 16 : 24),
 
+          // Smart Study Planner Card
+          _buildSmartStudyPlannerCard(),
+
+          SizedBox(height: isSmallScreen ? 16 : 24),
+
           // Rank Progress Card
           if (currentRank != null)
             RankProgressCard(
@@ -4865,6 +4866,337 @@ class _StudentHomePageState extends State<StudentHomePage>
         ),
       ],
     );
+  }
+
+  Widget _buildSmartStudyPlannerCard() {
+    final isSmallScreen = MediaQuery.of(context).size.width < 768;
+    
+    // Calculate BECE exam date (assuming June 2026)
+    final beceExamDate = DateTime(2026, 6, 1);
+    final today = DateTime.now();
+    final daysUntilBECE = beceExamDate.difference(today).inDays;
+    
+    // Smart recommendations based on user progress
+    final recommendations = _generateSmartRecommendations();
+    
+    return Container(
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [Color(0xFFF8F9FA), Color(0xFFFFFFFF)],
+        ),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: Colors.black.withValues(alpha: 0.06), width: 0.5),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.04),
+            blurRadius: 20,
+            offset: const Offset(0, 8),
+          ),
+        ],
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Header Section - Apple-inspired
+            Container(
+              padding: EdgeInsets.all(isSmallScreen ? 20 : 24),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                            colors: [Color(0xFF667EEA), Color(0xFF764BA2)],
+                          ),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: const Icon(Icons.school_rounded, color: Colors.white, size: 20),
+                      ),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Your Study Plan',
+                              style: GoogleFonts.inter(
+                                fontSize: isSmallScreen ? 18 : 20,
+                                fontWeight: FontWeight.w600,
+                                color: const Color(0xFF1D1D1F),
+                                letterSpacing: -0.5,
+                              ),
+                            ),
+                            const SizedBox(height: 2),
+                            Text(
+                              'Smart recommendations for BECE success',
+                              style: GoogleFonts.inter(
+                                fontSize: 13,
+                                color: const Color(0xFF86868B),
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 20),
+                  
+                  // BECE Countdown Chip
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFF5F5F7),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const Icon(Icons.calendar_today_rounded, size: 16, color: Color(0xFF667EEA)),
+                        const SizedBox(width: 8),
+                        Text(
+                          'BECE 2026',
+                          style: GoogleFonts.inter(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w600,
+                            color: const Color(0xFF1D1D1F),
+                          ),
+                        ),
+                        const SizedBox(width: 4),
+                        Text(
+                          '· $daysUntilBECE days',
+                          style: GoogleFonts.inter(
+                            fontSize: 13,
+                            color: const Color(0xFF86868B),
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            
+            // Divider
+            Container(
+              height: 0.5,
+              color: Colors.black.withValues(alpha: 0.06),
+            ),
+            
+            // Recommendations Section
+            Padding(
+              padding: EdgeInsets.all(isSmallScreen ? 20 : 24),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Recommended for you',
+                    style: GoogleFonts.inter(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w600,
+                      color: const Color(0xFF1D1D1F),
+                      letterSpacing: -0.3,
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  
+                  ...recommendations.map((rec) => _buildRecommendationItem(rec, isSmallScreen)),
+                  
+                  const SizedBox(height: 16),
+                  
+                  // View Full Plan Button
+                  SizedBox(
+                    width: double.infinity,
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => const StudyPlanPage()),
+                        );
+                      },
+                      style: TextButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(vertical: 14),
+                        backgroundColor: const Color(0xFF0071E3),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                      ),
+                      child: Text(
+                        'View Full Study Plan',
+                        style: GoogleFonts.inter(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white,
+                          letterSpacing: -0.2,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildRecommendationItem(Map<String, dynamic> recommendation, bool isSmallScreen) {
+    return Container(
+      margin: const EdgeInsets.only(bottom: 12),
+      padding: EdgeInsets.all(isSmallScreen ? 14 : 16),
+      decoration: BoxDecoration(
+        color: recommendation['color'].withValues(alpha: 0.08),
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(
+          color: recommendation['color'].withValues(alpha: 0.15),
+          width: 0.5,
+        ),
+      ),
+      child: Row(
+        children: [
+          Container(
+            padding: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              color: recommendation['color'].withValues(alpha: 0.15),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Icon(
+              recommendation['icon'],
+              size: 20,
+              color: recommendation['color'],
+            ),
+          ),
+          const SizedBox(width: 14),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  recommendation['type'],
+                  style: GoogleFonts.inter(
+                    fontSize: 11,
+                    fontWeight: FontWeight.w600,
+                    color: recommendation['color'],
+                    letterSpacing: 0.5,
+                  ),
+                ),
+                const SizedBox(height: 2),
+                Text(
+                  recommendation['title'],
+                  style: GoogleFonts.inter(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                    color: const Color(0xFF1D1D1F),
+                    letterSpacing: -0.2,
+                  ),
+                ),
+                if (recommendation['subtitle'] != null) ...[
+                  const SizedBox(height: 2),
+                  Text(
+                    recommendation['subtitle'],
+                    style: GoogleFonts.inter(
+                      fontSize: 12,
+                      color: const Color(0xFF86868B),
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ],
+              ],
+            ),
+          ),
+          Icon(
+            Icons.chevron_right_rounded,
+            size: 20,
+            color: const Color(0xFF86868B),
+          ),
+        ],
+      ),
+    );
+  }
+
+  List<Map<String, dynamic>> _generateSmartRecommendations() {
+    final recommendations = <Map<String, dynamic>>[];
+    
+    // Analyze user's weakest subjects
+    final weakSubjects = _subjectProgress.where((s) => s.progress < 60).toList();
+    
+    if (weakSubjects.isNotEmpty) {
+      final weakest = weakSubjects.first;
+      recommendations.add({
+        'type': 'TEXTBOOK',
+        'icon': Icons.menu_book_rounded,
+        'color': const Color(0xFF34C759),
+        'title': 'Read ${weakest.name} - JHS 1',
+        'subtitle': 'Build foundation • ${weakest.progress.toInt()}% mastery',
+        'action': 'textbook',
+        'subject': weakest.name,
+      });
+    }
+    
+    // Recommend past questions based on exam proximity
+    recommendations.add({
+      'type': 'PAST QUESTIONS',
+      'icon': Icons.quiz_rounded,
+      'color': const Color(0xFFFF9500),
+      'title': 'Solve BECE 2024 Mathematics MCQ',
+      'subtitle': 'Recent exam patterns • 40 questions',
+      'action': 'past_questions',
+      'subject': 'Mathematics',
+      'year': 2024,
+    });
+    
+    // Recommend weak areas from recent quizzes
+    if (_subjectProgress.any((s) => s.name == 'Science' && s.progress < 70)) {
+      recommendations.add({
+        'type': 'PAST QUESTIONS',
+        'icon': Icons.science_rounded,
+        'color': const Color(0xFF007AFF),
+        'title': 'Solve BECE Social Studies - Human Environment',
+        'subtitle': 'Focus area • 25 questions',
+        'action': 'past_questions',
+        'subject': 'Social Studies',
+        'topic': 'Human Environment',
+      });
+    }
+    
+    // Recommend end-of-term prep
+    final currentMonth = DateTime.now().month;
+    if (currentMonth == 11 || currentMonth == 3 || currentMonth == 7) {
+      recommendations.add({
+        'type': 'END OF TERM',
+        'icon': Icons.event_note_rounded,
+        'color': const Color(0xFFAF52DE),
+        'title': 'End of Term Exam Prep',
+        'subtitle': 'Mixed practice • All subjects',
+        'action': 'end_of_term',
+      });
+    }
+    
+    // Always recommend revision for strong subjects
+    final strongSubjects = _subjectProgress.where((s) => s.progress >= 80).toList();
+    if (strongSubjects.isNotEmpty) {
+      final strongest = strongSubjects.first;
+      recommendations.add({
+        'type': 'REVISION',
+        'icon': Icons.auto_awesome_rounded,
+        'color': const Color(0xFFFF2D55),
+        'title': 'Revise ${strongest.name} - Advanced',
+        'subtitle': 'Maintain excellence • ${strongest.progress.toInt()}% mastery',
+        'action': 'revision',
+        'subject': strongest.name,
+      });
+    }
+    
+    return recommendations.take(3).toList();
   }
 
   Widget _buildSubjectProgressCard() {
@@ -8062,7 +8394,7 @@ class _StudentHomePageState extends State<StudentHomePage>
           ),
           const SizedBox(height: 12),
           ..._studyRecommendations.map(
-              (recommendation) => _buildRecommendationItem(recommendation)),
+              (recommendation) => _buildSimpleRecommendationItem(recommendation)),
           const SizedBox(height: 16),
           ElevatedButton(
             onPressed: () => setState(() => _selectedIndex = 1),
@@ -8084,7 +8416,7 @@ class _StudentHomePageState extends State<StudentHomePage>
     );
   }
 
-  Widget _buildRecommendationItem(String text) {
+  Widget _buildSimpleRecommendationItem(String text) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 8),
       child: Row(
