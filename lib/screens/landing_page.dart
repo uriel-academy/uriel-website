@@ -117,21 +117,27 @@ class LandingPage extends StatelessWidget {
         builder: (context, constraints) {
           final isDesktop = constraints.maxWidth > 768;
           
-          return Column(
+          return Stack(
             children: [
-              const SizedBox(height: 60),
-              // Main Headline
-              Text(
-                'LEARN. PRACTICE. SUCCEED.',
-                textAlign: TextAlign.center,
-                style: GoogleFonts.montserrat(
-                  fontSize: isDesktop ? 50.5 : 32,
-                  fontWeight: FontWeight.w900,
-                  color: const Color(0xFF1A1E3F),
-                  height: 1.1,
-                  letterSpacing: -1,
-                ),
-              ),
+              // Background decorative symbols
+              _buildBackgroundSymbols(constraints.maxWidth, isDesktop),
+              
+              // Main content
+              Column(
+                children: [
+                  const SizedBox(height: 60),
+                  // Main Headline
+                  Text(
+                    'LEARN. PRACTICE. SUCCEED.',
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.montserrat(
+                      fontSize: isDesktop ? 50.5 : 32,
+                      fontWeight: FontWeight.w900,
+                      color: const Color(0xFF1A1E3F),
+                      height: 1.1,
+                      letterSpacing: -1,
+                    ),
+                  ),
               const SizedBox(height: 16),
               // Subheadline
               Text(
@@ -150,7 +156,7 @@ class LandingPage extends StatelessWidget {
               Container(
                 constraints: const BoxConstraints(maxWidth: 600),
                 child: Text(
-                  'Your all-in-one BECE & WASSCE study companion with 12,000+ past questions (and growing), curriculum-aligned textbooks, revision plans, grade predictions, AI tools, and peer-shared notes.',
+                  'Your all-in-one BECE study companion with 12,000+ past questions (and growing), curriculum-aligned textbooks, revision plans, grade predictions, AI tools, and peer-shared notes.',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: isDesktop ? 20.5 : 18,
@@ -199,10 +205,54 @@ class LandingPage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 60),
+                ],
+              ),
             ],
           );
         },
       ),
+    );
+  }
+
+  Widget _buildBackgroundSymbols(double width, bool isDesktop) {
+    final symbols = [
+      {'icon': '📚', 'color': const Color(0xFFE8F4F8), 'size': isDesktop ? 120.0 : 80.0, 'top': 50.0, 'left': width * 0.05, 'rotation': -0.2},
+      {'icon': '✏️', 'color': const Color(0xFFFFF4E6), 'size': isDesktop ? 100.0 : 70.0, 'top': 150.0, 'right': width * 0.08, 'rotation': 0.3},
+      {'icon': '🎓', 'color': const Color(0xFFF0E6FF), 'size': isDesktop ? 110.0 : 75.0, 'top': 280.0, 'left': width * 0.1, 'rotation': 0.15},
+      {'icon': '📝', 'color': const Color(0xFFFFE8F0), 'size': isDesktop ? 90.0 : 65.0, 'top': 400.0, 'right': width * 0.12, 'rotation': -0.25},
+      {'icon': '🧑‍🎓', 'color': const Color(0xFFE8F5E9), 'size': isDesktop ? 130.0 : 85.0, 'top': 100.0, 'right': width * 0.15, 'rotation': 0.1},
+      {'icon': '👩‍🎓', 'color': const Color(0xFFFFF3E0), 'size': isDesktop ? 125.0 : 80.0, 'top': 320.0, 'left': width * 0.08, 'rotation': -0.15},
+      {'icon': '💡', 'color': const Color(0xFFFFFDE7), 'size': isDesktop ? 95.0 : 70.0, 'top': 200.0, 'left': width * 0.15, 'rotation': 0.2},
+      {'icon': '🎯', 'color': const Color(0xFFE3F2FD), 'size': isDesktop ? 105.0 : 75.0, 'top': 450.0, 'left': width * 0.12, 'rotation': -0.1},
+    ];
+
+    return Stack(
+      children: symbols.map((symbol) {
+        return Positioned(
+          top: symbol['top'] as double,
+          left: symbol.containsKey('left') ? symbol['left'] as double : null,
+          right: symbol.containsKey('right') ? symbol['right'] as double : null,
+          child: Transform.rotate(
+            angle: symbol['rotation'] as double,
+            child: Container(
+              width: symbol['size'] as double,
+              height: symbol['size'] as double,
+              decoration: BoxDecoration(
+                color: symbol['color'] as Color,
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Center(
+                child: Text(
+                  symbol['icon'] as String,
+                  style: TextStyle(
+                    fontSize: (symbol['size'] as double) * 0.6,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        );
+      }).toList(),
     );
   }
 
