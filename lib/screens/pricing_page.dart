@@ -1028,7 +1028,7 @@ class _PricingPageState extends State<PricingPage> {
       child: Column(
         children: [
           Text(
-            'Trusted by 10,000+ Students & 50+ Schools',
+            'trusted by students across ghana',
             style: GoogleFonts.montserrat(
               fontSize: isMobile ? 20 : 28,
               fontWeight: FontWeight.bold,

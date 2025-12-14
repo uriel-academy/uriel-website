@@ -135,7 +135,7 @@ class LandingPage extends StatelessWidget {
               const SizedBox(height: 16),
               // Subheadline
               Text(
-                'Study Smarter, Not Harder',
+                'Turn screen time into exam wins.',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.playfairDisplay(
                   fontSize: isDesktop ? 24 : 20,
@@ -149,7 +149,7 @@ class LandingPage extends StatelessWidget {
               Container(
                 constraints: const BoxConstraints(maxWidth: 600),
                 child: Text(
-                  'Your complete study companion with 10,000+ past questions, AI-powered tools, approved textbooks, interactive trivia, flashcards, and personalized study plans. Study smarter, achieve more.',
+                  'Your all-in-one BECE & WASSCE study companion with 12,000+ past questions (and growing), curriculum-aligned textbooks, revision plans, grade predictions, AI tools, and peer-shared notes.',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 18,
@@ -190,7 +190,7 @@ class LandingPage extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               Text(
-                'Join 10,000+ students already using Uriel Academy',
+                'Fast, mobile-first, exam-focused.',
                 style: TextStyle(
                   fontSize: 14,
                   color: Colors.grey[600],

@@ -118,20 +118,20 @@ class _AboutUsPageState extends State<AboutUsPage> with TickerProviderStateMixin
           
           const Spacer(),
           
-          // Back to Home Button (Desktop)
-          if (!isSmallScreen)
-            TextButton(
-              onPressed: () => Navigator.pushNamed(context, '/landing'),
-              child: Text(
-                'Back to Home',
-                style: GoogleFonts.montserrat(
-                  color: const Color(0xFF1A1E3F),
-                  fontWeight: FontWeight.w500,
-                ),
+          // Back to Home Button
+          TextButton(
+            onPressed: () => Navigator.pushNamed(context, '/landing'),
+            child: Text(
+              'Back to Home',
+              style: GoogleFonts.montserrat(
+                color: const Color(0xFF1A1E3F),
+                fontWeight: FontWeight.w500,
+                fontSize: isSmallScreen ? 14 : 16,
               ),
             ),
+          ),
           
-          if (!isSmallScreen) const SizedBox(width: 16),
+          SizedBox(width: isSmallScreen ? 8 : 16),
           
           // Get Started Button
           ElevatedButton(
