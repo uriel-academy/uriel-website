@@ -125,7 +125,7 @@ class LandingPage extends StatelessWidget {
                 'LEARN. PRACTICE. SUCCEED.',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.montserrat(
-                  fontSize: isDesktop ? 48 : 32,
+                  fontSize: isDesktop ? 50.5 : 32,
                   fontWeight: FontWeight.w900,
                   color: const Color(0xFF1A1E3F),
                   height: 1.1,
@@ -137,9 +137,10 @@ class LandingPage extends StatelessWidget {
               Text(
                 'Turn screen time into exam wins.',
                 textAlign: TextAlign.center,
-                style: GoogleFonts.playfairDisplay(
-                  fontSize: isDesktop ? 24 : 20,
+                style: GoogleFonts.lobsterTwo(
+                  fontSize: isDesktop ? 26.5 : 20,
                   fontWeight: FontWeight.w600,
+                  fontStyle: FontStyle.italic,
                   color: const Color(0xFFD62828),
                   letterSpacing: -0.5,
                 ),
@@ -152,7 +153,7 @@ class LandingPage extends StatelessWidget {
                   'Your all-in-one BECE & WASSCE study companion with 12,000+ past questions (and growing), curriculum-aligned textbooks, revision plans, grade predictions, AI tools, and peer-shared notes.',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: isDesktop ? 20.5 : 18,
                     color: Colors.grey[700],
                     height: 1.5,
                     fontWeight: FontWeight.w400,
