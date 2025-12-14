@@ -113,6 +113,44 @@ class LandingPage extends StatelessWidget {
   Widget _buildHeroSection(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        image: DecorationImage(
+          image: NetworkImage(
+            'data:image/svg+xml;utf8,'
+            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">'
+            '<circle cx="100" cy="80" r="50" fill="%23E8F4F8" opacity="0.3"/>'
+            '<text x="85" y="100" font-size="30">📚</text>'
+            '<circle cx="1050" cy="150" r="45" fill="%23FFF4E6" opacity="0.3"/>'
+            '<text x="1037" y="167" font-size="28">✏️</text>'
+            '<circle cx="150" cy="300" r="55" fill="%23F0E6FF" opacity="0.3"/>'
+            '<text x="133" y="320" font-size="32">🎓</text>'
+            '<circle cx="1000" cy="420" r="40" fill="%23FFE8F0" opacity="0.3"/>'
+            '<text x="988" y="437" font-size="26">📝</text>'
+            '<circle cx="950" cy="120" r="60" fill="%23E8F5E9" opacity="0.3"/>'
+            '<text x="930" y="142" font-size="36">🧑‍🎓</text>'
+            '<circle cx="180" cy="450" r="58" fill="%23FFF3E0" opacity="0.3"/>'
+            '<text x="160" y="470" font-size="34">👩‍🎓</text>'
+            '<circle cx="250" cy="220" r="42" fill="%23FFFDE7" opacity="0.3"/>'
+            '<text x="237" y="237" font-size="28">💡</text>'
+            '<circle cx="200" cy="520" r="48" fill="%23E3F2FD" opacity="0.3"/>'
+            '<text x="185" y="540" font-size="30">🎯</text>'
+            '<circle cx="1020" cy="90" r="46" fill="%23FFEBEE" opacity="0.3"/>'
+            '<text x="1005" y="107" font-size="28">◈</text>'
+            '<circle cx="980" cy="300" r="52" fill="%23F3E5F5" opacity="0.3"/>'
+            '<text x="963" y="318" font-size="32">⟲</text>'
+            '<circle cx="120" cy="380" r="44" fill="%23E8EAF6" opacity="0.3"/>'
+            '<text x="107" y="395" font-size="28">⚡</text>'
+            '<circle cx="850" cy="510" r="50" fill="%23FFF9C4" opacity="0.3"/>'
+            '<text x="835" y="528" font-size="30">◊</text>'
+            '<circle cx="400" cy="70" r="42" fill="%23E0F2F1" opacity="0.3"/>'
+            '<text x="387" y="85" font-size="28">⚘</text>'
+            '</svg>'
+          ),
+          fit: BoxFit.cover,
+          opacity: 0.6,
+        ),
+      ),
       child: LayoutBuilder(
         builder: (context, constraints) {
           final isDesktop = constraints.maxWidth > 768;
