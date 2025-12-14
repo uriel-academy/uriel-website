@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:cloud_functions/cloud_functions.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-import '../constants/app_styles.dart';
 
 class StudyPlanPage extends StatefulWidget {
   const StudyPlanPage({Key? key}) : super(key: key);
@@ -16,59 +15,42 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
   late AnimationController _animationController;
   late Animation<double> _fadeAnimation;
   
-  // Onboarding state
+  // Simplified onboarding state
   int _currentStep = 0;
   bool _hasExistingPlan = false;
   bool _isLoadingPlan = false;
   bool _isGeneratingPlan = false;
   
-  // Step 1: Goal Setting
-  String _studyGoal = 'Exam preparation';
+  // Step 1: Exam Focus (BECE or End-of-Term)
+  String _examType = 'BECE 2026'; // BECE 2026, End-of-Term 1, End-of-Term 2, End-of-Term 3
   DateTime? _examDate;
   final _examDateController = TextEditingController();
   
-  // Step 2: Commitments
-  int _weeklyHours = 10;
-  String _preferredTime = 'Afternoon';
-  final Map<String, Map<String, bool>> _availability = {
-    'Monday': {'Morning': false, 'Afternoon': false, 'Evening': false},
-    'Tuesday': {'Morning': false, 'Afternoon': false, 'Evening': false},
-    'Wednesday': {'Morning': false, 'Afternoon': false, 'Evening': false},
-    'Thursday': {'Morning': false, 'Afternoon': false, 'Evening': false},
-    'Friday': {'Morning': false, 'Afternoon': false, 'Evening': false},
-    'Saturday': {'Morning': false, 'Afternoon': false, 'Evening': false},
-    'Sunday': {'Morning': false, 'Afternoon': false, 'Evening': false},
-  };
+  // Step 2: Subject Selection
+  final List<Map<String, dynamic>> _selectedSubjects = [];
   
-  // Step 3: Subjects
-  final List<Map<String, dynamic>> _subjects = [];
-  final _subjectController = TextEditingController();
-  final String _subjectPriority = 'Medium';
-  
-  final List<String> _beceSubjects = [
-    'Mathematics',
-    'English Language',
-    'Integrated Science',
-    'Social Studies',
-    'Ga',
-    'Asante Twi',
-    'French',
-    'ICT',
-    'RME',
-    'Creative Arts',
+  final List<Map<String, dynamic>> _beceSubjects = [
+    {'name': 'Mathematics', 'icon': Icons.calculate, 'color': const Color(0xFF0071E3)},
+    {'name': 'English Language', 'icon': Icons.book, 'color': const Color(0xFF34C759)},
+    {'name': 'Integrated Science', 'icon': Icons.science, 'color': const Color(0xFF5856D6)},
+    {'name': 'Social Studies', 'icon': Icons.public, 'color': const Color(0xFFFF9500)},
+    {'name': 'Ga', 'icon': Icons.language, 'color': const Color(0xFF667EEA)},
+    {'name': 'Asante Twi', 'icon': Icons.translate, 'color': const Color(0xFFFF6482)},
+    {'name': 'French', 'icon': Icons.flag, 'color': const Color(0xFF764BA2)},
+    {'name': 'ICT', 'icon': Icons.computer, 'color': const Color(0xFF00C7BE)},
+    {'name': 'RME', 'icon': Icons.auto_stories, 'color': const Color(0xFFBF5AF2)},
+    {'name': 'Creative Arts', 'icon': Icons.palette, 'color': const Color(0xFFFF2D55)},
   ];
   
-  // Step 4: Preferences
-  int _sessionLength = 45; // minutes
-  int _breakLength = 10; // minutes
-  bool _enableReminders = true;
-  bool _enableEmailReminders = false;
+  // Preferences (with smart defaults)
+  int _weeklyHours = 15;
+  String _preferredTime = 'Afternoon';
   
   // Generated plan
   Map<String, dynamic>? _generatedPlan;
   
   // Progress tracking
-  Map<String, Map<int, bool>> _sessionCompletions = {}; // day -> sessionIndex -> completed
+  Map<String, Map<int, bool>> _sessionCompletions = {};
   final int _currentWeek = 1;
   
   @override
@@ -89,7 +71,6 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
   void dispose() {
     _animationController.dispose();
     _examDateController.dispose();
-    _subjectController.dispose();
     super.dispose();
   }
   
@@ -99,18 +80,20 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
       final user = FirebaseAuth.instance.currentUser;
       if (user == null) return;
       
-      final doc = await FirebaseFirestore.instance
-          .collection('study_plans')
+      final querySnapshot = await FirebaseFirestore.instance
+          .collection('users')
           .doc(user.uid)
+          .collection('study_plan')
+          .limit(1)
           .get();
       
-      if (doc.exists) {
-        final data = doc.data();
+      if (querySnapshot.docs.isNotEmpty) {
+        final data = querySnapshot.docs.first.data();
         setState(() {
           _hasExistingPlan = true;
-          _generatedPlan = data?['studyPlan'];
+          _generatedPlan = data['studyPlan'];
           // Load tracking data
-          final tracking = data?['tracking'] as Map<String, dynamic>?;
+          final tracking = data['tracking'] as Map<String, dynamic>?;
           if (tracking != null) {
             _sessionCompletions = tracking.map((day, sessions) =>
               MapEntry(day, Map<int, bool>.from(sessions as Map))
@@ -131,47 +114,40 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
       final user = FirebaseAuth.instance.currentUser;
       if (user == null) return;
       
-      // Prepare data for Cloud Function
+      // Generate algorithm-based daily study schedule
+      final dailySchedule = _createDailySchedule();
+      
       final planData = {
-        'userId': user.uid,
-        'goal': _studyGoal,
+        'examType': _examType,
         'examDate': _examDate?.toIso8601String(),
-        'weeklyHours': _weeklyHours,
-        'preferredTime': _preferredTime,
-        'availability': _availability,
-        'subjects': _subjects,
-        'sessionLength': _sessionLength,
-        'breakLength': _breakLength,
-        'enableReminders': _enableReminders,
-        'enableEmailReminders': _enableEmailReminders,
+        'subjects': _beceSubjects.map((s) => s['name']).toList(), // All BECE subjects
+        'dailySchedule': dailySchedule,
+        'createdAt': FieldValue.serverTimestamp(),
+        'updatedAt': FieldValue.serverTimestamp(),
       };
       
-      // Call Cloud Function
-      final callable = FirebaseFunctions.instance.httpsCallable('generateStudyPlan');
-      final result = await callable.call(planData);
-      
-      // Extract the studyPlan from the response
-      final studyPlan = result.data['studyPlan'];
-      final metadata = result.data['metadata'];
+      final studyPlan = {
+        'examType': _examType,
+        'subjects': _beceSubjects,
+        'dailySchedule': dailySchedule,
+      };
       
       setState(() {
         _generatedPlan = studyPlan;
         _hasExistingPlan = true;
-        // Initialize tracking data
         _sessionCompletions = {};
       });
       
       // Save to Firestore
       await FirebaseFirestore.instance
-          .collection('study_plans')
+          .collection('users')
           .doc(user.uid)
+          .collection('study_plan')
+          .doc('current')
           .set({
         ...planData,
         'studyPlan': studyPlan,
-        'metadata': metadata,
         'tracking': {},
-        'createdAt': FieldValue.serverTimestamp(),
-        'updatedAt': FieldValue.serverTimestamp(),
       });
       
       if (mounted) {
@@ -211,8 +187,10 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
       final user = FirebaseAuth.instance.currentUser;
       if (user != null) {
         await FirebaseFirestore.instance
-            .collection('study_plans')
+            .collection('users')
             .doc(user.uid)
+            .collection('study_plan')
+            .doc('current')
             .update({
           'tracking': _sessionCompletions,
           'updatedAt': FieldValue.serverTimestamp(),
@@ -227,20 +205,20 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
     final confirmed = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text('Create New Plan?', style: AppStyles.montserratBold()),
+        title: Text('Create New Plan?', style: GoogleFonts.inter(fontWeight: FontWeight.w600)),
         content: Text(
           'This will replace your current study plan. Your progress will be archived.',
-          style: AppStyles.montserratRegular(),
+          style: GoogleFonts.inter(),
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context, false),
-            child: Text('Cancel', style: AppStyles.montserratMedium()),
+            child: Text('Cancel', style: GoogleFonts.inter(fontWeight: FontWeight.w500)),
           ),
           ElevatedButton(
             onPressed: () => Navigator.pop(context, true),
-            style: ElevatedButton.styleFrom(backgroundColor: AppStyles.primaryRed),
-            child: Text('Create New', style: AppStyles.montserratBold(color: Colors.white)),
+            style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF0071E3)),
+            child: Text('Create New', style: GoogleFonts.inter(fontWeight: FontWeight.w600, color: Colors.white)),
           ),
         ],
       ),
@@ -251,6 +229,7 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
         _hasExistingPlan = false;
         _generatedPlan = null;
         _currentStep = 0;
+        _selectedSubjects.clear();
         _sessionCompletions = {};
       });
     }
@@ -277,7 +256,7 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
     return FadeTransition(
       opacity: _fadeAnimation,
       child: Container(
-        color: AppStyles.warmWhite,
+        color: const Color(0xFFF5F5F7),
         child: Column(
           children: [
             _buildOnboardingHeader(isSmallScreen),
@@ -302,42 +281,59 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
   
   Widget _buildOnboardingHeader(bool isSmallScreen) {
     return Container(
-      padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
+      padding: EdgeInsets.all(isSmallScreen ? 20 : 28),
       decoration: BoxDecoration(
         color: Colors.white,
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.05),
-            blurRadius: 4,
-            offset: const Offset(0, 2),
+        border: Border(
+          bottom: BorderSide(
+            color: Colors.black.withValues(alpha: 0.06),
+            width: 1,
           ),
-        ],
+        ),
       ),
       child: Column(
         children: [
           Text(
-            'Create Your Personalized Study Schedule',
-            style: AppStyles.playfairHeading(
-              fontSize: isSmallScreen ? 24 : 32,
-              color: AppStyles.primaryNavy,
+            'Create Your Study Plan',
+            style: GoogleFonts.inter(
+              fontSize: isSmallScreen ? 26 : 32,
+              fontWeight: FontWeight.w700,
+              color: const Color(0xFF1D1D1F),
+              letterSpacing: -0.8,
             ),
             textAlign: TextAlign.center,
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 10),
           Text(
-            'Stay on track with smart reminders and progress tracking',
-            style: AppStyles.montserratRegular(
+            'Get AI-powered recommendations for BECE and end-of-term success',
+            style: GoogleFonts.inter(
               fontSize: isSmallScreen ? 14 : 16,
-              color: Colors.grey[600]!,
+              color: const Color(0xFF86868B),
+              height: 1.4,
             ),
             textAlign: TextAlign.center,
           ),
-          const SizedBox(height: 4),
-          Text(
-            '⏱️ 2 minutes to set up',
-            style: AppStyles.montserratMedium(
-              fontSize: 12,
-              color: const Color(0xFF2ECC71),
+          const SizedBox(height: 12),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+            decoration: BoxDecoration(
+              color: const Color(0xFF34C759).withValues(alpha: 0.1),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Icon(Icons.schedule, size: 14, color: Color(0xFF34C759)),
+                const SizedBox(width: 6),
+                Text(
+                  'Takes less than 1 minute',
+                  style: GoogleFonts.inter(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w500,
+                    color: const Color(0xFF34C759),
+                  ),
+                ),
+              ],
             ),
           ),
         ],
@@ -347,41 +343,68 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
   
   Widget _buildProgressIndicator() {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
+      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 24),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: List.generate(5, (index) {
+        children: List.generate(1, (index) {
           final isCompleted = index < _currentStep;
           final isCurrent = index == _currentStep;
+          final stepNames = ['Exam Focus'];
+          
           return Row(
             children: [
-              Container(
-                width: 40,
-                height: 40,
-                decoration: BoxDecoration(
-                  color: isCompleted || isCurrent
-                      ? AppStyles.primaryRed
-                      : Colors.grey[300],
-                  shape: BoxShape.circle,
-                ),
-                child: Center(
-                  child: isCompleted
-                      ? const Icon(Icons.check, color: Colors.white, size: 20)
-                      : Text(
-                          '${index + 1}',
-                          style: AppStyles.montserratBold(
-                            color: isCurrent ? Colors.white : Colors.grey[600]!,
-                          ),
-                        ),
-                ),
+              Column(
+                children: [
+                  Container(
+                    width: 44,
+                    height: 44,
+                    decoration: BoxDecoration(
+                      color: isCompleted || isCurrent
+                          ? const Color(0xFF0071E3)
+                          : const Color(0xFFF5F5F7),
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                        color: isCompleted || isCurrent
+                            ? const Color(0xFF0071E3)
+                            : Colors.black.withValues(alpha: 0.1),
+                        width: 2,
+                      ),
+                    ),
+                    child: Center(
+                      child: isCompleted
+                          ? const Icon(Icons.check_rounded, color: Colors.white, size: 22)
+                          : Text(
+                              '${index + 1}',
+                              style: GoogleFonts.inter(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                                color: isCurrent ? Colors.white : const Color(0xFF86868B),
+                              ),
+                            ),
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    stepNames[index],
+                    style: GoogleFonts.inter(
+                      fontSize: 12,
+                      fontWeight: isCurrent ? FontWeight.w600 : FontWeight.w400,
+                      color: isCurrent ? const Color(0xFF1D1D1F) : const Color(0xFF86868B),
+                    ),
+                  ),
+                ],
               ),
-              if (index < 4)
+              if (index < 1)
                 Container(
-                  width: 40,
+                  width: 60,
                   height: 2,
-                  color: index < _currentStep
-                      ? AppStyles.primaryRed
-                      : Colors.grey[300],
+                  margin: const EdgeInsets.only(bottom: 24),
+                  decoration: BoxDecoration(
+                    color: isCompleted
+                        ? const Color(0xFF0071E3)
+                        : const Color(0xFFF5F5F7),
+                    borderRadius: BorderRadius.circular(1),
+                  ),
                 ),
             ],
           );
@@ -393,127 +416,445 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
   Widget _buildCurrentStep(bool isSmallScreen) {
     switch (_currentStep) {
       case 0:
-        return _buildGoalSettingStep(isSmallScreen);
-      case 1:
-        return _buildCommitmentsStep(isSmallScreen);
-      case 2:
-        return _buildSubjectsStep(isSmallScreen);
-      case 3:
-        return _buildPreferencesStep(isSmallScreen);
-      case 4:
-        return _buildReviewStep(isSmallScreen);
+        return _buildExamFocusStep(isSmallScreen);
       default:
         return const SizedBox.shrink();
     }
   }
   
-  Widget _buildGoalSettingStep(bool isSmallScreen) {
-    return Card(
-      elevation: 2,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      child: Padding(
-        padding: EdgeInsets.all(isSmallScreen ? 20 : 32),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+  Widget _buildExamFocusStep(bool isSmallScreen) {
+    return Container(
+      padding: EdgeInsets.all(isSmallScreen ? 24 : 32),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: Colors.black.withValues(alpha: 0.06)),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.04),
+            blurRadius: 20,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'What are you preparing for?',
+            style: GoogleFonts.inter(
+              fontSize: isSmallScreen ? 20 : 24,
+              fontWeight: FontWeight.w600,
+              color: const Color(0xFF1D1D1F),
+              letterSpacing: -0.5,
+            ),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            'Choose your exam focus to get personalized recommendations',
+            style: GoogleFonts.inter(
+              fontSize: 14,
+              color: const Color(0xFF86868B),
+            ),
+          ),
+          const SizedBox(height: 32),
+          
+          // BECE 2026 Option
+          _buildExamTypeCard(
+            title: 'BECE 2026',
+            subtitle: 'Prepare for the Basic Education Certificate Examination',
+            icon: Icons.school_rounded,
+            color: const Color(0xFF667EEA),
+            isSelected: _examType == 'BECE 2026',
+            onTap: () {
+              setState(() {
+                _examType = 'BECE 2026';
+                _examDate = DateTime(2026, 6, 1);
+              });
+            },
+            daysUntil: DateTime(2026, 6, 1).difference(DateTime.now()).inDays,
+          ),
+          
+          const SizedBox(height: 16),
+          
+          // End-of-Term Options
+          Text(
+            'End-of-Term Exams',
+            style: GoogleFonts.inter(
+              fontSize: 15,
+              fontWeight: FontWeight.w600,
+              color: const Color(0xFF1D1D1F),
+            ),
+          ),
+          const SizedBox(height: 12),
+          
+          _buildExamTypeCard(
+            title: 'End-of-Term 1',
+            subtitle: 'November/December Assessment',
+            icon: Icons.event,
+            color: const Color(0xFF0071E3),
+            isSelected: _examType == 'End-of-Term 1',
+            onTap: () {
+              setState(() {
+                _examType = 'End-of-Term 1';
+                _examDate = _getNextEndOfTermDate(1);
+              });
+            },
+            compact: true,
+          ),
+          
+          const SizedBox(height: 12),
+          
+          _buildExamTypeCard(
+            title: 'End-of-Term 2',
+            subtitle: 'March/April Assessment',
+            icon: Icons.event,
+            color: const Color(0xFF34C759),
+            isSelected: _examType == 'End-of-Term 2',
+            onTap: () {
+              setState(() {
+                _examType = 'End-of-Term 2';
+                _examDate = _getNextEndOfTermDate(2);
+              });
+            },
+            compact: true,
+          ),
+          
+          const SizedBox(height: 12),
+          
+          _buildExamTypeCard(
+            title: 'End-of-Term 3',
+            subtitle: 'July/August Assessment',
+            icon: Icons.event,
+            color: const Color(0xFFFF9500),
+            isSelected: _examType == 'End-of-Term 3',
+            onTap: () {
+              setState(() {
+                _examType = 'End-of-Term 3';
+                _examDate = _getNextEndOfTermDate(3);
+              });
+            },
+            compact: true,
+          ),
+        ],
+      ),
+    );
+  }
+  
+  DateTime _getNextEndOfTermDate(int term) {
+    final now = DateTime.now();
+    int year = now.year;
+    int month;
+    
+    switch (term) {
+      case 1:
+        month = 11; // November
+        if (now.month > 11) year++;
+        break;
+      case 2:
+        month = 3; // March
+        if (now.month > 3) year++;
+        break;
+      case 3:
+        month = 7; // July
+        if (now.month > 7) year++;
+        break;
+      default:
+        month = 11;
+    }
+    
+    return DateTime(year, month, 15);
+  }
+  
+  Map<String, List<Map<String, dynamic>>> _createDailySchedule() {
+    final schedule = <String, List<Map<String, dynamic>>>{};
+    final now = DateTime.now();
+    final daysUntilExam = _examDate?.difference(now).inDays ?? 180;
+    
+    // Create 30-day rolling schedule
+    for (int i = 0; i < 30; i++) {
+      final date = now.add(Duration(days: i));
+      final dateKey = DateFormat('yyyy-MM-dd').format(date);
+      final dayOfWeek = date.weekday; // 1=Monday, 7=Sunday
+      
+      final dailyTasks = <Map<String, dynamic>>[];
+      
+      // Morning: Textbook reading (rotate subjects)
+      final morningSubject = _beceSubjects[i % _beceSubjects.length];
+      dailyTasks.add({
+        'time': 'Morning',
+        'type': 'Textbook',
+        'subject': morningSubject['name'],
+        'icon': morningSubject['icon'],
+        'color': morningSubject['color'],
+        'title': 'Read ${morningSubject['name']} Chapter',
+        'duration': '30 min',
+      });
+      
+      // Afternoon: Past questions (prioritize weak subjects first)
+      final afternoonSubject = _beceSubjects[(i + 3) % _beceSubjects.length];
+      dailyTasks.add({
+        'time': 'Afternoon',
+        'type': 'Past Questions',
+        'subject': afternoonSubject['name'],
+        'icon': Icons.quiz,
+        'color': afternoonSubject['color'],
+        'title': '${afternoonSubject['name']} Practice Questions',
+        'duration': '45 min',
+      });
+      
+      // Evening: Review or additional practice
+      if (dayOfWeek <= 5) { // Weekdays
+        final eveningSubject = _beceSubjects[(i + 5) % _beceSubjects.length];
+        dailyTasks.add({
+          'time': 'Evening',
+          'type': 'Review',
+          'subject': eveningSubject['name'],
+          'icon': Icons.auto_stories,
+          'color': eveningSubject['color'],
+          'title': 'Review ${eveningSubject['name']} Notes',
+          'duration': '30 min',
+        });
+      } else { // Weekends - mixed review
+        dailyTasks.add({
+          'time': 'Evening',
+          'type': 'Mixed Review',
+          'subject': 'All Subjects',
+          'icon': Icons.checklist,
+          'color': const Color(0xFF667EEA),
+          'title': 'Weekly Review Quiz',
+          'duration': '60 min',
+        });
+      }
+      
+      schedule[dateKey] = dailyTasks;
+    }
+    
+    return schedule;
+  }
+  
+  Widget _buildExamTypeCard({
+    required String title,
+    required String subtitle,
+    required IconData icon,
+    required Color color,
+    required bool isSelected,
+    required VoidCallback onTap,
+    int? daysUntil,
+    bool compact = false,
+  }) {
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(16),
+      child: Container(
+        padding: EdgeInsets.all(compact ? 16 : 20),
+        decoration: BoxDecoration(
+          color: isSelected ? color.withValues(alpha: 0.1) : const Color(0xFFF5F5F7),
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(
+            color: isSelected ? color : Colors.transparent,
+            width: 2,
+          ),
+        ),
+        child: Row(
           children: [
-            Text(
-              'Step 1: What are you studying for?',
-              style: AppStyles.montserratBold(
-                fontSize: isSmallScreen ? 18 : 22,
-                color: AppStyles.primaryNavy,
+            Container(
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: color.withValues(alpha: 0.2),
+                borderRadius: BorderRadius.circular(12),
               ),
+              child: Icon(icon, color: color, size: compact ? 20 : 24),
             ),
-            const SizedBox(height: 24),
-            Wrap(
-              spacing: 12,
-              runSpacing: 12,
-              children: [
-                'Exam preparation',
-                'Course completion',
-                'Skill development',
-                'General learning',
-              ].map((goal) => ChoiceChip(
-                label: Text(goal),
-                selected: _studyGoal == goal,
-                onSelected: (selected) {
-                  setState(() => _studyGoal = goal);
-                },
-                selectedColor: AppStyles.primaryRed.withValues(alpha: 0.2),
-                labelStyle: AppStyles.montserratMedium(
-                  color: _studyGoal == goal
-                      ? AppStyles.primaryRed
-                      : Colors.grey[700]!,
-                ),
-              )).toList(),
-            ),
-            if (_studyGoal == 'Exam preparation') ...[
-              const SizedBox(height: 24),
-              Text(
-                'When is your exam?',
-                style: AppStyles.montserratBold(
-                  fontSize: 16,
-                  color: AppStyles.primaryNavy,
-                ),
-              ),
-              const SizedBox(height: 12),
-              TextField(
-                controller: _examDateController,
-                readOnly: true,
-                decoration: InputDecoration(
-                  hintText: 'Select exam date',
-                  suffixIcon: const Icon(Icons.calendar_today),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
+            const SizedBox(width: 16),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: GoogleFonts.inter(
+                      fontSize: compact ? 15 : 16,
+                      fontWeight: FontWeight.w600,
+                      color: const Color(0xFF1D1D1F),
+                    ),
                   ),
-                  filled: true,
-                  fillColor: Colors.grey[50],
-                ),
-                onTap: () async {
-                  final date = await showDatePicker(
-                    context: context,
-                    initialDate: DateTime.now().add(const Duration(days: 90)),
-                    firstDate: DateTime.now(),
-                    lastDate: DateTime.now().add(const Duration(days: 730)),
-                  );
-                  if (date != null) {
-                    setState(() {
-                      _examDate = date;
-                      _examDateController.text = DateFormat('MMMM d, y').format(date);
-                    });
-                  }
-                },
-              ),
-              if (_examDate != null) ...[
-                const SizedBox(height: 12),
-                Container(
-                  padding: const EdgeInsets.all(16),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFF2ECC71).withValues(alpha: 0.1),
-                    borderRadius: BorderRadius.circular(12),
+                  const SizedBox(height: 2),
+                  Text(
+                    subtitle,
+                    style: GoogleFonts.inter(
+                      fontSize: 13,
+                      color: const Color(0xFF86868B),
+                    ),
                   ),
-                  child: Row(
-                    children: [
-                      const Icon(Icons.info_outline, color: Color(0xFF2ECC71)),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: Text(
-                          '${_examDate!.difference(DateTime.now()).inDays} days until your exam',
-                          style: AppStyles.montserratMedium(
-                            color: const Color(0xFF2ECC71),
-                          ),
+                  if (daysUntil != null) ...[
+                    const SizedBox(height: 8),
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                      decoration: BoxDecoration(
+                        color: color.withValues(alpha: 0.15),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Text(
+                        '$daysUntil days away',
+                        style: GoogleFonts.inter(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                          color: color,
                         ),
                       ),
-                    ],
-                  ),
-                ),
-              ],
-            ],
+                    ),
+                  ],
+                ],
+              ),
+            ),
+            if (isSelected)
+              Icon(Icons.check_circle, color: color, size: 24),
           ],
         ),
       ),
     );
   }
   
+  Widget _buildSubjectSelectionStep(bool isSmallScreen) {
+    return Container(
+      padding: EdgeInsets.all(isSmallScreen ? 24 : 32),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: Colors.black.withValues(alpha: 0.06)),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.04),
+            blurRadius: 20,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Select your subjects',
+            style: GoogleFonts.inter(
+              fontSize: isSmallScreen ? 20 : 24,
+              fontWeight: FontWeight.w600,
+              color: const Color(0xFF1D1D1F),
+              letterSpacing: -0.5,
+            ),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            'Choose the subjects you want to focus on for $_examType',
+            style: GoogleFonts.inter(
+              fontSize: 14,
+              color: const Color(0xFF86868B),
+            ),
+          ),
+          const SizedBox(height: 24),
+          
+          GridView.builder(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: isSmallScreen ? 2 : 3,
+              crossAxisSpacing: 12,
+              mainAxisSpacing: 12,
+              childAspectRatio: isSmallScreen ? 1.1 : 1.3,
+            ),
+            itemCount: _beceSubjects.length,
+            itemBuilder: (context, index) {
+              final subject = _beceSubjects[index];
+              final isSelected = _selectedSubjects.any((s) => s['name'] == subject['name']);
+              
+              return InkWell(
+                onTap: () {
+                  setState(() {
+                    if (isSelected) {
+                      _selectedSubjects.removeWhere((s) => s['name'] == subject['name']);
+                    } else {
+                      _selectedSubjects.add(subject);
+                    }
+                  });
+                },
+                borderRadius: BorderRadius.circular(16),
+                child: Container(
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: isSelected
+                        ? (subject['color'] as Color).withValues(alpha: 0.1)
+                        : const Color(0xFFF5F5F7),
+                    borderRadius: BorderRadius.circular(16),
+                    border: Border.all(
+                      color: isSelected ? (subject['color'] as Color) : Colors.transparent,
+                      width: 2,
+                    ),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        subject['icon'] as IconData,
+                        color: subject['color'] as Color,
+                        size: 32,
+                      ),
+                      const SizedBox(height: 12),
+                      Text(
+                        subject['name'] as String,
+                        style: GoogleFonts.inter(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w600,
+                          color: const Color(0xFF1D1D1F),
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      if (isSelected) ...[
+                        const SizedBox(height: 6),
+                        Icon(
+                          Icons.check_circle,
+                          color: subject['color'] as Color,
+                          size: 18,
+                        ),
+                      ],
+                    ],
+                  ),
+                ),
+              );
+            },
+          ),
+          
+          if (_selectedSubjects.isNotEmpty) ...[
+            const SizedBox(height: 24),
+            Container(
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: const Color(0xFF667EEA).withValues(alpha: 0.1),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.info_outline, color: Color(0xFF667EEA), size: 20),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Text(
+                      '${_selectedSubjects.length} subjects selected · Study plan will prioritize these subjects',
+                      style: GoogleFonts.inter(
+                        fontSize: 13,
+                        color: const Color(0xFF667EEA),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+  
+  // OLD UNUSED METHODS - Kept for reference but not called by simplified wizard
+  /*
   Widget _buildCommitmentsStep(bool isSmallScreen) {
     return Card(
       elevation: 2,
@@ -921,19 +1262,22 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
       ),
     );
   }
+  */
+  // END OF OLD UNUSED METHODS
   
   Widget _buildNavigationButtons(bool isSmallScreen) {
+    final canProceed = true; // Always can proceed from exam selection
+    
     return Container(
       padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
       decoration: BoxDecoration(
         color: Colors.white,
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.05),
-            blurRadius: 4,
-            offset: const Offset(0, -2),
+        border: Border(
+          top: BorderSide(
+            color: Colors.black.withValues(alpha: 0.06),
+            width: 1,
           ),
-        ],
+        ),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -944,57 +1288,93 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
                 setState(() => _currentStep--);
               },
               style: OutlinedButton.styleFrom(
-                side: const BorderSide(color: AppStyles.primaryRed),
+                side: const BorderSide(color: Color(0xFF0071E3), width: 1.5),
                 padding: EdgeInsets.symmetric(
-                  horizontal: isSmallScreen ? 24 : 32,
-                  vertical: 16,
+                  horizontal: isSmallScreen ? 20 : 28,
+                  vertical: 14,
                 ),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),
               ),
-              child: Text(
-                'Back',
-                style: AppStyles.montserratMedium(
-                  color: AppStyles.primaryRed,
-                ),
+              child: Row(
+                children: [
+                  const Icon(Icons.arrow_back, size: 18, color: Color(0xFF0071E3)),
+                  const SizedBox(width: 6),
+                  Text(
+                    'Back',
+                    style: GoogleFonts.inter(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w600,
+                      color: const Color(0xFF0071E3),
+                    ),
+                  ),
+                ],
               ),
             )
           else
-            const SizedBox.shrink(),
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              style: TextButton.styleFrom(
+                padding: EdgeInsets.symmetric(
+                  horizontal: isSmallScreen ? 16 : 20,
+                  vertical: 14,
+                ),
+              ),
+              child: Text(
+                'Cancel',
+                style: GoogleFonts.inter(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                  color: const Color(0xFF86868B),
+                ),
+              ),
+            ),
           ElevatedButton(
-            onPressed: _isGeneratingPlan
+            onPressed: !canProceed || _isGeneratingPlan
                 ? null
                 : () {
-                    if (_currentStep < 4) {
-                      setState(() => _currentStep++);
-                    } else {
-                      _generateStudyPlan();
-                    }
+                    _generateStudyPlan();
                   },
             style: ElevatedButton.styleFrom(
-              backgroundColor: AppStyles.primaryRed,
+              backgroundColor: const Color(0xFF0071E3),
               foregroundColor: Colors.white,
+              disabledBackgroundColor: const Color(0xFFF5F5F7),
+              disabledForegroundColor: const Color(0xFF86868B),
               padding: EdgeInsets.symmetric(
-                horizontal: isSmallScreen ? 32 : 48,
-                vertical: 16,
+                horizontal: isSmallScreen ? 28 : 40,
+                vertical: 14,
               ),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
+              elevation: 0,
             ),
             child: _isGeneratingPlan
                 ? const SizedBox(
                     width: 20,
                     height: 20,
                     child: CircularProgressIndicator(
-                      strokeWidth: 2,
+                      strokeWidth: 2.5,
                       valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
                     ),
                   )
-                : Text(
-                    _currentStep < 4 ? 'Next' : 'Generate My Plan',
-                    style: AppStyles.montserratBold(fontSize: 16),
+                : Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        'Create Study Plan',
+                        style: GoogleFonts.inter(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      const SizedBox(width: 6),
+                      const Icon(
+                        Icons.check_circle,
+                        size: 18,
+                      ),
+                    ],
                   ),
           ),
         ],
@@ -1003,6 +1383,211 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
   }
   
   Widget _buildStudyPlanView(bool isSmallScreen) {
+    final dailySchedule = _generatedPlan?['dailySchedule'] as Map<String, dynamic>? ?? {};
+    final today = DateFormat('yyyy-MM-dd').format(DateTime.now());
+    
+    return Scaffold(
+      backgroundColor: const Color(0xFFF5F5F7),
+      appBar: AppBar(
+        title: Text('Your Study Plan', style: GoogleFonts.inter(fontWeight: FontWeight.w600)),
+        backgroundColor: const Color(0xFF0071E3),
+        foregroundColor: Colors.white,
+        elevation: 0,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.refresh),
+            onPressed: _createNewPlan,
+            tooltip: 'Create New Plan',
+          ),
+        ],
+      ),
+      body: ListView.builder(
+        padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
+        itemCount: dailySchedule.length,
+        itemBuilder: (context, index) {
+          final dateKey = dailySchedule.keys.elementAt(index);
+          final tasks = dailySchedule[dateKey] as List;
+          final date = DateTime.parse(dateKey);
+          final isToday = dateKey == today;
+          final isPast = date.isBefore(DateTime.now().subtract(const Duration(days: 1)));
+          
+          return Container(
+            margin: const EdgeInsets.only(bottom: 16),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(16),
+              border: isToday ? Border.all(color: const Color(0xFF0071E3), width: 2) : null,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: 0.04),
+                  blurRadius: 8,
+                  offset: const Offset(0, 2),
+                ),
+              ],
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Date Header
+                Container(
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: isToday ? const Color(0xFF0071E3).withValues(alpha: 0.1) : const Color(0xFFF5F5F7),
+                    borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(
+                        isToday ? Icons.today : Icons.calendar_today,
+                        size: 20,
+                        color: isToday ? const Color(0xFF0071E3) : const Color(0xFF86868B),
+                      ),
+                      const SizedBox(width: 8),
+                      Text(
+                        DateFormat('EEEE, MMM d').format(date),
+                        style: GoogleFonts.inter(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600,
+                          color: isToday ? const Color(0xFF0071E3) : const Color(0xFF1D1D1F),
+                        ),
+                      ),
+                      if (isToday) ...[
+                        const SizedBox(width: 8),
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF0071E3),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Text(
+                            'Today',
+                            style: GoogleFonts.inter(
+                              fontSize: 11,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ],
+                  ),
+                ),
+                // Tasks
+                ...tasks.map((task) {
+                  final isCompleted = _sessionCompletions[dateKey]?[tasks.indexOf(task)] ?? false;
+                  return InkWell(
+                    onTap: () async {
+                      await _toggleSessionCompletion(dateKey, tasks.indexOf(task));
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                        border: Border(
+                          bottom: tasks.indexOf(task) < tasks.length - 1
+                              ? BorderSide(color: Colors.black.withValues(alpha: 0.06))
+                              : BorderSide.none,
+                        ),
+                      ),
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 44,
+                            height: 44,
+                            decoration: BoxDecoration(
+                              color: (task['color'] as Color).withValues(alpha: 0.1),
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: Icon(
+                              task['icon'] as IconData,
+                              color: task['color'] as Color,
+                              size: 24,
+                            ),
+                          ),
+                          const SizedBox(width: 12),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  task['title'],
+                                  style: GoogleFonts.inter(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w600,
+                                    color: const Color(0xFF1D1D1F),
+                                    decoration: isCompleted ? TextDecoration.lineThrough : null,
+                                  ),
+                                ),
+                                const SizedBox(height: 4),
+                                Row(
+                                  children: [
+                                    Text(
+                                      task['time'],
+                                      style: GoogleFonts.inter(
+                                        fontSize: 12,
+                                        color: const Color(0xFF86868B),
+                                      ),
+                                    ),
+                                    Text(
+                                      ' • ',
+                                      style: GoogleFonts.inter(
+                                        fontSize: 12,
+                                        color: const Color(0xFF86868B),
+                                      ),
+                                    ),
+                                    Text(
+                                      task['duration'],
+                                      style: GoogleFonts.inter(
+                                        fontSize: 12,
+                                        color: const Color(0xFF86868B),
+                                      ),
+                                    ),
+                                    Text(
+                                      ' • ',
+                                      style: GoogleFonts.inter(
+                                        fontSize: 12,
+                                        color: const Color(0xFF86868B),
+                                      ),
+                                    ),
+                                    Text(
+                                      task['type'],
+                                      style: GoogleFonts.inter(
+                                        fontSize: 12,
+                                        color: task['color'] as Color,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          Checkbox(
+                            value: isCompleted,
+                            onChanged: (_) async {
+                              await _toggleSessionCompletion(dateKey, tasks.indexOf(task));
+                            },
+                            activeColor: const Color(0xFF34C759),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                }).toList(),
+              ],
+            ),
+          );
+        },
+      ),
+    );
+  }
+  
+  /*
+  // OLD _buildStudyPlanView - needs AppStyles migration
+  Widget _buildStudyPlanViewOld(bool isSmallScreen) {
     final weeklySchedule = _generatedPlan?['weeklySchedule'] as Map<String, dynamic>?;
     final tips = _generatedPlan?['tips'] as List<dynamic>?;
     final studyTechniques = _generatedPlan?['studyTechniques'] as List<dynamic>?;
@@ -1504,4 +2089,5 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
     ),
     );
   }
+  */
 }

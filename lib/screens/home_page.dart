@@ -111,6 +111,9 @@ class _StudentHomePageState extends State<StudentHomePage>
   // Dynamic study recommendations
   List<String> _studyRecommendations = [];
 
+  // Study plan state
+  bool _hasStudyPlan = false;
+
   // ML-powered personalization data
   Map<String, dynamic> _userBehaviorProfile = {};
   List<String> _personalizedContent = [];
@@ -240,6 +243,20 @@ class _StudentHomePageState extends State<StudentHomePage>
           userPhotoUrl = data['profileImageUrl'] ??
               FirebaseAuth.instance.currentUser?.photoURL;
           userPresetAvatar = data['presetAvatar'];
+        });
+      }
+
+      // Check if user has a study plan
+      final studyPlanSnapshot = await FirebaseFirestore.instance
+          .collection('users')
+          .doc(userId)
+          .collection('study_plan')
+          .limit(1)
+          .get(const GetOptions(source: Source.server));
+
+      if (mounted) {
+        setState(() {
+          _hasStudyPlan = studyPlanSnapshot.docs.isNotEmpty;
         });
       }
     } catch (error) {
@@ -4907,42 +4924,25 @@ class _StudentHomePageState extends State<StudentHomePage>
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Container(
-                        padding: const EdgeInsets.all(12),
-                        decoration: BoxDecoration(
-                          gradient: const LinearGradient(
-                            colors: [Color(0xFF667EEA), Color(0xFF764BA2)],
-                          ),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: const Icon(Icons.school_rounded, color: Colors.white, size: 20),
-                      ),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Your Study Plan',
+                      Text(
+                        'Your Study Plan',
                               style: GoogleFonts.inter(
                                 fontSize: isSmallScreen ? 18 : 20,
                                 fontWeight: FontWeight.w600,
                                 color: const Color(0xFF1D1D1F),
                                 letterSpacing: -0.5,
                               ),
-                            ),
-                            const SizedBox(height: 2),
-                            Text(
-                              'Smart recommendations for BECE success',
-                              style: GoogleFonts.inter(
-                                fontSize: 13,
-                                color: const Color(0xFF86868B),
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
-                          ],
+                      ),
+                      const SizedBox(height: 2),
+                      Text(
+                        'Smart recommendations for BECE success',
+                        style: GoogleFonts.inter(
+                          fontSize: 13,
+                          color: const Color(0xFF86868B),
+                          fontWeight: FontWeight.w400,
                         ),
                       ),
                     ],
@@ -4997,49 +4997,147 @@ class _StudentHomePageState extends State<StudentHomePage>
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'Recommended for you',
-                    style: GoogleFonts.inter(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w600,
-                      color: const Color(0xFF1D1D1F),
-                      letterSpacing: -0.3,
-                    ),
-                  ),
-                  const SizedBox(height: 16),
-                  
-                  ...recommendations.map((rec) => _buildRecommendationItem(rec, isSmallScreen)),
-                  
-                  const SizedBox(height: 16),
-                  
-                  // View Full Plan Button
-                  SizedBox(
-                    width: double.infinity,
-                    child: TextButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (_) => const StudyPlanPage()),
-                        );
-                      },
-                      style: TextButton.styleFrom(
-                        padding: const EdgeInsets.symmetric(vertical: 14),
-                        backgroundColor: const Color(0xFF0071E3),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
+                  if (!_hasStudyPlan) ...[
+                    // Nudge message for users without a study plan
+                    Container(
+                      padding: const EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [Color(0xFFF5F5F7), Color(0xFFFFFFFF)],
+                        ),
+                        borderRadius: BorderRadius.circular(16),
+                        border: Border.all(
+                          color: const Color(0xFF667EEA).withValues(alpha: 0.2),
+                          width: 1,
                         ),
                       ),
-                      child: Text(
-                        'View Full Study Plan',
-                        style: GoogleFonts.inter(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.white,
-                          letterSpacing: -0.2,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.all(10),
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFF667EEA).withValues(alpha: 0.1),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: const Icon(
+                                  Icons.auto_awesome_rounded,
+                                  color: Color(0xFF667EEA),
+                                  size: 20,
+                                ),
+                              ),
+                              const SizedBox(width: 12),
+                              Expanded(
+                                child: Text(
+                                  'Get Started',
+                                  style: GoogleFonts.inter(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w600,
+                                    color: const Color(0xFF1D1D1F),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 12),
+                          Text(
+                            'Create your personalized study plan for a more focused BECE preparation experience. Get smart recommendations tailored to your progress and exam goals.',
+                            style: GoogleFonts.inter(
+                              fontSize: 14,
+                              color: const Color(0xFF86868B),
+                              height: 1.5,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    
+                    // Create Study Plan Button
+                    SizedBox(
+                      width: double.infinity,
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (_) => const StudyPlanPage()),
+                          );
+                        },
+                        style: TextButton.styleFrom(
+                          padding: const EdgeInsets.symmetric(vertical: 14),
+                          backgroundColor: const Color(0xFF0071E3),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Icon(Icons.add_circle_outline, size: 18, color: Colors.white),
+                            const SizedBox(width: 8),
+                            Text(
+                              'Create Your Study Plan',
+                              style: GoogleFonts.inter(
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white,
+                                letterSpacing: -0.2,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
-                  ),
+                  ] else ...[
+                    // Recommendations for users with a study plan
+                    Text(
+                      'Recommended for you',
+                      style: GoogleFonts.inter(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                        color: const Color(0xFF1D1D1F),
+                        letterSpacing: -0.3,
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    
+                    ...recommendations.map((rec) => _buildRecommendationItem(rec, isSmallScreen)),
+                    
+                    const SizedBox(height: 16),
+                    
+                    // View Full Plan Button
+                    SizedBox(
+                      width: double.infinity,
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (_) => const StudyPlanPage()),
+                          );
+                        },
+                        style: TextButton.styleFrom(
+                          padding: const EdgeInsets.symmetric(vertical: 14),
+                          backgroundColor: const Color(0xFF0071E3),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                        ),
+                        child: Text(
+                          'View Full Study Plan',
+                          style: GoogleFonts.inter(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white,
+                            letterSpacing: -0.2,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ],
               ),
             ),
