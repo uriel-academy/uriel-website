@@ -43,15 +43,15 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
   ];
   
   // Preferences (with smart defaults)
-  int _weeklyHours = 15;
-  String _preferredTime = 'Afternoon';
+  final int _weeklyHours = 15;
+  final String _preferredTime = 'Afternoon';
   
   // Generated plan
   Map<String, dynamic>? _generatedPlan;
   
   // Progress tracking
   Map<String, Map<int, bool>> _sessionCompletions = {};
-  final int _currentWeek = 1;
+  int _currentWeekOffset = 0; // 0 = this week, 1 = next week, etc.
   
   @override
   void initState() {
@@ -241,38 +241,58 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
     final isSmallScreen = screenWidth < 768;
     
     if (_isLoadingPlan) {
-      return const Center(child: CircularProgressIndicator());
+      return const Scaffold(
+        backgroundColor: Color(0xFFF8FAFE),
+        body: Center(child: CircularProgressIndicator()),
+      );
     }
     
-    // Wrap everything in SafeArea for iOS Safari bars
-    return SafeArea(
-      child: _hasExistingPlan && _generatedPlan != null
-          ? _buildStudyPlanView(isSmallScreen)
-          : _buildOnboardingFlow(isSmallScreen),
+    // Match revision page structure
+    return Scaffold(
+      backgroundColor: const Color(0xFFF8FAFE),
+      body: SafeArea(
+        child: _hasExistingPlan && _generatedPlan != null
+            ? SingleChildScrollView(
+                padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
+                child: SizedBox(
+                  height: MediaQuery.of(context).size.height - (isSmallScreen ? 100 : 120),
+                  child: _buildStudyPlanView(isSmallScreen),
+                ),
+              )
+            : _buildOnboardingFlow(isSmallScreen),
+      ),
     );
   }
   
   Widget _buildOnboardingFlow(bool isSmallScreen) {
     return FadeTransition(
       opacity: _fadeAnimation,
-      child: Container(
-        color: const Color(0xFFF5F5F7),
+      child: SingleChildScrollView(
+        padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _buildOnboardingHeader(isSmallScreen),
-            _buildProgressIndicator(),
-            Expanded(
-              child: SingleChildScrollView(
-                padding: EdgeInsets.all(isSmallScreen ? 16 : 32),
-                child: Center(
-                  child: Container(
-                    constraints: const BoxConstraints(maxWidth: 800),
-                    child: _buildCurrentStep(isSmallScreen),
-                  ),
-                ),
+            // Header
+            Text(
+              'Create Your Study Plan',
+              style: GoogleFonts.playfairDisplay(
+                fontSize: isSmallScreen ? 28 : 32,
+                fontWeight: FontWeight.bold,
+                color: const Color(0xFF1A1E3F),
               ),
             ),
-            _buildNavigationButtons(isSmallScreen),
+            const SizedBox(height: 8),
+            Text(
+              'Get personalized daily tasks tailored for BECE and end-of-term success',
+              style: GoogleFonts.montserrat(
+                fontSize: 16,
+                color: Colors.grey[600],
+              ),
+            ),
+            SizedBox(height: isSmallScreen ? 24 : 32),
+            
+            // Main card
+            _buildCurrentStep(isSmallScreen),
           ],
         ),
       ),
@@ -424,15 +444,14 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
   
   Widget _buildExamFocusStep(bool isSmallScreen) {
     return Container(
-      padding: EdgeInsets.all(isSmallScreen ? 24 : 32),
+      padding: EdgeInsets.all(isSmallScreen ? 20 : 24),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: Colors.black.withValues(alpha: 0.06)),
+        borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.04),
-            blurRadius: 20,
+            color: Colors.black.withValues(alpha: 0.05),
+            blurRadius: 10,
             offset: const Offset(0, 4),
           ),
         ],
@@ -442,19 +461,18 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
         children: [
           Text(
             'What are you preparing for?',
-            style: GoogleFonts.inter(
-              fontSize: isSmallScreen ? 20 : 24,
-              fontWeight: FontWeight.w600,
-              color: const Color(0xFF1D1D1F),
-              letterSpacing: -0.5,
+            style: GoogleFonts.playfairDisplay(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: const Color(0xFF1A1E3F),
             ),
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 4),
           Text(
             'Choose your exam focus to get personalized recommendations',
-            style: GoogleFonts.inter(
+            style: GoogleFonts.montserrat(
               fontSize: 14,
-              color: const Color(0xFF86868B),
+              color: Colors.grey[600],
             ),
           ),
           const SizedBox(height: 32),
@@ -535,6 +553,63 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
               });
             },
             compact: true,
+          ),
+          
+          SizedBox(height: isSmallScreen ? 32 : 40),
+          
+          // Buttons inside card
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              TextButton(
+                onPressed: () => Navigator.pop(context),
+                style: TextButton.styleFrom(
+                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
+                ),
+                child: Text(
+                  'Cancel',
+                  style: GoogleFonts.montserrat(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.grey[600],
+                  ),
+                ),
+              ),
+              const SizedBox(width: 12),
+              ElevatedButton(
+                onPressed: _isGeneratingPlan
+                    ? null
+                    : () {
+                        _generateStudyPlan();
+                      },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFF2ECC71),
+                  foregroundColor: Colors.white,
+                  disabledBackgroundColor: Colors.grey[300],
+                  padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  minimumSize: const Size(180, 50),
+                ),
+                child: _isGeneratingPlan
+                    ? const SizedBox(
+                        width: 20,
+                        height: 20,
+                        child: CircularProgressIndicator(
+                          strokeWidth: 2.5,
+                          valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                        ),
+                      )
+                    : Text(
+                        'Create Study Plan',
+                        style: GoogleFonts.montserrat(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+              ),
+            ],
           ),
         ],
       ),
@@ -673,18 +748,18 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
                 children: [
                   Text(
                     title,
-                    style: GoogleFonts.inter(
+                    style: GoogleFonts.montserrat(
                       fontSize: compact ? 15 : 16,
                       fontWeight: FontWeight.w600,
-                      color: const Color(0xFF1D1D1F),
+                      color: const Color(0xFF1A1E3F),
                     ),
                   ),
                   const SizedBox(height: 2),
                   Text(
                     subtitle,
-                    style: GoogleFonts.inter(
+                    style: GoogleFonts.montserrat(
                       fontSize: 13,
-                      color: const Color(0xFF86868B),
+                      color: Colors.grey[600],
                     ),
                   ),
                   if (daysUntil != null) ...[
@@ -697,7 +772,7 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
                       ),
                       child: Text(
                         '$daysUntil days away',
-                        style: GoogleFonts.inter(
+                        style: GoogleFonts.montserrat(
                           fontSize: 12,
                           fontWeight: FontWeight.w500,
                           color: color,
@@ -1266,7 +1341,7 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
   // END OF OLD UNUSED METHODS
   
   Widget _buildNavigationButtons(bool isSmallScreen) {
-    final canProceed = true; // Always can proceed from exam selection
+    const canProceed = true; // Always can proceed from exam selection
     
     return Container(
       padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
@@ -1386,202 +1461,309 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
     final dailySchedule = _generatedPlan?['dailySchedule'] as Map<String, dynamic>? ?? {};
     final today = DateFormat('yyyy-MM-dd').format(DateTime.now());
     
-    return Scaffold(
-      backgroundColor: const Color(0xFFF5F5F7),
-      appBar: AppBar(
-        title: Text('Your Study Plan', style: GoogleFonts.inter(fontWeight: FontWeight.w600)),
-        backgroundColor: const Color(0xFF0071E3),
-        foregroundColor: Colors.white,
-        elevation: 0,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.refresh),
-            onPressed: _createNewPlan,
-            tooltip: 'Create New Plan',
+    // Calculate week range
+    final now = DateTime.now();
+    final startOfWeek = now.add(Duration(days: _currentWeekOffset * 7));
+    final weekDates = List.generate(7, (i) => startOfWeek.add(Duration(days: i)));
+    
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        // Header
+        Text(
+          'Your Study Plan',
+          style: GoogleFonts.playfairDisplay(
+            fontSize: isSmallScreen ? 28 : 32,
+            fontWeight: FontWeight.bold,
+            color: const Color(0xFF1A1E3F),
           ),
-        ],
-      ),
-      body: ListView.builder(
-        padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
-        itemCount: dailySchedule.length,
-        itemBuilder: (context, index) {
-          final dateKey = dailySchedule.keys.elementAt(index);
-          final tasks = dailySchedule[dateKey] as List;
-          final date = DateTime.parse(dateKey);
-          final isToday = dateKey == today;
-          final isPast = date.isBefore(DateTime.now().subtract(const Duration(days: 1)));
-          
-          return Container(
-            margin: const EdgeInsets.only(bottom: 16),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(16),
-              border: isToday ? Border.all(color: const Color(0xFF0071E3), width: 2) : null,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withValues(alpha: 0.04),
-                  blurRadius: 8,
-                  offset: const Offset(0, 2),
-                ),
-              ],
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // Date Header
-                Container(
-                  padding: const EdgeInsets.all(16),
-                  decoration: BoxDecoration(
-                    color: isToday ? const Color(0xFF0071E3).withValues(alpha: 0.1) : const Color(0xFFF5F5F7),
-                    borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
+        ),
+        const SizedBox(height: 8),
+        Text(
+          'Daily tasks tailored for ${_generatedPlan?['examType'] ?? 'BECE 2026'}',
+          style: GoogleFonts.montserrat(
+            fontSize: 16,
+            color: Colors.grey[600],
+          ),
+        ),
+        SizedBox(height: isSmallScreen ? 24 : 32),
+        
+        // Week navigation card
+        Container(
+          padding: EdgeInsets.all(isSmallScreen ? 20 : 24),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(16),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withValues(alpha: 0.05),
+                blurRadius: 10,
+                offset: const Offset(0, 4),
+              ),
+            ],
+          ),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Week Navigation',
+                    style: GoogleFonts.playfairDisplay(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: const Color(0xFF1A1E3F),
+                    ),
                   ),
-                  child: Row(
-                    children: [
-                      Icon(
-                        isToday ? Icons.today : Icons.calendar_today,
-                        size: 20,
-                        color: isToday ? const Color(0xFF0071E3) : const Color(0xFF86868B),
+                  TextButton.icon(
+                    onPressed: _createNewPlan,
+                    icon: const Icon(Icons.refresh, size: 16),
+                    label: Text(
+                      'New Plan',
+                      style: GoogleFonts.montserrat(fontSize: 13),
+                    ),
+                    style: TextButton.styleFrom(
+                      foregroundColor: const Color(0xFF2ECC71),
+                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 16),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  IconButton(
+                    icon: const Icon(Icons.chevron_left),
+                    onPressed: _currentWeekOffset > 0
+                        ? () => setState(() => _currentWeekOffset--)
+                        : null,
+                    color: _currentWeekOffset > 0 ? const Color(0xFF2ECC71) : Colors.grey,
+                  ),
+                  Expanded(
+                    child: Text(
+                      _currentWeekOffset == 0
+                          ? 'This Week'
+                          : _currentWeekOffset == 1
+                              ? 'Next Week'
+                              : 'Week ${_currentWeekOffset + 1}',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        color: const Color(0xFF1A1E3F),
                       ),
-                      const SizedBox(width: 8),
-                      Text(
-                        DateFormat('EEEE, MMM d').format(date),
-                        style: GoogleFonts.inter(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w600,
-                          color: isToday ? const Color(0xFF0071E3) : const Color(0xFF1D1D1F),
-                        ),
-                      ),
-                      if (isToday) ...[
-                        const SizedBox(width: 8),
-                        Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                          decoration: BoxDecoration(
-                            color: const Color(0xFF0071E3),
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          child: Text(
-                            'Today',
-                            style: GoogleFonts.inter(
-                              fontSize: 11,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.white,
-                            ),
-                          ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  IconButton(
+                    icon: const Icon(Icons.chevron_right),
+                    onPressed: _currentWeekOffset < 3
+                        ? () => setState(() => _currentWeekOffset++)
+                        : null,
+                    color: _currentWeekOffset < 3 ? const Color(0xFF2ECC71) : Colors.grey,
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+        SizedBox(height: isSmallScreen ? 24 : 32),
+        
+        // List of 7 days
+        Expanded(
+          child: ListView.builder(
+            padding: EdgeInsets.zero,
+                itemCount: weekDates.length,
+                itemBuilder: (context, index) {
+                  final date = weekDates[index];
+                  final dateKey = DateFormat('yyyy-MM-dd').format(date);
+                  final tasks = (dailySchedule[dateKey] as List?) ?? [];
+                  final isToday = dateKey == today;
+                  
+                  if (tasks.isEmpty) {
+                    return const SizedBox.shrink();
+                  }
+          
+                  return Container(
+                    margin: const EdgeInsets.only(bottom: 16),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(16),
+                      border: isToday ? Border.all(
+                        color: const Color(0xFF2ECC71),
+                        width: 2,
+                      ) : null,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withValues(alpha: 0.05),
+                          blurRadius: 10,
+                          offset: const Offset(0, 4),
                         ),
                       ],
-                    ],
-                  ),
-                ),
-                // Tasks
-                ...tasks.map((task) {
-                  final isCompleted = _sessionCompletions[dateKey]?[tasks.indexOf(task)] ?? false;
-                  return InkWell(
-                    onTap: () async {
-                      await _toggleSessionCompletion(dateKey, tasks.indexOf(task));
-                    },
-                    child: Container(
-                      padding: const EdgeInsets.all(16),
-                      decoration: BoxDecoration(
-                        border: Border(
-                          bottom: tasks.indexOf(task) < tasks.length - 1
-                              ? BorderSide(color: Colors.black.withValues(alpha: 0.06))
-                              : BorderSide.none,
-                        ),
-                      ),
-                      child: Row(
-                        children: [
-                          Container(
-                            width: 44,
-                            height: 44,
-                            decoration: BoxDecoration(
-                              color: (task['color'] as Color).withValues(alpha: 0.1),
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                            child: Icon(
-                              task['icon'] as IconData,
-                              color: task['color'] as Color,
-                              size: 24,
-                            ),
-                          ),
-                          const SizedBox(width: 12),
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  task['title'],
-                                  style: GoogleFonts.inter(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w600,
-                                    color: const Color(0xFF1D1D1F),
-                                    decoration: isCompleted ? TextDecoration.lineThrough : null,
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        // Date Header
+                        Padding(
+                          padding: EdgeInsets.all(isSmallScreen ? 16 : 20),
+                          child: Row(
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.all(8),
+                                decoration: BoxDecoration(
+                                  color: isToday 
+                                    ? const Color(0xFF2ECC71).withValues(alpha: 0.1)
+                                    : Colors.grey[100],
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Icon(
+                                  isToday ? Icons.today : Icons.calendar_today,
+                                  size: 20,
+                                  color: isToday ? const Color(0xFF2ECC71) : const Color(0xFF1A1E3F),
+                                ),
+                              ),
+                              const SizedBox(width: 12),
+                              Expanded(
+                                child: Text(
+                                  DateFormat('EEEE, MMM d').format(date),
+                                  style: GoogleFonts.playfairDisplay(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                    color: const Color(0xFF1A1E3F),
                                   ),
                                 ),
-                                const SizedBox(height: 4),
-                                Row(
-                                  children: [
-                                    Text(
-                                      task['time'],
-                                      style: GoogleFonts.inter(
-                                        fontSize: 12,
-                                        color: const Color(0xFF86868B),
-                                      ),
+                              ),
+                              if (isToday)
+                                Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xFF2ECC71),
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  child: Text(
+                                    'Today',
+                                    style: GoogleFonts.montserrat(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.white,
                                     ),
-                                    Text(
-                                      ' • ',
-                                      style: GoogleFonts.inter(
-                                        fontSize: 12,
-                                        color: const Color(0xFF86868B),
-                                      ),
-                                    ),
-                                    Text(
-                                      task['duration'],
-                                      style: GoogleFonts.inter(
-                                        fontSize: 12,
-                                        color: const Color(0xFF86868B),
-                                      ),
-                                    ),
-                                    Text(
-                                      ' • ',
-                                      style: GoogleFonts.inter(
-                                        fontSize: 12,
-                                        color: const Color(0xFF86868B),
-                                      ),
-                                    ),
-                                    Text(
-                                      task['type'],
-                                      style: GoogleFonts.inter(
-                                        fontSize: 12,
-                                        color: task['color'] as Color,
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                    ),
-                                  ],
+                                  ),
                                 ),
-                              ],
-                            ),
+                            ],
                           ),
-                          const SizedBox(width: 8),
-                          Checkbox(
-                            value: isCompleted,
-                            onChanged: (_) async {
+                        ),
+                        Divider(height: 1, color: Colors.grey[200]),
+                        // Tasks
+                        ...tasks.map((task) {
+                          final isCompleted = _sessionCompletions[dateKey]?[tasks.indexOf(task)] ?? false;
+                          return InkWell(
+                            onTap: () async {
                               await _toggleSessionCompletion(dateKey, tasks.indexOf(task));
                             },
-                            activeColor: const Color(0xFF34C759),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(4),
+                            child: Container(
+                              padding: EdgeInsets.all(isSmallScreen ? 16 : 20),
+                              decoration: BoxDecoration(
+                                border: Border(
+                                  bottom: tasks.indexOf(task) < tasks.length - 1
+                                      ? BorderSide(color: Colors.grey[200]!)
+                                      : BorderSide.none,
+                                ),
+                              ),
+                              child: Row(
+                                children: [
+                                  Container(
+                                    width: 48,
+                                    height: 48,
+                                    decoration: BoxDecoration(
+                                      color: (task['color'] as Color).withValues(alpha: 0.1),
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Icon(
+                                      task['icon'] as IconData,
+                                      color: task['color'] as Color,
+                                      size: 24,
+                                    ),
+                                  ),
+                                  const SizedBox(width: 16),
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          task['title'],
+                                          style: GoogleFonts.montserrat(
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w600,
+                                            color: const Color(0xFF1A1E3F),
+                                            decoration: isCompleted ? TextDecoration.lineThrough : null,
+                                          ),
+                                        ),
+                                        const SizedBox(height: 6),
+                                        Row(
+                                          children: [
+                                            Icon(Icons.access_time, size: 14, color: Colors.grey[600]),
+                                            const SizedBox(width: 4),
+                                            Text(
+                                              task['time'],
+                                              style: GoogleFonts.montserrat(
+                                                fontSize: 13,
+                                                color: Colors.grey[600],
+                                              ),
+                                            ),
+                                            const SizedBox(width: 12),
+                                            Icon(Icons.timer_outlined, size: 14, color: Colors.grey[600]),
+                                            const SizedBox(width: 4),
+                                            Text(
+                                              task['duration'],
+                                              style: GoogleFonts.montserrat(
+                                                fontSize: 13,
+                                                color: Colors.grey[600],
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        const SizedBox(height: 8),
+                                        Container(
+                                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                                          decoration: BoxDecoration(
+                                            color: (task['color'] as Color).withValues(alpha: 0.1),
+                                            borderRadius: BorderRadius.circular(6),
+                                          ),
+                                          child: Text(
+                                            task['type'],
+                                            style: GoogleFonts.montserrat(
+                                              fontSize: 12,
+                                              color: task['color'] as Color,
+                                              fontWeight: FontWeight.w500,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Checkbox(
+                                    value: isCompleted,
+                                    onChanged: (_) async {
+                                      await _toggleSessionCompletion(dateKey, tasks.indexOf(task));
+                                    },
+                                    activeColor: const Color(0xFF2ECC71),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(4),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
-                          ),
-                        ],
-                      ),
+                          );
+                        }).toList(),
+                      ],
                     ),
                   );
-                }).toList(),
-              ],
+                },
+              ),
             ),
-          );
-        },
-      ),
+      ],
     );
   }
   

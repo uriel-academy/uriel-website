@@ -6,6 +6,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'dart:async';
 import 'dart:html' as html show window;
+import 'package:intl/intl.dart';
 import '../constants/app_styles.dart';
 import '../services/connection_service.dart';
 import '../services/auth_service.dart';
@@ -5062,10 +5063,7 @@ class _StudentHomePageState extends State<StudentHomePage>
                       width: double.infinity,
                       child: TextButton(
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (_) => const StudyPlanPage()),
-                          );
+                          setState(() => _selectedIndex = 5);
                         },
                         style: TextButton.styleFrom(
                           padding: const EdgeInsets.symmetric(vertical: 14),
@@ -5093,9 +5091,9 @@ class _StudentHomePageState extends State<StudentHomePage>
                       ),
                     ),
                   ] else ...[
-                    // Recommendations for users with a study plan
+                    // Today's Study Plan for users with a study plan
                     Text(
-                      'Recommended for you',
+                      'Today\'s Study Plan - ${DateFormat('MMM d').format(DateTime.now())}',
                       style: GoogleFonts.inter(
                         fontSize: 15,
                         fontWeight: FontWeight.w600,
@@ -5105,7 +5103,7 @@ class _StudentHomePageState extends State<StudentHomePage>
                     ),
                     const SizedBox(height: 16),
                     
-                    ...recommendations.map((rec) => _buildRecommendationItem(rec, isSmallScreen)),
+                    _buildTodayStudyTasks(isSmallScreen),
                     
                     const SizedBox(height: 16),
                     
@@ -5114,10 +5112,7 @@ class _StudentHomePageState extends State<StudentHomePage>
                       width: double.infinity,
                       child: TextButton(
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (_) => const StudyPlanPage()),
-                          );
+                          setState(() => _selectedIndex = 5);
                         },
                         style: TextButton.styleFrom(
                           padding: const EdgeInsets.symmetric(vertical: 14),
@@ -5144,6 +5139,108 @@ class _StudentHomePageState extends State<StudentHomePage>
           ],
         ),
       ),
+    );
+  }
+
+  Widget _buildTodayStudyTasks(bool isSmallScreen) {
+    // This will be loaded from Firestore study plan
+    // For now, show placeholder encouraging them to view full plan
+    return FutureBuilder<DocumentSnapshot>(
+      future: FirebaseFirestore.instance
+          .collection('users')
+          .doc(FirebaseAuth.instance.currentUser?.uid)
+          .collection('study_plan')
+          .doc('current')
+          .get(),
+      builder: (context, snapshot) {
+        if (!snapshot.hasData || !snapshot.data!.exists) {
+          return const SizedBox.shrink();
+        }
+        
+        final data = snapshot.data!.data() as Map<String, dynamic>?;
+        final dailySchedule = data?['studyPlan']?['dailySchedule'] as Map<String, dynamic>?;
+        final today = DateFormat('yyyy-MM-dd').format(DateTime.now());
+        final todayTasks = dailySchedule?[today] as List?;
+        
+        if (todayTasks == null || todayTasks.isEmpty) {
+          return Container(
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              color: const Color(0xFFF5F5F7),
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Row(
+              children: [
+                const Icon(Icons.info_outline, size: 20, color: Color(0xFF86868B)),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Text(
+                    'No tasks scheduled for today',
+                    style: GoogleFonts.inter(
+                      fontSize: 13,
+                      color: const Color(0xFF86868B),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          );
+        }
+        
+        return Column(
+          children: todayTasks.take(3).map((task) {
+            return Container(
+              margin: const EdgeInsets.only(bottom: 12),
+              padding: const EdgeInsets.all(14),
+              decoration: BoxDecoration(
+                color: const Color(0xFFF5F5F7),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Row(
+                children: [
+                  Container(
+                    width: 40,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: (task['color'] as Color? ?? const Color(0xFF0071E3)).withValues(alpha: 0.1),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Icon(
+                      task['icon'] as IconData? ?? Icons.book,
+                      color: task['color'] as Color? ?? const Color(0xFF0071E3),
+                      size: 20,
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          task['title'] ?? '',
+                          style: GoogleFonts.inter(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w600,
+                            color: const Color(0xFF1D1D1F),
+                          ),
+                        ),
+                        const SizedBox(height: 2),
+                        Text(
+                          '${task['time']} • ${task['duration']}',
+                          style: GoogleFonts.inter(
+                            fontSize: 11,
+                            color: const Color(0xFF86868B),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            );
+          }).toList(),
+        );
+      },
     );
   }
 
@@ -5211,10 +5308,10 @@ class _StudentHomePageState extends State<StudentHomePage>
               ],
             ),
           ),
-          Icon(
+          const Icon(
             Icons.chevron_right_rounded,
             size: 20,
-            color: const Color(0xFF86868B),
+            color: Color(0xFF86868B),
           ),
         ],
       ),
