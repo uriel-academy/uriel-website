@@ -409,6 +409,21 @@ service cloud.firestore {
       allow update, delete: if false;
     }
     
+    // Study Plan subcollection - user-generated study plans
+    match /users/{userId}/study_plan/{planId} {
+      allow read: if isAuthenticated() && (
+        isOwner(userId) ||
+        isAdmin() ||
+        (hasRole('parent') && userId in request.auth.token.linkedStudentIds)
+      );
+      
+      // Allow users to create and update their own study plans
+      allow create, update: if isAuthenticated() && request.auth.uid == userId;
+      
+      // Allow users to delete their own study plans
+      allow delete: if isAuthenticated() && request.auth.uid == userId;
+    }
+    
     // Theory Questions collection - read-only for authenticated users
     match /theoryQuestions/{questionId} {
       allow read: if isAuthenticated();

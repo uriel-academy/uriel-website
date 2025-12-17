@@ -74,6 +74,7 @@ class _StudentHomePageState extends State<StudentHomePage>
   int beceCountdownDays = 0; // Live countdown to BECE 2026
   StreamSubscription<DocumentSnapshot>? _userStreamSubscription;
   Timer? _userPollingTimer; // SCALABILITY: Polling instead of real-time
+  Timer? _dailyRefreshTimer; // Timer to refresh dashboard at midnight GMT
   bool _loadingFullStats = false;
 
   // Past Questions tracking
@@ -162,6 +163,7 @@ class _StudentHomePageState extends State<StudentHomePage>
     _recordDailyActivity();
     _setupUserStream();
     _loadNotifications();
+    _setupDailyRefreshTimer();
   }
 
   void _loadUserRank() async {
@@ -247,19 +249,20 @@ class _StudentHomePageState extends State<StudentHomePage>
         });
       }
 
-      // Check if user has a study plan
-      final studyPlanSnapshot = await FirebaseFirestore.instance
+      // Check if user has a study plan - listen for changes
+      FirebaseFirestore.instance
           .collection('users')
           .doc(userId)
           .collection('study_plan')
-          .limit(1)
-          .get(const GetOptions(source: Source.server));
-
-      if (mounted) {
-        setState(() {
-          _hasStudyPlan = studyPlanSnapshot.docs.isNotEmpty;
-        });
-      }
+          .doc('current')
+          .snapshots()
+          .listen((docSnapshot) {
+        if (mounted) {
+          setState(() {
+            _hasStudyPlan = docSnapshot.exists;
+          });
+        }
+      });
     } catch (error) {
       debugPrint('⚠️ User polling error (non-critical): $error');
     }
@@ -272,6 +275,24 @@ class _StudentHomePageState extends State<StudentHomePage>
       return NetworkImage(userPhotoUrl!);
     }
     return null;
+  }
+
+  void _setupDailyRefreshTimer() {
+    // Calculate time until next midnight GMT
+    final now = DateTime.now().toUtc();
+    final nextMidnight = DateTime.utc(now.year, now.month, now.day).add(const Duration(days: 1));
+    final timeUntilMidnight = nextMidnight.difference(now);
+    
+    // Schedule refresh at midnight GMT
+    _dailyRefreshTimer = Timer(timeUntilMidnight, () {
+      if (mounted) {
+        setState(() {
+          // This will trigger rebuild and refresh today's tasks
+        });
+        // Setup timer for next day
+        _setupDailyRefreshTimer();
+      }
+    });
   }
 
   void _recordDailyActivity() async {
@@ -308,6 +329,7 @@ class _StudentHomePageState extends State<StudentHomePage>
     _userStreamSubscription
         ?.cancel(); // Cancel the user stream subscription to prevent memory leaks and assertion errors
     _userPollingTimer?.cancel(); // Cancel polling timer
+    _dailyRefreshTimer?.cancel(); // Cancel daily refresh timer
     _notificationsSubscription?.cancel();
     super.dispose();
   }
@@ -5143,15 +5165,14 @@ class _StudentHomePageState extends State<StudentHomePage>
   }
 
   Widget _buildTodayStudyTasks(bool isSmallScreen) {
-    // This will be loaded from Firestore study plan
-    // For now, show placeholder encouraging them to view full plan
-    return FutureBuilder<DocumentSnapshot>(
-      future: FirebaseFirestore.instance
+    // Listen to study plan changes in real-time
+    return StreamBuilder<DocumentSnapshot>(
+      stream: FirebaseFirestore.instance
           .collection('users')
           .doc(FirebaseAuth.instance.currentUser?.uid)
           .collection('study_plan')
           .doc('current')
-          .get(),
+          .snapshots(),
       builder: (context, snapshot) {
         if (!snapshot.hasData || !snapshot.data!.exists) {
           return const SizedBox.shrink();
@@ -5189,6 +5210,39 @@ class _StudentHomePageState extends State<StudentHomePage>
         
         return Column(
           children: todayTasks.take(3).map((task) {
+            // Parse color from hex string
+            Color taskColor = const Color(0xFF0071E3);
+            final colorHex = task['colorHex'] as String?;
+            if (colorHex != null) {
+              try {
+                taskColor = Color(int.parse(colorHex.replaceFirst('#', '0xFF')));
+              } catch (e) {
+                debugPrint('Error parsing color: $e');
+              }
+            }
+            
+            // Get icon from icon name
+            IconData taskIcon = Icons.book;
+            final iconName = task['iconName'] as String?;
+            if (iconName != null) {
+              switch (iconName) {
+                case 'book':
+                  taskIcon = Icons.book;
+                  break;
+                case 'quiz':
+                  taskIcon = Icons.quiz;
+                  break;
+                case 'auto_stories':
+                  taskIcon = Icons.auto_stories;
+                  break;
+                case 'checklist':
+                  taskIcon = Icons.checklist;
+                  break;
+                default:
+                  taskIcon = Icons.book;
+              }
+            }
+            
             return Container(
               margin: const EdgeInsets.only(bottom: 12),
               padding: const EdgeInsets.all(14),
@@ -5202,12 +5256,12 @@ class _StudentHomePageState extends State<StudentHomePage>
                     width: 40,
                     height: 40,
                     decoration: BoxDecoration(
-                      color: (task['color'] as Color? ?? const Color(0xFF0071E3)).withValues(alpha: 0.1),
+                      color: taskColor.withValues(alpha: 0.1),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Icon(
-                      task['icon'] as IconData? ?? Icons.book,
-                      color: task['color'] as Color? ?? const Color(0xFF0071E3),
+                      taskIcon,
+                      color: taskColor,
                       size: 20,
                     ),
                   ),

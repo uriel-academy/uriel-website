@@ -78,7 +78,12 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
     setState(() => _isLoadingPlan = true);
     try {
       final user = FirebaseAuth.instance.currentUser;
-      if (user == null) return;
+      if (user == null) {
+        debugPrint('📋 No user logged in');
+        return;
+      }
+      
+      debugPrint('📋 Checking for existing plan for user: ${user.uid}');
       
       final querySnapshot = await FirebaseFirestore.instance
           .collection('users')
@@ -87,11 +92,37 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
           .limit(1)
           .get();
       
+      debugPrint('📋 Query returned ${querySnapshot.docs.length} documents');
+      
       if (querySnapshot.docs.isNotEmpty) {
         final data = querySnapshot.docs.first.data();
+        debugPrint('📋 Document data keys: ${data.keys.toList()}');
+        debugPrint('📋 studyPlan exists: ${data.containsKey('studyPlan')}');
+        
+        final studyPlanData = data['studyPlan'];
+        debugPrint('📋 studyPlan type: ${studyPlanData.runtimeType}');
+        debugPrint('📋 studyPlan value: $studyPlanData');
+        
+        if (studyPlanData is Map) {
+          debugPrint('📋 studyPlan keys: ${(studyPlanData as Map).keys.toList()}');
+          debugPrint('📋 dailySchedule exists in studyPlan: ${(studyPlanData as Map).containsKey('dailySchedule')}');
+          
+          final schedule = studyPlanData['dailySchedule'];
+          if (schedule != null) {
+            debugPrint('📋 dailySchedule type: ${schedule.runtimeType}');
+            if (schedule is Map) {
+              debugPrint('📋 dailySchedule has ${schedule.length} days');
+              debugPrint('📋 First 3 date keys: ${schedule.keys.take(3).toList()}');
+            }
+          }
+        }
+        
         setState(() {
           _hasExistingPlan = true;
-          _generatedPlan = data['studyPlan'];
+          _generatedPlan = data['studyPlan'] as Map<String, dynamic>?;
+          _currentWeekOffset = data['currentWeekOffset'] ?? 0;
+          debugPrint('📋 Set _hasExistingPlan=true, _generatedPlan is null: ${_generatedPlan == null}');
+          
           // Load tracking data
           final tracking = data['tracking'] as Map<String, dynamic>?;
           if (tracking != null) {
@@ -100,9 +131,12 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
             );
           }
         });
+      } else {
+        debugPrint('📋 No existing plan found');
       }
     } catch (e) {
-      debugPrint('Error checking existing plan: $e');
+      debugPrint('❌ Error checking existing plan: $e');
+      debugPrint('❌ Stack trace: ${StackTrace.current}');
     } finally {
       setState(() => _isLoadingPlan = false);
     }
@@ -128,7 +162,7 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
       
       final studyPlan = {
         'examType': _examType,
-        'subjects': _beceSubjects,
+        'subjects': _beceSubjects.map((s) => s['name']).toList(), // Store only subject names
         'dailySchedule': dailySchedule,
       };
       
@@ -148,6 +182,7 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
         ...planData,
         'studyPlan': studyPlan,
         'tracking': {},
+        'currentWeekOffset': 0,
       });
       
       if (mounted) {
@@ -173,6 +208,37 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
     }
   }
   
+  Future<void> _saveWeekOffset() async {
+    try {
+      final user = FirebaseAuth.instance.currentUser;
+      if (user != null) {
+        await FirebaseFirestore.instance
+            .collection('users')
+            .doc(user.uid)
+            .collection('study_plan')
+            .doc('current')
+            .update({
+          'currentWeekOffset': _currentWeekOffset,
+          'updatedAt': FieldValue.serverTimestamp(),
+        });
+      }
+    } catch (e) {
+      debugPrint('Error saving week offset: $e');
+    }
+  }
+
+  // Helper to parse color from hex string
+  Color _parseColor(String? colorHex) {
+    if (colorHex == null || colorHex.isEmpty) return Colors.grey;
+    try {
+      final hexColor = colorHex.replaceAll('#', '');
+      return Color(int.parse('FF$hexColor', radix: 16));
+    } catch (e) {
+      debugPrint('Error parsing color: $colorHex');
+      return Colors.grey;
+    }
+  }
+
   Future<void> _toggleSessionCompletion(String day, int sessionIndex) async {
     setState(() {
       if (!_sessionCompletions.containsKey(day)) {
@@ -205,20 +271,45 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
     final confirmed = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text('Create New Plan?', style: GoogleFonts.inter(fontWeight: FontWeight.w600)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        title: Text(
+          'Create New Plan?',
+          style: GoogleFonts.playfairDisplay(
+            fontWeight: FontWeight.bold,
+            fontSize: 20,
+            color: const Color(0xFF1A1E3F),
+          ),
+        ),
         content: Text(
-          'This will replace your current study plan. Your progress will be archived.',
-          style: GoogleFonts.inter(),
+          'This will replace your current study plan and reset all progress. Are you sure you want to continue?',
+          style: GoogleFonts.montserrat(
+            fontSize: 14,
+            color: Colors.grey[600],
+          ),
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context, false),
-            child: Text('Cancel', style: GoogleFonts.inter(fontWeight: FontWeight.w500)),
+            child: Text(
+              'Cancel',
+              style: GoogleFonts.montserrat(
+                fontWeight: FontWeight.w500,
+                color: Colors.grey[600],
+              ),
+            ),
           ),
           ElevatedButton(
             onPressed: () => Navigator.pop(context, true),
-            style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF0071E3)),
-            child: Text('Create New', style: GoogleFonts.inter(fontWeight: FontWeight.w600, color: Colors.white)),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFFD62828),
+              foregroundColor: Colors.white,
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+            ),
+            child: Text(
+              'Create New',
+              style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
+            ),
           ),
         ],
       ),
@@ -254,10 +345,7 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
         child: _hasExistingPlan && _generatedPlan != null
             ? SingleChildScrollView(
                 padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
-                child: SizedBox(
-                  height: MediaQuery.of(context).size.height - (isSmallScreen ? 100 : 120),
-                  child: _buildStudyPlanView(isSmallScreen),
-                ),
+                child: _buildStudyPlanView(isSmallScreen),
               )
             : _buildOnboardingFlow(isSmallScreen),
       ),
@@ -656,24 +744,26 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
       
       // Morning: Textbook reading (rotate subjects)
       final morningSubject = _beceSubjects[i % _beceSubjects.length];
+      final morningColor = morningSubject['color'] as Color;
       dailyTasks.add({
         'time': 'Morning',
         'type': 'Textbook',
         'subject': morningSubject['name'],
-        'icon': morningSubject['icon'],
-        'color': morningSubject['color'],
+        'iconName': 'book',
+        'colorHex': '#${morningColor.value.toRadixString(16).padLeft(8, '0').substring(2)}',
         'title': 'Read ${morningSubject['name']} Chapter',
         'duration': '30 min',
       });
       
       // Afternoon: Past questions (prioritize weak subjects first)
       final afternoonSubject = _beceSubjects[(i + 3) % _beceSubjects.length];
+      final afternoonColor = afternoonSubject['color'] as Color;
       dailyTasks.add({
         'time': 'Afternoon',
         'type': 'Past Questions',
         'subject': afternoonSubject['name'],
-        'icon': Icons.quiz,
-        'color': afternoonSubject['color'],
+        'iconName': 'quiz',
+        'colorHex': '#${afternoonColor.value.toRadixString(16).padLeft(8, '0').substring(2)}',
         'title': '${afternoonSubject['name']} Practice Questions',
         'duration': '45 min',
       });
@@ -681,12 +771,13 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
       // Evening: Review or additional practice
       if (dayOfWeek <= 5) { // Weekdays
         final eveningSubject = _beceSubjects[(i + 5) % _beceSubjects.length];
+        final eveningColor = eveningSubject['color'] as Color;
         dailyTasks.add({
           'time': 'Evening',
           'type': 'Review',
           'subject': eveningSubject['name'],
-          'icon': Icons.auto_stories,
-          'color': eveningSubject['color'],
+          'iconName': 'auto_stories',
+          'colorHex': '#${eveningColor.value.toRadixString(16).padLeft(8, '0').substring(2)}',
           'title': 'Review ${eveningSubject['name']} Notes',
           'duration': '30 min',
         });
@@ -695,8 +786,8 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
           'time': 'Evening',
           'type': 'Mixed Review',
           'subject': 'All Subjects',
-          'icon': Icons.checklist,
-          'color': const Color(0xFF667EEA),
+          'iconName': 'checklist',
+          'colorHex': '#667EEA',
           'title': 'Weekly Review Quiz',
           'duration': '60 min',
         });
@@ -733,15 +824,6 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
         ),
         child: Row(
           children: [
-            Container(
-              padding: const EdgeInsets.all(12),
-              decoration: BoxDecoration(
-                color: color.withValues(alpha: 0.2),
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Icon(icon, color: color, size: compact ? 20 : 24),
-            ),
-            const SizedBox(width: 16),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -1458,13 +1540,70 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
   }
   
   Widget _buildStudyPlanView(bool isSmallScreen) {
+    debugPrint('🎨 Building study plan view');
+    debugPrint('🎨 _generatedPlan is null: ${_generatedPlan == null}');
+    debugPrint('🎨 _generatedPlan type: ${_generatedPlan.runtimeType}');
+    debugPrint('🎨 _generatedPlan keys: ${_generatedPlan?.keys.toList()}');
+    
     final dailySchedule = _generatedPlan?['dailySchedule'] as Map<String, dynamic>? ?? {};
+    debugPrint('🎨 dailySchedule type: ${dailySchedule.runtimeType}');
+    debugPrint('🎨 dailySchedule length: ${dailySchedule.length}');
+    debugPrint('🎨 dailySchedule isEmpty: ${dailySchedule.isEmpty}');
+    
     final today = DateFormat('yyyy-MM-dd').format(DateTime.now());
     
     // Calculate week range
     final now = DateTime.now();
     final startOfWeek = now.add(Duration(days: _currentWeekOffset * 7));
     final weekDates = List.generate(7, (i) => startOfWeek.add(Duration(days: i)));
+    
+    // Check if schedule is empty or tasks are missing
+    if (dailySchedule.isEmpty) {
+      debugPrint('⚠️ dailySchedule is empty, showing error message');
+
+      return Padding(
+        padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(Icons.error_outline, size: 64, color: Colors.grey),
+              const SizedBox(height: 16),
+              Text(
+                'No study schedule found',
+                style: GoogleFonts.playfairDisplay(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: const Color(0xFF1A1E3F),
+                ),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                'dailySchedule is empty. Please create a new plan.',
+                style: GoogleFonts.montserrat(
+                  fontSize: 16,
+                  color: Colors.grey[600],
+                ),
+              ),
+              const SizedBox(height: 24),
+              ElevatedButton(
+                onPressed: () => _createNewPlan(),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFF2ECC71),
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                ),
+                child: Text(
+                  'Create New Plan',
+                  style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
     
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -1536,7 +1675,10 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
                   IconButton(
                     icon: const Icon(Icons.chevron_left),
                     onPressed: _currentWeekOffset > 0
-                        ? () => setState(() => _currentWeekOffset--)
+                        ? () {
+                            setState(() => _currentWeekOffset--);
+                            _saveWeekOffset();
+                          }
                         : null,
                     color: _currentWeekOffset > 0 ? const Color(0xFF2ECC71) : Colors.grey,
                   ),
@@ -1558,7 +1700,10 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
                   IconButton(
                     icon: const Icon(Icons.chevron_right),
                     onPressed: _currentWeekOffset < 3
-                        ? () => setState(() => _currentWeekOffset++)
+                        ? () {
+                            setState(() => _currentWeekOffset++);
+                            _saveWeekOffset();
+                          }
                         : null,
                     color: _currentWeekOffset < 3 ? const Color(0xFF2ECC71) : Colors.grey,
                   ),
@@ -1569,22 +1714,65 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
         ),
         SizedBox(height: isSmallScreen ? 24 : 32),
         
-        // List of 7 days
-        Expanded(
-          child: ListView.builder(
-            padding: EdgeInsets.zero,
-                itemCount: weekDates.length,
-                itemBuilder: (context, index) {
-                  final date = weekDates[index];
-                  final dateKey = DateFormat('yyyy-MM-dd').format(date);
-                  final tasks = (dailySchedule[dateKey] as List?) ?? [];
-                  final isToday = dateKey == today;
-                  
-                  if (tasks.isEmpty) {
-                    return const SizedBox.shrink();
-                  }
+        // Check if any tasks exist for this week
+        ...() {
+          final tasksThisWeek = weekDates.map((date) {
+            final dateKey = DateFormat('yyyy-MM-dd').format(date);
+            final tasksData = dailySchedule[dateKey];
+            return tasksData is List ? tasksData : (tasksData as List?)?.cast<Map<String, dynamic>>() ?? [];
+          }).where((tasks) => tasks.isNotEmpty).toList();
           
-                  return Container(
+          if (tasksThisWeek.isEmpty) {
+            return [
+              Container(
+                padding: const EdgeInsets.all(32),
+                margin: const EdgeInsets.only(top: 32),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                child: Column(
+                  children: [
+                    const Icon(Icons.calendar_today, size: 48, color: Colors.grey),
+                    const SizedBox(height: 16),
+                    Text(
+                      'No tasks for this week',
+                      style: GoogleFonts.playfairDisplay(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: const Color(0xFF1A1E3F),
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      'Schedule has ${dailySchedule.length} dates. Try navigating to other weeks or create a new plan.',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 14,
+                        color: Colors.grey[600],
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ),
+              ),
+            ];
+          }
+          
+          return [];
+        }(),
+        
+        // List of 7 days
+        ...weekDates.map((date) {
+          final dateKey = DateFormat('yyyy-MM-dd').format(date);
+          final tasksData = dailySchedule[dateKey];
+          final tasks = tasksData is List ? tasksData : (tasksData as List?)?.cast<Map<String, dynamic>>() ?? [];
+          final isToday = dateKey == today;
+          
+          if (tasks.isEmpty) {
+            return const SizedBox.shrink();
+          }
+  
+          return Container(
                     margin: const EdgeInsets.only(bottom: 16),
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -1672,20 +1860,6 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
                               ),
                               child: Row(
                                 children: [
-                                  Container(
-                                    width: 48,
-                                    height: 48,
-                                    decoration: BoxDecoration(
-                                      color: (task['color'] as Color).withValues(alpha: 0.1),
-                                      borderRadius: BorderRadius.circular(12),
-                                    ),
-                                    child: Icon(
-                                      task['icon'] as IconData,
-                                      color: task['color'] as Color,
-                                      size: 24,
-                                    ),
-                                  ),
-                                  const SizedBox(width: 16),
                                   Expanded(
                                     child: Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -1727,14 +1901,14 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
                                         Container(
                                           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                                           decoration: BoxDecoration(
-                                            color: (task['color'] as Color).withValues(alpha: 0.1),
+                                            color: _parseColor(task['colorHex'] as String?).withValues(alpha: 0.1),
                                             borderRadius: BorderRadius.circular(6),
                                           ),
                                           child: Text(
                                             task['type'],
                                             style: GoogleFonts.montserrat(
                                               fontSize: 12,
-                                              color: task['color'] as Color,
+                                              color: _parseColor(task['colorHex'] as String?),
                                               fontWeight: FontWeight.w500,
                                             ),
                                           ),
@@ -1760,9 +1934,7 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
                       ],
                     ),
                   );
-                },
-              ),
-            ),
+        }).toList(),
       ],
     );
   }
