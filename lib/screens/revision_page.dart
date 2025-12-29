@@ -218,8 +218,43 @@ class _RevisionPageState extends State<RevisionPage> {
     }
   }
 
+  void _showComingSoonDialog() {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        title: Row(
+          children: [
+            Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: const Color(0xFFD62828).withValues(alpha: 0.1),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: const Icon(Icons.auto_awesome, color: Color(0xFFD62828), size: 24),
+            ),
+            const SizedBox(width: 12),
+            const Expanded(child: Text('Coming Soon!', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold))),
+          ],
+        ),
+        content: const Text(
+          'AI-generated questions and flip cards are coming soon. We\'re working hard to bring them to you!\n\nThank you for your patience.',
+          style: TextStyle(fontSize: 15, height: 1.5),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Got it', style: TextStyle(color: Color(0xFFD62828), fontSize: 16)),
+          ),
+        ],
+      ),
+    );
+  }
+
   // Generate AI-powered mock exam using BECE knowledge and NACCA curriculum
   Future<void> _generateAIQuestions() async {
+    _showComingSoonDialog();
+    return;
     if (_selectedExamType == null || _selectedSubject == null) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
@@ -346,6 +381,8 @@ class _RevisionPageState extends State<RevisionPage> {
 
   // Generate AI-powered flip cards
   Future<void> _generateAIFlipCards() async {
+    _showComingSoonDialog();
+    return;
     if (_selectedExamType == null || _selectedSubject == null) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(

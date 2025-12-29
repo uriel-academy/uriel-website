@@ -177,7 +177,42 @@ class _UriChatInputState extends State<UriChatInput> {
     return s.trim();
   }
 
+  void _showComingSoonDialog() {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        title: Row(
+          children: [
+            Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: const Color(0xFFD62828).withValues(alpha: 0.1),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: const Icon(Icons.auto_awesome, color: Color(0xFFD62828), size: 24),
+            ),
+            const SizedBox(width: 12),
+            const Expanded(child: Text('Coming Soon!', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold))),
+          ],
+        ),
+        content: const Text(
+          'The AI chatbot feature is coming soon. We\'re working hard to bring it to you!\n\nThank you for your patience.',
+          style: TextStyle(fontSize: 15, height: 1.5),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Got it', style: TextStyle(color: Color(0xFFD62828), fontSize: 16)),
+          ),
+        ],
+      ),
+    );
+  }
+
   Future<void> _send() async {
+    _showComingSoonDialog();
+    return;
     final text = _input.text.trim();
     if (text.isEmpty || _loading) return;
 

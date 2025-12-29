@@ -113,7 +113,7 @@ class LandingPage extends StatelessWidget {
   Widget _buildHeroSection(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.white,
         image: DecorationImage(
           image: NetworkImage(
@@ -269,7 +269,7 @@ class LandingPage extends StatelessWidget {
                 runSpacing: 20,
                 children: [
                   _buildFeatureCard(
-                    title: '10,000+ Past Questions',
+                    title: '12,000+ Past Questions',
                     description: 'Access BECE past questions with comprehensive answers and explanations',
                     width: isDesktop ? (constraints.maxWidth - 40) / 3 : constraints.maxWidth,
                   ),

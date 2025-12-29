@@ -4300,6 +4300,9 @@ export { generateStudyPlan } from './generateStudyPlan';
 // Export AI Lesson Plan Generation
 export { generateLessonPlan } from './generateLessonPlan';
 
+// Export Question Cache Similarity Search
+export { findSimilarQuestion } from './findSimilarQuestion';
+
 // Export Question Difficulty Updates
 export { 
   updateQuestionDifficulties, 
