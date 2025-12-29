@@ -1,3 +1,6 @@
+
+
+
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'dart:async';
@@ -24,12 +27,14 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
   final ScrollController _chatScrollController = ScrollController();
   final List<Map<String, String>> _messages = [];
   bool _isLoading = false;
-  late ChatService _chatService;
+  ChatService? _chatService;  // Nullable - chat disabled
   StreamSubscription? _chatSubscription;
 
   @override
   void initState() {
     super.initState();
+    // ChatService disabled - feature under development
+    /*
     _chatService = ChatService(Uri.parse(
         'https://uriel-backend-api-836591016471.us-central1.run.app/api/chat/stream'));
     
@@ -71,6 +76,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
         }
       },
     );
+    */
   }
 
   @override
@@ -78,7 +84,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
     _chatSubscription?.cancel();
     _chatController.dispose();
     _chatScrollController.dispose();
-    _chatService.dispose();
+    // _chatService?.dispose();
     super.dispose();
   }
 
@@ -383,11 +389,21 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                     }
                   });
                   
-                  // Send to AI
+                  // AI chat disabled - show message
+                  setState(() {
+                    _messages.add({
+                      'role': 'assistant',
+                      'content': 'This feature is currently under development.',
+                    });
+                    _isLoading = false;
+                  });
+                  
+                  // Send to AI - DISABLED
+                  /*
                   try {
                     final systemPrompt = _buildSystemPrompt(allQuestionsText);
                     
-                    await _chatService.ask(
+                    await _chatService!.ask(
                       message: 'Please help me understand and answer these questions:\n\n$allQuestionsText',
                       system: systemPrompt,
                       history: [],
@@ -401,6 +417,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                       _isLoading = false;
                     });
                   }
+                  */
                 },
                 borderRadius: BorderRadius.circular(20),
                 child: Ink(
@@ -774,11 +791,21 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                     }
                   });
 
-                  // Send to AI
+                  // AI chat disabled - show message
+                  setState(() {
+                    _messages.add({
+                      'role': 'assistant',
+                      'content': 'This feature is currently under development.',
+                    });
+                    _isLoading = false;
+                  });
+                  
+                  // Send to AI - DISABLED
+                  /*
                   try {
                     final systemPrompt = _buildSystemPrompt(allQuestionsText);
 
-                    await _chatService.ask(
+                    await _chatService!.ask(
                       message: 'Please help me understand and answer these questions:\n\n$allQuestionsText',
                       system: systemPrompt,
                       history: [],
@@ -792,6 +819,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                       _isLoading = false;
                     });
                   }
+                  */
                 },
                 borderRadius: BorderRadius.circular(20),
                 child: Ink(
@@ -1274,11 +1302,21 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                   }
                 });
 
-                // Send to AI
+                // AI chat disabled - show message
+                setState(() {
+                  _messages.add({
+                    'role': 'assistant',
+                    'content': 'This feature is currently under development.',
+                  });
+                  _isLoading = false;
+                });
+
+                // Send to AI - DISABLED
+                /*
                 try {
                   final systemPrompt = _buildSystemPrompt(allQuestionsText);
                   
-                  await _chatService.ask(
+                  await _chatService!.ask(
                     message: 'Please help me understand and answer these questions:\n\n$allQuestionsText',
                     system: systemPrompt,
                     history: [],
@@ -1292,6 +1330,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                     _isLoading = false;
                   });
                 }
+                */
               },
               borderRadius: BorderRadius.circular(20),
               child: Ink(
@@ -1954,6 +1993,17 @@ Be supportive, patient, and encouraging. Help them learn following the official 
       }
     });
 
+    // AI chat disabled - show message
+    setState(() {
+      _messages.add({
+        'role': 'assistant',
+        'content': 'This feature is currently under development.',
+      });
+      _isLoading = false;
+    });
+
+    // DISABLED - API calls
+    /*
     try {
       final questionData = questions[_selectedQuestionIndex!].data();
       final questionText = questionData['questionText'] ?? '';
@@ -1970,7 +2020,7 @@ Be supportive, patient, and encouraging. Help them learn following the official 
               })
           .toList();
 
-      await _chatService.ask(
+      await _chatService!.ask(
         message: userMessage,
         system: systemPrompt,
         history: history,
@@ -1984,6 +2034,7 @@ Be supportive, patient, and encouraging. Help them learn following the official 
         _isLoading = false;
       });
     }
+    */
   }
 
   void _showAIChatSheet(BuildContext context, List<QueryDocumentSnapshot<Map<String, dynamic>>> questions) {

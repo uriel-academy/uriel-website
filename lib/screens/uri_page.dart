@@ -26,7 +26,7 @@ class _UriPageState extends State<UriPage> {
   final FocusNode _inputFocusNode = FocusNode();
   final ScrollController _scroll = ScrollController();
   final List<_ChatMessage> _messages = [];
-  late ChatService _chatService;
+  ChatService? _chatService;  // Disabled - feature under development
   String _currentAnswer = '';
   bool _sending = false;
   bool _isFirstInteraction = true;
@@ -36,6 +36,8 @@ class _UriPageState extends State<UriPage> {
   @override
   void initState() {
     super.initState();
+    // ChatService disabled - feature under development
+    /*
     _chatService = ChatService(Uri.parse("https://us-central1-uriel-academy-41fb0.cloudfunctions.net/aiChatHttp"));
     _chatService.stream.listen((chunk) {
       if (chunk.error != null) {
@@ -63,6 +65,7 @@ class _UriPageState extends State<UriPage> {
         });
       }
     });
+    */
   }
 
   @override
@@ -70,7 +73,7 @@ class _UriPageState extends State<UriPage> {
     _controller.dispose();
     _inputFocusNode.dispose();
     _scroll.dispose();
-    _chatService.dispose();
+    // _chatService?.dispose();
     super.dispose();
   }
 
@@ -326,12 +329,27 @@ class _UriPageState extends State<UriPage> {
     // Show empty text if only image is sent, or the actual text
     _addUserMessage(text, imageBytes: imageBytes);
     _clearSelectedImage();
-    _addAssistantPlaceholder();
+    
+    // Show default response instead of calling API
+    setState(() {
+      _messages.add(_ChatMessage(
+        role: Role.assistant,
+        text: 'This feature is currently under development.',
+        streaming: false,
+      ));
+      _sending = false;
+    });
     
     // First interaction has occurred — bring input down to bottom
     if (_isFirstInteraction) {
       setState(() => _isFirstInteraction = false);
     }
+    return;
+    
+    // DISABLED - API calls
+    /*
+    _addAssistantPlaceholder();
+    
     _currentAnswer = '';
     _sending = true;
 
@@ -344,12 +362,13 @@ class _UriPageState extends State<UriPage> {
       imageBase64 = base64Encode(imageBytes);
     }
 
-    await _chatService.ask(
+    await _chatService!.ask(
       message: text.isEmpty && imageBytes != null ? 'What do you see in this image?' : text,
       imageBase64: imageBase64,
       history: [],
       extraHeaders: idToken != null ? {"Authorization": "Bearer $idToken"} : null,
     );
+    */
   }
 
   Widget _buildBubble(_ChatMessage m) {

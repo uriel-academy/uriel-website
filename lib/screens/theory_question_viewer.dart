@@ -21,9 +21,12 @@ class TheoryQuestionViewer extends StatefulWidget {
 }
 
 class _TheoryQuestionViewerState extends State<TheoryQuestionViewer> {
+  ChatService? _chatService;  // Disabled - feature under development
+  /*
   final ChatService _chatService = ChatService(
     Uri.parse("https://us-central1-uriel-academy-41fb0.cloudfunctions.net/aiChatHttp"),
   );
+  */
   final TextEditingController _messageController = TextEditingController();
   final ScrollController _chatScrollController = ScrollController();
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
@@ -150,12 +153,21 @@ Start by asking what they already know about this topic.
         'content': userMessage,
         'timestamp': DateTime.now(),
       });
-      _isSendingMessage = true;
+      // Show default response instead of calling API
+      _messages.add({
+        'role': 'assistant',
+        'content': 'This feature is currently under development.',
+        'timestamp': DateTime.now(),
+      });
+      _isSendingMessage = false;
       _currentAnswer = '';
     });
 
     _scrollToBottom();
+    return;
 
+    // DISABLED - API calls
+    /*
     try {
       // Prepare history for API (convert messages to role/content format)
       final history = _messages
@@ -167,7 +179,7 @@ Start by asking what they already know about this topic.
           .toList();
 
       _chatSubscription?.cancel();
-      _chatSubscription = _chatService.stream.listen(
+      _chatSubscription = _chatService!.stream.listen(
         (chunk) {
           if (!mounted) return;
 
@@ -211,7 +223,7 @@ Start by asking what they already know about this topic.
         },
       );
 
-      await _chatService.ask(
+      await _chatService!.ask(
         message: userMessage,
         system: _systemPrompt,
         history: history,
@@ -227,6 +239,7 @@ Start by asking what they already know about this topic.
         SnackBar(content: Text('Error sending message: $e')),
       );
     }
+    */
   }
 
   Future<void> _submitAnswer() async {

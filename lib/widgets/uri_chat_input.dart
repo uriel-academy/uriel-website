@@ -22,12 +22,14 @@ class _UriChatInputState extends State<UriChatInput> {
   String _currentAnswer = '';
   bool _loading = false;
   String? _error;
-  late ChatService _chatService;
+  ChatService? _chatService;  // Nullable since we're not using it currently
   StreamSubscription? _chatSubscription;
 
   @override
   void initState() {
     super.initState();
+    // ChatService disabled - will show "under development" message
+    /*
     _chatService = ChatService(Uri.parse(
       "https://us-central1-uriel-academy-41fb0.cloudfunctions.net/aiChatHttp",
     ));
@@ -56,12 +58,13 @@ class _UriChatInputState extends State<UriChatInput> {
         widget.onMessage('assistant', normalizedAnswer);
       }
     });
+    */
   }
 
   @override
   void dispose() {
-    _chatSubscription?.cancel();
-    _chatService.dispose();
+    // _chatSubscription?.cancel();
+    // _chatService.dispose();
     _input.dispose();
     super.dispose();
   }
@@ -178,53 +181,30 @@ class _UriChatInputState extends State<UriChatInput> {
   }
 
   void _showComingSoonDialog() {
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-        title: Row(
-          children: [
-            Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                color: const Color(0xFFD62828).withValues(alpha: 0.1),
-                borderRadius: BorderRadius.circular(8),
-              ),
-              child: const Icon(Icons.auto_awesome, color: Color(0xFFD62828), size: 24),
-            ),
-            const SizedBox(width: 12),
-            const Expanded(child: Text('Coming Soon!', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold))),
-          ],
-        ),
-        content: const Text(
-          'The AI chatbot feature is coming soon. We\'re working hard to bring it to you!\n\nThank you for your patience.',
-          style: TextStyle(fontSize: 15, height: 1.5),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: const Text('Got it', style: TextStyle(color: Color(0xFFD62828), fontSize: 16)),
-          ),
-        ],
-      ),
-    );
+    // Send default response instead of calling API
+    widget.onMessage('assistant', 'This feature is currently under development.');
   }
 
   Future<void> _send() async {
-    _showComingSoonDialog();
-    return;
     final text = _input.text.trim();
     if (text.isEmpty || _loading) return;
 
     _input.clear();
+    
+    // Send user message to UI
+    widget.onMessage('user', text);
+    
+    // Send default response instead of calling API
+    _showComingSoonDialog();
+    return;
+
+    // The code below is commented out for when API credits are available
+    /*
     setState(() {
       _currentAnswer = '';
       _error = null;
       _loading = true;
     });
-
-    // Send user message to UI
-    widget.onMessage('user', text);
 
     // Initialize assistant message
     widget.onMessage('assistant', '');
@@ -241,6 +221,7 @@ class _UriChatInputState extends State<UriChatInput> {
       history: widget.history,
       extraHeaders: idToken != null ? {"Authorization": "Bearer $idToken"} : null,
     );
+    */
   }
 
 
