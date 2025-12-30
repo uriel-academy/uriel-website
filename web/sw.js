@@ -1,10 +1,10 @@
 // Service Worker for Progressive Web App (PWA)
 // Implements offline caching and performance optimization
 
-const CACHE_NAME = 'uriel-academy-v1.0.0';
-const STATIC_CACHE = 'uriel-static-v1';
-const DYNAMIC_CACHE = 'uriel-dynamic-v1';
-const IMAGE_CACHE = 'uriel-images-v1';
+const CACHE_NAME = 'uriel-academy-v1.0.1';
+const STATIC_CACHE = 'uriel-static-v1.0.1';
+const DYNAMIC_CACHE = 'uriel-dynamic-v1.0.1';
+const IMAGE_CACHE = 'uriel-images-v1.0.1';
 
 // Files to cache immediately on install
 const STATIC_FILES = [

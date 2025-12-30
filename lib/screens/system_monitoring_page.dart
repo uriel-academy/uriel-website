@@ -3,6 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:async';
+import '../widgets/performance_analytics_widget.dart';
 
 class SystemMonitoringPage extends StatefulWidget {
   const SystemMonitoringPage({super.key});
@@ -35,15 +36,15 @@ class _SystemMonitoringPageState extends State<SystemMonitoringPage> {
   int _errorsPage = 1;
 
   // Performance metrics
-  double _avgResponseTime = 0.0;
-  int _totalRequests = 0;
-  int _failedRequests = 0;
-  double _errorRate = 0.0;
+  final double _avgResponseTime = 0.0;
+  final int _totalRequests = 0;
+  final int _failedRequests = 0;
+  final double _errorRate = 0.0;
 
   // System health indicators
   bool _firestoreHealthy = true;
   bool _authHealthy = true;
-  bool _functionsHealthy = true;
+  final bool _functionsHealthy = true;
   DateTime? _lastHealthCheck;
 
   @override
@@ -388,6 +389,14 @@ class _SystemMonitoringPageState extends State<SystemMonitoringPage> {
                   ),
                 ],
               ),
+            ),
+          ),
+
+          // Performance Analytics
+          const SliverToBoxAdapter(
+            child: Padding(
+              padding: EdgeInsets.fromLTRB(24, 0, 24, 24),
+              child: PerformanceAnalyticsWidget(),
             ),
           ),
 
