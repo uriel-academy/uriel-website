@@ -3,7 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'dart:async';
-import 'student_profile_page.dart';
 import '../services/grade_prediction_service.dart';
 
 class SchoolAdminDashboard extends StatefulWidget {
@@ -16,7 +15,6 @@ class SchoolAdminDashboard extends StatefulWidget {
 class _SchoolAdminDashboardState extends State<SchoolAdminDashboard> {
   String? _selectedClass;
   final List<String> _availableClasses = ['JHS Form 1', 'JHS Form 2', 'JHS Form 3'];
-  bool _loadingClasses = false;
   
   // Dashboard data
   Map<String, dynamic> _subjectMastery = {};
@@ -1969,9 +1967,9 @@ class _SchoolAdminDashboardState extends State<SchoolAdminDashboard> {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.info_outline,
-                      color: const Color(0xFF6366F1),
+                      color: Color(0xFF6366F1),
                       size: 20,
                     ),
                     const SizedBox(width: 12),
@@ -2092,7 +2090,7 @@ class _SchoolAdminDashboardState extends State<SchoolAdminDashboard> {
       debugPrint('🔍 School Grade Analytics: Found ${studentsQuery.docs.length} total students');
 
       final matchingStudents = studentsQuery.docs.where((doc) {
-        final data = doc.data() as Map<String, dynamic>;
+        final data = doc.data();
         final studentSchool = (data['schoolName'] as String?)?.toLowerCase().trim();
         return studentSchool == normalizedSchoolName;
       }).toList();
@@ -2343,9 +2341,9 @@ class _SchoolAdminDashboardState extends State<SchoolAdminDashboard> {
         children: [
           Row(
             children: [
-              Icon(
+              const Icon(
                 Icons.summarize,
-                color: const Color(0xFF6366F1),
+                color: Color(0xFF6366F1),
                 size: 20,
               ),
               const SizedBox(width: 8),

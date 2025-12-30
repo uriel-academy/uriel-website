@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../services/chat_service.dart';
 import '../services/image_compression_service.dart';
+import '../services/chat_service.dart';
 import 'dart:math' as math;
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_math_fork/flutter_math.dart';
@@ -27,7 +27,7 @@ class _UriPageState extends State<UriPage> {
   final ScrollController _scroll = ScrollController();
   final List<_ChatMessage> _messages = [];
   ChatService? _chatService;  // Disabled - feature under development
-  String _currentAnswer = '';
+  final String _currentAnswer = '';
   bool _sending = false;
   bool _isFirstInteraction = true;
   bool _aggressiveClean = false;

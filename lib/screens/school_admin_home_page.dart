@@ -43,10 +43,9 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage>
   int _unreadNotificationCount = 0;
   List<Map<String, dynamic>> _notifications = [];
   StreamSubscription<QuerySnapshot>? _notificationsSubscription;
-  String? _selectedNotificationId;
-  int _notificationPage = 0;
   int _dashboardNotificationPage = 0;
   static const int _notificationsPerPage = 5;
+  String? _selectedNotificationId;
 
   @override
   void initState() {
@@ -163,8 +162,8 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage>
                                         'Dashboard refreshed',
                                         style: GoogleFonts.montserrat(),
                                       ),
-                                      backgroundColor: Color(0xFF4CAF50),
-                                      duration: Duration(seconds: 2),
+                                      backgroundColor: const Color(0xFF4CAF50),
+                                      duration: const Duration(seconds: 2),
                                       behavior: SnackBarBehavior.floating,
                                     ),
                                   );
@@ -938,7 +937,7 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage>
       context: context,
       barrierColor: Colors.transparent,
       builder: (context) {
-        final dialogWidth = 320.0;
+        const dialogWidth = 320.0;
 
         return Stack(
           children: [

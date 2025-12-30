@@ -42,10 +42,6 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
     {'name': 'Creative Arts', 'icon': Icons.palette, 'color': const Color(0xFFFF2D55)},
   ];
   
-  // Preferences (with smart defaults)
-  final int _weeklyHours = 15;
-  final String _preferredTime = 'Afternoon';
-  
   // Generated plan
   Map<String, dynamic>? _generatedPlan;
   
@@ -104,8 +100,8 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
         debugPrint('📋 studyPlan value: $studyPlanData');
         
         if (studyPlanData is Map) {
-          debugPrint('📋 studyPlan keys: ${(studyPlanData as Map).keys.toList()}');
-          debugPrint('📋 dailySchedule exists in studyPlan: ${(studyPlanData as Map).containsKey('dailySchedule')}');
+          debugPrint('📋 studyPlan keys: ${(studyPlanData).keys.toList()}');
+          debugPrint('📋 dailySchedule exists in studyPlan: ${(studyPlanData).containsKey('dailySchedule')}');
           
           final schedule = studyPlanData['dailySchedule'];
           if (schedule != null) {

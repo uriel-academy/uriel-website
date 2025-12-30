@@ -165,7 +165,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                     Text(
                       '${snapshot.error}',
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                        color: Theme.of(context).colorScheme.onSurface.withOpacity(0.6),
+                        color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6),
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -193,7 +193,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                     Icon(
                       Icons.description_outlined,
                       size: 80,
-                      color: Theme.of(context).colorScheme.onSurface.withOpacity(0.2),
+                      color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.2),
                     ),
                     const SizedBox(height: 24),
                     Text(
@@ -206,7 +206,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                     Text(
                       'Check back later for updates',
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                        color: Theme.of(context).colorScheme.onSurface.withOpacity(0.5),
+                        color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
                       ),
                     ),
                   ],
@@ -227,7 +227,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                 // Divider
                 Container(
                   width: 1,
-                  color: Theme.of(context).dividerColor.withOpacity(0.1),
+                  color: Theme.of(context).dividerColor.withValues(alpha: 0.1),
                 ),
                 // Right side: AI Chat (60%)
                 Expanded(
@@ -316,10 +316,10 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
             margin: const EdgeInsets.only(bottom: 20),
             padding: const EdgeInsets.all(24),
             decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.surfaceContainerHighest.withOpacity(0.4),
+              color: Theme.of(context).colorScheme.surfaceContainerHighest.withValues(alpha: 0.4),
               borderRadius: BorderRadius.circular(16),
               border: Border.all(
-                color: Theme.of(context).colorScheme.outline.withOpacity(0.1),
+                color: Theme.of(context).colorScheme.outline.withValues(alpha: 0.1),
                 width: 1,
               ),
             ),
@@ -330,7 +330,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                 height: 1.7,
                 fontWeight: FontWeight.w500,
                 letterSpacing: 0.1,
-                color: Theme.of(context).colorScheme.onSurface.withOpacity(0.85),
+                color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.85),
               ),
             ),
           ),
@@ -423,18 +423,18 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                 child: Ink(
                   decoration: BoxDecoration(
                     color: isPartSelected
-                        ? Theme.of(context).colorScheme.primaryContainer.withOpacity(0.5)
+                        ? Theme.of(context).colorScheme.primaryContainer.withValues(alpha: 0.5)
                         : Theme.of(context).colorScheme.surface,
                     borderRadius: BorderRadius.circular(20),
                     border: Border.all(
                       color: isPartSelected
-                          ? Theme.of(context).colorScheme.primary.withOpacity(0.3)
-                          : Theme.of(context).colorScheme.outline.withOpacity(0.15),
+                          ? Theme.of(context).colorScheme.primary.withValues(alpha: 0.3)
+                          : Theme.of(context).colorScheme.outline.withValues(alpha: 0.15),
                       width: 1.5,
                     ),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withOpacity(0.03),
+                        color: Colors.black.withValues(alpha: 0.03),
                         blurRadius: 8,
                         offset: const Offset(0, 2),
                       ),
@@ -459,11 +459,11 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                                     colors: isPartSelected
                                         ? [
                                             Theme.of(context).colorScheme.primary,
-                                            Theme.of(context).colorScheme.primary.withOpacity(0.8),
+                                            Theme.of(context).colorScheme.primary.withValues(alpha: 0.8),
                                           ]
                                         : [
                                             Theme.of(context).colorScheme.primaryContainer,
-                                            Theme.of(context).colorScheme.primaryContainer.withOpacity(0.7),
+                                            Theme.of(context).colorScheme.primaryContainer.withValues(alpha: 0.7),
                                           ],
                                     begin: Alignment.topLeft,
                                     end: Alignment.bottomRight,
@@ -527,7 +527,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                                         vertical: 6,
                                       ),
                                       decoration: BoxDecoration(
-                                        color: Theme.of(context).colorScheme.secondaryContainer.withOpacity(0.6),
+                                        color: Theme.of(context).colorScheme.secondaryContainer.withValues(alpha: 0.6),
                                         borderRadius: BorderRadius.circular(20),
                                       ),
                                       child: Text(
@@ -547,7 +547,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                                         vertical: 4,
                                       ),
                                       decoration: BoxDecoration(
-                                        color: Theme.of(context).colorScheme.tertiaryContainer.withOpacity(0.5),
+                                        color: Theme.of(context).colorScheme.tertiaryContainer.withValues(alpha: 0.5),
                                         borderRadius: BorderRadius.circular(16),
                                       ),
                                       child: Text(
@@ -613,7 +613,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                                 if (qIndex != questionsInPart.length - 1) ...[
                                   const SizedBox(height: 16),
                                   Divider(
-                                    color: Theme.of(context).dividerColor.withOpacity(0.2),
+                                    color: Theme.of(context).dividerColor.withValues(alpha: 0.2),
                                     thickness: 1,
                                   ),
                                 ],
@@ -718,10 +718,10 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
           margin: const EdgeInsets.only(bottom: 20),
           padding: const EdgeInsets.all(24),
           decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.surfaceContainerHighest.withOpacity(0.4),
+            color: Theme.of(context).colorScheme.surfaceContainerHighest.withValues(alpha: 0.4),
             borderRadius: BorderRadius.circular(16),
             border: Border.all(
-              color: Theme.of(context).colorScheme.outline.withOpacity(0.1),
+              color: Theme.of(context).colorScheme.outline.withValues(alpha: 0.1),
               width: 1,
             ),
           ),
@@ -732,7 +732,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
               height: 1.7,
               fontWeight: FontWeight.w500,
               letterSpacing: 0.1,
-              color: Theme.of(context).colorScheme.onSurface.withOpacity(0.85),
+              color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.85),
             ),
           ),
         ),
@@ -825,18 +825,18 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                 child: Ink(
                   decoration: BoxDecoration(
                     color: isSectionSelected
-                        ? Theme.of(context).colorScheme.primaryContainer.withOpacity(0.5)
+                        ? Theme.of(context).colorScheme.primaryContainer.withValues(alpha: 0.5)
                         : Theme.of(context).colorScheme.surface,
                     borderRadius: BorderRadius.circular(20),
                     border: Border.all(
                       color: isSectionSelected
-                          ? Theme.of(context).colorScheme.primary.withOpacity(0.3)
-                          : Theme.of(context).colorScheme.outline.withOpacity(0.15),
+                          ? Theme.of(context).colorScheme.primary.withValues(alpha: 0.3)
+                          : Theme.of(context).colorScheme.outline.withValues(alpha: 0.15),
                       width: 1.5,
                     ),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withOpacity(0.03),
+                        color: Colors.black.withValues(alpha: 0.03),
                         blurRadius: 8,
                         offset: const Offset(0, 2),
                       ),
@@ -861,11 +861,11 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                                     colors: isSectionSelected
                                         ? [
                                             Theme.of(context).colorScheme.primary,
-                                            Theme.of(context).colorScheme.primary.withOpacity(0.8),
+                                            Theme.of(context).colorScheme.primary.withValues(alpha: 0.8),
                                           ]
                                         : [
                                             Theme.of(context).colorScheme.primaryContainer,
-                                            Theme.of(context).colorScheme.primaryContainer.withOpacity(0.7),
+                                            Theme.of(context).colorScheme.primaryContainer.withValues(alpha: 0.7),
                                           ],
                                     begin: Alignment.topLeft,
                                     end: Alignment.bottomRight,
@@ -931,7 +931,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                                         vertical: 6,
                                       ),
                                       decoration: BoxDecoration(
-                                        color: Theme.of(context).colorScheme.secondaryContainer.withOpacity(0.6),
+                                        color: Theme.of(context).colorScheme.secondaryContainer.withValues(alpha: 0.6),
                                         borderRadius: BorderRadius.circular(20),
                                       ),
                                       child: Text(
@@ -951,7 +951,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                                         vertical: 4,
                                       ),
                                       decoration: BoxDecoration(
-                                        color: Theme.of(context).colorScheme.tertiaryContainer.withOpacity(0.5),
+                                        color: Theme.of(context).colorScheme.tertiaryContainer.withValues(alpha: 0.5),
                                         borderRadius: BorderRadius.circular(16),
                                       ),
                                       child: Text(
@@ -1017,7 +1017,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                                 if (qIndex != questionsInSection.length - 1) ...[
                                   const SizedBox(height: 16),
                                   Divider(
-                                    color: Theme.of(context).dividerColor.withOpacity(0.2),
+                                    color: Theme.of(context).dividerColor.withValues(alpha: 0.2),
                                     thickness: 1,
                                   ),
                                 ],
@@ -1220,7 +1220,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
           margin: const EdgeInsets.only(bottom: 20),
           padding: const EdgeInsets.all(24),
           decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.surfaceContainerHighest.withOpacity(0.4),
+            color: Theme.of(context).colorScheme.surfaceContainerHighest.withValues(alpha: 0.4),
             borderRadius: BorderRadius.circular(16),
           ),
           child: Column(
@@ -1336,18 +1336,18 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
               child: Ink(
                 decoration: BoxDecoration(
                   color: isSectionSelected
-                      ? Theme.of(context).colorScheme.primaryContainer.withOpacity(0.5)
+                      ? Theme.of(context).colorScheme.primaryContainer.withValues(alpha: 0.5)
                       : Theme.of(context).colorScheme.surface,
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(
                     color: isSectionSelected
-                        ? Theme.of(context).colorScheme.primary.withOpacity(0.3)
-                        : Theme.of(context).colorScheme.outline.withOpacity(0.15),
+                        ? Theme.of(context).colorScheme.primary.withValues(alpha: 0.3)
+                        : Theme.of(context).colorScheme.outline.withValues(alpha: 0.15),
                     width: 1.5,
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.03),
+                      color: Colors.black.withValues(alpha: 0.03),
                       blurRadius: 8,
                       offset: const Offset(0, 2),
                     ),
@@ -1372,11 +1372,11 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                                   colors: isSectionSelected
                                       ? [
                                           Theme.of(context).colorScheme.primary,
-                                          Theme.of(context).colorScheme.primary.withOpacity(0.8),
+                                          Theme.of(context).colorScheme.primary.withValues(alpha: 0.8),
                                         ]
                                       : [
                                           Theme.of(context).colorScheme.primaryContainer,
-                                          Theme.of(context).colorScheme.primaryContainer.withOpacity(0.7),
+                                          Theme.of(context).colorScheme.primaryContainer.withValues(alpha: 0.7),
                                         ],
                                   begin: Alignment.topLeft,
                                   end: Alignment.bottomRight,
@@ -1442,7 +1442,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                                       vertical: 6,
                                     ),
                                     decoration: BoxDecoration(
-                                      color: Theme.of(context).colorScheme.secondaryContainer.withOpacity(0.6),
+                                      color: Theme.of(context).colorScheme.secondaryContainer.withValues(alpha: 0.6),
                                       borderRadius: BorderRadius.circular(20),
                                     ),
                                     child: Text(
@@ -1462,7 +1462,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                                       vertical: 4,
                                     ),
                                     decoration: BoxDecoration(
-                                      color: Theme.of(context).colorScheme.tertiaryContainer.withOpacity(0.5),
+                                      color: Theme.of(context).colorScheme.tertiaryContainer.withValues(alpha: 0.5),
                                       borderRadius: BorderRadius.circular(16),
                                     ),
                                     child: Text(
@@ -1528,7 +1528,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                               if (qIndex != questionsInSection.length - 1) ...[
                                 const SizedBox(height: 16),
                                 Divider(
-                                  color: Theme.of(context).dividerColor.withOpacity(0.2),
+                                  color: Theme.of(context).dividerColor.withValues(alpha: 0.2),
                                   thickness: 1,
                                 ),
                               ],
@@ -1566,7 +1566,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                     shape: BoxShape.circle,
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withOpacity(0.1),
+                        color: Colors.black.withValues(alpha: 0.1),
                         blurRadius: 20,
                         offset: const Offset(0, 4),
                       ),
@@ -1591,7 +1591,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                 Text(
                   'Your AI tutor will guide you through\nthe answer step by step',
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: Theme.of(context).colorScheme.onSurface.withOpacity(0.6),
+                    color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6),
                     height: 1.5,
                   ),
                   textAlign: TextAlign.center,
@@ -1614,7 +1614,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
               color: Theme.of(context).colorScheme.surface,
               border: Border(
                 bottom: BorderSide(
-                  color: Theme.of(context).dividerColor.withOpacity(0.1),
+                  color: Theme.of(context).dividerColor.withValues(alpha: 0.1),
                   width: 1,
                 ),
               ),
@@ -1629,7 +1629,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                     borderRadius: BorderRadius.circular(12),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withOpacity(0.1),
+                        color: Colors.black.withValues(alpha: 0.1),
                         blurRadius: 8,
                         offset: const Offset(0, 2),
                       ),
@@ -1659,7 +1659,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                       Text(
                         'Ask anything, get guided help',
                         style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                          color: Theme.of(context).colorScheme.onSurface.withOpacity(0.5),
+                          color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
                           fontSize: 12,
                         ),
                       ),
@@ -1681,7 +1681,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                           Icon(
                             Icons.waving_hand_rounded,
                             size: 48,
-                            color: Theme.of(context).colorScheme.primary.withOpacity(0.5),
+                            color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.5),
                           ),
                           const SizedBox(height: 20),
                           Text(
@@ -1696,7 +1696,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                             'I\'ll help you work through this question step by step. Ask me anything!',
                             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                               height: 1.6,
-                              color: Theme.of(context).colorScheme.onSurface.withOpacity(0.7),
+                              color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.7),
                             ),
                             textAlign: TextAlign.center,
                           ),
@@ -1726,7 +1726,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
               color: Theme.of(context).colorScheme.surface,
               border: Border(
                 top: BorderSide(
-                  color: Theme.of(context).dividerColor.withOpacity(0.1),
+                  color: Theme.of(context).dividerColor.withValues(alpha: 0.1),
                   width: 1,
                 ),
               ),
@@ -1739,10 +1739,10 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                   Expanded(
                     child: Container(
                       decoration: BoxDecoration(
-                        color: Theme.of(context).colorScheme.surfaceContainerHighest.withOpacity(0.5),
+                        color: Theme.of(context).colorScheme.surfaceContainerHighest.withValues(alpha: 0.5),
                         borderRadius: BorderRadius.circular(24),
                         border: Border.all(
-                          color: Theme.of(context).colorScheme.outline.withOpacity(0.15),
+                          color: Theme.of(context).colorScheme.outline.withValues(alpha: 0.15),
                           width: 1,
                         ),
                       ),
@@ -1751,7 +1751,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                         decoration: InputDecoration(
                           hintText: 'Ask your tutor...',
                           hintStyle: TextStyle(
-                            color: Theme.of(context).colorScheme.onSurface.withOpacity(0.4),
+                            color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.4),
                             fontWeight: FontWeight.w400,
                           ),
                           border: InputBorder.none,
@@ -1775,7 +1775,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                           : LinearGradient(
                               colors: [
                                 Theme.of(context).colorScheme.primary,
-                                Theme.of(context).colorScheme.primary.withOpacity(0.8),
+                                Theme.of(context).colorScheme.primary.withValues(alpha: 0.8),
                               ],
                             ),
                       color: _isLoading
@@ -1827,7 +1827,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                 shape: BoxShape.circle,
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.08),
+                    color: Colors.black.withValues(alpha: 0.08),
                     blurRadius: 6,
                     offset: const Offset(0, 2),
                   ),
@@ -1853,17 +1853,17 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
                         ? LinearGradient(
                             colors: [
                               Theme.of(context).colorScheme.primary,
-                              Theme.of(context).colorScheme.primary.withOpacity(0.85),
+                              Theme.of(context).colorScheme.primary.withValues(alpha: 0.85),
                             ],
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                           )
                         : null,
-                    color: isUser ? null : Theme.of(context).colorScheme.surfaceContainerHighest.withOpacity(0.6),
+                    color: isUser ? null : Theme.of(context).colorScheme.surfaceContainerHighest.withValues(alpha: 0.6),
                     borderRadius: BorderRadius.circular(20),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withOpacity(0.04),
+                        color: Colors.black.withValues(alpha: 0.04),
                         blurRadius: 8,
                         offset: const Offset(0, 2),
                       ),
@@ -1929,7 +1929,7 @@ class _TheoryYearQuestionsListState extends State<TheoryYearQuestionsList> {
             Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.primary.withOpacity(0.1),
+                color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
                 shape: BoxShape.circle,
               ),
               child: Icon(
@@ -2067,7 +2067,7 @@ Be supportive, patient, and encouraging. Help them learn following the official 
                 width: 40,
                 height: 4,
                 decoration: BoxDecoration(
-                  color: Theme.of(context).colorScheme.onSurface.withOpacity(0.2),
+                  color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.2),
                   borderRadius: BorderRadius.circular(2),
                 ),
               ),

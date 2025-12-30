@@ -248,7 +248,7 @@ class _MathematicsTextbookReaderPageState extends State<MathematicsTextbookReade
             margin: const EdgeInsets.only(right: 16),
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
             decoration: BoxDecoration(
-              color: Colors.amber.withOpacity(0.1),
+              color: Colors.amber.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(20),
             ),
             child: Row(
@@ -326,7 +326,7 @@ class _MathematicsTextbookReaderPageState extends State<MathematicsTextbookReade
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: const Color(0xFFD62828).withOpacity(0.1),
+                  color: const Color(0xFFD62828).withValues(alpha: 0.1),
                   border: Border(
                     bottom: BorderSide(color: Colors.grey[200]!),
                   ),
@@ -417,7 +417,7 @@ class _MathematicsTextbookReaderPageState extends State<MathematicsTextbookReade
                             ),
                           ),
                           selected: isCurrentSection,
-                          selectedTileColor: const Color(0xFFD62828).withOpacity(0.1),
+                          selectedTileColor: const Color(0xFFD62828).withValues(alpha: 0.1),
                           onTap: () => _loadSection(chapterId, sectionId),
                         );
                       }).toList(),
@@ -554,7 +554,7 @@ class _MathematicsTextbookReaderPageState extends State<MathematicsTextbookReade
               borderRadius: BorderRadius.circular(16),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.05),
+                  color: Colors.black.withValues(alpha: 0.05),
                   blurRadius: 10,
                   offset: const Offset(0, 4),
                 ),
@@ -568,7 +568,7 @@ class _MathematicsTextbookReaderPageState extends State<MathematicsTextbookReade
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                       decoration: BoxDecoration(
-                        color: const Color(0xFFD62828).withOpacity(0.1),
+                        color: const Color(0xFFD62828).withValues(alpha: 0.1),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Text(
@@ -585,7 +585,7 @@ class _MathematicsTextbookReaderPageState extends State<MathematicsTextbookReade
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                         decoration: BoxDecoration(
-                          color: Colors.green.withOpacity(0.1),
+                          color: Colors.green.withValues(alpha: 0.1),
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: Row(
@@ -628,7 +628,7 @@ class _MathematicsTextbookReaderPageState extends State<MathematicsTextbookReade
               borderRadius: BorderRadius.circular(16),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.05),
+                  color: Colors.black.withValues(alpha: 0.05),
                   blurRadius: 10,
                   offset: const Offset(0, 4),
                 ),
@@ -672,7 +672,7 @@ class _MathematicsTextbookReaderPageState extends State<MathematicsTextbookReade
                 ),
                 tableBorder: TableBorder.all(color: Colors.grey[300]!),
                 blockquoteDecoration: BoxDecoration(
-                  color: subjectColor.withOpacity(0.1),
+                  color: subjectColor.withValues(alpha: 0.1),
                   border: Border(
                     left: BorderSide(color: subjectColor, width: 4),
                   ),
@@ -745,12 +745,12 @@ class _MathematicsTextbookReaderPageState extends State<MathematicsTextbookReade
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            const Color(0xFFD62828).withOpacity(0.1),
-            const Color(0xFFD62828).withOpacity(0.05),
+            const Color(0xFFD62828).withValues(alpha: 0.1),
+            const Color(0xFFD62828).withValues(alpha: 0.05),
           ],
         ),
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: const Color(0xFFD62828).withOpacity(0.3)),
+        border: Border.all(color: const Color(0xFFD62828).withValues(alpha: 0.3)),
       ),
       child: Column(
         children: [
@@ -833,10 +833,10 @@ class _MathematicsTextbookReaderPageState extends State<MathematicsTextbookReade
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: const Color(0xFFD62828).withOpacity(0.3)),
+        border: Border.all(color: const Color(0xFFD62828).withValues(alpha: 0.3)),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -877,7 +877,7 @@ class _MathematicsTextbookReaderPageState extends State<MathematicsTextbookReade
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
             decoration: BoxDecoration(
-              color: Colors.amber.withOpacity(0.1),
+              color: Colors.amber.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(20),
             ),
             child: Text(
@@ -1016,7 +1016,7 @@ class _MathematicsTextbookReaderPageState extends State<MathematicsTextbookReade
                       : showWrong
                           ? Colors.red[50]
                           : isSelected
-                              ? const Color(0xFFD62828).withOpacity(0.1)
+                              ? const Color(0xFFD62828).withValues(alpha: 0.1)
                               : Colors.transparent,
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
@@ -1217,7 +1217,7 @@ class _MathematicsTextbookReaderPageState extends State<MathematicsTextbookReade
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.1),
+            color: Colors.black.withValues(alpha: 0.1),
             blurRadius: 10,
             offset: const Offset(0, -4),
           ),

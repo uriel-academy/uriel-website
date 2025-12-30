@@ -477,7 +477,8 @@ class _RevisionPageState extends State<RevisionPage> {
     }
   }
 
-  // TODO: Re-enable when flip card questions source is available
+  // Flip card feature temporarily disabled - pending question source integration
+  // Will re-enable in future update when question API is standardized
   // Future<void> _generateFlipCard() async {
   //   if (_selectedExamType == null || _selectedSubject == null) {
   //     ScaffoldMessenger.of(context).showSnackBar(

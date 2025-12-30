@@ -2726,14 +2726,14 @@ class _TextbooksPageState extends State<TextbooksPage>
                               errorBuilder: (context, error, stackTrace) {
                                 debugPrint('\u274c Error loading $coverPath: $error');
                                 return Container(
-                                  color: const Color(0xFFD62828).withOpacity(0.1),
+                                  color: const Color(0xFFD62828).withValues(alpha: 0.1),
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Icon(
                                         Icons.book,
                                         size: 48,
-                                        color: const Color(0xFFD62828).withOpacity(0.5),
+                                        color: const Color(0xFFD62828).withValues(alpha: 0.5),
                                       ),
                                       const SizedBox(height: 8),
                                       Text(
@@ -2927,7 +2927,7 @@ class _TextbooksPageState extends State<TextbooksPage>
             icon: const Icon(Icons.chevron_left, size: 20),
             style: IconButton.styleFrom(
               backgroundColor: _currentEnglishPage > 0
-                  ? const Color(0xFFD62828).withOpacity(0.1)
+                  ? const Color(0xFFD62828).withValues(alpha: 0.1)
                   : Colors.grey[200],
               foregroundColor: _currentEnglishPage > 0
                   ? const Color(0xFFD62828)
@@ -2983,7 +2983,7 @@ class _TextbooksPageState extends State<TextbooksPage>
             icon: const Icon(Icons.chevron_right, size: 20),
             style: IconButton.styleFrom(
               backgroundColor: _currentEnglishPage < totalPages - 1
-                  ? const Color(0xFFD62828).withOpacity(0.1)
+                  ? const Color(0xFFD62828).withValues(alpha: 0.1)
                   : Colors.grey[200],
               foregroundColor: _currentEnglishPage < totalPages - 1
                   ? const Color(0xFFD62828)
@@ -3015,7 +3015,7 @@ class _TextbooksPageState extends State<TextbooksPage>
             icon: const Icon(Icons.chevron_left, size: 20),
             style: IconButton.styleFrom(
               backgroundColor: _currentStorybookPage > 0
-                  ? const Color(0xFFD62828).withOpacity(0.1)
+                  ? const Color(0xFFD62828).withValues(alpha: 0.1)
                   : Colors.grey[200],
               foregroundColor: _currentStorybookPage > 0
                   ? const Color(0xFFD62828)
@@ -3071,7 +3071,7 @@ class _TextbooksPageState extends State<TextbooksPage>
             icon: const Icon(Icons.chevron_right, size: 20),
             style: IconButton.styleFrom(
               backgroundColor: _currentStorybookPage < totalPages - 1
-                  ? const Color(0xFFD62828).withOpacity(0.1)
+                  ? const Color(0xFFD62828).withValues(alpha: 0.1)
                   : Colors.grey[200],
               foregroundColor: _currentStorybookPage < totalPages - 1
                   ? const Color(0xFFD62828)
@@ -3166,7 +3166,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                                           errorBuilder: (context, error, stackTrace) {
                                             debugPrint('Error loading cover image: $coverImage');
                                             return Container(
-                                              color: subjectColor.withOpacity(0.1),
+                                              color: subjectColor.withValues(alpha: 0.1),
                                               child: Column(
                                                 mainAxisAlignment: MainAxisAlignment.center,
                                                 children: [
@@ -3175,7 +3175,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                                                         ? Icons.public
                                                         : Icons.church,
                                                     size: isMobile ? 40 : 48,
-                                                    color: subjectColor.withOpacity(0.5),
+                                                    color: subjectColor.withValues(alpha: 0.5),
                                                   ),
                                                   const SizedBox(height: 8),
                                                   Text(
@@ -3199,7 +3199,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                                           errorBuilder: (context, error, stackTrace) {
                                             debugPrint('Error loading asset image: $coverImage');
                                             return Container(
-                                              color: subjectColor.withOpacity(0.1),
+                                              color: subjectColor.withValues(alpha: 0.1),
                                               child: Column(
                                                 mainAxisAlignment: MainAxisAlignment.center,
                                                 children: [
@@ -3208,7 +3208,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                                                         ? Icons.public
                                                         : Icons.church,
                                                     size: isMobile ? 40 : 48,
-                                                    color: subjectColor.withOpacity(0.5),
+                                                    color: subjectColor.withValues(alpha: 0.5),
                                                   ),
                                                   const SizedBox(height: 8),
                                                   Text(
@@ -3226,7 +3226,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                                           },
                                         ))
                                   : Container(
-                                      color: subjectColor.withOpacity(0.1),
+                                      color: subjectColor.withValues(alpha: 0.1),
                                       child: Column(
                                         mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
@@ -3235,7 +3235,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                                                 ? Icons.public
                                                 : Icons.church,
                                             size: isMobile ? 40 : 48,
-                                            color: subjectColor.withOpacity(0.5),
+                                            color: subjectColor.withValues(alpha: 0.5),
                                           ),
                                           const SizedBox(height: 8),
                                           Text(
@@ -3326,7 +3326,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                                   vertical: 2,
                                 ),
                                 decoration: BoxDecoration(
-                                  color: subjectColor.withOpacity(0.1),
+                                  color: subjectColor.withValues(alpha: 0.1),
                                   borderRadius: BorderRadius.circular(4),
                                 ),
                                 child: Text(
@@ -3477,7 +3477,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                         flex: 5,
                         child: Container(
                           decoration: BoxDecoration(
-                            color: subjectColor.withOpacity(0.1),
+                            color: subjectColor.withValues(alpha: 0.1),
                             borderRadius: const BorderRadius.vertical(
                               top: Radius.circular(12),
                             ),
@@ -3488,7 +3488,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                               Icon(
                                 Icons.science,
                                 size: isMobile ? 40 : 48,
-                                color: subjectColor.withOpacity(0.7),
+                                color: subjectColor.withValues(alpha: 0.7),
                               ),
                               const SizedBox(height: 8),
                               Text(
@@ -3656,9 +3656,9 @@ class _TextbooksPageState extends State<TextbooksPage>
                       // Color banner
                       Container(
                         height: isMobile ? 8 : 12,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: subjectColor,
-                          borderRadius: const BorderRadius.only(
+                          borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(12),
                             topRight: Radius.circular(12),
                           ),
@@ -3677,7 +3677,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                                   vertical: isMobile ? 4 : 6,
                                 ),
                                 decoration: BoxDecoration(
-                                  color: subjectColor.withOpacity(0.1),
+                                  color: subjectColor.withValues(alpha: 0.1),
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 child: Text(
@@ -3718,7 +3718,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                                   child: LinearProgressIndicator(
                                     value: progressPercent / 100,
                                     backgroundColor: Colors.grey[200],
-                                    valueColor: AlwaysStoppedAnimation<Color>(subjectColor),
+                                    valueColor: const AlwaysStoppedAnimation<Color>(subjectColor),
                                     minHeight: isMobile ? 4 : 6,
                                   ),
                                 ),
@@ -3834,9 +3834,9 @@ class _TextbooksPageState extends State<TextbooksPage>
                     children: [
                       Container(
                         height: isMobile ? 8 : 12,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: subjectColor,
-                          borderRadius: const BorderRadius.only(
+                          borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(12),
                             topRight: Radius.circular(12),
                           ),
@@ -3854,7 +3854,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                                   vertical: isMobile ? 4 : 6,
                                 ),
                                 decoration: BoxDecoration(
-                                  color: subjectColor.withOpacity(0.1),
+                                  color: subjectColor.withValues(alpha: 0.1),
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 child: Text(
@@ -3892,7 +3892,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                                   child: LinearProgressIndicator(
                                     value: progressPercent / 100,
                                     backgroundColor: Colors.grey[200],
-                                    valueColor: AlwaysStoppedAnimation<Color>(subjectColor),
+                                    valueColor: const AlwaysStoppedAnimation<Color>(subjectColor),
                                     minHeight: isMobile ? 4 : 6,
                                   ),
                                 ),

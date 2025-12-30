@@ -164,7 +164,7 @@ class _EnglishTextbooksLibraryPageState extends State<EnglishTextbooksLibraryPag
                   Container(
                     padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFD62828).withOpacity(0.1),
+                      color: const Color(0xFFD62828).withValues(alpha: 0.1),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: const Icon(

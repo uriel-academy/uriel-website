@@ -649,9 +649,9 @@ class _UserManagementPageState extends State<UserManagementPage> {
           // Table Header
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-            decoration: BoxDecoration(
-              color: const Color(0xFFF5F5F7),
-              borderRadius: const BorderRadius.only(
+            decoration: const BoxDecoration(
+              color: Color(0xFFF5F5F7),
+              borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(16),
                 topRight: Radius.circular(16),
               ),
@@ -1589,10 +1589,12 @@ Subjects: ${stats['subjectsSolved'] ?? 0}
       if (difference.inMinutes < 60) return '${difference.inMinutes}m ago';
       if (difference.inHours < 24) return '${difference.inHours}h ago';
       if (difference.inDays < 7) return '${difference.inDays}d ago';
-      if (difference.inDays < 30)
+      if (difference.inDays < 30) {
         return '${(difference.inDays / 7).floor()}w ago';
-      if (difference.inDays < 365)
+      }
+      if (difference.inDays < 365) {
         return '${(difference.inDays / 30).floor()}mo ago';
+      }
       return '${(difference.inDays / 365).floor()}y ago';
     } catch (e) {
       return 'Never';

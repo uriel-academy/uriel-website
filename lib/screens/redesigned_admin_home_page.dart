@@ -5,7 +5,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'dart:async';
 import '../constants/app_styles.dart';
-import '../widgets/mobile_notification_dialog.dart';
 import '../services/grade_prediction_service.dart';
 import 'user_management_page.dart';
 import 'content_management_page.dart';
@@ -331,12 +330,15 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage>
     final difference = now.difference(dateTime);
 
     if (difference.inDays > 7) return '${difference.inDays} days ago';
-    if (difference.inDays > 0)
+    if (difference.inDays > 0) {
       return '${difference.inDays} day${difference.inDays > 1 ? 's' : ''} ago';
-    if (difference.inHours > 0)
+    }
+    if (difference.inHours > 0) {
       return '${difference.inHours} hour${difference.inHours > 1 ? 's' : ''} ago';
-    if (difference.inMinutes > 0)
+    }
+    if (difference.inMinutes > 0) {
       return '${difference.inMinutes} minute${difference.inMinutes > 1 ? 's' : ''} ago';
+    }
     return 'Just now';
   }
 
@@ -1215,9 +1217,9 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage>
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.info_outline,
-                      color: const Color(0xFF6366F1),
+                      color: Color(0xFF6366F1),
                       size: 20,
                     ),
                     const SizedBox(width: 12),
@@ -1543,9 +1545,9 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage>
         children: [
           Row(
             children: [
-              Icon(
+              const Icon(
                 Icons.summarize,
-                color: const Color(0xFF6366F1),
+                color: Color(0xFF6366F1),
                 size: 20,
               ),
               const SizedBox(width: 8),

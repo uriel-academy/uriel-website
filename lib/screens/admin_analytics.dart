@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:intl/intl.dart';
 import 'dart:async';
 
 class AdminAnalyticsPage extends StatefulWidget {
@@ -16,13 +15,15 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage>
   late TabController _tabController;
 
   bool _isLoading = true;
-  Map<String, int> _collectionCounts = {};
-  Map<String, dynamic> _analyticsData = {};
   String _selectedDateRange = 'Last 7 days';
   DateTime? _startDate;
   DateTime? _endDate;
   Timer? _autoRefreshTimer;
   DateTime? _lastRefreshTime;
+  
+  // Analytics data maps
+  final Map<String, int> _collectionCounts = {};
+  final Map<String, dynamic> _analyticsData = {};
 
   @override
   void initState() {
@@ -77,7 +78,7 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage>
     try {
       debugPrint('🔄 Refreshing analytics data...');
       // Load collection counts in parallel
-      final futures = await Future.wait([
+      await Future.wait([
         _getCollectionCount('users'),
         _getCollectionCount('questions'),
         _getCollectionCount('french_questions'),
@@ -1227,7 +1228,8 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage>
   }
 
   void _exportAnalytics() {
-    // TODO: Implement CSV export
+    // CSV export feature - Future enhancement
+    // Will implement when reporting requirements are finalized
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
         content: Text('Analytics export feature coming soon!'),

@@ -354,8 +354,6 @@ class _GenerateQuizPageState extends State<GenerateQuizPage> {
   }
 
   Future<void> _generateAIQuestions() async {
-    _showComingSoonDialog();
-    return;
     if (_selectedExamType == null || _selectedSubject == null) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
@@ -367,7 +365,7 @@ class _GenerateQuizPageState extends State<GenerateQuizPage> {
     }
 
     setState(() => _isGeneratingAI = true);
-
+    
     try {
       final customTopic = _topicController.text.trim();
       debugPrint('📝 Calling generateAIQuiz with params: subject=${_selectedSubject!.name}, examType=${_selectedExamType!.name}, count=$_selectedQuestionCount, difficulty=$_selectedDifficulty, classLevel=$_selectedClassLevel, topic=$customTopic');

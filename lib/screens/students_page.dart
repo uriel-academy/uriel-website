@@ -122,9 +122,9 @@ class _StudentsPageState extends State<StudentsPage> {
                   // Header
                   Container(
                     padding: const EdgeInsets.all(24),
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF001F3F),
-                      borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
+                    decoration: const BoxDecoration(
+                      color: Color(0xFF001F3F),
+                      borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
                     ),
                     child: Row(
                       children: [

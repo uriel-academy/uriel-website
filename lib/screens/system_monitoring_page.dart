@@ -35,12 +35,6 @@ class _SystemMonitoringPageState extends State<SystemMonitoringPage> {
   int _xpTransactionsPage = 1;
   int _errorsPage = 1;
 
-  // Performance metrics
-  final double _avgResponseTime = 0.0;
-  final int _totalRequests = 0;
-  final int _failedRequests = 0;
-  final double _errorRate = 0.0;
-
   // System health indicators
   bool _firestoreHealthy = true;
   bool _authHealthy = true;

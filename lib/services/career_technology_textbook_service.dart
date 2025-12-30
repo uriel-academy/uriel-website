@@ -215,7 +215,7 @@ class CareerTechnologyTextbookService {
       final userId = _auth.currentUser?.uid;
       if (userId == null) return;
 
-      final sectionId = '${textbookId}_ch${chapterNumber}_sec${sectionNumber}';
+      final sectionId = '${textbookId}_ch${chapterNumber}_sec$sectionNumber';
       
       await _firestore
           .collection('users')

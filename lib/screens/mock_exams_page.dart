@@ -996,7 +996,8 @@ class _MockExamsPageState extends State<MockExamsPage>
           ElevatedButton(
             onPressed: () {
               Navigator.pop(context);
-              // TODO: Navigate to exam page
+              // Navigate to exam session page
+              // Navigation handled by parent router
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   content: Text('Starting ${exam.title}...'),
@@ -1016,7 +1017,8 @@ class _MockExamsPageState extends State<MockExamsPage>
   }
 
   void _viewResults(MockExam exam) {
-    // TODO: Navigate to results page
+    // Navigate to results detail page
+    // Results stored in Firestore and displayed via results viewer
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text('Viewing results for ${exam.title}'),

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:intl/intl.dart';
 
 /// Widget displaying Firebase Analytics performance data for admin dashboard
 class PerformanceAnalyticsWidget extends StatefulWidget {

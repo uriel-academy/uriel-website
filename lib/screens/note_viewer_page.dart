@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:async';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cloud_functions/cloud_functions.dart';
@@ -30,13 +31,19 @@ class _NoteViewerPageState extends State<NoteViewerPage> {
   int _selectedImageIndex = 0;
   bool _likedByMe = false;
   int _likeCount = 0;
-  Stream<int>? _likeCountSub;
+  StreamSubscription<int>? _likeCountSub;
   bool _likeAnimating = false;
 
   @override
   void initState() {
     super.initState();
     _loadNote();
+  }
+
+  @override
+  void dispose() {
+    _likeCountSub?.cancel();
+    super.dispose();
   }
 
   Future<void> _loadNote() async {
@@ -48,8 +55,7 @@ class _NoteViewerPageState extends State<NoteViewerPage> {
     _resolveImageUrls();
 
     // subscribe to like count
-    _likeCountSub = NoteService.likeCountStream(widget.noteId);
-    _likeCountSub?.listen((count) {
+    _likeCountSub = NoteService.likeCountStream(widget.noteId).listen((count) {
       if (!mounted) return;
       setState(() => _likeCount = count);
     });

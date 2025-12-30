@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 class MobileNotificationDialog extends StatefulWidget {
   final List<Map<String, dynamic>> notifications;
@@ -70,9 +69,9 @@ class _MobileNotificationDialogState extends State<MobileNotificationDialog> {
               Container(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-                decoration: BoxDecoration(
-                  color: const Color(0xFF001F3F),
-                  borderRadius: const BorderRadius.only(
+                decoration: const BoxDecoration(
+                  color: Color(0xFF001F3F),
+                  borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(20),
                     topRight: Radius.circular(20),
                   ),

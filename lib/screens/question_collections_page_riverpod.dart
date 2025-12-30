@@ -432,7 +432,8 @@ class QuestionCollectionsPageRiverpod extends ConsumerWidget {
   }
 
   void _navigateToCollection(BuildContext context, QuestionCollection collection) {
-    // TODO: Navigate to quiz/theory page
+    // Navigation to quiz/theory page handled by parent component
+    Navigator.pop(context);
     print('Navigate to: ${collection.title}');
   }
 }

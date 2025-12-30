@@ -280,7 +280,7 @@ class _EnglishTextbookReaderPageState extends State<EnglishTextbookReaderPage> w
           margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           decoration: BoxDecoration(
-            color: const Color(0xFFD62828).withOpacity(0.1),
+            color: const Color(0xFFD62828).withValues(alpha: 0.1),
             borderRadius: BorderRadius.circular(20),
           ),
           child: Row(
@@ -445,7 +445,7 @@ class _EnglishTextbookReaderPageState extends State<EnglishTextbookReaderPage> w
             color: Colors.white,
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.05),
+                color: Colors.black.withValues(alpha: 0.05),
                 blurRadius: 10,
                 offset: const Offset(2, 0),
               ),
@@ -553,7 +553,7 @@ class _EnglishTextbookReaderPageState extends State<EnglishTextbookReaderPage> w
           color: Colors.white,
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.03),
+              color: Colors.black.withValues(alpha: 0.03),
               blurRadius: 8,
               offset: const Offset(0, 2),
             ),
@@ -614,9 +614,9 @@ class _EnglishTextbookReaderPageState extends State<EnglishTextbookReaderPage> w
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
+        color: color.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: color.withOpacity(0.3)),
+        border: Border.all(color: color.withValues(alpha: 0.3)),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
@@ -664,8 +664,8 @@ class _EnglishTextbookReaderPageState extends State<EnglishTextbookReaderPage> w
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
                 color: _currentChapterIndex == i
-                    ? const Color(0xFFD62828).withOpacity(0.1)
-                    : Colors.grey.withOpacity(0.1),
+                    ? const Color(0xFFD62828).withValues(alpha: 0.1)
+                    : Colors.grey.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Icon(
@@ -722,7 +722,7 @@ class _EnglishTextbookReaderPageState extends State<EnglishTextbookReaderPage> w
                   ),
                   decoration: BoxDecoration(
                     color: isCurrent
-                        ? const Color(0xFFD62828).withOpacity(0.1)
+                        ? const Color(0xFFD62828).withValues(alpha: 0.1)
                         : Colors.transparent,
                     borderRadius: BorderRadius.circular(8),
                   ),
@@ -889,15 +889,15 @@ class _EnglishTextbookReaderPageState extends State<EnglishTextbookReaderPage> w
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  const Color(0xFFD62828).withOpacity(0.1),
-                  const Color(0xFFD62828).withOpacity(0.05),
+                  const Color(0xFFD62828).withValues(alpha: 0.1),
+                  const Color(0xFFD62828).withValues(alpha: 0.05),
                 ],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
               borderRadius: BorderRadius.circular(16),
               border: Border.all(
-                color: const Color(0xFFD62828).withOpacity(0.3),
+                color: const Color(0xFFD62828).withValues(alpha: 0.3),
               ),
             ),
             child: Column(
@@ -1195,7 +1195,7 @@ class _EnglishTextbookReaderPageState extends State<EnglishTextbookReaderPage> w
                       : showWrong
                           ? Colors.red[50]
                           : isSelected
-                              ? const Color(0xFFD62828).withOpacity(0.1)
+                              ? const Color(0xFFD62828).withValues(alpha: 0.1)
                               : Colors.transparent,
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
@@ -1333,7 +1333,7 @@ class _EnglishTextbookReaderPageState extends State<EnglishTextbookReaderPage> w
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 8,
             offset: const Offset(0, -2),
           ),

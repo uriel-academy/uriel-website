@@ -303,7 +303,7 @@ class _EnhancedMessageDialogState extends State<EnhancedMessageDialog> {
                                         final isSelected = _selectedUserIds.contains(userId);
 
                                         return Material(
-                                          color: isSelected ? const Color(0xFF001F3F).withOpacity(0.05) : Colors.white,
+                                          color: isSelected ? const Color(0xFF001F3F).withValues(alpha: 0.05) : Colors.white,
                                           child: InkWell(
                                             onTap: () {
                                               setState(() {

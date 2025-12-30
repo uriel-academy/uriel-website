@@ -4,7 +4,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'dart:async';
 import 'admin_question_management.dart';
 import 'trivia_management_page.dart';
-import 'notes_page.dart';
 
 class ContentManagementPage extends StatefulWidget {
   const ContentManagementPage({Key? key}) : super(key: key);

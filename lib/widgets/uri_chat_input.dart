@@ -19,8 +19,8 @@ class UriChatInput extends StatefulWidget {
 
 class _UriChatInputState extends State<UriChatInput> {
   final _input = TextEditingController();
-  String _currentAnswer = '';
-  bool _loading = false;
+  final String _currentAnswer = '';
+  final bool _loading = false;
   String? _error;
   ChatService? _chatService;  // Nullable since we're not using it currently
   StreamSubscription? _chatSubscription;
@@ -63,8 +63,8 @@ class _UriChatInputState extends State<UriChatInput> {
 
   @override
   void dispose() {
-    // _chatSubscription?.cancel();
-    // _chatService.dispose();
+    _chatSubscription?.cancel();
+    // _chatService?.dispose();
     _input.dispose();
     super.dispose();
   }

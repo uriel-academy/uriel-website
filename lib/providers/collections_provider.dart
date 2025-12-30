@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/question_collection_model.dart';
@@ -57,7 +58,7 @@ class CollectionFilters {
       await prefs.setString('filter_year', year);
       await prefs.setBool('randomize_questions', randomizeQuestions);
     } catch (e) {
-      print('⚠️ Could not save filters: $e');
+      debugPrint('⚠️ Could not save filters: $e');
     }
   }
 
@@ -73,7 +74,7 @@ class CollectionFilters {
         randomizeQuestions: prefs.getBool('randomize_questions') ?? false,
       );
     } catch (e) {
-      print('⚠️ Could not load filters: $e');
+      debugPrint('⚠️ Could not load filters: $e');
       return const CollectionFilters();
     }
   }
@@ -148,9 +149,9 @@ class CollectionsNotifier extends StateNotifier<CollectionsState> {
     state = state.copyWith(isLoading: true, error: null);
     
     try {
-      print('🚀 Loading collection metadata from Firestore...');
+      debugPrint('🚀 Loading collection metadata from Firestore...');
       final collectionsData = await _questionService.getQuestionCollections(activeOnly: true);
-      print('📚 Found ${collectionsData.length} collections');
+      debugPrint('📚 Found ${collectionsData.length} collections');
 
       final allCollections = <QuestionCollection>[];
       for (final data in collectionsData) {
@@ -179,7 +180,7 @@ class CollectionsNotifier extends StateNotifier<CollectionsState> {
             questionIds: (data['questionIds'] as List?)?.cast<String>(),
           ));
         } catch (e) {
-          print('⚠️ Error parsing collection: $e');
+          debugPrint('⚠️ Error parsing collection: $e');
         }
       }
 
@@ -192,7 +193,7 @@ class CollectionsNotifier extends StateNotifier<CollectionsState> {
       
       applyFilters();
     } catch (e) {
-      print('❌ Error loading collections: $e');
+      debugPrint('❌ Error loading collections: $e');
       state = state.copyWith(
         isLoading: false,
         error: e.toString(),

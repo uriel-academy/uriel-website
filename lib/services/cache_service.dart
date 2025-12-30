@@ -131,8 +131,8 @@ class CacheService {
     );
   }
 
-  int _hitCount = 0;
-  int _missCount = 0;
+  final int _hitCount = 0;
+  final int _missCount = 0;
 
   /// Start periodic cleanup
   Timer? _cleanupTimer;

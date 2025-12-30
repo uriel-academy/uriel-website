@@ -25,7 +25,7 @@ class SubjectProgress {
     return {
       'name': name,
       'progress': progress,
-      'color': color.value,
+      'color': color.value  // ignore: deprecated_member_use,
     };
   }
 
