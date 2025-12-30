@@ -43,9 +43,13 @@ import 'screens/payment_page.dart';
 
 // Note viewer - keep eager (used frequently)
 import 'screens/note_viewer_page.dart';
+import 'services/performance_service.dart';
 // import 'widgets/error_boundary.dart'; // Import error boundary - COMMENTED OUT: Causing app initialization issues
 
 void main() async {
+  // Track app startup time
+  final startTime = DateTime.now();
+  
   WidgetsFlutterBinding.ensureInitialized();
   
   // Use path-based URLs instead of hash-based (#) URLs for better SEO
@@ -58,6 +62,9 @@ void main() async {
   // Initialize Firebase Analytics
   FirebaseAnalytics analytics = FirebaseAnalytics.instance;
   FirebaseAnalyticsObserver observer = FirebaseAnalyticsObserver(analytics: analytics);
+
+  // Initialize Performance Service
+  final performanceService = PerformanceService();
 
   // SCALABILITY: Disable persistence on web to prevent snapshot listener conflicts
   // With polling strategy (30s intervals), persistence causes INTERNAL ASSERTION errors
@@ -82,6 +89,10 @@ void main() async {
 
   // Initialize push notifications - commented out as service doesn't exist
   // await PushNotificationService().initialize();
+
+  // Track startup completion
+  final startupDuration = DateTime.now().difference(startTime);
+  await performanceService.trackAppStartup(startupDuration.inMilliseconds);
 
   runApp(
     ProviderScope(

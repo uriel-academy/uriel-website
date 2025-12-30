@@ -296,6 +296,30 @@
   <script src="flutter_bootstrap.js" async></script>
   
   <script>
+    // Register Service Worker for PWA offline support
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js')
+          .then(function(registration) {
+            console.log('Service Worker registered successfully:', registration.scope);
+            
+            // Update service worker when a new version is available
+            registration.addEventListener('updatefound', function() {
+              const newWorker = registration.installing;
+              newWorker.addEventListener('statechange', function() {
+                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                  console.log('New service worker available - refresh to update');
+                  // Optionally show a toast to user about update
+                }
+              });
+            });
+          })
+          .catch(function(error) {
+            console.log('Service Worker registration failed:', error);
+          });
+      });
+    }
+
     // Hide loading screen once Flutter is ready
     window.addEventListener('flutter-first-frame', function() {
       document.body.classList.add('flutter-loaded');
