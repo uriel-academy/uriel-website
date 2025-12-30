@@ -8,6 +8,7 @@ import 'admin_question_management.dart';
 import 'user_management_page.dart';
 import 'content_management_page.dart';
 import 'trivia_management_page.dart';
+import '../widgets/performance_analytics_widget.dart';
 
 class ComprehensiveAdminDashboard extends StatefulWidget {
   const ComprehensiveAdminDashboard({super.key});
@@ -1845,6 +1846,12 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
   }
 
   Widget _buildModuleContent(String module, bool isSmallScreen) {
+    // Security & Monitoring module shows Performance Analytics
+    if (module == 'security') {
+      return const PerformanceAnalyticsWidget();
+    }
+    
+    // Other modules show placeholder
     return Container(
       padding: const EdgeInsets.all(24),
       decoration: BoxDecoration(
